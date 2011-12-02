@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -108,13 +109,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00030"></a>00030       {
 <a name="l00031"></a>00031       }
 <a name="l00032"></a>00032 
-<a name="l00033"></a><a class="code" href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html#a0d0bc5fa1e84f81b615cd2899f267111">00033</a>       <span class="keyword">virtual</span> QByteArray <a class="code" href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html#a0d0bc5fa1e84f81b615cd2899f267111" title="Parses through an individual descriptor, setting the descriptor state in the object and returns the m...">GenerateXorMessage</a>(QByteArray descriptor)
+<a name="l00033"></a><a class="code" href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html#a06eed7d877ae56574c1d5abb8fb3d662">00033</a>       <span class="keyword">virtual</span> QByteArray <a class="code" href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html#a06eed7d877ae56574c1d5abb8fb3d662" title="Parses through an individual descriptor, setting the descriptor state in the object and returns the m...">GenerateXorMessage</a>(<span class="keyword">const</span> QByteArray &amp;descriptor)
 <a name="l00034"></a>00034       { 
 <a name="l00035"></a>00035         <span class="keywordflow">if</span>(_bad == -1) {
 <a name="l00036"></a>00036           _bad = Random::GetInstance().GetInt(0, <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#ae32f149c12cd8da2dca1907dc5aaf552" title="Returns the ShuffleSink to access serialized descriptors.">GetShuffleSink</a>().Count());
 <a name="l00037"></a>00037         }
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039         QByteArray msg = <a class="code" href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html#a0d0bc5fa1e84f81b615cd2899f267111" title="Parses through an individual descriptor, setting the descriptor state in the object and returns the m...">BulkRound::GenerateXorMessage</a>(descriptor);
+<a name="l00039"></a>00039         QByteArray msg = <a class="code" href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html#a06eed7d877ae56574c1d5abb8fb3d662" title="Parses through an individual descriptor, setting the descriptor state in the object and returns the m...">BulkRound::GenerateXorMessage</a>(descriptor);
 <a name="l00040"></a>00040         <span class="keywordflow">if</span>(<a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a49d4035d10f27b374dcaf39917244a8a" title="Returns the parsed descriptors.">GetDescriptors</a>().size() != _bad + 1) {
 <a name="l00041"></a>00041           <span class="keywordflow">return</span> msg;
 <a name="l00042"></a>00042         }
@@ -141,51 +142,52 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00063"></a>00063       {
 <a name="l00064"></a>00064       }
 <a name="l00065"></a>00065 
-<a name="l00066"></a><a class="code" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a40e1d6ec231267fd951946a3f971f087">00066</a>       <span class="keyword">virtual</span> QByteArray <a class="code" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a40e1d6ec231267fd951946a3f971f087" title="Parses through an individual descriptor, setting the descriptor state in the object and returns the m...">GenerateXorMessage</a>(QByteArray descriptor)
+<a name="l00066"></a><a class="code" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a7e444e2d764185923612dc7e89be734d">00066</a>       <span class="keyword">virtual</span> QByteArray <a class="code" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a7e444e2d764185923612dc7e89be734d" title="Parses through an individual descriptor, setting the descriptor state in the object and returns the m...">GenerateXorMessage</a>(<span class="keyword">const</span> QByteArray &amp;descriptor)
 <a name="l00067"></a>00067       { 
 <a name="l00068"></a>00068         <span class="keywordflow">if</span>(_bad == -1) {
 <a name="l00069"></a>00069           _bad = Random::GetInstance().GetInt(0, <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#ae32f149c12cd8da2dca1907dc5aaf552" title="Returns the ShuffleSink to access serialized descriptors.">GetShuffleSink</a>().Count());
 <a name="l00070"></a>00070         }
 <a name="l00071"></a>00071 
-<a name="l00072"></a>00072         QByteArray msg = <a class="code" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a40e1d6ec231267fd951946a3f971f087" title="Parses through an individual descriptor, setting the descriptor state in the object and returns the m...">BulkRound::GenerateXorMessage</a>(descriptor);
-<a name="l00073"></a>00073         <span class="keywordflow">if</span>(<a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a49d4035d10f27b374dcaf39917244a8a" title="Returns the parsed descriptors.">GetDescriptors</a>().size() != _bad + 1) {
-<a name="l00074"></a>00074           <span class="keywordflow">return</span> msg;
-<a name="l00075"></a>00075         }
-<a name="l00076"></a>00076         
-<a name="l00077"></a>00077         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
-<a name="l00078"></a>00078         <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html">Library</a> *lib = CryptoFactory::GetInstance().GetLibrary();
-<a name="l00079"></a>00079         QScopedPointer&lt;Random&gt; rng(lib-&gt;<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a0b8fdc77fa64708d6fadbe5bbcdaff5e" title="Returns a random number generator.">GetRandomNumberGenerator</a>());
-<a name="l00080"></a>00080         rng-&gt;GenerateBlock(msg);
-<a name="l00081"></a>00081         <span class="keywordflow">return</span> msg;
-<a name="l00082"></a>00082       }
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084     <span class="keyword">private</span>:
-<a name="l00085"></a>00085       <span class="keywordtype">int</span> _bad;
-<a name="l00086"></a>00086   };
-<a name="l00087"></a>00087 
-<a name="l00088"></a><a class="code" href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html">00088</a>   <span class="keyword">class </span><a class="code" href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html">BulkRoundBadDescriptor</a> : <span class="keyword">public</span> <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange.">BulkRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a> {
-<a name="l00089"></a>00089     <span class="keyword">public</span>:
-<a name="l00090"></a>00090       <a class="code" href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html">BulkRoundBadDescriptor</a>(QSharedPointer&lt;GroupGenerator&gt; group_gen,
-<a name="l00091"></a>00091           <span class="keyword">const</span> <a class="code" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html" title="A container class for holding a user&#39;s data.">Credentials</a> &amp;creds, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
-<a name="l00092"></a>00092           QSharedPointer&lt;Network&gt; network, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
-<a name="l00093"></a>00093         <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#aec3bd3b0d615e77c76bbb34205f88fa6" title="Constructor.">BulkRound</a>(group_gen, creds, round_id, network, get_data)
-<a name="l00094"></a>00094       {
-<a name="l00095"></a>00095       }
-<a name="l00096"></a>00096   };
-<a name="l00097"></a>00097 
-<a name="l00098"></a><a class="code" href="../../dd/d8c/classDissent_1_1Tests_1_1BulkRoundBadVerification.html">00098</a>   <span class="keyword">class </span><a class="code" href="../../dd/d8c/classDissent_1_1Tests_1_1BulkRoundBadVerification.html">BulkRoundBadVerification</a> : <span class="keyword">public</span> <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange.">BulkRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a> {
-<a name="l00099"></a>00099     <span class="keyword">public</span>:
-<a name="l00100"></a>00100       <a class="code" href="../../dd/d8c/classDissent_1_1Tests_1_1BulkRoundBadVerification.html">BulkRoundBadVerification</a>(QSharedPointer&lt;GroupGenerator&gt; group_gen,
-<a name="l00101"></a>00101           <span class="keyword">const</span> <a class="code" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html" title="A container class for holding a user&#39;s data.">Credentials</a> &amp;creds, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
-<a name="l00102"></a>00102           QSharedPointer&lt;Network&gt; network, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
-<a name="l00103"></a>00103         <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#aec3bd3b0d615e77c76bbb34205f88fa6" title="Constructor.">BulkRound</a>(group_gen, creds, round_id, network, get_data)
-<a name="l00104"></a>00104       {
-<a name="l00105"></a>00105       }
-<a name="l00106"></a>00106   };
-<a name="l00107"></a>00107 }
-<a name="l00108"></a>00108 }
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110 <span class="preprocessor">#endif</span>
+<a name="l00072"></a>00072         QByteArray msg = <a class="code" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a7e444e2d764185923612dc7e89be734d" title="Parses through an individual descriptor, setting the descriptor state in the object and returns the m...">BulkRound::GenerateXorMessage</a>(descriptor);
+<a name="l00073"></a>00073         qWarning() &lt;&lt; <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a49d4035d10f27b374dcaf39917244a8a" title="Returns the parsed descriptors.">GetDescriptors</a>().size() &lt;&lt; _bad;
+<a name="l00074"></a>00074         <span class="keywordflow">if</span>(<a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a49d4035d10f27b374dcaf39917244a8a" title="Returns the parsed descriptors.">GetDescriptors</a>().size() != _bad + 1) {
+<a name="l00075"></a>00075           <span class="keywordflow">return</span> msg;
+<a name="l00076"></a>00076         }
+<a name="l00077"></a>00077         
+<a name="l00078"></a>00078         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
+<a name="l00079"></a>00079         <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html">Library</a> *lib = CryptoFactory::GetInstance().GetLibrary();
+<a name="l00080"></a>00080         QScopedPointer&lt;Random&gt; rng(lib-&gt;<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a0b8fdc77fa64708d6fadbe5bbcdaff5e" title="Returns a random number generator.">GetRandomNumberGenerator</a>());
+<a name="l00081"></a>00081         rng-&gt;GenerateBlock(msg);
+<a name="l00082"></a>00082         <span class="keywordflow">return</span> msg;
+<a name="l00083"></a>00083       }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085     <span class="keyword">private</span>:
+<a name="l00086"></a>00086       <span class="keywordtype">int</span> _bad;
+<a name="l00087"></a>00087   };
+<a name="l00088"></a>00088 
+<a name="l00090"></a><a class="code" href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html">00090</a>   <span class="keyword">class </span><a class="code" href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html">BulkRoundBadDescriptor</a> : <span class="keyword">public</span> <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange.">BulkRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a> {
+<a name="l00091"></a>00091     <span class="keyword">public</span>:
+<a name="l00092"></a>00092       <a class="code" href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html">BulkRoundBadDescriptor</a>(QSharedPointer&lt;GroupGenerator&gt; group_gen,
+<a name="l00093"></a>00093           <span class="keyword">const</span> <a class="code" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html" title="A container class for holding a user&#39;s data.">Credentials</a> &amp;creds, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
+<a name="l00094"></a>00094           QSharedPointer&lt;Network&gt; network, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
+<a name="l00095"></a>00095         <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#aec3bd3b0d615e77c76bbb34205f88fa6" title="Constructor.">BulkRound</a>(group_gen, creds, round_id, network, get_data)
+<a name="l00096"></a>00096       {
+<a name="l00097"></a>00097       }
+<a name="l00098"></a>00098   };
+<a name="l00099"></a>00099 
+<a name="l00101"></a><a class="code" href="../../d3/d88/classDissent_1_1Tests_1_1BulkRoundFalseAccusation.html">00101</a>   <span class="keyword">class </span><a class="code" href="../../d3/d88/classDissent_1_1Tests_1_1BulkRoundFalseAccusation.html">BulkRoundFalseAccusation</a> : <span class="keyword">public</span> <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange.">BulkRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a> {
+<a name="l00102"></a>00102     <span class="keyword">public</span>:
+<a name="l00103"></a>00103       <a class="code" href="../../d3/d88/classDissent_1_1Tests_1_1BulkRoundFalseAccusation.html">BulkRoundFalseAccusation</a>(QSharedPointer&lt;GroupGenerator&gt; group_gen,
+<a name="l00104"></a>00104           <span class="keyword">const</span> <a class="code" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html" title="A container class for holding a user&#39;s data.">Credentials</a> &amp;creds, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
+<a name="l00105"></a>00105           QSharedPointer&lt;Network&gt; network, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
+<a name="l00106"></a>00106         <a class="code" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#aec3bd3b0d615e77c76bbb34205f88fa6" title="Constructor.">BulkRound</a>(group_gen, creds, round_id, network, get_data)
+<a name="l00107"></a>00107       {
+<a name="l00108"></a>00108       }
+<a name="l00109"></a>00109   };
+<a name="l00110"></a>00110 }
+<a name="l00111"></a>00111 }
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -205,7 +207,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 30 2011 20:50:48 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 1 2011 20:54:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

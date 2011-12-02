@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -109,8 +110,8 @@ Inheritance diagram for Dissent::Anonymity::BulkRound:</div>
 <area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="912,0,1206,24"/>
 <area href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html" alt="Dissent::Tests::BulkRoundBadDescriptor" shape="rect" coords="0,168,294,192"/>
 <area href="../../d7/d16/classDissent_1_1Tests_1_1BulkRoundBadShuffler.html" alt="Dissent::Tests::BulkRoundBadShuffler&lt; T &gt;" shape="rect" coords="304,168,598,192"/>
-<area href="../../dd/d8c/classDissent_1_1Tests_1_1BulkRoundBadVerification.html" alt="Dissent::Tests::BulkRoundBadVerification" shape="rect" coords="608,168,902,192"/>
-<area href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html" alt="Dissent::Tests::BulkRoundBadXorMessage" shape="rect" coords="912,168,1206,192"/>
+<area href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html" alt="Dissent::Tests::BulkRoundBadXorMessage" shape="rect" coords="608,168,902,192"/>
+<area href="../../d3/d88/classDissent_1_1Tests_1_1BulkRoundFalseAccusation.html" alt="Dissent::Tests::BulkRoundFalseAccusation" shape="rect" coords="912,168,1206,192"/>
 <area href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html" alt="Dissent::Tests::BulkRoundIncorrectMessageLength" shape="rect" coords="1216,168,1510,192"/>
 </map>
  </div></div>
@@ -119,8 +120,13 @@ Inheritance diagram for Dissent::Anonymity::BulkRound:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a68d53f133ce98f4f7036d2703fedbbd5">MessageType</a> { <b>BulkData</b>, 
-<b>BulkVerification</b>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a5f43dc0a1c430f0cfa8218acf55f6ae9">State</a> { <b>Offline</b>, 
+<b>Shuffling</b>, 
+<b>DataSharing</b>, 
+<b>Finished</b>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Varius stages of the bulk. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a68d53f133ce98f4f7036d2703fedbbd5">MessageType</a> { <b>BulkData</b>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Various message types sent and received. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac362b79b934f1f24ab051b3d7aa15bc7"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::DiffieHellman" ref="ac362b79b934f1f24ab051b3d7aa15bc7" args="" -->
@@ -148,7 +154,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfd962f2ba39384920559eb7e1ff63a8"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::Start" ref="abfd962f2ba39384920559eb7e1ff63a8" args="()" -->
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#abfd962f2ba39384920559eb7e1ff63a8">Start</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if started the first time. <br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the bulk round. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a263991ccbf70b063d44af11f511ecad7">IncomingData</a> (<a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">RpcRequest</a> &amp;notification)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a data message from a remote peer.  <a href="#a263991ccbf70b063d44af11f511ecad7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a96049fe07a7281b1e49a69d9d235e72a"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GetBadMembers" ref="a96049fe07a7281b1e49a69d9d235e72a" args="() const " -->
@@ -156,36 +162,42 @@ virtual const QVector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" vali
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of members who have been blamed in the round. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdabe6cd2b6af1c2d02929730cbfbbc4"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::ToString" ref="abdabe6cd2b6af1c2d02929730cbfbbc4" args="() const " -->
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#abdabe6cd2b6af1c2d02929730cbfbbc4">ToString</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Presents the ISender in a string format. <br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">QString rep. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adef46c1467967d3fe5f0853382446a35"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GetState" ref="adef46c1467967d3fe5f0853382446a35" args="()" -->
+<a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a5f43dc0a1c430f0cfa8218acf55f6ae9">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#adef46c1467967d3fe5f0853382446a35">GetState</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal bulk state. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58d8036041e4d42d11442a9a5ac718a5"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GetShuffleRound" ref="a58d8036041e4d42d11442a9a5ac718a5" args="()" -->
 QSharedPointer&lt; <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html">Round</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a58d8036041e4d42d11442a9a5ac718a5">GetShuffleRound</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s basic shuffling algorithm.">ShuffleRound</a> used to exchange descriptors. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#abdabd010181f8f548ad8e11a95a7bd02">StateToString</a> (<a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a5f43dc0a1c430f0cfa8218acf55f6ae9">State</a> st)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a MessageType into a QString.  <a href="#abdabd010181f8f548ad8e11a95a7bd02"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a583689fb1e6cc082db2f49a578353f88">MessageTypeToString</a> (<a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a68d53f133ce98f4f7036d2703fedbbd5">MessageType</a> mt)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a MessageType into a QString.  <a href="#a583689fb1e6cc082db2f49a578353f88"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#affc2c5e2f65b88714c3d9e88c14d9c44">ProcessData</a> (const QByteArray &amp;data, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If data is from a legitimate group member, it is processed.  <a href="#affc2c5e2f65b88714c3d9e88c14d9c44"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b99e50902d5046e7c9ab8997bd9300c"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::ProcessDataBase" ref="a8b99e50902d5046e7c9ab8997bd9300c" args="(const QByteArray &amp;data, const Id &amp;from)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ProcessDataBase</b> (const QByteArray &amp;data, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87a757eb47940e710aa7bbf46e4e8acc"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GenerateXorMessages" ref="a87a757eb47940e710aa7bbf46e4e8acc" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a87a757eb47940e710aa7bbf46e4e8acc">GenerateXorMessages</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses through all the descriptors to generate a single transmission for the bulk round, which is sent via broadcast. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#acdc556292235cd414a1086d704f92531">GenerateXorMessage</a> (QByteArray descriptor)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses through an individual descriptor, setting the descriptor state in the object and returns the message the descriptor describes.  <a href="#acdc556292235cd414a1086d704f92531"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a57931d4730ac557a66037d5936fef603">GenerateXorMessage</a> (const QByteArray &amp;descriptor)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses through an individual descriptor, setting the descriptor state in the object and returns the message the descriptor describes.  <a href="#a57931d4730ac557a66037d5936fef603"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae32f149c12cd8da2dca1907dc5aaf552"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GetShuffleSink" ref="ae32f149c12cd8da2dca1907dc5aaf552" args="() const " -->
 const <a class="el" href="../../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html">BufferSink</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#ae32f149c12cd8da2dca1907dc5aaf552">GetShuffleSink</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ShuffleSink to access serialized descriptors. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49d4035d10f27b374dcaf39917244a8a"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GetDescriptors" ref="a49d4035d10f27b374dcaf39917244a8a" args="() const " -->
 const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">Descriptor</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a49d4035d10f27b374dcaf39917244a8a">GetDescriptors</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parsed descriptors. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#afc618796670f631e6b6f208e235e8614">HandleBulkData</a> (const QByteArray &amp;payload, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles bulk data messages.  <a href="#afc618796670f631e6b6f208e235e8614"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a3f4dba3733594058de31b83c8bc0743b">HandleBulkVerification</a> (const QByteArray &amp;payload, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles bulk verification messages.  <a href="#a3f4dba3733594058de31b83c8bc0743b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a85a86a240d40295bea8daa948e956d74">HandleBulkData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles bulk data messages.  <a href="#a85a86a240d40295bea8daa948e956d74"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents a single instance of a cryptographically secure anonymous exchange. </p>
+<p>The V1 bulk protocol consists of a shuffle round and a bulk transmission phase. The current instantiation does not include any blame phase that, which is present within the shuffle round. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aec3bd3b0d615e77c76bbb34205f88fa6"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::BulkRound" ref="aec3bd3b0d615e77c76bbb34205f88fa6" args="(QSharedPointer&lt; GroupGenerator &gt; group_gen, const Credentials &amp;creds, const Id &amp;round_id, QSharedPointer&lt; Network &gt; network, GetDataCallback &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; ShuffleRound &gt;)" -->
 <div class="memitem">
@@ -250,14 +262,14 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="acdc556292235cd414a1086d704f92531"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GenerateXorMessage" ref="acdc556292235cd414a1086d704f92531" args="(QByteArray descriptor)" -->
+<a class="anchor" id="a57931d4730ac557a66037d5936fef603"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GenerateXorMessage" ref="a57931d4730ac557a66037d5936fef603" args="(const QByteArray &amp;descriptor)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">QByteArray Dissent::Anonymity::BulkRound::GenerateXorMessage </td>
           <td>(</td>
-          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>descriptor</em></td><td>)</td>
           <td><code> [protected, virtual]</code></td>
         </tr>
@@ -273,19 +285,19 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a40e1d6ec231267fd951946a3f971f087">Dissent::Tests::BulkRoundBadXorMessage</a>, and <a class="el" href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html#a0d0bc5fa1e84f81b615cd2899f267111">Dissent::Tests::BulkRoundIncorrectMessageLength</a>.</p>
+<p>Reimplemented in <a class="el" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a7e444e2d764185923612dc7e89be734d">Dissent::Tests::BulkRoundBadXorMessage</a>, and <a class="el" href="../../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html#a06eed7d877ae56574c1d5abb8fb3d662">Dissent::Tests::BulkRoundIncorrectMessageLength</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="afc618796670f631e6b6f208e235e8614"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::HandleBulkData" ref="afc618796670f631e6b6f208e235e8614" args="(const QByteArray &amp;payload, const Id &amp;from)" -->
+<a class="anchor" id="a85a86a240d40295bea8daa948e956d74"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::HandleBulkData" ref="a85a86a240d40295bea8daa948e956d74" args="(QDataStream &amp;stream, const Id &amp;from)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Dissent::Anonymity::BulkRound::HandleBulkData </td>
           <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>payload</em>, </td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -305,44 +317,8 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 <p>Parses and handles bulk data messages. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>the bulk data </td></tr>
-    <tr><td class="paramname">from</td><td>the sender of the bulk data </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a3f4dba3733594058de31b83c8bc0743b"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::HandleBulkVerification" ref="a3f4dba3733594058de31b83c8bc0743b" args="(const QByteArray &amp;payload, const Id &amp;from)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Dissent::Anonymity::BulkRound::HandleBulkVerification </td>
-          <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>payload</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
-          <td class="paramname"><em>from</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Parses and handles bulk verification messages. </p>
-<dl><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>the bulk data </td></tr>
-    <tr><td class="paramname">from</td><td>the sender of the bulk data </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
+    <tr><td class="paramname">from</td><td>the sender </td></tr>
   </table>
   </dd>
 </dl>
@@ -439,6 +415,31 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 
 </div>
 </div>
+<a class="anchor" id="abdabd010181f8f548ad8e11a95a7bd02"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::StateToString" ref="abdabd010181f8f548ad8e11a95a7bd02" args="(State st)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString Dissent::Anonymity::BulkRound::StateToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a5f43dc0a1c430f0cfa8218acf55f6ae9">State</a>&#160;</td>
+          <td class="paramname"><em>st</em></td><td>)</td>
+          <td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Converts a MessageType into a QString. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mt</td><td>value to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Anonymity/<a class="el" href="../../dc/d3f/BulkRound_8hpp_source.html">BulkRound.hpp</a></li>
 <li>src/Anonymity/BulkRound.cpp</li>
@@ -461,7 +462,7 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 30 2011 20:50:49 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 1 2011 20:54:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

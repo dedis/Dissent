@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -219,8 +220,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the shufflers group.  <a href="#aedd20eb47dbce34a45c2d9f2ff8dc5c5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa4065bd470849fbc077bf283de8a33c9">ProcessDataBase</a> (const QByteArray &amp;data, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows direct access to the message parsing without a try / catch surrounding it.  <a href="#aa4065bd470849fbc077bf283de8a33c9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a88bd84db52a5729667c61ff6bad7824e">HandlePublicKeys</a> (QDataStream &amp;data, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses incoming public key messages.  <a href="#a88bd84db52a5729667c61ff6bad7824e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae07760afcd950c4d3d0e8ccdf265e894">HandlePublicKeys</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses incoming public key messages.  <a href="#ae07760afcd950c4d3d0e8ccdf265e894"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab10112315459018eb3b38c70c01d5e97">HandleData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">First node receives data from all peers.  <a href="#ab10112315459018eb3b38c70c01d5e97"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa58d126f6d418a354535946c1d8ae761">HandleShuffle</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
@@ -504,7 +505,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>Each peer shares their incoming messages logs with each other in order to reconstruct where something bad may have occurred. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>serialized message </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
     <tr><td class="paramname">id</td><td>the remote peer sending the message </td></tr>
   </table>
   </dd>
@@ -540,7 +541,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>Prior to reviewing the blame data, shares the signatures of the blames that they received. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>serialized message </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
     <tr><td class="paramname">id</td><td>the remote peer sending the message </td></tr>
   </table>
   </dd>
@@ -576,7 +577,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>First node receives data from all peers. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>serialized message </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
     <tr><td class="paramname">id</td><td>the remote peer sending the message </td></tr>
   </table>
   </dd>
@@ -612,7 +613,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>The inner encrypted only messages sent by the last peer. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>serialized message </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
     <tr><td class="paramname">id</td><td>the remote peer sending the message </td></tr>
   </table>
   </dd>
@@ -648,7 +649,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>Each peer shares with each other their inner private keys. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>serialized message </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
     <tr><td class="paramname">id</td><td>the remote peer sending the message </td></tr>
   </table>
   </dd>
@@ -656,7 +657,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 
 </div>
 </div>
-<a class="anchor" id="a88bd84db52a5729667c61ff6bad7824e"></a><!-- doxytag: member="Dissent::Anonymity::ShuffleRound::HandlePublicKeys" ref="a88bd84db52a5729667c61ff6bad7824e" args="(QDataStream &amp;data, const Id &amp;id)" -->
+<a class="anchor" id="ae07760afcd950c4d3d0e8ccdf265e894"></a><!-- doxytag: member="Dissent::Anonymity::ShuffleRound::HandlePublicKeys" ref="ae07760afcd950c4d3d0e8ccdf265e894" args="(QDataStream &amp;stream, const Id &amp;id)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -664,7 +665,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
           <td class="memname">void Dissent::Anonymity::ShuffleRound::HandlePublicKeys </td>
           <td>(</td>
           <td class="paramtype">QDataStream &amp;&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
+          <td class="paramname"><em>stream</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -684,7 +685,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>Parses incoming public key messages. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>serialized message </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
     <tr><td class="paramname">id</td><td>the remote peer sending the message </td></tr>
   </table>
   </dd>
@@ -720,7 +721,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>Each node besides the first receives shuffled data. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>serialized message </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
     <tr><td class="paramname">id</td><td>the remote peer sending the message </td></tr>
   </table>
   </dd>
@@ -762,7 +763,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>Each peer sends a go / no go message. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">data</td><td>serialized message </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
     <tr><td class="paramname">id</td><td>the remote peer sending the message </td></tr>
   </table>
   </dd>
@@ -992,7 +993,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 30 2011 22:54:07 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 1 2011 20:54:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>
