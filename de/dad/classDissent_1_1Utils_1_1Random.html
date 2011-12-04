@@ -111,9 +111,8 @@ Inheritance diagram for Dissent::Utils::Random:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eb6e1dda3da125823a72f8c15edae44"></a><!-- doxytag: member="Dissent::Utils::Random::Random" ref="a1eb6e1dda3da125823a72f8c15edae44" args="(const QByteArray &amp;seed=QByteArray())" -->
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a1eb6e1dda3da125823a72f8c15edae44">Random</a> (const QByteArray &amp;seed=QByteArray())</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a41ff0d2de954a4a077690d19a2b4b13d">Random</a> (const QByteArray &amp;seed=QByteArray(), uint index=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a41ff0d2de954a4a077690d19a2b4b13d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d8eaf852280adec5cde5474805592fc"></a><!-- doxytag: member="Dissent::Utils::Random::~Random" ref="a7d8eaf852280adec5cde5474805592fc" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7d8eaf852280adec5cde5474805592fc">~Random</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
@@ -121,6 +120,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a random intger from min to max.  <a href="#a3392f856465925a2f657f7d07dd604ba"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a9aecb01ce7b3ef1adbbd7ca24030bc6e">GenerateBlock</a> (QByteArray &amp;data)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random data set overwriting an existing QByteArray.  <a href="#a9aecb01ce7b3ef1adbbd7ca24030bc6e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93f92968a4390ff984b0807d4096b0ad"></a><!-- doxytag: member="Dissent::Utils::Random::BytesGenerated" ref="a93f92968a4390ff984b0807d4096b0ad" args="()" -->
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a93f92968a4390ff984b0807d4096b0ad">BytesGenerated</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of bytes generated thus far. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dc36d5fc4c75afe3037ca0342df1cc5"></a><!-- doxytag: member="Dissent::Utils::Random::GetInstance" ref="a8dc36d5fc4c75afe3037ca0342df1cc5" args="()" -->
@@ -132,10 +134,52 @@ static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a146f32e86d0b41110a83099eb3d90b40"></a><!-- doxytag: member="Dissent::Utils::Random::Random" ref="a146f32e86d0b41110a83099eb3d90b40" args="(const Random &amp;)" -->
 &#160;</td><td class="memItemRight" valign="bottom"><b>Random</b> (const <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Random</a> &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b460fa92e135651f1c15858fe8c004e"></a><!-- doxytag: member="Dissent::Utils::Random::IncrementByteCount" ref="a7b460fa92e135651f1c15858fe8c004e" args="(uint count)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7b460fa92e135651f1c15858fe8c004e">IncrementByteCount</a> (uint count)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the amount of bytes generated thus far. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#abe06b27857fdde27039733d22dddde01">MoveRngPosition</a> (uint index)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the rng to specified position.  <a href="#abe06b27857fdde27039733d22dddde01"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> number generator -- base class is a singleton. </p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a41ff0d2de954a4a077690d19a2b4b13d"></a><!-- doxytag: member="Dissent::Utils::Random::Random" ref="a41ff0d2de954a4a077690d19a2b4b13d" args="(const QByteArray &amp;seed=QByteArray(), uint index=0)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dissent::Utils::Random::Random </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>seed</em> = <code>QByteArray()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Constructor. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seed</td><td>used to create a deterministic rng </td></tr>
+    <tr><td class="paramname">index</td><td>moves the rng to a specific index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a9aecb01ce7b3ef1adbbd7ca24030bc6e"></a><!-- doxytag: member="Dissent::Utils::Random::GenerateBlock" ref="a9aecb01ce7b3ef1adbbd7ca24030bc6e" args="(QByteArray &amp;data)" -->
 <div class="memitem">
 <div class="memproto">
@@ -201,6 +245,31 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abe06b27857fdde27039733d22dddde01"></a><!-- doxytag: member="Dissent::Utils::Random::MoveRngPosition" ref="abe06b27857fdde27039733d22dddde01" args="(uint index)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dissent::Utils::Random::MoveRngPosition </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Moves the rng to specified position. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>the position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Utils/<a class="el" href="../../dd/d6e/Random_8hpp_source.html">Random.hpp</a></li>
 <li>src/Utils/Random.cpp</li>
@@ -223,7 +292,7 @@ Protected Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 1 2011 20:54:13 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 4 2011 05:56:28 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

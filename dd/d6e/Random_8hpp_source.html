@@ -89,25 +89,32 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00013"></a>00013     <span class="keyword">public</span>:
 <a name="l00014"></a>00014       <span class="keyword">static</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;GetInstance();
 <a name="l00015"></a>00015 
-<a name="l00019"></a>00019       <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a1eb6e1dda3da125823a72f8c15edae44" title="Constructor.">Random</a>(<span class="keyword">const</span> QByteArray &amp;seed = QByteArray());
-<a name="l00020"></a>00020 
-<a name="l00024"></a><a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7d8eaf852280adec5cde5474805592fc">00024</a>       <span class="keyword">virtual</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7d8eaf852280adec5cde5474805592fc" title="Destructor.">~Random</a>() {}
-<a name="l00025"></a>00025 
-<a name="l00030"></a><a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a03c44f8d717ab3cc161d6bbd6df91715">00030</a>       <span class="keyword">static</span> uint <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a03c44f8d717ab3cc161d6bbd6df91715" title="Returns the optimal seed size, less than will provide suboptimal results and greater than will be com...">OptimalSeedSize</a>() { <span class="keywordflow">return</span> 4; }
-<a name="l00031"></a>00031 
-<a name="l00037"></a>00037       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(<span class="keywordtype">int</span> min = 0, <span class="keywordtype">int</span> max = RAND_MAX);
-<a name="l00038"></a>00038 
-<a name="l00043"></a>00043       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a9aecb01ce7b3ef1adbbd7ca24030bc6e" title="Generates a random data set overwriting an existing QByteArray.">GenerateBlock</a>(QByteArray &amp;data);
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045     <span class="keyword">protected</span>:
-<a name="l00046"></a>00046       <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a1eb6e1dda3da125823a72f8c15edae44" title="Constructor.">Random</a>(<span class="keyword">const</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;) {}
-<a name="l00047"></a>00047     <span class="keyword">private</span>:
-<a name="l00048"></a>00048       uint _seed;
-<a name="l00049"></a>00049   };
-<a name="l00050"></a>00050 }
-<a name="l00051"></a>00051 }
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053 <span class="preprocessor">#endif</span>
+<a name="l00021"></a>00021       <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a41ff0d2de954a4a077690d19a2b4b13d" title="Constructor.">Random</a>(<span class="keyword">const</span> QByteArray &amp;seed = QByteArray(), uint index = 0);
+<a name="l00022"></a>00022 
+<a name="l00026"></a><a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7d8eaf852280adec5cde5474805592fc">00026</a>       <span class="keyword">virtual</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7d8eaf852280adec5cde5474805592fc" title="Destructor.">~Random</a>() {}
+<a name="l00027"></a>00027 
+<a name="l00032"></a><a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a03c44f8d717ab3cc161d6bbd6df91715">00032</a>       <span class="keyword">static</span> uint <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a03c44f8d717ab3cc161d6bbd6df91715" title="Returns the optimal seed size, less than will provide suboptimal results and greater than will be com...">OptimalSeedSize</a>() { <span class="keywordflow">return</span> 4; }
+<a name="l00033"></a>00033 
+<a name="l00039"></a>00039       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(<span class="keywordtype">int</span> min = 0, <span class="keywordtype">int</span> max = RAND_MAX);
+<a name="l00040"></a>00040 
+<a name="l00045"></a>00045       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a9aecb01ce7b3ef1adbbd7ca24030bc6e" title="Generates a random data set overwriting an existing QByteArray.">GenerateBlock</a>(QByteArray &amp;data);
+<a name="l00046"></a>00046 
+<a name="l00050"></a><a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a93f92968a4390ff984b0807d4096b0ad">00050</a>       <span class="keyword">inline</span> uint <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a93f92968a4390ff984b0807d4096b0ad" title="Returns the amount of bytes generated thus far.">BytesGenerated</a>() { <span class="keywordflow">return</span> _byte_count; }
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052     <span class="keyword">protected</span>:
+<a name="l00053"></a>00053       <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a41ff0d2de954a4a077690d19a2b4b13d" title="Constructor.">Random</a>(<span class="keyword">const</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;) {}
+<a name="l00057"></a><a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7b460fa92e135651f1c15858fe8c004e">00057</a>       <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7b460fa92e135651f1c15858fe8c004e" title="Increments the amount of bytes generated thus far.">IncrementByteCount</a>(uint count) { _byte_count+= count; }
+<a name="l00058"></a>00058 
+<a name="l00063"></a>00063       <span class="keywordtype">void</span> <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#abe06b27857fdde27039733d22dddde01" title="Moves the rng to specified position.">MoveRngPosition</a>(uint index);
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065     <span class="keyword">private</span>:
+<a name="l00066"></a>00066       uint _seed;
+<a name="l00067"></a>00067       uint _byte_count;
+<a name="l00068"></a>00068   };
+<a name="l00069"></a>00069 }
+<a name="l00070"></a>00070 }
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -127,7 +134,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 1 2011 20:54:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 4 2011 05:56:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

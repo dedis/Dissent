@@ -110,8 +110,8 @@ Inheritance diagram for Dissent::Crypto::CppRandom:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html#a4e8a9a30e8f526464cf2d40cb1960721">CppRandom</a> (const QByteArray &amp;seed=QByteArray())</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a4e8a9a30e8f526464cf2d40cb1960721"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html#a021e021ee8de68d86e18c6b4f42f76fb">CppRandom</a> (const QByteArray &amp;seed=QByteArray(), uint index=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a021e021ee8de68d86e18c6b4f42f76fb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a0fa487a8603717bb3afbc5552c09ab"></a><!-- doxytag: member="Dissent::Crypto::CppRandom::~CppRandom" ref="a9a0fa487a8603717bb3afbc5552c09ab" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html#a9a0fa487a8603717bb3afbc5552c09ab">~CppRandom</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
@@ -130,7 +130,7 @@ static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implementation of Random using CryptoPP. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a4e8a9a30e8f526464cf2d40cb1960721"></a><!-- doxytag: member="Dissent::Crypto::CppRandom::CppRandom" ref="a4e8a9a30e8f526464cf2d40cb1960721" args="(const QByteArray &amp;seed=QByteArray())" -->
+<a class="anchor" id="a021e021ee8de68d86e18c6b4f42f76fb"></a><!-- doxytag: member="Dissent::Crypto::CppRandom::CppRandom" ref="a021e021ee8de68d86e18c6b4f42f76fb" args="(const QByteArray &amp;seed=QByteArray(), uint index=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -138,8 +138,18 @@ static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
           <td class="memname">Dissent::Crypto::CppRandom::CppRandom </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>seed</em> = <code>QByteArray()</code></td><td>)</td>
+          <td class="paramname"><em>seed</em> = <code>QByteArray()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>index</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -243,7 +253,7 @@ static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 1 2011 20:54:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 4 2011 05:56:27 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>
