@@ -197,7 +197,7 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents a single instance of a cryptographically secure anonymous exchange. </p>
-<p>The V1 bulk protocol consists of a shuffle round and a bulk transmission phase. The current instantiation does not include any blame phase that, which is present within the shuffle round. </p>
+<p>The V1 bulk protocol consists of a shuffle round and a bulk transmission phase. The shuffle round includes an anonymous DH key and a hash for each message transmitted by other peers. Each member combines their well known public key with the anonymous DH key to create seeds for a random number generator to generate an xor mask. They then calculate the xor version of their message by xoring all other masks and the cleartext. They transmit the xor mask with their xor message. Each member will accumulate and xor all messages revealing the cleartext message. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aec3bd3b0d615e77c76bbb34205f88fa6"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::BulkRound" ref="aec3bd3b0d615e77c76bbb34205f88fa6" args="(QSharedPointer&lt; GroupGenerator &gt; group_gen, const Credentials &amp;creds, const Id &amp;round_id, QSharedPointer&lt; Network &gt; network, GetDataCallback &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; ShuffleRound &gt;)" -->
 <div class="memitem">
@@ -252,9 +252,11 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">group_gen</td><td>Generate groups for use during this round </td></tr>
+    <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
     <tr><td class="paramname">get_data</td><td>requests data to share during this session </td></tr>
+    <tr><td class="paramname">create_shuffle</td><td>optional parameter specifying a shuffle round to create, currently used for testing </td></tr>
   </table>
   </dd>
 </dl>
@@ -462,7 +464,7 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 4 2011 05:56:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 4 2011 21:15:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

@@ -108,7 +108,9 @@ Inheritance diagram for Dissent::Anonymity::RepeatingBulkRound:</div>
 <area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="0,0,308,24"/>
 <area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="318,0,626,24"/>
 <area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="636,0,944,24"/>
-<area href="../../d2/d2e/classDissent_1_1Tests_1_1RepeatingBulkRoundBadShuffler.html" alt="Dissent::Tests::RepeatingBulkRoundBadShuffler&lt; T &gt;" shape="rect" coords="318,168,626,192"/>
+<area href="../../d5/d6c/classDissent_1_1Anonymity_1_1TrustedBulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange." alt="Dissent::Anonymity::TrustedBulkRound" shape="rect" coords="159,168,467,192"/>
+<area href="../../d2/d2e/classDissent_1_1Tests_1_1RepeatingBulkRoundBadShuffler.html" alt="Dissent::Tests::RepeatingBulkRoundBadShuffler&lt; T &gt;" shape="rect" coords="477,168,785,192"/>
+<area href="../../df/d63/classDissent_1_1Tests_1_1TrustedBulkRoundBadShuffler.html" alt="Dissent::Tests::TrustedBulkRoundBadShuffler&lt; T &gt;" shape="rect" coords="159,224,467,248"/>
 </map>
  </div></div>
 
@@ -186,6 +188,33 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parsed descriptors. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a5a7c13ec419ce879f5e2d6914f512d7c">HandleBulkData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles bulk data messages.  <a href="#a5a7c13ec419ce879f5e2d6914f512d7c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ef2fec7c44d0c7f6b651e7c626e2d01"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::GetExpectedBulkMessageSize" ref="a2ef2fec7c44d0c7f6b651e7c626e2d01" args="()" -->
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a2ef2fec7c44d0c7f6b651e7c626e2d01">GetExpectedBulkMessageSize</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this phases expected message size. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a997cc7badad3e2f3a208da6ba576d1ab"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::SetAnonymousRngs" ref="a997cc7badad3e2f3a208da6ba576d1ab" args="(const QVector&lt; QSharedPointer&lt; Random &gt; &gt; &amp;anon_rngs)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a997cc7badad3e2f3a208da6ba576d1ab">SetAnonymousRngs</a> (const QVector&lt; QSharedPointer&lt; <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Random</a> &gt; &gt; &amp;anon_rngs)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the list of anonymous rngs. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82f9ab1cdcb93437ff78856bd18cc7ef"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::GetAnonymousRngs" ref="a82f9ab1cdcb93437ff78856bd18cc7ef" args="()" -->
+const QVector&lt; QSharedPointer<br class="typebreak"/>
+&lt; <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Random</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetAnonymousRngs</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f75fe1757f9c8abadae7f98589e2d93"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::SetState" ref="a4f75fe1757f9c8abadae7f98589e2d93" args="(State state)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a4f75fe1757f9c8abadae7f98589e2d93">SetState</a> (<a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#ad7ac88ab1e79604d43f26b32ef7b5edc">State</a> state)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the internal state of the bulk round. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8d48865efa9ec037de497815b34d8e7"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::GenerateMyCleartextMessage" ref="af8d48865efa9ec037de497815b34d8e7" args="()" -->
+QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#af8d48865efa9ec037de497815b34d8e7">GenerateMyCleartextMessage</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares the local members cleartext message returns the local members cleartext message. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcc2c0043b4da4f15aa0bfa9a4803dd4"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::GetMyIndex" ref="adcc2c0043b4da4f15aa0bfa9a4803dd4" args="()" -->
+uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#adcc2c0043b4da4f15aa0bfa9a4803dd4">GetMyIndex</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local members index. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2a4450ebd45926cdabed5fd3b4a401d4"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::GetMessageLengths" ref="a2a4450ebd45926cdabed5fd3b4a401d4" args="()" -->
+const QVector&lt; uint &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a2a4450ebd45926cdabed5fd3b4a401d4">GetMessageLengths</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of current phase message lengths. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee781b4e094a9970c9dc78a8ebfe4c90"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::GetHeaderLengths" ref="aee781b4e094a9970c9dc78a8ebfe4c90" args="()" -->
+const QVector&lt; uint &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#aee781b4e094a9970c9dc78a8ebfe4c90">GetHeaderLengths</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the list of static sized headers / footers. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b9e838ae71932af18d9a99d88947b49"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::GetAnonymousDh" ref="a3b9e838ae71932af18d9a99d88947b49" args="()" -->
+QSharedPointer&lt; <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">DiffieHellman</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a3b9e838ae71932af18d9a99d88947b49">GetAnonymousDh</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the anonymous DiffieHellman key. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents a single instance of a cryptographically secure anonymous exchange. </p>
@@ -244,9 +273,11 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">group_gen</td><td>Generate groups for use during this round </td></tr>
+    <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
     <tr><td class="paramname">get_data</td><td>requests data to share during this session </td></tr>
+    <tr><td class="paramname">create_shuffle</td><td>optional parameter specifying a shuffle round to create, currently used for testing </td></tr>
   </table>
   </dd>
 </dl>
@@ -463,7 +494,7 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 4 2011 05:56:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Dec 4 2011 21:15:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>
