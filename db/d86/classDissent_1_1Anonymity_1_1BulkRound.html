@@ -168,7 +168,7 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal bulk state. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58d8036041e4d42d11442a9a5ac718a5"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::GetShuffleRound" ref="a58d8036041e4d42d11442a9a5ac718a5" args="()" -->
 QSharedPointer&lt; <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html">Round</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a58d8036041e4d42d11442a9a5ac718a5">GetShuffleRound</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s basic shuffling algorithm.">ShuffleRound</a> used to exchange descriptors. <br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a> used to exchange descriptors. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#abdabd010181f8f548ad8e11a95a7bd02">StateToString</a> (<a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a5f43dc0a1c430f0cfa8218acf55f6ae9">State</a> st)</td></tr>
@@ -197,7 +197,7 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents a single instance of a cryptographically secure anonymous exchange. </p>
-<p>The V1 bulk protocol consists of a shuffle round and a bulk transmission phase. The shuffle round includes an anonymous DH key and a hash for each message transmitted by other peers. Each member combines their well known public key with the anonymous DH key to create seeds for a random number generator to generate an xor mask. They then calculate the xor version of their message by xoring all other masks and the cleartext. They transmit the xor mask with their xor message. Each member will accumulate and xor all messages revealing the cleartext message. </p>
+<p>The V1 bulk protocol consists of a shuffle round and a bulk transmission phase. The shuffle round includes an anonymous DH key and a hash for each message transmitted by other peers. The final permuted position of the DH key and hash is their position or slot in the bulk message. Using the RNG, a member generates an xor mask for the slot of the anonymous sender. If the member owns the slot, then they first calculate all others masks, xor them together, and then xor the cleartext to arrive at their mask. Each member accumulates the masks in the appropriate slot order and distributes them to all other peers. Upon accumulating all xor masks and combining them via xor operations the cleartext messages are revealed. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aec3bd3b0d615e77c76bbb34205f88fa6"></a><!-- doxytag: member="Dissent::Anonymity::BulkRound::BulkRound" ref="aec3bd3b0d615e77c76bbb34205f88fa6" args="(QSharedPointer&lt; GroupGenerator &gt; group_gen, const Credentials &amp;creds, const Id &amp;round_id, QSharedPointer&lt; Network &gt; network, GetDataCallback &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; ShuffleRound &gt;)" -->
 <div class="memitem">
@@ -464,7 +464,7 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 4 2011 21:15:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 5 2011 19:01:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

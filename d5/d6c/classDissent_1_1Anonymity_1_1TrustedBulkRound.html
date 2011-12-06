@@ -122,7 +122,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents a single instance of a cryptographically secure anonymous exchange. </p>
-<p>The "V3" bulk protocol builds on the "V2" by reusing the shuffle to exchange anonymous DiffieHellman public components and public signing keys. The cleartext messages are still of the same form: phase, next phase message length, message, and signature. The difference is in how the xor texts are generated. This model assumes that only a core set of resources are trusted allowing the non-trusted peers to be offline during transmissions so long as they have generated sufficient bits. In short, all members start with an xor mask by combining their anonymous DH with the trusted members well known public DH. The trusted members include in their xor mask a combination of all anonymous DH keys with their well known public DH. In short, each peer has an xor mask for each trusted peer. Each trusted peer has an xor mask for every other peer. Their cleartext message is xored directly into the message. Thus after accumulating and xoring all the masks only the cleartext remains. </p>
+<p>The "V3" bulk protocol builds on the "V2" by reusing the shuffle to exchange anonymous DiffieHellman public components and public signing keys. The cleartext messages are still of the same form: phase, next phase message length, message, and signature. The difference is in how the xor texts are generated. This model assumes that only a core set of resources are trusted and allows for pregeneration of xor masks. A peer can generate sufficient bits, share them with another peer who will transmit the bits for them, and then go offline.</p>
+<p>To generate the bits, creates a RNG for each trusted peer using DH shared secret created as a result of combining the anonymous private DH with the public trusted DH. In addition, each trusted DH creates a RNG for each peer using their private DH and the anonymous public DH. Each RNG is used to generate a message spanning the length of all anonymous messages in the given phase. Each peer than combines via xor these masks to generate an xor mask. The member then xors their message into their space inside the message. This final message is the one distributed to all other peers. A peer collecting all messages can xor them together to reveal all the original messages. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Anonymity/<a class="el" href="../../d3/d1d/TrustedBulkRound_8hpp_source.html">TrustedBulkRound.hpp</a></li>
 <li>src/Anonymity/TrustedBulkRound.cpp</li>
@@ -145,7 +146,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 4 2011 21:15:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 5 2011 19:01:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div>
 <div class="contents">
 <!-- doxytag: class="Dissent::Anonymity::ShuffleRound" --><!-- doxytag: inherits="Dissent::Anonymity::Round" -->
-<p>Dissent's basic shuffling algorithm.  
+<p>Dissent's shuffling algorithm.  
  <a href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../da/d61/ShuffleRound_8hpp_source.html">ShuffleRound.hpp</a>&gt;</code></p>
@@ -367,7 +367,10 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">List of the index of all bad peers. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Dissent's basic shuffling algorithm. </p>
+<div class="textblock"><p>Dissent's shuffling algorithm. </p>
+<p>A subset of members, shufflers, provide a pair of public encryption keys called inner and outer keys. In the protocol these key pairs are distributed first. Some other subset of peers has a message they want to share anonymously and those that do not have a null packet. Each member encrypts their message first with each inner key and then with each outer key. Keys are ordered by the peer Id of the owner from largest to smallest largest in Integer format. The resulting message is sent to the first member in the shufflers group. Each shuffler removes their outer encryption, shuffles (permutes) the message order, and transmits the resulting message to the next member. When the last shuffler completes their decryption and permutation, the message is broadcasted to all members in the group.</p>
+<p>Each member broadcasts to a go along with the hash of all broadcast messages received thus far if their inner encrypted message is present or a no go if not. If all members submit a go and have the same broadcast message hash, each shuffler reveals their private keys. Otherwise peers begin a blame phase and broadcast their logs to each other. Afterward, each peer distributes the hash of the messages and the signature, so that each other member can verify they are viewing the same state. Each peer will replay the round and determine the faulty peer.</p>
+<p>The blame phase is still being evolved. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a192b2a8bbdf40e1ce64bf510464d33ff"></a><!-- doxytag: member="Dissent::Anonymity::ShuffleRound::ShuffleRound" ref="a192b2a8bbdf40e1ce64bf510464d33ff" args="(QSharedPointer&lt; GroupGenerator &gt; group_gen, const Credentials &amp;creds, const Id &amp;round_id, QSharedPointer&lt; Network &gt; network, GetDataCallback &amp;get_data)" -->
 <div class="memitem">
@@ -993,7 +996,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 4 2011 21:15:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 5 2011 19:01:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>
