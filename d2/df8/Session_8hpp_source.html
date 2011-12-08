@@ -121,7 +121,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00045"></a>00045       <span class="keyword">typedef</span> <a class="code" href="../../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html">Dissent::Messaging::RpcMethod&lt;Session&gt;</a> <a class="code" href="../../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html">RpcMethod</a>;
 <a name="l00046"></a>00046       <span class="keyword">typedef</span> <a class="code" href="../../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html">Dissent::Messaging::GetDataMethod&lt;Session&gt;</a> <a class="code" href="../../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html">GetDataCallback</a>;
 <a name="l00047"></a>00047 
-<a name="l00059"></a>00059       <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#addc1e59deace43f07deaa2ab0388721d" title="Constructor.">Session</a>(<span class="keyword">const</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session.">Group</a> &amp;group, <span class="keyword">const</span> <a class="code" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html" title="A container class for holding a user&#39;s data.">Credentials</a> &amp;creds, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;leader_id,
+<a name="l00059"></a>00059       <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#addc1e59deace43f07deaa2ab0388721d" title="Constructor.">Session</a>(<span class="keyword">const</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending orde.">Group</a> &amp;group, <span class="keyword">const</span> <a class="code" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html" title="A container class for holding a user&#39;s data.">Credentials</a> &amp;creds, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;leader_id,
 <a name="l00060"></a>00060           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id, QSharedPointer&lt;Network&gt; network,
 <a name="l00061"></a>00061           CreateRound create_round, CreateGroupGenerator group_generator);
 <a name="l00062"></a>00062 
@@ -170,7 +170,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00169"></a>00169 
 <a name="l00173"></a>00173       QByteArray _send_queue;
 <a name="l00174"></a>00174 
-<a name="l00175"></a>00175       <span class="keyword">const</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session.">Group</a> _group;
+<a name="l00175"></a>00175       <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending orde.">Group</a> _group;
 <a name="l00176"></a>00176       <span class="keyword">const</span> <a class="code" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html" title="A container class for holding a user&#39;s data.">Credentials</a> _creds;
 <a name="l00177"></a>00177       <span class="keyword">const</span> Id _leader_id;
 <a name="l00178"></a>00178       <span class="keyword">const</span> Id _session_id;
@@ -212,7 +212,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 5 2011 19:01:11 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 8 2011 14:23:00 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

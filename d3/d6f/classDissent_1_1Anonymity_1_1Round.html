@@ -88,7 +88,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Anonymity::Round Class Reference</div>  </div>
 </div>
@@ -195,6 +196,8 @@ virtual const QVector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" vali
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a925b6a4edb4356ad4c9d5483499f34e1"></a><!-- doxytag: member="Dissent::Anonymity::Round::Send" ref="a925b6a4edb4356ad4c9d5483499f34e1" args="(const QByteArray &amp;data)" -->
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a925b6a4edb4356ad4c9d5483499f34e1">Send</a> (const QByteArray &amp;data)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send is not implemented, it is here simply so we can reuse the Source paradigm and have the session recognize which round produced the result. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af8e51e8d6da71f6b4f2d6cc1baa06e8c">HandleDisconnect</a> (<a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> *con)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If the ConnectionTable has a disconnect, the round may need to react.  <a href="#af8e51e8d6da71f6b4f2d6cc1baa06e8c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d38fed9697492e00798e93d206d6ae8"></a><!-- doxytag: member="Dissent::Anonymity::Round::ToString" ref="a5d38fed9697492e00798e93d206d6ae8" args="() const " -->
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a5d38fed9697492e00798e93d206d6ae8">ToString</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Presents the ISender in a string format. <br/></td></tr>
@@ -224,6 +227,26 @@ QSharedPointer&lt; <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1Di
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSuccessful</b> (bool successful)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad683e5e2d6861d80eb100eac22e470c4"></a><!-- doxytag: member="Dissent::Anonymity::Round::GetNetwork" ref="ad683e5e2d6861d80eb100eac22e470c4" args="()" -->
 QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetNetwork</b> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21b19346947f21744dcd4f7624aa9b5a"></a><!-- doxytag: member="Dissent::Anonymity::Round::_group_gen" ref="a21b19346947f21744dcd4f7624aa9b5a" args="" -->
+QSharedPointer&lt; <a class="el" href="../../d8/d81/classDissent_1_1Anonymity_1_1GroupGenerator.html">GroupGenerator</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_group_gen</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8eeb53f0c20b58d4872dde521c1179cb"></a><!-- doxytag: member="Dissent::Anonymity::Round::_group" ref="a8eeb53f0c20b58d4872dde521c1179cb" args="" -->
+const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_group</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a62d444397297abae22961cc8e1f545e7"></a><!-- doxytag: member="Dissent::Anonymity::Round::_creds" ref="a62d444397297abae22961cc8e1f545e7" args="" -->
+const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_creds</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a943387baeb495e00c8297096159a40f7"></a><!-- doxytag: member="Dissent::Anonymity::Round::_round_id" ref="a943387baeb495e00c8297096159a40f7" args="" -->
+const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_round_id</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1728fd97c5bd6701bd016a60433a6db"></a><!-- doxytag: member="Dissent::Anonymity::Round::_network" ref="ad1728fd97c5bd6701bd016a60433a6db" args="" -->
+QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_network</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12d1b608b4d6d4f5176f843ea995a603"></a><!-- doxytag: member="Dissent::Anonymity::Round::_get_data_cb" ref="a12d1b608b4d6d4f5176f843ea995a603" args="" -->
+<a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>_get_data_cb</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeacc7f0c397ea50922e5cb3c7d38ce31"></a><!-- doxytag: member="Dissent::Anonymity::Round::_successful" ref="aeacc7f0c397ea50922e5cb3c7d38ce31" args="" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_successful</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3e81f9e15736575e8b33aa46e4b1de4"></a><!-- doxytag: member="Dissent::Anonymity::Round::_stopped_reason" ref="ab3e81f9e15736575e8b33aa46e4b1de4" args="" -->
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>_stopped_reason</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9242c5211fcfc818138b179b9df5e59"></a><!-- doxytag: member="Dissent::Anonymity::Round::_empty_list" ref="ae9242c5211fcfc818138b179b9df5e59" args="" -->
+QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>_empty_list</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents a single instance of a cryptographically secure anonymous exchange. </p>
@@ -286,6 +309,31 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="af8e51e8d6da71f6b4f2d6cc1baa06e8c"></a><!-- doxytag: member="Dissent::Anonymity::Round::HandleDisconnect" ref="af8e51e8d6da71f6b4f2d6cc1baa06e8c" args="(Connection *con)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dissent::Anonymity::Round::HandleDisconnect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> *&#160;</td>
+          <td class="paramname"><em>con</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>If the ConnectionTable has a disconnect, the round may need to react. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">con</td><td>the Connection that disconnected </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ae15123712f139d6df092486dcbf2f365"></a><!-- doxytag: member="Dissent::Anonymity::Round::IncomingData" ref="ae15123712f139d6df092486dcbf2f365" args="(RpcRequest &amp;notification)" -->
 <div class="memitem">
 <div class="memproto">
@@ -506,7 +554,7 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 5 2011 19:01:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 8 2011 14:23:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

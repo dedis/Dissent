@@ -87,13 +87,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Anonymity::Group Class Reference</div>  </div>
 </div>
 <div class="contents">
 <!-- doxytag: class="Dissent::Anonymity::Group" -->
-<p>Members of an anonymity session.  
+<p>Members of an anonymity session sorted in ascending orde.  
  <a href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d1/d6f/Group_8hpp_source.html">Group.hpp</a>&gt;</code></p>
@@ -107,12 +107,21 @@ typedef <br class="typebreak"/>
 <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">Dissent::Crypto::AsymmetricKey</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AsymmetricKey</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06311f0c9592eaf8408e4261f81e677b"></a><!-- doxytag: member="Dissent::Anonymity::Group::Id" ref="a06311f0c9592eaf8408e4261f81e677b" args="" -->
 typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Dissent::Connections::Id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80f8f9dd02daa8a0aa3a22754030fe7f"></a><!-- doxytag: member="Dissent::Anonymity::Group::const_iterator" ref="a80f8f9dd02daa8a0aa3a22754030fe7f" args="" -->
+typedef QVector<br class="typebreak"/>
+&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt;<br class="typebreak"/>
+::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9dcfb2662b249f650e6261f8e1c5d1f"></a><!-- doxytag: member="Dissent::Anonymity::Group::begin" ref="af9dcfb2662b249f650e6261f8e1c5d1f" args="() const " -->
+const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a81cad2a121d986627bfc21ab4b9d9a"></a><!-- doxytag: member="Dissent::Anonymity::Group::end" ref="a4a81cad2a121d986627bfc21ab4b9d9a" args="() const " -->
+const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a57c080682ff38dca25e8c141f6b9910d">Group</a> (const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;containers=QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt;())</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a57c080682ff38dca25e8c141f6b9910d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a539abd22a28c21f29f94643c95f92956"></a><!-- doxytag: member="Dissent::Anonymity::Group::GetRoster" ref="a539abd22a28c21f29f94643c95f92956" args="() const " -->
-const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetRoster</b> () const </td></tr>
+const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a539abd22a28c21f29f94643c95f92956">GetRoster</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal roster. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a667f161c04e46a481472237d787d3167">GetId</a> (int idx) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Id of the peer based upon its ordered position in the group.  <a href="#a667f161c04e46a481472237d787d3167"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#adbad197b6ab8caec5b24948f66f7ba07">Next</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id) const </td></tr>
@@ -120,7 +129,7 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 <tr><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#adb4a48c2a236486068c19e827d9e6299">Previous</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Id of the peer before the specified Id.  <a href="#adb4a48c2a236486068c19e827d9e6299"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a2501a09d4267fcb22a19e4e46274571c">Contains</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the specified Id a member of the <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session.">Group</a>.  <a href="#a2501a09d4267fcb22a19e4e46274571c"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the specified Id a member of the <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending orde.">Group</a>.  <a href="#a2501a09d4267fcb22a19e4e46274571c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a0b3cc0516c68ec31056c63ef6ea312d8">GetIndex</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id) const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the position of the specified Id.  <a href="#a0b3cc0516c68ec31056c63ef6ea312d8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a774c17c7f1a5150eb1825c77f30b81ee">GetKey</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id) const </td></tr>
@@ -134,15 +143,18 @@ const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Tri
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87459adc7069d943a5bb4755d7dd4b52"></a><!-- doxytag: member="Dissent::Anonymity::Group::Count" ref="a87459adc7069d943a5bb4755d7dd4b52" args="() const " -->
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a87459adc7069d943a5bb4755d7dd4b52">Count</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the group. <br/></td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace7306db715d2952b83bfed1905c09b4"></a><!-- doxytag: member="Dissent::Anonymity::Group::EmptyKey" ref="ace7306db715d2952b83bfed1905c09b4" args="" -->
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a728000acdeb201e230cc6e783b64e055"></a><!-- doxytag: member="Dissent::Anonymity::Group::operator==" ref="a728000acdeb201e230cc6e783b64e055" args="(const Group &amp;other) const " -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a728000acdeb201e230cc6e783b64e055">operator==</a> (const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;other) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the equality of two groups (i.e., same order, same Ids, same keys, same DHs. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd35a001563f3191ca625c7f001c2f88"></a><!-- doxytag: member="Dissent::Anonymity::Group::EmptyKey" ref="abd35a001563f3191ca625c7f001c2f88" args="()" -->
 static const QSharedPointer<br class="typebreak"/>
-&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>EmptyKey</b></td></tr>
+&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>EmptyKey</b> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Members of an anonymity session. </p>
-<p>Ids represent overlay addresses for peers </p>
+<div class="textblock"><p>Members of an anonymity session sorted in ascending orde. </p>
+<p>Contains all the components attributed to another member in the anonymity group. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a57c080682ff38dca25e8c141f6b9910d"></a><!-- doxytag: member="Dissent::Anonymity::Group::Group" ref="a57c080682ff38dca25e8c141f6b9910d" args="(const QVector&lt; GroupContainer &gt; &amp;containers=QVector&lt; GroupContainer &gt;())" -->
 <div class="memitem">
@@ -185,7 +197,7 @@ static const QSharedPointer<br class="typebreak"/>
 </div>
 <div class="memdoc">
 
-<p>Is the specified Id a member of the <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session.">Group</a>. </p>
+<p>Is the specified Id a member of the <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending orde.">Group</a>. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">id</td><td>the specified Id </td></tr>
@@ -417,7 +429,7 @@ static const QSharedPointer<br class="typebreak"/>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 5 2011 19:01:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 8 2011 14:23:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>

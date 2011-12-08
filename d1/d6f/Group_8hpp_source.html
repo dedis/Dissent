@@ -80,80 +80,136 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DISSENT_ANONYMITY_GROUP_H_GUARD</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DISSENT_ANONYMITY_GROUP_H_GUARD</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QHash&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QSharedData&gt;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QSharedPointer&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QVector&gt;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;../Utils/Triple.hpp&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;../Connections/Id.hpp&quot;</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;algorithm&gt;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QDataStream&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QHash&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QSharedData&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;QSharedPointer&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;QVector&gt;</span>
 <a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">namespace </span>Dissent {
-<a name="l00013"></a>00013 <span class="keyword">namespace </span>Crypto {
-<a name="l00014"></a>00014   <span class="keyword">class </span>AsymmetricKey;
-<a name="l00015"></a>00015 }
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keyword">namespace </span>Anonymity {
-<a name="l00018"></a>00018   <span class="keyword">typedef</span> <a class="code" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html" title="Provides a tuple for 3 items.">Dissent::Utils::Triple</a>&lt;<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Dissent::Connections::Id</a>,
-<a name="l00019"></a>00019           QSharedPointer&lt;Dissent::Crypto::AsymmetricKey&gt;,
-<a name="l00020"></a>00020           QByteArray&gt; GroupContainer;
-<a name="l00021"></a>00021 
-<a name="l00025"></a><a class="code" href="../../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html">00025</a>   <span class="keyword">class </span><a class="code" href="../../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html" title="Private data structure for Group storage.">GroupData</a> : <span class="keyword">public</span> QSharedData {
-<a name="l00026"></a>00026     <span class="keyword">public</span>:
-<a name="l00027"></a>00027       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Dissent::Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
-<a name="l00028"></a>00028 
-<a name="l00029"></a>00029       <a class="code" href="../../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html" title="Private data structure for Group storage.">GroupData</a>(<span class="keyword">const</span> QVector&lt;GroupContainer&gt; &amp;group,
-<a name="l00030"></a>00030           <span class="keyword">const</span> QHash&lt;const Id, int&gt; &amp;id_to_int) :
-<a name="l00031"></a>00031         GroupRoster(group),
-<a name="l00032"></a>00032         IdtoInt(id_to_int),
-<a name="l00033"></a>00033         Size(group.count())
-<a name="l00034"></a>00034       {
-<a name="l00035"></a>00035       }
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037       <span class="keyword">virtual</span> ~<a class="code" href="../../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html" title="Private data structure for Group storage.">GroupData</a>() {}
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039       <span class="keyword">const</span> QVector&lt;GroupContainer&gt; GroupRoster;
-<a name="l00040"></a>00040       <span class="keyword">const</span> QHash&lt;const Id, int&gt; IdtoInt;
-<a name="l00041"></a>00041       <span class="keyword">const</span> <span class="keywordtype">int</span> Size;
-<a name="l00042"></a>00042   };
-<a name="l00043"></a>00043 
-<a name="l00047"></a><a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">00047</a>   <span class="keyword">class </span><a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session.">Group</a> {
-<a name="l00048"></a>00048     <span class="keyword">public</span>:
-<a name="l00049"></a>00049       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Dissent::Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
-<a name="l00050"></a>00050       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Dissent::Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
-<a name="l00051"></a>00051 
-<a name="l00056"></a>00056       <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a57c080682ff38dca25e8c141f6b9910d" title="Constructor.">Group</a>(<span class="keyword">const</span> QVector&lt;GroupContainer&gt; &amp;containers = QVector&lt;GroupContainer&gt;());
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058       <span class="keyword">inline</span> <span class="keyword">const</span> QVector&lt;GroupContainer&gt; &amp;GetRoster()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;GroupRoster; }
-<a name="l00059"></a>00059 
-<a name="l00064"></a>00064       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a667f161c04e46a481472237d787d3167" title="Returns the Id of the peer based upon its ordered position in the group.">GetId</a>(<span class="keywordtype">int</span> idx) <span class="keyword">const</span>;
-<a name="l00065"></a>00065 
-<a name="l00070"></a>00070       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#adbad197b6ab8caec5b24948f66f7ba07" title="Returns the Id of the peer after the specified Id.">Next</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00071"></a>00071 
-<a name="l00076"></a>00076       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#adb4a48c2a236486068c19e827d9e6299" title="Returns the Id of the peer before the specified Id.">Previous</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00077"></a>00077 
-<a name="l00082"></a>00082       <span class="keywordtype">bool</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a2501a09d4267fcb22a19e4e46274571c" title="Is the specified Id a member of the Group.">Contains</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00083"></a>00083 
-<a name="l00088"></a>00088       <span class="keywordtype">int</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a0b3cc0516c68ec31056c63ef6ea312d8" title="Returns the position of the specified Id.">GetIndex</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00089"></a>00089 
-<a name="l00094"></a>00094       QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a774c17c7f1a5150eb1825c77f30b81ee" title="Returns the key for the specified id.">GetKey</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00095"></a>00095 
-<a name="l00100"></a>00100       QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a774c17c7f1a5150eb1825c77f30b81ee" title="Returns the key for the specified id.">GetKey</a>(<span class="keywordtype">int</span> idx) <span class="keyword">const</span>;
-<a name="l00101"></a>00101 
-<a name="l00106"></a>00106       QByteArray <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#aa745ef64dd2faf01a69441f6ac785369" title="Returns the DiffieHellman public component.">GetPublicDiffieHellman</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
-<a name="l00107"></a>00107 
-<a name="l00112"></a>00112       QByteArray <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#aa745ef64dd2faf01a69441f6ac785369" title="Returns the DiffieHellman public component.">GetPublicDiffieHellman</a>(<span class="keywordtype">int</span> idx) <span class="keyword">const</span>;
-<a name="l00113"></a>00113 
-<a name="l00117"></a><a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a87459adc7069d943a5bb4755d7dd4b52">00117</a>       <span class="keywordtype">int</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a87459adc7069d943a5bb4755d7dd4b52" title="Returns the size of the group.">Count</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;Size; }
-<a name="l00118"></a>00118 
-<a name="l00119"></a>00119       <span class="keyword">static</span> <span class="keyword">const</span> QSharedPointer&lt;AsymmetricKey&gt; EmptyKey;
-<a name="l00120"></a>00120     <span class="keyword">private</span>:
-<a name="l00121"></a>00121       QSharedDataPointer&lt;GroupData&gt; _data;
-<a name="l00122"></a>00122   };
-<a name="l00123"></a>00123 }
-<a name="l00124"></a>00124 }
-<a name="l00125"></a>00125 
-<a name="l00126"></a>00126 <span class="preprocessor">#endif</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;../Connections/Id.hpp&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;../Crypto/NullPrivateKey.hpp&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;../Utils/Triple.hpp&quot;</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="keyword">namespace </span>Dissent {
+<a name="l00017"></a>00017 <span class="keyword">namespace </span>Crypto {
+<a name="l00018"></a>00018   <span class="keyword">class </span>AsymmetricKey;
+<a name="l00019"></a>00019 }
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="keyword">namespace </span>Anonymity {
+<a name="l00022"></a>00022   <span class="keyword">typedef</span> <a class="code" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html" title="Provides a tuple for 3 items.">Dissent::Utils::Triple</a>&lt;<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Dissent::Connections::Id</a>,
+<a name="l00023"></a>00023           QSharedPointer&lt;Dissent::Crypto::AsymmetricKey&gt;,
+<a name="l00024"></a>00024           QByteArray&gt; GroupContainer;
+<a name="l00025"></a>00025 
+<a name="l00029"></a><a class="code" href="../../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html">00029</a>   <span class="keyword">class </span><a class="code" href="../../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html" title="Private data structure for Group storage.">GroupData</a> : <span class="keyword">public</span> QSharedData {
+<a name="l00030"></a>00030     <span class="keyword">public</span>:
+<a name="l00031"></a>00031       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Dissent::Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033       <a class="code" href="../../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html" title="Private data structure for Group storage.">GroupData</a>(<span class="keyword">const</span> QVector&lt;GroupContainer&gt; &amp;group,
+<a name="l00034"></a>00034           <span class="keyword">const</span> QHash&lt;const Id, int&gt; &amp;id_to_int) :
+<a name="l00035"></a>00035         GroupRoster(group),
+<a name="l00036"></a>00036         IdtoInt(id_to_int),
+<a name="l00037"></a>00037         Size(group.count())
+<a name="l00038"></a>00038       {
+<a name="l00039"></a>00039       }
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041       <span class="keyword">virtual</span> ~<a class="code" href="../../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html" title="Private data structure for Group storage.">GroupData</a>() {}
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043       <span class="keyword">const</span> QVector&lt;GroupContainer&gt; GroupRoster;
+<a name="l00044"></a>00044       <span class="keyword">const</span> QHash&lt;const Id, int&gt; IdtoInt;
+<a name="l00045"></a>00045       <span class="keyword">const</span> <span class="keywordtype">int</span> Size;
+<a name="l00046"></a>00046   };
+<a name="l00047"></a>00047 
+<a name="l00053"></a><a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">00053</a>   <span class="keyword">class </span><a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending orde.">Group</a> {
+<a name="l00054"></a>00054     <span class="keyword">public</span>:
+<a name="l00055"></a>00055       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Dissent::Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
+<a name="l00056"></a>00056       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Dissent::Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
+<a name="l00057"></a>00057       <span class="keyword">typedef</span> QVector&lt;GroupContainer&gt;::const_iterator const_iterator;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059       <span class="keyword">inline</span> const_iterator begin()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;GroupRoster.begin(); }
+<a name="l00060"></a>00060       <span class="keyword">inline</span> const_iterator end()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;GroupRoster.end(); }
+<a name="l00061"></a>00061 
+<a name="l00066"></a>00066       <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a57c080682ff38dca25e8c141f6b9910d" title="Constructor.">Group</a>(<span class="keyword">const</span> QVector&lt;GroupContainer&gt; &amp;containers = QVector&lt;GroupContainer&gt;());
+<a name="l00067"></a>00067 
+<a name="l00071"></a><a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a539abd22a28c21f29f94643c95f92956">00071</a>       <span class="keyword">inline</span> <span class="keyword">const</span> QVector&lt;GroupContainer&gt; &amp;<a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a539abd22a28c21f29f94643c95f92956" title="Returns the internal roster.">GetRoster</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;GroupRoster; }
+<a name="l00072"></a>00072 
+<a name="l00077"></a>00077       <span class="keyword">const</span> Id &amp;<a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a667f161c04e46a481472237d787d3167" title="Returns the Id of the peer based upon its ordered position in the group.">GetId</a>(<span class="keywordtype">int</span> idx) <span class="keyword">const</span>;
+<a name="l00078"></a>00078 
+<a name="l00083"></a>00083       <span class="keyword">const</span> Id &amp;<a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#adbad197b6ab8caec5b24948f66f7ba07" title="Returns the Id of the peer after the specified Id.">Next</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00084"></a>00084 
+<a name="l00089"></a>00089       <span class="keyword">const</span> Id &amp;<a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#adb4a48c2a236486068c19e827d9e6299" title="Returns the Id of the peer before the specified Id.">Previous</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00090"></a>00090 
+<a name="l00095"></a>00095       <span class="keywordtype">bool</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a2501a09d4267fcb22a19e4e46274571c" title="Is the specified Id a member of the Group.">Contains</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00096"></a>00096 
+<a name="l00101"></a>00101       <span class="keywordtype">int</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a0b3cc0516c68ec31056c63ef6ea312d8" title="Returns the position of the specified Id.">GetIndex</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00102"></a>00102 
+<a name="l00107"></a>00107       QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a774c17c7f1a5150eb1825c77f30b81ee" title="Returns the key for the specified id.">GetKey</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00108"></a>00108 
+<a name="l00113"></a>00113       QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a774c17c7f1a5150eb1825c77f30b81ee" title="Returns the key for the specified id.">GetKey</a>(<span class="keywordtype">int</span> idx) <span class="keyword">const</span>;
+<a name="l00114"></a>00114 
+<a name="l00119"></a>00119       QByteArray <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#aa745ef64dd2faf01a69441f6ac785369" title="Returns the DiffieHellman public component.">GetPublicDiffieHellman</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>) <span class="keyword">const</span>;
+<a name="l00120"></a>00120 
+<a name="l00125"></a>00125       QByteArray <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#aa745ef64dd2faf01a69441f6ac785369" title="Returns the DiffieHellman public component.">GetPublicDiffieHellman</a>(<span class="keywordtype">int</span> idx) <span class="keyword">const</span>;
+<a name="l00126"></a>00126 
+<a name="l00130"></a><a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a87459adc7069d943a5bb4755d7dd4b52">00130</a>       <span class="keywordtype">int</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a87459adc7069d943a5bb4755d7dd4b52" title="Returns the size of the group.">Count</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;Size; }
+<a name="l00131"></a>00131 
+<a name="l00136"></a>00136       <span class="keywordtype">bool</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a728000acdeb201e230cc6e783b64e055" title="Evaluates the equality of two groups (i.e., same order, same Ids, same keys, same DHs...">operator==</a>(<span class="keyword">const</span> <a class="code" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending orde.">Group</a> &amp;other) <span class="keyword">const</span>;
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138       <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> QSharedPointer&lt;AsymmetricKey&gt; &amp;EmptyKey()
+<a name="l00139"></a>00139       {
+<a name="l00140"></a>00140         <span class="keyword">static</span> QSharedPointer&lt;AsymmetricKey&gt; key(<span class="keyword">new</span> <a class="code" href="../../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html" title="Implementation of PrivateKey that provides unique encryptions without actually doing any encryption /...">Dissent::Crypto::NullPrivateKey</a>());
+<a name="l00141"></a>00141         <span class="keywordflow">return</span> key;
+<a name="l00142"></a>00142       }
+<a name="l00143"></a>00143     <span class="keyword">private</span>:
+<a name="l00144"></a>00144       QSharedDataPointer&lt;GroupData&gt; _data;
+<a name="l00145"></a>00145   };
+<a name="l00146"></a>00146 
+<a name="l00147"></a>00147   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> GroupContainer &amp;lhs, <span class="keyword">const</span> GroupContainer &amp;rhs) 
+<a name="l00148"></a>00148   {
+<a name="l00149"></a>00149     <span class="keywordflow">return</span> (lhs.first != rhs.first) ||
+<a name="l00150"></a>00150           (*lhs.second != *rhs.second) ||
+<a name="l00151"></a>00151           (lhs.third != rhs.third);
+<a name="l00152"></a>00152   }
+<a name="l00153"></a>00153 
+<a name="l00154"></a>00154   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> GroupContainer &amp;lhs, <span class="keyword">const</span> GroupContainer &amp;rhs) 
+<a name="l00155"></a>00155   {
+<a name="l00156"></a>00156     <span class="keywordflow">return</span> (lhs.first == rhs.first) ||
+<a name="l00157"></a>00157           (*lhs.second == *rhs.second) ||
+<a name="l00158"></a>00158           (lhs.third == rhs.third);
+<a name="l00159"></a>00159   }
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> GroupContainer &amp;lhs, <span class="keyword">const</span> GroupContainer &amp;rhs)
+<a name="l00162"></a>00162   {
+<a name="l00163"></a>00163     <span class="keywordflow">return</span> (lhs.first &lt; rhs.first) ||
+<a name="l00164"></a>00164       ((lhs.first == rhs.first) &amp;&amp;
+<a name="l00165"></a>00165        ((lhs.second-&gt;GetByteArray() &lt; rhs.second-&gt;GetByteArray()) ||
+<a name="l00166"></a>00166         ((*lhs.second == *rhs.second) &amp;&amp; (lhs.third &lt; rhs.third))));
+<a name="l00167"></a>00167   }
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169   <span class="keyword">inline</span> <span class="keywordtype">bool</span> IsSubset(<span class="keyword">const</span> Group &amp;<span class="keyword">set</span>, <span class="keyword">const</span> Group &amp;subset)
+<a name="l00170"></a>00170   {
+<a name="l00171"></a>00171     <span class="keywordflow">return</span> std::includes(<span class="keyword">set</span>.begin(), <span class="keyword">set</span>.end(), subset.begin(), subset.end());
+<a name="l00172"></a>00172   }
+<a name="l00173"></a>00173 
+<a name="l00178"></a>00178   Group RemoveMember(<span class="keyword">const</span> Group &amp;group, <span class="keyword">const</span> Group::Id &amp;<span class="keywordtype">id</span>);
+<a name="l00179"></a>00179 
+<a name="l00180"></a>00180   QDataStream &amp;operator&lt;&lt;(QDataStream &amp;stream, <span class="keyword">const</span> Group &amp;group);
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182   QDataStream &amp;operator&gt;&gt;(QDataStream &amp;stream, Group &amp;group);
+<a name="l00183"></a>00183 }
+<a name="l00184"></a>00184 }
+<a name="l00185"></a>00185 
+<a name="l00186"></a>00186 <span class="comment">// Put these into the common namespace of Triple</span>
+<a name="l00187"></a>00187 <span class="keyword">namespace </span>Dissent {
+<a name="l00188"></a>00188 <span class="keyword">namespace </span>Utils {
+<a name="l00189"></a>00189   <span class="keyword">using</span> Dissent::Anonymity::operator==;
+<a name="l00190"></a>00190   <span class="keyword">using</span> Dissent::Anonymity::operator!=;
+<a name="l00191"></a>00191   <span class="keyword">using</span> Dissent::Anonymity::operator&lt;;
+<a name="l00192"></a>00192 }
+<a name="l00193"></a>00193 }
+<a name="l00194"></a>00194 
+<a name="l00195"></a>00195 <span class="preprocessor">#endif</span>
 </pre></div></div>
 </div>
 <!-- window showing the filter options -->
@@ -173,7 +229,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 5 2011 19:01:11 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 8 2011 14:23:00 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.5.1
 </small></address>
