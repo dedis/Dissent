@@ -108,7 +108,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="Dissent::Anonymity::Session" --><!-- doxytag: inherits="Dissent::Messaging::Filter,Dissent::Utils::StartStop" -->
-<p>Maintains a group which is actively participating in anonymous exchanges.  
+<p>Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (rounds).  
  <a href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d2/df8/Session_8hpp_source.html">Session.hpp</a>&gt;</code></p>
@@ -174,12 +174,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e4cc9fe1b0b099c446b8dd5126121a8"></a><!-- doxytag: member="Dissent::Anonymity::Session::Stop" ref="a5e4cc9fe1b0b099c446b8dd5126121a8" args="()" -->
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a5e4cc9fe1b0b099c446b8dd5126121a8">Stop</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the session. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3607eae4893b19e562d97633cf3f0602"></a><!-- doxytag: member="Dissent::Anonymity::Session::ReceivedRegister" ref="a3607eae4893b19e562d97633cf3f0602" args="(RpcRequest &amp;request)" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ReceivedRegister</b> (<a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">RpcRequest</a> &amp;request)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a3607eae4893b19e562d97633cf3f0602">ReceivedRegister</a> (<a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">RpcRequest</a> &amp;request)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a ReceivedRegister.  <a href="#a3607eae4893b19e562d97633cf3f0602"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a6e76b76c9ae6eb64d2e576051ae4badc">ReceivedPrepare</a> (<a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">RpcRequest</a> &amp;request)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a ReceiveReady.  <a href="#a6e76b76c9ae6eb64d2e576051ae4badc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a76fa886be61896f0938260b4b6c3f384">ReceivedBegin</a> (<a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">RpcRequest</a> &amp;notification)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a Begin message from the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a group which is actively participating in anonymous exchanges.">Session</a> leader to call start on the round.  <a href="#a76fa886be61896f0938260b4b6c3f384"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a Begin message from the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a> leader to call start on the round.  <a href="#a76fa886be61896f0938260b4b6c3f384"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a31e26f66874c9debc87d5779cc438968">IncomingData</a> (<a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">RpcRequest</a> &amp;notification)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in incoming data.  <a href="#a31e26f66874c9debc87d5779cc438968"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22d2c669b6e286c699ef11dae3a04851"></a><!-- doxytag: member="Dissent::Anonymity::Session::Send" ref="a22d2c669b6e286c699ef11dae3a04851" args="(const QByteArray &amp;data)" -->
@@ -190,19 +190,19 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the peer is the leader for this session. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4883b521b9965eaff92d0719e54b52bd"></a><!-- doxytag: member="Dissent::Anonymity::Session::GetId" ref="a4883b521b9965eaff92d0719e54b52bd" args="() const " -->
 const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a4883b521b9965eaff92d0719e54b52bd">GetId</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a group which is actively participating in anonymous exchanges.">Session</a> Id. <br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a> Id. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adad7634d994fe02efc8ce7f190df3b1b"></a><!-- doxytag: member="Dissent::Anonymity::Session::GetCurrentRound" ref="adad7634d994fe02efc8ce7f190df3b1b" args="()" -->
 QSharedPointer&lt; <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html">Round</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#adad7634d994fe02efc8ce7f190df3b1b">GetCurrentRound</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current round. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50a5f58290234bee984e5d5d0b0d18b2"></a><!-- doxytag: member="Dissent::Anonymity::Session::ToString" ref="a50a5f58290234bee984e5d5d0b0d18b2" args="() const " -->
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a50a5f58290234bee984e5d5d0b0d18b2">ToString</a> () const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a group which is actively participating in anonymous exchanges.">Session</a> / <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="Represents a single instance of a cryptographically secure anonymous exchange.">Round</a> information. <br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a> / <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group.">Round</a> information. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a669dac129d158d98db90359f23b0a8ca"></a><!-- doxytag: member="Dissent::Anonymity::Session::GetGroup" ref="a669dac129d158d98db90359f23b0a8ca" args="() const " -->
 const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a669dac129d158d98db90359f23b0a8ca">GetGroup</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the group being used in this session. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Maintains a group which is actively participating in anonymous exchanges. </p>
+<div class="textblock"><p>Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (rounds). </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="afa6cf52a99b9272db338c20d3ee70a41"></a><!-- doxytag: member="Dissent::Anonymity::Session::Session" ref="afa6cf52a99b9272db338c20d3ee70a41" args="(const Group &amp;group, const Credentials &amp;creds, const Id &amp;session_id, QSharedPointer&lt; Network &gt; network, CreateRound create_round)" -->
 <div class="memitem">
@@ -302,7 +302,7 @@ const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">
 </div>
 <div class="memdoc">
 
-<p>From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a Begin message from the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a group which is actively participating in anonymous exchanges.">Session</a> leader to call start on the round. </p>
+<p>From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a Begin message from the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a> leader to call start on the round. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">notification</td><td>The notification from the leader </td></tr>
@@ -328,6 +328,31 @@ const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">
 <div class="memdoc">
 
 <p>From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a ReceiveReady. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">request</td><td>The request from the leader </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3607eae4893b19e562d97633cf3f0602"></a><!-- doxytag: member="Dissent::Anonymity::Session::ReceivedRegister" ref="a3607eae4893b19e562d97633cf3f0602" args="(RpcRequest &amp;request)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a3607eae4893b19e562d97633cf3f0602">Dissent::Anonymity::Session::ReceivedRegister</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">RpcRequest</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a ReceivedRegister. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">request</td><td>The request from a group member </td></tr>
@@ -410,7 +435,7 @@ const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 28 2011 09:46:53 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 2 2012 09:40:47 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

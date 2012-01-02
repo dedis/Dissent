@@ -113,7 +113,7 @@ Inheritance diagram for Dissent::Tests::BulkRoundBadXorMessage:</div>
   <map id="Dissent::Tests::BulkRoundBadXorMessage_map" name="Dissent::Tests::BulkRoundBadXorMessage_map">
 <area href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange." alt="Dissent::Anonymity::BulkRound" shape="rect" coords="258,112,506,136"/>
 <area href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event." alt="Dissent::Utils::Triggerable" shape="rect" coords="516,112,764,136"/>
-<area href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="Represents a single instance of a cryptographically secure anonymous exchange." alt="Dissent::Anonymity::Round" shape="rect" coords="258,56,506,80"/>
+<area href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group." alt="Dissent::Anonymity::Round" shape="rect" coords="258,56,506,80"/>
 <area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="0,0,248,24"/>
 <area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="258,0,506,24"/>
 <area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="516,0,764,24"/>
@@ -126,19 +126,19 @@ Inheritance diagram for Dissent::Tests::BulkRoundBadXorMessage:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03c4bca0fc8d0b9c05e452240ae16e82"></a><!-- doxytag: member="Dissent::Tests::BulkRoundBadXorMessage::BulkRoundBadXorMessage" ref="a03c4bca0fc8d0b9c05e452240ae16e82" args="(const Group &amp;group, const Credentials &amp;creds, const Id &amp;round_id, QSharedPointer&lt; Network &gt; network, GetDataCallback &amp;get_data)" -->
 &#160;</td><td class="memItemRight" valign="bottom"><b>BulkRoundBadXorMessage</b> (const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a7e444e2d764185923612dc7e89be734d">GenerateXorMessage</a> (const QByteArray &amp;descriptor)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses through an individual descriptor, setting the descriptor state in the object and returns the message the descriptor describes.  <a href="#a7e444e2d764185923612dc7e89be734d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#abf1c9fdb89492298166431e0a578b239">GenerateXorMessage</a> (int idx)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses through an individual descriptor, setting the descriptor state in the object and returns the message the descriptor describes.  <a href="#abf1c9fdb89492298166431e0a578b239"></a><br/></td></tr>
 </table>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a7e444e2d764185923612dc7e89be734d"></a><!-- doxytag: member="Dissent::Tests::BulkRoundBadXorMessage::GenerateXorMessage" ref="a7e444e2d764185923612dc7e89be734d" args="(const QByteArray &amp;descriptor)" -->
+<a class="anchor" id="abf1c9fdb89492298166431e0a578b239"></a><!-- doxytag: member="Dissent::Tests::BulkRoundBadXorMessage::GenerateXorMessage" ref="abf1c9fdb89492298166431e0a578b239" args="(int idx)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QByteArray <a class="el" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#a7e444e2d764185923612dc7e89be734d">Dissent::Tests::BulkRoundBadXorMessage::GenerateXorMessage</a> </td>
+          <td class="memname">virtual QByteArray <a class="el" href="../../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html#abf1c9fdb89492298166431e0a578b239">Dissent::Tests::BulkRoundBadXorMessage::GenerateXorMessage</a> </td>
           <td>(</td>
-          <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>descriptor</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
           <td><code> [inline, virtual]</code></td>
         </tr>
       </table>
@@ -148,12 +148,12 @@ Public Member Functions</h2></td></tr>
 <p>Parses through an individual descriptor, setting the descriptor state in the object and returns the message the descriptor describes. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">descriptor</td><td>message descriptor </td></tr>
+    <tr><td class="paramname">descriptor</td><td>index for message descriptor </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a57931d4730ac557a66037d5936fef603">Dissent::Anonymity::BulkRound</a>.</p>
+<p>Reimplemented from <a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a79ce83b9bf88cdf16a7fbbc05641e8b7">Dissent::Anonymity::BulkRound</a>.</p>
 
 </div>
 </div>
@@ -178,7 +178,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 28 2011 09:46:54 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 2 2012 09:40:48 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

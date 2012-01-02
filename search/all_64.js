@@ -8,6 +8,7 @@ var searchData=
   ['delay',['Delay',['../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html#aee10f3915fde81230a0b187cea1ad140',1,'Dissent::Transports::BufferEdge']]],
   ['deletekeys',['DeleteKeys',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a439706bf8a579a9c9fae94dc5b9e47d8',1,'Dissent::Anonymity::ShuffleRound']]],
   ['demomode',['DemoMode',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#abde6101ed681cbf07e9cb915240925be',1,'Dissent::Applications::Settings']]],
+  ['descriptor',['Descriptor',['../da/d70/classDissent_1_1Anonymity_1_1BulkRound_1_1Descriptor.html',1,'Dissent::Anonymity::BulkRound']]],
   ['destructorcheck',['DestructorCheck',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html#aa498a0da34ae54aecbd21d81e16e0d5d',1,'Dissent::Utils::StartStop']]],
   ['diffiehellman',['DiffieHellman',['../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html',1,'Dissent::Crypto']]],
   ['disable',['Disable',['../d0/dab/classDissent_1_1Utils_1_1Logging.html#a8c51992fecf14d5a35a685959f01c275',1,'Dissent::Utils::Logging']]],

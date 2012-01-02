@@ -9,7 +9,7 @@ var searchData=
   ['webservice',['WebService',['../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html',1,'Dissent::Web::Services']]],
   ['webservicecalled',['WebServiceCalled',['../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#a45ffac37f42f33969f2b751ba65bfa2c',1,'Dissent::Web::Services::WebService']]],
   ['webservicetestsink',['WebServiceTestSink',['../df/ddb/classDissent_1_1Tests_1_1WebServiceTestSink.html',1,'Dissent::Tests']]],
-  ['what',['what',['../da/d30/classDissent_1_1Utils_1_1QRunTimeError.html#a506adcc48022406e168485abc993c305',1,'Dissent::Utils::QRunTimeError::what()'],['../da/d30/classDissent_1_1Utils_1_1QRunTimeError.html#a6ba53a41c03eddb10ab7aac32298c0d9',1,'Dissent::Utils::QRunTimeError::What()']]],
+  ['what',['What',['../da/d30/classDissent_1_1Utils_1_1QRunTimeError.html#a6ba53a41c03eddb10ab7aac32298c0d9',1,'Dissent::Utils::QRunTimeError::What()'],['../da/d30/classDissent_1_1Utils_1_1QRunTimeError.html#a506adcc48022406e168485abc993c305',1,'Dissent::Utils::QRunTimeError::what()']]],
   ['wholegroup',['WholeGroup',['../d8/d81/classDissent_1_1Anonymity_1_1GroupGenerator.html#a3566d7b249baeed57b5916210db7be02',1,'Dissent::Anonymity::GroupGenerator']]],
   ['writeint',['WriteInt',['../de/d19/classDissent_1_1Utils_1_1Serialization.html#a0b42399fe3d47b1c9a79287f204b6d42',1,'Dissent::Utils::Serialization']]],
   ['writetosocket',['WriteToSocket',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#a4118b9fd2132ef6479e0d2f56ff6422e',1,'Dissent::Web::HttpResponse']]],

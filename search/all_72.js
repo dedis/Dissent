@@ -8,6 +8,7 @@ var searchData=
   ['ready',['Ready',['../da/d0d/classDissent_1_1Applications_1_1CommandLine.html#a894b611fd119780aaa3c4747e7b9915e',1,'Dissent::Applications::CommandLine::Ready()'],['../d2/d2c/classDissent_1_1Applications_1_1Node.html#aeec4a7ed5e3563880516228cc545023e',1,'Dissent::Applications::Node::Ready()'],['../db/d98/classDissent_1_1Web_1_1WebServer.html#ac7fef6c01d92dd95cd4a358c4c8c1f4b',1,'Dissent::Web::WebServer::Ready()']]],
   ['receivedbegin',['ReceivedBegin',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a76fa886be61896f0938260b4b6c3f384',1,'Dissent::Anonymity::Session']]],
   ['receivedprepare',['ReceivedPrepare',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a6e76b76c9ae6eb64d2e576051ae4badc',1,'Dissent::Anonymity::Session']]],
+  ['receivedregister',['ReceivedRegister',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a3607eae4893b19e562d97633cf3f0602',1,'Dissent::Anonymity::Session']]],
   ['register',['Register',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#ababd14da8188bdbfdce055d299ad97d1',1,'Dissent::Messaging::RpcHandler']]],
   ['remotepeers',['RemotePeers',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#af79d9fa01fb9aa75978a73b887ffbfdd',1,'Dissent::Applications::Settings']]],
   ['removeconnection',['RemoveConnection',['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#abe6804cd4afd03deb44c3321fed7752e',1,'Dissent::Connections::ConnectionTable']]],
@@ -38,7 +39,7 @@ var searchData=
   ['rpcrequest',['RpcRequest',['../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html',1,'Dissent::Messaging']]],
   ['rpcrequest',['RpcRequest',['../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a419c267ead0e42d1b89e8f726ed24729',1,'Dissent::Messaging::RpcRequest']]],
   ['rpcrequestdata',['RpcRequestData',['../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html',1,'Dissent::Messaging']]],
-  ['rpcresponse',['RpcResponse',['../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#af77b2df429373e53a57ec6fcb5342886',1,'Dissent::Messaging::RpcResponse']]],
   ['rpcresponse',['RpcResponse',['../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html',1,'Dissent::Messaging']]],
+  ['rpcresponse',['RpcResponse',['../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#af77b2df429373e53a57ec6fcb5342886',1,'Dissent::Messaging::RpcResponse']]],
   ['run',['Run',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a0a080a6acdff464102530c52e9904c15',1,'Dissent::Utils::Timer']]]
 ];

@@ -100,14 +100,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Tests::BulkRoundBadDescriptor Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="Dissent::Tests::BulkRoundBadDescriptor" --><!-- doxytag: inherits="Dissent::Anonymity::BulkRound,Dissent::Utils::Triggerable" -->
-<p><code>#include &lt;<a class="el" href="../../d9/d46/BulkRoundHelpers_8hpp_source.html">BulkRoundHelpers.hpp</a>&gt;</code></p>
-<div class="dynheader">
+<!-- doxytag: class="Dissent::Tests::BulkRoundBadDescriptor" --><!-- doxytag: inherits="Dissent::Anonymity::BulkRound,Dissent::Utils::Triggerable" --><div class="dynheader">
 Inheritance diagram for Dissent::Tests::BulkRoundBadDescriptor:</div>
 <div class="dyncontent">
  <div class="center">
@@ -115,7 +114,7 @@ Inheritance diagram for Dissent::Tests::BulkRoundBadDescriptor:</div>
   <map id="Dissent::Tests::BulkRoundBadDescriptor_map" name="Dissent::Tests::BulkRoundBadDescriptor_map">
 <area href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange." alt="Dissent::Anonymity::BulkRound" shape="rect" coords="245,112,480,136"/>
 <area href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event." alt="Dissent::Utils::Triggerable" shape="rect" coords="490,112,725,136"/>
-<area href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="Represents a single instance of a cryptographically secure anonymous exchange." alt="Dissent::Anonymity::Round" shape="rect" coords="245,56,480,80"/>
+<area href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group." alt="Dissent::Anonymity::Round" shape="rect" coords="245,56,480,80"/>
 <area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="0,0,235,24"/>
 <area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="245,0,480,24"/>
 <area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="490,0,725,24"/>
@@ -128,10 +127,41 @@ Inheritance diagram for Dissent::Tests::BulkRoundBadDescriptor:</div>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b921dffae1979aec583efc95a2a1fd1"></a><!-- doxytag: member="Dissent::Tests::BulkRoundBadDescriptor::BulkRoundBadDescriptor" ref="a2b921dffae1979aec583efc95a2a1fd1" args="(const Group &amp;group, const Credentials &amp;creds, const Id &amp;round_id, QSharedPointer&lt; Network &gt; network, GetDataCallback &amp;get_data)" -->
 &#160;</td><td class="memItemRight" valign="bottom"><b>BulkRoundBadDescriptor</b> (const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data)</td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QPair&lt; QByteArray, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html#aeca0de92a311161f96162515b59c2ad7">GetBulkData</a> (int)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">GetDataCallback into bulk data.  <a href="#aeca0de92a311161f96162515b59c2ad7"></a><br/></td></tr>
 </table>
-<hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd>not implemented </dd></dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aeca0de92a311161f96162515b59c2ad7"></a><!-- doxytag: member="Dissent::Tests::BulkRoundBadDescriptor::GetBulkData" ref="aeca0de92a311161f96162515b59c2ad7" args="(int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual QPair&lt;QByteArray, bool&gt; <a class="el" href="../../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html#aeca0de92a311161f96162515b59c2ad7">Dissent::Tests::BulkRoundBadDescriptor::GetBulkData</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em></td><td>)</td>
+          <td><code> [inline, protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>GetDataCallback into bulk data. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mam</td><td>the maximum amount of data to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>a pair consisting of a qbytearray of up to max bytes and a boolean true if there are more bytes to consume </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a9a9a23e70a3ea6c6598f5ac08f2e4fb5">Dissent::Anonymity::BulkRound</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>src/Tests/<a class="el" href="../../d9/d46/BulkRoundHelpers_8hpp_source.html">BulkRoundHelpers.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -152,7 +182,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 28 2011 09:46:54 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 2 2012 09:40:48 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

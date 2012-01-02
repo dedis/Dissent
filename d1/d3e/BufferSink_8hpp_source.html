@@ -103,13 +103,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00040"></a>00040 
 <a name="l00044"></a><a class="code" href="../../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a2f0b43f25cc09ffe1cbdb2af5aa80d67">00044</a>       <span class="keyword">inline</span> <span class="keyword">const</span> QPair&lt;QByteArray, ISender *&gt; &amp;<a class="code" href="../../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a2f0b43f25cc09ffe1cbdb2af5aa80d67" title="Returns the last entry.">Last</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _messages.last(); }
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046     <span class="keyword">private</span>:
-<a name="l00047"></a>00047       QVector&lt;QPair&lt;QByteArray, ISender *&gt; &gt; _messages;
-<a name="l00048"></a>00048   };
-<a name="l00049"></a>00049 }
-<a name="l00050"></a>00050 }
-<a name="l00051"></a>00051 
-<a name="l00052"></a>00052 <span class="preprocessor">#endif</span>
+<a name="l00049"></a><a class="code" href="../../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a41aa39cd559fc9d68cffc6ec75bdad8b">00049</a>       <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a41aa39cd559fc9d68cffc6ec75bdad8b" title="Clears the message buffer.">Clear</a>() { _messages.clear(); }
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051     <span class="keyword">private</span>:
+<a name="l00052"></a>00052       QVector&lt;QPair&lt;QByteArray, ISender *&gt; &gt; _messages;
+<a name="l00053"></a>00053   };
+<a name="l00054"></a>00054 }
+<a name="l00055"></a>00055 }
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -128,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 28 2011 09:46:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jan 2 2012 09:40:47 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
