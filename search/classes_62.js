@@ -1,6 +1,8 @@
 var searchData=
 [
   ['basicgossip',['BasicGossip',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html',1,'Dissent::Overlay']]],
+  ['bit_5fpair',['bit_pair',['../d1/d57/structDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix_1_1bit__pair.html',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],
+  ['blamematrix',['BlameMatrix',['../d9/dad/classDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix.html',1,'Dissent::Anonymity::Tolerant']]],
   ['bufferaddress',['BufferAddress',['../d5/d7f/classDissent_1_1Transports_1_1BufferAddress.html',1,'Dissent::Transports']]],
   ['bufferaddressdata',['BufferAddressData',['../d5/d4e/classDissent_1_1Transports_1_1BufferAddressData.html',1,'Dissent::Transports']]],
   ['bufferedge',['BufferEdge',['../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html',1,'Dissent::Transports']]],

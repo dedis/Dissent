@@ -68,5 +68,6 @@ var searchData=
   ['_7etimer',['~Timer',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a7438ff48569a6587a7cf649a0ab3c482',1,'Dissent::Utils::Timer']]],
   ['_7etimercallback',['~TimerCallback',['../d9/df8/classDissent_1_1Utils_1_1TimerCallback.html#a527a7370e252ae816e93a11d65d33f42',1,'Dissent::Utils::TimerCallback']]],
   ['_7etimermethod',['~TimerMethod',['../df/dfd/classDissent_1_1Utils_1_1TimerMethod.html#a40f3e7d26cbfaaa387dc57f45bc6493d',1,'Dissent::Utils::TimerMethod']]],
+  ['_7etolerantbulkround',['~TolerantBulkRound',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a78e18906265d8a6b70c04f9794214f41',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['_7etriggerable',['~Triggerable',['../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#acbf876a8e3f53c20138ca2764b0cc794',1,'Dissent::Utils::Triggerable']]]
 ];

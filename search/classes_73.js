@@ -20,6 +20,7 @@ var searchData=
   ['signalcounter',['SignalCounter',['../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html',1,'Dissent::Utils']]],
   ['signalsink',['SignalSink',['../d8/dad/classDissent_1_1Messaging_1_1SignalSink.html',1,'Dissent::Messaging']]],
   ['sleeper',['Sleeper',['../da/d6d/classDissent_1_1Utils_1_1Sleeper.html',1,'Dissent::Utils']]],
+  ['slot_5fdata',['slot_data',['../d7/d60/structDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData_1_1slot__data.html',1,'Dissent::Anonymity::Tolerant::AlibiData']]],
   ['source',['Source',['../d7/d32/classDissent_1_1Messaging_1_1Source.html',1,'Dissent::Messaging']]],
   ['startstop',['StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html',1,'Dissent::Utils']]]
 ];

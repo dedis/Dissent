@@ -2,6 +2,7 @@ var searchData=
 [
   ['callback',['Callback',['../db/d77/classDissent_1_1Messaging_1_1Callback.html',1,'Dissent::Messaging']]],
   ['commandline',['CommandLine',['../da/d0d/classDissent_1_1Applications_1_1CommandLine.html',1,'Dissent::Applications']]],
+  ['conflict',['Conflict',['../d1/d06/classDissent_1_1Anonymity_1_1Tolerant_1_1Conflict.html',1,'Dissent::Anonymity::Tolerant']]],
   ['connection',['Connection',['../da/d0e/classDissent_1_1Connections_1_1Connection.html',1,'Dissent::Connections']]],
   ['connectionmanager',['ConnectionManager',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html',1,'Dissent::Connections']]],
   ['connectiontable',['ConnectionTable',['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html',1,'Dissent::Connections']]],

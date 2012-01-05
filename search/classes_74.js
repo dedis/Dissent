@@ -15,6 +15,7 @@ var searchData=
   ['timerevent',['TimerEvent',['../d9/d1d/classDissent_1_1Utils_1_1TimerEvent.html',1,'Dissent::Utils']]],
   ['timereventdata',['TimerEventData',['../d6/d32/classDissent_1_1Utils_1_1TimerEventData.html',1,'Dissent::Utils']]],
   ['timermethod',['TimerMethod',['../df/dfd/classDissent_1_1Utils_1_1TimerMethod.html',1,'Dissent::Utils']]],
+  ['tolerantbulkround',['TolerantBulkRound',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html',1,'Dissent::Anonymity::Tolerant']]],
   ['triggerable',['Triggerable',['../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html',1,'Dissent::Utils']]],
   ['triple',['Triple',['../d8/d17/structDissent_1_1Utils_1_1Triple.html',1,'Dissent::Utils']]],
   ['trustedbulkround',['TrustedBulkRound',['../d5/d6c/classDissent_1_1Anonymity_1_1TrustedBulkRound.html',1,'Dissent::Anonymity']]]

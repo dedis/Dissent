@@ -11,6 +11,7 @@ var searchData=
   ['webservicetestsink',['WebServiceTestSink',['../df/ddb/classDissent_1_1Tests_1_1WebServiceTestSink.html',1,'Dissent::Tests']]],
   ['what',['What',['../da/d30/classDissent_1_1Utils_1_1QRunTimeError.html#a6ba53a41c03eddb10ab7aac32298c0d9',1,'Dissent::Utils::QRunTimeError::What()'],['../da/d30/classDissent_1_1Utils_1_1QRunTimeError.html#a506adcc48022406e168485abc993c305',1,'Dissent::Utils::QRunTimeError::what()']]],
   ['wholegroup',['WholeGroup',['../d8/d81/classDissent_1_1Anonymity_1_1GroupGenerator.html#a3566d7b249baeed57b5916210db7be02',1,'Dissent::Anonymity::GroupGenerator']]],
+  ['writebitarray',['WriteBitArray',['../de/d19/classDissent_1_1Utils_1_1Serialization.html#a9be4a4e82d8ea909b61fa2c0af36145d',1,'Dissent::Utils::Serialization']]],
   ['writeint',['WriteInt',['../de/d19/classDissent_1_1Utils_1_1Serialization.html#a0b42399fe3d47b1c9a79287f204b6d42',1,'Dissent::Utils::Serialization']]],
   ['writetosocket',['WriteToSocket',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#a4118b9fd2132ef6479e0d2f56ff6422e',1,'Dissent::Web::HttpResponse']]],
   ['writetostream',['WriteToStream',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#a4f0082d822384e083937d845f84299ea',1,'Dissent::Web::HttpResponse']]],
