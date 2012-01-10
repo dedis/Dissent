@@ -12,6 +12,7 @@ var searchData=
   ['integer',['Integer',['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a89e9dd64da125feace3216a18d847e9a',1,'Dissent::Crypto::Integer']]],
   ['integerdata',['IntegerData',['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html',1,'Dissent::Crypto']]],
   ['integerdata',['IntegerData',['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ae337998d01c8e09b2bfe8957521a1120',1,'Dissent::Crypto::IntegerData']]],
+  ['interrupted',['Interrupted',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a460ce632529c9909063fb5a435df5455',1,'Dissent::Anonymity::Round']]],
   ['invoke',['Invoke',['../db/d77/classDissent_1_1Messaging_1_1Callback.html#a4e10047c18a65d27f385084c40df513a',1,'Dissent::Messaging::Callback::Invoke()'],['../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html#a28122902656c39c3d78aae152690b544',1,'Dissent::Messaging::RpcMethod::Invoke()'],['../d9/df8/classDissent_1_1Utils_1_1TimerCallback.html#ad27fc5154ac0b72c028df11491ea662e',1,'Dissent::Utils::TimerCallback::Invoke()'],['../df/dfd/classDissent_1_1Utils_1_1TimerMethod.html#a0afc459ae188d4aaf1fb616da14e79dd',1,'Dissent::Utils::TimerMethod::Invoke()']]],
   ['isclosed',['IsClosed',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a9dce1d8874e59d6a95b473d90b4435fd',1,'Dissent::Transports::Edge']]],
   ['isender',['ISender',['../d9/d03/classDissent_1_1Messaging_1_1ISender.html',1,'Dissent::Messaging']]],

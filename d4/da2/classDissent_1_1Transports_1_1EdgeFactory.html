@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4f8c66800a18d45b231053ab9f489e2"></a><!-- doxytag: member="Dissent::Transports::EdgeFactory::Stop" ref="ab4f8c66800a18d45b231053ab9f489e2" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html#ab4f8c66800a18d45b231053ab9f489e2">Stop</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops all the underlying ELs. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QSharedPointer&lt; <a class="el" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html">EdgeListener</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html#aff360f781eec660ae8594e1715e5a6c0">GetEdgeListener</a> (QString type)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the EL mapped to the type.  <a href="#aff360f781eec660ae8594e1715e5a6c0"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Abstracts <a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html" title="Stores the state for a transport layer link between two peers.">Edge</a> creation from the actual address and EL type. </p>
@@ -176,6 +178,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 </div>
 </div>
+<a class="anchor" id="aff360f781eec660ae8594e1715e5a6c0"></a><!-- doxytag: member="Dissent::Transports::EdgeFactory::GetEdgeListener" ref="aff360f781eec660ae8594e1715e5a6c0" args="(QString type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSharedPointer&lt; <a class="el" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html">EdgeListener</a> &gt; <a class="el" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html#aff360f781eec660ae8594e1715e5a6c0">Dissent::Transports::EdgeFactory::GetEdgeListener</a> </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the EL mapped to the type. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>the type of EL </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Transports/<a class="el" href="../../d9/d75/EdgeFactory_8hpp_source.html">EdgeFactory.hpp</a></li>
 <li>src/Transports/EdgeFactory.cpp</li>
@@ -198,7 +225,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 5 2012 14:04:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 10 2012 00:06:53 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

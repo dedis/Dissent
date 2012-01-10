@@ -149,6 +149,11 @@ const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.htm
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a634591d144efc68e92ed0397959dd2a5"></a><!-- doxytag: member="Dissent::Transports::Edge::GetRemoteAddress" ref="a634591d144efc68e92ed0397959dd2a5" args="() const " -->
 const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a634591d144efc68e92ed0397959dd2a5">GetRemoteAddress</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the remote address for the edge. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af99ec002301b4b963e160da449bea948"></a><!-- doxytag: member="Dissent::Transports::Edge::GetRemotePersistentAddress" ref="af99ec002301b4b963e160da449bea948" args="() const " -->
+const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#af99ec002301b4b963e160da449bea948">GetRemotePersistentAddress</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns what is suspected to be the persistent remote address. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a72aa6fd5cebe783e5308febcda6e1eeb">SetRemotePersistentAddress</a> (const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;addr)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The remote address is the one the edge is actually using, the persistent address is the one the remote side will use for new connections.  <a href="#a72aa6fd5cebe783e5308febcda6e1eeb"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43b3a3763a38d4acdd55b39a029d0b97"></a><!-- doxytag: member="Dissent::Transports::Edge::Outbound" ref="a43b3a3763a38d4acdd55b39a029d0b97" args="() const " -->
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a43b3a3763a38d4acdd55b39a029d0b97">Outbound</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the local side requested creation of this edge. <br/></td></tr>
@@ -171,6 +176,8 @@ Protected Attributes</h2></td></tr>
 const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_local_address</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa81f3b489ae7802455546e27aec04d43"></a><!-- doxytag: member="Dissent::Transports::Edge::_remote_address" ref="aa81f3b489ae7802455546e27aec04d43" args="" -->
 const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_remote_address</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4e4ef91d407d00b5ac324fda966de70"></a><!-- doxytag: member="Dissent::Transports::Edge::_remote_p_addr" ref="ad4e4ef91d407d00b5ac324fda966de70" args="" -->
+<a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a>&#160;</td><td class="memItemRight" valign="bottom"><b>_remote_p_addr</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac389fd8953961c0dfd9a5e844ff90ab0"></a><!-- doxytag: member="Dissent::Transports::Edge::_outbound" ref="ac389fd8953961c0dfd9a5e844ff90ab0" args="" -->
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_outbound</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c7d5b25f7fa8ed463fbbdfd44e02360"></a><!-- doxytag: member="Dissent::Transports::Edge::_closed" ref="a0c7d5b25f7fa8ed463fbbdfd44e02360" args="" -->
@@ -277,6 +284,31 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>_close_reason</b><
 
 </div>
 </div>
+<a class="anchor" id="a72aa6fd5cebe783e5308febcda6e1eeb"></a><!-- doxytag: member="Dissent::Transports::Edge::SetRemotePersistentAddress" ref="a72aa6fd5cebe783e5308febcda6e1eeb" args="(const Address &amp;addr)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a72aa6fd5cebe783e5308febcda6e1eeb">Dissent::Transports::Edge::SetRemotePersistentAddress</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The remote address is the one the edge is actually using, the persistent address is the one the remote side will use for new connections. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>the remote peers persistent address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Transports/<a class="el" href="../../dc/d91/Edge_8hpp_source.html">Edge.hpp</a></li>
 <li>src/Transports/Edge.cpp</li>
@@ -299,7 +331,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>_close_reason</b><
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 5 2012 14:04:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 10 2012 00:06:53 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

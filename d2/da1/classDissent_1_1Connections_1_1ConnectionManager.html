@@ -141,8 +141,8 @@ typedef <br class="typebreak"/>
 <a class="el" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html">Dissent::Transports::EdgeFactory</a>&#160;</td><td class="memItemRight" valign="bottom"><b>EdgeFactory</b></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signals</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a47931639ac39015ef6364eb2a570b4d3">NewConnection</a> (<a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> *con, bool local)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A new outgoing connection has been created.  <a href="#a47931639ac39015ef6364eb2a570b4d3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a7abadae1650c5faeb88577a33d839e0e">NewConnection</a> (<a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> *con)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A new outgoing connection has been created.  <a href="#a7abadae1650c5faeb88577a33d839e0e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#adf67114260e681a9b7878baa2f8da51a">ConnectionAttemptFailure</a> (const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;to, const QString &amp;reason)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">A ConnectTo attempt failed, I guess ideally ConnectTo would take an <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> and handle the translation internally, but then again...  <a href="#adf67114260e681a9b7878baa2f8da51a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad7e1ec9bac00b57fc051e55552bff8d6"></a><!-- doxytag: member="Dissent::Connections::ConnectionManager::Disconnected" ref="ad7e1ec9bac00b57fc051e55552bff8d6" args="()" -->
@@ -165,9 +165,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef036e2a0a2f7490169f802ffba9ddf0"></a><!-- doxytag: member="Dissent::Connections::ConnectionManager::GetConnectionTable" ref="aef036e2a0a2f7490169f802ffba9ddf0" args="()" -->
 <a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html">ConnectionTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0">GetConnectionTable</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the outgoing connection table. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab53278535c618e86c3c81622b065e44b"></a><!-- doxytag: member="Dissent::Connections::ConnectionManager::GetRemoteConnectionTable" ref="ab53278535c618e86c3c81622b065e44b" args="()" -->
-<a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html">ConnectionTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#ab53278535c618e86c3c81622b065e44b">GetRemoteConnectionTable</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the incoming connection table. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a474410c52542e94ec033a952f3b0f8d3"></a><!-- doxytag: member="Dissent::Connections::ConnectionManager::GetId" ref="a474410c52542e94ec033a952f3b0f8d3" args="()" -->
 const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a474410c52542e94ec033a952f3b0f8d3">GetId</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>. <br/></td></tr>
@@ -303,26 +300,16 @@ static <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1Connectio
 
 </div>
 </div>
-<a class="anchor" id="a47931639ac39015ef6364eb2a570b4d3"></a><!-- doxytag: member="Dissent::Connections::ConnectionManager::NewConnection" ref="a47931639ac39015ef6364eb2a570b4d3" args="(Connection *con, bool local)" -->
+<a class="anchor" id="a7abadae1650c5faeb88577a33d839e0e"></a><!-- doxytag: member="Dissent::Connections::ConnectionManager::NewConnection" ref="a7abadae1650c5faeb88577a33d839e0e" args="(Connection *con)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a47931639ac39015ef6364eb2a570b4d3">Dissent::Connections::ConnectionManager::NewConnection</a> </td>
+          <td class="memname">void <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a7abadae1650c5faeb88577a33d839e0e">Dissent::Connections::ConnectionManager::NewConnection</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> *&#160;</td>
-          <td class="paramname"><em>con</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>local</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [signal]</code></td>
+          <td class="paramname"><em>con</em></td><td>)</td>
+          <td><code> [signal]</code></td>
         </tr>
       </table>
 </div>
@@ -361,7 +348,7 @@ static <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1Connectio
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 5 2012 14:04:20 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 10 2012 00:06:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -2,7 +2,7 @@ var searchData=
 [
   ['needconnection',['NeedConnection',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a82eca1d11c0e9f48d47822571cb10460',1,'Dissent::Overlay::BasicGossip']]],
   ['network',['Network',['../db/d5e/classDissent_1_1Connections_1_1Network.html',1,'Dissent::Connections']]],
-  ['newconnection',['NewConnection',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a47931639ac39015ef6364eb2a570b4d3',1,'Dissent::Connections::ConnectionManager::NewConnection()'],['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a817e1560c2a9077eb7f9ae4bdf3bc9f6',1,'Dissent::Overlay::BasicGossip::NewConnection()']]],
+  ['newconnection',['NewConnection',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a7abadae1650c5faeb88577a33d839e0e',1,'Dissent::Connections::ConnectionManager::NewConnection()'],['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#ad836707709fdc9dd839280f34f87718a',1,'Dissent::Overlay::BasicGossip::NewConnection()']]],
   ['newedge',['NewEdge',['../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html#a0f0298098f4675994c51a26b95096f4b',1,'Dissent::Transports::EdgeListener']]],
   ['next',['Next',['../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#adbad197b6ab8caec5b24948f66f7ba07',1,'Dissent::Anonymity::Group']]],
   ['nextgroup',['NextGroup',['../df/d99/classDissent_1_1Anonymity_1_1FixedSizeGroupGenerator.html#a78cba06cbd11d8bd1f03df8a97a1c314',1,'Dissent::Anonymity::FixedSizeGroupGenerator::NextGroup()'],['../d8/d81/classDissent_1_1Anonymity_1_1GroupGenerator.html#a73b87f25097ca1e90ad7d812124de760',1,'Dissent::Anonymity::GroupGenerator::NextGroup()']]],
