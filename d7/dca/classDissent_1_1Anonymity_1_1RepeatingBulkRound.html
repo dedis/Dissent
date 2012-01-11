@@ -237,9 +237,8 @@ const QVector&lt; uint &gt; &amp;&#160;</td><td class="memItemRight" valign="bot
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b9e838ae71932af18d9a99d88947b49"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::GetAnonymousDh" ref="a3b9e838ae71932af18d9a99d88947b49" args="()" -->
 QSharedPointer&lt; <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">DiffieHellman</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a3b9e838ae71932af18d9a99d88947b49">GetAnonymousDh</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the anonymous DiffieHellman key. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e36f1713a449800a2d41c69e8a972a8"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::PrepForNextPhase" ref="a5e36f1713a449800a2d41c69e8a972a8" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a5e36f1713a449800a2d41c69e8a972a8">PrepForNextPhase</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Does all the prep work for the next phase, clearing and zeroing out all the necessary fields. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#abffd79805595a6640580c4eaab7e9927">PrepForNextPhase</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Does all the prep work for the next phase, clearing and zeroing out all the necessary fields.  <a href="#abffd79805595a6640580c4eaab7e9927"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Represents a single instance of a cryptographically secure anonymous exchange. </p>
@@ -419,6 +418,27 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
+<a class="anchor" id="abffd79805595a6640580c4eaab7e9927"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::PrepForNextPhase" ref="abffd79805595a6640580c4eaab7e9927" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#abffd79805595a6640580c4eaab7e9927">Dissent::Anonymity::RepeatingBulkRound::PrepForNextPhase</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Does all the prep work for the next phase, clearing and zeroing out all the necessary fields. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>true if all good, returns false if stopped </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../d5/d6c/classDissent_1_1Anonymity_1_1TrustedBulkRound.html#abf630f78041e811754405c147ecb2ef2">Dissent::Anonymity::TrustedBulkRound</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a4297cdfc85940546241116e3de0051f8"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::ProcessData" ref="a4297cdfc85940546241116e3de0051f8" args="(const QByteArray &amp;data, const Id &amp;from)" -->
 <div class="memitem">
 <div class="memproto">
@@ -540,7 +560,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 10 2012 00:06:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 10 2012 22:37:00 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

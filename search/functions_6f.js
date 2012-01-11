@@ -12,5 +12,5 @@ var searchData=
   ['operator_3e_3d',['operator>=',['../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a0f2e222e5e915a99c4996d1cc48a8475',1,'Dissent::Crypto::CppIntegerData::operator&gt;=()'],['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#ae8103fa84bbaba694dc10cd3bfbe067e',1,'Dissent::Crypto::Integer::operator&gt;=()'],['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ad5354059809e1f6f9a9b51c461ea8898',1,'Dissent::Crypto::IntegerData::operator&gt;=()']]],
   ['optimalseedsize',['OptimalSeedSize',['../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html#a69f345c0ba3bde5342a403128c28d595',1,'Dissent::Crypto::CppRandom::OptimalSeedSize()'],['../de/dad/classDissent_1_1Utils_1_1Random.html#a03c44f8d717ab3cc161d6bbd6df91715',1,'Dissent::Utils::Random::OptimalSeedSize()']]],
   ['outbound',['Outbound',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a43b3a3763a38d4acdd55b39a029d0b97',1,'Dissent::Transports::Edge']]],
-  ['outstandingconnectionattempts',['OutstandingConnectionAttempts',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#ac09295df74997671ee247ced847397ab',1,'Dissent::Overlay::BasicGossip']]]
+  ['outstandingconnectionattempts',['OutstandingConnectionAttempts',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#af44d30289656283ce58c19595dcf8d79',1,'Dissent::Connections::ConnectionManager']]]
 ];

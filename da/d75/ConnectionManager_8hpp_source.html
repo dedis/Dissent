@@ -131,58 +131,63 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00078"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0">00078</a>       <span class="keyword">inline</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;<a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0" title="Returns the outgoing connection table.">GetConnectionTable</a>() { <span class="keywordflow">return</span> _con_tab; }
 <a name="l00079"></a>00079 
 <a name="l00083"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a474410c52542e94ec033a952f3b0f8d3">00083</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a474410c52542e94ec033a952f3b0f8d3" title="Returns the local Id.">GetId</a>() { <span class="keywordflow">return</span> _local_id; }
-<a name="l00084"></a>00084       
-<a name="l00085"></a>00085     signals:
-<a name="l00091"></a>00091       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a7abadae1650c5faeb88577a33d839e0e" title="A new outgoing connection has been created.">NewConnection</a>(<a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier.">Connection</a> *con);
-<a name="l00092"></a>00092 
-<a name="l00099"></a>00099       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#adf67114260e681a9b7878baa2f8da51a" title="A ConnectTo attempt failed, I guess ideally ConnectTo would take an Id and handle the translation int...">ConnectionAttemptFailure</a>(<span class="keyword">const</span> Address &amp;to, <span class="keyword">const</span> QString &amp;reason);
-<a name="l00100"></a>00100 
-<a name="l00104"></a>00104       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#ad7e1ec9bac00b57fc051e55552bff8d6" title="Emitted when disconnected.">Disconnected</a>();
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106     <span class="keyword">private</span>:
-<a name="l00110"></a>00110       <span class="keywordtype">void</span> Inquire(RpcRequest &amp;request);
-<a name="l00111"></a>00111 
-<a name="l00115"></a>00115       <span class="keywordtype">void</span> Inquired(RpcRequest &amp;response);
-<a name="l00116"></a>00116 
-<a name="l00124"></a>00124       <span class="keywordtype">void</span> BindEdge(Edge *edge, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;rem_id);
-<a name="l00125"></a>00125 
-<a name="l00131"></a>00131       <span class="keywordtype">void</span> CreateConnection(QSharedPointer&lt;Edge&gt; pedge, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;rem_id);
+<a name="l00084"></a>00084 
+<a name="l00088"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#af44d30289656283ce58c19595dcf8d79">00088</a>       <span class="keywordtype">int</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#af44d30289656283ce58c19595dcf8d79" title="Returns the number of outstanding connection attempts.">OutstandingConnectionAttempts</a>()
+<a name="l00089"></a>00089       {
+<a name="l00090"></a>00090         <span class="keywordflow">return</span> _outstanding_con_attempts.count();
+<a name="l00091"></a>00091       }
+<a name="l00092"></a>00092       
+<a name="l00093"></a>00093     signals:
+<a name="l00098"></a>00098       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a7abadae1650c5faeb88577a33d839e0e" title="A new outgoing connection has been created.">NewConnection</a>(<a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier.">Connection</a> *con);
+<a name="l00099"></a>00099 
+<a name="l00106"></a>00106       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#adf67114260e681a9b7878baa2f8da51a" title="A ConnectTo attempt failed, I guess ideally ConnectTo would take an Id and handle the translation int...">ConnectionAttemptFailure</a>(<span class="keyword">const</span> Address &amp;to, <span class="keyword">const</span> QString &amp;reason);
+<a name="l00107"></a>00107 
+<a name="l00111"></a>00111       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#ad7e1ec9bac00b57fc051e55552bff8d6" title="Emitted when disconnected.">Disconnected</a>();
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113     <span class="keyword">private</span>:
+<a name="l00117"></a>00117       <span class="keywordtype">void</span> Inquire(RpcRequest &amp;request);
+<a name="l00118"></a>00118 
+<a name="l00122"></a>00122       <span class="keywordtype">void</span> Inquired(RpcRequest &amp;response);
+<a name="l00123"></a>00123 
+<a name="l00131"></a>00131       <span class="keywordtype">void</span> BindEdge(Edge *edge, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;rem_id);
 <a name="l00132"></a>00132 
-<a name="l00136"></a>00136       <span class="keywordtype">void</span> Connect(RpcRequest &amp;notification);
-<a name="l00137"></a>00137 
-<a name="l00141"></a>00141       <span class="keywordtype">void</span> Close(RpcRequest &amp;notification);
-<a name="l00142"></a>00142 
-<a name="l00146"></a>00146       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a070b7e445949fcf4d0456352d0a867aa" title="Disconnect from all Connections, in preparation for shutdown.">Disconnect</a>(RpcRequest &amp;notification);
-<a name="l00147"></a>00147 
-<a name="l00148"></a>00148       Callback _inquire;
-<a name="l00149"></a>00149       Callback _inquired;
-<a name="l00150"></a>00150       Callback _close;
-<a name="l00151"></a>00151       Callback _connect;
-<a name="l00152"></a>00152       Callback _disconnect;
-<a name="l00153"></a>00153 
-<a name="l00154"></a>00154       <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> _con_tab;
-<a name="l00155"></a>00155       <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> _rem_con_tab;
-<a name="l00156"></a>00156       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _local_id;
-<a name="l00157"></a>00157       EdgeFactory _edge_factory;
-<a name="l00158"></a>00158       RpcHandler &amp;_rpc;
-<a name="l00159"></a>00159       <span class="keywordtype">bool</span> _closed;
-<a name="l00160"></a>00160       QHash&lt;Address, bool&gt; _outstanding_con_attempts;
-<a name="l00161"></a>00161 
-<a name="l00162"></a>00162     <span class="keyword">private</span> slots:
-<a name="l00166"></a>00166       <span class="keywordtype">void</span> HandleDisconnect();
-<a name="l00167"></a>00167 
-<a name="l00171"></a>00171       <span class="keywordtype">void</span> HandleDisconnected(<span class="keyword">const</span> QString &amp;reason);
-<a name="l00172"></a>00172 
-<a name="l00176"></a>00176       <span class="keywordtype">void</span> HandleNewEdge(QSharedPointer&lt;Edge&gt; edge);
-<a name="l00177"></a>00177       
-<a name="l00181"></a>00181       <span class="keywordtype">void</span> HandleEdgeClose(<span class="keyword">const</span> QString &amp;reason);
-<a name="l00182"></a>00182 
-<a name="l00186"></a>00186       <span class="keywordtype">void</span> HandleEdgeCreationFailure(<span class="keyword">const</span> Address &amp;to, <span class="keyword">const</span> QString &amp;reason);
-<a name="l00187"></a>00187   };
-<a name="l00188"></a>00188 }
-<a name="l00189"></a>00189 }
-<a name="l00190"></a>00190 
-<a name="l00191"></a>00191 <span class="preprocessor">#endif</span>
+<a name="l00138"></a>00138       <span class="keywordtype">void</span> CreateConnection(QSharedPointer&lt;Edge&gt; pedge, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;rem_id);
+<a name="l00139"></a>00139 
+<a name="l00143"></a>00143       <span class="keywordtype">void</span> Connect(RpcRequest &amp;notification);
+<a name="l00144"></a>00144 
+<a name="l00148"></a>00148       <span class="keywordtype">void</span> Close(RpcRequest &amp;notification);
+<a name="l00149"></a>00149 
+<a name="l00153"></a>00153       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a070b7e445949fcf4d0456352d0a867aa" title="Disconnect from all Connections, in preparation for shutdown.">Disconnect</a>(RpcRequest &amp;notification);
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155       Callback _inquire;
+<a name="l00156"></a>00156       Callback _inquired;
+<a name="l00157"></a>00157       Callback _close;
+<a name="l00158"></a>00158       Callback _connect;
+<a name="l00159"></a>00159       Callback _disconnect;
+<a name="l00160"></a>00160 
+<a name="l00161"></a>00161       <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> _con_tab;
+<a name="l00162"></a>00162       <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> _rem_con_tab;
+<a name="l00163"></a>00163       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _local_id;
+<a name="l00164"></a>00164       EdgeFactory _edge_factory;
+<a name="l00165"></a>00165       RpcHandler &amp;_rpc;
+<a name="l00166"></a>00166       <span class="keywordtype">bool</span> _closed;
+<a name="l00167"></a>00167       QHash&lt;Address, bool&gt; _outstanding_con_attempts;
+<a name="l00168"></a>00168 
+<a name="l00169"></a>00169     <span class="keyword">private</span> slots:
+<a name="l00173"></a>00173       <span class="keywordtype">void</span> HandleDisconnect();
+<a name="l00174"></a>00174 
+<a name="l00178"></a>00178       <span class="keywordtype">void</span> HandleDisconnected(<span class="keyword">const</span> QString &amp;reason);
+<a name="l00179"></a>00179 
+<a name="l00183"></a>00183       <span class="keywordtype">void</span> HandleNewEdge(QSharedPointer&lt;Edge&gt; edge);
+<a name="l00184"></a>00184       
+<a name="l00188"></a>00188       <span class="keywordtype">void</span> HandleEdgeClose(<span class="keyword">const</span> QString &amp;reason);
+<a name="l00189"></a>00189 
+<a name="l00193"></a>00193       <span class="keywordtype">void</span> HandleEdgeCreationFailure(<span class="keyword">const</span> Address &amp;to, <span class="keyword">const</span> QString &amp;reason);
+<a name="l00194"></a>00194   };
+<a name="l00195"></a>00195 }
+<a name="l00196"></a>00196 }
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -201,7 +206,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 10 2012 00:06:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jan 10 2012 22:36:59 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
