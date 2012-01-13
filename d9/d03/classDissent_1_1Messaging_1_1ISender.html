@@ -117,6 +117,7 @@ Inheritance diagram for Dissent::Messaging::ISender:</div>
   <img src="../../d9/d03/classDissent_1_1Messaging_1_1ISender.png" usemap="#Dissent::Messaging::ISender_map" alt=""/>
   <map id="Dissent::Messaging::ISender_map" name="Dissent::Messaging::ISender_map">
 <area href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group." alt="Dissent::Anonymity::Round" shape="rect" coords="0,56,282,80"/>
+<area href="../../d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html" title="Holds the state necessary for forwarding data to a remote sender using the ISender primitives..." alt="Dissent::Connections::ForwardingSender" shape="rect" coords="292,56,574,80"/>
 <area href="../../da/da4/classDissent_1_1Messaging_1_1Filter.html" title="Acts as a basic messaging Filter." alt="Dissent::Messaging::Filter" shape="rect" coords="584,56,866,80"/>
 <area href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html" title="Stores the state for a transport layer link between two peers." alt="Dissent::Transports::Edge" shape="rect" coords="1168,56,1450,80"/>
 <area href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange." alt="Dissent::Anonymity::BulkRound" shape="rect" coords="292,112,574,136"/>
@@ -126,9 +127,10 @@ Inheritance diagram for Dissent::Messaging::ISender:</div>
 <area href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html" title="Dissent &quot;v3&quot; Bulk." alt="Dissent::Anonymity::Tolerant::TolerantBulkRound" shape="rect" coords="292,336,574,360"/>
 <area href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r..." alt="Dissent::Anonymity::Session" shape="rect" coords="876,112,1158,136"/>
 <area href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier." alt="Dissent::Connections::Connection" shape="rect" coords="876,168,1158,192"/>
-<area href="../../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html" title="Used to pass messages in a common process." alt="Dissent::Transports::BufferEdge" shape="rect" coords="1460,112,1742,136"/>
-<area href="../../d8/d1c/classDissent_1_1Transports_1_1NullEdge.html" title="Maintains a null state, just for the sake of having an Edge." alt="Dissent::Transports::NullEdge" shape="rect" coords="1460,168,1742,192"/>
-<area href="../../de/dff/classDissent_1_1Transports_1_1TcpEdge.html" title="Uses reliable IP networking: Tcp." alt="Dissent::Transports::TcpEdge" shape="rect" coords="1460,224,1742,248"/>
+<area href="../../dd/d54/classDissent_1_1Connections_1_1RelayEdge.html" title="Stores the state for creating a transport layer link that utilizes other types of links..." alt="Dissent::Connections::RelayEdge" shape="rect" coords="1460,112,1742,136"/>
+<area href="../../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html" title="Used to pass messages in a common process." alt="Dissent::Transports::BufferEdge" shape="rect" coords="1460,168,1742,192"/>
+<area href="../../d8/d1c/classDissent_1_1Transports_1_1NullEdge.html" title="Maintains a null state, just for the sake of having an Edge." alt="Dissent::Transports::NullEdge" shape="rect" coords="1460,224,1742,248"/>
+<area href="../../de/dff/classDissent_1_1Transports_1_1TcpEdge.html" title="Uses reliable IP networking: Tcp." alt="Dissent::Transports::TcpEdge" shape="rect" coords="1460,280,1742,304"/>
 </map>
  </div></div>
 
@@ -171,7 +173,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a925b6a4edb4356ad4c9d5483499f34e1">Dissent::Anonymity::Round</a>, <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a22d2c669b6e286c699ef11dae3a04851">Dissent::Anonymity::Session</a>, <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#a2040d857738266b3fb385c9af6f281c9">Dissent::Connections::Connection</a>, <a class="el" href="../../de/dff/classDissent_1_1Transports_1_1TcpEdge.html#a4ef6858341fe03b5c63456a91732db93">Dissent::Transports::TcpEdge</a>, <a class="el" href="../../da/d87/classDissent_1_1Connections_1_1NullConnection.html#ad840fa585abbc0ab862ac0ea3bd920fc">Dissent::Connections::NullConnection</a>, <a class="el" href="../../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html#afc53e3bf7545d90b98be05319b338354">Dissent::Transports::BufferEdge</a>, and <a class="el" href="../../d8/d1c/classDissent_1_1Transports_1_1NullEdge.html#a7f26263487cafdcf49c4d22c81272965">Dissent::Transports::NullEdge</a>.</p>
+<p>Implemented in <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a925b6a4edb4356ad4c9d5483499f34e1">Dissent::Anonymity::Round</a>, <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a22d2c669b6e286c699ef11dae3a04851">Dissent::Anonymity::Session</a>, <a class="el" href="../../dd/d54/classDissent_1_1Connections_1_1RelayEdge.html#a73cb2b4bd7fa70b72f7696c3cffca5f6">Dissent::Connections::RelayEdge</a>, <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#a2040d857738266b3fb385c9af6f281c9">Dissent::Connections::Connection</a>, <a class="el" href="../../de/dff/classDissent_1_1Transports_1_1TcpEdge.html#a4ef6858341fe03b5c63456a91732db93">Dissent::Transports::TcpEdge</a>, <a class="el" href="../../d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html#a6b224664d4745f199951e7ca0071e8d5">Dissent::Connections::ForwardingSender</a>, <a class="el" href="../../da/d87/classDissent_1_1Connections_1_1NullConnection.html#ad840fa585abbc0ab862ac0ea3bd920fc">Dissent::Connections::NullConnection</a>, <a class="el" href="../../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html#afc53e3bf7545d90b98be05319b338354">Dissent::Transports::BufferEdge</a>, and <a class="el" href="../../d8/d1c/classDissent_1_1Transports_1_1NullEdge.html#a7f26263487cafdcf49c4d22c81272965">Dissent::Transports::NullEdge</a>.</p>
 
 </div>
 </div>
@@ -196,7 +198,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2012 19:20:45 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 13 2012 00:31:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

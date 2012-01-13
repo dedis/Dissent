@@ -128,8 +128,9 @@ Inheritance diagram for Dissent::Utils::StartStop:</div>
 <area href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html" title="Dissent &quot;v3&quot; Bulk." alt="Dissent::Anonymity::Tolerant::TolerantBulkRound" shape="rect" coords="292,336,574,360"/>
 <area href="../../d0/db3/classDissent_1_1Connections_1_1Bootstrapper.html" title="Manages incoming and outgoing connections -- A node should only send requests on outgoing connections..." alt="Dissent::Connections::Bootstrapper" shape="rect" coords="876,112,1158,136"/>
 <area href="../../dd/d8e/classDissent_1_1Connections_1_1FullyConnected.html" title="Creates a fully connected overlay." alt="Dissent::Connections::FullyConnected" shape="rect" coords="876,168,1158,192"/>
-<area href="../../d1/da5/classDissent_1_1Transports_1_1BufferEdgeListener.html" title="Creates edges which can be used to pass messages inside a common process." alt="Dissent::Transports::BufferEdgeListener" shape="rect" coords="1460,112,1742,136"/>
-<area href="../../df/d45/classDissent_1_1Transports_1_1TcpEdgeListener.html" title="Creates edges which can be used to pass messages inside a common process." alt="Dissent::Transports::TcpEdgeListener" shape="rect" coords="1460,168,1742,192"/>
+<area href="../../da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html" title="Creates transport layer links over other links (connections)" alt="Dissent::Connections::RelayEdgeListener" shape="rect" coords="1460,112,1742,136"/>
+<area href="../../d1/da5/classDissent_1_1Transports_1_1BufferEdgeListener.html" title="Creates edges which can be used to pass messages inside a common process." alt="Dissent::Transports::BufferEdgeListener" shape="rect" coords="1460,168,1742,192"/>
+<area href="../../df/d45/classDissent_1_1Transports_1_1TcpEdgeListener.html" title="Creates edges which can be used to pass messages inside a common process." alt="Dissent::Transports::TcpEdgeListener" shape="rect" coords="1460,224,1742,248"/>
 </map>
  </div></div>
 
@@ -160,6 +161,10 @@ Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa498a0da34ae54aecbd21d81e16e0d5d"></a><!-- doxytag: member="Dissent::Utils::StartStop::DestructorCheck" ref="aa498a0da34ae54aecbd21d81e16e0d5d" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#aa498a0da34ae54aecbd21d81e16e0d5d">DestructorCheck</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures the <a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern.">StartStop</a> object has been Stopped, must be explicitly called in inherited classes. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea16e713f8609b31f33311ae12765e27"></a><!-- doxytag: member="Dissent::Utils::StartStop::OnStart" ref="aea16e713f8609b31f33311ae12765e27" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStart</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1db0e877138e16fa0dd226164295244"></a><!-- doxytag: member="Dissent::Utils::StartStop::OnStop" ref="ab1db0e877138e16fa0dd226164295244" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A thin class to encapsulate the common start / stop pattern. </p>
@@ -185,7 +190,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2012 19:20:46 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 13 2012 00:31:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -19,5 +19,5 @@ var searchData=
   ['processnewedge',['ProcessNewEdge',['../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html#a27e3917fa9f9bd4941a1fda866d80e56',1,'Dissent::Transports::EdgeListener']]],
   ['provesharedsecret',['ProveSharedSecret',['../da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#a18cb085f2563d42d03a5ae45ba450954',1,'Dissent::Crypto::CppDiffieHellman::ProveSharedSecret()'],['../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a4bbfe7836b5d9f0f01557d9fc8223e02',1,'Dissent::Crypto::DiffieHellman::ProveSharedSecret()'],['../d3/da5/classDissent_1_1Crypto_1_1NullDiffieHellman.html#a1b4ced2851d318c245decf3ac813f823',1,'Dissent::Crypto::NullDiffieHellman::ProveSharedSecret()']]],
   ['publicdh',['PublicDh',['../da/d70/classDissent_1_1Anonymity_1_1BulkRound_1_1Descriptor.html#a20c54bf49a3a83bd21608a11c80dd9bd',1,'Dissent::Anonymity::BulkRound::Descriptor']]],
-  ['pushdata',['PushData',['../d7/d32/classDissent_1_1Messaging_1_1Source.html#a1827d0dea502b10e95f64185721c6be2',1,'Dissent::Messaging::Source']]]
+  ['pushdata',['PushData',['../dd/d54/classDissent_1_1Connections_1_1RelayEdge.html#abe25c1cd4f474329e2aa28fe10242921',1,'Dissent::Connections::RelayEdge::PushData()'],['../d7/d32/classDissent_1_1Messaging_1_1Source.html#a1827d0dea502b10e95f64185721c6be2',1,'Dissent::Messaging::Source::PushData()']]]
 ];
