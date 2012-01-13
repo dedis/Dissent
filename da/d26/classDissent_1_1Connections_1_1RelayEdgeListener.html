@@ -142,6 +142,16 @@ typedef <br class="typebreak"/>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdc95b5b75d97ce9ff7f798c2fdc8a8d"></a><!-- doxytag: member="Dissent::Connections::RelayEdgeListener::Address" ref="abdc95b5b75d97ce9ff7f798c2fdc8a8d" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Dissent::Transports::Address</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Address</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae00dd7fdeb185ac5af879dc5ba358069"></a><!-- doxytag: member="Dissent::Connections::RelayEdgeListener::Timer" ref="ae00dd7fdeb185ac5af879dc5ba358069" args="" -->
+typedef <a class="el" href="../../d4/d63/classDissent_1_1Utils_1_1Timer.html">Dissent::Utils::Timer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Timer</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abab0bf6163b8cb10bee2cc7b11bfa386"></a><!-- doxytag: member="Dissent::Connections::RelayEdgeListener::CallbackData" ref="abab0bf6163b8cb10bee2cc7b11bfa386" args="" -->
+typedef <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">Dissent::Utils::Triple</a><br class="typebreak"/>
+&lt; int, <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CallbackData</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6182966a479fa4b0d3bdbf8f00cef68"></a><!-- doxytag: member="Dissent::Connections::RelayEdgeListener::TCallback" ref="ad6182966a479fa4b0d3bdbf8f00cef68" args="" -->
+typedef <br class="typebreak"/>
+<a class="el" href="../../df/dfd/classDissent_1_1Utils_1_1TimerMethod.html">Dissent::Utils::TimerMethod</a><br class="typebreak"/>
+&lt; <a class="el" href="../../da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html">RelayEdgeListener</a>, <br class="typebreak"/>
+<a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">CallbackData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TCallback</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html#ab1f0e1bcd7e1d568cadbce520f8d2862">RelayEdgeListener</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;local_id, const <a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html">ConnectionTable</a> &amp;ct, <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html">RpcHandler</a> &amp;rpc)</td></tr>
@@ -151,8 +161,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html#a7a9d39f571968e601a06ab0f6bee7c60">CreateEdgeTo</a> (const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;to)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an edge to the specified remote peer.  <a href="#a7a9d39f571968e601a06ab0f6bee7c60"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html#a9403578863422dc1f2f7ec691bd6c27c">CreateEdgeTo</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an edge to the specified remote peer.  <a href="#a9403578863422dc1f2f7ec691bd6c27c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html#a13647adcd1cecc293efdbcf32a7f22a8">CreateEdgeTo</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id, int times=0)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an edge to the specified remote peer.  <a href="#a13647adcd1cecc293efdbcf32a7f22a8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0f6cbd8986cc96cf2bdba38cbb4271c"></a><!-- doxytag: member="Dissent::Connections::RelayEdgeListener::OnStart" ref="aa0f6cbd8986cc96cf2bdba38cbb4271c" args="()" -->
@@ -235,7 +245,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()
 
 </div>
 </div>
-<a class="anchor" id="a9403578863422dc1f2f7ec691bd6c27c"></a><!-- doxytag: member="Dissent::Connections::RelayEdgeListener::CreateEdgeTo" ref="a9403578863422dc1f2f7ec691bd6c27c" args="(const Id &amp;id)" -->
+<a class="anchor" id="a13647adcd1cecc293efdbcf32a7f22a8"></a><!-- doxytag: member="Dissent::Connections::RelayEdgeListener::CreateEdgeTo" ref="a13647adcd1cecc293efdbcf32a7f22a8" args="(const Id &amp;id, int times=0)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -243,8 +253,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()
           <td class="memname">void <a class="el" href="../../da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html#a7a9d39f571968e601a06ab0f6bee7c60">Dissent::Connections::RelayEdgeListener::CreateEdgeTo</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
-          <td class="paramname"><em>id</em></td><td>)</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>times</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div>
@@ -283,7 +303,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 13 2012 00:31:28 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 13 2012 02:51:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
