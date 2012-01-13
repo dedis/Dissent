@@ -130,38 +130,36 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00096"></a>00096     <span class="keyword">public</span> slots:
 <a name="l00104"></a>00104       <span class="keywordtype">void</span> <a class="code" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#af0407d4745c5b918619300e5468854a3" title="Called when a WebService finishes processing a WebRequest.">HandleFinishedWebRequest</a>(QSharedPointer&lt;WebRequest&gt; wrp);
 <a name="l00105"></a>00105 
-<a name="l00109"></a>00109       <span class="keywordtype">void</span> <a class="code" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#ac7fef6c01d92dd95cd4a358c4c8c1f4b" title="Called when session is ready to accept messages over HTTP.">Ready</a>();
+<a name="l00109"></a>00109       <span class="keywordtype">void</span> <a class="code" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a919264722e85dfdd785dd448913f3106" title="Stop the web server.">Stop</a>();
 <a name="l00110"></a>00110 
-<a name="l00114"></a>00114       <span class="keywordtype">void</span> <a class="code" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a919264722e85dfdd785dd448913f3106" title="Stop the web server.">Stop</a>();
-<a name="l00115"></a>00115 
-<a name="l00116"></a>00116     <span class="comment">/* We keep these private because the sender() for</span>
-<a name="l00117"></a>00117 <span class="comment">     * each must be a QTcpSocket object </span>
-<a name="l00118"></a>00118 <span class="comment">     */</span>
-<a name="l00119"></a>00119     <span class="keyword">private</span> slots:
-<a name="l00123"></a>00123       <span class="keywordtype">void</span> ReadFromClient();
+<a name="l00111"></a>00111     <span class="comment">/* We keep these private because the sender() for</span>
+<a name="l00112"></a>00112 <span class="comment">     * each must be a QTcpSocket object </span>
+<a name="l00113"></a>00113 <span class="comment">     */</span>
+<a name="l00114"></a>00114     <span class="keyword">private</span> slots:
+<a name="l00118"></a>00118       <span class="keywordtype">void</span> ReadFromClient();
+<a name="l00119"></a>00119 
+<a name="l00123"></a>00123       <span class="keywordtype">void</span> DiscardClient();
 <a name="l00124"></a>00124 
-<a name="l00128"></a>00128       <span class="keywordtype">void</span> DiscardClient();
+<a name="l00128"></a>00128       <span class="keywordtype">void</span> HandleError(QAbstractSocket::SocketError);
 <a name="l00129"></a>00129 
-<a name="l00133"></a>00133       <span class="keywordtype">void</span> HandleError(QAbstractSocket::SocketError);
+<a name="l00133"></a>00133       <span class="keywordtype">void</span> HandleStdin();
 <a name="l00134"></a>00134 
-<a name="l00138"></a>00138       <span class="keywordtype">void</span> HandleStdin();
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140     <span class="keyword">private</span>:
-<a name="l00141"></a>00141       QHostAddress _host;
-<a name="l00142"></a>00142       quint16 _port;
-<a name="l00143"></a>00143 
-<a name="l00145"></a>00145       QHash&lt;QPair&lt;HttpRequest::RequestMethod, QString&gt;, QSharedPointer&lt;WebService&gt; &gt; _routing_table; 
-<a name="l00146"></a>00146 
-<a name="l00149"></a>00149       QSet&lt;QSharedPointer&lt;WebService&gt; &gt; _service_set;
-<a name="l00150"></a>00150 
-<a name="l00151"></a>00151       <span class="keywordtype">bool</span> _running, _ready;
-<a name="l00152"></a>00152       QTextStream _qtin, _qtout;
-<a name="l00153"></a>00153       QSocketNotifier _qtin_notify;
-<a name="l00154"></a>00154   };
-<a name="l00155"></a>00155 }
-<a name="l00156"></a>00156 }
-<a name="l00157"></a>00157 
-<a name="l00158"></a>00158 <span class="preprocessor">#endif</span>
+<a name="l00135"></a>00135     <span class="keyword">private</span>:
+<a name="l00136"></a>00136       QHostAddress _host;
+<a name="l00137"></a>00137       quint16 _port;
+<a name="l00138"></a>00138 
+<a name="l00140"></a>00140       QHash&lt;QPair&lt;HttpRequest::RequestMethod, QString&gt;, QSharedPointer&lt;WebService&gt; &gt; _routing_table; 
+<a name="l00141"></a>00141 
+<a name="l00144"></a>00144       QSet&lt;QSharedPointer&lt;WebService&gt; &gt; _service_set;
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146       <span class="keywordtype">bool</span> _running;
+<a name="l00147"></a>00147       QTextStream _qtin, _qtout;
+<a name="l00148"></a>00148       QSocketNotifier _qtin_notify;
+<a name="l00149"></a>00149   };
+<a name="l00150"></a>00150 }
+<a name="l00151"></a>00151 }
+<a name="l00152"></a>00152 
+<a name="l00153"></a>00153 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -180,7 +178,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 13 2012 13:35:17 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 13 2012 15:28:40 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

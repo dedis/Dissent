@@ -101,18 +101,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Overlay::BasicGossip Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="Dissent::Overlay::BasicGossip" -->
+<!-- doxytag: class="Dissent::Overlay::BasicGossip" --><!-- doxytag: inherits="Dissent::Utils::StartStopSlots" -->
 <p>A single member in a Gossip overlay, which attempts to connect all nodes in the overlay to every other node, a fully connected graph.  
  <a href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dc/d60/BasicGossip_8hpp_source.html">BasicGossip.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Dissent::Overlay::BasicGossip:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.png" usemap="#Dissent::Overlay::BasicGossip_map" alt=""/>
+  <map id="Dissent::Overlay::BasicGossip_map" name="Dissent::Overlay::BasicGossip_map">
+<area href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStopSlots" shape="rect" coords="0,56,180,80"/>
+<area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="0,0,180,24"/>
+</map>
+ </div></div>
 
 <p><a href="../../db/d97/classDissent_1_1Overlay_1_1BasicGossip-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -141,16 +151,14 @@ typedef <br class="typebreak"/>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1244d31fc4f1edaf01b820b9bb90989"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::EdgeListener" ref="aa1244d31fc4f1edaf01b820b9bb90989" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html">Dissent::Transports::EdgeListener</a>&#160;</td><td class="memItemRight" valign="bottom"><b>EdgeListener</b></td></tr>
-<tr><td colspan="2"><h2><a name="pub-slots"></a>
-Public Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c8223deed4fef3600c5c1d47da732f9"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Stop" ref="a1c8223deed4fef3600c5c1d47da732f9" args="()" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a1c8223deed4fef3600c5c1d47da732f9">Stop</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects the node from the overlay. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="signals"></a>
 Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74008b2a0f22b4b2c9645a1dcc099486"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Disconnected" ref="a74008b2a0f22b4b2c9645a1dcc099486" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a74008b2a0f22b4b2c9645a1dcc099486">Disconnected</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when disconnected. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4646e4fe620f1257ed0218a96e987ed8"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Disconnecting" ref="a4646e4fe620f1257ed0218a96e987ed8" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a4646e4fe620f1257ed0218a96e987ed8">Disconnecting</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when disconnecting. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a251a3489337c0814d01698879710434c">BasicGossip</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;local_id, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;local_endpoints, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;remote_endpoints)</td></tr>
@@ -158,9 +166,6 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1e09dae48c9b05b4d0339c3c70b80ec"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::~BasicGossip" ref="ae1e09dae48c9b05b4d0339c3c70b80ec" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#ae1e09dae48c9b05b4d0339c3c70b80ec">~BasicGossip</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43dbf901329471d6b0c9d8877c5328d1"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Start" ref="a43dbf901329471d6b0c9d8877c5328d1" args="()" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a43dbf901329471d6b0c9d8877c5328d1">Start</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The overlay starts connecting to remote peers and allows peers to connect with it. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82eca1d11c0e9f48d47822571cb10460"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::NeedConnection" ref="a82eca1d11c0e9f48d47822571cb10460" args="()" -->
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a82eca1d11c0e9f48d47822571cb10460">NeedConnection</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the system needs to reinit bootstrap. <br/></td></tr>
@@ -176,6 +181,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51f5f31bbd96b1b126f64d70b783140d"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::GetId" ref="a51f5f31bbd96b1b126f64d70b783140d" args="()" -->
 <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a51f5f31bbd96b1b126f64d70b783140d">GetId</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nodes Id. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbac2e3629ee757125efbbad352728a7"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::OnStart" ref="afbac2e3629ee757125efbbad352728a7" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStart</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b14dcf8b3c53fe291c4da43bf180971"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::OnStop" ref="a2b14dcf8b3c53fe291c4da43bf180971" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A single member in a Gossip overlay, which attempts to connect all nodes in the overlay to every other node, a fully connected graph. </p>
@@ -245,7 +256,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 13 2012 13:35:18 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 13 2012 15:28:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

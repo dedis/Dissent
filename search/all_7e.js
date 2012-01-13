@@ -67,6 +67,7 @@ var searchData=
   ['_7esignalcounter',['~SignalCounter',['../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#ad1040247711ade5396ec91d4a4dfc8ad',1,'Dissent::Utils::SignalCounter']]],
   ['_7esignalsink',['~SignalSink',['../d8/dad/classDissent_1_1Messaging_1_1SignalSink.html#a6d7fe1b6e6d028fada045220003fbec3',1,'Dissent::Messaging::SignalSink']]],
   ['_7estartstop',['~StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html#a8c38a0ddcf5a4135a684f412caa8d1d5',1,'Dissent::Utils::StartStop']]],
+  ['_7estartstopslots',['~StartStopSlots',['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html#ae8b9a6e1895ba07e1c292814a462470e',1,'Dissent::Utils::StartStopSlots']]],
   ['_7etcpaddress',['~TcpAddress',['../d8/d7e/classDissent_1_1Transports_1_1TcpAddress.html#a76894c33d556c742579099d63905544b',1,'Dissent::Transports::TcpAddress']]],
   ['_7etcpaddressdata',['~TcpAddressData',['../d4/dca/classDissent_1_1Transports_1_1TcpAddressData.html#a40ac4f0defe44e97acad16c85640b0b0',1,'Dissent::Transports::TcpAddressData']]],
   ['_7etcpedge',['~TcpEdge',['../de/dff/classDissent_1_1Transports_1_1TcpEdge.html#a3ade83ecfc33b2e5cb9c6b97044dac0f',1,'Dissent::Transports::TcpEdge']]],

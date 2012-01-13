@@ -101,7 +101,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
-<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
@@ -137,18 +136,16 @@ typedef <br class="typebreak"/>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20452527db5cc5d57ad4a9b9577c898f"></a><!-- doxytag: member="Dissent::Applications::Node::Address" ref="a20452527db5cc5d57ad4a9b9577c898f" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Dissent::Transports::Address</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Address</b></td></tr>
-<tr><td colspan="2"><h2><a name="signals"></a>
-Signals</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeec4a7ed5e3563880516228cc545023e"></a><!-- doxytag: member="Dissent::Applications::Node::Ready" ref="aeec4a7ed5e3563880516228cc545023e" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html#aeec4a7ed5e3563880516228cc545023e">Ready</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when this node has created a session. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html#ad2101721166c4abbd4b978f50841f9f0">Node</a> (const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;creds, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;local, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;remote, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const QString &amp;type)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad2101721166c4abbd4b978f50841f9f0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html#a226277a3c3aebb782ed3d0162db96477">Node</a> (const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;creds, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;local, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;remote, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const QString &amp;type, const QSharedPointer&lt; <a class="el" href="../../d8/ddd/classDissent_1_1Messaging_1_1ISink.html">ISink</a> &gt; &amp;sink=QSharedPointer&lt; <a class="el" href="../../d8/ddd/classDissent_1_1Messaging_1_1ISink.html">ISink</a> &gt;())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a226277a3c3aebb782ed3d0162db96477"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b35a65c9d6f300859d69015286268f8"></a><!-- doxytag: member="Dissent::Applications::Node::~Node" ref="a9b35a65c9d6f300859d69015286268f8" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html#a9b35a65c9d6f300859d69015286268f8">~Node</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7cc793ad2942a77c4edd8c28b5c8b63"></a><!-- doxytag: member="Dissent::Applications::Node::StartSession" ref="af7cc793ad2942a77c4edd8c28b5c8b63" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html#af7cc793ad2942a77c4edd8c28b5c8b63">StartSession</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hack to start session after sink has been set. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b8ac7ebfb3ca973c497d2166411ac79"></a><!-- doxytag: member="Dissent::Applications::Node::creds" ref="a1b8ac7ebfb3ca973c497d2166411ac79" args="" -->
@@ -167,12 +164,12 @@ QSharedPointer&lt; <a class="el" href="../../d8/ddd/classDissent_1_1Messaging_1_
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be necessary. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad2101721166c4abbd4b978f50841f9f0"></a><!-- doxytag: member="Dissent::Applications::Node::Node" ref="ad2101721166c4abbd4b978f50841f9f0" args="(const Credentials &amp;creds, const QList&lt; Address &gt; &amp;local, const QList&lt; Address &gt; &amp;remote, const Group &amp;group, const QString &amp;type)" -->
+<a class="anchor" id="a226277a3c3aebb782ed3d0162db96477"></a><!-- doxytag: member="Dissent::Applications::Node::Node" ref="a226277a3c3aebb782ed3d0162db96477" args="(const Credentials &amp;creds, const QList&lt; Address &gt; &amp;local, const QList&lt; Address &gt; &amp;remote, const Group &amp;group, const QString &amp;type, const QSharedPointer&lt; ISink &gt; &amp;sink=QSharedPointer&lt; ISink &gt;())" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html#ad2101721166c4abbd4b978f50841f9f0">Dissent::Applications::Node::Node</a> </td>
+          <td class="memname"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html#a226277a3c3aebb782ed3d0162db96477">Dissent::Applications::Node::Node</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
           <td class="paramname"><em>creds</em>, </td>
@@ -199,7 +196,13 @@ QSharedPointer&lt; <a class="el" href="../../d8/ddd/classDissent_1_1Messaging_1_
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../d8/ddd/classDissent_1_1Messaging_1_1ISink.html">ISink</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sink</em> = <code>QSharedPointer&lt;<a class="el" href="../../d8/ddd/classDissent_1_1Messaging_1_1ISink.html">ISink</a>&gt;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -243,7 +246,7 @@ QSharedPointer&lt; <a class="el" href="../../d8/ddd/classDissent_1_1Messaging_1_
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 13 2012 13:35:17 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 13 2012 15:28:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
