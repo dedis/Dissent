@@ -128,10 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Store the number of bytes generated with the RNG up to the start of this phase and slot.  <a href="#afc2bb33fa4559c1b9c0d612319ebf495"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a8669a939a6219436adc8943c34039de6">StoreMessage</a> (uint phase, uint slot, uint member, const QByteArray &amp;message)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Store an XOR component sent by this node in the given slot.  <a href="#a8669a939a6219436adc8943c34039de6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a4be1e786b7f7cea3c8197475aa675ab8">GetAlibiBytes</a> (uint slot, <a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html">Accusation</a> &amp;acc)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a serialized alibi proving this node's innocence in the given slot.  <a href="#a4be1e786b7f7cea3c8197475aa675ab8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a1eac5549373d04906ff7ac8340a96249">GetAlibiBytes</a> (uint phase, uint slot, uint byte, ushort bit)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a serlialized alibi proving this node's innocence in the given slot.  <a href="#a1eac5549373d04906ff7ac8340a96249"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a417320c7c1d2097ff87284d872c7037d">GetAlibiBytes</a> (uint slot, const <a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html">Accusation</a> &amp;acc) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a serialized alibi proving this node's innocence in the given slot.  <a href="#a417320c7c1d2097ff87284d872c7037d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#aa78753a19a1d1377951c915b311daf5f">GetAlibiBytes</a> (uint phase, uint slot, uint byte, ushort bit) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a serlialized alibi proving this node's innocence in the given slot.  <a href="#aa78753a19a1d1377951c915b311daf5f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#ad21a050320d049b907d90f92f8f3e908">NextPhase</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate that the next transmission phase is starting.  <a href="#ad21a050320d049b907d90f92f8f3e908"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a35187c1a918abb8e369266c091407729">MarkSlotCorrupted</a> (uint slot)</td></tr>
@@ -256,12 +256,12 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4be1e786b7f7cea3c8197475aa675ab8"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::AlibiData::GetAlibiBytes" ref="a4be1e786b7f7cea3c8197475aa675ab8" args="(uint slot, Accusation &amp;acc)" -->
+<a class="anchor" id="a417320c7c1d2097ff87284d872c7037d"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::AlibiData::GetAlibiBytes" ref="a417320c7c1d2097ff87284d872c7037d" args="(uint slot, const Accusation &amp;acc) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QByteArray <a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a4be1e786b7f7cea3c8197475aa675ab8">Dissent::Anonymity::Tolerant::AlibiData::GetAlibiBytes</a> </td>
+          <td class="memname">QByteArray <a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a417320c7c1d2097ff87284d872c7037d">Dissent::Anonymity::Tolerant::AlibiData::GetAlibiBytes</a> </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>slot</em>, </td>
@@ -269,13 +269,13 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html">Accusation</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html">Accusation</a> &amp;&#160;</td>
           <td class="paramname"><em>acc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div>
@@ -292,12 +292,12 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1eac5549373d04906ff7ac8340a96249"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::AlibiData::GetAlibiBytes" ref="a1eac5549373d04906ff7ac8340a96249" args="(uint phase, uint slot, uint byte, ushort bit)" -->
+<a class="anchor" id="aa78753a19a1d1377951c915b311daf5f"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::AlibiData::GetAlibiBytes" ref="aa78753a19a1d1377951c915b311daf5f" args="(uint phase, uint slot, uint byte, ushort bit) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">QByteArray <a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a4be1e786b7f7cea3c8197475aa675ab8">Dissent::Anonymity::Tolerant::AlibiData::GetAlibiBytes</a> </td>
+          <td class="memname">QByteArray <a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a417320c7c1d2097ff87284d872c7037d">Dissent::Anonymity::Tolerant::AlibiData::GetAlibiBytes</a> </td>
           <td>(</td>
           <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>phase</em>, </td>
@@ -323,7 +323,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div>
@@ -546,7 +546,7 @@ Static Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 13 2012 16:20:24 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 14 2012 00:27:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

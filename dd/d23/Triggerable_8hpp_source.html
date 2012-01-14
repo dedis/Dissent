@@ -82,27 +82,25 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DISSENT_UTILS_TRIGGERABLE_H_GUARD</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DISSENT_UTILS_TRIGGERABLE_H_GUARD</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QDebug&gt;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="keyword">namespace </span>Dissent {
-<a name="l00007"></a>00007 <span class="keyword">namespace </span>Utils {
-<a name="l00011"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html">00011</a>   <span class="keyword">class </span><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a> {
-<a name="l00012"></a>00012     <span class="keyword">public</span>:
-<a name="l00016"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a3ff6b350a5f794f77cfcd42b80f5491b">00016</a>       <span class="keyword">explicit</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a3ff6b350a5f794f77cfcd42b80f5491b" title="Constructor.">Triggerable</a>() : _triggered(false) {}
-<a name="l00017"></a>00017 
-<a name="l00021"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#acbf876a8e3f53c20138ca2764b0cc794">00021</a>       <span class="keyword">virtual</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#acbf876a8e3f53c20138ca2764b0cc794" title="Destructor.">~Triggerable</a>() {}
-<a name="l00022"></a>00022 
-<a name="l00026"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470">00026</a>       <span class="keywordtype">void</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>() { _triggered = <span class="keyword">true</span>; }
-<a name="l00027"></a>00027 
-<a name="l00031"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a2729de0b10138e8cfe8e88c1b4fa0d67">00031</a>       <span class="keywordtype">bool</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a2729de0b10138e8cfe8e88c1b4fa0d67" title="Returns the state of the underlying trigger.">Triggered</a>() { <span class="keywordflow">return</span> _triggered; }
-<a name="l00032"></a>00032 
-<a name="l00033"></a>00033     <span class="keyword">private</span>:
-<a name="l00034"></a>00034       <span class="keywordtype">bool</span> _triggered;
-<a name="l00035"></a>00035   };
-<a name="l00036"></a>00036 }
-<a name="l00037"></a>00037 }
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039 <span class="preprocessor">#endif</span>
+<a name="l00004"></a>00004 <span class="keyword">namespace </span>Dissent {
+<a name="l00005"></a>00005 <span class="keyword">namespace </span>Utils {
+<a name="l00009"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html">00009</a>   <span class="keyword">class </span><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a> {
+<a name="l00010"></a>00010     <span class="keyword">public</span>:
+<a name="l00014"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a3ff6b350a5f794f77cfcd42b80f5491b">00014</a>       <span class="keyword">explicit</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a3ff6b350a5f794f77cfcd42b80f5491b" title="Constructor.">Triggerable</a>() : _triggered(false) {}
+<a name="l00015"></a>00015 
+<a name="l00019"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#acbf876a8e3f53c20138ca2764b0cc794">00019</a>       <span class="keyword">virtual</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#acbf876a8e3f53c20138ca2764b0cc794" title="Destructor.">~Triggerable</a>() {}
+<a name="l00020"></a>00020 
+<a name="l00024"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470">00024</a>       <span class="keywordtype">void</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>() { _triggered = <span class="keyword">true</span>; }
+<a name="l00025"></a>00025 
+<a name="l00029"></a><a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a2729de0b10138e8cfe8e88c1b4fa0d67">00029</a>       <span class="keywordtype">bool</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a2729de0b10138e8cfe8e88c1b4fa0d67" title="Returns the state of the underlying trigger.">Triggered</a>() { <span class="keywordflow">return</span> _triggered; }
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031     <span class="keyword">private</span>:
+<a name="l00032"></a>00032       <span class="keywordtype">bool</span> _triggered;
+<a name="l00033"></a>00033   };
+<a name="l00034"></a>00034 }
+<a name="l00035"></a>00035 }
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -121,7 +119,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 13 2012 16:20:23 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 14 2012 00:27:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

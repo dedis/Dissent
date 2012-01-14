@@ -103,7 +103,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Anonymity::Tolerant::TolerantBulkRound Class Reference</div>  </div>
 </div><!--header-->
@@ -119,10 +120,17 @@ Inheritance diagram for Dissent::Anonymity::Tolerant::TolerantBulkRound:</div>
  <div class="center">
   <img src="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.png" usemap="#Dissent::Anonymity::Tolerant::TolerantBulkRound_map" alt=""/>
   <map id="Dissent::Anonymity::Tolerant::TolerantBulkRound_map" name="Dissent::Anonymity::Tolerant::TolerantBulkRound_map">
-<area href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group." alt="Dissent::Anonymity::Round" shape="rect" coords="292,56,574,80"/>
-<area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="0,0,282,24"/>
-<area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="292,0,574,24"/>
-<area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="584,0,866,24"/>
+<area href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group." alt="Dissent::Anonymity::Round" shape="rect" coords="1098,56,1454,80"/>
+<area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="732,0,1088,24"/>
+<area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="1098,0,1454,24"/>
+<area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="1464,0,1820,24"/>
+<area href="../../de/d15/classDissent_1_1Tests_1_1TolerantBulkRoundBadCleartextSigner.html" alt="Dissent::Tests::TolerantBulkRoundBadCleartextSigner" shape="rect" coords="0,168,356,192"/>
+<area href="../../d5/d06/classDissent_1_1Tests_1_1TolerantBulkRoundBadServerAlibi.html" alt="Dissent::Tests::TolerantBulkRoundBadServerAlibi" shape="rect" coords="366,168,722,192"/>
+<area href="../../df/d22/classDissent_1_1Tests_1_1TolerantBulkRoundBadServerPad.html" alt="Dissent::Tests::TolerantBulkRoundBadServerPad" shape="rect" coords="732,168,1088,192"/>
+<area href="../../de/d1f/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserAlibi.html" alt="Dissent::Tests::TolerantBulkRoundBadUserAlibi" shape="rect" coords="1098,168,1454,192"/>
+<area href="../../db/d56/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserCommit.html" alt="Dissent::Tests::TolerantBulkRoundBadUserCommit" shape="rect" coords="1464,168,1820,192"/>
+<area href="../../dd/db6/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserMessageGenerator.html" alt="Dissent::Tests::TolerantBulkRoundBadUserMessageGenerator" shape="rect" coords="1830,168,2186,192"/>
+<area href="../../dc/ddf/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserPad.html" alt="Dissent::Tests::TolerantBulkRoundBadUserPad" shape="rect" coords="2196,168,2552,192"/>
 </map>
  </div></div>
 
@@ -131,14 +139,15 @@ Inheritance diagram for Dissent::Anonymity::Tolerant::TolerantBulkRound:</div>
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aea67d6743a02e72abfbf725d847b3f54">State</a> { <br/>
-&#160;&#160;<b>Offline</b>, 
-<b>ExchangingDhKeys</b>, 
-<b>SigningKeyShuffling</b>, 
-<b>DataSharing</b>, 
+&#160;&#160;<b>State_Offline</b>, 
+<b>State_SigningKeyShuffling</b>, 
+<b>State_CommitSharing</b>, 
+<b>State_DataSharing</b>, 
 <br/>
-&#160;&#160;<b>BlameWaitingForShuffle</b>, 
-<b>BlameExchangingAlibis</b>, 
-<b>Finished</b>
+&#160;&#160;<b>State_BlameShuffling</b>, 
+<b>State_BlameAlibiSharing</b>, 
+<b>State_BlameProofSharing</b>, 
+<b>State_Finished</b>
 <br/>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Various stages of the bulk. <br/></td></tr>
@@ -153,8 +162,8 @@ Public Types</h2></td></tr>
  }</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Headers to use for different sub-rounds. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ac277cdbe8b354b4ddfdbf26f2539b3bb">MessageType</a> { <br/>
-&#160;&#160;<b>MessageType_UserKey</b> =  0, 
-<b>MessageType_ServerKey</b> =  1, 
+&#160;&#160;<b>MessageType_UserCommitData</b> =  0, 
+<b>MessageType_ServerCommitData</b> =  1, 
 <b>MessageType_UserBulkData</b> =  2, 
 <b>MessageType_ServerBulkData</b> =  3, 
 <br/>
@@ -175,11 +184,16 @@ typedef <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8681aaf6deb46e0587c3b6fd6e5812dd"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::DiffieHellman" ref="a8681aaf6deb46e0587c3b6fd6e5812dd" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">Dissent::Crypto::DiffieHellman</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DiffieHellman</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad902f34da709b11c8b61cee34e1ce3b9"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::Hash" ref="ad902f34da709b11c8b61cee34e1ce3b9" args="" -->
+typedef <a class="el" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html">Dissent::Crypto::Hash</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Hash</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8994cd1982a0cf0ca1d74dee1ee6417"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::Library" ref="ae8994cd1982a0cf0ca1d74dee1ee6417" args="" -->
 typedef <a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html">Dissent::Crypto::Library</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Library</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1b3fc3537f742da822314bfb49b664e"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::BufferSink" ref="ac1b3fc3537f742da822314bfb49b664e" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html">Dissent::Messaging::BufferSink</a>&#160;</td><td class="memItemRight" valign="bottom"><b>BufferSink</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d00ab4e9e329189d4e80e6c1c96d1db"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::RpcRequest" ref="a9d00ab4e9e329189d4e80e6c1c96d1db" args="" -->
+typedef <br class="typebreak"/>
+<a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">Dissent::Messaging::RpcRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RpcRequest</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a347944e517bf635a07e9ccef9d3da3a9"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::BulkGetDataCallback" ref="a347944e517bf635a07e9ccef9d3da3a9" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html">Dissent::Messaging::GetDataMethod</a><br class="typebreak"/>
@@ -196,14 +210,19 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a19bd66d91fb1c227194915f89278d803"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::Start" ref="a19bd66d91fb1c227194915f89278d803" args="()" -->
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a19bd66d91fb1c227194915f89278d803">Start</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the bulk round. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aac4ffe37a332fd2baf28bd33ae8c8c2e">PeerJoined</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the round that a new peer has joined the session.  <a href="#aac4ffe37a332fd2baf28bd33ae8c8c2e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6eba2f4a2b83555143a9fb46bb3eca8"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::FoundBadSlot" ref="aa6eba2f4a2b83555143a9fb46bb3eca8" args="(int idx)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aa6eba2f4a2b83555143a9fb46bb3eca8">FoundBadSlot</a> (int idx)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark an anonymous transmission slot as bad. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4cf62dadfa54c92699a78acf770b8a03"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::FoundBadMembers" ref="a4cf62dadfa54c92699a78acf770b8a03" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4cf62dadfa54c92699a78acf770b8a03">FoundBadMembers</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the round because a bad member was found. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f3fdf04f6f1e8c85dcf182848705e7f"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetBadMembers" ref="a6f3fdf04f6f1e8c85dcf182848705e7f" args="() const " -->
+virtual const QVector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a6f3fdf04f6f1e8c85dcf182848705e7f">GetBadMembers</a> () const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of members who have been blamed in the round. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a93b9ff35e6c036752804a844337af031">IncomingData</a> (<a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">RpcRequest</a> &amp;notification)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a data message from a remote peer.  <a href="#a93b9ff35e6c036752804a844337af031"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55e9263bf3136c74c6e9c1d451fdd880"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetBadMembers" ref="a55e9263bf3136c74c6e9c1d451fdd880" args="()" -->
-virtual const QVector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a55e9263bf3136c74c6e9c1d451fdd880">GetBadMembers</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of members who have been blamed in the round. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a441107789f1dabc8bcd988f28cee1e41"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ToString" ref="a441107789f1dabc8bcd988f28cee1e41" args="() const " -->
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a441107789f1dabc8bcd988f28cee1e41">ToString</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">QString rep. <br/></td></tr>
@@ -222,6 +241,139 @@ Static Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a MessageType into a QString.  <a href="#a7f9792f3290fa01bb574aad7d028acf0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#afe63ed48dc12f5876fd77d180c37329d">MessageTypeToString</a> (<a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ac277cdbe8b354b4ddfdbf26f2539b3bb">MessageType</a> mt)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a MessageType into a QString.  <a href="#afe63ed48dc12f5876fd77d180c37329d"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ac3f1838f80d82ee669c1e93d0dbd0ff7">ProcessData</a> (const QByteArray &amp;data, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If data is from a legitimate group member, it is processed.  <a href="#ac3f1838f80d82ee669c1e93d0dbd0ff7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a653d16db8e62aa0dd3942c1e6762542c">ProcessDataBase</a> (const QByteArray &amp;data, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This function does the hard work of processing data packets and throws exceptions for invalid data packets.  <a href="#a653d16db8e62aa0dd3942c1e6762542c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPair&lt; QByteArray, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a6ea891d4d7ace05e0312c10f035f33aa">GetKeyShuffleData</a> (int max)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signing key for sending in the shuffle round.  <a href="#a6ea891d4d7ace05e0312c10f035f33aa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a496c7e9d2737282103853dd13af5b764"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ParseSigningKey" ref="a496c7e9d2737282103853dd13af5b764" args="(const QByteArray &amp;bdes)" -->
+QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a496c7e9d2737282103853dd13af5b764">ParseSigningKey</a> (const QByteArray &amp;bdes)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a signing key received in a key shuffle  bytearray representing the public verification key. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afb87ff09a9a0e5735cedb76a1968c29c"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::SendCommits" ref="afb87ff09a9a0e5735cedb76a1968c29c" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendCommits</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e43ac5a8925dbed258439068fe21b7f"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleUserCommitData" ref="a4e43ac5a8925dbed258439068fe21b7f" args="(QDataStream &amp;stream, const Id &amp;from)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleUserCommitData</b> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec25f79f5c95d816176f98d72a96e5b5"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleServerCommitData" ref="aec25f79f5c95d816176f98d72a96e5b5" args="(QDataStream &amp;stream, const Id &amp;from)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleServerCommitData</b> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a714631b044e5c769ee711018a1afc17c"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HasAllCommits" ref="a714631b044e5c769ee711018a1afc17c" args="()" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a714631b044e5c769ee711018a1afc17c">HasAllCommits</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a node has all commit messages for a phase. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae3a5bf1d4c9bf834a7acbe515f43974"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::FinishCommitPhase" ref="aae3a5bf1d4c9bf834a7acbe515f43974" args="()" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aae3a5bf1d4c9bf834a7acbe515f43974">FinishCommitPhase</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Use alibis to figure out which nodes disagree on corrupted bit(s) <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab05a7fbf47148a11f139903f9555f349">HandleUserBulkData</a> (const QByteArray &amp;packet, QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles bulk data messages from users.  <a href="#ab05a7fbf47148a11f139903f9555f349"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ae3a22fa09b5630394f0668f008c26bda">HandleServerBulkData</a> (const QByteArray &amp;packet, QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles bulk data messages from servers.  <a href="#ae3a22fa09b5630394f0668f008c26bda"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a651cfdf70ffce98a2820a255ba6dde7d"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HasAllDataMessages" ref="a651cfdf70ffce98a2820a255ba6dde7d" args="()" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a651cfdf70ffce98a2820a255ba6dde7d">HasAllDataMessages</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a node has all bulk data messages for a phase. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4fc5488bbbf867e196e7f1b7196081a9"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ProcessMessages" ref="a4fc5488bbbf867e196e7f1b7196081a9" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4fc5488bbbf867e196e7f1b7196081a9">ProcessMessages</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Once all bulk data messages have been received, parse them. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a6df635eb81967ad7bc16f471659ab232">CheckCommits</a> (const QVector&lt; QByteArray &gt; &amp;commits, const QVector&lt; QByteArray &gt; &amp;digests, QVector&lt; int &gt; &amp;bad)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure that every message hashes to the matching commit.  <a href="#a6df635eb81967ad7bc16f471659ab232"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a991fefdd30e8a81dcac3d2ae41ad35f8">ProcessMessage</a> (const QByteArray &amp;cleartext, uint member_idx)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the clear text message returning back the entry if the contents are valid.  <a href="#a991fefdd30e8a81dcac3d2ae41ad35f8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a07eb4b16ea3d993214d8b92ac9d78507">SignMessage</a> (const QByteArray &amp;cleartext)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for anonymous signing functionality.  <a href="#a07eb4b16ea3d993214d8b92ac9d78507"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a7ca3a93ccb0b683279c87b44453b5c"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GenerateMyCleartextMessage" ref="a3a7ca3a93ccb0b683279c87b44453b5c" args="()" -->
+QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a3a7ca3a93ccb0b683279c87b44453b5c">GenerateMyCleartextMessage</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepares the local members cleartext message returns the local members cleartext message. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a1752af21af6035cebec5b2a9f1eaa404">GeneratePadWithServer</a> (uint server_idx, uint length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the XOR pad that the user should generate with the specifed server.  <a href="#a1752af21af6035cebec5b2a9f1eaa404"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a684327d258bb7d506ff57aefe832baaf">GeneratePadWithUser</a> (uint user_idx, uint length)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate the XOR pad that the server should generate with the specifed user.  <a href="#a684327d258bb7d506ff57aefe832baaf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8116d3fec7822f464201528d922d165"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GenerateUserXorMessage" ref="ae8116d3fec7822f464201528d922d165" args="()" -->
+virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ae8116d3fec7822f464201528d922d165">GenerateUserXorMessage</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the user's entire xor message. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cf39eb5d641cbbfaed5984f04dacd7a"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GenerateServerXorMessage" ref="a7cf39eb5d641cbbfaed5984f04dacd7a" args="()" -->
+virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a7cf39eb5d641cbbfaed5984f04dacd7a">GenerateServerXorMessage</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the server's entire xor message. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf924810628b54fecafe685d583e3990"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::SaveMessagesToHistory" ref="abf924810628b54fecafe685d583e3990" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#abf924810628b54fecafe685d583e3990">SaveMessagesToHistory</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy all received messages to the message history data structure. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab746522b08f93885fc53ea22b3473e95">SearchForEvidence</a> (const QByteArray &amp;sent_msg, const QByteArray &amp;recvd_msg)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any bits in sent_msg were changed from zero to one in transmission Returns true if blame evidence was found.  <a href="#ab746522b08f93885fc53ea22b3473e95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a80a2080528aee5433a3f5e0b9263284b"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ResetBlameData" ref="a80a2080528aee5433a3f5e0b9263284b" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a80a2080528aee5433a3f5e0b9263284b">ResetBlameData</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear all blame and accusation data for a new blame shuffle. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5b5ae50d5c96961df0a43efc2303d21d"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::RunBlameShuffle" ref="a5b5ae50d5c96961df0a43efc2303d21d" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a5b5ae50d5c96961df0a43efc2303d21d">RunBlameShuffle</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">If there is a corrupted bulk message, run an accusation shuffle. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">QPair&lt; QByteArray, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#af8a0176c919837c66b3afb57aca0690f">GetBlameShuffleData</a> (int max)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the accusation for sending in the shuffle round.  <a href="#af8a0176c919837c66b3afb57aca0690f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f44b615bb943b0ab38a6f8e224943a2"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::SendUserAlibis" ref="a2f44b615bb943b0ab38a6f8e224943a2" args="(const QMap&lt; int, Accusation &gt; &amp;map)" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a2f44b615bb943b0ab38a6f8e224943a2">SendUserAlibis</a> (const QMap&lt; int, <a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html">Accusation</a> &gt; &amp;map)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast bitmasks proving user innocence with respect to a set of accusations in a blame round A mapping of slot_id =&gt; <a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html" title="Accusation holds the information that an anonymous slot owner submits to a blame/accusation shuffle w...">Accusation</a>. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bcae7d8befebafa702479daa2baa405"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::SendServerAlibis" ref="a8bcae7d8befebafa702479daa2baa405" args="(const QMap&lt; int, Accusation &gt; &amp;map)" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a8bcae7d8befebafa702479daa2baa405">SendServerAlibis</a> (const QMap&lt; int, <a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html">Accusation</a> &gt; &amp;map)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Broadcast bitmasks proving server innocence with respect to a set of accusations in a blame round A mapping of slot_id =&gt; <a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html" title="Accusation holds the information that an anonymous slot owner submits to a blame/accusation shuffle w...">Accusation</a>. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4fb49e080e6f3fad03d714e634dc53ef">HandleUserAlibiData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles user alibi data messages in blame process.  <a href="#a4fb49e080e6f3fad03d714e634dc53ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4c57ddd50054723be5f4044df16a6299">HandleServerAlibiData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles server alibi data messages in blame process.  <a href="#a4c57ddd50054723be5f4044df16a6299"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9cc3ef89ac72f02b9a83502698bc9312"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HasAllAlibis" ref="a9cc3ef89ac72f02b9a83502698bc9312" args="()" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a9cc3ef89ac72f02b9a83502698bc9312">HasAllAlibis</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a node has all alibi messages for a phase. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a42ed4c87716cbdc554ea8aab05fe1f60"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::RunAlibiAnalysis" ref="a42ed4c87716cbdc554ea8aab05fe1f60" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a42ed4c87716cbdc554ea8aab05fe1f60">RunAlibiAnalysis</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Use alibis to figure out which nodes disagree on corrupted bit(s) <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acea954efc97d3d222dd37a5dc0d4f64f"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ProcessConflicts" ref="acea954efc97d3d222dd37a5dc0d4f64f" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#acea954efc97d3d222dd37a5dc0d4f64f">ProcessConflicts</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Look through blame conflicts and send proofs of innocence where necessary. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab4d52d21eda778775f1548e4ba772c8e">HandleUserProofData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles proof messages in blame process.  <a href="#ab4d52d21eda778775f1548e4ba772c8e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a80ceea58935d3dcd5b3785bf15b5dfde">HandleServerProofData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles proof messages from servers.  <a href="#a80ceea58935d3dcd5b3785bf15b5dfde"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2802673c7dc4a5f4b788288a6dca8aec"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HasAllProofs" ref="a2802673c7dc4a5f4b788288a6dca8aec" args="()" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a2802673c7dc4a5f4b788288a6dca8aec">HasAllProofs</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a node has all proof messages for a phase. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af5b9c7e5c628a9b9c2eca58ed1b0da08"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::RunProofAnalysis" ref="af5b9c7e5c628a9b9c2eca58ed1b0da08" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#af5b9c7e5c628a9b9c2eca58ed1b0da08">RunProofAnalysis</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Use NZKPs to check revealed secrets. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17b19a5cf09f92c5e433423470bf8d4c"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::SendUserProof" ref="a17b19a5cf09f92c5e433423470bf8d4c" args="(int conflict_idx, uint server_idx)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a17b19a5cf09f92c5e433423470bf8d4c">SendUserProof</a> (int conflict_idx, uint server_idx)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send proof of a user's DH secret. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9f4e7c4b0bef9de924ac4ae9d27d6fc"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::SendServerProof" ref="aa9f4e7c4b0bef9de924ac4ae9d27d6fc" args="(int conflict_idx, uint user_idx)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aa9f4e7c4b0bef9de924ac4ae9d27d6fc">SendServerProof</a> (int conflict_idx, uint user_idx)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send proof of a server's DH secret. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a8db0f441b29438988aec44f941662b28">GetExpectedBit</a> (uint slot_idx, <a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html">Accusation</a> &amp;acc, QByteArray &amp;seed)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the bit that a should be in the bit index indicated by the accusation when the given RNG seed is used to seed the RNG.  <a href="#a8db0f441b29438988aec44f941662b28"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3d1a8789f206437c6ae914578f5741a"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::PrepForNextPhase" ref="aa3d1a8789f206437c6ae914578f5741a" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aa3d1a8789f206437c6ae914578f5741a">PrepForNextPhase</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Does all the prep work for the next phase, clearing and zeroing out all the necessary fields. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4d7dd08f0cfc7527a2e025f1970f677"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::FinishPhase" ref="ab4d7dd08f0cfc7527a2e025f1970f677" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab4d7dd08f0cfc7527a2e025f1970f677">FinishPhase</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when has received all bulk data messages. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a52deba96584e7d463a7504c19f5a9804">AddBadMember</a> (int member_id)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark a single member as bad.  <a href="#a52deba96584e7d463a7504c19f5a9804"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a175dc760249508594e470cf20cf382ef">AddBadMembers</a> (const QVector&lt; int &gt; &amp;more)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a vector of faulty members to the bad members set.  <a href="#a175dc760249508594e470cf20cf382ef"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6b2999fc7e9cdacd5a4eeb24e8957832"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetRngsWithServers" ref="a6b2999fc7e9cdacd5a4eeb24e8957832" args="()" -->
+QVector&lt; QSharedPointer<br class="typebreak"/>
+&lt; <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Random</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetRngsWithServers</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fe383185cc8112fc77587a7f131fd6b"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetRngsWithUsers" ref="a7fe383185cc8112fc77587a7f131fd6b" args="()" -->
+QVector&lt; QSharedPointer<br class="typebreak"/>
+&lt; <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Random</a> &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetRngsWithUsers</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac46886e0f06a2891313ad24e9fffc165"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetUserAlibiData" ref="ac46886e0f06a2891313ad24e9fffc165" args="() const " -->
+const <a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html">AlibiData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetUserAlibiData</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac20563c6683ccae6778a1dbbc4767775"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetServerAlibiData" ref="ac20563c6683ccae6778a1dbbc4767775" args="() const " -->
+const <a class="el" href="../../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html">AlibiData</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetServerAlibiData</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a830cf3df46b58e0b16d3f0dfaa01f17a"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetPhase" ref="a830cf3df46b58e0b16d3f0dfaa01f17a" args="() const " -->
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhase</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bc3916be11a5ba7d69444b7382a17e4"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::IsServer" ref="a4bc3916be11a5ba7d69444b7382a17e4" args="() const " -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsServer</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43815f5f037b045988e3dcaeace89d19"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetNextUserPacket" ref="a43815f5f037b045988e3dcaeace89d19" args="() const " -->
+const QByteArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetNextUserPacket</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf449c16b4fe36576dee31afd659e55e"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetNextServerPacket" ref="aaf449c16b4fe36576dee31afd659e55e" args="() const " -->
+const QByteArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetNextServerPacket</b> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d0b3211e8fe812c13fde7c37d3cc91c"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ChangeState" ref="a1d0b3211e8fe812c13fde7c37d3cc91c" args="(State new_state)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a1d0b3211e8fe812c13fde7c37d3cc91c">ChangeState</a> (<a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aea67d6743a02e72abfbf725d847b3f54">State</a> new_state)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the round state and process logged messages received for this state. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Dissent "v3" Bulk. </p>
@@ -291,6 +443,500 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a52deba96584e7d463a7504c19f5a9804"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::AddBadMember" ref="a52deba96584e7d463a7504c19f5a9804" args="(int member_id)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a52deba96584e7d463a7504c19f5a9804">Dissent::Anonymity::Tolerant::TolerantBulkRound::AddBadMember</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>member_id</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Mark a single member as bad. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">faulty</td><td>member ID </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a175dc760249508594e470cf20cf382ef"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::AddBadMembers" ref="a175dc760249508594e470cf20cf382ef" args="(const QVector&lt; int &gt; &amp;more)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a175dc760249508594e470cf20cf382ef">Dissent::Anonymity::Tolerant::TolerantBulkRound::AddBadMembers</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QVector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>more</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Add a vector of faulty members to the bad members set. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>vector of faulty member IDs </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6df635eb81967ad7bc16f471659ab232"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::CheckCommits" ref="a6df635eb81967ad7bc16f471659ab232" args="(const QVector&lt; QByteArray &gt; &amp;commits, const QVector&lt; QByteArray &gt; &amp;digests, QVector&lt; int &gt; &amp;bad)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a6df635eb81967ad7bc16f471659ab232">Dissent::Anonymity::Tolerant::TolerantBulkRound::CheckCommits</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QVector&lt; QByteArray &gt; &amp;&#160;</td>
+          <td class="paramname"><em>commits</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVector&lt; QByteArray &gt; &amp;&#160;</td>
+          <td class="paramname"><em>digests</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bad</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Make sure that every message hashes to the matching commit. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">commits</td><td>to check </td></tr>
+    <tr><td class="paramname">digests</td><td>that should equal each commit </td></tr>
+    <tr><td class="paramname">output,:</td><td>list of indexes of bad commits </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1752af21af6035cebec5b2a9f1eaa404"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GeneratePadWithServer" ref="a1752af21af6035cebec5b2a9f1eaa404" args="(uint server_idx, uint length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a1752af21af6035cebec5b2a9f1eaa404">Dissent::Anonymity::Tolerant::TolerantBulkRound::GeneratePadWithServer</a> </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>server_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Generate the XOR pad that the user should generate with the specifed server. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>of the server for which to generate the pad </td></tr>
+    <tr><td class="paramname">length</td><td>of the pad (bytes) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="../../df/d22/classDissent_1_1Tests_1_1TolerantBulkRoundBadServerPad.html#a73d6d5017f4fddc4734280c98e4fb56d">Dissent::Tests::TolerantBulkRoundBadServerPad</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a684327d258bb7d506ff57aefe832baaf"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GeneratePadWithUser" ref="a684327d258bb7d506ff57aefe832baaf" args="(uint user_idx, uint length)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a684327d258bb7d506ff57aefe832baaf">Dissent::Anonymity::Tolerant::TolerantBulkRound::GeneratePadWithUser</a> </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>user_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Generate the XOR pad that the server should generate with the specifed user. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>of the user for which to generate the pad </td></tr>
+    <tr><td class="paramname">length</td><td>of the pad (bytes) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="../../dc/ddf/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserPad.html#af3f93677546b7fb13283aa249030351d">Dissent::Tests::TolerantBulkRoundBadUserPad</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af8a0176c919837c66b3afb57aca0690f"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetBlameShuffleData" ref="af8a0176c919837c66b3afb57aca0690f" args="(int max)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPair&lt; QByteArray, bool &gt; <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#af8a0176c919837c66b3afb57aca0690f">Dissent::Anonymity::Tolerant::TolerantBulkRound::GetBlameShuffleData</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the accusation for sending in the shuffle round. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>maximum amount of bytes to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the accusation and false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8db0f441b29438988aec44f941662b28"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetExpectedBit" ref="a8db0f441b29438988aec44f941662b28" args="(uint slot_idx, Accusation &amp;acc, QByteArray &amp;seed)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a8db0f441b29438988aec44f941662b28">Dissent::Anonymity::Tolerant::TolerantBulkRound::GetExpectedBit</a> </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>slot_idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html">Accusation</a> &amp;&#160;</td>
+          <td class="paramname"><em>acc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>seed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the bit that a should be in the bit index indicated by the accusation when the given RNG seed is used to seed the RNG. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">the</td><td>slot in which the bit was generated </td></tr>
+    <tr><td class="paramname">accusation</td><td>indicating the bit to test </td></tr>
+    <tr><td class="paramname">the</td><td>byte with which to seed the RNG </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a6ea891d4d7ace05e0312c10f035f33aa"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::GetKeyShuffleData" ref="a6ea891d4d7ace05e0312c10f035f33aa" args="(int max)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPair&lt; QByteArray, bool &gt; <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a6ea891d4d7ace05e0312c10f035f33aa">Dissent::Anonymity::Tolerant::TolerantBulkRound::GetKeyShuffleData</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em></td><td>)</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the signing key for sending in the shuffle round. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">max</td><td>maximum amount of bytes to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the descriptor and false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4c57ddd50054723be5f4044df16a6299"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleServerAlibiData" ref="a4c57ddd50054723be5f4044df16a6299" args="(QDataStream &amp;stream, const Id &amp;from)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4c57ddd50054723be5f4044df16a6299">Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleServerAlibiData</a> </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parses and handles server alibi data messages in blame process. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
+    <tr><td class="paramname">from</td><td>the sender </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae3a22fa09b5630394f0668f008c26bda"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleServerBulkData" ref="ae3a22fa09b5630394f0668f008c26bda" args="(const QByteArray &amp;packet, QDataStream &amp;stream, const Id &amp;from)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ae3a22fa09b5630394f0668f008c26bda">Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleServerBulkData</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parses and handles bulk data messages from servers. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">verified</td><td>packet contents (including headers) </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
+    <tr><td class="paramname">from</td><td>the sender </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a80ceea58935d3dcd5b3785bf15b5dfde"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleServerProofData" ref="a80ceea58935d3dcd5b3785bf15b5dfde" args="(QDataStream &amp;stream, const Id &amp;from)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a80ceea58935d3dcd5b3785bf15b5dfde">Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleServerProofData</a> </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parses and handles proof messages from servers. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
+    <tr><td class="paramname">from</td><td>the sender </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a4fb49e080e6f3fad03d714e634dc53ef"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleUserAlibiData" ref="a4fb49e080e6f3fad03d714e634dc53ef" args="(QDataStream &amp;stream, const Id &amp;from)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4fb49e080e6f3fad03d714e634dc53ef">Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleUserAlibiData</a> </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parses and handles user alibi data messages in blame process. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
+    <tr><td class="paramname">from</td><td>the sender </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab05a7fbf47148a11f139903f9555f349"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleUserBulkData" ref="ab05a7fbf47148a11f139903f9555f349" args="(const QByteArray &amp;packet, QDataStream &amp;stream, const Id &amp;from)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab05a7fbf47148a11f139903f9555f349">Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleUserBulkData</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>packet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parses and handles bulk data messages from users. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">verified</td><td>packet contents (including headers) </td></tr>
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
+    <tr><td class="paramname">from</td><td>the sender </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab4d52d21eda778775f1548e4ba772c8e"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleUserProofData" ref="ab4d52d21eda778775f1548e4ba772c8e" args="(QDataStream &amp;stream, const Id &amp;from)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab4d52d21eda778775f1548e4ba772c8e">Dissent::Anonymity::Tolerant::TolerantBulkRound::HandleUserProofData</a> </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parses and handles proof messages in blame process. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
+    <tr><td class="paramname">from</td><td>the sender </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a93b9ff35e6c036752804a844337af031"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::IncomingData" ref="a93b9ff35e6c036752804a844337af031" args="(RpcRequest &amp;notification)" -->
 <div class="memitem">
 <div class="memproto">
@@ -343,6 +989,202 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aac4ffe37a332fd2baf28bd33ae8c8c2e"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::PeerJoined" ref="aac4ffe37a332fd2baf28bd33ae8c8c2e" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aac4ffe37a332fd2baf28bd33ae8c8c2e">Dissent::Anonymity::Tolerant::TolerantBulkRound::PeerJoined</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Notifies the round that a new peer has joined the session. </p>
+<p>This causes a tolerant round to stop after the next phase. </p>
+
+<p>Reimplemented from <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a41b5c54d6f3105be8ce1967d7af92951">Dissent::Anonymity::Round</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac3f1838f80d82ee669c1e93d0dbd0ff7"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ProcessData" ref="ac3f1838f80d82ee669c1e93d0dbd0ff7" args="(const QByteArray &amp;data, const Id &amp;from)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ac3f1838f80d82ee669c1e93d0dbd0ff7">Dissent::Anonymity::Tolerant::TolerantBulkRound::ProcessData</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>If data is from a legitimate group member, it is processed. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Incoming data </td></tr>
+    <tr><td class="paramname">from</td><td>the remote peer sending the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a161162ec07e1e8f4330a076901fb8596">Dissent::Anonymity::Round</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a653d16db8e62aa0dd3942c1e6762542c"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ProcessDataBase" ref="a653d16db8e62aa0dd3942c1e6762542c" args="(const QByteArray &amp;data, const Id &amp;from)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a653d16db8e62aa0dd3942c1e6762542c">Dissent::Anonymity::Tolerant::TolerantBulkRound::ProcessDataBase</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This function does the hard work of processing data packets and throws exceptions for invalid data packets. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>Incoming data </td></tr>
+    <tr><td class="paramname">from</td><td>sending peer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a991fefdd30e8a81dcac3d2ae41ad35f8"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::ProcessMessage" ref="a991fefdd30e8a81dcac3d2ae41ad35f8" args="(const QByteArray &amp;cleartext, uint member_idx)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a991fefdd30e8a81dcac3d2ae41ad35f8">Dissent::Anonymity::Tolerant::TolerantBulkRound::ProcessMessage</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>cleartext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>member_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parse the clear text message returning back the entry if the contents are valid. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cleartext</td><td>the entire cleartext array </td></tr>
+    <tr><td class="paramname">member_idx</td><td>the anonymous owners index </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the cleartext message </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab746522b08f93885fc53ea22b3473e95"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::SearchForEvidence" ref="ab746522b08f93885fc53ea22b3473e95" args="(const QByteArray &amp;sent_msg, const QByteArray &amp;recvd_msg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab746522b08f93885fc53ea22b3473e95">Dissent::Anonymity::Tolerant::TolerantBulkRound::SearchForEvidence</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>sent_msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>recvd_msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Check if any bits in sent_msg were changed from zero to one in transmission Returns true if blame evidence was found. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>originally sent </td></tr>
+    <tr><td class="paramname">corrupted</td><td>message received </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a07eb4b16ea3d993214d8b92ac9d78507"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::SignMessage" ref="a07eb4b16ea3d993214d8b92ac9d78507" args="(const QByteArray &amp;cleartext)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a07eb4b16ea3d993214d8b92ac9d78507">Dissent::Anonymity::Tolerant::TolerantBulkRound::SignMessage</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>cleartext</em></td><td>)</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Wrapper for anonymous signing functionality. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cleartext</td><td>message to sign </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>the signature </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../de/d15/classDissent_1_1Tests_1_1TolerantBulkRoundBadCleartextSigner.html#ac416bf0c724eeccedbf4923409ebb769">Dissent::Tests::TolerantBulkRoundBadCleartextSigner</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7f9792f3290fa01bb574aad7d028acf0"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantBulkRound::StateToString" ref="a7f9792f3290fa01bb574aad7d028acf0" args="(State st)" -->
 <div class="memitem">
 <div class="memproto">
@@ -390,7 +1232,7 @@ Static Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 13 2012 16:20:24 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 14 2012 00:27:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
