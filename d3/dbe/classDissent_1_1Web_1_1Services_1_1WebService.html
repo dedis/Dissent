@@ -119,13 +119,13 @@ Inheritance diagram for Dissent::Web::Services::WebService:</div>
  <div class="center">
   <img src="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.png" usemap="#Dissent::Web::Services::WebService_map" alt=""/>
   <map id="Dissent::Web::Services::WebService_map" name="Dissent::Web::Services::WebService_map">
-<area href="../../de/d5b/classDissent_1_1Web_1_1Services_1_1MessageWebService.html" title="A WebService that can handle messages incoming from an anonymity Session object." alt="Dissent::Web::Services::MessageWebService" shape="rect" coords="147,56,432,80"/>
-<area href="../../d3/d84/classDissent_1_1Web_1_1Services_1_1SessionWebService.html" title="A WebService that has access to the anonymity Session object." alt="Dissent::Web::Services::SessionWebService" shape="rect" coords="885,56,1170,80"/>
-<area href="../../d1/d45/classDissent_1_1Web_1_1Services_1_1GetMessagesService.html" title="Web service for getting the WebServer message cache." alt="Dissent::Web::Services::GetMessagesService" shape="rect" coords="0,112,285,136"/>
-<area href="../../d6/d95/classDissent_1_1Web_1_1Services_1_1GetNextMessageService.html" title="WebService for getting the next available message from an Anonymity Session." alt="Dissent::Web::Services::GetNextMessageService" shape="rect" coords="295,112,580,136"/>
-<area href="../../d2/d7d/classDissent_1_1Web_1_1Services_1_1RoundIdService.html" title="WebService that returns the ID of the current anonymity session round." alt="Dissent::Web::Services::RoundIdService" shape="rect" coords="590,112,875,136"/>
-<area href="../../df/d41/classDissent_1_1Web_1_1Services_1_1SendMessageService.html" title="WebService for posting a message to the session." alt="Dissent::Web::Services::SendMessageService" shape="rect" coords="885,112,1170,136"/>
-<area href="../../d4/df9/classDissent_1_1Web_1_1Services_1_1SessionIdService.html" title="WebService for returning the ID of the current anonymity session." alt="Dissent::Web::Services::SessionIdService" shape="rect" coords="1180,112,1465,136"/>
+<area href="../../dd/d35/classDissent_1_1Web_1_1Services_1_1GetFileService.html" alt="Dissent::Web::Services::GetFileService" shape="rect" coords="0,56,270,80"/>
+<area href="../../de/d5b/classDissent_1_1Web_1_1Services_1_1MessageWebService.html" title="A WebService that can handle messages incoming from an anonymity Session object." alt="Dissent::Web::Services::MessageWebService" shape="rect" coords="280,56,550,80"/>
+<area href="../../d3/d84/classDissent_1_1Web_1_1Services_1_1SessionWebService.html" title="A WebService that has access to the anonymity Session object." alt="Dissent::Web::Services::SessionWebService" shape="rect" coords="840,56,1110,80"/>
+<area href="../../d1/d45/classDissent_1_1Web_1_1Services_1_1GetMessagesService.html" title="Web service for getting the WebServer target messages from message cache." alt="Dissent::Web::Services::GetMessagesService" shape="rect" coords="280,112,550,136"/>
+<area href="../../d2/d7d/classDissent_1_1Web_1_1Services_1_1RoundIdService.html" title="WebService that returns the ID of the current anonymity session round." alt="Dissent::Web::Services::RoundIdService" shape="rect" coords="560,112,830,136"/>
+<area href="../../df/d41/classDissent_1_1Web_1_1Services_1_1SendMessageService.html" title="WebService for posting a message to the session." alt="Dissent::Web::Services::SendMessageService" shape="rect" coords="840,112,1110,136"/>
+<area href="../../d4/df9/classDissent_1_1Web_1_1Services_1_1SessionIdService.html" title="WebService for returning the ID of the current anonymity session." alt="Dissent::Web::Services::SessionIdService" shape="rect" coords="1120,112,1390,136"/>
 </map>
  </div></div>
 
@@ -140,8 +140,8 @@ Signals</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45ffac37f42f33969f2b751ba65bfa2c"></a><!-- doxytag: member="Dissent::Web::Services::WebService::WebServiceCalled" ref="a45ffac37f42f33969f2b751ba65bfa2c" args="(QSharedPointer&lt; WebRequest &gt; wrp)" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#a45ffac37f42f33969f2b751ba65bfa2c">WebServiceCalled</a> (QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt; wrp)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">emitted internally when someone has called <a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#af8a129ad7db7e43ed4c2df5547d75e30" title="The method used to wrap the Web Service implementation&#39;s Handle method.">Call()</a> on this service <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#a9d5d2e25233c70364bd5cacf6bf99d6e">FinishedWebRequest</a> (QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt; wrp)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when a web request has been processed and is ready for the server to pick it up.  <a href="#a9d5d2e25233c70364bd5cacf6bf99d6e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#a3f215f6178f06fd2f22ae767374757f8">FinishedWebRequest</a> (QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt; wrp, bool format)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when a web request has been processed and is ready for the server to pick it up.  <a href="#a3f215f6178f06fd2f22ae767374757f8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2931371aa9c38bc192bae62b5b639f4"></a><!-- doxytag: member="Dissent::Web::Services::WebService::WebService" ref="ae2931371aa9c38bc192bae62b5b639f4" args="()" -->
@@ -178,16 +178,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9d5d2e25233c70364bd5cacf6bf99d6e"></a><!-- doxytag: member="Dissent::Web::Services::WebService::FinishedWebRequest" ref="a9d5d2e25233c70364bd5cacf6bf99d6e" args="(QSharedPointer&lt; WebRequest &gt; wrp)" -->
+<a class="anchor" id="a3f215f6178f06fd2f22ae767374757f8"></a><!-- doxytag: member="Dissent::Web::Services::WebService::FinishedWebRequest" ref="a3f215f6178f06fd2f22ae767374757f8" args="(QSharedPointer&lt; WebRequest &gt; wrp, bool format)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#a9d5d2e25233c70364bd5cacf6bf99d6e">Dissent::Web::Services::WebService::FinishedWebRequest</a> </td>
+          <td class="memname">void <a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#a3f215f6178f06fd2f22ae767374757f8">Dissent::Web::Services::WebService::FinishedWebRequest</a> </td>
           <td>(</td>
           <td class="paramtype">QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt;&#160;</td>
-          <td class="paramname"><em>wrp</em></td><td>)</td>
-          <td><code> [signal]</code></td>
+          <td class="paramname"><em>wrp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [signal]</code></td>
         </tr>
       </table>
 </div>
@@ -196,7 +206,8 @@ Public Member Functions</h2></td></tr>
 <p>Emitted when a web request has been processed and is ready for the server to pick it up. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">pointer</td><td>to the Web request. </td></tr>
+    <tr><td class="paramname">wrp</td><td>pointer to the Web request. </td></tr>
+    <tr><td class="paramname">format</td><td>whether to package using default packager (true) or leave as raw </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,7 +236,7 @@ Public Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 17 2012 23:08:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 18 2012 16:26:34 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -124,8 +124,8 @@ typedef <br class="typebreak"/>
 <a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html">Dissent::Web::Services::WebService</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WebService</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#af0407d4745c5b918619300e5468854a3">HandleFinishedWebRequest</a> (QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt; wrp)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a WebService finishes processing a <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html" title="WebRequest holds all of the data that a web service needs to process a request and return a response ...">WebRequest</a>.  <a href="#af0407d4745c5b918619300e5468854a3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a9357e3bbc2cc8dcdbe112a698af357f7">HandleFinishedWebRequest</a> (QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt; wrp, bool format)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a WebService finishes processing a <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html" title="WebRequest holds all of the data that a web service needs to process a request and return a response ...">WebRequest</a>.  <a href="#a9357e3bbc2cc8dcdbe112a698af357f7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a919264722e85dfdd785dd448913f3106"></a><!-- doxytag: member="Dissent::Web::WebServer::Stop" ref="a919264722e85dfdd785dd448913f3106" args="()" -->
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a919264722e85dfdd785dd448913f3106">Stop</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the web server. <br/></td></tr>
@@ -260,16 +260,26 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 </div>
 </div>
-<a class="anchor" id="af0407d4745c5b918619300e5468854a3"></a><!-- doxytag: member="Dissent::Web::WebServer::HandleFinishedWebRequest" ref="af0407d4745c5b918619300e5468854a3" args="(QSharedPointer&lt; WebRequest &gt; wrp)" -->
+<a class="anchor" id="a9357e3bbc2cc8dcdbe112a698af357f7"></a><!-- doxytag: member="Dissent::Web::WebServer::HandleFinishedWebRequest" ref="a9357e3bbc2cc8dcdbe112a698af357f7" args="(QSharedPointer&lt; WebRequest &gt; wrp, bool format)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#af0407d4745c5b918619300e5468854a3">Dissent::Web::WebServer::HandleFinishedWebRequest</a> </td>
+          <td class="memname">void <a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a9357e3bbc2cc8dcdbe112a698af357f7">Dissent::Web::WebServer::HandleFinishedWebRequest</a> </td>
           <td>(</td>
           <td class="paramtype">QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt;&#160;</td>
-          <td class="paramname"><em>wrp</em></td><td>)</td>
-          <td><code> [slot]</code></td>
+          <td class="paramname"><em>wrp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>format</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [slot]</code></td>
         </tr>
       </table>
 </div>
@@ -279,7 +289,8 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 <p>This slot serializes the request, writes it out to the socket, and cleans up the memory. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">the</td><td>web request finished being handled </td></tr>
+    <tr><td class="paramname">wrp</td><td>the web request finished being handled </td></tr>
+    <tr><td class="paramname">format</td><td>whether to package using default packager (true) or leave as raw </td></tr>
   </table>
   </dd>
 </dl>
@@ -369,7 +380,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 17 2012 23:08:40 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jan 18 2012 16:26:34 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
