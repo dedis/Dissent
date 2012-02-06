@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['basehash',['BaseHash',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#a442a9d04eebd69846abb6662426ebcee',1,'Dissent::PeerReview::EntryLog']]],
   ['basicgossip',['BasicGossip',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html',1,'Dissent::Overlay']]],
   ['basicgossip',['BasicGossip',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a251a3489337c0814d01698879710434c',1,'Dissent::Overlay::BasicGossip']]],
   ['bit_5fpair',['bit_pair',['../d1/d57/structDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix_1_1bit__pair.html',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],
@@ -18,8 +19,8 @@ var searchData=
   ['bufferaddress',['BufferAddress',['../d5/d7f/classDissent_1_1Transports_1_1BufferAddress.html',1,'Dissent::Transports']]],
   ['bufferaddress',['BufferAddress',['../d5/d7f/classDissent_1_1Transports_1_1BufferAddress.html#ae4bc53c5fec855f75d1841b46d6fce2d',1,'Dissent::Transports::BufferAddress']]],
   ['bufferaddressdata',['BufferAddressData',['../d5/d4e/classDissent_1_1Transports_1_1BufferAddressData.html',1,'Dissent::Transports']]],
-  ['bufferedge',['BufferEdge',['../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html#a612b6682aebc467fca3f8f440848e110',1,'Dissent::Transports::BufferEdge']]],
   ['bufferedge',['BufferEdge',['../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html',1,'Dissent::Transports']]],
+  ['bufferedge',['BufferEdge',['../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html#a612b6682aebc467fca3f8f440848e110',1,'Dissent::Transports::BufferEdge']]],
   ['bufferedgelistener',['BufferEdgeListener',['../d1/da5/classDissent_1_1Transports_1_1BufferEdgeListener.html',1,'Dissent::Transports']]],
   ['buffersink',['BufferSink',['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html',1,'Dissent::Messaging']]],
   ['buffersinkwithsignal',['BufferSinkWithSignal',['../da/d1e/classDissent_1_1Messaging_1_1BufferSinkWithSignal.html',1,'Dissent::Messaging']]],

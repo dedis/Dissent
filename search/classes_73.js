@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['sendentry',['SendEntry',['../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html',1,'Dissent::PeerReview']]],
   ['sendmessageservice',['SendMessageService',['../df/d41/classDissent_1_1Web_1_1Services_1_1SendMessageService.html',1,'Dissent::Web::Services']]],
   ['serialization',['Serialization',['../de/d19/classDissent_1_1Utils_1_1Serialization.html',1,'Dissent::Utils']]],
   ['session',['Session',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html',1,'Dissent::Anonymity']]],

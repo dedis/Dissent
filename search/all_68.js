@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['handleacknowledgement',['HandleAcknowledgement',['../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#ae847ec5c6441e03e2eab9805cb4a954d',1,'Dissent::PeerReview::PRManager']]],
   ['handleaggregatedbulkdata',['HandleAggregatedBulkData',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a32354b11e669b9478a198f4c2a8d16e6',1,'Dissent::Anonymity::BulkRound']]],
   ['handleblame',['HandleBlame',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aba8d28ae6e469a03c5079877af0fc08a',1,'Dissent::Anonymity::ShuffleRound']]],
   ['handleblameverification',['HandleBlameVerification',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad59b391a7451c690be9be1b434ba2ff8',1,'Dissent::Anonymity::ShuffleRound']]],

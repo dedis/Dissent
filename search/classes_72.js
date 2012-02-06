@@ -1,6 +1,7 @@
 var searchData=
 [
   ['random',['Random',['../de/dad/classDissent_1_1Utils_1_1Random.html',1,'Dissent::Utils']]],
+  ['receiveentry',['ReceiveEntry',['../d5/da8/classDissent_1_1PeerReview_1_1ReceiveEntry.html',1,'Dissent::PeerReview']]],
   ['relayaddress',['RelayAddress',['../d4/d21/classDissent_1_1Connections_1_1RelayAddress.html',1,'Dissent::Connections']]],
   ['relayaddressdata',['RelayAddressData',['../dd/df9/classDissent_1_1Connections_1_1RelayAddressData.html',1,'Dissent::Connections']]],
   ['relayedge',['RelayEdge',['../dd/d54/classDissent_1_1Connections_1_1RelayEdge.html',1,'Dissent::Connections']]],
