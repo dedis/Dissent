@@ -100,15 +100,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Overlay::BasicGossip Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<!-- doxytag: class="Dissent::Overlay::BasicGossip" --><!-- doxytag: inherits="Dissent::Utils::StartStopSlots" -->
+<!-- doxytag: class="Dissent::Overlay::BasicGossip" --><!-- doxytag: inherits="Dissent::Overlay::BaseOverlay" -->
 <p>A single member in a Gossip overlay, which attempts to connect all nodes in the overlay to every other node, a fully connected graph.  
  <a href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#details">More...</a></p>
 
@@ -119,46 +117,14 @@ Inheritance diagram for Dissent::Overlay::BasicGossip:</div>
  <div class="center">
   <img src="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.png" usemap="#Dissent::Overlay::BasicGossip_map" alt=""/>
   <map id="Dissent::Overlay::BasicGossip_map" name="Dissent::Overlay::BasicGossip_map">
-<area href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStopSlots" shape="rect" coords="0,56,180,80"/>
-<area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="0,0,180,24"/>
+<area href="../../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html" title="A template for constructing an overlay node." alt="Dissent::Overlay::BaseOverlay" shape="rect" coords="0,112,185,136"/>
+<area href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStopSlots" shape="rect" coords="0,56,185,80"/>
+<area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="0,0,185,24"/>
 </map>
  </div></div>
 
 <p><a href="../../db/d97/classDissent_1_1Overlay_1_1BasicGossip-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72c8205ff0881ad45547315c7f4b260c"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Connection" ref="a72c8205ff0881ad45547315c7f4b260c" args="" -->
-typedef <br class="typebreak"/>
-<a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Dissent::Connections::Connection</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Connection</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a44a8219a706d60336be66704f219b59d"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::ConnectionManager" ref="a44a8219a706d60336be66704f219b59d" args="" -->
-typedef <br class="typebreak"/>
-<a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html">Dissent::Connections::ConnectionManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ConnectionManager</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06575a7a2e5793efdce2d63cdfccb7e0"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::ConnectionTable" ref="a06575a7a2e5793efdce2d63cdfccb7e0" args="" -->
-typedef <br class="typebreak"/>
-<a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html">Dissent::Connections::ConnectionTable</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ConnectionTable</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a074540a3d43297b8240c6b03cce825a4"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::ConnectionAcquirer" ref="a074540a3d43297b8240c6b03cce825a4" args="" -->
-typedef <br class="typebreak"/>
-<a class="el" href="../../d5/dad/classDissent_1_1Connections_1_1ConnectionAcquirer.html">Dissent::Connections::ConnectionAcquirer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ConnectionAcquirer</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e145907dd3bf1235cc9e2d2064f1079"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Id" ref="a0e145907dd3bf1235cc9e2d2064f1079" args="" -->
-typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Dissent::Connections::Id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bb1e6168addd67828d2da3aa5f26367"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::RpcHandler" ref="a8bb1e6168addd67828d2da3aa5f26367" args="" -->
-typedef <br class="typebreak"/>
-<a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html">Dissent::Messaging::RpcHandler</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RpcHandler</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91f1045a328263dc37e5d6ad50d6cff3"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Address" ref="a91f1045a328263dc37e5d6ad50d6cff3" args="" -->
-typedef <br class="typebreak"/>
-<a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Dissent::Transports::Address</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Address</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1244d31fc4f1edaf01b820b9bb90989"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::EdgeListener" ref="aa1244d31fc4f1edaf01b820b9bb90989" args="" -->
-typedef <br class="typebreak"/>
-<a class="el" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html">Dissent::Transports::EdgeListener</a>&#160;</td><td class="memItemRight" valign="bottom"><b>EdgeListener</b></td></tr>
-<tr><td colspan="2"><h2><a name="signals"></a>
-Signals</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74008b2a0f22b4b2c9645a1dcc099486"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Disconnected" ref="a74008b2a0f22b4b2c9645a1dcc099486" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a74008b2a0f22b4b2c9645a1dcc099486">Disconnected</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when disconnected. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4646e4fe620f1257ed0218a96e987ed8"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::Disconnecting" ref="a4646e4fe620f1257ed0218a96e987ed8" args="()" -->
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a4646e4fe620f1257ed0218a96e987ed8">Disconnecting</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when disconnecting. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a251a3489337c0814d01698879710434c">BasicGossip</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;local_id, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;local_endpoints, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;remote_endpoints)</td></tr>
@@ -166,27 +132,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1e09dae48c9b05b4d0339c3c70b80ec"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::~BasicGossip" ref="ae1e09dae48c9b05b4d0339c3c70b80ec" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#ae1e09dae48c9b05b4d0339c3c70b80ec">~BasicGossip</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82eca1d11c0e9f48d47822571cb10460"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::NeedConnection" ref="a82eca1d11c0e9f48d47822571cb10460" args="()" -->
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a82eca1d11c0e9f48d47822571cb10460">NeedConnection</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the system needs to reinit bootstrap. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a042ef26b638119987aa331a51c4f11bf"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::GetRpcHandler" ref="a042ef26b638119987aa331a51c4f11bf" args="()" -->
-<a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html">RpcHandler</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a042ef26b638119987aa331a51c4f11bf">GetRpcHandler</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the RpcHandler for the member. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dc361be9d2821e333ee873e919afb49"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::GetConnectionTable" ref="a8dc361be9d2821e333ee873e919afb49" args="()" -->
-<a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html">ConnectionTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a8dc361be9d2821e333ee873e919afb49">GetConnectionTable</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ConnectionTable associated with outbound connections. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab974299cd0d8fc0662edcb83165495fb"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::GetConnectionManager" ref="ab974299cd0d8fc0662edcb83165495fb" args="()" -->
-<a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html">ConnectionManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#ab974299cd0d8fc0662edcb83165495fb">GetConnectionManager</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the connection underlying connection manager. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a51f5f31bbd96b1b126f64d70b783140d"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::GetId" ref="a51f5f31bbd96b1b126f64d70b783140d" args="()" -->
-<a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a51f5f31bbd96b1b126f64d70b783140d">GetId</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nodes Id. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afbac2e3629ee757125efbbad352728a7"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::OnStart" ref="afbac2e3629ee757125efbbad352728a7" args="()" -->
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStart</b> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b14dcf8b3c53fe291c4da43bf180971"></a><!-- doxytag: member="Dissent::Overlay::BasicGossip::OnStop" ref="a2b14dcf8b3c53fe291c4da43bf180971" args="()" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A single member in a Gossip overlay, which attempts to connect all nodes in the overlay to every other node, a fully connected graph. </p>
@@ -256,7 +205,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 8 2012 11:49:17 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 8 2012 13:21:39 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

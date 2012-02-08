@@ -119,6 +119,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>SubgroupPolicy</b> { <b>CompleteGroup</b> =  0, 
 <b>FixedSubgroup</b> =  1, 
+<b>ManagedSubgroup</b> =  2, 
 <b>DisabledGroup</b> =  255
  }</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c3ae41be1db8ae012b569699e1f2036"></a><!-- doxytag: member="Dissent::Anonymity::Group::AsymmetricKey" ref="a6c3ae41be1db8ae012b569699e1f2036" args="" -->
@@ -136,16 +137,16 @@ Public Member Functions</h2></td></tr>
 const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const </td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a81cad2a121d986627bfc21ab4b9d9a"></a><!-- doxytag: member="Dissent::Anonymity::Group::end" ref="a4a81cad2a121d986627bfc21ab4b9d9a" args="() const " -->
 const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const </td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a1c15d2df6ffd4799b777c47a0c4232fd">Group</a> (const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;roster, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;leader=Id::Zero(), SubgroupPolicy subgroup_policy=CompleteGroup)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a1c15d2df6ffd4799b777c47a0c4232fd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#ae99e1dca40ed6c3c63ca007e783ca82b">Group</a> (const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;roster, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;leader=Id::Zero(), SubgroupPolicy subgroup_policy=CompleteGroup, const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;subgroup=QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt;())</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae99e1dca40ed6c3c63ca007e783ca82b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad4e0dd71856ac65a253a6266aab9614a"></a><!-- doxytag: member="Dissent::Anonymity::Group::Group" ref="ad4e0dd71856ac65a253a6266aab9614a" args="()" -->
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#ad4e0dd71856ac65a253a6266aab9614a">Group</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty group. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a539abd22a28c21f29f94643c95f92956"></a><!-- doxytag: member="Dissent::Anonymity::Group::GetRoster" ref="a539abd22a28c21f29f94643c95f92956" args="() const " -->
 const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a539abd22a28c21f29f94643c95f92956">GetRoster</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal roster. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd9e6984c9d116cc0776cb17d2f9af00"></a><!-- doxytag: member="Dissent::Anonymity::Group::GetSubgroup" ref="afd9e6984c9d116cc0776cb17d2f9af00" args="() const " -->
-const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#afd9e6984c9d116cc0776cb17d2f9af00">GetSubgroup</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a779bdfb27d3ca49cd03dd5120e343c9d"></a><!-- doxytag: member="Dissent::Anonymity::Group::GetSubgroup" ref="a779bdfb27d3ca49cd03dd5120e343c9d" args="() const " -->
+const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a779bdfb27d3ca49cd03dd5120e343c9d">GetSubgroup</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inner subgroup. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2fa29f095d41c5d08f2372e313ba95cf"></a><!-- doxytag: member="Dissent::Anonymity::Group::GetSubgroupPolicy" ref="a2fa29f095d41c5d08f2372e313ba95cf" args="() const " -->
 SubgroupPolicy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a2fa29f095d41c5d08f2372e313ba95cf">GetSubgroupPolicy</a> () const </td></tr>
@@ -194,12 +195,12 @@ static const QSharedPointer<br class="typebreak"/>
 <div class="textblock"><p>Members of an anonymity session sorted in ascending order. </p>
 <p>Contains all the components attributed to another member in the anonymity group. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a1c15d2df6ffd4799b777c47a0c4232fd"></a><!-- doxytag: member="Dissent::Anonymity::Group::Group" ref="a1c15d2df6ffd4799b777c47a0c4232fd" args="(const QVector&lt; GroupContainer &gt; &amp;roster, const Id &amp;leader=Id::Zero(), SubgroupPolicy subgroup_policy=CompleteGroup)" -->
+<a class="anchor" id="ae99e1dca40ed6c3c63ca007e783ca82b"></a><!-- doxytag: member="Dissent::Anonymity::Group::Group" ref="ae99e1dca40ed6c3c63ca007e783ca82b" args="(const QVector&lt; GroupContainer &gt; &amp;roster, const Id &amp;leader=Id::Zero(), SubgroupPolicy subgroup_policy=CompleteGroup, const QVector&lt; GroupContainer &gt; &amp;subgroup=QVector&lt; GroupContainer &gt;())" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a1c15d2df6ffd4799b777c47a0c4232fd">Dissent::Anonymity::Group::Group</a> </td>
+          <td class="memname"><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#ae99e1dca40ed6c3c63ca007e783ca82b">Dissent::Anonymity::Group::Group</a> </td>
           <td>(</td>
           <td class="paramtype">const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>roster</em>, </td>
@@ -214,7 +215,13 @@ static const QSharedPointer<br class="typebreak"/>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">SubgroupPolicy&#160;</td>
-          <td class="paramname"><em>subgroup_policy</em> = <code>CompleteGroup</code>&#160;</td>
+          <td class="paramname"><em>subgroup_policy</em> = <code>CompleteGroup</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVector&lt; <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>subgroup</em> = <code>QVector&lt;<a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">GroupContainer</a>&gt;()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -485,7 +492,7 @@ static const QSharedPointer<br class="typebreak"/>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 8 2012 11:49:15 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 8 2012 13:21:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

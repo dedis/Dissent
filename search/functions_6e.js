@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['needconnection',['NeedConnection',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a82eca1d11c0e9f48d47822571cb10460',1,'Dissent::Overlay::BasicGossip']]],
   ['newconnection',['NewConnection',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a7abadae1650c5faeb88577a33d839e0e',1,'Dissent::Connections::ConnectionManager']]],
   ['newedge',['NewEdge',['../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html#a0f0298098f4675994c51a26b95096f4b',1,'Dissent::Transports::EdgeListener']]],
   ['next',['Next',['../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#adbad197b6ab8caec5b24948f66f7ba07',1,'Dissent::Anonymity::Group']]],

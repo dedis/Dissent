@@ -1,6 +1,7 @@
 var searchData=
 [
   ['basehash',['BaseHash',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#a442a9d04eebd69846abb6662426ebcee',1,'Dissent::PeerReview::EntryLog']]],
+  ['baseoverlay',['BaseOverlay',['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#a9b1c4539a20534f9fd1ace6be40d9a01',1,'Dissent::Overlay::BaseOverlay']]],
   ['basicgossip',['BasicGossip',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a251a3489337c0814d01698879710434c',1,'Dissent::Overlay::BasicGossip']]],
   ['blamematrix',['BlameMatrix',['../d9/dad/classDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix.html#adfebbccbae77ce7c3ed73c84b9acf0ec',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],
   ['blameround',['BlameRound',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ace6f8b416dc6baf1cb017d0c6f37c09e',1,'Dissent::Anonymity::ShuffleRound::BlameRound()'],['../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a2b01ce0a86eee55d6f4d5e0d2bacd887',1,'Dissent::Anonymity::ShuffleRoundBlame::BlameRound()']]],

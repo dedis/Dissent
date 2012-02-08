@@ -1,6 +1,7 @@
 var searchData=
 [
   ['_7easymmetrickey',['~AsymmetricKey',['../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#a2cf3af2a405666fbf0f72675a2024b20',1,'Dissent::Crypto::AsymmetricKey']]],
+  ['_7ebaseoverlay',['~BaseOverlay',['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#a5a3a5f137160106beffd80e3b98172d2',1,'Dissent::Overlay::BaseOverlay']]],
   ['_7ebasicgossip',['~BasicGossip',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#ae1e09dae48c9b05b4d0339c3c70b80ec',1,'Dissent::Overlay::BasicGossip']]],
   ['_7ebootstrapper',['~Bootstrapper',['../d0/db3/classDissent_1_1Connections_1_1Bootstrapper.html#a0785f044c8b415868f376cdbf2b81329',1,'Dissent::Connections::Bootstrapper']]],
   ['_7ebufferaddress',['~BufferAddress',['../d5/d7f/classDissent_1_1Transports_1_1BufferAddress.html#a26d314072ee4ed77bf91bae00dd090b8',1,'Dissent::Transports::BufferAddress']]],
