@@ -137,11 +137,9 @@ var searchData=
   ['gettype',['GetType',['../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html#af51298d71c38df4a97003b6c22b7dc2c',1,'Dissent::PeerReview::Entry']]],
   ['geturl',['GetUrl',['../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html#ac62c2bc5dafaad58167734f76cdac953',1,'Dissent::Web::HttpRequest']]],
   ['getuseroutputbit',['GetUserOutputBit',['../d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#a51244bee740568bef08ed5336a49bc62',1,'Dissent::Anonymity::Tolerant::MessageHistory']]],
-  ['group',['Group',['../d4/d0d/classDissent_1_1Anonymity_1_1Group.html',1,'Dissent::Anonymity']]],
   ['group',['Group',['../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#a1c15d2df6ffd4799b777c47a0c4232fd',1,'Dissent::Anonymity::Group::Group(const QVector&lt; GroupContainer &gt; &amp;roster, const Id &amp;leader=Id::Zero(), SubgroupPolicy subgroup_policy=CompleteGroup)'],['../d4/d0d/classDissent_1_1Anonymity_1_1Group.html#ad4e0dd71856ac65a253a6266aab9614a',1,'Dissent::Anonymity::Group::Group()']]],
-  ['groupdata',['GroupData',['../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html',1,'Dissent::Anonymity']]],
+  ['group',['Group',['../d4/d0d/classDissent_1_1Anonymity_1_1Group.html',1,'Dissent::Anonymity']]],
   ['groupdata',['GroupData',['../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html#a6dc58cff097a5504505c5bd512bb5c42',1,'Dissent::Anonymity::GroupData']]],
-  ['groupgenerator',['GroupGenerator',['../d8/d81/classDissent_1_1Anonymity_1_1GroupGenerator.html',1,'Dissent::Anonymity']]],
-  ['groupgenerator',['GroupGenerator',['../d8/d81/classDissent_1_1Anonymity_1_1GroupGenerator.html#acb736a08589ffbef4bc90aaafebf9ebf',1,'Dissent::Anonymity::GroupGenerator']]],
+  ['groupdata',['GroupData',['../d2/d80/classDissent_1_1Anonymity_1_1GroupData.html',1,'Dissent::Anonymity']]],
   ['groupsize',['GroupSize',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#aa8632d09cf0234707629e2bf168ecb04',1,'Dissent::Applications::Settings']]]
 ];
