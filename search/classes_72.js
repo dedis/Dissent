@@ -13,6 +13,7 @@ var searchData=
   ['rpchandler',['RpcHandler',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html',1,'Dissent::Messaging']]],
   ['rpcmethod',['RpcMethod',['../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html',1,'Dissent::Messaging']]],
   ['rpcmethod_3c_20connectionmanager_20_3e',['RpcMethod< ConnectionManager >',['../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html',1,'Dissent::Messaging']]],
+  ['rpcmethod_3c_20csconnectionacquirer_20_3e',['RpcMethod< CSConnectionAcquirer >',['../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html',1,'Dissent::Messaging']]],
   ['rpcmethod_3c_20fullyconnected_20_3e',['RpcMethod< FullyConnected >',['../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html',1,'Dissent::Messaging']]],
   ['rpcmethod_3c_20relayedgelistener_20_3e',['RpcMethod< RelayEdgeListener >',['../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html',1,'Dissent::Messaging']]],
   ['rpcmethod_3c_20relayforwarder_20_3e',['RpcMethod< RelayForwarder >',['../d6/d67/classDissent_1_1Messaging_1_1RpcMethod.html',1,'Dissent::Messaging']]],

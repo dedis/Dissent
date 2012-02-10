@@ -15,6 +15,8 @@ var searchData=
   ['cppprivatekey',['CppPrivateKey',['../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html',1,'Dissent::Crypto']]],
   ['cpppublickey',['CppPublicKey',['../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html',1,'Dissent::Crypto']]],
   ['cpprandom',['CppRandom',['../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html',1,'Dissent::Crypto']]],
-  ['credentials',['Credentials',['../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html',1,'Dissent::Anonymity']]],
-  ['cryptofactory',['CryptoFactory',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html',1,'Dissent::Crypto']]]
+  ['credentials',['Credentials',['../d0/d50/classDissent_1_1Identity_1_1Credentials.html',1,'Dissent::Identity']]],
+  ['cryptofactory',['CryptoFactory',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html',1,'Dissent::Crypto']]],
+  ['csconnectionacquirer',['CSConnectionAcquirer',['../d6/d42/classDissent_1_1ClientServer_1_1CSConnectionAcquirer.html',1,'Dissent::ClientServer']]],
+  ['csoverlay',['CSOverlay',['../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html',1,'Dissent::ClientServer']]]
 ];

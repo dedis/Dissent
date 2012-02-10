@@ -120,43 +120,43 @@ Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe5c6f1d4fd95dee80931f7a8eb63706"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateRound" ref="abe5c6f1d4fd95dee80931f7a8eb63706" args="" -->
 typedef <br class="typebreak"/>
 Dissent::Anonymity::CreateRound&#160;</td><td class="memItemRight" valign="bottom"><b>CreateRound</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d047f7744309dd2be1473b0bd9cba9b"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::Group" ref="a9d047f7744309dd2be1473b0bd9cba9b" args="" -->
-typedef <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Dissent::Anonymity::Group</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Group</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71c20bbb5370bbcef061b1b66123fc07"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::Group" ref="a71c20bbb5370bbcef061b1b66123fc07" args="" -->
+typedef <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Dissent::Identity::Group</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Group</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae31b3b9be4b599bc0869a464ea201bbc"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::Id" ref="ae31b3b9be4b599bc0869a464ea201bbc" args="" -->
 typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Dissent::Connections::Id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a662e93b4f6c70e7c9fe49c21cf405977"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::Callback" ref="a662e93b4f6c70e7c9fe49c21cf405977" args=")(Node *, const Id &amp;, const Group &amp;)" -->
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>Callback</b> )(<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9523e03399c4e236ac9e5a84d25e4957"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::Callback" ref="a9523e03399c4e236ac9e5a84d25e4957" args=")(Node *, const Id &amp;)" -->
+typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>Callback</b> )(<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;)</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#afe64215ec2a3ba7d38aea4a902e20097">AddCreateCallback</a> (const QString &amp;type, Callback cb)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback for the specific type.  <a href="#afe64215ec2a3ba7d38aea4a902e20097"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#aebba4be329b1f4173450f280a2b5a446">Create</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const QString &amp;type) const </td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the session expressed by type to the node.  <a href="#aebba4be329b1f4173450f280a2b5a446"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a58cadc04a97003696bb462c60a254d69">Create</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const QString &amp;type) const </td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the session expressed by type to the node.  <a href="#a58cadc04a97003696bb462c60a254d69"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff14fbeb7d58e992163f16a05ea3cc57"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::GetInstance" ref="aff14fbeb7d58e992163f16a05ea3cc57" args="()" -->
 static <a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html">SessionFactory</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#aff14fbeb7d58e992163f16a05ea3cc57">GetInstance</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton implemention. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc7cf2cd2b82ff06db6b548365dc9737"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateShuffleRoundSession" ref="adc7cf2cd2b82ff06db6b548365dc9737" args="(Node *node, const Id &amp;session_id, const Group &amp;group)" -->
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#adc7cf2cd2b82ff06db6b548365dc9737">CreateShuffleRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4190bebe41dd0d94a0811087f834be9"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateShuffleRoundSession" ref="ab4190bebe41dd0d94a0811087f834be9" args="(Node *node, const Id &amp;session_id)" -->
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#ab4190bebe41dd0d94a0811087f834be9">CreateShuffleRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a SecureSession / ShuffleRound. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acee85378eb5d08a9549d805bee5fbada"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateNullRoundSession" ref="acee85378eb5d08a9549d805bee5fbada" args="(Node *node, const Id &amp;session_id, const Group &amp;group)" -->
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#acee85378eb5d08a9549d805bee5fbada">CreateNullRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38d4f34ebbce5a7cbc060e9de0fa4b32"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateNullRoundSession" ref="a38d4f34ebbce5a7cbc060e9de0fa4b32" args="(Node *node, const Id &amp;session_id)" -->
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a38d4f34ebbce5a7cbc060e9de0fa4b32">CreateNullRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Session / NullRound. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a39ef8e7fc9b5aeba28675e0d1510070b"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateBulkRoundSession" ref="a39ef8e7fc9b5aeba28675e0d1510070b" args="(Node *node, const Id &amp;session_id, const Group &amp;group)" -->
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a39ef8e7fc9b5aeba28675e0d1510070b">CreateBulkRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bea9c9a480b1bd4e812037a362fe025"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateBulkRoundSession" ref="a5bea9c9a480b1bd4e812037a362fe025" args="(Node *node, const Id &amp;session_id)" -->
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a5bea9c9a480b1bd4e812037a362fe025">CreateBulkRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Bulk "V1". <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac30e215e66998ea452a88269f4c9cd8f"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateRepeatingBulkRoundSession" ref="ac30e215e66998ea452a88269f4c9cd8f" args="(Node *node, const Id &amp;session_id, const Group &amp;group)" -->
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#ac30e215e66998ea452a88269f4c9cd8f">CreateRepeatingBulkRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af89f049479f6555ff1b7e8a52d3f451b"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateRepeatingBulkRoundSession" ref="af89f049479f6555ff1b7e8a52d3f451b" args="(Node *node, const Id &amp;session_id)" -->
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#af89f049479f6555ff1b7e8a52d3f451b">CreateRepeatingBulkRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Bulk "V2". <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cbf0fe4412a0e8ebbc1fae92a92a8f6"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateTrustedBulkRoundSession" ref="a1cbf0fe4412a0e8ebbc1fae92a92a8f6" args="(Node *node, const Id &amp;session_id, const Group &amp;group)" -->
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a1cbf0fe4412a0e8ebbc1fae92a92a8f6">CreateTrustedBulkRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94941a3edfe7c41e24b80e8cb88c8d36"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateTrustedBulkRoundSession" ref="a94941a3edfe7c41e24b80e8cb88c8d36" args="(Node *node, const Id &amp;session_id)" -->
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a94941a3edfe7c41e24b80e8cb88c8d36">CreateTrustedBulkRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Bulk "V3". <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac38e008fd9f6399659dc6b71326cfc68"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateTolerantBulkRoundSession" ref="ac38e008fd9f6399659dc6b71326cfc68" args="(Node *node, const Id &amp;session_id, const Group &amp;group)" -->
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#ac38e008fd9f6399659dc6b71326cfc68">CreateTolerantBulkRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad265e3f21647a9596f8a014dd1bf2952"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateTolerantBulkRoundSession" ref="ad265e3f21647a9596f8a014dd1bf2952" args="(Node *node, const Id &amp;session_id)" -->
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#ad265e3f21647a9596f8a014dd1bf2952">CreateTolerantBulkRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Bulk "V3" with blame. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac094691f23d4bfe687c75de4af3eea38"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateTolerantTreeRoundSession" ref="ac094691f23d4bfe687c75de4af3eea38" args="(Node *node, const Id &amp;session_id, const Group &amp;group)" -->
-static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#ac094691f23d4bfe687c75de4af3eea38">CreateTolerantTreeRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03c971c6fcf338915469f1371091e324"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::CreateTolerantTreeRoundSession" ref="a03c971c6fcf338915469f1371091e324" args="(Node *node, const Id &amp;session_id)" -->
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a03c971c6fcf338915469f1371091e324">CreateTolerantTreeRoundSession</a> (<a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *node, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Bulk "V3" with XORing tree. <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
@@ -198,12 +198,12 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a class="anchor" id="aebba4be329b1f4173450f280a2b5a446"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::Create" ref="aebba4be329b1f4173450f280a2b5a446" args="(Node *node, const Id &amp;session_id, const Group &amp;group, const QString &amp;type) const " -->
+<a class="anchor" id="a58cadc04a97003696bb462c60a254d69"></a><!-- doxytag: member="Dissent::Applications::SessionFactory::Create" ref="a58cadc04a97003696bb462c60a254d69" args="(Node *node, const Id &amp;session_id, const QString &amp;type) const " -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#aebba4be329b1f4173450f280a2b5a446">Dissent::Applications::SessionFactory::Create</a> </td>
+          <td class="memname">void <a class="el" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a58cadc04a97003696bb462c60a254d69">Dissent::Applications::SessionFactory::Create</a> </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html">Node</a> *&#160;</td>
           <td class="paramname"><em>node</em>, </td>
@@ -213,12 +213,6 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
           <td></td>
           <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
           <td class="paramname"><em>session_id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td>
-          <td class="paramname"><em>group</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -239,6 +233,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">node</td><td>the node to add the session to </td></tr>
+    <tr><td class="paramname">session_id</td><td>the id for the new session </td></tr>
     <tr><td class="paramname">type</td><td>the type of session to create </td></tr>
   </table>
   </dd>
@@ -268,7 +263,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 8 2012 13:21:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 10 2012 13:25:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -168,6 +168,14 @@ typedef <br class="typebreak"/>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a253c2391021d84e9cfd39acb8e66b4e0"></a><!-- doxytag: member="Dissent::Anonymity::Round::DiffieHellman" ref="a253c2391021d84e9cfd39acb8e66b4e0" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">Dissent::Crypto::DiffieHellman</a>&#160;</td><td class="memItemRight" valign="bottom"><b>DiffieHellman</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5f8002f20fe7d100bfb7f4f0e563070"></a><!-- doxytag: member="Dissent::Anonymity::Round::Credentials" ref="ae5f8002f20fe7d100bfb7f4f0e563070" args="" -->
+typedef <br class="typebreak"/>
+<a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Dissent::Identity::Credentials</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Credentials</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1df686ff11629e39963a769c453fdd18"></a><!-- doxytag: member="Dissent::Anonymity::Round::Group" ref="a1df686ff11629e39963a769c453fdd18" args="" -->
+typedef <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Dissent::Identity::Group</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Group</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a964012cff6668a660e71cb2fbabbeac5"></a><!-- doxytag: member="Dissent::Anonymity::Round::GroupContainer" ref="a964012cff6668a660e71cb2fbabbeac5" args="" -->
+typedef <br class="typebreak"/>
+<a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">Dissent::Identity::GroupContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GroupContainer</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75f6e258b298c8eb37d899f2fd691703"></a><!-- doxytag: member="Dissent::Anonymity::Round::GetDataCallback" ref="a75f6e258b298c8eb37d899f2fd691703" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">Dissent::Messaging::GetDataCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetDataCallback</b></td></tr>
@@ -181,7 +189,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Emitted when the <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group.">Round</a> is closed for good or bad. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ae3146d9f26f976c96a519166c3e27481">Round</a> (const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ae3146d9f26f976c96a519166c3e27481">Round</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ae3146d9f26f976c96a519166c3e27481"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c347b6ffedc243e430a74b25b5b6ebc"></a><!-- doxytag: member="Dissent::Anonymity::Round::~Round" ref="a6c347b6ffedc243e430a74b25b5b6ebc" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a6c347b6ffedc243e430a74b25b5b6ebc">~Round</a> ()</td></tr>
@@ -206,7 +214,7 @@ const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">I
 const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4">GetRoundId</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the round id. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd30b9293f13f1e6d237eb16ba67b2d1"></a><!-- doxytag: member="Dissent::Anonymity::Round::GetGroup" ref="afd30b9293f13f1e6d237eb16ba67b2d1" args="() const " -->
-const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1">GetGroup</a> () const </td></tr>
+const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1">GetGroup</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the group used in the round. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa90263aa8c815725746664f79ae57078"></a><!-- doxytag: member="Dissent::Anonymity::Round::GetBadMembers" ref="aa90263aa8c815725746664f79ae57078" args="() const " -->
 virtual const QVector&lt; int &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aa90263aa8c815725746664f79ae57078">GetBadMembers</a> () const </td></tr>
@@ -247,7 +255,7 @@ const QPair&lt; QByteArray, bool &gt;&#160;</td><td class="memItemRight" valign=
 QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9">GetSigningKey</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the nodes signing key. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5ac89c49092f195a631b06050e21a3b"></a><!-- doxytag: member="Dissent::Anonymity::Round::GetCredentials" ref="ad5ac89c49092f195a631b06050e21a3b" args="() const " -->
-const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad5ac89c49092f195a631b06050e21a3b">GetCredentials</a> () const </td></tr>
+const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad5ac89c49092f195a631b06050e21a3b">GetCredentials</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local credentials. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c157e18b003a58e99f778f28e4b62a2"></a><!-- doxytag: member="Dissent::Anonymity::Round::GetDhKey" ref="a8c157e18b003a58e99f778f28e4b62a2" args="() const " -->
 QSharedPointer&lt; <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">DiffieHellman</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8c157e18b003a58e99f778f28e4b62a2">GetDhKey</a> () const </td></tr>
@@ -268,13 +276,13 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
         <tr>
           <td class="memname"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ae3146d9f26f976c96a519166c3e27481">Dissent::Anonymity::Round::Round</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
           <td class="paramname"><em>group</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
           <td class="paramname"><em>creds</em>, </td>
         </tr>
         <tr>
@@ -307,7 +315,7 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
 <p>Constructor. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">group</td><td><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> used during this round </td></tr>
+    <tr><td class="paramname">group</td><td>Group used during this round </td></tr>
     <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
@@ -587,7 +595,7 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 8 2012 13:21:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 10 2012 13:25:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

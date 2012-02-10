@@ -163,7 +163,7 @@ typedef <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">
 , QSharedPointer&lt; <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Random</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Descriptor</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#ac64426d2b4736367c0f2388bf4399137">RepeatingBulkRound</a> (const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#ac64426d2b4736367c0f2388bf4399137">RepeatingBulkRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ac64426d2b4736367c0f2388bf4399137"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfbe61a660505de18a1a7bc1913fd386"></a><!-- doxytag: member="Dissent::Anonymity::RepeatingBulkRound::~RepeatingBulkRound" ref="adfbe61a660505de18a1a7bc1913fd386" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#adfbe61a660505de18a1a7bc1913fd386">~RepeatingBulkRound</a> ()</td></tr>
@@ -251,13 +251,13 @@ QSharedPointer&lt; <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1Di
         <tr>
           <td class="memname"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#ac64426d2b4736367c0f2388bf4399137">Dissent::Anonymity::RepeatingBulkRound::RepeatingBulkRound</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
           <td class="paramname"><em>group</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
           <td class="paramname"><em>creds</em>, </td>
         </tr>
         <tr>
@@ -296,7 +296,7 @@ QSharedPointer&lt; <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1Di
 <p>Constructor. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">group</td><td><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> used during this round </td></tr>
+    <tr><td class="paramname">group</td><td>Group used during this round </td></tr>
     <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
@@ -560,7 +560,7 @@ QSharedPointer&lt; <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1Di
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 8 2012 13:21:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 10 2012 13:25:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

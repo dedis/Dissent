@@ -121,9 +121,14 @@ typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html"
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a190d8d981d23ae97c40e12e6289135d6"></a><!-- doxytag: member="Dissent::Anonymity::ShuffleBlamer::AsymmetricKey" ref="a190d8d981d23ae97c40e12e6289135d6" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">Dissent::Crypto::AsymmetricKey</a>&#160;</td><td class="memItemRight" valign="bottom"><b>AsymmetricKey</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd6368068b3543d5063314e35fd3dfdc"></a><!-- doxytag: member="Dissent::Anonymity::ShuffleBlamer::Credentials" ref="acd6368068b3543d5063314e35fd3dfdc" args="" -->
+typedef <br class="typebreak"/>
+<a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Dissent::Identity::Credentials</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Credentials</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a38fadb2b37588411eb1f5bf8f5c09357"></a><!-- doxytag: member="Dissent::Anonymity::ShuffleBlamer::Group" ref="a38fadb2b37588411eb1f5bf8f5c09357" args="" -->
+typedef <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Dissent::Identity::Group</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Group</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da2/classDissent_1_1Anonymity_1_1ShuffleBlamer.html#ac6bc58ac9934712a99d82164e38b2ce6">ShuffleBlamer</a> (const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, const QVector&lt; <a class="el" href="../../dd/d76/classDissent_1_1Anonymity_1_1Log.html">Log</a> &gt; &amp;logs, const QVector&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> * &gt; private_keys)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da2/classDissent_1_1Anonymity_1_1ShuffleBlamer.html#ac6bc58ac9934712a99d82164e38b2ce6">ShuffleBlamer</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, const QVector&lt; <a class="el" href="../../dd/d76/classDissent_1_1Anonymity_1_1Log.html">Log</a> &gt; &amp;logs, const QVector&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> * &gt; private_keys)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructors.  <a href="#ac6bc58ac9934712a99d82164e38b2ce6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ad3a95c1701dea21edb96aae4e39a0e"></a><!-- doxytag: member="Dissent::Anonymity::ShuffleBlamer::~ShuffleBlamer" ref="a3ad3a95c1701dea21edb96aae4e39a0e" args="()" -->
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da2/classDissent_1_1Anonymity_1_1ShuffleBlamer.html#a3ad3a95c1701dea21edb96aae4e39a0e">~ShuffleBlamer</a> ()</td></tr>
@@ -147,7 +152,7 @@ const QBitArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a clas
         <tr>
           <td class="memname"><a class="el" href="../../de/da2/classDissent_1_1Anonymity_1_1ShuffleBlamer.html#ac6bc58ac9934712a99d82164e38b2ce6">Dissent::Anonymity::ShuffleBlamer::ShuffleBlamer</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
           <td class="paramname"><em>group</em>, </td>
         </tr>
         <tr>
@@ -180,7 +185,7 @@ const QBitArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a clas
 <p>Constructors. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">group</td><td><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> used during this round </td></tr>
+    <tr><td class="paramname">group</td><td>Group used during this round </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">logs</td><td>all the incoming logs for nodes in the group </td></tr>
     <tr><td class="paramname">private_keys</td><td>the outer private keys for nodes in the group </td></tr>
@@ -238,7 +243,7 @@ const QBitArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a clas
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 8 2012 13:21:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 10 2012 13:25:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

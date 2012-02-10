@@ -183,7 +183,7 @@ typedef <br class="typebreak"/>
 typedef <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Dissent::Utils::Random</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Random</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a384fad20fd5274846ab872ab0f9eb326">TolerantTreeRound</a> (const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a384fad20fd5274846ab872ab0f9eb326">TolerantTreeRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a384fad20fd5274846ab872ab0f9eb326"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65c9e72344e703dd6576bb66331e005d"></a><!-- doxytag: member="Dissent::Anonymity::Tolerant::TolerantTreeRound::~TolerantTreeRound" ref="a65c9e72344e703dd6576bb66331e005d" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a65c9e72344e703dd6576bb66331e005d">~TolerantTreeRound</a> ()</td></tr>
@@ -315,13 +315,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         <tr>
           <td class="memname"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a384fad20fd5274846ab872ab0f9eb326">Dissent::Anonymity::Tolerant::TolerantTreeRound::TolerantTreeRound</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html">Group</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
           <td class="paramname"><em>group</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d5/d96/classDissent_1_1Anonymity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
           <td class="paramname"><em>creds</em>, </td>
         </tr>
         <tr>
@@ -360,7 +360,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <p>Constructor. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">group</td><td><a class="el" href="../../d4/d0d/classDissent_1_1Anonymity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> used during this round </td></tr>
+    <tr><td class="paramname">group</td><td>Group used during this round </td></tr>
     <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
@@ -907,7 +907,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 8 2012 13:21:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Feb 10 2012 13:25:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

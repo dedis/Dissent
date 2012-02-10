@@ -22,6 +22,8 @@ var searchData=
   ['_7ecppprivatekey',['~CppPrivateKey',['../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html#a01eb5e3ef910f3cbd1e642f1887370a9',1,'Dissent::Crypto::CppPrivateKey']]],
   ['_7ecpppublickey',['~CppPublicKey',['../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a796962160690b35f0a3666d412e60707',1,'Dissent::Crypto::CppPublicKey']]],
   ['_7ecpprandom',['~CppRandom',['../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html#a9a0fa487a8603717bb3afbc5552c09ab',1,'Dissent::Crypto::CppRandom']]],
+  ['_7ecsconnectionacquirer',['~CSConnectionAcquirer',['../d6/d42/classDissent_1_1ClientServer_1_1CSConnectionAcquirer.html#ac18faf4a25dd2e3f3756aa0bf75af7c1',1,'Dissent::ClientServer::CSConnectionAcquirer']]],
+  ['_7ecsoverlay',['~CSOverlay',['../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html#a7ba1be500212c131d53e72df0b26d074',1,'Dissent::ClientServer::CSOverlay']]],
   ['_7edefaultnetwork',['~DefaultNetwork',['../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#aee3ed8750be74099c6ff73f24e9b69d4',1,'Dissent::Connections::DefaultNetwork']]],
   ['_7ediffiehellman',['~DiffieHellman',['../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a62b13caa0a3cc2706a868479473c632e',1,'Dissent::Crypto::DiffieHellman']]],
   ['_7edummysink',['~DummySink',['../d8/d1a/classDissent_1_1Messaging_1_1DummySink.html#a01164a4f40343958a7a424c1a9670a08',1,'Dissent::Messaging::DummySink']]],
