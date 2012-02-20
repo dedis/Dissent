@@ -101,6 +101,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
@@ -130,6 +131,10 @@ Inheritance diagram for Dissent::ClientServer::CSOverlay:</div>
 Public Types</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13dca39108ed5a4676e186f4875e2992"></a><!-- doxytag: member="Dissent::ClientServer::CSOverlay::Group" ref="a13dca39108ed5a4676e186f4875e2992" args="" -->
 typedef <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Dissent::Identity::Group</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Group</b></td></tr>
+<tr><td colspan="2"><h2><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a202e7aeba3bb80f5baf11acda3fa7e47"></a><!-- doxytag: member="Dissent::ClientServer::CSOverlay::GroupUpdated" ref="a202e7aeba3bb80f5baf11acda3fa7e47" args="()" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GroupUpdated</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html#a34c4b6fd3a33484763fc6cf5d660364c">CSOverlay</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;local_id, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;local_endpoints, const QList&lt; <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &gt; &amp;remote_endpoints, const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group)</td></tr>
@@ -188,6 +193,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStart</b> (
     <tr><td class="paramname">local_id</td><td>Id for the local overlay </td></tr>
     <tr><td class="paramname">local_endpoints</td><td>list of endpoints to be constructed locally via EdgeListeners </td></tr>
     <tr><td class="paramname">remote_endpoints</td><td>list of remote members </td></tr>
+    <tr><td class="paramname">group</td><td>the base group </td></tr>
   </table>
   </dd>
 </dl>
@@ -216,7 +222,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStart</b> (
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 10 2012 13:25:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 20 2012 13:42:56 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

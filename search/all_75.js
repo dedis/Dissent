@@ -2,6 +2,7 @@ var searchData=
 [
   ['unregister',['Unregister',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a01a5263851bc9fc5a52369196b38570d',1,'Dissent::Messaging::RpcHandler']]],
   ['update',['Update',['../d8/d4c/classDissent_1_1Crypto_1_1CppHash.html#aff2dd2d4524fe610563b01af9a52f718',1,'Dissent::Crypto::CppHash::Update()'],['../df/df2/classDissent_1_1Crypto_1_1Hash.html#a148bb58b0889605b5e46b8f0166dd774',1,'Dissent::Crypto::Hash::Update()']]],
+  ['updategroup',['UpdateGroup',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#a5b7f8983200f7a2b92745b470f538bbc',1,'Dissent::Identity::GroupHolder']]],
   ['usedefault',['UseDefault',['../d0/dab/classDissent_1_1Utils_1_1Logging.html#af72d31ca0fe6aad4db3eb11b3ce6629e',1,'Dissent::Utils::Logging']]],
   ['usefile',['UseFile',['../d0/dab/classDissent_1_1Utils_1_1Logging.html#ad5affef6a31ae3d58d3b29f75fde0085',1,'Dissent::Utils::Logging']]],
   ['userealtime',['UseRealTime',['../d6/d44/classDissent_1_1Utils_1_1Time.html#a67af89a5016d2a9cb03040c3894097cf',1,'Dissent::Utils::Time::UseRealTime()'],['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a09636245053873aedd3f888a2a47bcc9',1,'Dissent::Utils::Timer::UseRealTime()']]],

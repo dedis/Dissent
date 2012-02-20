@@ -10,5 +10,6 @@ var searchData=
   ['getfileservice',['GetFileService',['../dd/d35/classDissent_1_1Web_1_1Services_1_1GetFileService.html',1,'Dissent::Web::Services']]],
   ['getmessagesservice',['GetMessagesService',['../d1/d45/classDissent_1_1Web_1_1Services_1_1GetMessagesService.html',1,'Dissent::Web::Services']]],
   ['group',['Group',['../d1/da7/classDissent_1_1Identity_1_1Group.html',1,'Dissent::Identity']]],
-  ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html',1,'Dissent::Identity']]]
+  ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html',1,'Dissent::Identity']]],
+  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html',1,'Dissent::Identity']]]
 ];

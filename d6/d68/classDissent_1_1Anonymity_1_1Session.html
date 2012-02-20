@@ -152,6 +152,9 @@ typedef <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html"
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a35105b1678ffe531cca8eb1f533268de"></a><!-- doxytag: member="Dissent::Anonymity::Session::GroupContainer" ref="a35105b1678ffe531cca8eb1f533268de" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">Dissent::Identity::GroupContainer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GroupContainer</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9b5da275e84cef18a806a15caffbdfb"></a><!-- doxytag: member="Dissent::Anonymity::Session::GroupHolder" ref="ae9b5da275e84cef18a806a15caffbdfb" args="" -->
+typedef <br class="typebreak"/>
+<a class="el" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html">Dissent::Identity::GroupHolder</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GroupHolder</b></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d6286075bb8df0fe9201c9025735111"></a><!-- doxytag: member="Dissent::Anonymity::Session::RpcRequest" ref="a1d6286075bb8df0fe9201c9025735111" args="" -->
 typedef <br class="typebreak"/>
 <a class="el" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">Dissent::Messaging::RpcRequest</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RpcRequest</b></td></tr>
@@ -174,8 +177,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Signfies that the session has been closed / stopped. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#afa6cf52a99b9272db338c20d3ee70a41">Session</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, CreateRound create_round)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#afa6cf52a99b9272db338c20d3ee70a41"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aaf815c8265058a5acac184650ba45200">Session</a> (const QSharedPointer&lt; <a class="el" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html">GroupHolder</a> &gt; &amp;group_holder, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;session_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, CreateRound create_round)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#aaf815c8265058a5acac184650ba45200"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4b296881b0c5b6b68899bbcd1ba0e86"></a><!-- doxytag: member="Dissent::Anonymity::Session::~Session" ref="aa4b296881b0c5b6b68899bbcd1ba0e86" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa4b296881b0c5b6b68899bbcd1ba0e86">~Session</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br/></td></tr>
@@ -202,12 +205,14 @@ QSharedPointer&lt; <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50a5f58290234bee984e5d5d0b0d18b2"></a><!-- doxytag: member="Dissent::Anonymity::Session::ToString" ref="a50a5f58290234bee984e5d5d0b0d18b2" args="() const " -->
 virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a50a5f58290234bee984e5d5d0b0d18b2">ToString</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a> / <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group.">Round</a> information. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a669dac129d158d98db90359f23b0a8ca"></a><!-- doxytag: member="Dissent::Anonymity::Session::GetGroup" ref="a669dac129d158d98db90359f23b0a8ca" args="() const " -->
-const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a669dac129d158d98db90359f23b0a8ca">GetGroup</a> () const </td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a179d95eb36bc0d3688cb0210b49e20b9"></a><!-- doxytag: member="Dissent::Anonymity::Session::GetGroup" ref="a179d95eb36bc0d3688cb0210b49e20b9" args="() const " -->
+<a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a179d95eb36bc0d3688cb0210b49e20b9">GetGroup</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the group being used in this session. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a633692288b5986ed4b41e7b70c57c754"></a><!-- doxytag: member="Dissent::Anonymity::Session::GetBadMembers" ref="a633692288b5986ed4b41e7b70c57c754" args="() const " -->
 const QSet&lt; <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a633692288b5986ed4b41e7b70c57c754">GetBadMembers</a> () const </td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of bad group members. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c1ce9e7fb8d2259bc0a8de36068af77"></a><!-- doxytag: member="Dissent::Anonymity::Session::GetGroupHolder" ref="a2c1ce9e7fb8d2259bc0a8de36068af77" args="()" -->
+const <a class="el" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html">GroupHolder</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGroupHolder</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74fa5c2aad8ab3206cb306582d714a4f"></a><!-- doxytag: member="Dissent::Anonymity::Session::MinimumRoundSize" ref="a74fa5c2aad8ab3206cb306582d714a4f" args="" -->
@@ -226,15 +231,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (rounds). </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="afa6cf52a99b9272db338c20d3ee70a41"></a><!-- doxytag: member="Dissent::Anonymity::Session::Session" ref="afa6cf52a99b9272db338c20d3ee70a41" args="(const Group &amp;group, const Credentials &amp;creds, const Id &amp;session_id, QSharedPointer&lt; Network &gt; network, CreateRound create_round)" -->
+<a class="anchor" id="aaf815c8265058a5acac184650ba45200"></a><!-- doxytag: member="Dissent::Anonymity::Session::Session" ref="aaf815c8265058a5acac184650ba45200" args="(const QSharedPointer&lt; GroupHolder &gt; &amp;group_holder, const Credentials &amp;creds, const Id &amp;session_id, QSharedPointer&lt; Network &gt; network, CreateRound create_round)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#afa6cf52a99b9272db338c20d3ee70a41">Dissent::Anonymity::Session::Session</a> </td>
+          <td class="memname"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aaf815c8265058a5acac184650ba45200">Dissent::Anonymity::Session::Session</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
-          <td class="paramname"><em>group</em>, </td>
+          <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html">GroupHolder</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>group_holder</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -272,7 +277,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <p>Constructor. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">group</td><td>an ordered member of peers for the group </td></tr>
+    <tr><td class="paramname">group_holder</td><td>contains the anonymity group </td></tr>
     <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">session_id</td><td>Id for the session </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
@@ -457,7 +462,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 10 2012 13:25:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Feb 20 2012 13:42:56 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
