@@ -136,20 +136,20 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee3ed8750be74099c6ff73f24e9b69d4"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::~DefaultNetwork" ref="aee3ed8750be74099c6ff73f24e9b69d4" args="()" -->
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#aee3ed8750be74099c6ff73f24e9b69d4">~DefaultNetwork</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a13dd9e809803ff38f5822d5adc9f26f8">SetHeaders</a> (const QVariantMap &amp;headers)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the headers for Rpc messages, headers MUST contains a "method".  <a href="#a13dd9e809803ff38f5822d5adc9f26f8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab717e7a7427843d798427c5389efc8fc"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::GetHeaders" ref="ab717e7a7427843d798427c5389efc8fc" args="()" -->
-virtual QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ab717e7a7427843d798427c5389efc8fc">GetHeaders</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#abdda299889a22b75beecc75cd83efd3f">SetHeaders</a> (const RpcContainer &amp;headers)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the headers for Rpc messages, headers MUST contains a "method".  <a href="#abdda299889a22b75beecc75cd83efd3f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac698060b7b88a77a15738949d87b784f"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::GetHeaders" ref="ac698060b7b88a77a15738949d87b784f" args="()" -->
+virtual RpcContainer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ac698060b7b88a77a15738949d87b784f">GetHeaders</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the headers. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a7a00909b3bfaff893f55374aa0272543">GetConnection</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the connection matching to the <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> or 0 if none exists.  <a href="#a7a00909b3bfaff893f55374aa0272543"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a984086ffb1b66e71c4d670c649106441"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::GetConnectionManager" ref="a984086ffb1b66e71c4d670c649106441" args="()" -->
 virtual <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html">ConnectionManager</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a984086ffb1b66e71c4d670c649106441">GetConnectionManager</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a connection manager object capable of making connections. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#acb21b1f0d1e5901360132ace7158f6b3">SendNotification</a> (QVariantMap &amp;notification, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Just reroutes to the underlying RpcHandler ignoring any additional headers.  <a href="#acb21b1f0d1e5901360132ace7158f6b3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ac678bfddb511fb89e82ad9fa5525d194">SendRequest</a> (QVariantMap &amp;request, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, <a class="el" href="../../db/d77/classDissent_1_1Messaging_1_1Callback.html">Callback</a> *cb)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Just reroutes to the underlying RpcHandler ignoring any additional headers.  <a href="#ac678bfddb511fb89e82ad9fa5525d194"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a9954f4338a715570c4c4071b946cdcd7">SendNotification</a> (RpcContainer &amp;notification, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Just reroutes to the underlying RpcHandler ignoring any additional headers.  <a href="#a9954f4338a715570c4c4071b946cdcd7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a6c86781144025ba1306d01dca74a994e">SendRequest</a> (RpcContainer &amp;request, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, <a class="el" href="../../db/d77/classDissent_1_1Messaging_1_1Callback.html">Callback</a> *cb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Just reroutes to the underlying RpcHandler ignoring any additional headers.  <a href="#a6c86781144025ba1306d01dca74a994e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a1f644f0603561da20179b93458f3b67c">Send</a> (const QByteArray &amp;data, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a notification -- a request without expecting a response.  <a href="#a1f644f0603561da20179b93458f3b67c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a3eb9e8de70bf1f529afd2c329b98e22d">Broadcast</a> (const QByteArray &amp;data)</td></tr>
@@ -292,14 +292,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const QByte
 
 </div>
 </div>
-<a class="anchor" id="acb21b1f0d1e5901360132ace7158f6b3"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::SendNotification" ref="acb21b1f0d1e5901360132ace7158f6b3" args="(QVariantMap &amp;notification, const Id &amp;to)" -->
+<a class="anchor" id="a9954f4338a715570c4c4071b946cdcd7"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::SendNotification" ref="a9954f4338a715570c4c4071b946cdcd7" args="(RpcContainer &amp;notification, const Id &amp;to)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#acb21b1f0d1e5901360132ace7158f6b3">Dissent::Connections::DefaultNetwork::SendNotification</a> </td>
+          <td class="memname">virtual void <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a9954f4338a715570c4c4071b946cdcd7">Dissent::Connections::DefaultNetwork::SendNotification</a> </td>
           <td>(</td>
-          <td class="paramtype">QVariantMap &amp;&#160;</td>
+          <td class="paramtype">RpcContainer &amp;&#160;</td>
           <td class="paramname"><em>notification</em>, </td>
         </tr>
         <tr>
@@ -326,18 +326,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const QByte
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ad8e63741f7991087e1215e841d6ad0d6">Dissent::Connections::Network</a>.</p>
+<p>Implements <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ae4f2a549e71c05fa08f57ed01017f70e">Dissent::Connections::Network</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ac678bfddb511fb89e82ad9fa5525d194"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::SendRequest" ref="ac678bfddb511fb89e82ad9fa5525d194" args="(QVariantMap &amp;request, const Id &amp;to, Callback *cb)" -->
+<a class="anchor" id="a6c86781144025ba1306d01dca74a994e"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::SendRequest" ref="a6c86781144025ba1306d01dca74a994e" args="(RpcContainer &amp;request, const Id &amp;to, Callback *cb)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ac678bfddb511fb89e82ad9fa5525d194">Dissent::Connections::DefaultNetwork::SendRequest</a> </td>
+          <td class="memname">virtual void <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a6c86781144025ba1306d01dca74a994e">Dissent::Connections::DefaultNetwork::SendRequest</a> </td>
           <td>(</td>
-          <td class="paramtype">QVariantMap &amp;&#160;</td>
+          <td class="paramtype">RpcContainer &amp;&#160;</td>
           <td class="paramname"><em>request</em>, </td>
         </tr>
         <tr>
@@ -371,18 +371,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const QByte
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ad38f61807f3c17c01145d8cd84f762c1">Dissent::Connections::Network</a>.</p>
+<p>Implements <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a8a1e5713513fb7fb2a518a7d5e66a4b4">Dissent::Connections::Network</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a13dd9e809803ff38f5822d5adc9f26f8"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::SetHeaders" ref="a13dd9e809803ff38f5822d5adc9f26f8" args="(const QVariantMap &amp;headers)" -->
+<a class="anchor" id="abdda299889a22b75beecc75cd83efd3f"></a><!-- doxytag: member="Dissent::Connections::DefaultNetwork::SetHeaders" ref="abdda299889a22b75beecc75cd83efd3f" args="(const RpcContainer &amp;headers)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a13dd9e809803ff38f5822d5adc9f26f8">Dissent::Connections::DefaultNetwork::SetHeaders</a> </td>
+          <td class="memname">virtual void <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#abdda299889a22b75beecc75cd83efd3f">Dissent::Connections::DefaultNetwork::SetHeaders</a> </td>
           <td>(</td>
-          <td class="paramtype">const QVariantMap &amp;&#160;</td>
+          <td class="paramtype">const RpcContainer &amp;&#160;</td>
           <td class="paramname"><em>headers</em></td><td>)</td>
           <td><code> [inline, virtual]</code></td>
         </tr>
@@ -398,7 +398,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const QByte
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a06750cd73ebc42376e3cce4a7fc54350">Dissent::Connections::Network</a>.</p>
+<p>Implements <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ae6d84c0d074fe23f17079ee04d901cbc">Dissent::Connections::Network</a>.</p>
 
 </div>
 </div>
@@ -423,7 +423,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const QByte
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2012 14:27:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 22 2012 16:02:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

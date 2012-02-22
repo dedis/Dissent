@@ -88,7 +88,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00007"></a>00007     <span class="keyword">public</span>:
 <a name="l00008"></a>00008       <span class="keywordtype">void</span> Add(RpcRequest &amp;request)
 <a name="l00009"></a>00009       {
-<a name="l00010"></a>00010         QVariantMap msg = request.GetMessage();
+<a name="l00010"></a>00010         RpcContainer msg = request.GetMessage();
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012         <span class="keywordtype">bool</span> ok;
 <a name="l00013"></a>00013         <span class="keywordtype">int</span> x = msg.value(<span class="stringliteral">&quot;x&quot;</span>).toInt(&amp;ok);
@@ -103,7 +103,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00022"></a>00022           <span class="keywordflow">return</span>;
 <a name="l00023"></a>00023         }
 <a name="l00024"></a>00024 
-<a name="l00025"></a>00025         QVariantMap response;
+<a name="l00025"></a>00025         RpcContainer response;
 <a name="l00026"></a>00026         response[<span class="stringliteral">&quot;sum&quot;</span>] = x + y;
 <a name="l00027"></a>00027         request.Respond(response);
 <a name="l00028"></a>00028       }
@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00030"></a>00030 
 <a name="l00031"></a><a class="code" href="../../d9/d7c/classDissent_1_1Tests_1_1TestRpcResponse.html">00031</a>   <span class="keyword">class </span><a class="code" href="../../d9/d7c/classDissent_1_1Tests_1_1TestRpcResponse.html">TestRpcResponse</a> {
 <a name="l00032"></a>00032     <span class="keyword">public</span>:
-<a name="l00033"></a>00033       <a class="code" href="../../d9/d7c/classDissent_1_1Tests_1_1TestRpcResponse.html">TestRpcResponse</a>() : _response(QVariantMap(), 0)
+<a name="l00033"></a>00033       <a class="code" href="../../d9/d7c/classDissent_1_1Tests_1_1TestRpcResponse.html">TestRpcResponse</a>() : _response(RpcContainer(), 0)
 <a name="l00034"></a>00034       {
 <a name="l00035"></a>00035       }
 <a name="l00036"></a>00036 
@@ -145,7 +145,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2012 14:27:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 22 2012 16:02:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

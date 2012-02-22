@@ -102,9 +102,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00026"></a>00026 
 <a name="l00030"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#aee3ed8750be74099c6ff73f24e9b69d4">00030</a>       <span class="keyword">virtual</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#aee3ed8750be74099c6ff73f24e9b69d4" title="Virtual destructor.">~DefaultNetwork</a>() {}
 <a name="l00031"></a>00031 
-<a name="l00037"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a13dd9e809803ff38f5822d5adc9f26f8">00037</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a13dd9e809803ff38f5822d5adc9f26f8" title="Sets the headers for Rpc messages, headers MUST contains a &quot;method&quot;.">SetHeaders</a>(<span class="keyword">const</span> QVariantMap &amp;headers) { _headers = headers; }
+<a name="l00037"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#abdda299889a22b75beecc75cd83efd3f">00037</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#abdda299889a22b75beecc75cd83efd3f" title="Sets the headers for Rpc messages, headers MUST contains a &quot;method&quot;.">SetHeaders</a>(<span class="keyword">const</span> RpcContainer &amp;headers) { _headers = headers; }
 <a name="l00038"></a>00038  
-<a name="l00042"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ab717e7a7427843d798427c5389efc8fc">00042</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QVariantMap <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ab717e7a7427843d798427c5389efc8fc" title="Returns the headers.">GetHeaders</a>() { <span class="keywordflow">return</span> _headers; }
+<a name="l00042"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ac698060b7b88a77a15738949d87b784f">00042</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> RpcContainer <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ac698060b7b88a77a15738949d87b784f" title="Returns the headers.">GetHeaders</a>() { <span class="keywordflow">return</span> _headers; }
 <a name="l00043"></a>00043 
 <a name="l00048"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a7a00909b3bfaff893f55374aa0272543">00048</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier.">Connection</a> *<a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a7a00909b3bfaff893f55374aa0272543" title="Returns the connection matching to the Id or 0 if none exists.">GetConnection</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>)
 <a name="l00049"></a>00049       {
@@ -116,24 +116,24 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00058"></a>00058         <span class="keywordflow">return</span> _cm;
 <a name="l00059"></a>00059       }
 <a name="l00060"></a>00060 
-<a name="l00066"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#acb21b1f0d1e5901360132ace7158f6b3">00066</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#acb21b1f0d1e5901360132ace7158f6b3" title="Just reroutes to the underlying RpcHandler ignoring any additional headers.">SendNotification</a>(QVariantMap &amp;notification, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to)
+<a name="l00066"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a9954f4338a715570c4c4071b946cdcd7">00066</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a9954f4338a715570c4c4071b946cdcd7" title="Just reroutes to the underlying RpcHandler ignoring any additional headers.">SendNotification</a>(RpcContainer &amp;notification, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to)
 <a name="l00067"></a>00067       {
 <a name="l00068"></a>00068         <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier.">Connection</a> *con = _cm.<a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0" title="Returns the outgoing connection table.">GetConnectionTable</a>().<a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a3d57541cbea15bd6ea4bdb09d15804fc" title="Returns the connection matching to the Id or 0 if none exists.">GetConnection</a>(to);
 <a name="l00069"></a>00069         <span class="keywordflow">if</span>(con == 0) {
 <a name="l00070"></a>00070           qWarning() &lt;&lt; <span class="stringliteral">&quot;Attempting to send a notification when no such peer exists,&quot;</span> &lt;&lt; to.<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>();
 <a name="l00071"></a>00071           <span class="keywordflow">return</span>;
 <a name="l00072"></a>00072         }
-<a name="l00073"></a>00073         _rpc.<a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#af792683e6eb0cb369cd51ce54b498b8f" title="Send a notification -- a request without expecting a response.">SendNotification</a>(notification, con);
+<a name="l00073"></a>00073         _rpc.<a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#abd9b16bc15f97e84331f112a7d292465" title="Send a notification -- a request without expecting a response.">SendNotification</a>(notification, con);
 <a name="l00074"></a>00074       }
 <a name="l00075"></a>00075 
-<a name="l00082"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ac678bfddb511fb89e82ad9fa5525d194">00082</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ac678bfddb511fb89e82ad9fa5525d194" title="Just reroutes to the underlying RpcHandler ignoring any additional headers.">SendRequest</a>(QVariantMap &amp;request, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <a class="code" href="../../db/d77/classDissent_1_1Messaging_1_1Callback.html" title="Common base class so we can use a template for Rpc methods.">Callback</a>* cb)
+<a name="l00082"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a6c86781144025ba1306d01dca74a994e">00082</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a6c86781144025ba1306d01dca74a994e" title="Just reroutes to the underlying RpcHandler ignoring any additional headers.">SendRequest</a>(RpcContainer &amp;request, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <a class="code" href="../../db/d77/classDissent_1_1Messaging_1_1Callback.html" title="Common base class so we can use a template for Rpc methods.">Callback</a>* cb)
 <a name="l00083"></a>00083       {
 <a name="l00084"></a>00084         <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier.">Connection</a> *con = _cm.<a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0" title="Returns the outgoing connection table.">GetConnectionTable</a>().<a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a3d57541cbea15bd6ea4bdb09d15804fc" title="Returns the connection matching to the Id or 0 if none exists.">GetConnection</a>(to);
 <a name="l00085"></a>00085         <span class="keywordflow">if</span>(con == 0) {
 <a name="l00086"></a>00086           qWarning() &lt;&lt; <span class="stringliteral">&quot;Attempting to send a request when no such peer exists,&quot;</span> &lt;&lt; to.<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>();
 <a name="l00087"></a>00087           <span class="keywordflow">return</span>;
 <a name="l00088"></a>00088         }
-<a name="l00089"></a>00089         _rpc.<a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a956811615046c8cd13a869912ec77a91" title="Send a request.">SendRequest</a>(request, con, cb);
+<a name="l00089"></a>00089         _rpc.<a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#ac4b8d0aadd7f416769ce996502a00f62" title="Send a request.">SendRequest</a>(request, con, cb);
 <a name="l00090"></a>00090       }
 <a name="l00091"></a>00091 
 <a name="l00097"></a><a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a1f644f0603561da20179b93458f3b67c">00097</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a1f644f0603561da20179b93458f3b67c" title="Send a notification -- a request without expecting a response.">Send</a>(<span class="keyword">const</span> QByteArray &amp;data, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to)
@@ -157,13 +157,13 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00122"></a>00122     <span class="keyword">protected</span>:
 <a name="l00123"></a>00123       <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a1f644f0603561da20179b93458f3b67c" title="Send a notification -- a request without expecting a response.">Send</a>(<span class="keyword">const</span> QByteArray &amp;data, ISender *to)
 <a name="l00124"></a>00124       {
-<a name="l00125"></a>00125         QVariantMap notification(_headers);
+<a name="l00125"></a>00125         RpcContainer notification(_headers);
 <a name="l00126"></a>00126         notification[<span class="stringliteral">&quot;data&quot;</span>] = data;
-<a name="l00127"></a>00127         _rpc.<a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#af792683e6eb0cb369cd51ce54b498b8f" title="Send a notification -- a request without expecting a response.">SendNotification</a>(notification, to);
+<a name="l00127"></a>00127         _rpc.<a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#abd9b16bc15f97e84331f112a7d292465" title="Send a notification -- a request without expecting a response.">SendNotification</a>(notification, to);
 <a name="l00128"></a>00128       }
 <a name="l00129"></a>00129 
 <a name="l00130"></a>00130     <span class="keyword">private</span>:
-<a name="l00131"></a>00131       QVariantMap _headers;
+<a name="l00131"></a>00131       RpcContainer _headers;
 <a name="l00132"></a>00132       ConnectionManager &amp;_cm;
 <a name="l00133"></a>00133       RpcHandler &amp;_rpc;
 <a name="l00134"></a>00134   };
@@ -189,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2012 14:27:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 22 2012 16:02:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

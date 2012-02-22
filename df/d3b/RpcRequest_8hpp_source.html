@@ -93,52 +93,59 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00012"></a>00012 
 <a name="l00013"></a>00013 <span class="keyword">namespace </span>Dissent {
 <a name="l00014"></a>00014 <span class="keyword">namespace </span>Messaging {
-<a name="l00018"></a><a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html">00018</a>   <span class="keyword">class </span><a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a> : <span class="keyword">public</span> QSharedData {
-<a name="l00019"></a>00019     <span class="keyword">public</span>:
-<a name="l00020"></a>00020       <span class="keyword">explicit</span> <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a>(<span class="keyword">const</span> QVariantMap &amp;message, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from) :
-<a name="l00021"></a>00021         Message(message), From(from), Responded(<span class="keyword">false</span>)
-<a name="l00022"></a>00022       {
-<a name="l00023"></a>00023       }
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025       <span class="keyword">virtual</span> ~<a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a>() {}
+<a name="l00015"></a>00015   <span class="keyword">typedef</span> QVariantHash RpcContainer;
+<a name="l00016"></a>00016 
+<a name="l00020"></a><a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html">00020</a>   <span class="keyword">class </span><a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a> : <span class="keyword">public</span> QSharedData {
+<a name="l00021"></a>00021     <span class="keyword">public</span>:
+<a name="l00022"></a>00022       <span class="keyword">explicit</span> <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a>(<span class="keyword">const</span> RpcContainer &amp;message, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from) :
+<a name="l00023"></a>00023         Message(message), From(from), Responded(<span class="keyword">false</span>)
+<a name="l00024"></a>00024       {
+<a name="l00025"></a>00025       }
 <a name="l00026"></a>00026 
-<a name="l00027"></a>00027       <span class="keyword">const</span> QVariantMap Message;
-<a name="l00028"></a>00028       <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *From;
-<a name="l00029"></a>00029       <span class="keywordtype">bool</span> Responded;
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031       <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a>(<span class="keyword">const</span> <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a> &amp;other) : QSharedData(other)
-<a name="l00032"></a>00032       {
-<a name="l00033"></a>00033         <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Not callable&quot;</span>);
-<a name="l00034"></a>00034       }
-<a name="l00035"></a>00035   
-<a name="l00036"></a>00036       <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a> &amp;operator=(<span class="keyword">const</span> <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a> &amp;)
-<a name="l00037"></a>00037       {
-<a name="l00038"></a>00038         <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Not callable&quot;</span>);
-<a name="l00039"></a>00039       }
-<a name="l00040"></a>00040   };
-<a name="l00041"></a>00041 
-<a name="l00045"></a><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">00045</a>   <span class="keyword">class </span><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html" title="Represents the state of an Rpc Request.">RpcRequest</a> {
-<a name="l00046"></a>00046     <span class="keyword">public</span>:
-<a name="l00050"></a>00050       <span class="keyword">explicit</span> <a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a419c267ead0e42d1b89e8f726ed24729" title="Constructor, default construction NOT recommended!">RpcRequest</a>(<span class="keyword">const</span> QVariantMap &amp;message = QVariantMap(),
-<a name="l00051"></a>00051           <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from = 0);
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053       <span class="keyword">virtual</span> ~<a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html" title="Represents the state of an Rpc Request.">RpcRequest</a>() {}
+<a name="l00027"></a>00027       <span class="keyword">virtual</span> ~<a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a>() {}
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029       <span class="keyword">const</span> RpcContainer Message;
+<a name="l00030"></a>00030       <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *From;
+<a name="l00031"></a>00031       <span class="keywordtype">bool</span> Responded;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033       <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a>(<span class="keyword">const</span> <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a> &amp;other) : QSharedData(other)
+<a name="l00034"></a>00034       {
+<a name="l00035"></a>00035         <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Not callable&quot;</span>);
+<a name="l00036"></a>00036       }
+<a name="l00037"></a>00037   
+<a name="l00038"></a>00038       <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a> &amp;operator=(<span class="keyword">const</span> <a class="code" href="../../df/d44/classDissent_1_1Messaging_1_1RpcRequestData.html" title="Private data holder for RpcRequest.">RpcRequestData</a> &amp;)
+<a name="l00039"></a>00039       {
+<a name="l00040"></a>00040         <span class="keywordflow">throw</span> std::logic_error(<span class="stringliteral">&quot;Not callable&quot;</span>);
+<a name="l00041"></a>00041       }
+<a name="l00042"></a>00042   };
+<a name="l00043"></a>00043 
+<a name="l00047"></a><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html">00047</a>   <span class="keyword">class </span><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html" title="Represents the state of an Rpc Request.">RpcRequest</a> {
+<a name="l00048"></a>00048     <span class="keyword">public</span>:
+<a name="l00052"></a>00052       <span class="keyword">explicit</span> <a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#ae92bd3ca42c8a4ceaac563a275dcc952" title="Constructor, default construction NOT recommended!">RpcRequest</a>(<span class="keyword">const</span> RpcContainer &amp;message = RpcContainer(),
+<a name="l00053"></a>00053           <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from = 0);
 <a name="l00054"></a>00054 
-<a name="l00059"></a>00059       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a777d791a9bbe1fc1e8910d24b6fccd54" title="Response to a request.">Respond</a>(QVariantMap response);
-<a name="l00060"></a>00060 
-<a name="l00064"></a><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a2718c6b7e38068f5042a3b4f34dbdad8">00064</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a2718c6b7e38068f5042a3b4f34dbdad8" title="Was there a response sent yet?">Responded</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;Responded; }
-<a name="l00065"></a>00065 
-<a name="l00069"></a><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a760af23a9be58ba701f7bff638de4bb4">00069</a>       <span class="keyword">inline</span> <span class="keyword">const</span> QVariantMap &amp;<a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a760af23a9be58ba701f7bff638de4bb4" title="The message sent from the remote peer.">GetMessage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;Message; }
-<a name="l00070"></a>00070 
-<a name="l00074"></a><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a2864d939632184d4edaea6e40fedcfa3">00074</a>       <span class="keyword">inline</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *<a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a2864d939632184d4edaea6e40fedcfa3" title="Pathway back to the remote peer.">GetFrom</a>() { <span class="keywordflow">return</span> _data-&gt;From; }
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076     <span class="keyword">private</span>:
-<a name="l00077"></a>00077       QExplicitlySharedDataPointer&lt;RpcRequestData&gt; _data;
-<a name="l00078"></a>00078   };
-<a name="l00079"></a>00079 }
-<a name="l00080"></a>00080 }
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082 <span class="preprocessor">#endif</span>
+<a name="l00055"></a>00055       <span class="keyword">virtual</span> ~<a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html" title="Represents the state of an Rpc Request.">RpcRequest</a>() {}
+<a name="l00056"></a>00056 
+<a name="l00061"></a>00061       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a4ff8f3c523b5a819a9601c25e698dff7" title="Response to a request.">Respond</a>(RpcContainer response);
+<a name="l00062"></a>00062 
+<a name="l00066"></a><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a2718c6b7e38068f5042a3b4f34dbdad8">00066</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a2718c6b7e38068f5042a3b4f34dbdad8" title="Was there a response sent yet?">Responded</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;Responded; }
+<a name="l00067"></a>00067 
+<a name="l00071"></a><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a74d2fa775c2a3a98f704a4080af5b248">00071</a>       <span class="keyword">inline</span> <span class="keyword">const</span> RpcContainer &amp;<a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a74d2fa775c2a3a98f704a4080af5b248" title="The message sent from the remote peer.">GetMessage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _data-&gt;Message; }
+<a name="l00072"></a>00072 
+<a name="l00076"></a><a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a2864d939632184d4edaea6e40fedcfa3">00076</a>       <span class="keyword">inline</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *<a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a2864d939632184d4edaea6e40fedcfa3" title="Pathway back to the remote peer.">GetFrom</a>() { <span class="keywordflow">return</span> _data-&gt;From; }
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078       <span class="keyword">static</span> <span class="keyword">const</span> QString IdField;
+<a name="l00079"></a>00079       <span class="keyword">static</span> <span class="keyword">const</span> QString MethodField;
+<a name="l00080"></a>00080       <span class="keyword">static</span> <span class="keyword">const</span> QString NotificationType;
+<a name="l00081"></a>00081       <span class="keyword">static</span> <span class="keyword">const</span> QString RequestType;
+<a name="l00082"></a>00082       <span class="keyword">static</span> <span class="keyword">const</span> QString TypeField;
+<a name="l00083"></a>00083     <span class="keyword">private</span>:
+<a name="l00084"></a>00084       QExplicitlySharedDataPointer&lt;RpcRequestData&gt; _data;
+<a name="l00085"></a>00085   };
+<a name="l00086"></a>00086 }
+<a name="l00087"></a>00087 }
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -157,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2012 14:27:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 22 2012 16:02:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -112,11 +112,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00040"></a>00040 
 <a name="l00046"></a>00046       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#ae6d1f9cfe9b345877de4bc6f9d20f939" title="Handle an incoming Rpc request.">HandleData</a>(<span class="keyword">const</span> QByteArray &amp;data, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from);
 <a name="l00047"></a>00047 
-<a name="l00053"></a>00053       <span class="keywordtype">void</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#af792683e6eb0cb369cd51ce54b498b8f" title="Send a notification -- a request without expecting a response.">SendNotification</a>(QVariantMap &amp;notification, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *to);
+<a name="l00053"></a>00053       <span class="keywordtype">void</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#abd9b16bc15f97e84331f112a7d292465" title="Send a notification -- a request without expecting a response.">SendNotification</a>(RpcContainer &amp;notification, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *to);
 <a name="l00054"></a>00054 
-<a name="l00062"></a>00062       <span class="keywordtype">int</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a956811615046c8cd13a869912ec77a91" title="Send a request.">SendRequest</a>(QVariantMap &amp;request, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *to, <a class="code" href="../../db/d77/classDissent_1_1Messaging_1_1Callback.html" title="Common base class so we can use a template for Rpc methods.">Callback</a>* cb);
+<a name="l00062"></a>00062       <span class="keywordtype">int</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#ac4b8d0aadd7f416769ce996502a00f62" title="Send a request.">SendRequest</a>(RpcContainer &amp;request, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *to, <a class="code" href="../../db/d77/classDissent_1_1Messaging_1_1Callback.html" title="Common base class so we can use a template for Rpc methods.">Callback</a>* cb);
 <a name="l00063"></a>00063 
-<a name="l00070"></a>00070       <span class="keywordtype">void</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a81446706b57b095f0817d9c0bfaf00e4" title="Send a response for a request.">SendResponse</a>(QVariantMap &amp;response, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *to, QVariantMap &amp;request);
+<a name="l00070"></a>00070       <span class="keywordtype">void</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a0e57dff2aa434ce37feca5f58a227fb4" title="Send a response for a request.">SendResponse</a>(RpcContainer &amp;response, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *to, RpcContainer &amp;request);
 <a name="l00071"></a>00071 
 <a name="l00077"></a>00077       <span class="keywordtype">bool</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#ababd14da8188bdbfdce055d299ad97d1" title="Register a callback.">Register</a>(<a class="code" href="../../db/d77/classDissent_1_1Messaging_1_1Callback.html" title="Common base class so we can use a template for Rpc methods.">Callback</a> *cb, QString name);
 <a name="l00078"></a>00078 
@@ -129,9 +129,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00089"></a>00089 
 <a name="l00090"></a>00090     <span class="keyword">private</span>:
 <a name="l00091"></a>00091 
-<a name="l00097"></a>00097       <span class="keywordtype">void</span> HandleRequest(QVariantMap &amp;request, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from);
+<a name="l00097"></a>00097       <span class="keywordtype">void</span> HandleRequest(RpcContainer &amp;request, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from);
 <a name="l00098"></a>00098 
-<a name="l00104"></a>00104       <span class="keywordtype">void</span> HandleResponse(QVariantMap &amp;response, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from);
+<a name="l00104"></a>00104       <span class="keywordtype">void</span> HandleResponse(RpcContainer &amp;response, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from);
 <a name="l00105"></a>00105 
 <a name="l00109"></a>00109       <span class="keyword">inline</span> <span class="keywordtype">int</span> IncrementId();
 <a name="l00110"></a>00110 
@@ -163,7 +163,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 22 2012 14:27:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 22 2012 16:02:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
