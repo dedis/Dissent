@@ -90,19 +90,41 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00012"></a>00012     <span class="keyword">public</span>:
 <a name="l00016"></a>00016       <span class="keyword">explicit</span> <a class="code" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#af77b2df429373e53a57ec6fcb5342886" title="Constructor.">RpcResponse</a>(<span class="keyword">const</span> QVariantMap &amp;message, <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a> *from);
 <a name="l00017"></a>00017 
-<a name="l00018"></a>00018       <span class="keyword">virtual</span> ~<a class="code" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html" title="Inherits a Request but prevents responding as such behavior makes no sense.">RpcResponse</a>() {}
-<a name="l00019"></a>00019 
-<a name="l00023"></a>00023       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#ab9b9026c4e953f3453f1aa75592692d6" title="Not implemented, throws exception.">Respond</a>(QVariantMap &amp;);
+<a name="l00023"></a>00023       <span class="keyword">static</span> QVariantMap <a class="code" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#aa1678101d0278d5490ad26da7c3fbb8c" title="Failed attempt.">Failed</a>(<span class="keyword">const</span> QString &amp;reason, <span class="keywordtype">bool</span> local = <span class="keyword">false</span>);
 <a name="l00024"></a>00024 
-<a name="l00028"></a>00028       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#a5f7779ecb5ebce322be161d7ff1da16c" title="Not implemented, throws exception.">Responded</a>();
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030     <span class="keyword">private</span>:
-<a name="l00031"></a>00031       <span class="keywordtype">bool</span> _responded;
-<a name="l00032"></a>00032   };
-<a name="l00033"></a>00033 }
-<a name="l00034"></a>00034 }
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 <span class="preprocessor">#endif</span>
+<a name="l00025"></a>00025       <span class="keyword">virtual</span> ~<a class="code" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html" title="Inherits a Request but prevents responding as such behavior makes no sense.">RpcResponse</a>() {}
+<a name="l00026"></a>00026 
+<a name="l00030"></a>00030       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#ad25e188e1098225cc879e63bf8934b6e" title="Not implemented, throws exception.">Respond</a>(QVariantMap);
+<a name="l00031"></a>00031 
+<a name="l00035"></a>00035       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#a5f7779ecb5ebce322be161d7ff1da16c" title="Not implemented, throws exception.">Responded</a>();
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037       <span class="keyword">inline</span> <span class="keywordtype">bool</span> Successful()
+<a name="l00038"></a>00038       {
+<a name="l00039"></a>00039         <span class="keywordflow">return</span> (<a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a760af23a9be58ba701f7bff638de4bb4" title="The message sent from the remote peer.">GetMessage</a>().contains(SuccessField) == <span class="keyword">false</span>) ||
+<a name="l00040"></a>00040           (<a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a760af23a9be58ba701f7bff638de4bb4" title="The message sent from the remote peer.">GetMessage</a>().value(SuccessField).toBool());
+<a name="l00041"></a>00041       }
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043       <span class="keyword">inline</span> <span class="keywordtype">bool</span> LocalError()
+<a name="l00044"></a>00044       {
+<a name="l00045"></a>00045         <span class="keywordflow">return</span> (!Successful() &amp;&amp; <a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a760af23a9be58ba701f7bff638de4bb4" title="The message sent from the remote peer.">GetMessage</a>().value(LocalErrorField).toBool());
+<a name="l00046"></a>00046       }
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048       <span class="keyword">inline</span> QString ErrorReason()
+<a name="l00049"></a>00049       {
+<a name="l00050"></a>00050         <span class="keywordflow">if</span>(Successful()) {
+<a name="l00051"></a>00051           <span class="keywordflow">return</span> <span class="stringliteral">&quot;Successful&quot;</span>;
+<a name="l00052"></a>00052         }
+<a name="l00053"></a>00053         <span class="keywordflow">return</span> <a class="code" href="../../d9/df6/classDissent_1_1Messaging_1_1RpcRequest.html#a760af23a9be58ba701f7bff638de4bb4" title="The message sent from the remote peer.">GetMessage</a>().value(ErrorField).toString();
+<a name="l00054"></a>00054       }
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056       <span class="keyword">static</span> <span class="keyword">const</span> QString ErrorField;
+<a name="l00057"></a>00057       <span class="keyword">static</span> <span class="keyword">const</span> QString LocalErrorField;
+<a name="l00058"></a>00058       <span class="keyword">static</span> <span class="keyword">const</span> QString SuccessField;
+<a name="l00059"></a>00059   };
+<a name="l00060"></a>00060 }
+<a name="l00061"></a>00061 }
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -121,7 +143,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 20 2012 23:28:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 22 2012 14:27:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

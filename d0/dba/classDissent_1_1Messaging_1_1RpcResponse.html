@@ -100,7 +100,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Messaging::RpcResponse Class Reference</div>  </div>
 </div><!--header-->
@@ -127,16 +129,71 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af77b2df429373e53a57ec6fcb5342886"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::RpcResponse" ref="af77b2df429373e53a57ec6fcb5342886" args="(const QVariantMap &amp;message, ISender *from)" -->
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#af77b2df429373e53a57ec6fcb5342886">RpcResponse</a> (const QVariantMap &amp;message, <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> *from)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab9b9026c4e953f3453f1aa75592692d6"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::Respond" ref="ab9b9026c4e953f3453f1aa75592692d6" args="(QVariantMap &amp;)" -->
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#ab9b9026c4e953f3453f1aa75592692d6">Respond</a> (QVariantMap &amp;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad25e188e1098225cc879e63bf8934b6e"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::Respond" ref="ad25e188e1098225cc879e63bf8934b6e" args="(QVariantMap)" -->
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#ad25e188e1098225cc879e63bf8934b6e">Respond</a> (QVariantMap)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented, throws exception. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f7779ecb5ebce322be161d7ff1da16c"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::Responded" ref="a5f7779ecb5ebce322be161d7ff1da16c" args="()" -->
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#a5f7779ecb5ebce322be161d7ff1da16c">Responded</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Not implemented, throws exception. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f6714e424c5b68ff440f3e9a7f9a2e5"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::Successful" ref="a7f6714e424c5b68ff440f3e9a7f9a2e5" args="()" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>Successful</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2079b0b37ba60cc056d21f98f4183718"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::LocalError" ref="a2079b0b37ba60cc056d21f98f4183718" args="()" -->
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>LocalError</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa109ac3c79213b6844869be6ee5cfd1"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::ErrorReason" ref="aaa109ac3c79213b6844869be6ee5cfd1" args="()" -->
+QString&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorReason</b> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static QVariantMap&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#aa1678101d0278d5490ad26da7c3fbb8c">Failed</a> (const QString &amp;reason, bool local=false)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Failed attempt.  <a href="#aa1678101d0278d5490ad26da7c3fbb8c"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0e89102f957062815c73730b3b7779a9"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::ErrorField" ref="a0e89102f957062815c73730b3b7779a9" args="" -->
+static const QString&#160;</td><td class="memItemRight" valign="bottom"><b>ErrorField</b> = QString(&quot;e&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1d4be52c0099a506aad02a5edbc6de7"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::LocalErrorField" ref="ad1d4be52c0099a506aad02a5edbc6de7" args="" -->
+static const QString&#160;</td><td class="memItemRight" valign="bottom"><b>LocalErrorField</b> = QString(&quot;l&quot;)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a724e3b9cfe8bef59e4ed25ed76134d82"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::SuccessField" ref="a724e3b9cfe8bef59e4ed25ed76134d82" args="" -->
+static const QString&#160;</td><td class="memItemRight" valign="bottom"><b>SuccessField</b> = QString(&quot;s&quot;)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Inherits a Request but prevents responding as such behavior makes no sense. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="aa1678101d0278d5490ad26da7c3fbb8c"></a><!-- doxytag: member="Dissent::Messaging::RpcResponse::Failed" ref="aa1678101d0278d5490ad26da7c3fbb8c" args="(const QString &amp;reason, bool local=false)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVariantMap <a class="el" href="../../d0/dba/classDissent_1_1Messaging_1_1RpcResponse.html#aa1678101d0278d5490ad26da7c3fbb8c">Dissent::Messaging::RpcResponse::Failed</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>reason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>local</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Failed attempt. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>the reason for the failure </td></tr>
+    <tr><td class="paramname">local</td><td>did the error happen locally or on the remote member </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Messaging/<a class="el" href="../../dd/d6a/RpcResponse_8hpp_source.html">RpcResponse.hpp</a></li>
 <li>src/Messaging/RpcResponse.cpp</li>
 </ul>
@@ -158,7 +215,7 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 20 2012 23:28:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 22 2012 14:27:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
