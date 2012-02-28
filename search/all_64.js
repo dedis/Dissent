@@ -4,7 +4,7 @@ var searchData=
   ['defaultdata',['DefaultData',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa7e28b51297ec369dd5c83e04ea0cdd0',1,'Dissent::Anonymity::ShuffleRound']]],
   ['defaultkeysize',['DefaultKeySize',['../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#a7d70371a373ce54f65b6426f37afa1d0',1,'Dissent::Crypto::AsymmetricKey']]],
   ['defaultnetwork',['DefaultNetwork',['../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html',1,'Dissent::Connections']]],
-  ['defaultnetwork',['DefaultNetwork',['../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a56ed050bf29ddc22d2ea30bf0e838991',1,'Dissent::Connections::DefaultNetwork']]],
+  ['defaultnetwork',['DefaultNetwork',['../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a41e3b094396c4b65a8c93f770deb5aa1',1,'Dissent::Connections::DefaultNetwork']]],
   ['delay',['Delay',['../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html#aee10f3915fde81230a0b187cea1ad140',1,'Dissent::Transports::BufferEdge']]],
   ['deletekeys',['DeleteKeys',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a439706bf8a579a9c9fae94dc5b9e47d8',1,'Dissent::Anonymity::ShuffleRound']]],
   ['demomode',['DemoMode',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#abde6101ed681cbf07e9cb915240925be',1,'Dissent::Applications::Settings']]],
@@ -12,7 +12,7 @@ var searchData=
   ['destructorcheck',['DestructorCheck',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html#aa498a0da34ae54aecbd21d81e16e0d5d',1,'Dissent::Utils::StartStop']]],
   ['diffiehellman',['DiffieHellman',['../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html',1,'Dissent::Crypto']]],
   ['disable',['Disable',['../d0/dab/classDissent_1_1Utils_1_1Logging.html#a8c51992fecf14d5a35a685959f01c275',1,'Dissent::Utils::Logging']]],
-  ['disconnect',['Disconnect',['../da/d0e/classDissent_1_1Connections_1_1Connection.html#ac13d27719ae0508c1953e02a782ce4d6',1,'Dissent::Connections::Connection::Disconnect()'],['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a070b7e445949fcf4d0456352d0a867aa',1,'Dissent::Connections::ConnectionManager::Disconnect()'],['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a6ccde0d468198a7bfc2aa74a9e067795',1,'Dissent::Connections::ConnectionTable::Disconnect()']]],
+  ['disconnect',['Disconnect',['../da/d0e/classDissent_1_1Connections_1_1Connection.html#ac13d27719ae0508c1953e02a782ce4d6',1,'Dissent::Connections::Connection::Disconnect()'],['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a6ccde0d468198a7bfc2aa74a9e067795',1,'Dissent::Connections::ConnectionTable::Disconnect()']]],
   ['disconnected',['Disconnected',['../da/d0e/classDissent_1_1Connections_1_1Connection.html#adbf3514e51970c029a4799f1faffc1a7',1,'Dissent::Connections::Connection::Disconnected()'],['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#ad7e1ec9bac00b57fc051e55552bff8d6',1,'Dissent::Connections::ConnectionManager::Disconnected()'],['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#aff6109eec587b6f5593d3d973254ae25',1,'Dissent::Overlay::BaseOverlay::Disconnected()']]],
   ['disconnecting',['Disconnecting',['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#a81b2e0eca0b6ef9a7a328d4204d20594',1,'Dissent::Overlay::BaseOverlay']]],
   ['dummysink',['DummySink',['../d8/d1a/classDissent_1_1Messaging_1_1DummySink.html',1,'Dissent::Messaging']]]

@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['makerequest',['MakeRequest',['../db/d99/classDissent_1_1Messaging_1_1RequestHandler.html#a1415d73fefb600329ad0544460fcc515',1,'Dissent::Messaging::RequestHandler']]],
+  ['makerequestsignal',['MakeRequestSignal',['../db/d99/classDissent_1_1Messaging_1_1RequestHandler.html#a485951456f80bdc220b5fd37c53fe529',1,'Dissent::Messaging::RequestHandler']]],
   ['markslotblamefinished',['MarkSlotBlameFinished',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#ae5fba4db7e90a3f6fe5303808b5b40da',1,'Dissent::Anonymity::Tolerant::AlibiData::MarkSlotBlameFinished()'],['../d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#aac514776734fa410a0af6e9939e30c7c',1,'Dissent::Anonymity::Tolerant::MessageHistory::MarkSlotBlameFinished()']]],
   ['markslotcorrupted',['MarkSlotCorrupted',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a35187c1a918abb8e369266c091407729',1,'Dissent::Anonymity::Tolerant::AlibiData::MarkSlotCorrupted()'],['../d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#a878e9ad520d0993ef435c7625d2d859e',1,'Dissent::Anonymity::Tolerant::MessageHistory::MarkSlotCorrupted()']]],
   ['max',['Max',['../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#aa68091531cfa545038be70f788f61d3f',1,'Dissent::Utils::SignalCounter']]],
