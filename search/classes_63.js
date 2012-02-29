@@ -17,5 +17,6 @@ var searchData=
   ['credentials',['Credentials',['../d0/d50/classDissent_1_1Identity_1_1Credentials.html',1,'Dissent::Identity']]],
   ['cryptofactory',['CryptoFactory',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html',1,'Dissent::Crypto']]],
   ['csconnectionacquirer',['CSConnectionAcquirer',['../d6/d42/classDissent_1_1ClientServer_1_1CSConnectionAcquirer.html',1,'Dissent::ClientServer']]],
+  ['csnetwork',['CSNetwork',['../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html',1,'Dissent::ClientServer']]],
   ['csoverlay',['CSOverlay',['../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html',1,'Dissent::ClientServer']]]
 ];

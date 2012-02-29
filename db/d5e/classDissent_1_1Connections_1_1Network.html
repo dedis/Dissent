@@ -119,6 +119,7 @@ Inheritance diagram for Dissent::Connections::Network:</div>
   <map id="Dissent::Connections::Network_map" name="Dissent::Connections::Network_map">
 <area href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html" alt="Dissent::Connections::DefaultNetwork" shape="rect" coords="0,56,221,80"/>
 <area href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html" alt="Dissent::Connections::EmptyNetwork" shape="rect" coords="231,56,452,80"/>
+<area href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html" alt="Dissent::ClientServer::CSNetwork" shape="rect" coords="0,112,221,136"/>
 </map>
  </div></div>
 
@@ -133,23 +134,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a64d0366ca60cf52eb204bf9b13515887"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64d0366ca60cf52eb204bf9b13515887"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a64d0366ca60cf52eb204bf9b13515887">~Network</a> ()</td></tr>
 <tr class="memdesc:a64d0366ca60cf52eb204bf9b13515887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br/></td></tr>
-<tr class="memitem:ac78d56e8a3842c876b4e949111578b69"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac78d56e8a3842c876b4e949111578b69"></a>
-virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ac78d56e8a3842c876b4e949111578b69">GetMethod</a> ()=0</td></tr>
-<tr class="memdesc:ac78d56e8a3842c876b4e949111578b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the destination method. <br/></td></tr>
+<tr class="memitem:a07ab410ff0cb3f6a688a55bb2d193b7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07ab410ff0cb3f6a688a55bb2d193b7e"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a07ab410ff0cb3f6a688a55bb2d193b7e">GetMethod</a> () const =0</td></tr>
+<tr class="memdesc:a07ab410ff0cb3f6a688a55bb2d193b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the destination method. <br/></td></tr>
 <tr class="memitem:aa8664f24fbc7a4ec86bfd1cde2d5b19d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#aa8664f24fbc7a4ec86bfd1cde2d5b19d">SetMethod</a> (const QString &amp;method)=0</td></tr>
 <tr class="memdesc:aa8664f24fbc7a4ec86bfd1cde2d5b19d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the remote receiving method.  <a href="#aa8664f24fbc7a4ec86bfd1cde2d5b19d"></a><br/></td></tr>
 <tr class="memitem:aa90c21d99f31d34a77f0ee2bb2b1b9c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#aa90c21d99f31d34a77f0ee2bb2b1b9c2">SetHeaders</a> (const QVariantHash &amp;headers)=0</td></tr>
 <tr class="memdesc:aa90c21d99f31d34a77f0ee2bb2b1b9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the headers for Rpc messages, headers MUST contains a "method".  <a href="#aa90c21d99f31d34a77f0ee2bb2b1b9c2"></a><br/></td></tr>
-<tr class="memitem:a69c60a0ba2138984ebd3df6a4f29b496"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69c60a0ba2138984ebd3df6a4f29b496"></a>
-virtual QVariantHash&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a69c60a0ba2138984ebd3df6a4f29b496">GetHeaders</a> ()=0</td></tr>
-<tr class="memdesc:a69c60a0ba2138984ebd3df6a4f29b496"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the headers. <br/></td></tr>
-<tr class="memitem:a661d729618c4f24d8f9dc2d4c6e61adc"><td class="memItemLeft" align="right" valign="top">virtual QSharedPointer<br class="typebreak"/>
-&lt; <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a661d729618c4f24d8f9dc2d4c6e61adc">GetConnection</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)=0</td></tr>
-<tr class="memdesc:a661d729618c4f24d8f9dc2d4c6e61adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the connection matching to the <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> or 0 if none exists.  <a href="#a661d729618c4f24d8f9dc2d4c6e61adc"></a><br/></td></tr>
-<tr class="memitem:ae1bd8086f429957717e8ad0ab03518f2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae1bd8086f429957717e8ad0ab03518f2"></a>
+<tr class="memitem:ad16c5cd009562252984dcba55e11fa5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad16c5cd009562252984dcba55e11fa5f"></a>
+virtual QVariantHash&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ad16c5cd009562252984dcba55e11fa5f">GetHeaders</a> () const =0</td></tr>
+<tr class="memdesc:ad16c5cd009562252984dcba55e11fa5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the headers. <br/></td></tr>
+<tr class="memitem:ad7bd9854a5335fffe7f7567e0596bfc0"><td class="memItemLeft" align="right" valign="top">virtual QSharedPointer<br class="typebreak"/>
+&lt; <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ad7bd9854a5335fffe7f7567e0596bfc0">GetConnection</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id) const =0</td></tr>
+<tr class="memdesc:ad7bd9854a5335fffe7f7567e0596bfc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the connection matching to the <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> or 0 if none exists.  <a href="#ad7bd9854a5335fffe7f7567e0596bfc0"></a><br/></td></tr>
+<tr class="memitem:a1cebcb43076b492afa33403010ee2807"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cebcb43076b492afa33403010ee2807"></a>
 virtual QSharedPointer<br class="typebreak"/>
-&lt; <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html">ConnectionManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ae1bd8086f429957717e8ad0ab03518f2">GetConnectionManager</a> ()=0</td></tr>
-<tr class="memdesc:ae1bd8086f429957717e8ad0ab03518f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a connection manager object capable of making connections. <br/></td></tr>
+&lt; <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html">ConnectionManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a1cebcb43076b492afa33403010ee2807">GetConnectionManager</a> () const =0</td></tr>
+<tr class="memdesc:a1cebcb43076b492afa33403010ee2807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a connection manager object capable of making connections. <br/></td></tr>
 <tr class="memitem:ad94aa9e2947b751edfcb975264a96c05"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ad94aa9e2947b751edfcb975264a96c05">SendNotification</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QString &amp;method, const QVariant &amp;data)=0</td></tr>
 <tr class="memdesc:ad94aa9e2947b751edfcb975264a96c05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a notification.  <a href="#ad94aa9e2947b751edfcb975264a96c05"></a><br/></td></tr>
 <tr class="memitem:ae7109b28aa28c85b9a2b8e3c5def9db4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ae7109b28aa28c85b9a2b8e3c5def9db4">SendRequest</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QString &amp;method, const QVariant &amp;data, QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;callback)=0</td></tr>
@@ -188,20 +189,20 @@ virtual <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a3eb9e8de70bf1f529afd2c329b98e22d">Dissent::Connections::DefaultNetwork</a>, and <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#aa9dc8351cec1c207c23c3c37f9a27e10">Dissent::Connections::EmptyNetwork</a>.</p>
+<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a3eb9e8de70bf1f529afd2c329b98e22d">Dissent::Connections::DefaultNetwork</a>, <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#aa9dc8351cec1c207c23c3c37f9a27e10">Dissent::Connections::EmptyNetwork</a>, and <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#afc4be4f82685756fc8753ace83ef94a3">Dissent::ClientServer::CSNetwork</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a661d729618c4f24d8f9dc2d4c6e61adc"></a>
+<a class="anchor" id="ad7bd9854a5335fffe7f7567e0596bfc0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QSharedPointer&lt;<a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a>&gt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a661d729618c4f24d8f9dc2d4c6e61adc">Dissent::Connections::Network::GetConnection</a> </td>
+          <td class="memname">virtual QSharedPointer&lt;<a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a>&gt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#ad7bd9854a5335fffe7f7567e0596bfc0">Dissent::Connections::Network::GetConnection</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
-          <td><code> [pure virtual]</code></td>
+          <td> const<code> [pure virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -215,7 +216,7 @@ virtual <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#af9016f1078632e254f699b93fc098a6f">Dissent::Connections::DefaultNetwork</a>, and <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#ae38c86c117943def46d4d863661f3868">Dissent::Connections::EmptyNetwork</a>.</p>
+<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a957d3004185257791bf47410029f92a4">Dissent::Connections::DefaultNetwork</a>, and <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a4ce8b1f2412ace4b706f9698ae0f9342">Dissent::Connections::EmptyNetwork</a>.</p>
 
 </div>
 </div>
@@ -253,7 +254,7 @@ virtual <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#aa81aaf966e15eabee72ea40572c3647b">Dissent::Connections::DefaultNetwork</a>, and <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a5c998d6301088f7f31171c06bd326f48">Dissent::Connections::EmptyNetwork</a>.</p>
+<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#aa81aaf966e15eabee72ea40572c3647b">Dissent::Connections::DefaultNetwork</a>, <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a5c998d6301088f7f31171c06bd326f48">Dissent::Connections::EmptyNetwork</a>, and <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e">Dissent::ClientServer::CSNetwork</a>.</p>
 
 </div>
 </div>
@@ -298,7 +299,7 @@ virtual <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#abce458ee0c4dd01d51a8e09d07427334">Dissent::Connections::DefaultNetwork</a>, and <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a0ded564108dd52fe81eae3bb232515d3">Dissent::Connections::EmptyNetwork</a>.</p>
+<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#abce458ee0c4dd01d51a8e09d07427334">Dissent::Connections::DefaultNetwork</a>, <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a0ded564108dd52fe81eae3bb232515d3">Dissent::Connections::EmptyNetwork</a>, and <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a9446eb740dd356793d3ae9289c6700f0">Dissent::ClientServer::CSNetwork</a>.</p>
 
 </div>
 </div>
@@ -350,7 +351,7 @@ virtual <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ae2e6af6b96d0d811512c64000f975e15">Dissent::Connections::DefaultNetwork</a>, and <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a72929f2cc283bc8be03437414cba4afe">Dissent::Connections::EmptyNetwork</a>.</p>
+<p>Implemented in <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ae2e6af6b96d0d811512c64000f975e15">Dissent::Connections::DefaultNetwork</a>, <a class="el" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a72929f2cc283bc8be03437414cba4afe">Dissent::Connections::EmptyNetwork</a>, and <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e">Dissent::ClientServer::CSNetwork</a>.</p>
 
 </div>
 </div>
@@ -415,7 +416,7 @@ virtual <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 19:48:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 28 2012 22:10:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

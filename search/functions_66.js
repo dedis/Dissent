@@ -6,7 +6,7 @@ var searchData=
   ['finished',['Finished',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8e666a9754d354eb3f15a19857fd23bb',1,'Dissent::Anonymity::Round']]],
   ['finishedwebrequest',['FinishedWebRequest',['../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#a3f215f6178f06fd2f22ae767374757f8',1,'Dissent::Web::Services::WebService']]],
   ['finishphase',['FinishPhase',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab4d7dd08f0cfc7527a2e025f1970f677',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
-  ['forwardingsender',['ForwardingSender',['../d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html#ad85d2db246002c9363d63b987489bd58',1,'Dissent::Connections::ForwardingSender']]],
+  ['forwardingsender',['ForwardingSender',['../d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html#a0fcde9c391db3609546bf82757e8b20b',1,'Dissent::Connections::ForwardingSender']]],
   ['foundbadmembers',['FoundBadMembers',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4cf62dadfa54c92699a78acf770b8a03',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound::FoundBadMembers()'],['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#af3d4164aad4c5415cbdd1829a8bb28b1',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound::FoundBadMembers()']]],
   ['foundbadslot',['FoundBadSlot',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aa6eba2f4a2b83555143a9fb46bb3eca8',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['frombytearray',['FromByteArray',['../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html#a324d41a3192798d73e4c1a33d0a8b1d2',1,'Dissent::Anonymity::Tolerant::Accusation']]],
