@@ -118,14 +118,12 @@ Inheritance diagram for Dissent::Connections::Connection:</div>
  <div class="center">
   <img src="../../da/d0e/classDissent_1_1Connections_1_1Connection.png" usemap="#Dissent::Connections::Connection_map" alt=""/>
   <map id="Dissent::Connections::Connection_map" name="Dissent::Connections::Connection_map">
-<area href="../../d0/d5e/classDissent_1_1Messaging_1_1FilterObject.html" title="Acts as a basic messaging Filter." alt="Dissent::Messaging::FilterObject" shape="rect" coords="231,112,452,136"/>
-<area href="../../df/d34/classDissent_1_1Messaging_1_1SourceObject.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::SourceObject" shape="rect" coords="0,56,221,80"/>
-<area href="../../da/da4/classDissent_1_1Messaging_1_1Filter.html" title="Acts as a basic messaging Filter." alt="Dissent::Messaging::Filter" shape="rect" coords="462,56,683,80"/>
-<area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="0,0,221,24"/>
-<area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="231,0,452,24"/>
-<area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="462,0,683,24"/>
-<area href="../../d8/ddd/classDissent_1_1Messaging_1_1ISink.html" title="Handle asynchronous data input." alt="Dissent::Messaging::ISink" shape="rect" coords="693,0,914,24"/>
-<area href="../../da/d87/classDissent_1_1Connections_1_1NullConnection.html" title="Useful for making null connections without an underlying edge." alt="Dissent::Connections::NullConnection" shape="rect" coords="231,224,452,248"/>
+<area href="../../df/d34/classDissent_1_1Messaging_1_1SourceObject.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::SourceObject" shape="rect" coords="0,56,225,80"/>
+<area href="../../d8/ddd/classDissent_1_1Messaging_1_1ISink.html" title="Handle asynchronous data input." alt="Dissent::Messaging::ISink" shape="rect" coords="235,56,460,80"/>
+<area href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html" title="An interface which allows a sender or similar object share overlay source and destination information..." alt="Dissent::Connections::IOverlaySender" shape="rect" coords="470,56,695,80"/>
+<area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="0,0,225,24"/>
+<area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="470,0,695,24"/>
+<area href="../../da/d87/classDissent_1_1Connections_1_1NullConnection.html" title="Useful for making null connections without an underlying edge." alt="Dissent::Connections::NullConnection" shape="rect" coords="235,168,460,192"/>
 </map>
  </div></div>
 
@@ -161,14 +159,20 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ad03a87689c4cb67a38bc5c5ea724f66a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad03a87689c4cb67a38bc5c5ea724f66a"></a>
 QSharedPointer&lt; <a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#ad03a87689c4cb67a38bc5c5ea724f66a">GetEdge</a> ()</td></tr>
 <tr class="memdesc:ad03a87689c4cb67a38bc5c5ea724f66a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlying edge. <br/></td></tr>
-<tr class="memitem:ae835df14a964cb6a36cab1aa5acd381c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae835df14a964cb6a36cab1aa5acd381c"></a>
-const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#ae835df14a964cb6a36cab1aa5acd381c">GetLocalId</a> () const </td></tr>
-<tr class="memdesc:ae835df14a964cb6a36cab1aa5acd381c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local id. <br/></td></tr>
-<tr class="memitem:a687c37f828ae1e83b88043804dae0eb9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a687c37f828ae1e83b88043804dae0eb9"></a>
-const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#a687c37f828ae1e83b88043804dae0eb9">GetRemoteId</a> () const </td></tr>
-<tr class="memdesc:a687c37f828ae1e83b88043804dae0eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the remote id. <br/></td></tr>
-<tr class="memitem:ac3161e96adc03ae561ec33b5e0352cc7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#ac3161e96adc03ae561ec33b5e0352cc7">SetSharedPointer</a> (const QSharedPointer&lt; Filter &gt; &amp;filter)</td></tr>
-<tr class="memdesc:ac3161e96adc03ae561ec33b5e0352cc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the internal shared pointer.  <a href="#ac3161e96adc03ae561ec33b5e0352cc7"></a><br/></td></tr>
+<tr class="memitem:ac325fa46ae1e620f7a38783ddfde9208"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac325fa46ae1e620f7a38783ddfde9208"></a>
+virtual <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#ac325fa46ae1e620f7a38783ddfde9208">GetLocalId</a> () const </td></tr>
+<tr class="memdesc:ac325fa46ae1e620f7a38783ddfde9208"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local id. <br/></td></tr>
+<tr class="memitem:a8cb1ea8cb801ec94c60d6a9579eed475"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cb1ea8cb801ec94c60d6a9579eed475"></a>
+virtual <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#a8cb1ea8cb801ec94c60d6a9579eed475">GetRemoteId</a> () const </td></tr>
+<tr class="memdesc:a8cb1ea8cb801ec94c60d6a9579eed475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the remote id. <br/></td></tr>
+<tr class="memitem:a7d282ce87a5ef49de569ddf066190e46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d282ce87a5ef49de569ddf066190e46"></a>
+QSharedPointer&lt; <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSharedPointer</b> ()</td></tr>
+<tr class="memitem:af97179c848c78604cad4afd85f38f89c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#af97179c848c78604cad4afd85f38f89c">SetSharedPointer</a> (const QSharedPointer&lt; <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> &gt; &amp;shared)</td></tr>
+<tr class="memdesc:af97179c848c78604cad4afd85f38f89c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the internal shared pointer.  <a href="#af97179c848c78604cad4afd85f38f89c"></a><br/></td></tr>
+<tr class="memitem:aa6a24583e7cc5b6e7990d2a443c3ec52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa6a24583e7cc5b6e7990d2a443c3ec52"></a>
+virtual const QObject *&#160;</td><td class="memItemRight" valign="bottom"><b>GetObject</b> ()</td></tr>
+<tr class="memitem:ad5b821c7b26e828a8935f88065159c8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5b821c7b26e828a8935f88065159c8a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleData</b> (const QSharedPointer&lt; ISender &gt; &amp;, const QByteArray &amp;data)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>A container class linking a global identifier to a transport layer identifier, takes ownership of an Edge, SetSink externally (for now) </p>
@@ -246,16 +250,16 @@ const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">I
 
 </div>
 </div>
-<a class="anchor" id="ac3161e96adc03ae561ec33b5e0352cc7"></a>
+<a class="anchor" id="af97179c848c78604cad4afd85f38f89c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#ac3161e96adc03ae561ec33b5e0352cc7">Dissent::Connections::Connection::SetSharedPointer</a> </td>
+          <td class="memname">virtual void <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html#af97179c848c78604cad4afd85f38f89c">Dissent::Connections::Connection::SetSharedPointer</a> </td>
           <td>(</td>
-          <td class="paramtype">const QSharedPointer&lt; Filter &gt; &amp;&#160;</td>
-          <td class="paramname"><em>filter</em></td><td>)</td>
-          <td><code> [virtual]</code></td>
+          <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>shared</em></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -264,7 +268,7 @@ const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">I
 <p>Sets the internal shared pointer. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">filter</td><td>the shared pointer </td></tr>
+    <tr><td class="paramname">shared</td><td>the shared pointer </td></tr>
   </table>
   </dd>
 </dl>
@@ -279,7 +283,7 @@ const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">I
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 16:10:50 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 28 2012 19:48:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
