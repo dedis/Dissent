@@ -107,24 +107,24 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00012"></a>00012     Q_OBJECT
 <a name="l00013"></a>00013 
 <a name="l00014"></a>00014     <span class="keyword">public</span> slots:
-<a name="l00015"></a>00015       <span class="keywordtype">void</span> Add(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request)
+<a name="l00015"></a>00015       <span class="keywordtype">void</span> Add(<span class="keyword">const</span> Request &amp;request)
 <a name="l00016"></a>00016       {
-<a name="l00017"></a>00017         QVariantList data = request.<a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html#ab05bda1d4e3973763e6fc04d03b7f811" title="Method data.">GetData</a>().toList();
+<a name="l00017"></a>00017         QVariantList data = request.GetData().toList();
 <a name="l00018"></a>00018 
 <a name="l00019"></a>00019         <span class="keywordtype">bool</span> ok;
 <a name="l00020"></a>00020         <span class="keywordtype">int</span> x = data[0].toInt(&amp;ok);
 <a name="l00021"></a>00021         <span class="keywordflow">if</span>(!ok) {
-<a name="l00022"></a>00022           request.<a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html#ab2d13c5328c1a2850eb0fedf91fc794a" title="Response to the request with a failure.">Failed</a>(Response::InvalidInput, QString(<span class="stringliteral">&quot;Term 0 is invalid&quot;</span>));
+<a name="l00022"></a>00022           request.Failed(Response::InvalidInput, QString(<span class="stringliteral">&quot;Term 0 is invalid&quot;</span>));
 <a name="l00023"></a>00023           <span class="keywordflow">return</span>;
 <a name="l00024"></a>00024         }
 <a name="l00025"></a>00025 
 <a name="l00026"></a>00026         <span class="keywordtype">int</span> y = data[1].toInt(&amp;ok);
 <a name="l00027"></a>00027         <span class="keywordflow">if</span>(!ok) {
-<a name="l00028"></a>00028           request.<a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html#ab2d13c5328c1a2850eb0fedf91fc794a" title="Response to the request with a failure.">Failed</a>(Response::InvalidInput, QString(<span class="stringliteral">&quot;Term 1 is invalid&quot;</span>));
+<a name="l00028"></a>00028           request.Failed(Response::InvalidInput, QString(<span class="stringliteral">&quot;Term 1 is invalid&quot;</span>));
 <a name="l00029"></a>00029           <span class="keywordflow">return</span>;
 <a name="l00030"></a>00030         }
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032         request.<a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html#abd16a323a8e76f482032f02ccf726397" title="Respond to the request.">Respond</a>(x + y);
+<a name="l00032"></a>00032         request.Respond(x + y);
 <a name="l00033"></a>00033       }
 <a name="l00034"></a>00034   };
 <a name="l00035"></a>00035 
@@ -155,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

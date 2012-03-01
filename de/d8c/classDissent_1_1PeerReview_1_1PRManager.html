@@ -118,14 +118,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 Public Types</h2></td></tr>
 <tr class="memitem:a602cdaefbca478f712719613079b8bb6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a602cdaefbca478f712719613079b8bb6"></a>
 typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Connections::Id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b></td></tr>
-<tr class="memitem:a743d6d18cd57b4060f764a2b4b18cbd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a743d6d18cd57b4060f764a2b4b18cbd9"></a>
-typedef <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Identity::Credentials</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Credentials</b></td></tr>
+<tr class="memitem:a802e85fad7ef9b0c8489c781b4827c00"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a802e85fad7ef9b0c8489c781b4827c00"></a>
+typedef <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">Identity::PrivateIdentity</a>&#160;</td><td class="memItemRight" valign="bottom"><b>PrivateIdentity</b></td></tr>
 <tr class="memitem:a400238db5e300575f484d3ad73574dc0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a400238db5e300575f484d3ad73574dc0"></a>
 typedef <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Identity::Group</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Group</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab59a5bb26f7471f350252ff413827842"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#ab59a5bb26f7471f350252ff413827842">PRManager</a> (const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group)</td></tr>
-<tr class="memdesc:ab59a5bb26f7471f350252ff413827842"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new peer review log system.  <a href="#ab59a5bb26f7471f350252ff413827842"></a><br/></td></tr>
+<tr class="memitem:a3f8d3b09f81aec6c4273207af42085fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#a3f8d3b09f81aec6c4273207af42085fc">PRManager</a> (const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;ident, const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group)</td></tr>
+<tr class="memdesc:a3f8d3b09f81aec6c4273207af42085fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new peer review log system.  <a href="#a3f8d3b09f81aec6c4273207af42085fc"></a><br/></td></tr>
 <tr class="memitem:af5b5d92c71529b6d7e206c27498dd570"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#af5b5d92c71529b6d7e206c27498dd570">Acknowledge</a> (uint record, QByteArray &amp;binary_ack) const </td></tr>
 <tr class="memdesc:af5b5d92c71529b6d7e206c27498dd570"><td class="mdescLeft">&#160;</td><td class="mdescRight">prepare a serialized ack for the entry  <a href="#af5b5d92c71529b6d7e206c27498dd570"></a><br/></td></tr>
 <tr class="memitem:ae847ec5c6441e03e2eab9805cb4a954d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#ae847ec5c6441e03e2eab9805cb4a954d">HandleAcknowledgement</a> (const QByteArray &amp;binary_ack, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;src)</td></tr>
@@ -141,15 +141,15 @@ QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provides a means for managing a PeerReview log and the components related to it. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab59a5bb26f7471f350252ff413827842"></a>
+<a class="anchor" id="a3f8d3b09f81aec6c4273207af42085fc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#ab59a5bb26f7471f350252ff413827842">Dissent::PeerReview::PRManager::PRManager</a> </td>
+          <td class="memname"><a class="el" href="../../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#a3f8d3b09f81aec6c4273207af42085fc">Dissent::PeerReview::PRManager::PRManager</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
-          <td class="paramname"><em>creds</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;&#160;</td>
+          <td class="paramname"><em>ident</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -169,7 +169,7 @@ QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <p>Constructs a new peer review log system. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">creds</td><td>the log owners credentials </td></tr>
+    <tr><td class="paramname">ident</td><td>the log owners credentials </td></tr>
     <tr><td class="paramname">group</td><td>the key database for remote members </td></tr>
   </table>
   </dd>
@@ -355,7 +355,7 @@ QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:05 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

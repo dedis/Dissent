@@ -129,8 +129,8 @@ Inheritance diagram for Dissent::Anonymity::NullRound:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a64af20932244ba0cc8332ce14deac3a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a64af20932244ba0cc8332ce14deac3a7">NullRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data)</td></tr>
-<tr class="memdesc:a64af20932244ba0cc8332ce14deac3a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a64af20932244ba0cc8332ce14deac3a7"></a><br/></td></tr>
+<tr class="memitem:a8cec21fd1b0cc074c3831b22c1b05b1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a8cec21fd1b0cc074c3831b22c1b05b1c">NullRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;ident, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data)</td></tr>
+<tr class="memdesc:a8cec21fd1b0cc074c3831b22c1b05b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a8cec21fd1b0cc074c3831b22c1b05b1c"></a><br/></td></tr>
 <tr class="memitem:a787e44e29c8e932fc9855d3dd16e5632"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a787e44e29c8e932fc9855d3dd16e5632"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a787e44e29c8e932fc9855d3dd16e5632">~NullRound</a> ()</td></tr>
 <tr class="memdesc:a787e44e29c8e932fc9855d3dd16e5632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
@@ -149,12 +149,12 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>A simple Dissent exchange. </p>
 <p>Just broadcasts everyones message to everyone else </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a64af20932244ba0cc8332ce14deac3a7"></a>
+<a class="anchor" id="a8cec21fd1b0cc074c3831b22c1b05b1c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a64af20932244ba0cc8332ce14deac3a7">Dissent::Anonymity::NullRound::NullRound</a> </td>
+          <td class="memname"><a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a8cec21fd1b0cc074c3831b22c1b05b1c">Dissent::Anonymity::NullRound::NullRound</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
           <td class="paramname"><em>group</em>, </td>
@@ -162,8 +162,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
-          <td class="paramname"><em>creds</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;&#160;</td>
+          <td class="paramname"><em>ident</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -196,7 +196,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">group</td><td>Group used during this round </td></tr>
-    <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
+    <tr><td class="paramname">ident</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>unused </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
     <tr><td class="paramname">get_data</td><td>requests data to share during this session </td></tr>
@@ -253,7 +253,7 @@ Protected Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

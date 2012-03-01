@@ -280,9 +280,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>GetCount()
 : <a class="el" href="d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#ae7f027f54aeab423721179f40cdd18e8">Dissent::Utils::SignalCounter</a>
 </li>
-<li>GetCredentials()
-: <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad5ac89c49092f195a631b06050e21a3b">Dissent::Anonymity::Round</a>
-</li>
 <li>GetCryptoInteger()
 : <a class="el" href="dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a10d53320174654d76a528271940ddfad">Dissent::Crypto::CppIntegerData</a>
 </li>
@@ -306,7 +303,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>GetDhKey()
 : <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8c157e18b003a58e99f778f28e4b62a2">Dissent::Anonymity::Round</a>
-, <a class="el" href="d0/d50/classDissent_1_1Identity_1_1Credentials.html#a8309e7853903f0dd3ed3a7f8bbcf38b0">Dissent::Identity::Credentials</a>
+, <a class="el" href="dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a41e24785922f582a3407a44864076aca">Dissent::Identity::PrivateIdentity</a>
+, <a class="el" href="df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a85e1bdb0ec8a1dc7f6b80d2dfe40f51d">Dissent::Identity::PublicIdentity</a>
 </li>
 <li>GetDigestSize()
 : <a class="el" href="d8/d4c/classDissent_1_1Crypto_1_1CppHash.html#a5db60248a6f507aba47e1a70e2c2640a">Dissent::Crypto::CppHash</a>
@@ -367,6 +365,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a474410c52542e94ec033a952f3b0f8d3">Dissent::Connections::ConnectionManager</a>
 , <a class="el" href="d4/d21/classDissent_1_1Connections_1_1RelayAddress.html#a36354522356ad47ae89ba29e28c11256">Dissent::Connections::RelayAddress</a>
 , <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#adb04c35d34bb27ddc5962ccb5165b56a">Dissent::Identity::Group</a>
+, <a class="el" href="df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a672efa4bd83855b7e89fc38ab878ac6d">Dissent::Identity::PublicIdentity</a>
 , <a class="el" href="dd/d45/classDissent_1_1Messaging_1_1Request.html#a436a248536a2592229fc8a2349a5edbb">Dissent::Messaging::Request</a>
 , <a class="el" href="df/d79/classDissent_1_1Messaging_1_1Response.html#a86f8cb6291c598828b8c200bd48b6cd4">Dissent::Messaging::Response</a>
 , <a class="el" href="d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#a9bafea7005cbbaecaa787912b4d2df52">Dissent::Overlay::BaseOverlay</a>
@@ -376,10 +375,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d">Dissent::Identity::Group</a>
 </li>
 <li>GetInstance()
-: <a class="el" href="d4/d63/classDissent_1_1Utils_1_1Timer.html#aa29a688d54c6e3484827ccadd4f06381">Dissent::Utils::Timer</a>
+: <a class="el" href="d6/d44/classDissent_1_1Utils_1_1Time.html#a0917b033066a815ef254daf8a31a70c7">Dissent::Utils::Time</a>
+, <a class="el" href="d4/d63/classDissent_1_1Utils_1_1Timer.html#aa29a688d54c6e3484827ccadd4f06381">Dissent::Utils::Timer</a>
 , <a class="el" href="d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#aff14fbeb7d58e992163f16a05ea3cc57">Dissent::Applications::SessionFactory</a>
 , <a class="el" href="de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168">Dissent::Crypto::CryptoFactory</a>
-, <a class="el" href="d6/d44/classDissent_1_1Utils_1_1Time.html#a0917b033066a815ef254daf8a31a70c7">Dissent::Utils::Time</a>
 </li>
 <li>GetInt()
 : <a class="el" href="d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html#af3977a289018fb1262f0b15297bf60f8">Dissent::Crypto::CppRandom</a>
@@ -390,16 +389,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>GetIntegerData()
 : <a class="el" href="d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#a90d414bd25cb91d9cc960e6096d6c3d6">Dissent::Crypto::CppLibrary</a>
-, <a class="el" href="d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7b2fc7785b5845aea5fd06e578763b96">Dissent::Crypto::Library</a>
-, <a class="el" href="d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a11506e5c4a617375b5cdf50581fd1dc0">Dissent::Crypto::NullLibrary</a>
 , <a class="el" href="d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7d158ed5d71f99f7a22ee0d13b8f5077">Dissent::Crypto::Library</a>
 , <a class="el" href="d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#ae7782264195242ca5506491090c63f8e">Dissent::Crypto::NullLibrary</a>
+, <a class="el" href="d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#abe3ccbe9c2f431bd7a4a0ce3fa98ede3">Dissent::Crypto::CppLibrary</a>
 </li>
 <li>GetIP()
 : <a class="el" href="d8/d7e/classDissent_1_1Transports_1_1TcpAddress.html#a3de0887e8e79fb9b22a81c90285707ed">Dissent::Transports::TcpAddress</a>
 </li>
 <li>GetKey()
-: <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#a4a15a009d35fdfac866f031f4cb9b2ab">Dissent::Identity::Group</a>
+: <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#abbd60b510a6b444ffbfc623ea4764b6a">Dissent::Identity::Group</a>
 </li>
 <li>GetKeyShuffleData()
 : <a class="el" href="d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a6ea891d4d7ace05e0312c10f035f33aa">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>
@@ -432,9 +430,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>GetLocalId()
 : <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6">Dissent::Anonymity::Round</a>
 , <a class="el" href="da/d0e/classDissent_1_1Connections_1_1Connection.html#ac325fa46ae1e620f7a38783ddfde9208">Dissent::Connections::Connection</a>
-, <a class="el" href="d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html#a9fb78b383ebe9b4be03338aecd2d6bfd">Dissent::Connections::ForwardingSender</a>
-, <a class="el" href="d0/d50/classDissent_1_1Identity_1_1Credentials.html#a42d1b82144598248c94e1624ba79a66c">Dissent::Identity::Credentials</a>
 , <a class="el" href="db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#ac5eef96fd73f32a20fd6768f22facbb7">Dissent::Connections::IOverlaySender</a>
+, <a class="el" href="dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d">Dissent::Identity::PrivateIdentity</a>
+, <a class="el" href="d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html#a9fb78b383ebe9b4be03338aecd2d6bfd">Dissent::Connections::ForwardingSender</a>
 </li>
 <li>GetMessage()
 : <a class="el" href="df/d79/classDissent_1_1PeerReview_1_1Acknowledgement.html#af9b310bb4b5440ae57ea8dc9831535f8">Dissent::PeerReview::Acknowledgement</a>
@@ -449,11 +447,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a2a4450ebd45926cdabed5fd3b4a401d4">Dissent::Anonymity::RepeatingBulkRound</a>
 </li>
 <li>GetMethod()
-: <a class="el" href="d3/dbc/classDissent_1_1Web_1_1HttpRequest.html#abdb53328b8f9485d72c7d89194d595fa">Dissent::Web::HttpRequest</a>
+: <a class="el" href="d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#adaeaa7481288af492fb3014fac43d8f2">Dissent::Connections::DefaultNetwork</a>
 , <a class="el" href="d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a005a8fa23c4b539ec0c3eddc64dbfbc0">Dissent::Connections::EmptyNetwork</a>
-, <a class="el" href="dd/d45/classDissent_1_1Messaging_1_1Request.html#a9e732918dc75d1211c85178bad230a5e">Dissent::Messaging::Request</a>
 , <a class="el" href="db/d5e/classDissent_1_1Connections_1_1Network.html#a07ab410ff0cb3f6a688a55bb2d193b7e">Dissent::Connections::Network</a>
-, <a class="el" href="d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#adaeaa7481288af492fb3014fac43d8f2">Dissent::Connections::DefaultNetwork</a>
+, <a class="el" href="d3/dbc/classDissent_1_1Web_1_1HttpRequest.html#abdb53328b8f9485d72c7d89194d595fa">Dissent::Web::HttpRequest</a>
+, <a class="el" href="dd/d45/classDissent_1_1Messaging_1_1Request.html#a9e732918dc75d1211c85178bad230a5e">Dissent::Messaging::Request</a>
 </li>
 <li>GetMyDescriptor()
 : <a class="el" href="db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#adeee8a23888974401094a73075b4b723">Dissent::Anonymity::BulkRound</a>
@@ -485,6 +483,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#ac05c95cfcfcb17d51ad48fb9e585eb8c">Dissent::Crypto::CppDiffieHellman</a>
 , <a class="el" href="d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#ae6f259377d9cc5c525a8ca7533d347af">Dissent::Crypto::DiffieHellman</a>
 </li>
+<li>GetPrivateIdentity()
+: <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ae690ed273da72c46fbc64b65de2912a1">Dissent::Anonymity::Round</a>
+</li>
 <li>GetPrivateOuterKey()
 : <a class="el" href="db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#aef9d986092165451ef92d4ce02fd545d">Dissent::Anonymity::ShuffleRoundBlame</a>
 </li>
@@ -501,16 +502,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>GetPublicKey()
 : <a class="el" href="df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a98f160241b852147ce449f77ebbae2d9">Dissent::Crypto::CppPublicKey</a>
-, <a class="el" href="de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#acca8fdfff4f3ceecf4d5c7ebb9720aa1">Dissent::Crypto::NullPublicKey</a>
 , <a class="el" href="d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#a479f9ecbf1f5f22bae88e9e853b7a831">Dissent::Crypto::AsymmetricKey</a>
+, <a class="el" href="de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#acca8fdfff4f3ceecf4d5c7ebb9720aa1">Dissent::Crypto::NullPublicKey</a>
 </li>
 <li>GetPublicOuterKeys()
 : <a class="el" href="db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ab655c97c9a37483aadb4e446ee972d49">Dissent::Anonymity::ShuffleRoundBlame</a>
 </li>
 <li>GetRandomNumberGenerator()
 : <a class="el" href="d1/d2f/classDissent_1_1Crypto_1_1Library.html#a9e1c0ad03d0fa2e72718549b50d3c16f">Dissent::Crypto::Library</a>
-, <a class="el" href="d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#abcdee0c99a9685cf73d2dcd5a1177526">Dissent::Crypto::CppLibrary</a>
 , <a class="el" href="d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#ab38ecb351c282df557632b3cef528abe">Dissent::Crypto::NullLibrary</a>
+, <a class="el" href="d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#abcdee0c99a9685cf73d2dcd5a1177526">Dissent::Crypto::CppLibrary</a>
 </li>
 <li>GetReasons()
 : <a class="el" href="de/da2/classDissent_1_1Anonymity_1_1ShuffleBlamer.html#a95dca803afbcbcfdad0c10b3351cf520">Dissent::Anonymity::ShuffleBlamer</a>
@@ -525,15 +526,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="d0/db3/classDissent_1_1Connections_1_1Bootstrapper.html#ad01a0633ea1bb04bc8d1ed57e066d770">Dissent::Connections::Bootstrapper</a>
 </li>
 <li>GetRemoteId()
-: <a class="el" href="d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html#a4ebcebb9287a54d050f1971b60e22a38">Dissent::Connections::ForwardingSender</a>
-, <a class="el" href="da/d0e/classDissent_1_1Connections_1_1Connection.html#a8cb1ea8cb801ec94c60d6a9579eed475">Dissent::Connections::Connection</a>
+: <a class="el" href="da/d0e/classDissent_1_1Connections_1_1Connection.html#a8cb1ea8cb801ec94c60d6a9579eed475">Dissent::Connections::Connection</a>
+, <a class="el" href="d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html#a4ebcebb9287a54d050f1971b60e22a38">Dissent::Connections::ForwardingSender</a>
 , <a class="el" href="db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9">Dissent::Connections::IOverlaySender</a>
 </li>
 <li>GetRemotePersistentAddress()
 : <a class="el" href="dd/d7a/classDissent_1_1Transports_1_1Edge.html#af99ec002301b4b963e160da449bea948">Dissent::Transports::Edge</a>
 </li>
 <li>GetRoster()
-: <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#a47c8cfbc3c7ccc54a9384cfab49e0add">Dissent::Identity::Group</a>
+: <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#ae136fa04ec12f2d18c0ef06d2bd7409d">Dissent::Identity::Group</a>
 </li>
 <li>GetRoundId()
 : <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4">Dissent::Anonymity::Round</a>
@@ -565,9 +566,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 , <a class="el" href="d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html#a6c0190290798ec38016d5028c20f727e">Dissent::Anonymity::SessionManager</a>
 </li>
 <li>GetSharedSecret()
-: <a class="el" href="d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a3450402453ab07a73404751ee933b9f0">Dissent::Crypto::DiffieHellman</a>
+: <a class="el" href="d3/da5/classDissent_1_1Crypto_1_1NullDiffieHellman.html#a7610d377ac3cf774bdfd4ee29c34dfcc">Dissent::Crypto::NullDiffieHellman</a>
+, <a class="el" href="d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a3450402453ab07a73404751ee933b9f0">Dissent::Crypto::DiffieHellman</a>
 , <a class="el" href="da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#a8653a51af527316b0f6291ecd9eef92b">Dissent::Crypto::CppDiffieHellman</a>
-, <a class="el" href="d3/da5/classDissent_1_1Crypto_1_1NullDiffieHellman.html#a7610d377ac3cf774bdfd4ee29c34dfcc">Dissent::Crypto::NullDiffieHellman</a>
 </li>
 <li>GetShuffleCipherText()
 : <a class="el" href="db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a813681edf4203d1758f6d913f798a282">Dissent::Anonymity::ShuffleRoundBlame</a>
@@ -576,8 +577,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#abb857c9141aa3bc2e2e988eae24575d2">Dissent::Anonymity::ShuffleRoundBlame</a>
 </li>
 <li>GetShuffleRound()
-: <a class="el" href="db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a58d8036041e4d42d11442a9a5ac718a5">Dissent::Anonymity::BulkRound</a>
-, <a class="el" href="d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a5b4e69089b5f955c0278637bb163742d">Dissent::Anonymity::RepeatingBulkRound</a>
+: <a class="el" href="d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a5b4e69089b5f955c0278637bb163742d">Dissent::Anonymity::RepeatingBulkRound</a>
+, <a class="el" href="db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a58d8036041e4d42d11442a9a5ac718a5">Dissent::Anonymity::BulkRound</a>
 </li>
 <li>GetShufflers()
 : <a class="el" href="df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81">Dissent::Anonymity::ShuffleRound</a>
@@ -590,18 +591,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="d0/d0f/classDissent_1_1PeerReview_1_1Entry.html#ab0cc07cda15a1731cff85d5d56686fdf">Dissent::PeerReview::Entry</a>
 </li>
 <li>GetSigningKey()
-: <a class="el" href="d0/d50/classDissent_1_1Identity_1_1Credentials.html#a0590a68dee3a1aa7068edd48587a9074">Dissent::Identity::Credentials</a>
-, <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9">Dissent::Anonymity::Round</a>
+: <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9">Dissent::Anonymity::Round</a>
+, <a class="el" href="dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#af817993c826bde5d060ebc8a8c668119">Dissent::Identity::PrivateIdentity</a>
 </li>
 <li>GetSlotRngByteOffset()
 : <a class="el" href="d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#ad7ae0057c5df99d9be759a0d75f5db81">Dissent::Anonymity::Tolerant::AlibiData</a>
 </li>
 <li>GetState()
-: <a class="el" href="d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a63f18c483778e4c9dff1b353a38082b2">Dissent::Anonymity::RepeatingBulkRound</a>
-, <a class="el" href="db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#adef46c1467967d3fe5f0853382446a35">Dissent::Anonymity::BulkRound</a>
-, <a class="el" href="df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a292bc6e4685218326437ff2b1a7589af">Dissent::Anonymity::ShuffleRound</a>
-, <a class="el" href="d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ad25bf23f164795d4ab968068140d3c8f">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>
+: <a class="el" href="db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#adef46c1467967d3fe5f0853382446a35">Dissent::Anonymity::BulkRound</a>
 , <a class="el" href="da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#aaae3fe32296986eb691ca3683672b766">Dissent::Anonymity::Tolerant::TolerantTreeRound</a>
+, <a class="el" href="d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ad25bf23f164795d4ab968068140d3c8f">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>
+, <a class="el" href="df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a292bc6e4685218326437ff2b1a7589af">Dissent::Anonymity::ShuffleRound</a>
+, <a class="el" href="d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a63f18c483778e4c9dff1b353a38082b2">Dissent::Anonymity::RepeatingBulkRound</a>
 </li>
 <li>GetStoppedReason()
 : <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad8e7f5e946afaebb18854ed5185bef9d">Dissent::Anonymity::Round</a>
@@ -612,13 +613,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>GetSubgroupPolicy()
 : <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#ab035fa57495232cd7694235e9af73912">Dissent::Identity::Group</a>
 </li>
+<li>GetSuperPeer()
+: <a class="el" href="dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a7ee723e2d568804e92d7b179fb58dc43">Dissent::Identity::PrivateIdentity</a>
+, <a class="el" href="df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a9b9179ca25e8611a2b2a9bb8e4949d0d">Dissent::Identity::PublicIdentity</a>
+</li>
 <li>GetThreadingType()
 : <a class="el" href="de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d">Dissent::Crypto::CryptoFactory</a>
 </li>
 <li>GetType()
-: <a class="el" href="df/d79/classDissent_1_1Messaging_1_1Response.html#a3a5fdc43c636e6934de7729f2f3791d0">Dissent::Messaging::Response</a>
+: <a class="el" href="dd/d45/classDissent_1_1Messaging_1_1Request.html#a09014ba48eee9de49218481a5333d28f">Dissent::Messaging::Request</a>
+, <a class="el" href="df/d79/classDissent_1_1Messaging_1_1Response.html#a3a5fdc43c636e6934de7729f2f3791d0">Dissent::Messaging::Response</a>
 , <a class="el" href="d0/d0f/classDissent_1_1PeerReview_1_1Entry.html#af51298d71c38df4a97003b6c22b7dc2c">Dissent::PeerReview::Entry</a>
-, <a class="el" href="dd/d45/classDissent_1_1Messaging_1_1Request.html#a09014ba48eee9de49218481a5333d28f">Dissent::Messaging::Request</a>
 </li>
 <li>GetUrl()
 : <a class="el" href="d3/dbc/classDissent_1_1Web_1_1HttpRequest.html#ac62c2bc5dafaad58167734f76cdac953">Dissent::Web::HttpRequest</a>
@@ -626,8 +631,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>GetUserOutputBit()
 : <a class="el" href="d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#a51244bee740568bef08ed5336a49bc62">Dissent::Anonymity::Tolerant::MessageHistory</a>
 </li>
+<li>GetVerificationKey()
+: <a class="el" href="df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a799b98322fe42f6fe309cbb3a1072470">Dissent::Identity::PublicIdentity</a>
+</li>
 <li>Group()
-: <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#a1cff2cb74f0b2475ac8d512c52858f42">Dissent::Identity::Group</a>
+: <a class="el" href="d1/da7/classDissent_1_1Identity_1_1Group.html#a5d39b2915dd841af9112ba99b189eca1">Dissent::Identity::Group</a>
 </li>
 <li>GroupData()
 : <a class="el" href="df/dce/classDissent_1_1Identity_1_1GroupData.html#aa7864623f4617ca2c774512c71ee3ef0">Dissent::Identity::GroupData</a>
@@ -643,7 +651,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:06 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:05 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

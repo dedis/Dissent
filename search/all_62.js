@@ -26,7 +26,7 @@ var searchData=
   ['bufferedgelistener',['BufferEdgeListener',['../d1/da5/classDissent_1_1Transports_1_1BufferEdgeListener.html',1,'Dissent::Transports']]],
   ['buffersink',['BufferSink',['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html',1,'Dissent::Messaging']]],
   ['build',['Build',['../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1bcc40285644891338a9c3e78676fdd',1,'Dissent::Messaging::Response']]],
-  ['bulkround',['BulkRound',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a93eac544c717bf2733490b433f1127af',1,'Dissent::Anonymity::BulkRound']]],
+  ['bulkround',['BulkRound',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a0dff99966968ffa6e030bd2ddb395d2b',1,'Dissent::Anonymity::BulkRound']]],
   ['bulkround',['BulkRound',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html',1,'Dissent::Anonymity']]],
   ['bulkroundbaddescriptor',['BulkRoundBadDescriptor',['../d4/d24/classDissent_1_1Tests_1_1BulkRoundBadDescriptor.html',1,'Dissent::Tests']]],
   ['bulkroundbadshuffler',['BulkRoundBadShuffler',['../d7/d16/classDissent_1_1Tests_1_1BulkRoundBadShuffler.html',1,'Dissent::Tests']]],

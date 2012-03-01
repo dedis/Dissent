@@ -171,8 +171,8 @@ typedef <a class="el" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html">
 int, QByteArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BlameEntry</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a93eac544c717bf2733490b433f1127af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a93eac544c717bf2733490b433f1127af">BulkRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
-<tr class="memdesc:a93eac544c717bf2733490b433f1127af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a93eac544c717bf2733490b433f1127af"></a><br/></td></tr>
+<tr class="memitem:a0dff99966968ffa6e030bd2ddb395d2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a0dff99966968ffa6e030bd2ddb395d2b">BulkRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;ident, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
+<tr class="memdesc:a0dff99966968ffa6e030bd2ddb395d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0dff99966968ffa6e030bd2ddb395d2b"></a><br/></td></tr>
 <tr class="memitem:a2cfc9e8c37aabcda8fb7aa5db616578b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cfc9e8c37aabcda8fb7aa5db616578b"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a2cfc9e8c37aabcda8fb7aa5db616578b">~BulkRound</a> ()</td></tr>
 <tr class="memdesc:a2cfc9e8c37aabcda8fb7aa5db616578b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
@@ -247,12 +247,12 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <p>The V1 bulk protocol consists of a shuffle round and a bulk transmission phase. The shuffle round includes an anonymous DH key and a hash for each message transmitted by other peers. The final permuted position of the DH key and hash is their position or slot in the bulk message. Using the RNG, a member generates an xor mask for the slot of the anonymous sender. If the member owns the slot, then they first calculate all others masks, xor them together, and then xor the cleartext to arrive at their mask. Each member accumulates the masks in the appropriate slot order and distributes them to all other peers. Upon accumulating all xor masks and combining them via xor operations the cleartext messages are revealed.</p>
 <p>Bulk V1 support application broadcasting by allowing a single member (in the current code, this is the leader) accumulate and aggregate all xor masks and then distribute the result to all other members. If this member discovers a fault in any message, it distributes all messages to all members so they can replay the round and find the faulting peer and enter a shuffle phase, as done in the non-application broadcasting applicaiton. If the aggregated message fails checks or there is no fault in the logs, the leader has equivocated and must be removed (unimplemented). Application broadcasting is the reason for hashes of the xor masks and the cleartext messages. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a93eac544c717bf2733490b433f1127af"></a>
+<a class="anchor" id="a0dff99966968ffa6e030bd2ddb395d2b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a93eac544c717bf2733490b433f1127af">Dissent::Anonymity::BulkRound::BulkRound</a> </td>
+          <td class="memname"><a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a0dff99966968ffa6e030bd2ddb395d2b">Dissent::Anonymity::BulkRound::BulkRound</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
           <td class="paramname"><em>group</em>, </td>
@@ -260,8 +260,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
-          <td class="paramname"><em>creds</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;&#160;</td>
+          <td class="paramname"><em>ident</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -300,7 +300,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">group</td><td>Group used during this round </td></tr>
-    <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
+    <tr><td class="paramname">ident</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
     <tr><td class="paramname">get_data</td><td>requests data to share during this session </td></tr>
@@ -734,7 +734,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

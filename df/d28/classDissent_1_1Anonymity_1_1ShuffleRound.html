@@ -178,8 +178,8 @@ Public Types</h2></td></tr>
 <tr class="memdesc:ae158a8f9b32b0c4b10d7130b2399ef54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various message types sent and received. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a68dff3bf10be9bcbaaaebde6c445f59c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a68dff3bf10be9bcbaaaebde6c445f59c">ShuffleRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data)</td></tr>
-<tr class="memdesc:a68dff3bf10be9bcbaaaebde6c445f59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a68dff3bf10be9bcbaaaebde6c445f59c"></a><br/></td></tr>
+<tr class="memitem:a95234126f31ac2cede2254eea251579e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e">ShuffleRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;ident, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data)</td></tr>
+<tr class="memdesc:a95234126f31ac2cede2254eea251579e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a95234126f31ac2cede2254eea251579e"></a><br/></td></tr>
 <tr class="memitem:a5781f53cb4911a8b89e6f66d026e4032"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5781f53cb4911a8b89e6f66d026e4032"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a5781f53cb4911a8b89e6f66d026e4032">~ShuffleRound</a> ()</td></tr>
 <tr class="memdesc:a5781f53cb4911a8b89e6f66d026e4032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br/></td></tr>
@@ -383,12 +383,12 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <p>Each member broadcasts to a go along with the hash of all broadcast messages received thus far if their inner encrypted message is present or a no go if not. If all members submit a go and have the same broadcast message hash, each shuffler reveals their private keys. Otherwise peers begin a blame phase and broadcast their logs to each other. Afterward, each peer distributes the hash of the messages and the signature, so that each other member can verify they are viewing the same state. Each peer will replay the round and determine the faulty peer.</p>
 <p>The blame phase is still being evolved. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a68dff3bf10be9bcbaaaebde6c445f59c"></a>
+<a class="anchor" id="a95234126f31ac2cede2254eea251579e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a68dff3bf10be9bcbaaaebde6c445f59c">Dissent::Anonymity::ShuffleRound::ShuffleRound</a> </td>
+          <td class="memname"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e">Dissent::Anonymity::ShuffleRound::ShuffleRound</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
           <td class="paramname"><em>group</em>, </td>
@@ -396,8 +396,8 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
-          <td class="paramname"><em>creds</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;&#160;</td>
+          <td class="paramname"><em>ident</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -430,7 +430,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">group</td><td>Group used during this round </td></tr>
-    <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
+    <tr><td class="paramname">ident</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
     <tr><td class="paramname">get_data</td><td>requests data to share during this session </td></tr>
@@ -968,7 +968,7 @@ QVector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

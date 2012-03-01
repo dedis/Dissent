@@ -108,87 +108,88 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00013"></a>00013 <span class="preprocessor">#include &quot;Connections/RelayForwarder.hpp&quot;</span>
 <a name="l00014"></a>00014 <span class="preprocessor">#include &quot;Identity/Group.hpp&quot;</span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Identity/GroupHolder.hpp&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;Messaging/RpcHandler.hpp&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>Dissent {
-<a name="l00019"></a>00019 <span class="keyword">namespace </span>ClientServer {
-<a name="l00020"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html">00020</a>   <span class="keyword">class </span><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html">CSNetwork</a> : <span class="keyword">public</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html">Connections::DefaultNetwork</a> {
-<a name="l00021"></a>00021     <span class="keyword">public</span>:
-<a name="l00022"></a>00022       <span class="keyword">typedef</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html" title="Manages incoming and outgoing connections -- A node should only send requests on outgoing connections...">Connections::ConnectionManager</a> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html" title="Manages incoming and outgoing connections -- A node should only send requests on outgoing connections...">ConnectionManager</a>;
-<a name="l00023"></a>00023       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
-<a name="l00024"></a>00024       <span class="keyword">typedef</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html" title="Does the hard work in forwarding packets over the overlay.">Connections::RelayForwarder</a> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html" title="Does the hard work in forwarding packets over the overlay.">RelayForwarder</a>;
-<a name="l00025"></a>00025       <span class="keyword">typedef</span> <a class="code" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html" title="Provides a tuple for 3 items.">Identity::GroupContainer</a> <a class="code" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html" title="Provides a tuple for 3 items.">GroupContainer</a>;
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;Identity/PublicIdentity.hpp&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;Messaging/RpcHandler.hpp&quot;</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="keyword">namespace </span>Dissent {
+<a name="l00020"></a>00020 <span class="keyword">namespace </span>ClientServer {
+<a name="l00021"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html">00021</a>   <span class="keyword">class </span><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html">CSNetwork</a> : <span class="keyword">public</span> <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html">Connections::DefaultNetwork</a> {
+<a name="l00022"></a>00022     <span class="keyword">public</span>:
+<a name="l00023"></a>00023       <span class="keyword">typedef</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html" title="Manages incoming and outgoing connections -- A node should only send requests on outgoing connections...">Connections::ConnectionManager</a> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html" title="Manages incoming and outgoing connections -- A node should only send requests on outgoing connections...">ConnectionManager</a>;
+<a name="l00024"></a>00024       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
+<a name="l00025"></a>00025       <span class="keyword">typedef</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html" title="Does the hard work in forwarding packets over the overlay.">Connections::RelayForwarder</a> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html" title="Does the hard work in forwarding packets over the overlay.">RelayForwarder</a>;
 <a name="l00026"></a>00026       <span class="keyword">typedef</span> <a class="code" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html" title="Maintains an evolving group.">Identity::GroupHolder</a> <a class="code" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html" title="Maintains an evolving group.">GroupHolder</a>;
-<a name="l00027"></a>00027       <span class="keyword">typedef</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">Messaging::RpcHandler</a> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">RpcHandler</a>;
-<a name="l00028"></a>00028       <span class="keyword">typedef</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">Messaging::ISender</a> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a>;
-<a name="l00029"></a>00029 
-<a name="l00036"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927">00036</a>       <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927" title="Constructor.">CSNetwork</a>(<span class="keyword">const</span> QSharedPointer&lt;ConnectionManager&gt; &amp;cm,
-<a name="l00037"></a>00037           <span class="keyword">const</span> QSharedPointer&lt;RpcHandler&gt; &amp;rpc,
-<a name="l00038"></a>00038           <span class="keyword">const</span> QSharedPointer&lt;GroupHolder&gt; &amp;group_holder) :
-<a name="l00039"></a>00039         <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a41e3b094396c4b65a8c93f770deb5aa1" title="Constructor.">DefaultNetwork</a>(cm, rpc),
-<a name="l00040"></a>00040         _group_holder(group_holder),
-<a name="l00041"></a>00041         _forwarder(<a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html" title="Does the hard work in forwarding packets over the overlay.">RelayForwarder</a>::Get(cm-&gt;GetId(), cm-&gt;GetConnectionTable(), rpc))
-<a name="l00042"></a>00042       {
-<a name="l00043"></a>00043       }
-<a name="l00044"></a>00044 
-<a name="l00048"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#adab08e78eb708721925d4c03fb18e7a2">00048</a>       <span class="keyword">virtual</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#adab08e78eb708721925d4c03fb18e7a2" title="Virtual destructor.">~CSNetwork</a>() {}
-<a name="l00049"></a>00049 
-<a name="l00056"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a9446eb740dd356793d3ae9289c6700f0">00056</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a9446eb740dd356793d3ae9289c6700f0" title="Send a notification.">SendNotification</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QString &amp;method,
-<a name="l00057"></a>00057           <span class="keyword">const</span> QVariant &amp;data)
-<a name="l00058"></a>00058       {
-<a name="l00059"></a>00059         GetRpcHandler()-&gt;SendNotification(GetSender(to), method, data);
-<a name="l00060"></a>00060       }
-<a name="l00061"></a>00061 
-<a name="l00069"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e">00069</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e" title="Send a request.">SendRequest</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QString &amp;method,
-<a name="l00070"></a>00070           <span class="keyword">const</span> QVariant &amp;data, QSharedPointer&lt;ResponseHandler&gt; &amp;callback)
-<a name="l00071"></a>00071       {
-<a name="l00072"></a>00072         GetRpcHandler()-&gt;SendRequest(GetSender(to), method, data, callback);
-<a name="l00073"></a>00073       }
-<a name="l00074"></a>00074 
-<a name="l00080"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e">00080</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">Send</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data)
-<a name="l00081"></a>00081       {
-<a name="l00082"></a>00082         <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">DefaultNetwork::Send</a>(GetSender(to), data);
-<a name="l00083"></a>00083       }
-<a name="l00084"></a>00084 
-<a name="l00089"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#afc4be4f82685756fc8753ace83ef94a3">00089</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#afc4be4f82685756fc8753ace83ef94a3" title="Send a message to all group members.">Broadcast</a>(<span class="keyword">const</span> QByteArray &amp;data)
-<a name="l00090"></a>00090       {
-<a name="l00091"></a>00091         <span class="keywordflow">foreach</span>(<span class="keyword">const</span> <a class="code" href="../../d8/d17/structDissent_1_1Utils_1_1Triple.html" title="Provides a tuple for 3 items.">GroupContainer</a> &amp;gc, _group_holder-&gt;GetGroup().GetRoster()) {
-<a name="l00092"></a>00092           <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">DefaultNetwork::Send</a>(GetSender(gc.first), data);
-<a name="l00093"></a>00093         }
-<a name="l00094"></a>00094       }
-<a name="l00095"></a>00095 
-<a name="l00099"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a8d66aa42a47e757d5a8be2cf82e4574b">00099</a>       <span class="keyword">virtual</span> Network *<a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a8d66aa42a47e757d5a8be2cf82e4574b" title="Returns a copy.">Clone</a>()<span class="keyword"> const</span>
-<a name="l00100"></a>00100 <span class="keyword">      </span>{
-<a name="l00101"></a>00101         Network *net = <span class="keyword">new</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927" title="Constructor.">CSNetwork</a>(<a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#adfec973abe9adc4ea8120147abd44330" title="Returns a connection manager object capable of making connections.">GetConnectionManager</a>(),
-<a name="l00102"></a>00102             GetRpcHandler(), _group_holder);
-<a name="l00103"></a>00103         net-&gt;SetHeaders(<a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a88dd974bfa2e6991af99709fa6a744f5" title="Returns the headers.">GetHeaders</a>());
-<a name="l00104"></a>00104         net-&gt;SetMethod(<a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#adaeaa7481288af492fb3014fac43d8f2" title="Returns the destination method.">GetMethod</a>());
-<a name="l00105"></a>00105         <span class="keywordflow">return</span> net;
-<a name="l00106"></a>00106       }
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108     <span class="keyword">protected</span>:
-<a name="l00109"></a>00109       <span class="keyword">inline</span> QSharedPointer&lt;ISender&gt; GetSender(<span class="keyword">const</span> Id &amp;to)
-<a name="l00110"></a>00110       {
-<a name="l00111"></a>00111         QSharedPointer&lt;ISender&gt; sender = <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a957d3004185257791bf47410029f92a4" title="Returns the connection matching to the Id or 0 if none exists.">GetConnection</a>(to);
-<a name="l00112"></a>00112         <span class="keywordflow">if</span>(!sender) {
-<a name="l00113"></a>00113           sender = _forwarder-&gt;GetSender(to);
-<a name="l00114"></a>00114         }
-<a name="l00115"></a>00115         <span class="keywordflow">return</span> sender;
-<a name="l00116"></a>00116       }
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118     <span class="keyword">private</span>:
-<a name="l00119"></a>00119       QSharedPointer&lt;GroupHolder&gt; _group_holder;
-<a name="l00120"></a>00120       QSharedPointer&lt;RelayForwarder&gt; _forwarder;
-<a name="l00121"></a>00121   };
-<a name="l00122"></a>00122 }
+<a name="l00027"></a>00027       <span class="keyword">typedef</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">Identity::PublicIdentity</a> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a>;
+<a name="l00028"></a>00028       <span class="keyword">typedef</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">Messaging::RpcHandler</a> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">RpcHandler</a>;
+<a name="l00029"></a>00029       <span class="keyword">typedef</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">Messaging::ISender</a> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a>;
+<a name="l00030"></a>00030 
+<a name="l00037"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927">00037</a>       <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927" title="Constructor.">CSNetwork</a>(<span class="keyword">const</span> QSharedPointer&lt;ConnectionManager&gt; &amp;cm,
+<a name="l00038"></a>00038           <span class="keyword">const</span> QSharedPointer&lt;RpcHandler&gt; &amp;rpc,
+<a name="l00039"></a>00039           <span class="keyword">const</span> QSharedPointer&lt;GroupHolder&gt; &amp;group_holder) :
+<a name="l00040"></a>00040         <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a41e3b094396c4b65a8c93f770deb5aa1" title="Constructor.">DefaultNetwork</a>(cm, rpc),
+<a name="l00041"></a>00041         _group_holder(group_holder),
+<a name="l00042"></a>00042         _forwarder(<a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html" title="Does the hard work in forwarding packets over the overlay.">RelayForwarder</a>::Get(cm-&gt;GetId(), cm-&gt;GetConnectionTable(), rpc))
+<a name="l00043"></a>00043       {
+<a name="l00044"></a>00044       }
+<a name="l00045"></a>00045 
+<a name="l00049"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#adab08e78eb708721925d4c03fb18e7a2">00049</a>       <span class="keyword">virtual</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#adab08e78eb708721925d4c03fb18e7a2" title="Virtual destructor.">~CSNetwork</a>() {}
+<a name="l00050"></a>00050 
+<a name="l00057"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a9446eb740dd356793d3ae9289c6700f0">00057</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a9446eb740dd356793d3ae9289c6700f0" title="Send a notification.">SendNotification</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QString &amp;method,
+<a name="l00058"></a>00058           <span class="keyword">const</span> QVariant &amp;data)
+<a name="l00059"></a>00059       {
+<a name="l00060"></a>00060         GetRpcHandler()-&gt;SendNotification(GetSender(to), method, data);
+<a name="l00061"></a>00061       }
+<a name="l00062"></a>00062 
+<a name="l00070"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e">00070</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e" title="Send a request.">SendRequest</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QString &amp;method,
+<a name="l00071"></a>00071           <span class="keyword">const</span> QVariant &amp;data, QSharedPointer&lt;ResponseHandler&gt; &amp;callback)
+<a name="l00072"></a>00072       {
+<a name="l00073"></a>00073         GetRpcHandler()-&gt;SendRequest(GetSender(to), method, data, callback);
+<a name="l00074"></a>00074       }
+<a name="l00075"></a>00075 
+<a name="l00081"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e">00081</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">Send</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data)
+<a name="l00082"></a>00082       {
+<a name="l00083"></a>00083         <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">DefaultNetwork::Send</a>(GetSender(to), data);
+<a name="l00084"></a>00084       }
+<a name="l00085"></a>00085 
+<a name="l00090"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#afc4be4f82685756fc8753ace83ef94a3">00090</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#afc4be4f82685756fc8753ace83ef94a3" title="Send a message to all group members.">Broadcast</a>(<span class="keyword">const</span> QByteArray &amp;data)
+<a name="l00091"></a>00091       {
+<a name="l00092"></a>00092         <span class="keywordflow">foreach</span>(<span class="keyword">const</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a> &amp;gc, _group_holder-&gt;GetGroup().GetRoster()) {
+<a name="l00093"></a>00093           <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">DefaultNetwork::Send</a>(GetSender(gc.<a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a672efa4bd83855b7e89fc38ab878ac6d" title="Returns the node&#39;s Id.">GetId</a>()), data);
+<a name="l00094"></a>00094         }
+<a name="l00095"></a>00095       }
+<a name="l00096"></a>00096 
+<a name="l00100"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a8d66aa42a47e757d5a8be2cf82e4574b">00100</a>       <span class="keyword">virtual</span> Network *<a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a8d66aa42a47e757d5a8be2cf82e4574b" title="Returns a copy.">Clone</a>()<span class="keyword"> const</span>
+<a name="l00101"></a>00101 <span class="keyword">      </span>{
+<a name="l00102"></a>00102         Network *net = <span class="keyword">new</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927" title="Constructor.">CSNetwork</a>(<a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#adfec973abe9adc4ea8120147abd44330" title="Returns a connection manager object capable of making connections.">GetConnectionManager</a>(),
+<a name="l00103"></a>00103             GetRpcHandler(), _group_holder);
+<a name="l00104"></a>00104         net-&gt;SetHeaders(<a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a88dd974bfa2e6991af99709fa6a744f5" title="Returns the headers.">GetHeaders</a>());
+<a name="l00105"></a>00105         net-&gt;SetMethod(<a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#adaeaa7481288af492fb3014fac43d8f2" title="Returns the destination method.">GetMethod</a>());
+<a name="l00106"></a>00106         <span class="keywordflow">return</span> net;
+<a name="l00107"></a>00107       }
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109     <span class="keyword">protected</span>:
+<a name="l00110"></a>00110       <span class="keyword">inline</span> QSharedPointer&lt;ISender&gt; GetSender(<span class="keyword">const</span> Id &amp;to)
+<a name="l00111"></a>00111       {
+<a name="l00112"></a>00112         QSharedPointer&lt;ISender&gt; sender = <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a957d3004185257791bf47410029f92a4" title="Returns the connection matching to the Id or 0 if none exists.">GetConnection</a>(to);
+<a name="l00113"></a>00113         <span class="keywordflow">if</span>(!sender) {
+<a name="l00114"></a>00114           sender = _forwarder-&gt;GetSender(to);
+<a name="l00115"></a>00115         }
+<a name="l00116"></a>00116         <span class="keywordflow">return</span> sender;
+<a name="l00117"></a>00117       }
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119     <span class="keyword">private</span>:
+<a name="l00120"></a>00120       QSharedPointer&lt;GroupHolder&gt; _group_holder;
+<a name="l00121"></a>00121       QSharedPointer&lt;RelayForwarder&gt; _forwarder;
+<a name="l00122"></a>00122   };
 <a name="l00123"></a>00123 }
-<a name="l00124"></a>00124 
-<a name="l00125"></a>00125 <span class="preprocessor">#endif</span>
+<a name="l00124"></a>00124 }
+<a name="l00125"></a>00125 
+<a name="l00126"></a>00126 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

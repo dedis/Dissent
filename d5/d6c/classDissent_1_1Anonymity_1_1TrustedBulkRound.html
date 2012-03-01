@@ -135,8 +135,8 @@ Public Types</h2></td></tr>
 typedef <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Crypto::Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Integer</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0870ec87a65c3bc59492505625e3bcec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d6c/classDissent_1_1Anonymity_1_1TrustedBulkRound.html#a0870ec87a65c3bc59492505625e3bcec">TrustedBulkRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;creds, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
-<tr class="memdesc:a0870ec87a65c3bc59492505625e3bcec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0870ec87a65c3bc59492505625e3bcec"></a><br/></td></tr>
+<tr class="memitem:a858fbea91b52aca448b24b5cf0f14c8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d6c/classDissent_1_1Anonymity_1_1TrustedBulkRound.html#a858fbea91b52aca448b24b5cf0f14c8c">TrustedBulkRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;ident, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
+<tr class="memdesc:a858fbea91b52aca448b24b5cf0f14c8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a858fbea91b52aca448b24b5cf0f14c8c"></a><br/></td></tr>
 <tr class="memitem:a5bb74ae0644bf9f8a16f43f8c319a924"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d6c/classDissent_1_1Anonymity_1_1TrustedBulkRound.html#a5bb74ae0644bf9f8a16f43f8c319a924">HandleDisconnect</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
 <tr class="memdesc:a5bb74ae0644bf9f8a16f43f8c319a924"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the ConnectionTable has a disconnect, the round may need to react.  <a href="#a5bb74ae0644bf9f8a16f43f8c319a924"></a><br/></td></tr>
 <tr class="memitem:ae229c8e677a5273b1c8765678b5198ec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae229c8e677a5273b1c8765678b5198ec"></a>
@@ -152,12 +152,12 @@ Protected Member Functions</h2></td></tr>
 <p>The "V3" bulk protocol builds on the "V2" by reusing the shuffle to exchange public signing keys; however, the anonymous DiffieHellman keys are no longer used. The cleartext messages are still of the same form: phase, next phase message length, message, and signature. The difference is in how the xor texts are generated. This model assumes that only a core set of resources are trusted and allows for pregeneration of xor masks. A peer can generate sufficient bits, share them with another peer who will transmit the bits for them, and then go offline.</p>
 <p>To generate the bits, each non-server creates a RNG for each server peer using DH shared secret created as a result of combining their private DH key with the servers' public DH. Each server creates a RNG for each peer (server and non-server) using their private DH and with each peers' public DH. Each RNG is used to generate a message spanning the length of all anonymous messages in the given phase. Each peer than combines via xor these masks to generate an xor mask. The member then xors their message into their space inside the message. This final message is distributed to all other peers. Upon collecting all messages, An xor upon all of them will reveal the original messages for all peers. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a0870ec87a65c3bc59492505625e3bcec"></a>
+<a class="anchor" id="a858fbea91b52aca448b24b5cf0f14c8c"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/d6c/classDissent_1_1Anonymity_1_1TrustedBulkRound.html#a0870ec87a65c3bc59492505625e3bcec">Dissent::Anonymity::TrustedBulkRound::TrustedBulkRound</a> </td>
+          <td class="memname"><a class="el" href="../../d5/d6c/classDissent_1_1Anonymity_1_1TrustedBulkRound.html#a858fbea91b52aca448b24b5cf0f14c8c">Dissent::Anonymity::TrustedBulkRound::TrustedBulkRound</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;&#160;</td>
           <td class="paramname"><em>group</em>, </td>
@@ -165,8 +165,8 @@ Protected Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html">Credentials</a> &amp;&#160;</td>
-          <td class="paramname"><em>creds</em>, </td>
+          <td class="paramtype">const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;&#160;</td>
+          <td class="paramname"><em>ident</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -205,7 +205,7 @@ Protected Member Functions</h2></td></tr>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">group</td><td>Group used during this round </td></tr>
-    <tr><td class="paramname">creds</td><td>the local nodes credentials </td></tr>
+    <tr><td class="paramname">ident</td><td>the local nodes credentials </td></tr>
     <tr><td class="paramname">round_id</td><td>Unique round id (nonce) </td></tr>
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
     <tr><td class="paramname">get_data</td><td>requests data to share during this session </td></tr>
@@ -272,7 +272,7 @@ Protected Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

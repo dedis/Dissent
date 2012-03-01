@@ -131,12 +131,12 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00036"></a>00036   }
 <a name="l00037"></a>00037 
 <a name="l00038"></a>00038   <span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keywordtype">int</span>&gt; <span class="keyword">class </span>T, <span class="keywordtype">int</span> N&gt; QSharedPointer&lt;Round&gt; TNCreateRound(
-<a name="l00039"></a>00039       <span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group, <span class="keyword">const</span> <a class="code" href="../../d0/d50/classDissent_1_1Identity_1_1Credentials.html" title="A container class for holding a user&#39;s data.">Credentials</a> &amp;creds,
+<a name="l00039"></a>00039       <span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group, <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident,
 <a name="l00040"></a>00040       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Dissent::Connections::Id</a> &amp;round_id,
 <a name="l00041"></a>00041       QSharedPointer&lt;Dissent::Connections::Network&gt; network,
 <a name="l00042"></a>00042       <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Dissent::Messaging::GetDataCallback</a> &amp;get_data)
 <a name="l00043"></a>00043   {
-<a name="l00044"></a>00044     QSharedPointer&lt;Round&gt; round(<span class="keyword">new</span> T&lt;N&gt;(group, creds, round_id,
+<a name="l00044"></a>00044     QSharedPointer&lt;Round&gt; round(<span class="keyword">new</span> T&lt;N&gt;(group, ident, round_id,
 <a name="l00045"></a>00045           network, get_data));
 <a name="l00046"></a>00046     round-&gt;SetSharedPointer(round);
 <a name="l00047"></a>00047     <span class="keywordflow">return</span> round;
@@ -177,7 +177,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 28 2012 22:10:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 29 2012 22:30:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

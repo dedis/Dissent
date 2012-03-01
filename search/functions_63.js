@@ -38,7 +38,6 @@ var searchData=
   ['createtolerantbulkroundsession',['CreateTolerantBulkRoundSession',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#ad265e3f21647a9596f8a014dd1bf2952',1,'Dissent::Applications::SessionFactory']]],
   ['createtoleranttreeroundsession',['CreateTolerantTreeRoundSession',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a03c971c6fcf338915469f1371091e324',1,'Dissent::Applications::SessionFactory']]],
   ['createtrustedbulkroundsession',['CreateTrustedBulkRoundSession',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a94941a3edfe7c41e24b80e8cb88c8d36',1,'Dissent::Applications::SessionFactory']]],
-  ['credentials',['Credentials',['../d0/d50/classDissent_1_1Identity_1_1Credentials.html#a6b3a9f4a117d5a5436559cede7151629',1,'Dissent::Identity::Credentials']]],
   ['csconnectionacquirer',['CSConnectionAcquirer',['../d6/d42/classDissent_1_1ClientServer_1_1CSConnectionAcquirer.html#a8a0587d0ed21ef07c022c5abeded9228',1,'Dissent::ClientServer::CSConnectionAcquirer']]],
   ['csnetwork',['CSNetwork',['../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927',1,'Dissent::ClientServer::CSNetwork']]],
   ['csoverlay',['CSOverlay',['../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html#a34c4b6fd3a33484763fc6cf5d660364c',1,'Dissent::ClientServer::CSOverlay']]],
