@@ -113,6 +113,15 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
  <a href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d9/d3a/RelayForwarder_8hpp_source.html">RelayForwarder.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Dissent::Connections::RelayForwarder:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.png" usemap="#Dissent::Connections::RelayForwarder_map" alt=""/>
+  <map id="Dissent::Connections::RelayForwarder_map" name="Dissent::Connections::RelayForwarder_map">
+<area href="../../d9/d51/classDissent_1_1ClientServer_1_1CSForwarder.html" title="Does the hard work in forwarding packets over the overlay." alt="Dissent::ClientServer::CSForwarder" shape="rect" coords="0,56,227,80"/>
+</map>
+ </div></div>
 
 <p><a href="../../da/d64/classDissent_1_1Connections_1_1RelayForwarder-members.html">List of all members.</a></p>
 <table class="memberdecls">
@@ -148,6 +157,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a0974c0073c5a5f8697aa8469a2c962a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0974c0073c5a5f8697aa8469a2c962a2"></a><br/></td></tr>
 <tr class="memitem:a40fc74c84c723b99c6dd789a792d4a74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40fc74c84c723b99c6dd789a792d4a74"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSharedPointer</b> (const QSharedPointer&lt; <a class="el" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html">RelayForwarder</a> &gt; &amp;shared)</td></tr>
+<tr class="memitem:a47057932d5f7dca2ffb670488f028d40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47057932d5f7dca2ffb670488f028d40"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const QSharedPointer&lt; <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> &gt; &amp;con, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QByteArray &amp;data, const QStringList &amp;been)</td></tr>
+<tr class="memitem:a3ce5240dab4ac6a9915dd908aebf1f61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ce5240dab4ac6a9915dd908aebf1f61"></a>
+const <a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html">ConnectionTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetConnectionTable</b> () const </td></tr>
+<tr class="memitem:a23d955023ef93254ab3672a495291a50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23d955023ef93254ab3672a495291a50"></a>
+const QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>GetBaseBeen</b> () const </td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Does the hard work in forwarding packets over the overlay. </p>
@@ -203,7 +218,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSharedPointer</b> 
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 29 2012 22:30:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 1 2012 16:37:33 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

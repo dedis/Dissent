@@ -16,6 +16,7 @@ var searchData=
   ['cpprandom',['CppRandom',['../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html',1,'Dissent::Crypto']]],
   ['cryptofactory',['CryptoFactory',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html',1,'Dissent::Crypto']]],
   ['csconnectionacquirer',['CSConnectionAcquirer',['../d6/d42/classDissent_1_1ClientServer_1_1CSConnectionAcquirer.html',1,'Dissent::ClientServer']]],
+  ['csforwarder',['CSForwarder',['../d9/d51/classDissent_1_1ClientServer_1_1CSForwarder.html',1,'Dissent::ClientServer']]],
   ['csnetwork',['CSNetwork',['../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html',1,'Dissent::ClientServer']]],
   ['csoverlay',['CSOverlay',['../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html',1,'Dissent::ClientServer']]]
 ];

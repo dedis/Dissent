@@ -171,6 +171,10 @@ const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">I
 <tr class="memdesc:a8de2a816e3d47783ce7f945aa1a2ceed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DiffieHellman public component.  <a href="#a8de2a816e3d47783ce7f945aa1a2ceed"></a><br/></td></tr>
 <tr class="memitem:ae500f65d972d9e6083c29ba798586fb3"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ae500f65d972d9e6083c29ba798586fb3">GetPublicDiffieHellman</a> (int idx) const </td></tr>
 <tr class="memdesc:ae500f65d972d9e6083c29ba798586fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the DiffieHellman public component.  <a href="#ae500f65d972d9e6083c29ba798586fb3"></a><br/></td></tr>
+<tr class="memitem:a3752863a5e466eed2828394bd3895870"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html">PublicIdentity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a3752863a5e466eed2828394bd3895870">GetIdentity</a> (int idx) const </td></tr>
+<tr class="memdesc:a3752863a5e466eed2828394bd3895870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the public identity associated with the index.  <a href="#a3752863a5e466eed2828394bd3895870"></a><br/></td></tr>
+<tr class="memitem:a5c91543e8dacc9ef8a44101e1069366a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html">PublicIdentity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a5c91543e8dacc9ef8a44101e1069366a">GetIdentity</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id) const </td></tr>
+<tr class="memdesc:a5c91543e8dacc9ef8a44101e1069366a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the public identity associated with the member's Id.  <a href="#a5c91543e8dacc9ef8a44101e1069366a"></a><br/></td></tr>
 <tr class="memitem:aff3695bac9a28c4f812ec36b92c0a843"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff3695bac9a28c4f812ec36b92c0a843"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#aff3695bac9a28c4f812ec36b92c0a843">Count</a> () const </td></tr>
 <tr class="memdesc:aff3695bac9a28c4f812ec36b92c0a843"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the group. <br/></td></tr>
@@ -288,6 +292,56 @@ static const QSharedPointer<br class="typebreak"/>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">idx</td><td>the position </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3752863a5e466eed2828394bd3895870"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html">PublicIdentity</a> <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a3752863a5e466eed2828394bd3895870">Dissent::Identity::Group::GetIdentity</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the public identity associated with the index. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">idx</td><td>the index in the group roster </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c91543e8dacc9ef8a44101e1069366a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html">PublicIdentity</a> <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a3752863a5e466eed2828394bd3895870">Dissent::Identity::Group::GetIdentity</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the public identity associated with the member's Id. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the member's Id in the group </td></tr>
   </table>
   </dd>
 </dl>
@@ -477,7 +531,7 @@ static const QSharedPointer<br class="typebreak"/>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 29 2012 22:30:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 1 2012 16:37:33 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

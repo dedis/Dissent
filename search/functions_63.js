@@ -39,6 +39,7 @@ var searchData=
   ['createtoleranttreeroundsession',['CreateTolerantTreeRoundSession',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a03c971c6fcf338915469f1371091e324',1,'Dissent::Applications::SessionFactory']]],
   ['createtrustedbulkroundsession',['CreateTrustedBulkRoundSession',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a94941a3edfe7c41e24b80e8cb88c8d36',1,'Dissent::Applications::SessionFactory']]],
   ['csconnectionacquirer',['CSConnectionAcquirer',['../d6/d42/classDissent_1_1ClientServer_1_1CSConnectionAcquirer.html#a8a0587d0ed21ef07c022c5abeded9228',1,'Dissent::ClientServer::CSConnectionAcquirer']]],
+  ['csforwarder',['CSForwarder',['../d9/d51/classDissent_1_1ClientServer_1_1CSForwarder.html#a12fbdedfdb1160f894901e41f3c71bb2',1,'Dissent::ClientServer::CSForwarder']]],
   ['csnetwork',['CSNetwork',['../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927',1,'Dissent::ClientServer::CSNetwork']]],
   ['csoverlay',['CSOverlay',['../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html#a34c4b6fd3a33484763fc6cf5d660364c',1,'Dissent::ClientServer::CSOverlay']]],
   ['currenttime',['CurrentTime',['../d6/d44/classDissent_1_1Utils_1_1Time.html#ae9092361866690fc9aab4f804559f35f',1,'Dissent::Utils::Time']]]
