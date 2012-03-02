@@ -134,46 +134,47 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00054"></a>00054     <span class="keyword">protected</span>:
 <a name="l00055"></a>00055       <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnStart();
 <a name="l00056"></a>00056       <span class="keyword">virtual</span> <span class="keywordtype">void</span> OnStop();
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058     <span class="keyword">private</span>:
-<a name="l00059"></a>00059       <span class="keywordtype">void</span> RequestServerState(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);
-<a name="l00060"></a>00060       <span class="keywordtype">void</span> RequestServerState(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
-<a name="l00061"></a>00061 
-<a name="l00066"></a>00066       <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleConnection(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
-<a name="l00067"></a>00067 
-<a name="l00071"></a>00071       <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleConnectionAttemptFailure(<span class="keyword">const</span> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Address</a> &amp;addr,
-<a name="l00072"></a>00072           <span class="keyword">const</span> QString &amp;reason);
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074       <span class="keywordtype">void</span> SendConnectionUpdate(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
-<a name="l00075"></a>00075       <span class="keywordtype">void</span> ClientHandleServerStateResponse(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;remote,
-<a name="l00076"></a>00076           <span class="keyword">const</span> QHash&lt;QByteArray, QUrl&gt; &amp;id_to_addr, <span class="keywordtype">int</span> cons);
-<a name="l00077"></a>00077       <span class="keywordtype">void</span> ServerHandleServerStateResponse(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;remote,
-<a name="l00078"></a>00078           <span class="keyword">const</span> QHash&lt;QByteArray, QUrl&gt; &amp;id_to_addr, <span class="keywordtype">int</span> cons);
-<a name="l00079"></a>00079       <span class="keywordtype">void</span> ServerIncrementalUpdate(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
-<a name="l00080"></a>00080       <span class="keywordtype">bool</span> CheckAndConnect(<span class="keyword">const</span> QByteArray &amp;bid, <span class="keyword">const</span> QUrl &amp;url);
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082       <span class="keywordtype">bool</span> _bootstrapping;
-<a name="l00083"></a>00083       <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> _group;
-<a name="l00084"></a>00084       QHash&lt;Id, bool&gt; _local_initiated;
-<a name="l00085"></a>00085       QHash&lt;Id, int&gt; _server_state;
-<a name="l00086"></a>00086       QHash&lt;Address, Id&gt; _addr_to_id;
-<a name="l00087"></a>00087       QSharedPointer&lt;RpcHandler&gt; _rpc;
-<a name="l00088"></a>00088       QSharedPointer&lt;ResponseHandler&gt; _server_state_response;
-<a name="l00089"></a>00089       <a class="code" href="../../d9/d1d/classDissent_1_1Utils_1_1TimerEvent.html" title="Stores a Timer event, that is, a callback method, due time, and period.">TimerEvent</a> *_check_event;
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091     <span class="keyword">private</span> slots:
-<a name="l00092"></a>00092       <span class="keywordtype">void</span> ServerStateInquire(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);
-<a name="l00093"></a>00093       <span class="keywordtype">void</span> ServerStateResponse(<span class="keyword">const</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Response</a> &amp;response);
-<a name="l00094"></a>00094   };
-<a name="l00095"></a>00095 }
+<a name="l00057"></a>00057       <span class="keywordtype">bool</span> IsServer() { <span class="keywordflow">return</span> _group.<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ad4eeed0e031b7f57f7675b15796199ab" title="Returns the inner subgroup.">GetSubgroup</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a298539c3c1037f49251b60d083131ad2" title="Is the specified Id a member of the Group.">Contains</a>(<a class="code" href="../../d5/dad/classDissent_1_1Connections_1_1ConnectionAcquirer.html#a3777ea2bb91c2abe3733866d4c3d1f09" title="Returns the CM used for creating connections.">GetConnectionManager</a>()-&gt;GetId()); }
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059     <span class="keyword">private</span>:
+<a name="l00060"></a>00060       <span class="keywordtype">void</span> RequestServerState(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;nothing = 0);
+<a name="l00061"></a>00061       <span class="keywordtype">void</span> RequestServerState(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
+<a name="l00062"></a>00062 
+<a name="l00067"></a>00067       <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleConnection(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
+<a name="l00068"></a>00068 
+<a name="l00072"></a>00072       <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleConnectionAttemptFailure(<span class="keyword">const</span> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Address</a> &amp;addr,
+<a name="l00073"></a>00073           <span class="keyword">const</span> QString &amp;reason);
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075       <span class="keywordtype">void</span> SendConnectionUpdate(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
+<a name="l00076"></a>00076       <span class="keywordtype">void</span> ClientHandleServerStateResponse(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;remote,
+<a name="l00077"></a>00077           <span class="keyword">const</span> QHash&lt;QByteArray, QUrl&gt; &amp;id_to_addr, <span class="keywordtype">int</span> cons);
+<a name="l00078"></a>00078       <span class="keywordtype">void</span> ServerHandleServerStateResponse(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;remote,
+<a name="l00079"></a>00079           <span class="keyword">const</span> QHash&lt;QByteArray, QUrl&gt; &amp;id_to_addr, <span class="keywordtype">int</span> cons);
+<a name="l00080"></a>00080       <span class="keywordtype">void</span> ServerIncrementalUpdate(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
+<a name="l00081"></a>00081       <span class="keywordtype">bool</span> CheckAndConnect(<span class="keyword">const</span> QByteArray &amp;bid, <span class="keyword">const</span> QUrl &amp;url);
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083       <span class="keywordtype">bool</span> _bootstrapping;
+<a name="l00084"></a>00084       <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> _group;
+<a name="l00085"></a>00085       QHash&lt;Id, bool&gt; _local_initiated;
+<a name="l00086"></a>00086       QHash&lt;Id, int&gt; _server_state;
+<a name="l00087"></a>00087       QHash&lt;Address, Id&gt; _addr_to_id;
+<a name="l00088"></a>00088       QSharedPointer&lt;RpcHandler&gt; _rpc;
+<a name="l00089"></a>00089       QSharedPointer&lt;ResponseHandler&gt; _server_state_response;
+<a name="l00090"></a>00090       <a class="code" href="../../d9/d1d/classDissent_1_1Utils_1_1TimerEvent.html" title="Stores a Timer event, that is, a callback method, due time, and period.">TimerEvent</a> *_check_event;
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092     <span class="keyword">private</span> slots:
+<a name="l00093"></a>00093       <span class="keywordtype">void</span> ServerStateInquire(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);
+<a name="l00094"></a>00094       <span class="keywordtype">void</span> ServerStateResponse(<span class="keyword">const</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Response</a> &amp;response);
+<a name="l00095"></a>00095   };
 <a name="l00096"></a>00096 }
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098 <span class="preprocessor">#endif</span>
+<a name="l00097"></a>00097 }
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 1 2012 16:37:32 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 2 2012 14:23:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
