@@ -141,9 +141,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr class="memitem:ae49433c36561bd7b06a913617d6df0a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae49433c36561bd7b06a913617d6df0a0"></a>
 QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#ae49433c36561bd7b06a913617d6df0a0">GetSender</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to)</td></tr>
 <tr class="memdesc:ae49433c36561bd7b06a913617d6df0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a sender that can be used to communicate via the overlay. <br/></td></tr>
-<tr class="memitem:a5d49dbeb0f9676d0b1292e28ce912481"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5d49dbeb0f9676d0b1292e28ce912481"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#a5d49dbeb0f9676d0b1292e28ce912481">Send</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QByteArray &amp;data)</td></tr>
-<tr class="memdesc:a5d49dbeb0f9676d0b1292e28ce912481"><td class="mdescLeft">&#160;</td><td class="mdescRight">The forwarding sender should call this to forward a message along. <br/></td></tr>
+<tr class="memitem:abca884293f39f495aec0e194a307eb43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abca884293f39f495aec0e194a307eb43"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#abca884293f39f495aec0e194a307eb43">Send</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QByteArray &amp;data, const QStringList &amp;been=QStringList())</td></tr>
+<tr class="memdesc:abca884293f39f495aec0e194a307eb43"><td class="mdescLeft">&#160;</td><td class="mdescRight">The forwarding sender should call this to forward a message along. <br/></td></tr>
 <tr class="memitem:a1baef1c7ef9832adc427bfb5422f5722"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1baef1c7ef9832adc427bfb5422f5722"></a>
 QSharedPointer&lt; <a class="el" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html">RelayForwarder</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSharedPointer</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
@@ -157,8 +157,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:a0974c0073c5a5f8697aa8469a2c962a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a0974c0073c5a5f8697aa8469a2c962a2"></a><br/></td></tr>
 <tr class="memitem:a40fc74c84c723b99c6dd789a792d4a74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40fc74c84c723b99c6dd789a792d4a74"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSharedPointer</b> (const QSharedPointer&lt; <a class="el" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html">RelayForwarder</a> &gt; &amp;shared)</td></tr>
-<tr class="memitem:a47057932d5f7dca2ffb670488f028d40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a47057932d5f7dca2ffb670488f028d40"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const QSharedPointer&lt; <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> &gt; &amp;con, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QByteArray &amp;data, const QStringList &amp;been)</td></tr>
+<tr class="memitem:a2644e5806c8f1cbdc26b95022e3107f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2644e5806c8f1cbdc26b95022e3107f7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Send</b> (const QSharedPointer&lt; <a class="el" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html">Connection</a> &gt; &amp;con, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QByteArray &amp;data, const QStringList &amp;been, const QStringList &amp;reverse=QStringList())</td></tr>
 <tr class="memitem:a3ce5240dab4ac6a9915dd908aebf1f61"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ce5240dab4ac6a9915dd908aebf1f61"></a>
 const <a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html">ConnectionTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetConnectionTable</b> () const </td></tr>
 <tr class="memitem:a23d955023ef93254ab3672a495291a50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23d955023ef93254ab3672a495291a50"></a>
@@ -218,7 +218,7 @@ const QStringList&#160;</td><td class="memItemRight" valign="bottom"><b>GetBaseB
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 2 2012 14:23:53 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 5 2012 17:16:58 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

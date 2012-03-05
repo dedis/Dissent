@@ -186,6 +186,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa4b296881b0c5b6b68899bbcd1ba0e86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa4b296881b0c5b6b68899bbcd1ba0e86"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa4b296881b0c5b6b68899bbcd1ba0e86">~Session</a> ()</td></tr>
 <tr class="memdesc:aa4b296881b0c5b6b68899bbcd1ba0e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br/></td></tr>
+<tr class="memitem:aa0cbf82c2dec62acce913e9806bc49c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa0cbf82c2dec62acce913e9806bc49c2">LinkDisconnect</a> (const <a class="el" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html">Request</a> &amp;notification)</td></tr>
+<tr class="memdesc:aa0cbf82c2dec62acce913e9806bc49c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A remote peer is notifying a leader that a link was disconnected.  <a href="#aa0cbf82c2dec62acce913e9806bc49c2"></a><br/></td></tr>
 <tr class="memitem:a69fc6f5ba23cc12a5d62c33218d5488d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a69fc6f5ba23cc12a5d62c33218d5488d">ReceivedRegister</a> (const <a class="el" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html">Request</a> &amp;request)</td></tr>
 <tr class="memdesc:a69fc6f5ba23cc12a5d62c33218d5488d"><td class="mdescLeft">&#160;</td><td class="mdescRight">From the <a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>, pass in a ReceivedRegister.  <a href="#a69fc6f5ba23cc12a5d62c33218d5488d"></a><br/></td></tr>
 <tr class="memitem:a628b56de9724fad7fd6badbe5e8569e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a628b56de9724fad7fd6badbe5e8569e2">ReceivedPrepare</a> (const <a class="el" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html">Request</a> &amp;request)</td></tr>
@@ -312,6 +314,31 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">notification</td><td>The message containing the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aa0cbf82c2dec62acce913e9806bc49c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa0cbf82c2dec62acce913e9806bc49c2">Dissent::Anonymity::Session::LinkDisconnect</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>notification</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>A remote peer is notifying a leader that a link was disconnected. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">notification</td><td>contains the id of the disconnected member </td></tr>
   </table>
   </dd>
 </dl>
@@ -452,7 +479,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 2 2012 14:23:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 5 2012 17:16:57 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

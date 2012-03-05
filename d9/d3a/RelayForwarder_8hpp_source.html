@@ -96,89 +96,97 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DISSENT_CONNECTIONS_RELAY_FORWARDER_H_GUARD</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DISSENT_CONNECTIONS_RELAY_FORWARDER_H_GUARD</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QObject&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QStringList&gt;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;Messaging/ISender.hpp&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;Messaging/RpcHandler.hpp&quot;</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;ConnectionTable.hpp&quot;</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="keyword">namespace </span>Dissent {
-<a name="l00013"></a>00013 <span class="keyword">namespace </span>Messaging {
-<a name="l00014"></a>00014   <span class="keyword">class </span>Request;
-<a name="l00015"></a>00015 }
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keyword">namespace </span>Connections {
-<a name="l00018"></a>00018   <span class="keyword">class </span>Connection;
-<a name="l00019"></a>00019 
-<a name="l00023"></a><a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html">00023</a>   <span class="keyword">class </span><a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html" title="Does the hard work in forwarding packets over the overlay.">RelayForwarder</a> : <span class="keyword">public</span> QObject {
-<a name="l00024"></a>00024     Q_OBJECT
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026     <span class="keyword">public</span>:
-<a name="l00027"></a>00027       <span class="keyword">typedef</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">Messaging::ISender</a> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a>;
-<a name="l00028"></a>00028       <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;
-<a name="l00029"></a>00029       <span class="keyword">typedef</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">Messaging::RpcHandler</a> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">RpcHandler</a>;
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031       <span class="keyword">static</span> QSharedPointer&lt;RelayForwarder&gt; Get(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;local_id,
-<a name="l00032"></a>00032           <span class="keyword">const</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;ct, <span class="keyword">const</span> QSharedPointer&lt;RpcHandler&gt; &amp;rpc)
-<a name="l00033"></a>00033       {
-<a name="l00034"></a>00034         QSharedPointer&lt;RelayForwarder&gt; rf(<span class="keyword">new</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#a0974c0073c5a5f8697aa8469a2c962a2" title="Constructor.">RelayForwarder</a>(local_id, ct, rpc));
-<a name="l00035"></a>00035         rf-&gt;SetSharedPointer(rf);
-<a name="l00036"></a>00036         <span class="keywordflow">return</span> rf;
-<a name="l00037"></a>00037       }
-<a name="l00038"></a>00038 
-<a name="l00042"></a>00042       <span class="keyword">virtual</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#af2eb12761dae3beb30620b49e0650ec2" title="Destructor.">~RelayForwarder</a>();
-<a name="l00043"></a>00043 
-<a name="l00047"></a>00047       QSharedPointer&lt;ISender&gt; <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#ae49433c36561bd7b06a913617d6df0a0" title="Returns a sender that can be used to communicate via the overlay.">GetSender</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to);
-<a name="l00048"></a>00048 
-<a name="l00052"></a>00052       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#a5d49dbeb0f9676d0b1292e28ce912481" title="The forwarding sender should call this to forward a message along.">Send</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054       QSharedPointer&lt;RelayForwarder&gt; GetSharedPointer()
-<a name="l00055"></a>00055       {
-<a name="l00056"></a>00056          <span class="keywordflow">return</span> _shared.toStrongRef();
-<a name="l00057"></a>00057       }
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059     <span class="keyword">protected</span>:
-<a name="l00066"></a>00066       <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#a0974c0073c5a5f8697aa8469a2c962a2" title="Constructor.">RelayForwarder</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;local_id, <span class="keyword">const</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;ct,
-<a name="l00067"></a>00067           <span class="keyword">const</span> QSharedPointer&lt;RpcHandler&gt; &amp;rpc);
-<a name="l00068"></a>00068   
-<a name="l00069"></a>00069       <span class="keywordtype">void</span> SetSharedPointer(<span class="keyword">const</span> QSharedPointer&lt;RelayForwarder&gt; &amp;shared)
-<a name="l00070"></a>00070       {
-<a name="l00071"></a>00071         _shared = shared.toWeakRef();
-<a name="l00072"></a>00072       }
-<a name="l00073"></a>00073 
-<a name="l00074"></a>00074       <span class="keywordtype">void</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#a5d49dbeb0f9676d0b1292e28ce912481" title="The forwarding sender should call this to forward a message along.">Send</a>(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to,
-<a name="l00075"></a>00075           <span class="keyword">const</span> QByteArray &amp;data, <span class="keyword">const</span> QStringList &amp;been);
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QCache&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QObject&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QStringList&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;Messaging/ISender.hpp&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;Messaging/RpcHandler.hpp&quot;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;ConnectionTable.hpp&quot;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="keyword">namespace </span>Dissent {
+<a name="l00014"></a>00014 <span class="keyword">namespace </span>Messaging {
+<a name="l00015"></a>00015   <span class="keyword">class </span>Request;
+<a name="l00016"></a>00016 }
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>Connections {
+<a name="l00019"></a>00019   <span class="keyword">class </span>Connection;
+<a name="l00020"></a>00020   <span class="keyword">class </span>ForwardingSender;
+<a name="l00021"></a>00021 
+<a name="l00025"></a><a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html">00025</a>   <span class="keyword">class </span><a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html" title="Does the hard work in forwarding packets over the overlay.">RelayForwarder</a> : <span class="keyword">public</span> QObject {
+<a name="l00026"></a>00026     Q_OBJECT
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028     <span class="keyword">public</span>:
+<a name="l00029"></a>00029       <span class="keyword">typedef</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">Messaging::ISender</a> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">ISender</a>;
+<a name="l00030"></a>00030       <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;
+<a name="l00031"></a>00031       <span class="keyword">typedef</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">Messaging::RpcHandler</a> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">RpcHandler</a>;
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033       <span class="keyword">static</span> QSharedPointer&lt;RelayForwarder&gt; Get(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;local_id,
+<a name="l00034"></a>00034           <span class="keyword">const</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;ct, <span class="keyword">const</span> QSharedPointer&lt;RpcHandler&gt; &amp;rpc)
+<a name="l00035"></a>00035       {
+<a name="l00036"></a>00036         QSharedPointer&lt;RelayForwarder&gt; rf(<span class="keyword">new</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#a0974c0073c5a5f8697aa8469a2c962a2" title="Constructor.">RelayForwarder</a>(local_id, ct, rpc));
+<a name="l00037"></a>00037         rf-&gt;SetSharedPointer(rf);
+<a name="l00038"></a>00038         <span class="keywordflow">return</span> rf;
+<a name="l00039"></a>00039       }
+<a name="l00040"></a>00040 
+<a name="l00044"></a>00044       <span class="keyword">virtual</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#af2eb12761dae3beb30620b49e0650ec2" title="Destructor.">~RelayForwarder</a>();
+<a name="l00045"></a>00045 
+<a name="l00049"></a>00049       QSharedPointer&lt;ISender&gt; <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#ae49433c36561bd7b06a913617d6df0a0" title="Returns a sender that can be used to communicate via the overlay.">GetSender</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to);
+<a name="l00050"></a>00050 
+<a name="l00054"></a>00054       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#abca884293f39f495aec0e194a307eb43" title="The forwarding sender should call this to forward a message along.">Send</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data,
+<a name="l00055"></a>00055           <span class="keyword">const</span> QStringList &amp;been = QStringList());
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057       QSharedPointer&lt;RelayForwarder&gt; GetSharedPointer()
+<a name="l00058"></a>00058       {
+<a name="l00059"></a>00059          <span class="keywordflow">return</span> _shared.toStrongRef();
+<a name="l00060"></a>00060       }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062     <span class="keyword">protected</span>:
+<a name="l00069"></a>00069       <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#a0974c0073c5a5f8697aa8469a2c962a2" title="Constructor.">RelayForwarder</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;local_id, <span class="keyword">const</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;ct,
+<a name="l00070"></a>00070           <span class="keyword">const</span> QSharedPointer&lt;RpcHandler&gt; &amp;rpc);
+<a name="l00071"></a>00071   
+<a name="l00072"></a>00072       <span class="keywordtype">void</span> SetSharedPointer(<span class="keyword">const</span> QSharedPointer&lt;RelayForwarder&gt; &amp;shared)
+<a name="l00073"></a>00073       {
+<a name="l00074"></a>00074         _shared = shared.toWeakRef();
+<a name="l00075"></a>00075       }
 <a name="l00076"></a>00076 
-<a name="l00077"></a>00077       <span class="keyword">const</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;GetConnectionTable()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _ct; }
-<a name="l00078"></a>00078 
-<a name="l00079"></a>00079       <span class="keyword">const</span> QStringList GetBaseBeen()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _base_been; }
+<a name="l00077"></a>00077       <span class="keywordtype">void</span> <a class="code" href="../../d1/d4b/classDissent_1_1Connections_1_1RelayForwarder.html#abca884293f39f495aec0e194a307eb43" title="The forwarding sender should call this to forward a message along.">Send</a>(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to,
+<a name="l00078"></a>00078           <span class="keyword">const</span> QByteArray &amp;data, <span class="keyword">const</span> QStringList &amp;been,
+<a name="l00079"></a>00079           <span class="keyword">const</span> QStringList &amp;reverse = QStringList());
 <a name="l00080"></a>00080 
-<a name="l00081"></a>00081     <span class="keyword">private</span>:
-<a name="l00085"></a>00085       <span class="keyword">virtual</span> <span class="keywordtype">void</span> Forward(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data,
-<a name="l00086"></a>00086           <span class="keyword">const</span> QStringList &amp;been);
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _local_id;
-<a name="l00089"></a>00089       <span class="keyword">const</span> QStringList _base_been;
-<a name="l00090"></a>00090       <span class="keyword">const</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;_ct;
-<a name="l00091"></a>00091       QSharedPointer&lt;RpcHandler&gt; _rpc;
-<a name="l00092"></a>00092       <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _prefered;
-<a name="l00093"></a>00093       QWeakPointer&lt;RelayForwarder&gt; _shared;
-<a name="l00094"></a>00094       
-<a name="l00095"></a>00095     <span class="keyword">private</span> slots:
-<a name="l00099"></a>00099       <span class="keyword">virtual</span> <span class="keywordtype">void</span> IncomingData(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101   };
-<a name="l00102"></a>00102 }
-<a name="l00103"></a>00103 }
-<a name="l00104"></a>00104 
-<a name="l00105"></a>00105 <span class="preprocessor">#endif</span>
+<a name="l00081"></a>00081       <span class="keyword">const</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;GetConnectionTable()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _ct; }
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083       <span class="keyword">const</span> QStringList GetBaseBeen()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _base_been; }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085     <span class="keyword">private</span>:
+<a name="l00089"></a>00089       <span class="keyword">virtual</span> <span class="keywordtype">void</span> Forward(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data,
+<a name="l00090"></a>00090           <span class="keyword">const</span> QStringList &amp;been);
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Reverse(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data,
+<a name="l00093"></a>00093           <span class="keyword">const</span> QStringList &amp;been, <span class="keyword">const</span> QStringList &amp;reverse);
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _local_id;
+<a name="l00096"></a>00096       <span class="keyword">const</span> QStringList _base_been;
+<a name="l00097"></a>00097       <span class="keyword">const</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;_ct;
+<a name="l00098"></a>00098       QSharedPointer&lt;RpcHandler&gt; _rpc;
+<a name="l00099"></a>00099       <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _prefered;
+<a name="l00100"></a>00100       QWeakPointer&lt;RelayForwarder&gt; _shared;
+<a name="l00101"></a>00101       QCache&lt;Id, QSharedPointer&lt;ForwardingSender&gt; &gt; _cache;
+<a name="l00102"></a>00102       
+<a name="l00103"></a>00103     <span class="keyword">private</span> slots:
+<a name="l00107"></a>00107       <span class="keyword">virtual</span> <span class="keywordtype">void</span> IncomingData(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109   };
+<a name="l00110"></a>00110 }
+<a name="l00111"></a>00111 }
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 2 2012 14:23:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 5 2012 17:16:57 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
