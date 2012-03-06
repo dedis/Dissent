@@ -11,6 +11,7 @@ var searchData=
   ['request',['Request',['../dd/d45/classDissent_1_1Messaging_1_1Request.html',1,'Dissent::Messaging']]],
   ['requesthandler',['RequestHandler',['../db/d99/classDissent_1_1Messaging_1_1RequestHandler.html',1,'Dissent::Messaging']]],
   ['requestresponder',['RequestResponder',['../d3/dec/classDissent_1_1Messaging_1_1RequestResponder.html',1,'Dissent::Messaging']]],
+  ['requeststate',['RequestState',['../de/d25/classDissent_1_1Messaging_1_1RequestState.html',1,'Dissent::Messaging']]],
   ['response',['Response',['../df/d79/classDissent_1_1Messaging_1_1Response.html',1,'Dissent::Messaging']]],
   ['responsehandler',['ResponseHandler',['../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html',1,'Dissent::Messaging']]],
   ['round',['Round',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html',1,'Dissent::Anonymity']]],

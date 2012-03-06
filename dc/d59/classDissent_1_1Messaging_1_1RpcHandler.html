@@ -100,9 +100,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div>
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Messaging::RpcHandler Class Reference</div>  </div>
 </div><!--header-->
@@ -125,6 +127,11 @@ Inheritance diagram for Dissent::Messaging::RpcHandler:</div>
 
 <p><a href="../../d1/d15/classDissent_1_1Messaging_1_1RpcHandler-members.html">List of all members.</a></p>
 <table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:acd09beaea83dddb76730d50c26fda667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd09beaea83dddb76730d50c26fda667"></a>
+typedef <a class="el" href="../../df/dfd/classDissent_1_1Utils_1_1TimerMethod.html">Utils::TimerMethod</a><br class="typebreak"/>
+&lt; <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html">RpcHandler</a>, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>TimerCallback</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:acf0a382f5590c1becb210e3a259b2ce6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#acf0a382f5590c1becb210e3a259b2ce6">SendResponse</a> (const <a class="el" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html">Request</a> &amp;request, const QVariant &amp;data)</td></tr>
@@ -157,6 +164,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>CancelRequest</b> (in
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:add527795d9f14985638c8a09bcbf432b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add527795d9f14985638c8a09bcbf432b"></a>
 static QSharedPointer&lt; <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html">RpcHandler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetEmpty</b> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aa5b3f6c21387c1f6a1e7392798058841"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa5b3f6c21387c1f6a1e7392798058841"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutDelta</b> = 60000</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Rpc mechanism assumes a reliable sending mechanism. </p>
@@ -489,7 +500,7 @@ static QSharedPointer&lt; <a class="el" href="../../dc/d59/classDissent_1_1Messa
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 5 2012 17:16:58 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 6 2012 16:26:13 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
