@@ -96,193 +96,194 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DISSENT_ANONYMITY_SESSION_H_GUARD</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DISSENT_ANONYMITY_SESSION_H_GUARD</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QHash&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QObject&gt;</span>
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QQueue&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QSet&gt;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;Connections/Id.hpp&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;Identity/PublicIdentity.hpp&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;Identity/PrivateIdentity.hpp&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;Identity/Group.hpp&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;Identity/GroupHolder.hpp&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;Messaging/FilterObject.hpp&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Messaging/GetDataCallback.hpp&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;Messaging/Request.hpp&quot;</span>
-<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;Utils/StartStop.hpp&quot;</span>
-<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;Utils/TimerEvent.hpp&quot;</span>
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;Round.hpp&quot;</span>
-<a name="l00021"></a>00021 
-<a name="l00022"></a>00022 <span class="keyword">namespace </span>Dissent {
-<a name="l00023"></a>00023 <span class="keyword">namespace </span>Connections {
-<a name="l00024"></a>00024   <span class="keyword">class </span>Connection;
-<a name="l00025"></a>00025   <span class="keyword">class </span>Network;
-<a name="l00026"></a>00026 }
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <span class="keyword">namespace </span>Crypto {
-<a name="l00029"></a>00029   <span class="keyword">class </span>AsymmetricKey;
-<a name="l00030"></a>00030 }
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">namespace </span>Messaging {
-<a name="l00033"></a>00033   <span class="keyword">class </span>Response;
-<a name="l00034"></a>00034   <span class="keyword">class </span>ResponseHandler;
-<a name="l00035"></a>00035 }
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037 <span class="keyword">namespace </span>Anonymity {
-<a name="l00042"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html">00042</a>   <span class="keyword">class </span><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a> : <span class="keyword">public</span> <a class="code" href="../../d0/d5e/classDissent_1_1Messaging_1_1FilterObject.html" title="Acts as a basic messaging Filter.">Messaging::FilterObject</a>,
-<a name="l00043"></a>00043     <span class="keyword">public</span> <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern.">Utils::StartStop</a>
-<a name="l00044"></a>00044   {
-<a name="l00045"></a>00045     Q_OBJECT
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047     <span class="keyword">public</span>:
-<a name="l00048"></a>00048       <span class="keyword">typedef</span> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier, takes ownership of an ...">Connections::Connection</a> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier, takes ownership of an ...">Connection</a>;
-<a name="l00049"></a>00049       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
-<a name="l00050"></a>00050       <span class="keyword">typedef</span> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Connections::Network</a> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Network</a>;
-<a name="l00051"></a>00051       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
-<a name="l00052"></a>00052       <span class="keyword">typedef</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">Identity::PrivateIdentity</a> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a>;
-<a name="l00053"></a>00053       <span class="keyword">typedef</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">Identity::PublicIdentity</a> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a>;
-<a name="l00054"></a>00054       <span class="keyword">typedef</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Identity::Group</a> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a>;
-<a name="l00055"></a>00055       <span class="keyword">typedef</span> <a class="code" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html" title="Maintains an evolving group.">Identity::GroupHolder</a> <a class="code" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html" title="Maintains an evolving group.">GroupHolder</a>;
-<a name="l00056"></a>00056       <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;
-<a name="l00057"></a>00057       <span class="keyword">typedef</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Messaging::Response</a> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Response</a>;
-<a name="l00058"></a>00058       <span class="keyword">typedef</span> <a class="code" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html" title="Used to create a response callback, note this does NOT keep a pointer, it internally uses slots and s...">Messaging::ResponseHandler</a> <a class="code" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html" title="Used to create a response callback, note this does NOT keep a pointer, it internally uses slots and s...">ResponseHandler</a>;
-<a name="l00059"></a>00059       <span class="keyword">typedef</span> <a class="code" href="../../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html">Messaging::GetDataMethod&lt;Session&gt;</a> <a class="code" href="../../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html">GetDataCallback</a>;
-<a name="l00060"></a>00060 
-<a name="l00069"></a>00069       <span class="keyword">explicit</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a65666d64f94aaad8a374791b0f9f030a" title="Constructor.">Session</a>(<span class="keyword">const</span> QSharedPointer&lt;GroupHolder&gt; &amp;group_holder,
-<a name="l00070"></a>00070           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id,
-<a name="l00071"></a>00071           QSharedPointer&lt;Network&gt; network, CreateRound create_round);
-<a name="l00072"></a>00072 
-<a name="l00076"></a>00076       <span class="keyword">virtual</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa4b296881b0c5b6b68899bbcd1ba0e86" title="Deconstructor.">~Session</a>();
-<a name="l00077"></a>00077 
-<a name="l00082"></a>00082       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa0cbf82c2dec62acce913e9806bc49c2" title="A remote peer is notifying a leader that a link was disconnected.">LinkDisconnect</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
-<a name="l00083"></a>00083 
-<a name="l00088"></a>00088       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a69fc6f5ba23cc12a5d62c33218d5488d" title="From the SessionManager, pass in a ReceivedRegister.">ReceivedRegister</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);
-<a name="l00089"></a>00089 
-<a name="l00094"></a>00094       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a628b56de9724fad7fd6badbe5e8569e2" title="From the SessionManager, pass in a ReceiveReady.">ReceivedPrepare</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);
-<a name="l00095"></a>00095 
-<a name="l00101"></a>00101       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a6053e35ccd21a41292fa7f50649d4528" title="From the SessionManager, pass in a Begin message from the Session leader to call start on the round...">ReceivedBegin</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
-<a name="l00102"></a>00102 
-<a name="l00107"></a>00107       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a7cd37648795f542b05c4bd47c09177bf" title="From the SessionManager, pass in incoming data.">IncomingData</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
-<a name="l00108"></a>00108 
-<a name="l00112"></a>00112       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a22d2c669b6e286c699ef11dae3a04851" title="From a client software, send a message anonymously.">Send</a>(<span class="keyword">const</span> QByteArray &amp;data);
-<a name="l00113"></a>00113 
-<a name="l00117"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a42df3ca34a329e499332b6282cda93b4">00117</a>       <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a42df3ca34a329e499332b6282cda93b4" title="Returns true if the peer is the leader for this session.">IsLeader</a>()<span class="keyword"> const</span>
-<a name="l00118"></a>00118 <span class="keyword">      </span>{
-<a name="l00119"></a>00119         <span class="keywordflow">return</span> _ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d" title="Returns the local node&#39;s Id.">GetLocalId</a>() == <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a179d95eb36bc0d3688cb0210b49e20b9" title="Returns the group being used in this session.">GetGroup</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a0f104f53515b29d6c3f9665b630ddc28" title="Returns the leader of the group.">GetLeader</a>();
-<a name="l00120"></a>00120       }
-<a name="l00121"></a>00121 
-<a name="l00125"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a4883b521b9965eaff92d0719e54b52bd">00125</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a4883b521b9965eaff92d0719e54b52bd" title="Returns the Session Id.">GetId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _session_id; }
-<a name="l00126"></a>00126 
-<a name="l00130"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#adad7634d994fe02efc8ce7f190df3b1b">00130</a>       <span class="keyword">inline</span> QSharedPointer&lt;Round&gt; <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#adad7634d994fe02efc8ce7f190df3b1b" title="Returns the current round.">GetCurrentRound</a>()
-<a name="l00131"></a>00131       {
-<a name="l00132"></a>00132         <span class="keywordflow">return</span> _current_round;
-<a name="l00133"></a>00133       }
-<a name="l00134"></a>00134 
-<a name="l00138"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a50a5f58290234bee984e5d5d0b0d18b2">00138</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QString <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a50a5f58290234bee984e5d5d0b0d18b2" title="Returns the Session / Round information.">ToString</a>()<span class="keyword"> const</span>
-<a name="l00139"></a>00139 <span class="keyword">      </span>{
-<a name="l00140"></a>00140         <span class="keywordflow">return</span> <span class="stringliteral">&quot;Session: &quot;</span> + <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a4883b521b9965eaff92d0719e54b52bd" title="Returns the Session Id.">GetId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>() + <span class="stringliteral">&quot;|&quot;</span> +
-<a name="l00141"></a>00141           (_current_round.isNull() ? <span class="stringliteral">&quot;No current round&quot;</span> : 
-<a name="l00142"></a>00142           _current_round-&gt;ToString());
-<a name="l00143"></a>00143       }
-<a name="l00144"></a>00144 
-<a name="l00148"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a179d95eb36bc0d3688cb0210b49e20b9">00148</a>       <span class="keyword">inline</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a179d95eb36bc0d3688cb0210b49e20b9" title="Returns the group being used in this session.">GetGroup</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _group_holder-&gt;GetGroup(); }
-<a name="l00149"></a>00149 
-<a name="l00153"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a633692288b5986ed4b41e7b70c57c754">00153</a>       <span class="keyword">inline</span> <span class="keyword">const</span> QSet&lt;Id&gt; <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a633692288b5986ed4b41e7b70c57c754" title="Get the set of bad group members.">GetBadMembers</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _bad_members; }
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MinimumRoundSize = 3;
-<a name="l00156"></a>00156 
-<a name="l00157"></a>00157       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> PeerJoinDelay = 10000;
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159       <span class="keyword">const</span> GroupHolder &amp;GetGroupHolder();
-<a name="l00160"></a>00160 
-<a name="l00161"></a>00161     signals:
-<a name="l00166"></a>00166       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#ab79357b1349be1c63888b6839815069f" title="Signals that a round is beginning.">RoundStarting</a>(<span class="keyword">const</span> QSharedPointer&lt;Round&gt; &amp;round);
-<a name="l00167"></a>00167 
-<a name="l00173"></a>00173       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#ad2d6d06d35011e1b8ebb409fde8d138c" title="Signals that a round has completed.">RoundFinished</a>(<span class="keyword">const</span> QSharedPointer&lt;Round&gt; &amp;round);
-<a name="l00174"></a>00174 
-<a name="l00178"></a>00178       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a7136fed850b891f8f223e1633d78b6eb" title="Signfies that the session has been closed / stopped.">Stopping</a>();
-<a name="l00179"></a>00179 
-<a name="l00180"></a>00180     <span class="keyword">public</span> slots:
-<a name="l00184"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aadb021baed936ec4c552e7d3a6fefab6">00184</a>       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aadb021baed936ec4c552e7d3a6fefab6" title="Calls start.">CallStart</a>()
-<a name="l00185"></a>00185       {
-<a name="l00186"></a>00186         <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#abb1888fc9a1378b6cba460dac4122039" title="Returns true if started the first time.">Start</a>();
-<a name="l00187"></a>00187       }
-<a name="l00188"></a>00188 
-<a name="l00192"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a99c4a3d7513587fb4de58ee9efe34936">00192</a>       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a99c4a3d7513587fb4de58ee9efe34936" title="Calls stop.">CallStop</a>()
-<a name="l00193"></a>00193       {
-<a name="l00194"></a>00194         <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#aecd3fe3c6c4a43c8cadefc18e58e9005" title="Returns true if the first time stopped.">Stop</a>();
-<a name="l00195"></a>00195       }
-<a name="l00196"></a>00196 
-<a name="l00197"></a>00197     <span class="keyword">protected</span>:
-<a name="l00201"></a>00201       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a0218bea0d956f64a4e6e9b1de42092aa" title="Called when the session is started.">OnStart</a>();
-<a name="l00202"></a>00202 
-<a name="l00206"></a>00206       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a0bb44662b5e9efaff62f380489f4fef1" title="Called when the session is stopped.">OnStop</a>();
-<a name="l00207"></a>00207 
-<a name="l00208"></a>00208     <span class="keyword">private</span>:
-<a name="l00213"></a>00213       <span class="keywordtype">void</span> Register(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);
-<a name="l00214"></a>00214 
-<a name="l00219"></a>00219       <span class="keywordtype">void</span> CheckRegistration(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);
-<a name="l00220"></a>00220 
-<a name="l00225"></a>00225       <span class="keywordtype">bool</span> SendPrepare();
-<a name="l00226"></a>00226 
-<a name="l00230"></a>00230       <span class="keywordtype">bool</span> CheckGroup();
-<a name="l00231"></a>00231 
-<a name="l00235"></a>00235       <span class="keywordtype">void</span> NextRound(<span class="keyword">const</span> Id &amp;round_id);
-<a name="l00236"></a>00236 
-<a name="l00243"></a>00243       QPair&lt;QByteArray, bool&gt; GetData(<span class="keywordtype">int</span> max);
-<a name="l00244"></a>00244 
-<a name="l00245"></a>00245       <span class="keywordtype">void</span> AddMember(<span class="keyword">const</span> PublicIdentity &amp;gc);
-<a name="l00246"></a>00246       <span class="keywordtype">void</span> RemoveMember(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
-<a name="l00247"></a>00247 
-<a name="l00251"></a>00251       QHash&lt;Id, Request&gt; _id_to_request;
-<a name="l00252"></a>00252 
-<a name="l00256"></a>00256       QByteArray _send_queue;
-<a name="l00257"></a>00257 
-<a name="l00258"></a>00258       Group _shared_group;
-<a name="l00259"></a>00259       QSet&lt;Id&gt; _bad_members;
-<a name="l00260"></a>00260       QSharedPointer&lt;GroupHolder&gt; _group_holder;
-<a name="l00261"></a>00261       <span class="keyword">const</span> PrivateIdentity _ident;
-<a name="l00262"></a>00262       <span class="keyword">const</span> Id _session_id;
-<a name="l00263"></a>00263       QSharedPointer&lt;Network&gt; _network;
-<a name="l00264"></a>00264       CreateRound _create_round;
-<a name="l00265"></a>00265 
-<a name="l00266"></a>00266       QSharedPointer&lt;Round&gt; _current_round;
-<a name="l00267"></a>00267       <a class="code" href="../../d9/d1d/classDissent_1_1Utils_1_1TimerEvent.html" title="Stores a Timer event, that is, a callback method, due time, and period.">Utils::TimerEvent</a> _register_event;
-<a name="l00268"></a>00268       QDateTime _last_registration;
-<a name="l00269"></a>00269       <a class="code" href="../../d9/d1d/classDissent_1_1Utils_1_1TimerEvent.html" title="Stores a Timer event, that is, a callback method, due time, and period.">Utils::TimerEvent</a> _prepare_event;
-<a name="l00270"></a>00270       QHash&lt;Id, Id&gt; _registered_peers;
-<a name="l00271"></a>00271       QHash&lt;Id, Id&gt; _prepared_peers;
-<a name="l00272"></a>00272       QSharedPointer&lt;ResponseHandler&gt; _prepared;
-<a name="l00273"></a>00273       QSharedPointer&lt;ResponseHandler&gt; _registered;
-<a name="l00274"></a>00274       GetDataCallback _get_data_cb;
-<a name="l00275"></a>00275       <span class="keywordtype">int</span> _round_idx;
-<a name="l00276"></a>00276       Request _prepare_request;
-<a name="l00277"></a>00277       <span class="keywordtype">bool</span> _prepare_waiting;
-<a name="l00278"></a>00278       <span class="keywordtype">bool</span> _prepare_waiting_for_con;
-<a name="l00279"></a>00279       <span class="keywordtype">int</span> _trim_send_queue;
-<a name="l00280"></a>00280       <span class="keywordtype">bool</span> _registering;
-<a name="l00281"></a>00281 
-<a name="l00282"></a>00282     <span class="keyword">private</span> slots:
-<a name="l00287"></a>00287       <span class="keywordtype">void</span> HandleConnection(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
-<a name="l00288"></a>00288 
-<a name="l00292"></a>00292       <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleRoundFinished();
-<a name="l00293"></a>00293 
-<a name="l00297"></a>00297       <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleDisconnect();
-<a name="l00298"></a>00298 
-<a name="l00303"></a>00303       <span class="keywordtype">void</span> Registered(<span class="keyword">const</span> Response &amp;response);
-<a name="l00304"></a>00304 
-<a name="l00307"></a>00307       <span class="keywordtype">void</span> Prepared(<span class="keyword">const</span> Response &amp;response);
-<a name="l00308"></a>00308   };
-<a name="l00309"></a>00309 }
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QList&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QHash&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QObject&gt;</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QQueue&gt;</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;QSet&gt;</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;Connections/Id.hpp&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;Identity/PublicIdentity.hpp&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;Identity/PrivateIdentity.hpp&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;Identity/Group.hpp&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;Identity/GroupHolder.hpp&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Messaging/FilterObject.hpp&quot;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;Messaging/GetDataCallback.hpp&quot;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;Messaging/Request.hpp&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;Utils/StartStop.hpp&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;Utils/TimerEvent.hpp&quot;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;Round.hpp&quot;</span>
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023 <span class="keyword">namespace </span>Dissent {
+<a name="l00024"></a>00024 <span class="keyword">namespace </span>Connections {
+<a name="l00025"></a>00025   <span class="keyword">class </span>Connection;
+<a name="l00026"></a>00026   <span class="keyword">class </span>Network;
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029 <span class="keyword">namespace </span>Crypto {
+<a name="l00030"></a>00030   <span class="keyword">class </span>AsymmetricKey;
+<a name="l00031"></a>00031 }
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033 <span class="keyword">namespace </span>Messaging {
+<a name="l00034"></a>00034   <span class="keyword">class </span>Response;
+<a name="l00035"></a>00035   <span class="keyword">class </span>ResponseHandler;
+<a name="l00036"></a>00036 }
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038 <span class="keyword">namespace </span>Anonymity {
+<a name="l00043"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html">00043</a>   <span class="keyword">class </span><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a> : <span class="keyword">public</span> <a class="code" href="../../d0/d5e/classDissent_1_1Messaging_1_1FilterObject.html" title="Acts as a basic messaging Filter.">Messaging::FilterObject</a>,
+<a name="l00044"></a>00044     <span class="keyword">public</span> <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern.">Utils::StartStop</a>
+<a name="l00045"></a>00045   {
+<a name="l00046"></a>00046     Q_OBJECT
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048     <span class="keyword">public</span>:
+<a name="l00049"></a>00049       <span class="keyword">typedef</span> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier, takes ownership of an ...">Connections::Connection</a> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier, takes ownership of an ...">Connection</a>;
+<a name="l00050"></a>00050       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
+<a name="l00051"></a>00051       <span class="keyword">typedef</span> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Connections::Network</a> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Network</a>;
+<a name="l00052"></a>00052       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
+<a name="l00053"></a>00053       <span class="keyword">typedef</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">Identity::PrivateIdentity</a> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a>;
+<a name="l00054"></a>00054       <span class="keyword">typedef</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">Identity::PublicIdentity</a> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a>;
+<a name="l00055"></a>00055       <span class="keyword">typedef</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Identity::Group</a> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a>;
+<a name="l00056"></a>00056       <span class="keyword">typedef</span> <a class="code" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html" title="Maintains an evolving group.">Identity::GroupHolder</a> <a class="code" href="../../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html" title="Maintains an evolving group.">GroupHolder</a>;
+<a name="l00057"></a>00057       <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;
+<a name="l00058"></a>00058       <span class="keyword">typedef</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Messaging::Response</a> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Response</a>;
+<a name="l00059"></a>00059       <span class="keyword">typedef</span> <a class="code" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html" title="Used to create a response callback, note this does NOT keep a pointer, it internally uses slots and s...">Messaging::ResponseHandler</a> <a class="code" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html" title="Used to create a response callback, note this does NOT keep a pointer, it internally uses slots and s...">ResponseHandler</a>;
+<a name="l00060"></a>00060       <span class="keyword">typedef</span> <a class="code" href="../../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html">Messaging::GetDataMethod&lt;Session&gt;</a> <a class="code" href="../../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html">GetDataCallback</a>;
+<a name="l00061"></a>00061 
+<a name="l00070"></a>00070       <span class="keyword">explicit</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a65666d64f94aaad8a374791b0f9f030a" title="Constructor.">Session</a>(<span class="keyword">const</span> QSharedPointer&lt;GroupHolder&gt; &amp;group_holder,
+<a name="l00071"></a>00071           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id,
+<a name="l00072"></a>00072           QSharedPointer&lt;Network&gt; network, CreateRound create_round);
+<a name="l00073"></a>00073 
+<a name="l00077"></a>00077       <span class="keyword">virtual</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa4b296881b0c5b6b68899bbcd1ba0e86" title="Deconstructor.">~Session</a>();
+<a name="l00078"></a>00078 
+<a name="l00083"></a>00083       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa0cbf82c2dec62acce913e9806bc49c2" title="A remote peer is notifying a leader that a link was disconnected.">LinkDisconnect</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
+<a name="l00084"></a>00084 
+<a name="l00089"></a>00089       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a69fc6f5ba23cc12a5d62c33218d5488d" title="From the SessionManager, pass in a ReceivedRegister.">ReceivedRegister</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);
+<a name="l00090"></a>00090 
+<a name="l00095"></a>00095       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a628b56de9724fad7fd6badbe5e8569e2" title="From the SessionManager, pass in a ReceiveReady.">ReceivedPrepare</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);
+<a name="l00096"></a>00096 
+<a name="l00102"></a>00102       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a6053e35ccd21a41292fa7f50649d4528" title="From the SessionManager, pass in a Begin message from the Session leader to call start on the round...">ReceivedBegin</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
+<a name="l00103"></a>00103 
+<a name="l00108"></a>00108       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a7cd37648795f542b05c4bd47c09177bf" title="From the SessionManager, pass in incoming data.">IncomingData</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
+<a name="l00109"></a>00109 
+<a name="l00113"></a>00113       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a22d2c669b6e286c699ef11dae3a04851" title="From a client software, send a message anonymously.">Send</a>(<span class="keyword">const</span> QByteArray &amp;data);
+<a name="l00114"></a>00114 
+<a name="l00118"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a42df3ca34a329e499332b6282cda93b4">00118</a>       <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a42df3ca34a329e499332b6282cda93b4" title="Returns true if the peer is the leader for this session.">IsLeader</a>()<span class="keyword"> const</span>
+<a name="l00119"></a>00119 <span class="keyword">      </span>{
+<a name="l00120"></a>00120         <span class="keywordflow">return</span> _ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d" title="Returns the local node&#39;s Id.">GetLocalId</a>() == <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a179d95eb36bc0d3688cb0210b49e20b9" title="Returns the group being used in this session.">GetGroup</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a0f104f53515b29d6c3f9665b630ddc28" title="Returns the leader of the group.">GetLeader</a>();
+<a name="l00121"></a>00121       }
+<a name="l00122"></a>00122 
+<a name="l00126"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a4883b521b9965eaff92d0719e54b52bd">00126</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a4883b521b9965eaff92d0719e54b52bd" title="Returns the Session Id.">GetId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _session_id; }
+<a name="l00127"></a>00127 
+<a name="l00131"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#adad7634d994fe02efc8ce7f190df3b1b">00131</a>       <span class="keyword">inline</span> QSharedPointer&lt;Round&gt; <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#adad7634d994fe02efc8ce7f190df3b1b" title="Returns the current round.">GetCurrentRound</a>()
+<a name="l00132"></a>00132       {
+<a name="l00133"></a>00133         <span class="keywordflow">return</span> _current_round;
+<a name="l00134"></a>00134       }
+<a name="l00135"></a>00135 
+<a name="l00139"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a50a5f58290234bee984e5d5d0b0d18b2">00139</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QString <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a50a5f58290234bee984e5d5d0b0d18b2" title="Returns the Session / Round information.">ToString</a>()<span class="keyword"> const</span>
+<a name="l00140"></a>00140 <span class="keyword">      </span>{
+<a name="l00141"></a>00141         <span class="keywordflow">return</span> <span class="stringliteral">&quot;Session: &quot;</span> + <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a4883b521b9965eaff92d0719e54b52bd" title="Returns the Session Id.">GetId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>() + <span class="stringliteral">&quot;|&quot;</span> +
+<a name="l00142"></a>00142           (_current_round.isNull() ? <span class="stringliteral">&quot;No current round&quot;</span> : 
+<a name="l00143"></a>00143           _current_round-&gt;ToString());
+<a name="l00144"></a>00144       }
+<a name="l00145"></a>00145 
+<a name="l00149"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a179d95eb36bc0d3688cb0210b49e20b9">00149</a>       <span class="keyword">inline</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a179d95eb36bc0d3688cb0210b49e20b9" title="Returns the group being used in this session.">GetGroup</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _group_holder-&gt;GetGroup(); }
+<a name="l00150"></a>00150 
+<a name="l00154"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a633692288b5986ed4b41e7b70c57c754">00154</a>       <span class="keyword">inline</span> <span class="keyword">const</span> QSet&lt;Id&gt; <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a633692288b5986ed4b41e7b70c57c754" title="Get the set of bad group members.">GetBadMembers</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _bad_members; }
+<a name="l00155"></a>00155 
+<a name="l00156"></a>00156       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MinimumRoundSize = 3;
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> PeerJoinDelay = 10000;
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160       <span class="keyword">const</span> GroupHolder &amp;GetGroupHolder();
+<a name="l00161"></a>00161 
+<a name="l00162"></a>00162     signals:
+<a name="l00167"></a>00167       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#ab79357b1349be1c63888b6839815069f" title="Signals that a round is beginning.">RoundStarting</a>(<span class="keyword">const</span> QSharedPointer&lt;Round&gt; &amp;round);
+<a name="l00168"></a>00168 
+<a name="l00174"></a>00174       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#ad2d6d06d35011e1b8ebb409fde8d138c" title="Signals that a round has completed.">RoundFinished</a>(<span class="keyword">const</span> QSharedPointer&lt;Round&gt; &amp;round);
+<a name="l00175"></a>00175 
+<a name="l00179"></a>00179       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a7136fed850b891f8f223e1633d78b6eb" title="Signfies that the session has been closed / stopped.">Stopping</a>();
+<a name="l00180"></a>00180 
+<a name="l00181"></a>00181     <span class="keyword">public</span> slots:
+<a name="l00185"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aadb021baed936ec4c552e7d3a6fefab6">00185</a>       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aadb021baed936ec4c552e7d3a6fefab6" title="Calls start.">CallStart</a>()
+<a name="l00186"></a>00186       {
+<a name="l00187"></a>00187         <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#abb1888fc9a1378b6cba460dac4122039" title="Returns true if started the first time.">Start</a>();
+<a name="l00188"></a>00188       }
+<a name="l00189"></a>00189 
+<a name="l00193"></a><a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a99c4a3d7513587fb4de58ee9efe34936">00193</a>       <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a99c4a3d7513587fb4de58ee9efe34936" title="Calls stop.">CallStop</a>()
+<a name="l00194"></a>00194       {
+<a name="l00195"></a>00195         <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#aecd3fe3c6c4a43c8cadefc18e58e9005" title="Returns true if the first time stopped.">Stop</a>();
+<a name="l00196"></a>00196       }
+<a name="l00197"></a>00197 
+<a name="l00198"></a>00198     <span class="keyword">protected</span>:
+<a name="l00202"></a>00202       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a0218bea0d956f64a4e6e9b1de42092aa" title="Called when the session is started.">OnStart</a>();
+<a name="l00203"></a>00203 
+<a name="l00207"></a>00207       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a0bb44662b5e9efaff62f380489f4fef1" title="Called when the session is stopped.">OnStop</a>();
+<a name="l00208"></a>00208 
+<a name="l00209"></a>00209     <span class="keyword">private</span>:
+<a name="l00214"></a>00214       <span class="keywordtype">void</span> Register(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);
+<a name="l00215"></a>00215 
+<a name="l00220"></a>00220       <span class="keywordtype">void</span> CheckRegistration(<span class="keyword">const</span> <span class="keywordtype">int</span>&amp;);
+<a name="l00221"></a>00221 
+<a name="l00226"></a>00226       <span class="keywordtype">bool</span> SendPrepare();
+<a name="l00227"></a>00227 
+<a name="l00231"></a>00231       <span class="keywordtype">bool</span> CheckGroup();
+<a name="l00232"></a>00232 
+<a name="l00236"></a>00236       <span class="keywordtype">void</span> NextRound(<span class="keyword">const</span> Id &amp;round_id);
+<a name="l00237"></a>00237 
+<a name="l00244"></a>00244       QPair&lt;QByteArray, bool&gt; GetData(<span class="keywordtype">int</span> max);
+<a name="l00245"></a>00245 
+<a name="l00246"></a>00246       <span class="keywordtype">void</span> AddMember(<span class="keyword">const</span> PublicIdentity &amp;gc);
+<a name="l00247"></a>00247       <span class="keywordtype">void</span> RemoveMember(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
+<a name="l00248"></a>00248 
+<a name="l00252"></a>00252       QHash&lt;Id, Request&gt; _id_to_request;
+<a name="l00253"></a>00253 
+<a name="l00257"></a>00257       QList&lt;QByteArray&gt; _send_queue;
+<a name="l00258"></a>00258 
+<a name="l00259"></a>00259       Group _shared_group;
+<a name="l00260"></a>00260       QSet&lt;Id&gt; _bad_members;
+<a name="l00261"></a>00261       QSharedPointer&lt;GroupHolder&gt; _group_holder;
+<a name="l00262"></a>00262       <span class="keyword">const</span> PrivateIdentity _ident;
+<a name="l00263"></a>00263       <span class="keyword">const</span> Id _session_id;
+<a name="l00264"></a>00264       QSharedPointer&lt;Network&gt; _network;
+<a name="l00265"></a>00265       CreateRound _create_round;
+<a name="l00266"></a>00266 
+<a name="l00267"></a>00267       QSharedPointer&lt;Round&gt; _current_round;
+<a name="l00268"></a>00268       <a class="code" href="../../d9/d1d/classDissent_1_1Utils_1_1TimerEvent.html" title="Stores a Timer event, that is, a callback method, due time, and period.">Utils::TimerEvent</a> _register_event;
+<a name="l00269"></a>00269       QDateTime _last_registration;
+<a name="l00270"></a>00270       <a class="code" href="../../d9/d1d/classDissent_1_1Utils_1_1TimerEvent.html" title="Stores a Timer event, that is, a callback method, due time, and period.">Utils::TimerEvent</a> _prepare_event;
+<a name="l00271"></a>00271       QHash&lt;Id, Id&gt; _registered_peers;
+<a name="l00272"></a>00272       QHash&lt;Id, Id&gt; _prepared_peers;
+<a name="l00273"></a>00273       QSharedPointer&lt;ResponseHandler&gt; _prepared;
+<a name="l00274"></a>00274       QSharedPointer&lt;ResponseHandler&gt; _registered;
+<a name="l00275"></a>00275       GetDataCallback _get_data_cb;
+<a name="l00276"></a>00276       <span class="keywordtype">int</span> _round_idx;
+<a name="l00277"></a>00277       Request _prepare_request;
+<a name="l00278"></a>00278       <span class="keywordtype">bool</span> _prepare_waiting;
+<a name="l00279"></a>00279       <span class="keywordtype">bool</span> _prepare_waiting_for_con;
+<a name="l00280"></a>00280       <span class="keywordtype">int</span> _trim_send_queue;
+<a name="l00281"></a>00281       <span class="keywordtype">bool</span> _registering;
+<a name="l00282"></a>00282 
+<a name="l00283"></a>00283     <span class="keyword">private</span> slots:
+<a name="l00288"></a>00288       <span class="keywordtype">void</span> HandleConnection(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
+<a name="l00289"></a>00289 
+<a name="l00293"></a>00293       <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleRoundFinished();
+<a name="l00294"></a>00294 
+<a name="l00298"></a>00298       <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleDisconnect();
+<a name="l00299"></a>00299 
+<a name="l00304"></a>00304       <span class="keywordtype">void</span> Registered(<span class="keyword">const</span> Response &amp;response);
+<a name="l00305"></a>00305 
+<a name="l00308"></a>00308       <span class="keywordtype">void</span> Prepared(<span class="keyword">const</span> Response &amp;response);
+<a name="l00309"></a>00309   };
 <a name="l00310"></a>00310 }
-<a name="l00311"></a>00311 
-<a name="l00312"></a>00312 <span class="preprocessor">#endif</span>
+<a name="l00311"></a>00311 }
+<a name="l00312"></a>00312 
+<a name="l00313"></a>00313 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 6 2012 17:51:08 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 9 2012 01:18:10 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -22,6 +22,8 @@ var searchData=
   ['signalsink',['SignalSink',['../d8/dad/classDissent_1_1Messaging_1_1SignalSink.html',1,'Dissent::Messaging']]],
   ['sleeper',['Sleeper',['../da/d6d/classDissent_1_1Utils_1_1Sleeper.html',1,'Dissent::Utils']]],
   ['slot_5fdata',['slot_data',['../d7/d60/structDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData_1_1slot__data.html',1,'Dissent::Anonymity::Tolerant::AlibiData']]],
+  ['socksconnection',['SocksConnection',['../d2/da7/classDissent_1_1Tunnel_1_1SocksConnection.html',1,'Dissent::Tunnel']]],
+  ['sockshostaddress',['SocksHostAddress',['../db/d27/classDissent_1_1Tunnel_1_1SocksHostAddress.html',1,'Dissent::Tunnel']]],
   ['source',['Source',['../d7/d32/classDissent_1_1Messaging_1_1Source.html',1,'Dissent::Messaging']]],
   ['sourceobject',['SourceObject',['../df/d34/classDissent_1_1Messaging_1_1SourceObject.html',1,'Dissent::Messaging']]],
   ['startstop',['StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html',1,'Dissent::Utils']]],

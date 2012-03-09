@@ -142,6 +142,8 @@ virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="memdesc:a18cb085f2563d42d03a5ae45ba450954"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a non-interactive zero-knowledge proof of a shared Diffie-Hellman secret.  <a href="#a18cb085f2563d42d03a5ae45ba450954"></a><br/></td></tr>
 <tr class="memitem:a58a0dffc69f340ab6bed839d8ed4c197"><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#a58a0dffc69f340ab6bed839d8ed4c197">VerifySharedSecret</a> (const QByteArray &amp;prover_pub, const QByteArray &amp;remote_pub, const QByteArray &amp;proof) const </td></tr>
 <tr class="memdesc:a58a0dffc69f340ab6bed839d8ed4c197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify a non-interactive zero-knowledge proof of a shared Diffie-Hellman secret.  <a href="#a58a0dffc69f340ab6bed839d8ed4c197"></a><br/></td></tr>
+<tr class="memitem:af7ffc1c184b8c1e61f6f2871247dcc54"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#af7ffc1c184b8c1e61f6f2871247dcc54">HashIntegers</a> (const QList&lt; QByteArray &gt; &amp;list) const </td></tr>
+<tr class="memdesc:af7ffc1c184b8c1e61f6f2871247dcc54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the digest of a list of integers (represented as ByteArrays)  <a href="#af7ffc1c184b8c1e61f6f2871247dcc54"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a59ebf9e45ca1792732fc5a5978990526"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59ebf9e45ca1792732fc5a5978990526"></a>
@@ -218,6 +220,31 @@ static const CryptoPP::Integer &amp;&#160;</td><td class="memItemRight" valign="
 
 </div>
 </div>
+<a class="anchor" id="af7ffc1c184b8c1e61f6f2871247dcc54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray <a class="el" href="../../da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#af7ffc1c184b8c1e61f6f2871247dcc54">Dissent::Crypto::CppDiffieHellman::HashIntegers</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; QByteArray &gt; &amp;&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get the digest of a list of integers (represented as ByteArrays) </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>of integers </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a18cb085f2563d42d03a5ae45ba450954"></a>
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +317,7 @@ static const CryptoPP::Integer &amp;&#160;</td><td class="memItemRight" valign="
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 6 2012 17:51:09 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 9 2012 01:18:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

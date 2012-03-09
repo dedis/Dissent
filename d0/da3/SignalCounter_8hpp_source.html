@@ -109,11 +109,11 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00021"></a>00021 
 <a name="l00025"></a><a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#ad1040247711ade5396ec91d4a4dfc8ad">00025</a>       <span class="keyword">virtual</span> <a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#ad1040247711ade5396ec91d4a4dfc8ad" title="Destructor.">~SignalCounter</a>() {}
 <a name="l00026"></a>00026 
-<a name="l00030"></a><a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#ae7f027f54aeab423721179f40cdd18e8">00030</a>       <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#ae7f027f54aeab423721179f40cdd18e8" title="Returns the amount of signals that have been registered thus far.">GetCount</a>() { <span class="keywordflow">return</span> _count; }
+<a name="l00030"></a><a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#a7ff8b22205ce5d7fcc1e8860659a88d5">00030</a>       <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#a7ff8b22205ce5d7fcc1e8860659a88d5" title="Returns the amount of signals that have been registered thus far.">GetCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _count; }
 <a name="l00031"></a>00031 
 <a name="l00035"></a><a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#a594b7c64817c866a92b10a385fd0085c">00035</a>       <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#a594b7c64817c866a92b10a385fd0085c" title="Resets the count of signals to 0.">Reset</a>() { _count = 0; }
 <a name="l00036"></a>00036 
-<a name="l00040"></a><a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#aa68091531cfa545038be70f788f61d3f">00040</a>       <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#aa68091531cfa545038be70f788f61d3f" title="Returns the expected count.">Max</a>() { <span class="keywordflow">return</span> _max; }
+<a name="l00040"></a><a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#a7fb77dbe24e80ccf85c3951f0def001d">00040</a>       <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#a7fb77dbe24e80ccf85c3951f0def001d" title="Returns the expected count.">Max</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _max; }
 <a name="l00041"></a>00041 
 <a name="l00042"></a>00042     <span class="keyword">public</span> slots:
 <a name="l00046"></a><a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#a803836b2f1b68cfd526450f80d139cf4">00046</a>       <span class="keywordtype">void</span> <a class="code" href="../../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html#a803836b2f1b68cfd526450f80d139cf4" title="Register all signals to this slot.">Counter</a>() { ++_count; }
@@ -130,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 6 2012 17:51:08 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 9 2012 01:18:11 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

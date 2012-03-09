@@ -5,7 +5,9 @@ var searchData=
   ['deletekeys',['DeleteKeys',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a439706bf8a579a9c9fae94dc5b9e47d8',1,'Dissent::Anonymity::ShuffleRound']]],
   ['destructorcheck',['DestructorCheck',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html#aa498a0da34ae54aecbd21d81e16e0d5d',1,'Dissent::Utils::StartStop']]],
   ['disable',['Disable',['../d0/dab/classDissent_1_1Utils_1_1Logging.html#a8c51992fecf14d5a35a685959f01c275',1,'Dissent::Utils::Logging']]],
+  ['discardproxy',['DiscardProxy',['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#aac60bde14f40dbcd3313602217e2bf29',1,'Dissent::Tunnel::ExitTunnel']]],
   ['disconnect',['Disconnect',['../da/d0e/classDissent_1_1Connections_1_1Connection.html#ac13d27719ae0508c1953e02a782ce4d6',1,'Dissent::Connections::Connection::Disconnect()'],['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a6ccde0d468198a7bfc2aa74a9e067795',1,'Dissent::Connections::ConnectionTable::Disconnect()']]],
   ['disconnected',['Disconnected',['../da/d0e/classDissent_1_1Connections_1_1Connection.html#adbf3514e51970c029a4799f1faffc1a7',1,'Dissent::Connections::Connection::Disconnected()'],['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#ad7e1ec9bac00b57fc051e55552bff8d6',1,'Dissent::Connections::ConnectionManager::Disconnected()'],['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#aff6109eec587b6f5593d3d973254ae25',1,'Dissent::Overlay::BaseOverlay::Disconnected()']]],
-  ['disconnecting',['Disconnecting',['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#a81b2e0eca0b6ef9a7a328d4204d20594',1,'Dissent::Overlay::BaseOverlay']]]
+  ['disconnecting',['Disconnecting',['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#a81b2e0eca0b6ef9a7a328d4204d20594',1,'Dissent::Overlay::BaseOverlay']]],
+  ['downstreamdata',['DownstreamData',['../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a88915682415bad993482d57a81644ef2',1,'Dissent::Tunnel::EntryTunnel']]]
 ];

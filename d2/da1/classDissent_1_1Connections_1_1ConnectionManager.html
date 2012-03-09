@@ -103,6 +103,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Connections::ConnectionManager Class Reference</div>  </div>
@@ -175,8 +176,21 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <tr class="memitem:af44d30289656283ce58c19595dcf8d79"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af44d30289656283ce58c19595dcf8d79"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#af44d30289656283ce58c19595dcf8d79">OutstandingConnectionAttempts</a> ()</td></tr>
 <tr class="memdesc:af44d30289656283ce58c19595dcf8d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of outstanding connection attempts. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:afe5598e456091dce1aa6434602f89b8a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#afe5598e456091dce1aa6434602f89b8a">UseTimer</a> = true</td></tr>
+<tr class="memdesc:afe5598e456091dce1aa6434602f89b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hack to enable / disable the use of the Edge check.  <a href="#afe5598e456091dce1aa6434602f89b8a"></a><br/></td></tr>
+<tr class="memitem:a6efcfc4571fec33ce951e67bbbbcbce6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6efcfc4571fec33ce951e67bbbbcbce6"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeBetweenEdgeCheck</b> = 10000</td></tr>
+<tr class="memitem:a29a729d34c1e1a3c8448c34cb20f5f6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29a729d34c1e1a3c8448c34cb20f5f6f"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>EdgeCheckTimeout</b> = 30000</td></tr>
+<tr class="memitem:ac168c76a9cfe79f124f27d0a504f6506"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac168c76a9cfe79f124f27d0a504f6506"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>EdgeCloseTimeout</b> = 60000</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:aa807304c3469efc382cb317bc7f8b848"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa807304c3469efc382cb317bc7f8b848"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aa807304c3469efc382cb317bc7f8b848">OnStart</a> ()</td></tr>
+<tr class="memdesc:aa807304c3469efc382cb317bc7f8b848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after start has been called. <br/></td></tr>
 <tr class="memitem:a5670cf31a6d2a10355ce0ef10b93d85f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5670cf31a6d2a10355ce0ef10b93d85f"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a5670cf31a6d2a10355ce0ef10b93d85f">OnStop</a> ()</td></tr>
 <tr class="memdesc:a5670cf31a6d2a10355ce0ef10b93d85f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called after stop has been called. <br/></td></tr>
@@ -333,6 +347,23 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 </div>
 </div>
+<hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="afe5598e456091dce1aa6434602f89b8a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#afe5598e456091dce1aa6434602f89b8a">Dissent::Connections::ConnectionManager::UseTimer</a> = true<code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Hack to enable / disable the use of the Edge check. </p>
+<p>Many tests assume that there are no background checking processes and therefore have the event loop will eventually have no callbacks even in an active system, therefore this is kept as a means to ensure that behavior is propogated forward. Should be set back to true upon the end of each test. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Connections/<a class="el" href="../../da/d75/ConnectionManager_8hpp_source.html">ConnectionManager.hpp</a></li>
 <li>src/Connections/ConnectionManager.cpp</li>
@@ -341,7 +372,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 6 2012 17:51:09 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 9 2012 01:18:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

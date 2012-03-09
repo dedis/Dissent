@@ -164,11 +164,18 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:aafa747c6bef26f4a7d26d2d19c6943db"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aafa747c6bef26f4a7d26d2d19c6943db"></a>
 QSharedPointer&lt; <a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html">Edge</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>GetSharedPointer</b> ()</td></tr>
 <tr class="memitem:ac3d69d245ad0fcf945163d38486b0dbc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3d69d245ad0fcf945163d38486b0dbc"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>GetStopReason</b> () const </td></tr>
+QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#ac3d69d245ad0fcf945163d38486b0dbc">GetStopReason</a> () const </td></tr>
+<tr class="memdesc:ac3d69d245ad0fcf945163d38486b0dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the reason the <a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html" title="Stores the state for a transport layer link between two peers.">Edge</a> was stopped (closed) <br/></td></tr>
 <tr class="memitem:ac8ab8a36c6461e2adfedc06252847f90"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8ab8a36c6461e2adfedc06252847f90"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSharedPointer</b> (const QSharedPointer&lt; <a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html">Edge</a> &gt; &amp;edge)</td></tr>
+<tr class="memitem:aa527ee0f0509c3b08694d6dad1dbd65c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa527ee0f0509c3b08694d6dad1dbd65c"></a>
+virtual qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#aa527ee0f0509c3b08694d6dad1dbd65c">GetLastIncomingMessage</a> () const </td></tr>
+<tr class="memdesc:aa527ee0f0509c3b08694d6dad1dbd65c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the time for the last incoming packet. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a978da72814edf10d0db1c503655a560d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a978da72814edf10d0db1c503655a560d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a978da72814edf10d0db1c503655a560d">PushData</a> (const QSharedPointer&lt; ISender &gt; &amp;from, const QByteArray &amp;data)</td></tr>
+<tr class="memdesc:a978da72814edf10d0db1c503655a560d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded to set the time the last message came in. <br/></td></tr>
 <tr class="memitem:a7949fdbae127c9e185fa5d53e5d162f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7949fdbae127c9e185fa5d53e5d162f1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a7949fdbae127c9e185fa5d53e5d162f1">RequiresCleanup</a> ()</td></tr>
 <tr class="memdesc:a7949fdbae127c9e185fa5d53e5d162f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the object isn't fully closed. <br/></td></tr>
@@ -284,7 +291,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 6 2012 17:51:11 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 9 2012 01:18:13 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -99,117 +99,134 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00004"></a>00004 <span class="preprocessor">#include &quot;Messaging/RpcHandler.hpp&quot;</span>
 <a name="l00005"></a>00005 <span class="preprocessor">#include &quot;Transports/EdgeFactory.hpp&quot;</span>
 <a name="l00006"></a>00006 <span class="preprocessor">#include &quot;Utils/StartStop.hpp&quot;</span>
-<a name="l00007"></a>00007 
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;ConnectionTable.hpp&quot;</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">namespace </span>Dissent {
-<a name="l00011"></a>00011 <span class="keyword">namespace </span>Transports {
-<a name="l00012"></a>00012   <span class="keyword">class </span>Address;
-<a name="l00013"></a>00013   <span class="keyword">class </span>Edge;
-<a name="l00014"></a>00014   <span class="keyword">class </span>EdgeListener;
-<a name="l00015"></a>00015 }
-<a name="l00016"></a>00016 
-<a name="l00017"></a>00017 <span class="keyword">namespace </span>Connections {
-<a name="l00022"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html">00022</a>   <span class="keyword">class </span><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html" title="Manages incoming and outgoing connections -- A node should only send requests on outgoing connections...">ConnectionManager</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern.">Utils::StartStop</a> {
-<a name="l00023"></a>00023     Q_OBJECT
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025     <span class="keyword">public</span>:
-<a name="l00026"></a>00026       <span class="keyword">typedef</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">Messaging::RpcHandler</a> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">RpcHandler</a>;
-<a name="l00027"></a>00027       <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;
-<a name="l00028"></a>00028       <span class="keyword">typedef</span> <a class="code" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html" title="Used to create a response callback, note this does NOT keep a pointer, it internally uses slots and s...">Messaging::ResponseHandler</a> <a class="code" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html" title="Used to create a response callback, note this does NOT keep a pointer, it internally uses slots and s...">ResponseHandler</a>;
-<a name="l00029"></a>00029       <span class="keyword">typedef</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Messaging::Response</a> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Response</a>;
-<a name="l00030"></a>00030       <span class="keyword">typedef</span> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Transports::Address</a> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Address</a>;
-<a name="l00031"></a>00031       <span class="keyword">typedef</span> <a class="code" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html" title="Stores the state for a transport layer link between two peers.">Transports::Edge</a> <a class="code" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html" title="Stores the state for a transport layer link between two peers.">Edge</a>;
-<a name="l00032"></a>00032       <span class="keyword">typedef</span> <a class="code" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html" title="Creates and handles transport layer links.">Transports::EdgeListener</a> <a class="code" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html" title="Creates and handles transport layer links.">EdgeListener</a>;
-<a name="l00033"></a>00033       <span class="keyword">typedef</span> <a class="code" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html" title="Abstracts Edge creation from the actual address and EL type.">Transports::EdgeFactory</a> <a class="code" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html" title="Abstracts Edge creation from the actual address and EL type.">EdgeFactory</a>;
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035       <span class="comment">/*</span>
-<a name="l00036"></a>00036 <span class="comment">      static ConnectionManager &amp;GetEmpty()</span>
-<a name="l00037"></a>00037 <span class="comment">      {</span>
-<a name="l00038"></a>00038 <span class="comment">        static ConnectionManager cm(Id::Zero(), RpcHandler::GetEmpty());</span>
-<a name="l00039"></a>00039 <span class="comment">        return cm;</span>
-<a name="l00040"></a>00040 <span class="comment">      }</span>
-<a name="l00041"></a>00041 <span class="comment">      */</span>
-<a name="l00042"></a>00042 
-<a name="l00048"></a>00048       <span class="keyword">explicit</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aea4607c212e5d95b640ebb01d73a6f84" title="Constructor.">ConnectionManager</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;local_id,
-<a name="l00049"></a>00049           <span class="keyword">const</span> QSharedPointer&lt;RpcHandler&gt; &amp;rpc);
-<a name="l00050"></a>00050 
-<a name="l00054"></a>00054       <span class="keyword">virtual</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a2a45ac774876498ca76521295981141a" title="Deconstructor.">~ConnectionManager</a>();
-<a name="l00055"></a>00055 
-<a name="l00062"></a>00062       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a620396ba3a6dd053fed64f3bb4ed47b7" title="Add an EdgeListener for creating edges for incoming and outgoing connections.">AddEdgeListener</a>(<span class="keyword">const</span> QSharedPointer&lt;EdgeListener&gt; &amp;el);
-<a name="l00063"></a>00063 
-<a name="l00068"></a>00068       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a1752cff807648f743ebee2915bd32ce6" title="Connect to the specified transport address.">ConnectTo</a>(<span class="keyword">const</span> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Address</a> &amp;addr);
-<a name="l00069"></a>00069 
-<a name="l00073"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0">00073</a>       <span class="keyword">inline</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;<a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0" title="Returns the outgoing connection table.">GetConnectionTable</a>() { <span class="keywordflow">return</span> _con_tab; }
-<a name="l00074"></a>00074 
-<a name="l00078"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a474410c52542e94ec033a952f3b0f8d3">00078</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a474410c52542e94ec033a952f3b0f8d3" title="Returns the local Id.">GetId</a>() { <span class="keywordflow">return</span> _local_id; }
-<a name="l00079"></a>00079 
-<a name="l00083"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a2c1566d0a7c226148b346a302102d318">00083</a>       <span class="keywordtype">int</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a2c1566d0a7c226148b346a302102d318" title="Returns the number of actively used remote addresses.">ActiveAddresses</a>()
-<a name="l00084"></a>00084       {
-<a name="l00085"></a>00085         <span class="keywordflow">return</span> _active_addrs.count();
-<a name="l00086"></a>00086       }
-<a name="l00087"></a>00087 
-<a name="l00091"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#af44d30289656283ce58c19595dcf8d79">00091</a>       <span class="keywordtype">int</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#af44d30289656283ce58c19595dcf8d79" title="Returns the number of outstanding connection attempts.">OutstandingConnectionAttempts</a>()
-<a name="l00092"></a>00092       {
-<a name="l00093"></a>00093         <span class="keywordflow">return</span> _outstanding_con_attempts.count();
-<a name="l00094"></a>00094       }
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096     <span class="keyword">protected</span>:
-<a name="l00100"></a>00100       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a5670cf31a6d2a10355ce0ef10b93d85f" title="Called after stop has been called.">OnStop</a>();
-<a name="l00101"></a>00101       
-<a name="l00102"></a>00102     signals:
-<a name="l00107"></a>00107       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a9025bf77aff44273787523711ab68bc8" title="A new outgoing connection has been created.">NewConnection</a>(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
-<a name="l00108"></a>00108 
-<a name="l00115"></a>00115       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#adf67114260e681a9b7878baa2f8da51a" title="A ConnectTo attempt failed, I guess ideally ConnectTo would take an Id and handle the translation int...">ConnectionAttemptFailure</a>(<span class="keyword">const</span> Address &amp;to, <span class="keyword">const</span> QString &amp;reason);
-<a name="l00116"></a>00116 
-<a name="l00120"></a>00120       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#ad7e1ec9bac00b57fc051e55552bff8d6" title="Emitted when disconnected.">Disconnected</a>();
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;Utils/TimerEvent.hpp&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;ConnectionTable.hpp&quot;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">namespace </span>Dissent {
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>Transports {
+<a name="l00013"></a>00013   <span class="keyword">class </span>Address;
+<a name="l00014"></a>00014   <span class="keyword">class </span>Edge;
+<a name="l00015"></a>00015   <span class="keyword">class </span>EdgeListener;
+<a name="l00016"></a>00016 }
+<a name="l00017"></a>00017 
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>Connections {
+<a name="l00023"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html">00023</a>   <span class="keyword">class </span><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html" title="Manages incoming and outgoing connections -- A node should only send requests on outgoing connections...">ConnectionManager</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern.">Utils::StartStop</a> {
+<a name="l00024"></a>00024     Q_OBJECT
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026     <span class="keyword">public</span>:
+<a name="l00027"></a>00027       <span class="keyword">typedef</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">Messaging::RpcHandler</a> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">RpcHandler</a>;
+<a name="l00028"></a>00028       <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;
+<a name="l00029"></a>00029       <span class="keyword">typedef</span> <a class="code" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html" title="Used to create a response callback, note this does NOT keep a pointer, it internally uses slots and s...">Messaging::ResponseHandler</a> <a class="code" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html" title="Used to create a response callback, note this does NOT keep a pointer, it internally uses slots and s...">ResponseHandler</a>;
+<a name="l00030"></a>00030       <span class="keyword">typedef</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Messaging::Response</a> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Response</a>;
+<a name="l00031"></a>00031       <span class="keyword">typedef</span> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Transports::Address</a> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Address</a>;
+<a name="l00032"></a>00032       <span class="keyword">typedef</span> <a class="code" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html" title="Stores the state for a transport layer link between two peers.">Transports::Edge</a> <a class="code" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html" title="Stores the state for a transport layer link between two peers.">Edge</a>;
+<a name="l00033"></a>00033       <span class="keyword">typedef</span> <a class="code" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html" title="Creates and handles transport layer links.">Transports::EdgeListener</a> <a class="code" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html" title="Creates and handles transport layer links.">EdgeListener</a>;
+<a name="l00034"></a>00034       <span class="keyword">typedef</span> <a class="code" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html" title="Abstracts Edge creation from the actual address and EL type.">Transports::EdgeFactory</a> <a class="code" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html" title="Abstracts Edge creation from the actual address and EL type.">EdgeFactory</a>;
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036       <span class="comment">/*</span>
+<a name="l00037"></a>00037 <span class="comment">      static ConnectionManager &amp;GetEmpty()</span>
+<a name="l00038"></a>00038 <span class="comment">      {</span>
+<a name="l00039"></a>00039 <span class="comment">        static ConnectionManager cm(Id::Zero(), RpcHandler::GetEmpty());</span>
+<a name="l00040"></a>00040 <span class="comment">        return cm;</span>
+<a name="l00041"></a>00041 <span class="comment">      }</span>
+<a name="l00042"></a>00042 <span class="comment">      */</span>
+<a name="l00043"></a>00043 
+<a name="l00049"></a>00049       <span class="keyword">explicit</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aea4607c212e5d95b640ebb01d73a6f84" title="Constructor.">ConnectionManager</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;local_id,
+<a name="l00050"></a>00050           <span class="keyword">const</span> QSharedPointer&lt;RpcHandler&gt; &amp;rpc);
+<a name="l00051"></a>00051 
+<a name="l00055"></a>00055       <span class="keyword">virtual</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a2a45ac774876498ca76521295981141a" title="Deconstructor.">~ConnectionManager</a>();
+<a name="l00056"></a>00056 
+<a name="l00063"></a>00063       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a620396ba3a6dd053fed64f3bb4ed47b7" title="Add an EdgeListener for creating edges for incoming and outgoing connections.">AddEdgeListener</a>(<span class="keyword">const</span> QSharedPointer&lt;EdgeListener&gt; &amp;el);
+<a name="l00064"></a>00064 
+<a name="l00069"></a>00069       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a1752cff807648f743ebee2915bd32ce6" title="Connect to the specified transport address.">ConnectTo</a>(<span class="keyword">const</span> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Address</a> &amp;addr);
+<a name="l00070"></a>00070 
+<a name="l00074"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0">00074</a>       <span class="keyword">inline</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;<a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aef036e2a0a2f7490169f802ffba9ddf0" title="Returns the outgoing connection table.">GetConnectionTable</a>() { <span class="keywordflow">return</span> _con_tab; }
+<a name="l00075"></a>00075 
+<a name="l00079"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a474410c52542e94ec033a952f3b0f8d3">00079</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a474410c52542e94ec033a952f3b0f8d3" title="Returns the local Id.">GetId</a>() { <span class="keywordflow">return</span> _local_id; }
+<a name="l00080"></a>00080 
+<a name="l00084"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a2c1566d0a7c226148b346a302102d318">00084</a>       <span class="keywordtype">int</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a2c1566d0a7c226148b346a302102d318" title="Returns the number of actively used remote addresses.">ActiveAddresses</a>()
+<a name="l00085"></a>00085       {
+<a name="l00086"></a>00086         <span class="keywordflow">return</span> _active_addrs.count();
+<a name="l00087"></a>00087       }
+<a name="l00088"></a>00088 
+<a name="l00092"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#af44d30289656283ce58c19595dcf8d79">00092</a>       <span class="keywordtype">int</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#af44d30289656283ce58c19595dcf8d79" title="Returns the number of outstanding connection attempts.">OutstandingConnectionAttempts</a>()
+<a name="l00093"></a>00093       {
+<a name="l00094"></a>00094         <span class="keywordflow">return</span> _outstanding_con_attempts.count();
+<a name="l00095"></a>00095       }
+<a name="l00096"></a>00096 
+<a name="l00105"></a><a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#afe5598e456091dce1aa6434602f89b8a">00105</a>       <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#afe5598e456091dce1aa6434602f89b8a" title="Hack to enable / disable the use of the Edge check.">UseTimer</a>;
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> TimeBetweenEdgeCheck;
+<a name="l00108"></a>00108       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> EdgeCheckTimeout;
+<a name="l00109"></a>00109       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> EdgeCloseTimeout;
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111     <span class="keyword">protected</span>:
+<a name="l00115"></a>00115       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#aa807304c3469efc382cb317bc7f8b848" title="Called after start has been called.">OnStart</a>();
+<a name="l00116"></a>00116       
+<a name="l00120"></a>00120       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a5670cf31a6d2a10355ce0ef10b93d85f" title="Called after stop has been called.">OnStop</a>();
 <a name="l00121"></a>00121 
-<a name="l00122"></a>00122     <span class="keyword">private</span>:
-<a name="l00130"></a>00130       <span class="keywordtype">void</span> BindEdge(<span class="keyword">const</span> QSharedPointer&lt;Edge&gt; &amp;edge, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;rem_id);
-<a name="l00131"></a>00131 
-<a name="l00137"></a>00137       <span class="keywordtype">void</span> CreateConnection(<span class="keyword">const</span> QSharedPointer&lt;Edge&gt; &amp;pedge,
-<a name="l00138"></a>00138           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;rem_id);
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140       QSharedPointer&lt;ResponseHandler&gt; _inquired;
+<a name="l00122"></a>00122     signals:
+<a name="l00127"></a>00127       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a9025bf77aff44273787523711ab68bc8" title="A new outgoing connection has been created.">NewConnection</a>(<span class="keyword">const</span> QSharedPointer&lt;Connection&gt; &amp;con);
+<a name="l00128"></a>00128 
+<a name="l00135"></a>00135       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#adf67114260e681a9b7878baa2f8da51a" title="A ConnectTo attempt failed, I guess ideally ConnectTo would take an Id and handle the translation int...">ConnectionAttemptFailure</a>(<span class="keyword">const</span> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Address</a> &amp;to, <span class="keyword">const</span> QString &amp;reason);
+<a name="l00136"></a>00136 
+<a name="l00140"></a>00140       <span class="keywordtype">void</span> <a class="code" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#ad7e1ec9bac00b57fc051e55552bff8d6" title="Emitted when disconnected.">Disconnected</a>();
 <a name="l00141"></a>00141 
-<a name="l00142"></a>00142       <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> _con_tab;
-<a name="l00143"></a>00143       <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> _rem_con_tab;
-<a name="l00144"></a>00144       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _local_id;
-<a name="l00145"></a>00145       EdgeFactory _edge_factory;
-<a name="l00146"></a>00146       QSharedPointer&lt;RpcHandler&gt; _rpc;
-<a name="l00147"></a>00147       QHash&lt;Address, bool&gt; _outstanding_con_attempts;
-<a name="l00148"></a>00148       QHash&lt;Address, bool&gt; _active_addrs;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150     <span class="keyword">private</span> slots:
-<a name="l00154"></a>00154       <span class="keywordtype">void</span> Inquire(<span class="keyword">const</span> Request &amp;request);
-<a name="l00155"></a>00155 
-<a name="l00159"></a>00159       <span class="keywordtype">void</span> Inquired(<span class="keyword">const</span> Response &amp;response);
-<a name="l00160"></a>00160 
-<a name="l00164"></a>00164       <span class="keywordtype">void</span> Connect(<span class="keyword">const</span> Request &amp;notification);
-<a name="l00165"></a>00165 
-<a name="l00169"></a>00169       <span class="keywordtype">void</span> Close(<span class="keyword">const</span> Request &amp;notification);
-<a name="l00170"></a>00170 
-<a name="l00174"></a>00174       <span class="keywordtype">void</span> Disconnect(<span class="keyword">const</span> Request &amp;notification);
-<a name="l00175"></a>00175 
-<a name="l00179"></a>00179       <span class="keywordtype">void</span> HandleDisconnect();
-<a name="l00180"></a>00180 
-<a name="l00184"></a>00184       <span class="keywordtype">void</span> HandleDisconnected(<span class="keyword">const</span> QString &amp;reason);
-<a name="l00185"></a>00185 
-<a name="l00189"></a>00189       <span class="keywordtype">void</span> HandleNewEdge(<span class="keyword">const</span> QSharedPointer&lt;Edge&gt; &amp;edge);
-<a name="l00190"></a>00190       
-<a name="l00194"></a>00194       <span class="keywordtype">void</span> HandleEdgeClose();
-<a name="l00195"></a>00195 
-<a name="l00199"></a>00199       <span class="keywordtype">void</span> HandleEdgeCreationFailure(<span class="keyword">const</span> Address &amp;to, <span class="keyword">const</span> QString &amp;reason);
-<a name="l00200"></a>00200   };
-<a name="l00201"></a>00201 }
-<a name="l00202"></a>00202 }
-<a name="l00203"></a>00203 
-<a name="l00204"></a>00204 <span class="preprocessor">#endif</span>
+<a name="l00142"></a>00142     <span class="keyword">private</span>:
+<a name="l00150"></a>00150       <span class="keywordtype">void</span> BindEdge(<span class="keyword">const</span> QSharedPointer&lt;Edge&gt; &amp;edge, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;rem_id);
+<a name="l00151"></a>00151 
+<a name="l00157"></a>00157       <span class="keywordtype">void</span> CreateConnection(<span class="keyword">const</span> QSharedPointer&lt;Edge&gt; &amp;pedge,
+<a name="l00158"></a>00158           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;rem_id);
+<a name="l00159"></a>00159 
+<a name="l00165"></a>00165       <span class="keywordtype">void</span> EdgeCheck(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;noop);
+<a name="l00166"></a>00166 
+<a name="l00167"></a>00167       QSharedPointer&lt;ResponseHandler&gt; _inquired;
+<a name="l00168"></a>00168       QSharedPointer&lt;ResponseHandler&gt; _ping_handler;
+<a name="l00169"></a>00169 
+<a name="l00170"></a>00170       <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> _con_tab;
+<a name="l00171"></a>00171       <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> _rem_con_tab;
+<a name="l00172"></a>00172       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _local_id;
+<a name="l00173"></a>00173       <a class="code" href="../../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html" title="Abstracts Edge creation from the actual address and EL type.">EdgeFactory</a> _edge_factory;
+<a name="l00174"></a>00174       QSharedPointer&lt;RpcHandler&gt; _rpc;
+<a name="l00175"></a>00175       QHash&lt;Address, bool&gt; _outstanding_con_attempts;
+<a name="l00176"></a>00176       QHash&lt;Address, bool&gt; _active_addrs;
+<a name="l00177"></a>00177       <a class="code" href="../../d9/d1d/classDissent_1_1Utils_1_1TimerEvent.html" title="Stores a Timer event, that is, a callback method, due time, and period.">Utils::TimerEvent</a> _edge_check;
+<a name="l00178"></a>00178 
+<a name="l00179"></a>00179     <span class="keyword">private</span> slots:
+<a name="l00183"></a>00183       <span class="keywordtype">void</span> Inquire(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);
+<a name="l00184"></a>00184 
+<a name="l00188"></a>00188       <span class="keywordtype">void</span> Inquired(<span class="keyword">const</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Response</a> &amp;response);
+<a name="l00189"></a>00189 
+<a name="l00193"></a>00193       <span class="keywordtype">void</span> Connect(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
+<a name="l00194"></a>00194 
+<a name="l00198"></a>00198       <span class="keywordtype">void</span> Close(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
+<a name="l00199"></a>00199 
+<a name="l00203"></a>00203       <span class="keywordtype">void</span> Disconnect(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);
+<a name="l00204"></a>00204 
+<a name="l00208"></a>00208       <span class="keywordtype">void</span> HandleDisconnect();
+<a name="l00209"></a>00209 
+<a name="l00213"></a>00213       <span class="keywordtype">void</span> HandleDisconnected(<span class="keyword">const</span> QString &amp;reason);
+<a name="l00214"></a>00214 
+<a name="l00218"></a>00218       <span class="keywordtype">void</span> HandleNewEdge(<span class="keyword">const</span> QSharedPointer&lt;Edge&gt; &amp;edge);
+<a name="l00219"></a>00219       
+<a name="l00223"></a>00223       <span class="keywordtype">void</span> HandleEdgeClose();
+<a name="l00224"></a>00224 
+<a name="l00228"></a>00228       <span class="keywordtype">void</span> HandleEdgeCreationFailure(<span class="keyword">const</span> <a class="code" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html" title="Stores information about a vertex or an endpoint using URLs.">Address</a> &amp;to, <span class="keyword">const</span> QString &amp;reason);
+<a name="l00229"></a>00229 
+<a name="l00234"></a>00234       <span class="keywordtype">void</span> HandlePingRequest(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);
+<a name="l00235"></a>00235 
+<a name="l00240"></a>00240       <span class="keywordtype">void</span> HandlePingResponse(<span class="keyword">const</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html" title="Represents the state of an Response.">Response</a> &amp;response);
+<a name="l00241"></a>00241   };
+<a name="l00242"></a>00242 }
+<a name="l00243"></a>00243 }
+<a name="l00244"></a>00244 
+<a name="l00245"></a>00245 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 6 2012 17:51:08 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 9 2012 01:18:10 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

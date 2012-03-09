@@ -119,47 +119,49 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00064"></a>00064       <span class="keyword">virtual</span> QByteArray <a class="code" href="../../da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#a58a0dffc69f340ab6bed839d8ed4c197" title="Verify a non-interactive zero-knowledge proof of a shared Diffie-Hellman secret.">VerifySharedSecret</a>(<span class="keyword">const</span> QByteArray &amp;prover_pub,
 <a name="l00065"></a>00065           <span class="keyword">const</span> QByteArray &amp;remote_pub, <span class="keyword">const</span> QByteArray &amp;proof) <span class="keyword">const</span>;
 <a name="l00066"></a>00066 
-<a name="l00067"></a>00067       <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> CryptoPP::Integer &amp;GetPInt()
-<a name="l00068"></a>00068       {
-<a name="l00069"></a>00069         <span class="keywordflow">if</span>(_p_int == CryptoPP::Integer::Zero()) {
-<a name="l00070"></a>00070           Init();
-<a name="l00071"></a>00071         }
-<a name="l00072"></a>00072         <span class="keywordflow">return</span> _p_int;
-<a name="l00073"></a>00073       }
-<a name="l00074"></a>00074 
-<a name="l00075"></a>00075       <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> CryptoPP::Integer &amp;GetQInt()
-<a name="l00076"></a>00076       {
-<a name="l00077"></a>00077         <span class="keywordflow">if</span>(_q_int == CryptoPP::Integer::Zero()) {
-<a name="l00078"></a>00078           Init();
-<a name="l00079"></a>00079         }
-<a name="l00080"></a>00080         <span class="keywordflow">return</span> _q_int;
-<a name="l00081"></a>00081       }
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083       <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> CryptoPP::Integer &amp;GetGInt()
-<a name="l00084"></a>00084       {
-<a name="l00085"></a>00085         <span class="keywordflow">if</span>(_g_int == CryptoPP::Integer::Zero()) {
-<a name="l00086"></a>00086           Init();
-<a name="l00087"></a>00087         }
-<a name="l00088"></a>00088         <span class="keywordflow">return</span> _g_int;
-<a name="l00089"></a>00089       }
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091     <span class="keyword">private</span>:
-<a name="l00092"></a>00092       <span class="keyword">static</span> <span class="keywordtype">void</span> Init();
-<a name="l00093"></a>00093       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> ZeroKnowledgeProofHeaderSize = 12;
-<a name="l00094"></a>00094       <span class="keyword">static</span> CryptoPP::Integer  _p_int, _q_int, _g_int;
-<a name="l00095"></a>00095       CryptoPP::DH _dh_params;
-<a name="l00096"></a>00096       QByteArray _public_key;
-<a name="l00097"></a>00097       QByteArray _private_key;
-<a name="l00098"></a>00098   };
-<a name="l00099"></a>00099 }
-<a name="l00100"></a>00100 }
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 <span class="preprocessor">#endif</span>
+<a name="l00071"></a>00071       QByteArray <a class="code" href="../../da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#af7ffc1c184b8c1e61f6f2871247dcc54" title="Get the digest of a list of integers (represented as ByteArrays)">HashIntegers</a>(<span class="keyword">const</span> QList&lt;QByteArray&gt; &amp;list) <span class="keyword">const</span>;
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073       <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> CryptoPP::Integer &amp;GetPInt()
+<a name="l00074"></a>00074       {
+<a name="l00075"></a>00075         <span class="keywordflow">if</span>(_p_int == CryptoPP::Integer::Zero()) {
+<a name="l00076"></a>00076           Init();
+<a name="l00077"></a>00077         }
+<a name="l00078"></a>00078         <span class="keywordflow">return</span> _p_int;
+<a name="l00079"></a>00079       }
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081       <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> CryptoPP::Integer &amp;GetQInt()
+<a name="l00082"></a>00082       {
+<a name="l00083"></a>00083         <span class="keywordflow">if</span>(_q_int == CryptoPP::Integer::Zero()) {
+<a name="l00084"></a>00084           Init();
+<a name="l00085"></a>00085         }
+<a name="l00086"></a>00086         <span class="keywordflow">return</span> _q_int;
+<a name="l00087"></a>00087       }
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089       <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> CryptoPP::Integer &amp;GetGInt()
+<a name="l00090"></a>00090       {
+<a name="l00091"></a>00091         <span class="keywordflow">if</span>(_g_int == CryptoPP::Integer::Zero()) {
+<a name="l00092"></a>00092           Init();
+<a name="l00093"></a>00093         }
+<a name="l00094"></a>00094         <span class="keywordflow">return</span> _g_int;
+<a name="l00095"></a>00095       }
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097     <span class="keyword">private</span>:
+<a name="l00098"></a>00098       <span class="keyword">static</span> <span class="keywordtype">void</span> Init();
+<a name="l00099"></a>00099       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> ZeroKnowledgeProofHeaderSize = 12;
+<a name="l00100"></a>00100       <span class="keyword">static</span> CryptoPP::Integer  _p_int, _q_int, _g_int;
+<a name="l00101"></a>00101       CryptoPP::DH _dh_params;
+<a name="l00102"></a>00102       QByteArray _public_key;
+<a name="l00103"></a>00103       QByteArray _private_key;
+<a name="l00104"></a>00104   };
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 }
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 6 2012 17:51:08 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 9 2012 01:18:11 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

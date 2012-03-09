@@ -150,8 +150,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr class="memdesc:aaabacffbfc933dcf666244170dc87e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle an incoming Rpc request.  <a href="#aaabacffbfc933dcf666244170dc87e7c"></a><br/></td></tr>
 <tr class="memitem:a452ff8a87b589b5b452920c0025a01ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a452ff8a87b589b5b452920c0025a01ac">SendNotification</a> (const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;to, const QString &amp;method, const QVariant &amp;data)</td></tr>
 <tr class="memdesc:a452ff8a87b589b5b452920c0025a01ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a request.  <a href="#a452ff8a87b589b5b452920c0025a01ac"></a><br/></td></tr>
-<tr class="memitem:a60fb6c79b055606c5c6376fdd197a626"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a60fb6c79b055606c5c6376fdd197a626">SendRequest</a> (const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;to, const QString &amp;method, const QVariant &amp;data, const QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;callback)</td></tr>
-<tr class="memdesc:a60fb6c79b055606c5c6376fdd197a626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a request.  <a href="#a60fb6c79b055606c5c6376fdd197a626"></a><br/></td></tr>
+<tr class="memitem:a64783c6306fa3d1255eb67335916741e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a64783c6306fa3d1255eb67335916741e">SendRequest</a> (const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;to, const QString &amp;method, const QVariant &amp;data, const QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;callback, bool timeout=false)</td></tr>
+<tr class="memdesc:a64783c6306fa3d1255eb67335916741e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a request.  <a href="#a64783c6306fa3d1255eb67335916741e"></a><br/></td></tr>
 <tr class="memitem:af8bbb4100d9fd6177fd0deb2f1f37fa8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#af8bbb4100d9fd6177fd0deb2f1f37fa8">Register</a> (const QString &amp;name, const QSharedPointer&lt; <a class="el" href="../../db/d99/classDissent_1_1Messaging_1_1RequestHandler.html">RequestHandler</a> &gt; &amp;cb)</td></tr>
 <tr class="memdesc:af8bbb4100d9fd6177fd0deb2f1f37fa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback.  <a href="#af8bbb4100d9fd6177fd0deb2f1f37fa8"></a><br/></td></tr>
 <tr class="memitem:a2f45ad483396ce96cabf00680727f513"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a2f45ad483396ce96cabf00680727f513">Register</a> (const QString &amp;name, const QObject *obj, const char *method)</td></tr>
@@ -380,12 +380,12 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutDe
 
 </div>
 </div>
-<a class="anchor" id="a60fb6c79b055606c5c6376fdd197a626"></a>
+<a class="anchor" id="a64783c6306fa3d1255eb67335916741e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a60fb6c79b055606c5c6376fdd197a626">Dissent::Messaging::RpcHandler::SendRequest</a> </td>
+          <td class="memname">int <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a64783c6306fa3d1255eb67335916741e">Dissent::Messaging::RpcHandler::SendRequest</a> </td>
           <td>(</td>
           <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>to</em>, </td>
@@ -406,7 +406,13 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutDe
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -424,6 +430,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutDe
     <tr><td class="paramname">method</td><td>the remote method </td></tr>
     <tr><td class="paramname">data</td><td>the input data for that method </td></tr>
     <tr><td class="paramname">callback</td><td>called when the request is complete </td></tr>
+    <tr><td class="paramname">timeout</td><td>specifies whether or not to let the request timeout. It is a temporary parameter that will be phased out in the future, all future Rpc Methods should be implemented with potential timeouts in mind. </td></tr>
   </table>
   </dd>
 </dl>
@@ -500,7 +507,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutDe
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 6 2012 17:51:09 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 9 2012 01:18:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
