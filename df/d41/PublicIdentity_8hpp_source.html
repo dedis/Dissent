@@ -97,130 +97,143 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DISSENT_IDENTITY_PUBLIC_IDENTITY_H_GUARD</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QByteArray&gt;</span>
-<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QSharedPointer&gt;</span>
-<a name="l00006"></a>00006 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;Connections/Id.hpp&quot;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;Crypto/AsymmetricKey.hpp&quot;</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;Crypto/Serialization.hpp&quot;</span>
-<a name="l00010"></a>00010 
-<a name="l00011"></a>00011 <span class="keyword">namespace </span>Dissent {
-<a name="l00012"></a>00012 <span class="keyword">namespace </span>Identity {
-<a name="l00017"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html">00017</a>   <span class="keyword">class </span><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a> {
-<a name="l00018"></a>00018     <span class="keyword">public</span>:
-<a name="l00019"></a>00019       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
-<a name="l00020"></a>00020       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
-<a name="l00021"></a>00021 
-<a name="l00029"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#af92079dc31344b3a12ae3caab69d390e">00029</a>       <span class="keyword">explicit</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>,
-<a name="l00030"></a>00030           QSharedPointer&lt;AsymmetricKey&gt; verification_key,
-<a name="l00031"></a>00031           QByteArray dh_key,
-<a name="l00032"></a>00032           <span class="keywordtype">bool</span> super_peer = <span class="keyword">true</span>) :
-<a name="l00033"></a>00033         _id(id),
-<a name="l00034"></a>00034         _verification_key(verification_key),
-<a name="l00035"></a>00035         _dh_key(dh_key),
-<a name="l00036"></a>00036         _super_peer(super_peer)
-<a name="l00037"></a>00037       {
-<a name="l00038"></a>00038       }
-<a name="l00039"></a>00039 
-<a name="l00040"></a>00040       <span class="keyword">explicit</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a>() :
-<a name="l00041"></a>00041         _id(Id::Zero()),
-<a name="l00042"></a>00042         _verification_key(QSharedPointer&lt;AsymmetricKey&gt;()),
-<a name="l00043"></a>00043         _dh_key(QByteArray())
-<a name="l00044"></a>00044       {
-<a name="l00045"></a>00045       }
-<a name="l00046"></a>00046 
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QDebug&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QSharedPointer&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;Connections/Id.hpp&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;Crypto/AsymmetricKey.hpp&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;Crypto/Serialization.hpp&quot;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="keyword">namespace </span>Dissent {
+<a name="l00013"></a>00013 <span class="keyword">namespace </span>Identity {
+<a name="l00018"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html">00018</a>   <span class="keyword">class </span><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a> {
+<a name="l00019"></a>00019     <span class="keyword">public</span>:
+<a name="l00020"></a>00020       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
+<a name="l00021"></a>00021       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
+<a name="l00022"></a>00022 
+<a name="l00030"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#af92079dc31344b3a12ae3caab69d390e">00030</a>       <span class="keyword">explicit</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<span class="keywordtype">id</span>,
+<a name="l00031"></a>00031           QSharedPointer&lt;AsymmetricKey&gt; verification_key,
+<a name="l00032"></a>00032           QByteArray dh_key,
+<a name="l00033"></a>00033           <span class="keywordtype">bool</span> super_peer = <span class="keyword">true</span>) :
+<a name="l00034"></a>00034         _id(id),
+<a name="l00035"></a>00035         _verification_key(verification_key),
+<a name="l00036"></a>00036         _dh_key(dh_key),
+<a name="l00037"></a>00037         _super_peer(super_peer)
+<a name="l00038"></a>00038       {
+<a name="l00039"></a>00039       }
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041       <span class="keyword">explicit</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a>() :
+<a name="l00042"></a>00042         _id(Id::Zero()),
+<a name="l00043"></a>00043         _verification_key(QSharedPointer&lt;AsymmetricKey&gt;()),
+<a name="l00044"></a>00044         _dh_key(QByteArray())
+<a name="l00045"></a>00045       {
+<a name="l00046"></a>00046       }
 <a name="l00047"></a>00047 
-<a name="l00051"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a672efa4bd83855b7e89fc38ab878ac6d">00051</a>       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a672efa4bd83855b7e89fc38ab878ac6d" title="Returns the node&#39;s Id.">GetId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _id; }
-<a name="l00052"></a>00052 
-<a name="l00056"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a799b98322fe42f6fe309cbb3a1072470">00056</a>       QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a799b98322fe42f6fe309cbb3a1072470" title="Returns the node&#39;s verification key.">GetVerificationKey</a>()<span class="keyword"> const</span>
-<a name="l00057"></a>00057 <span class="keyword">      </span>{
-<a name="l00058"></a>00058         <span class="keywordflow">return</span> _verification_key;
-<a name="l00059"></a>00059       }
-<a name="l00060"></a>00060 
-<a name="l00064"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a85e1bdb0ec8a1dc7f6b80d2dfe40f51d">00064</a>       QByteArray <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a85e1bdb0ec8a1dc7f6b80d2dfe40f51d" title="Returns the node&#39;s DiffieHellman key.">GetDhKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _dh_key; }
-<a name="l00065"></a>00065 
-<a name="l00069"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a9b9179ca25e8611a2b2a9bb8e4949d0d">00069</a>       <span class="keywordtype">bool</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a9b9179ca25e8611a2b2a9bb8e4949d0d" title="Returns if the member can be a super peer.">GetSuperPeer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _super_peer; }
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071     <span class="keyword">private</span>:
-<a name="l00072"></a>00072       Id _id;
-<a name="l00073"></a>00073       QSharedPointer&lt;AsymmetricKey&gt; _verification_key;
-<a name="l00074"></a>00074       QByteArray _dh_key;
-<a name="l00075"></a>00075       <span class="keywordtype">bool</span> _super_peer;
-<a name="l00076"></a>00076   };
+<a name="l00048"></a>00048 
+<a name="l00052"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a672efa4bd83855b7e89fc38ab878ac6d">00052</a>       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a672efa4bd83855b7e89fc38ab878ac6d" title="Returns the node&#39;s Id.">GetId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _id; }
+<a name="l00053"></a>00053 
+<a name="l00057"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a799b98322fe42f6fe309cbb3a1072470">00057</a>       QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a799b98322fe42f6fe309cbb3a1072470" title="Returns the node&#39;s verification key.">GetVerificationKey</a>()<span class="keyword"> const</span>
+<a name="l00058"></a>00058 <span class="keyword">      </span>{
+<a name="l00059"></a>00059         <span class="keywordflow">return</span> _verification_key;
+<a name="l00060"></a>00060       }
+<a name="l00061"></a>00061 
+<a name="l00065"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a85e1bdb0ec8a1dc7f6b80d2dfe40f51d">00065</a>       QByteArray <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a85e1bdb0ec8a1dc7f6b80d2dfe40f51d" title="Returns the node&#39;s DiffieHellman key.">GetDhKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _dh_key; }
+<a name="l00066"></a>00066 
+<a name="l00070"></a><a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a9b9179ca25e8611a2b2a9bb8e4949d0d">00070</a>       <span class="keywordtype">bool</span> <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a9b9179ca25e8611a2b2a9bb8e4949d0d" title="Returns if the member can be a super peer.">GetSuperPeer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _super_peer; }
+<a name="l00071"></a>00071 
+<a name="l00072"></a>00072       <span class="keyword">inline</span> QString ToString()<span class="keyword"> const</span>
+<a name="l00073"></a>00073 <span class="keyword">      </span>{
+<a name="l00074"></a>00074         <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;Public identity: ( Id: %1, SuperPeer: %2)&quot;</span>).arg(
+<a name="l00075"></a>00075             <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a672efa4bd83855b7e89fc38ab878ac6d" title="Returns the node&#39;s Id.">GetId</a>().ToString(), <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a9b9179ca25e8611a2b2a9bb8e4949d0d" title="Returns if the member can be a super peer.">GetSuperPeer</a>());
+<a name="l00076"></a>00076       }
 <a name="l00077"></a>00077 
-<a name="l00084"></a>00084   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> PublicIdentity &amp;lhs, <span class="keyword">const</span> PublicIdentity &amp;rhs) 
-<a name="l00085"></a>00085   {
-<a name="l00086"></a>00086     <span class="keywordflow">return</span> (lhs.GetId() == rhs.GetId()) &amp;&amp;
-<a name="l00087"></a>00087       ((lhs.GetVerificationKey()) == (rhs.GetVerificationKey())) &amp;&amp;
-<a name="l00088"></a>00088       (lhs.GetDhKey() == rhs.GetDhKey()) &amp;&amp;
-<a name="l00089"></a>00089       (lhs.GetSuperPeer() == rhs.GetSuperPeer());
-<a name="l00090"></a>00090   }
-<a name="l00091"></a>00091 
-<a name="l00098"></a>00098   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> PublicIdentity &amp;lhs, <span class="keyword">const</span> PublicIdentity &amp;rhs) 
-<a name="l00099"></a>00099   {
-<a name="l00100"></a>00100     <span class="keywordflow">return</span> !(lhs == rhs);
-<a name="l00101"></a>00101   }
-<a name="l00102"></a>00102 
-<a name="l00109"></a>00109   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> PublicIdentity &amp;lhs, <span class="keyword">const</span> PublicIdentity &amp;rhs)
-<a name="l00110"></a>00110   {
-<a name="l00111"></a>00111     <span class="comment">// Common cases</span>
-<a name="l00112"></a>00112     <span class="keywordflow">if</span>(lhs.GetId() &lt; rhs.GetId()) {
-<a name="l00113"></a>00113       <span class="keywordflow">return</span> <span class="keyword">true</span>;
-<a name="l00114"></a>00114     } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(rhs.GetId() &lt; lhs.GetId()) {
-<a name="l00115"></a>00115       <span class="keywordflow">return</span> <span class="keyword">false</span>;
-<a name="l00116"></a>00116     }
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118     QByteArray lhs_v_key = lhs.GetVerificationKey()-&gt;GetByteArray();
-<a name="l00119"></a>00119     QByteArray rhs_v_key = rhs.GetVerificationKey()-&gt;GetByteArray();
-<a name="l00120"></a>00120     QByteArray lhs_dh = lhs.GetDhKey();
-<a name="l00121"></a>00121     QByteArray rhs_dh = rhs.GetDhKey();
-<a name="l00122"></a>00122     <span class="keywordtype">bool</span> lhs_sp = lhs.GetSuperPeer();
-<a name="l00123"></a>00123     <span class="keywordtype">bool</span> rhs_sp = rhs.GetSuperPeer();
+<a name="l00078"></a>00078     <span class="keyword">private</span>:
+<a name="l00079"></a>00079       Id _id;
+<a name="l00080"></a>00080       QSharedPointer&lt;AsymmetricKey&gt; _verification_key;
+<a name="l00081"></a>00081       QByteArray _dh_key;
+<a name="l00082"></a>00082       <span class="keywordtype">bool</span> _super_peer;
+<a name="l00083"></a>00083   };
+<a name="l00084"></a>00084 
+<a name="l00091"></a>00091   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> PublicIdentity &amp;lhs, <span class="keyword">const</span> PublicIdentity &amp;rhs) 
+<a name="l00092"></a>00092   {
+<a name="l00093"></a>00093     <span class="keywordflow">return</span> (lhs.GetId() == rhs.GetId()) &amp;&amp;
+<a name="l00094"></a>00094       ((lhs.GetVerificationKey()) == (rhs.GetVerificationKey())) &amp;&amp;
+<a name="l00095"></a>00095       (lhs.GetDhKey() == rhs.GetDhKey()) &amp;&amp;
+<a name="l00096"></a>00096       (lhs.GetSuperPeer() == rhs.GetSuperPeer());
+<a name="l00097"></a>00097   }
+<a name="l00098"></a>00098 
+<a name="l00105"></a>00105   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> PublicIdentity &amp;lhs, <span class="keyword">const</span> PublicIdentity &amp;rhs) 
+<a name="l00106"></a>00106   {
+<a name="l00107"></a>00107     <span class="keywordflow">return</span> !(lhs == rhs);
+<a name="l00108"></a>00108   }
+<a name="l00109"></a>00109 
+<a name="l00116"></a>00116   <span class="keyword">inline</span> <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> PublicIdentity &amp;lhs, <span class="keyword">const</span> PublicIdentity &amp;rhs)
+<a name="l00117"></a>00117   {
+<a name="l00118"></a>00118     <span class="comment">// Common cases</span>
+<a name="l00119"></a>00119     <span class="keywordflow">if</span>(lhs.GetId() &lt; rhs.GetId()) {
+<a name="l00120"></a>00120       <span class="keywordflow">return</span> <span class="keyword">true</span>;
+<a name="l00121"></a>00121     } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(rhs.GetId() &lt; lhs.GetId()) {
+<a name="l00122"></a>00122       <span class="keywordflow">return</span> <span class="keyword">false</span>;
+<a name="l00123"></a>00123     }
 <a name="l00124"></a>00124 
-<a name="l00125"></a>00125     <span class="keywordflow">return</span> (lhs_v_key &lt; rhs_v_key) ||
-<a name="l00126"></a>00126       ((lhs_v_key == rhs_v_key) &amp;&amp; ((lhs_dh &lt; rhs_dh) ||
-<a name="l00127"></a>00127        ((lhs_dh == rhs_dh) &amp;&amp; (lhs_sp &lt; rhs_sp))));
-<a name="l00128"></a>00128   }
-<a name="l00129"></a>00129 
-<a name="l00130"></a>00130   <span class="keyword">inline</span> QDataStream &amp;operator&lt;&lt;(QDataStream &amp;stream, <span class="keyword">const</span> PublicIdentity &amp;ident)
-<a name="l00131"></a>00131   {
-<a name="l00132"></a>00132     stream &lt;&lt; ident.GetId().GetByteArray();
-<a name="l00133"></a>00133     stream &lt;&lt; ident.GetVerificationKey();
-<a name="l00134"></a>00134     stream &lt;&lt; ident.GetDhKey();
-<a name="l00135"></a>00135     stream &lt;&lt; ident.GetSuperPeer();
-<a name="l00136"></a>00136     <span class="keywordflow">return</span> stream;
-<a name="l00137"></a>00137   }
-<a name="l00138"></a>00138 
-<a name="l00139"></a>00139   <span class="keyword">inline</span> QDataStream &amp;operator&gt;&gt;(QDataStream &amp;stream, PublicIdentity &amp;ident)
-<a name="l00140"></a>00140   {
-<a name="l00141"></a>00141     QByteArray id;
-<a name="l00142"></a>00142     stream &gt;&gt; id;
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144     QSharedPointer&lt;PublicIdentity::AsymmetricKey&gt; key;
-<a name="l00145"></a>00145     stream &gt;&gt; key;
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147     QByteArray dh_key;
-<a name="l00148"></a>00148     stream &gt;&gt; dh_key;
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150     <span class="keywordtype">bool</span> super_peer;
-<a name="l00151"></a>00151     stream &gt;&gt; super_peer;
-<a name="l00152"></a>00152 
-<a name="l00153"></a>00153     ident = PublicIdentity(PublicIdentity::Id(<span class="keywordtype">id</span>), key, dh_key, super_peer);
-<a name="l00154"></a>00154     <span class="keywordflow">return</span> stream;
-<a name="l00155"></a>00155   }
-<a name="l00156"></a>00156 }
-<a name="l00157"></a>00157 }
-<a name="l00158"></a>00158 
-<a name="l00159"></a>00159 <span class="comment">// Put these into the common namespace of Triple</span>
-<a name="l00160"></a>00160 <span class="keyword">using</span> Dissent::Identity::operator==;
-<a name="l00161"></a>00161 <span class="keyword">using</span> Dissent::Identity::operator!=;
-<a name="l00162"></a>00162 <span class="keyword">using</span> Dissent::Identity::operator&lt;;
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164 <span class="preprocessor">#endif</span>
+<a name="l00125"></a>00125     QByteArray lhs_v_key = lhs.GetVerificationKey()-&gt;GetByteArray();
+<a name="l00126"></a>00126     QByteArray rhs_v_key = rhs.GetVerificationKey()-&gt;GetByteArray();
+<a name="l00127"></a>00127     QByteArray lhs_dh = lhs.GetDhKey();
+<a name="l00128"></a>00128     QByteArray rhs_dh = rhs.GetDhKey();
+<a name="l00129"></a>00129     <span class="keywordtype">bool</span> lhs_sp = lhs.GetSuperPeer();
+<a name="l00130"></a>00130     <span class="keywordtype">bool</span> rhs_sp = rhs.GetSuperPeer();
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132     <span class="keywordflow">return</span> (lhs_v_key &lt; rhs_v_key) ||
+<a name="l00133"></a>00133       ((lhs_v_key == rhs_v_key) &amp;&amp; ((lhs_dh &lt; rhs_dh) ||
+<a name="l00134"></a>00134        ((lhs_dh == rhs_dh) &amp;&amp; (lhs_sp &lt; rhs_sp))));
+<a name="l00135"></a>00135   }
+<a name="l00136"></a>00136 
+<a name="l00137"></a>00137   <span class="keyword">inline</span> QDebug operator&lt;&lt;(QDebug dbg, <span class="keyword">const</span> PublicIdentity &amp;ident)
+<a name="l00138"></a>00138   {
+<a name="l00139"></a>00139     dbg.nospace() &lt;&lt; ident.ToString();
+<a name="l00140"></a>00140     <span class="keywordflow">return</span> dbg.space();
+<a name="l00141"></a>00141   }
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143   <span class="keyword">inline</span> QDataStream &amp;operator&lt;&lt;(QDataStream &amp;stream, <span class="keyword">const</span> PublicIdentity &amp;ident)
+<a name="l00144"></a>00144   {
+<a name="l00145"></a>00145     stream &lt;&lt; ident.GetId().GetByteArray();
+<a name="l00146"></a>00146     stream &lt;&lt; ident.GetVerificationKey();
+<a name="l00147"></a>00147     stream &lt;&lt; ident.GetDhKey();
+<a name="l00148"></a>00148     stream &lt;&lt; ident.GetSuperPeer();
+<a name="l00149"></a>00149     <span class="keywordflow">return</span> stream;
+<a name="l00150"></a>00150   }
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152   <span class="keyword">inline</span> QDataStream &amp;operator&gt;&gt;(QDataStream &amp;stream, PublicIdentity &amp;ident)
+<a name="l00153"></a>00153   {
+<a name="l00154"></a>00154     QByteArray id;
+<a name="l00155"></a>00155     stream &gt;&gt; id;
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157     QSharedPointer&lt;PublicIdentity::AsymmetricKey&gt; key;
+<a name="l00158"></a>00158     stream &gt;&gt; key;
+<a name="l00159"></a>00159 
+<a name="l00160"></a>00160     QByteArray dh_key;
+<a name="l00161"></a>00161     stream &gt;&gt; dh_key;
+<a name="l00162"></a>00162 
+<a name="l00163"></a>00163     <span class="keywordtype">bool</span> super_peer;
+<a name="l00164"></a>00164     stream &gt;&gt; super_peer;
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166     ident = PublicIdentity(PublicIdentity::Id(<span class="keywordtype">id</span>), key, dh_key, super_peer);
+<a name="l00167"></a>00167     <span class="keywordflow">return</span> stream;
+<a name="l00168"></a>00168   }
+<a name="l00169"></a>00169 }
+<a name="l00170"></a>00170 }
+<a name="l00171"></a>00171 
+<a name="l00172"></a>00172 <span class="comment">// Put these into the common namespace of Triple</span>
+<a name="l00173"></a>00173 <span class="keyword">using</span> Dissent::Identity::operator==;
+<a name="l00174"></a>00174 <span class="keyword">using</span> Dissent::Identity::operator!=;
+<a name="l00175"></a>00175 <span class="keyword">using</span> Dissent::Identity::operator&lt;;
+<a name="l00176"></a>00176 
+<a name="l00177"></a>00177 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 10 2012 02:10:43 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 10 2012 16:56:18 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
