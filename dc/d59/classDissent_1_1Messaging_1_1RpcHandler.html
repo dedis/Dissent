@@ -148,6 +148,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr class="memdesc:a2e284724c1ab1bb3166f14424f6fb516"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor. <br/></td></tr>
 <tr class="memitem:aaabacffbfc933dcf666244170dc87e7c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#aaabacffbfc933dcf666244170dc87e7c">HandleData</a> (const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;from, const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:aaabacffbfc933dcf666244170dc87e7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle an incoming Rpc request.  <a href="#aaabacffbfc933dcf666244170dc87e7c"></a><br/></td></tr>
+<tr class="memitem:a48f403ac55d680c2399a6671e42bec73"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a48f403ac55d680c2399a6671e42bec73">HandleData</a> (const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;from, const QVariantList &amp;container)</td></tr>
+<tr class="memdesc:a48f403ac55d680c2399a6671e42bec73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle an incoming Rpc request.  <a href="#a48f403ac55d680c2399a6671e42bec73"></a><br/></td></tr>
 <tr class="memitem:a452ff8a87b589b5b452920c0025a01ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a452ff8a87b589b5b452920c0025a01ac">SendNotification</a> (const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;to, const QString &amp;method, const QVariant &amp;data)</td></tr>
 <tr class="memdesc:a452ff8a87b589b5b452920c0025a01ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a request.  <a href="#a452ff8a87b589b5b452920c0025a01ac"></a><br/></td></tr>
 <tr class="memitem:a64783c6306fa3d1255eb67335916741e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a64783c6306fa3d1255eb67335916741e">SendRequest</a> (const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;to, const QString &amp;method, const QVariant &amp;data, const QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;callback, bool timeout=false)</td></tr>
@@ -158,8 +160,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr class="memdesc:a2f45ad483396ce96cabf00680727f513"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback into the specified object.  <a href="#a2f45ad483396ce96cabf00680727f513"></a><br/></td></tr>
 <tr class="memitem:ad429e143496a83d2750cfd7076d7910f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#ad429e143496a83d2750cfd7076d7910f">Unregister</a> (const QString &amp;name)</td></tr>
 <tr class="memdesc:ad429e143496a83d2750cfd7076d7910f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister a callback.  <a href="#ad429e143496a83d2750cfd7076d7910f"></a><br/></td></tr>
-<tr class="memitem:acb191bfaa2164213517550d9264acfe8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb191bfaa2164213517550d9264acfe8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CancelRequest</b> (int id)</td></tr>
+<tr class="memitem:acb191bfaa2164213517550d9264acfe8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#acb191bfaa2164213517550d9264acfe8">CancelRequest</a> (int id)</td></tr>
+<tr class="memdesc:acb191bfaa2164213517550d9264acfe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to cancel handling a request result.  <a href="#acb191bfaa2164213517550d9264acfe8"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:add527795d9f14985638c8a09bcbf432b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="add527795d9f14985638c8a09bcbf432b"></a>
@@ -172,6 +174,31 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutDe
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Rpc mechanism assumes a reliable sending mechanism. </p>
 </div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="acb191bfaa2164213517550d9264acfe8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#acb191bfaa2164213517550d9264acfe8">Dissent::Messaging::RpcHandler::CancelRequest</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Used to cancel handling a request result. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the id of the request </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aaabacffbfc933dcf666244170dc87e7c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -207,6 +234,42 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutDe
 </dl>
 
 <p>Implements <a class="el" href="../../dc/de6/classDissent_1_1Messaging_1_1ISinkObject.html#ab671ad8b7f2fc69d9534b7984d9cb8f3">Dissent::Messaging::ISinkObject</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48f403ac55d680c2399a6671e42bec73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#aaabacffbfc933dcf666244170dc87e7c">Dissent::Messaging::RpcHandler::HandleData</a> </td>
+          <td>(</td>
+          <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html">ISender</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVariantList &amp;&#160;</td>
+          <td class="paramname"><em>container</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Handle an incoming Rpc request. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td>a return path to the requestor </td></tr>
+    <tr><td class="paramname">container</td><td>deserialized request message </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -507,7 +570,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>TimeoutDe
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 10 2012 16:56:19 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 10 2012 19:42:55 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
