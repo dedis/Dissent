@@ -167,9 +167,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adfbe61a660505de18a1a7bc1913fd386"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adfbe61a660505de18a1a7bc1913fd386"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#adfbe61a660505de18a1a7bc1913fd386">~RepeatingBulkRound</a> ()</td></tr>
 <tr class="memdesc:adfbe61a660505de18a1a7bc1913fd386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
-<tr class="memitem:acddeaf41919ccda492ff670cfbcc365b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acddeaf41919ccda492ff670cfbcc365b"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#acddeaf41919ccda492ff670cfbcc365b">Start</a> ()</td></tr>
-<tr class="memdesc:acddeaf41919ccda492ff670cfbcc365b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the bulk round. <br/></td></tr>
 <tr class="memitem:ae20afb7046d98a35590444d8a52a839e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#ae20afb7046d98a35590444d8a52a839e">IncomingData</a> (const <a class="el" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html">Request</a> &amp;notification)</td></tr>
 <tr class="memdesc:ae20afb7046d98a35590444d8a52a839e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a data message from a remote peer.  <a href="#ae20afb7046d98a35590444d8a52a839e"></a><br/></td></tr>
 <tr class="memitem:a6ee31973b08147f9d96bd9a7f9eba73d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ee31973b08147f9d96bd9a7f9eba73d"></a>
@@ -189,6 +186,9 @@ QSharedPointer&lt; <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_
 <tr class="memitem:a76dcf1b9c25f531e808a5adbe6c2e453"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76dcf1b9c25f531e808a5adbe6c2e453"></a>
 virtual uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a76dcf1b9c25f531e808a5adbe6c2e453">GetPhase</a> ()</td></tr>
 <tr class="memdesc:a76dcf1b9c25f531e808a5adbe6c2e453"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal phase. <br/></td></tr>
+<tr class="memitem:a8537d024cff87e427f526fd2e794e428"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8537d024cff87e427f526fd2e794e428"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a8537d024cff87e427f526fd2e794e428">CheckState</a> (const int &amp;undef)</td></tr>
+<tr class="memdesc:a8537d024cff87e427f526fd2e794e428"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks and prints the state of the round. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:afcc7f893d1b7799819cd57ea960838f4"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#afcc7f893d1b7799819cd57ea960838f4">StateToString</a> (<a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#ad7ac88ab1e79604d43f26b32ef7b5edc">State</a> st)</td></tr>
@@ -197,6 +197,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7f4c2c3de7d2cb8c9bc2b75cea388912"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a MessageType into a QString.  <a href="#a7f4c2c3de7d2cb8c9bc2b75cea388912"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a1edc26e9e189d5e3532dd5b10e910a52"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1edc26e9e189d5e3532dd5b10e910a52"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a1edc26e9e189d5e3532dd5b10e910a52">OnStart</a> ()</td></tr>
+<tr class="memdesc:a1edc26e9e189d5e3532dd5b10e910a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the <a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange.">BulkRound</a> is started. <br/></td></tr>
+<tr class="memitem:a13def166986014461a046b5d0dffedac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13def166986014461a046b5d0dffedac"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a13def166986014461a046b5d0dffedac">OnStop</a> ()</td></tr>
+<tr class="memdesc:a13def166986014461a046b5d0dffedac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the <a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html" title="Represents a single instance of a cryptographically secure anonymous exchange.">BulkRound</a> is stopped. <br/></td></tr>
 <tr class="memitem:a279352b24be522319bbc1671157b1899"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a279352b24be522319bbc1671157b1899">ProcessData</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from, const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a279352b24be522319bbc1671157b1899"><td class="mdescLeft">&#160;</td><td class="mdescRight">If data is from a legitimate group member, it is processed.  <a href="#a279352b24be522319bbc1671157b1899"></a><br/></td></tr>
 <tr class="memitem:a65312150be771ab48bea8a4d24da2122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a65312150be771ab48bea8a4d24da2122">ProcessDataBase</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from, const QByteArray &amp;data)</td></tr>
@@ -545,7 +551,7 @@ QSharedPointer&lt; <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1Di
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 11 2012 18:06:15 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 12 2012 18:31:20 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
