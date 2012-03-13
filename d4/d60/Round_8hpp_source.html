@@ -230,42 +230,51 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00229"></a>00229 
 <a name="l00233"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4">00233</a>       QSharedPointer&lt;Network&gt; &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4" title="Returns the underlyign network.">GetNetwork</a>() { <span class="keywordflow">return</span> _network; }
 <a name="l00234"></a>00234 
-<a name="l00235"></a>00235     <span class="keyword">private</span>:
-<a name="l00236"></a>00236       <span class="keyword">const</span> Group _group;
-<a name="l00237"></a>00237       <span class="keyword">const</span> PrivateIdentity _ident;
-<a name="l00238"></a>00238       <span class="keyword">const</span> Id _round_id;
-<a name="l00239"></a>00239       QSharedPointer&lt;Network&gt; _network;
-<a name="l00240"></a>00240       GetDataCallback &amp;_get_data_cb;
-<a name="l00241"></a>00241       <span class="keywordtype">bool</span> _successful;
-<a name="l00242"></a>00242       QVector&lt;int&gt; _empty_list;
-<a name="l00243"></a>00243       <span class="keywordtype">bool</span> _interrupted;
-<a name="l00244"></a>00244       QWeakPointer&lt;Round&gt; _shared;
-<a name="l00245"></a>00245   };
-<a name="l00246"></a>00246 
-<a name="l00247"></a>00247   <span class="keyword">typedef</span> QSharedPointer&lt;Round&gt; (*CreateRound)(<span class="keyword">const</span> Round::Group &amp;,
-<a name="l00248"></a>00248       <span class="keyword">const</span> Round::PrivateIdentity &amp;, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> &amp;,
-<a name="l00249"></a>00249       QSharedPointer&lt;Connections::Network&gt;,
-<a name="l00250"></a>00250       <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Messaging::GetDataCallback</a> &amp;get_data_cb);
-<a name="l00251"></a>00251 
-<a name="l00252"></a>00252   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; QSharedPointer&lt;Round&gt; TCreateRound(
-<a name="l00253"></a>00253       <span class="keyword">const</span> Round::Group &amp;group, <span class="keyword">const</span> Round::PrivateIdentity &amp;ident,
-<a name="l00254"></a>00254       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> &amp;round_id,
-<a name="l00255"></a>00255       QSharedPointer&lt;Connections::Network&gt; network,
-<a name="l00256"></a>00256       <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Messaging::GetDataCallback</a> &amp;get_data)
-<a name="l00257"></a>00257   {
-<a name="l00258"></a>00258     QSharedPointer&lt;T&gt; round(<span class="keyword">new</span> T(group, ident, round_id, network, get_data));
-<a name="l00259"></a>00259     round-&gt;SetSharedPointer(round);
-<a name="l00260"></a>00260     <span class="keywordflow">return</span> round;
-<a name="l00261"></a>00261   }
-<a name="l00262"></a>00262 }
-<a name="l00263"></a>00263 }
-<a name="l00264"></a>00264 
-<a name="l00265"></a>00265 <span class="preprocessor">#endif</span>
+<a name="l00241"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af64753d00c04b2b8867582530cfb708b">00241</a>       <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af64753d00c04b2b8867582530cfb708b" title="Used to process background events in CPU / I/O heavy portions of the code.">ProcessEvents</a>()
+<a name="l00242"></a>00242       {
+<a name="l00243"></a>00243         <span class="comment">// Safe way to ensure the round doesn&#39;t close on us unexpectedly</span>
+<a name="l00244"></a>00244         QSharedPointer&lt;Round&gt; round = GetSharedPointer();
+<a name="l00245"></a>00245         QCoreApplication::processEvents();
+<a name="l00246"></a>00246         QCoreApplication::sendPostedEvents();
+<a name="l00247"></a>00247         <span class="keywordflow">return</span> !<a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#a03f5e81640e5cb0369e9000d9d894f9d" title="Returns true if stopped.">Stopped</a>();
+<a name="l00248"></a>00248       }
+<a name="l00249"></a>00249 
+<a name="l00250"></a>00250     <span class="keyword">private</span>:
+<a name="l00251"></a>00251       <span class="keyword">const</span> Group _group;
+<a name="l00252"></a>00252       <span class="keyword">const</span> PrivateIdentity _ident;
+<a name="l00253"></a>00253       <span class="keyword">const</span> Id _round_id;
+<a name="l00254"></a>00254       QSharedPointer&lt;Network&gt; _network;
+<a name="l00255"></a>00255       GetDataCallback &amp;_get_data_cb;
+<a name="l00256"></a>00256       <span class="keywordtype">bool</span> _successful;
+<a name="l00257"></a>00257       QVector&lt;int&gt; _empty_list;
+<a name="l00258"></a>00258       <span class="keywordtype">bool</span> _interrupted;
+<a name="l00259"></a>00259       QWeakPointer&lt;Round&gt; _shared;
+<a name="l00260"></a>00260   };
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262   <span class="keyword">typedef</span> QSharedPointer&lt;Round&gt; (*CreateRound)(<span class="keyword">const</span> Round::Group &amp;,
+<a name="l00263"></a>00263       <span class="keyword">const</span> Round::PrivateIdentity &amp;, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> &amp;,
+<a name="l00264"></a>00264       QSharedPointer&lt;Connections::Network&gt;,
+<a name="l00265"></a>00265       <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Messaging::GetDataCallback</a> &amp;get_data_cb);
+<a name="l00266"></a>00266 
+<a name="l00267"></a>00267   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; QSharedPointer&lt;Round&gt; TCreateRound(
+<a name="l00268"></a>00268       <span class="keyword">const</span> Round::Group &amp;group, <span class="keyword">const</span> Round::PrivateIdentity &amp;ident,
+<a name="l00269"></a>00269       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> &amp;round_id,
+<a name="l00270"></a>00270       QSharedPointer&lt;Connections::Network&gt; network,
+<a name="l00271"></a>00271       <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Messaging::GetDataCallback</a> &amp;get_data)
+<a name="l00272"></a>00272   {
+<a name="l00273"></a>00273     QSharedPointer&lt;T&gt; round(<span class="keyword">new</span> T(group, ident, round_id, network, get_data));
+<a name="l00274"></a>00274     round-&gt;SetSharedPointer(round);
+<a name="l00275"></a>00275     <span class="keywordflow">return</span> round;
+<a name="l00276"></a>00276   }
+<a name="l00277"></a>00277 }
+<a name="l00278"></a>00278 }
+<a name="l00279"></a>00279 
+<a name="l00280"></a>00280 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 13 2012 15:11:27 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 13 2012 15:37:27 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
