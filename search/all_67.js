@@ -141,8 +141,6 @@ var searchData=
   ['getsigningkey',['GetSigningKey',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9',1,'Dissent::Anonymity::Round::GetSigningKey()'],['../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#af817993c826bde5d060ebc8a8c668119',1,'Dissent::Identity::PrivateIdentity::GetSigningKey()']]],
   ['getslotrngbyteoffset',['GetSlotRngByteOffset',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#ad7ae0057c5df99d9be759a0d75f5db81',1,'Dissent::Anonymity::Tolerant::AlibiData']]],
   ['getstate',['GetState',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#adef46c1467967d3fe5f0853382446a35',1,'Dissent::Anonymity::BulkRound::GetState()'],['../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a63f18c483778e4c9dff1b353a38082b2',1,'Dissent::Anonymity::RepeatingBulkRound::GetState()'],['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a292bc6e4685218326437ff2b1a7589af',1,'Dissent::Anonymity::ShuffleRound::GetState()'],['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ad25bf23f164795d4ab968068140d3c8f',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound::GetState()'],['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#aaae3fe32296986eb691ca3683672b766',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound::GetState()']]],
-  ['getstoppedreason',['GetStoppedReason',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad8e7f5e946afaebb18854ed5185bef9d',1,'Dissent::Anonymity::Round']]],
-  ['getstopreason',['GetStopReason',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#ac3d69d245ad0fcf945163d38486b0dbc',1,'Dissent::Transports::Edge']]],
   ['getsubgroup',['GetSubgroup',['../d1/da7/classDissent_1_1Identity_1_1Group.html#ad4eeed0e031b7f57f7675b15796199ab',1,'Dissent::Identity::Group']]],
   ['getsubgrouppolicy',['GetSubgroupPolicy',['../d1/da7/classDissent_1_1Identity_1_1Group.html#ab035fa57495232cd7694235e9af73912',1,'Dissent::Identity::Group']]],
   ['getsuperpeer',['GetSuperPeer',['../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a7ee723e2d568804e92d7b179fb58dc43',1,'Dissent::Identity::PrivateIdentity::GetSuperPeer()'],['../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a9b9179ca25e8611a2b2a9bb8e4949d0d',1,'Dissent::Identity::PublicIdentity::GetSuperPeer()']]],
@@ -155,8 +153,8 @@ var searchData=
   ['group',['Group',['../d1/da7/classDissent_1_1Identity_1_1Group.html',1,'Dissent::Identity']]],
   ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html#aa7864623f4617ca2c774512c71ee3ef0',1,'Dissent::Identity::GroupData']]],
   ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html',1,'Dissent::Identity']]],
-  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html',1,'Dissent::Identity']]],
   ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#aa5daa197e37d78b4f9d80c54a05df3ce',1,'Dissent::Identity::GroupHolder']]],
+  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html',1,'Dissent::Identity']]],
   ['groupsize',['GroupSize',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#aa8632d09cf0234707629e2bf168ecb04',1,'Dissent::Applications::Settings']]],
   ['groupupdated',['GroupUpdated',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#a307d85a629d180253023e1eda6f9e6fc',1,'Dissent::Identity::GroupHolder']]]
 ];

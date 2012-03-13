@@ -125,35 +125,34 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00058"></a>00058 
 <a name="l00064"></a>00064       <span class="keywordtype">int</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a9a5650e8508c8828c7fe23134ac2f67d" title="Returns 1, 0, -1, if the given index is go, no message, or no for the go / no go phase.">GetGo</a>(<span class="keywordtype">int</span> idx);
 <a name="l00065"></a>00065 
-<a name="l00066"></a>00066       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#aae7786b746b9ad4ce5f4e651374e3df1" title="Returns true if started the first time.">Start</a>();
-<a name="l00067"></a>00067 
-<a name="l00068"></a><a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb">00068</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb" title="If data is from a legitimate group member, it is processed.">ProcessData</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;from, <span class="keyword">const</span> QByteArray &amp;data)
-<a name="l00069"></a>00069       {
-<a name="l00070"></a>00070         <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb" title="If data is from a legitimate group member, it is processed.">ShuffleRound::ProcessData</a>(from, data);
-<a name="l00071"></a>00071       }
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073     <span class="keyword">protected</span>:
-<a name="l00074"></a><a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ae4aca655f28ad79beb4f5bdeb752e765">00074</a>       <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ae4aca655f28ad79beb4f5bdeb752e765" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(<span class="keyword">const</span> QByteArray &amp;) {}
-<a name="l00075"></a>00075       <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> VerifiableSend(<span class="keyword">const</span> QByteArray &amp;, <span class="keyword">const</span> Id &amp;) {}
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#af18211a961ce96467b4bb69438ab7669" title="Broadcasts the nodes inner and outer public keys to all other nodes.">BroadcastPublicKeys</a>();
-<a name="l00078"></a>00078       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#acc4c082d964eb875bcf2563b120abd58" title="Encrypts and submits the data block to the first node.">SubmitData</a>();
-<a name="l00079"></a>00079       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a251a06dac21e84793d80592cd6d01519" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>();
-<a name="l00080"></a>00080       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a75ad9c810a2f9c6a31a728b8afa79ea9" title="After receiving the inner encrypted data, each node will send a go or no go message.">VerifyInnerCiphertext</a>();
-<a name="l00081"></a>00081       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ad7021afe0a198622e58ca01efa482aab" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
-<a name="l00082"></a>00082       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a3921b7c73e50346f46ce0eaf063f2f78" title="Shares the inner private key with all nodes.">BroadcastPrivateKey</a>();
-<a name="l00083"></a>00083       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a3639895009dfa0e4620b5a8381773c18" title="After receiving all inner keys, the node will decrypt the data blocks and push &quot;real&quot; data into the l...">Decrypt</a>();
-<a name="l00084"></a>00084       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a2b01ce0a86eee55d6f4d5e0d2bacd887" title="After receiving all blame verifications, begin blame round.">BlameRound</a>();
-<a name="l00085"></a>00085   };
+<a name="l00066"></a><a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb">00066</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb" title="If data is from a legitimate group member, it is processed.">ProcessData</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;from, <span class="keyword">const</span> QByteArray &amp;data)
+<a name="l00067"></a>00067       {
+<a name="l00068"></a>00068         <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb" title="If data is from a legitimate group member, it is processed.">ShuffleRound::ProcessData</a>(from, data);
+<a name="l00069"></a>00069       }
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071     <span class="keyword">protected</span>:
+<a name="l00072"></a>00072       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#aac02fdf5dec41b5a6b5bbb3657fa1a66" title="Called when the ShuffleRound is started.">OnStart</a>();
+<a name="l00073"></a><a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ae4aca655f28ad79beb4f5bdeb752e765">00073</a>       <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ae4aca655f28ad79beb4f5bdeb752e765" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(<span class="keyword">const</span> QByteArray &amp;) {}
+<a name="l00074"></a>00074       <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> VerifiableSend(<span class="keyword">const</span> QByteArray &amp;, <span class="keyword">const</span> Id &amp;) {}
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#af18211a961ce96467b4bb69438ab7669" title="Broadcasts the nodes inner and outer public keys to all other nodes.">BroadcastPublicKeys</a>();
+<a name="l00077"></a>00077       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#acc4c082d964eb875bcf2563b120abd58" title="Encrypts and submits the data block to the first node.">SubmitData</a>();
+<a name="l00078"></a>00078       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a251a06dac21e84793d80592cd6d01519" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>();
+<a name="l00079"></a>00079       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a75ad9c810a2f9c6a31a728b8afa79ea9" title="After receiving the inner encrypted data, each node will send a go or no go message.">VerifyInnerCiphertext</a>();
+<a name="l00080"></a>00080       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ad7021afe0a198622e58ca01efa482aab" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
+<a name="l00081"></a>00081       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a3921b7c73e50346f46ce0eaf063f2f78" title="Shares the inner private key with all nodes.">BroadcastPrivateKey</a>();
+<a name="l00082"></a>00082       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a3639895009dfa0e4620b5a8381773c18" title="After receiving all inner keys, the node will decrypt the data blocks and push &quot;real&quot; data into the l...">Decrypt</a>();
+<a name="l00083"></a>00083       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a2b01ce0a86eee55d6f4d5e0d2bacd887" title="After receiving all blame verifications, begin blame round.">BlameRound</a>();
+<a name="l00084"></a>00084   };
+<a name="l00085"></a>00085 }
 <a name="l00086"></a>00086 }
-<a name="l00087"></a>00087 }
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="preprocessor">#endif</span>
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 12 2012 18:31:20 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 13 2012 13:10:30 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -110,26 +110,26 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00026"></a>00026 
 <a name="l00030"></a><a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a787e44e29c8e932fc9855d3dd16e5632">00030</a>       <span class="keyword">virtual</span> <a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a787e44e29c8e932fc9855d3dd16e5632" title="Destructor.">~NullRound</a>() {}
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a7f3f854b96acf2c1a15e1f4247121927" title="Returns true if started the first time.">Start</a>();
+<a name="l00032"></a><a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#ab1279ecfd8a420a49f561e53cbdf46a1">00032</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QString <a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#ab1279ecfd8a420a49f561e53cbdf46a1" title="Presents the ISender in a string format.">ToString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;NullRound &quot;</span> + <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>(); }
 <a name="l00033"></a>00033 
-<a name="l00034"></a><a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#ab1279ecfd8a420a49f561e53cbdf46a1">00034</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QString <a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#ab1279ecfd8a420a49f561e53cbdf46a1" title="Presents the ISender in a string format.">ToString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;NullRound &quot;</span> + <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>(); }
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036     <span class="keyword">protected</span>:
-<a name="l00042"></a>00042       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#adb6b75906163f8f85cd368f94eca2939" title="Pushes the data into the subscribed Sink.">ProcessData</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> QByteArray &amp;data);
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044     <span class="keyword">private</span>:
-<a name="l00048"></a>00048       QVector&lt;QByteArray&gt; _received;
-<a name="l00049"></a>00049       <span class="keywordtype">int</span> _n_msgs;
-<a name="l00050"></a>00050   };
-<a name="l00051"></a>00051 }
-<a name="l00052"></a>00052 }
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054 <span class="preprocessor">#endif</span>
+<a name="l00034"></a>00034     <span class="keyword">protected</span>:
+<a name="l00038"></a>00038       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a365b95850c5a06cb0c11edaa4e27bf72" title="Called when the NullRound is started.">OnStart</a>();
+<a name="l00039"></a>00039 
+<a name="l00045"></a>00045       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#adb6b75906163f8f85cd368f94eca2939" title="Pushes the data into the subscribed Sink.">ProcessData</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> QByteArray &amp;data);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047     <span class="keyword">private</span>:
+<a name="l00051"></a>00051       QVector&lt;QByteArray&gt; _received;
+<a name="l00052"></a>00052       <span class="keywordtype">int</span> _n_msgs;
+<a name="l00053"></a>00053   };
+<a name="l00054"></a>00054 }
+<a name="l00055"></a>00055 }
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 12 2012 18:31:20 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 13 2012 13:10:30 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

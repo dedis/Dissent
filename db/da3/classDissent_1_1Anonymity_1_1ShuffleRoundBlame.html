@@ -150,13 +150,13 @@ const QVector&lt; QByteArray &gt; &amp;&#160;</td><td class="memItemRight" valig
 <tr class="memdesc:af3df8d386f0fac1d179567a60d970041"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the inner encrypted only data. <br/></td></tr>
 <tr class="memitem:a9a5650e8508c8828c7fe23134ac2f67d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a9a5650e8508c8828c7fe23134ac2f67d">GetGo</a> (int idx)</td></tr>
 <tr class="memdesc:a9a5650e8508c8828c7fe23134ac2f67d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns 1, 0, -1, if the given index is go, no message, or no for the go / no go phase.  <a href="#a9a5650e8508c8828c7fe23134ac2f67d"></a><br/></td></tr>
-<tr class="memitem:aae7786b746b9ad4ce5f4e651374e3df1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae7786b746b9ad4ce5f4e651374e3df1"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#aae7786b746b9ad4ce5f4e651374e3df1">Start</a> ()</td></tr>
-<tr class="memdesc:aae7786b746b9ad4ce5f4e651374e3df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if started the first time. <br/></td></tr>
 <tr class="memitem:a50ada3dc001354b0bed7b11b2c4a18cb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb">ProcessData</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from, const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a50ada3dc001354b0bed7b11b2c4a18cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">If data is from a legitimate group member, it is processed.  <a href="#a50ada3dc001354b0bed7b11b2c4a18cb"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:aac02fdf5dec41b5a6b5bbb3657fa1a66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aac02fdf5dec41b5a6b5bbb3657fa1a66"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#aac02fdf5dec41b5a6b5bbb3657fa1a66">OnStart</a> ()</td></tr>
+<tr class="memdesc:aac02fdf5dec41b5a6b5bbb3657fa1a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a> is started. <br/></td></tr>
 <tr class="memitem:ae4aca655f28ad79beb4f5bdeb752e765"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ae4aca655f28ad79beb4f5bdeb752e765">VerifiableBroadcast</a> (const QByteArray &amp;)</td></tr>
 <tr class="memdesc:ae4aca655f28ad79beb4f5bdeb752e765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signs and encrypts a message before broadcasting.  <a href="#ae4aca655f28ad79beb4f5bdeb752e765"></a><br/></td></tr>
 <tr class="memitem:abe917218dc3056d71eb08ea2d0f63e32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe917218dc3056d71eb08ea2d0f63e32"></a>
@@ -336,7 +336,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 12 2012 18:31:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 13 2012 13:10:31 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
