@@ -135,242 +135,239 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00040"></a>00040 
 <a name="l00041"></a>00041         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(msg);
 <a name="l00042"></a>00042         <span class="keywordtype">int</span> idx = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>());
-<a name="l00043"></a>00043         <span class="keyword">delete</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad92c372ba19c15337d53148579823a65" title="All the remote peers inner private keys.">_private_inner_keys</a>[idx];
-<a name="l00044"></a>00044         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad92c372ba19c15337d53148579823a65" title="All the remote peers inner private keys.">_private_inner_keys</a>[idx] = lib-&gt;LoadPrivateKeyFromByteArray(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a8c99ce4938d8642ba633ebaf3d63a2df" title="The private inner encrypting key.">_inner_key</a>-&gt;GetByteArray());
-<a name="l00045"></a>00045       }
-<a name="l00046"></a>00046   };
-<a name="l00047"></a>00047 
-<a name="l00048"></a><a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html">00048</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html">ShuffleRoundMessageDuplicator</a> :
-<a name="l00049"></a>00049       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
-<a name="l00050"></a>00050   {
-<a name="l00051"></a>00051     <span class="keyword">public</span>:
-<a name="l00052"></a>00052       <span class="keyword">explicit</span> <a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html">ShuffleRoundMessageDuplicator</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
-<a name="l00053"></a>00053           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
-<a name="l00054"></a>00054           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
-<a name="l00055"></a>00055         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057       <span class="keyword">virtual</span> ~<a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html">ShuffleRoundMessageDuplicator</a>() {}
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059     <span class="keyword">protected</span>:
-<a name="l00060"></a><a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html#a15b65abe5d8e4b922bde4b6c1caf0455">00060</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html#a15b65abe5d8e4b922bde4b6c1caf0455" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>()
-<a name="l00061"></a>00061       {
-<a name="l00062"></a>00062         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
-<a name="l00063"></a>00063         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
-<a name="l00064"></a>00064           <a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html#a15b65abe5d8e4b922bde4b6c1caf0455" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">ShuffleRound::Shuffle</a>();
-<a name="l00065"></a>00065           <span class="keywordflow">return</span>;
-<a name="l00066"></a>00066         }
-<a name="l00067"></a>00067 
-<a name="l00068"></a>00068         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
-<a name="l00069"></a>00069 
-<a name="l00070"></a>00070         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a> = Shuffling;
-<a name="l00071"></a>00071         qDebug() &lt;&lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()) &lt;&lt;
-<a name="l00072"></a>00072           <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1" title="Returns the group used in the round.">GetGroup</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()) &lt;&lt; <span class="stringliteral">&quot;: shuffling&quot;</span>;
-<a name="l00073"></a>00073       
-<a name="l00074"></a>00074         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> idx = 0; idx &lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count(); idx++) {
-<a name="l00075"></a>00075           <span class="keywordflow">for</span>(<span class="keywordtype">int</span> jdx = 0; jdx &lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count(); jdx++) {
-<a name="l00076"></a>00076             <span class="keywordflow">if</span>(idx == jdx) {
-<a name="l00077"></a>00077               <span class="keywordflow">continue</span>;
-<a name="l00078"></a>00078             }
-<a name="l00079"></a>00079             <span class="keywordflow">if</span>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[idx] != <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[jdx]) {
-<a name="l00080"></a>00080               <span class="keywordflow">continue</span>;
-<a name="l00081"></a>00081             }
-<a name="l00082"></a>00082             qWarning() &lt;&lt; <span class="stringliteral">&quot;Found duplicate cipher texts... blaming&quot;</span>;
-<a name="l00083"></a>00083             <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aef3d00f9bbb7705c0607744f22f709d3" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
-<a name="l00084"></a>00084             <span class="keywordflow">return</span>;
-<a name="l00085"></a>00085           }
-<a name="l00086"></a>00086         }
-<a name="l00087"></a>00087 
-<a name="l00088"></a>00088         <span class="keywordtype">int</span> x = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count());
-<a name="l00089"></a>00089         <span class="keywordtype">int</span> y = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count());
-<a name="l00090"></a>00090         <span class="keywordflow">while</span>(y == x) {
-<a name="l00091"></a>00091           y = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count());
-<a name="l00092"></a>00092         }
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[x] = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[y];
-<a name="l00095"></a>00095   
-<a name="l00096"></a>00096         QVector&lt;int&gt; bad;
-<a name="l00097"></a>00097         <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();
-<a name="l00098"></a>00098         <span class="keywordflow">if</span>(!oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a594cbe6c47f84f36e3fa154dc95b1ca8" title="Using the key it removes a layer of encryption from ciphertexts, returns true if everything parses fi...">Decrypt</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#adca7473343257417002b4c7559161de3" title="The private outer encrypting key.">_outer_key</a>.data(), <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>,
-<a name="l00099"></a>00099               <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816" title="Data pushed into the shuffle.">_shuffle_cleartext</a>, &amp;bad))
-<a name="l00100"></a>00100         {
-<a name="l00101"></a>00101           qWarning() &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1" title="Returns the group used in the round.">GetGroup</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()) &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>() &lt;&lt;
-<a name="l00102"></a>00102             <span class="stringliteral">&quot;: failed to decrypt layer due to block at indexes&quot;</span> &lt;&lt; bad;
-<a name="l00103"></a>00103           <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aef3d00f9bbb7705c0607744f22f709d3" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
-<a name="l00104"></a>00104           <span class="keywordflow">return</span>; 
-<a name="l00105"></a>00105         } 
-<a name="l00106"></a>00106         
-<a name="l00107"></a>00107         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a8c537c1034cb14f5c66602b561610250" title="Randomizes the inpuptted message blocks.">RandomizeBlocks</a>(_shuffle_cleartext);
+<a name="l00043"></a>00043         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a21314443ea8d3f038d41e5d8caf3339e" title="All the remote peers inner private keys.">_private_inner_keys</a>[idx] = lib-&gt;LoadPrivateKeyFromByteArray(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad27d50091d2cf7e3fe4ea60ee76407d9" title="The private inner encrypting key.">_inner_key</a>-&gt;GetByteArray());
+<a name="l00044"></a>00044       }
+<a name="l00045"></a>00045   };
+<a name="l00046"></a>00046 
+<a name="l00047"></a><a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html">00047</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html">ShuffleRoundMessageDuplicator</a> :
+<a name="l00048"></a>00048       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
+<a name="l00049"></a>00049   {
+<a name="l00050"></a>00050     <span class="keyword">public</span>:
+<a name="l00051"></a>00051       <span class="keyword">explicit</span> <a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html">ShuffleRoundMessageDuplicator</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
+<a name="l00052"></a>00052           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
+<a name="l00053"></a>00053           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
+<a name="l00054"></a>00054         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056       <span class="keyword">virtual</span> ~<a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html">ShuffleRoundMessageDuplicator</a>() {}
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058     <span class="keyword">protected</span>:
+<a name="l00059"></a><a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html#a15b65abe5d8e4b922bde4b6c1caf0455">00059</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html#a15b65abe5d8e4b922bde4b6c1caf0455" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>()
+<a name="l00060"></a>00060       {
+<a name="l00061"></a>00061         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
+<a name="l00062"></a>00062         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
+<a name="l00063"></a>00063           <a class="code" href="../../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html#a15b65abe5d8e4b922bde4b6c1caf0455" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">ShuffleRound::Shuffle</a>();
+<a name="l00064"></a>00064           <span class="keywordflow">return</span>;
+<a name="l00065"></a>00065         }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a> = Shuffling;
+<a name="l00070"></a>00070         qDebug() &lt;&lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()) &lt;&lt;
+<a name="l00071"></a>00071           <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1" title="Returns the group used in the round.">GetGroup</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()) &lt;&lt; <span class="stringliteral">&quot;: shuffling&quot;</span>;
+<a name="l00072"></a>00072       
+<a name="l00073"></a>00073         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> idx = 0; idx &lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count(); idx++) {
+<a name="l00074"></a>00074           <span class="keywordflow">for</span>(<span class="keywordtype">int</span> jdx = 0; jdx &lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count(); jdx++) {
+<a name="l00075"></a>00075             <span class="keywordflow">if</span>(idx == jdx) {
+<a name="l00076"></a>00076               <span class="keywordflow">continue</span>;
+<a name="l00077"></a>00077             }
+<a name="l00078"></a>00078             <span class="keywordflow">if</span>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[idx] != <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[jdx]) {
+<a name="l00079"></a>00079               <span class="keywordflow">continue</span>;
+<a name="l00080"></a>00080             }
+<a name="l00081"></a>00081             qWarning() &lt;&lt; <span class="stringliteral">&quot;Found duplicate cipher texts... blaming&quot;</span>;
+<a name="l00082"></a>00082             <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aef3d00f9bbb7705c0607744f22f709d3" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
+<a name="l00083"></a>00083             <span class="keywordflow">return</span>;
+<a name="l00084"></a>00084           }
+<a name="l00085"></a>00085         }
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087         <span class="keywordtype">int</span> x = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count());
+<a name="l00088"></a>00088         <span class="keywordtype">int</span> y = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count());
+<a name="l00089"></a>00089         <span class="keywordflow">while</span>(y == x) {
+<a name="l00090"></a>00090           y = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count());
+<a name="l00091"></a>00091         }
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[x] = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[y];
+<a name="l00094"></a>00094   
+<a name="l00095"></a>00095         QVector&lt;int&gt; bad;
+<a name="l00096"></a>00096         <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();
+<a name="l00097"></a>00097         <span class="keywordflow">if</span>(!oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a452a5f5e8ac3852bd5d41312565361ac" title="Using the key it removes a layer of encryption from ciphertexts, returns true if everything parses fi...">Decrypt</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ade599cc87ab0570e753fb89008585d1f" title="The private outer encrypting key.">_outer_key</a>, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816" title="Data pushed into the shuffle.">_shuffle_cleartext</a>, &amp;bad)) {
+<a name="l00098"></a>00098           qWarning() &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1" title="Returns the group used in the round.">GetGroup</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()) &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>() &lt;&lt;
+<a name="l00099"></a>00099             <span class="stringliteral">&quot;: failed to decrypt layer due to block at indexes&quot;</span> &lt;&lt; bad;
+<a name="l00100"></a>00100           <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aef3d00f9bbb7705c0607744f22f709d3" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
+<a name="l00101"></a>00101           <span class="keywordflow">return</span>; 
+<a name="l00102"></a>00102         } 
+<a name="l00103"></a>00103         
+<a name="l00104"></a>00104         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a8c537c1034cb14f5c66602b561610250" title="Randomizes the inpuptted message blocks.">RandomizeBlocks</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816" title="Data pushed into the shuffle.">_shuffle_cleartext</a>);
+<a name="l00105"></a>00105         
+<a name="l00106"></a>00106         <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;next = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#afba97c2ee6fb7fb7c0224addeb9f162f" title="Returns the Id of the peer after the specified Id.">Next</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>());
+<a name="l00107"></a>00107         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a> mtype = (next == Id::Zero()) ? EncryptedData : ShuffleData;
 <a name="l00108"></a>00108         
-<a name="l00109"></a>00109         <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;next = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#afba97c2ee6fb7fb7c0224addeb9f162f" title="Returns the Id of the peer after the specified Id.">Next</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>());
-<a name="l00110"></a>00110         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a> mtype = (next == Id::Zero()) ? EncryptedData : ShuffleData;
-<a name="l00111"></a>00111         
-<a name="l00112"></a>00112         QByteArray msg;
-<a name="l00113"></a>00113         QDataStream out_stream(&amp;msg, QIODevice::WriteOnly);
-<a name="l00114"></a>00114         out_stream &lt;&lt; mtype &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#a1a6136f1b65adbfffbd200160d91c3a5" title="Returns the byte array for the Id.">GetByteArray</a>() &lt;&lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816" title="Data pushed into the shuffle.">_shuffle_cleartext</a>;
-<a name="l00115"></a>00115           
-<a name="l00116"></a>00116         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a> = WaitingForEncryptedInnerData;
-<a name="l00117"></a>00117       
-<a name="l00118"></a>00118         <span class="keywordflow">if</span>(mtype == EncryptedData) {
-<a name="l00119"></a>00119           <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(msg);
-<a name="l00120"></a>00120           <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a02c6ffb3a8535b1391bf4d8fa045aca2" title="Inner encrypted only data.">_encrypted_data</a> = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816" title="Data pushed into the shuffle.">_shuffle_cleartext</a>;
-<a name="l00121"></a>00121         } <span class="keywordflow">else</span> {
-<a name="l00122"></a>00122           <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08" title="Signs and encrypts a message before sending it to a sepecific peer.">VerifiableSend</a>(next, msg);
-<a name="l00123"></a>00123         }
-<a name="l00124"></a>00124       }
-<a name="l00125"></a>00125   };
-<a name="l00126"></a>00126 
-<a name="l00127"></a><a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html">00127</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html">ShuffleRoundMessageSwitcher</a> :
-<a name="l00128"></a>00128       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
-<a name="l00129"></a>00129   {
-<a name="l00130"></a>00130     <span class="keyword">public</span>:
-<a name="l00131"></a>00131       <span class="keyword">explicit</span> <a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html">ShuffleRoundMessageSwitcher</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
-<a name="l00132"></a>00132           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
-<a name="l00133"></a>00133           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
-<a name="l00134"></a>00134         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
-<a name="l00135"></a>00135 
-<a name="l00136"></a>00136       <span class="keyword">virtual</span> ~<a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html">ShuffleRoundMessageSwitcher</a>() {}
-<a name="l00137"></a>00137 
-<a name="l00138"></a>00138     <span class="keyword">protected</span>:
-<a name="l00139"></a><a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html#a5cea6d13e51bcd9c3fe58b15a177bbbb">00139</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html#a5cea6d13e51bcd9c3fe58b15a177bbbb" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>()
-<a name="l00140"></a>00140       {
-<a name="l00141"></a>00141         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
-<a name="l00142"></a>00142         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
-<a name="l00143"></a>00143           <a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html#a5cea6d13e51bcd9c3fe58b15a177bbbb" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">ShuffleRound::Shuffle</a>();
-<a name="l00144"></a>00144           <span class="keywordflow">return</span>;
-<a name="l00145"></a>00145         }
-<a name="l00146"></a>00146 
-<a name="l00147"></a>00147         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
-<a name="l00148"></a>00148 
-<a name="l00149"></a>00149         QVector&lt;AsymmetricKey *&gt; outer_keys;
-<a name="l00150"></a>00150         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> idx = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().Count() - 1; idx &gt;= <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()); idx--) {
-<a name="l00151"></a>00151           <span class="keywordtype">int</span> kidx = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1" title="Inner and outer public keys are kept in reversed order, this returns the public key index for a given...">CalculateKidx</a>(idx);
-<a name="l00152"></a>00152           outer_keys.append(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a64bd310af4a8cb18c1ef7f94438f4fe7" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[kidx]);
-<a name="l00153"></a>00153         }
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155         QByteArray get_data = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa7e28b51297ec369dd5c83e04ea0cdd0" title="Empty block used for nodes who do not send any data.">DefaultData</a>;
-<a name="l00156"></a>00156         QByteArray inner_ct, outer_ct;
-<a name="l00157"></a>00157         <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();
-<a name="l00158"></a>00158         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a88e3b63465bd6d7316e0a4289f0a0fe6" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa229b391d2abe40f4771b8c2e74277f0" title="All the remote peers inner keys, in reverse order.">_public_inner_keys</a>, get_data, inner_ct, 0);
-<a name="l00159"></a>00159         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a88e3b63465bd6d7316e0a4289f0a0fe6" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(outer_keys, inner_ct, outer_ct, 0);
+<a name="l00109"></a>00109         QByteArray msg;
+<a name="l00110"></a>00110         QDataStream out_stream(&amp;msg, QIODevice::WriteOnly);
+<a name="l00111"></a>00111         out_stream &lt;&lt; mtype &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#a1a6136f1b65adbfffbd200160d91c3a5" title="Returns the byte array for the Id.">GetByteArray</a>() &lt;&lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816" title="Data pushed into the shuffle.">_shuffle_cleartext</a>;
+<a name="l00112"></a>00112           
+<a name="l00113"></a>00113         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a> = WaitingForEncryptedInnerData;
+<a name="l00114"></a>00114       
+<a name="l00115"></a>00115         <span class="keywordflow">if</span>(mtype == EncryptedData) {
+<a name="l00116"></a>00116           <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(msg);
+<a name="l00117"></a>00117           <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a02c6ffb3a8535b1391bf4d8fa045aca2" title="Inner encrypted only data.">_encrypted_data</a> = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816" title="Data pushed into the shuffle.">_shuffle_cleartext</a>;
+<a name="l00118"></a>00118         } <span class="keywordflow">else</span> {
+<a name="l00119"></a>00119           <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08" title="Signs and encrypts a message before sending it to a sepecific peer.">VerifiableSend</a>(next, msg);
+<a name="l00120"></a>00120         }
+<a name="l00121"></a>00121       }
+<a name="l00122"></a>00122   };
+<a name="l00123"></a>00123 
+<a name="l00124"></a><a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html">00124</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html">ShuffleRoundMessageSwitcher</a> :
+<a name="l00125"></a>00125       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
+<a name="l00126"></a>00126   {
+<a name="l00127"></a>00127     <span class="keyword">public</span>:
+<a name="l00128"></a>00128       <span class="keyword">explicit</span> <a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html">ShuffleRoundMessageSwitcher</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
+<a name="l00129"></a>00129           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
+<a name="l00130"></a>00130           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
+<a name="l00131"></a>00131         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
+<a name="l00132"></a>00132 
+<a name="l00133"></a>00133       <span class="keyword">virtual</span> ~<a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html">ShuffleRoundMessageSwitcher</a>() {}
+<a name="l00134"></a>00134 
+<a name="l00135"></a>00135     <span class="keyword">protected</span>:
+<a name="l00136"></a><a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html#a5cea6d13e51bcd9c3fe58b15a177bbbb">00136</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html#a5cea6d13e51bcd9c3fe58b15a177bbbb" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>()
+<a name="l00137"></a>00137       {
+<a name="l00138"></a>00138         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
+<a name="l00139"></a>00139         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
+<a name="l00140"></a>00140           <a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html#a5cea6d13e51bcd9c3fe58b15a177bbbb" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">ShuffleRound::Shuffle</a>();
+<a name="l00141"></a>00141           <span class="keywordflow">return</span>;
+<a name="l00142"></a>00142         }
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146         QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; outer_keys;
+<a name="l00147"></a>00147         <span class="keywordflow">for</span>(<span class="keywordtype">int</span> idx = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().Count() - 1; idx &gt;= <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()); idx--) {
+<a name="l00148"></a>00148           <span class="keywordtype">int</span> kidx = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1" title="Inner and outer public keys are kept in reversed order, this returns the public key index for a given...">CalculateKidx</a>(idx);
+<a name="l00149"></a>00149           outer_keys.append(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac4eeafa955b04911adfa2b1c2785e4bf" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[kidx]);
+<a name="l00150"></a>00150         }
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152         QByteArray get_data = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa7e28b51297ec369dd5c83e04ea0cdd0" title="Empty block used for nodes who do not send any data.">DefaultData</a>;
+<a name="l00153"></a>00153         QByteArray inner_ct, outer_ct;
+<a name="l00154"></a>00154         <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();
+<a name="l00155"></a>00155         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a309baf3604c321fe4bb74e2d95b0497f" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a73733cf2fd5d757903c77f04c12e6dcc" title="All the remote peers inner keys, in reverse order.">_public_inner_keys</a>, get_data, inner_ct, 0);
+<a name="l00156"></a>00156         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a309baf3604c321fe4bb74e2d95b0497f" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(outer_keys, inner_ct, outer_ct, 0);
+<a name="l00157"></a>00157 
+<a name="l00158"></a>00158         <span class="keywordtype">int</span> x = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count());
+<a name="l00159"></a>00159         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[x] = outer_ct;
 <a name="l00160"></a>00160 
-<a name="l00161"></a>00161         <span class="keywordtype">int</span> x = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>.count());
-<a name="l00162"></a>00162         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>[x] = outer_ct;
-<a name="l00163"></a>00163 
-<a name="l00164"></a>00164         <a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html#a5cea6d13e51bcd9c3fe58b15a177bbbb" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">ShuffleRound::Shuffle</a>();
-<a name="l00165"></a>00165       }
-<a name="l00166"></a>00166   };
-<a name="l00167"></a>00167 
-<a name="l00168"></a><a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html">00168</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html">ShuffleRoundFalseBlame</a> :
-<a name="l00169"></a>00169       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
-<a name="l00170"></a>00170   {
-<a name="l00171"></a>00171     <span class="keyword">public</span>:
-<a name="l00172"></a>00172       <span class="keyword">explicit</span> <a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html">ShuffleRoundFalseBlame</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
-<a name="l00173"></a>00173           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
-<a name="l00174"></a>00174           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
-<a name="l00175"></a>00175         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
-<a name="l00176"></a>00176 
-<a name="l00177"></a>00177       <span class="keyword">virtual</span> ~<a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html">ShuffleRoundFalseBlame</a>() {}
-<a name="l00178"></a>00178 
-<a name="l00179"></a>00179     <span class="keyword">protected</span>:
-<a name="l00180"></a><a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html#a0ce6e38dc381e77d28462b3b002189f5">00180</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html#a0ce6e38dc381e77d28462b3b002189f5" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>()
-<a name="l00181"></a>00181       {
-<a name="l00182"></a>00182         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
-<a name="l00183"></a>00183         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
-<a name="l00184"></a>00184           <a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html#a0ce6e38dc381e77d28462b3b002189f5" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">ShuffleRound::Shuffle</a>();
-<a name="l00185"></a>00185           <span class="keywordflow">return</span>;
-<a name="l00186"></a>00186         }
-<a name="l00187"></a>00187 
-<a name="l00188"></a>00188         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
-<a name="l00189"></a>00189 
-<a name="l00190"></a>00190         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aef3d00f9bbb7705c0607744f22f709d3" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
-<a name="l00191"></a>00191       }
-<a name="l00192"></a>00192   };
-<a name="l00193"></a>00193 
-<a name="l00194"></a><a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html">00194</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html">ShuffleRoundFalseNoGo</a> :
-<a name="l00195"></a>00195       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
-<a name="l00196"></a>00196   {
-<a name="l00197"></a>00197     <span class="keyword">public</span>:
-<a name="l00198"></a>00198       <span class="keyword">explicit</span> <a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html">ShuffleRoundFalseNoGo</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
-<a name="l00199"></a>00199           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
-<a name="l00200"></a>00200           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
-<a name="l00201"></a>00201         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
-<a name="l00202"></a>00202 
-<a name="l00203"></a>00203       <span class="keyword">virtual</span> ~<a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html">ShuffleRoundFalseNoGo</a>() {}
-<a name="l00204"></a>00204 
-<a name="l00205"></a>00205     <span class="keyword">protected</span>:
-<a name="l00206"></a><a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html#ad3f8c72df6ba325ff95335cc92f4076d">00206</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html#ad3f8c72df6ba325ff95335cc92f4076d" title="After receiving the inner encrypted data, each node will send a go or no go message.">VerifyInnerCiphertext</a>()
-<a name="l00207"></a>00207       {
-<a name="l00208"></a>00208         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
-<a name="l00209"></a>00209         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
-<a name="l00210"></a>00210           <a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html#ad3f8c72df6ba325ff95335cc92f4076d" title="After receiving the inner encrypted data, each node will send a go or no go message.">ShuffleRound::VerifyInnerCiphertext</a>();
-<a name="l00211"></a>00211           <span class="keywordflow">return</span>;
-<a name="l00212"></a>00212         }
-<a name="l00213"></a>00213 
-<a name="l00214"></a>00214         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
-<a name="l00215"></a>00215 
-<a name="l00216"></a>00216         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a> mtype = NoGoMessage;
-<a name="l00217"></a>00217         QByteArray msg;
-<a name="l00218"></a>00218         QDataStream out_stream(&amp;msg, QIODevice::WriteOnly);
-<a name="l00219"></a>00219         out_stream &lt;&lt; mtype &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>();
-<a name="l00220"></a>00220         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(msg);
-<a name="l00221"></a>00221       }
-<a name="l00222"></a>00222   };
-<a name="l00223"></a>00223 
-<a name="l00224"></a><a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html">00224</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html">ShuffleRoundInvalidOuterEncryption</a> :
-<a name="l00225"></a>00225       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
-<a name="l00226"></a>00226   {
-<a name="l00227"></a>00227     <span class="keyword">public</span>:
-<a name="l00228"></a>00228       <span class="keyword">explicit</span> <a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html">ShuffleRoundInvalidOuterEncryption</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
-<a name="l00229"></a>00229           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
-<a name="l00230"></a>00230           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
-<a name="l00231"></a>00231         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
-<a name="l00232"></a>00232 
-<a name="l00233"></a>00233       <span class="keyword">virtual</span> ~<a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html">ShuffleRoundInvalidOuterEncryption</a>() {}
-<a name="l00234"></a>00234 
-<a name="l00235"></a>00235     <span class="keyword">protected</span>:
-<a name="l00236"></a><a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html#ac474e81c16b51b2186e6e7a96d270ae6">00236</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html#ac474e81c16b51b2186e6e7a96d270ae6" title="Encrypts and submits the data block to the first node.">SubmitData</a>()
-<a name="l00237"></a>00237       {
-<a name="l00238"></a>00238         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
-<a name="l00239"></a>00239         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
-<a name="l00240"></a>00240           <a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html#ac474e81c16b51b2186e6e7a96d270ae6" title="Encrypts and submits the data block to the first node.">ShuffleRound::SubmitData</a>();
-<a name="l00241"></a>00241           <span class="keywordflow">return</span>;
-<a name="l00242"></a>00242         }
-<a name="l00243"></a>00243 
-<a name="l00244"></a>00244         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
-<a name="l00245"></a>00245 
-<a name="l00246"></a>00246         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a> = DataSubmission;
+<a name="l00161"></a>00161         <a class="code" href="../../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html#a5cea6d13e51bcd9c3fe58b15a177bbbb" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">ShuffleRound::Shuffle</a>();
+<a name="l00162"></a>00162       }
+<a name="l00163"></a>00163   };
+<a name="l00164"></a>00164 
+<a name="l00165"></a><a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html">00165</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html">ShuffleRoundFalseBlame</a> :
+<a name="l00166"></a>00166       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
+<a name="l00167"></a>00167   {
+<a name="l00168"></a>00168     <span class="keyword">public</span>:
+<a name="l00169"></a>00169       <span class="keyword">explicit</span> <a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html">ShuffleRoundFalseBlame</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
+<a name="l00170"></a>00170           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
+<a name="l00171"></a>00171           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
+<a name="l00172"></a>00172         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174       <span class="keyword">virtual</span> ~<a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html">ShuffleRoundFalseBlame</a>() {}
+<a name="l00175"></a>00175 
+<a name="l00176"></a>00176     <span class="keyword">protected</span>:
+<a name="l00177"></a><a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html#a0ce6e38dc381e77d28462b3b002189f5">00177</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html#a0ce6e38dc381e77d28462b3b002189f5" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>()
+<a name="l00178"></a>00178       {
+<a name="l00179"></a>00179         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
+<a name="l00180"></a>00180         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
+<a name="l00181"></a>00181           <a class="code" href="../../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html#a0ce6e38dc381e77d28462b3b002189f5" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">ShuffleRound::Shuffle</a>();
+<a name="l00182"></a>00182           <span class="keywordflow">return</span>;
+<a name="l00183"></a>00183         }
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
+<a name="l00186"></a>00186 
+<a name="l00187"></a>00187         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aef3d00f9bbb7705c0607744f22f709d3" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
+<a name="l00188"></a>00188       }
+<a name="l00189"></a>00189   };
+<a name="l00190"></a>00190 
+<a name="l00191"></a><a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html">00191</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html">ShuffleRoundFalseNoGo</a> :
+<a name="l00192"></a>00192       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
+<a name="l00193"></a>00193   {
+<a name="l00194"></a>00194     <span class="keyword">public</span>:
+<a name="l00195"></a>00195       <span class="keyword">explicit</span> <a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html">ShuffleRoundFalseNoGo</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
+<a name="l00196"></a>00196           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
+<a name="l00197"></a>00197           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
+<a name="l00198"></a>00198         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200       <span class="keyword">virtual</span> ~<a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html">ShuffleRoundFalseNoGo</a>() {}
+<a name="l00201"></a>00201 
+<a name="l00202"></a>00202     <span class="keyword">protected</span>:
+<a name="l00203"></a><a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html#ad3f8c72df6ba325ff95335cc92f4076d">00203</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html#ad3f8c72df6ba325ff95335cc92f4076d" title="After receiving the inner encrypted data, each node will send a go or no go message.">VerifyInnerCiphertext</a>()
+<a name="l00204"></a>00204       {
+<a name="l00205"></a>00205         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
+<a name="l00206"></a>00206         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
+<a name="l00207"></a>00207           <a class="code" href="../../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html#ad3f8c72df6ba325ff95335cc92f4076d" title="After receiving the inner encrypted data, each node will send a go or no go message.">ShuffleRound::VerifyInnerCiphertext</a>();
+<a name="l00208"></a>00208           <span class="keywordflow">return</span>;
+<a name="l00209"></a>00209         }
+<a name="l00210"></a>00210 
+<a name="l00211"></a>00211         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
+<a name="l00212"></a>00212 
+<a name="l00213"></a>00213         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a> mtype = NoGoMessage;
+<a name="l00214"></a>00214         QByteArray msg;
+<a name="l00215"></a>00215         QDataStream out_stream(&amp;msg, QIODevice::WriteOnly);
+<a name="l00216"></a>00216         out_stream &lt;&lt; mtype &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>();
+<a name="l00217"></a>00217         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(msg);
+<a name="l00218"></a>00218       }
+<a name="l00219"></a>00219   };
+<a name="l00220"></a>00220 
+<a name="l00221"></a><a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html">00221</a>   <span class="keyword">template</span> &lt;<span class="keywordtype">int</span> N&gt; <span class="keyword">class </span><a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html">ShuffleRoundInvalidOuterEncryption</a> :
+<a name="l00222"></a>00222       <span class="keyword">public</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a>, <span class="keyword">public</span> <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html" title="Base class for objects that contain a triggerable event.">Triggerable</a>
+<a name="l00223"></a>00223   {
+<a name="l00224"></a>00224     <span class="keyword">public</span>:
+<a name="l00225"></a>00225       <span class="keyword">explicit</span> <a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html">ShuffleRoundInvalidOuterEncryption</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,
+<a name="l00226"></a>00226           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
+<a name="l00227"></a>00227           QSharedPointer&lt;Network&gt; net, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data) :
+<a name="l00228"></a>00228         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(group, ident, round_id, net, get_data) {}
+<a name="l00229"></a>00229 
+<a name="l00230"></a>00230       <span class="keyword">virtual</span> ~<a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html">ShuffleRoundInvalidOuterEncryption</a>() {}
+<a name="l00231"></a>00231 
+<a name="l00232"></a>00232     <span class="keyword">protected</span>:
+<a name="l00233"></a><a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html#ac474e81c16b51b2186e6e7a96d270ae6">00233</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html#ac474e81c16b51b2186e6e7a96d270ae6" title="Encrypts and submits the data block to the first node.">SubmitData</a>()
+<a name="l00234"></a>00234       {
+<a name="l00235"></a>00235         <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator -- base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();
+<a name="l00236"></a>00236         <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {
+<a name="l00237"></a>00237           <a class="code" href="../../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html#ac474e81c16b51b2186e6e7a96d270ae6" title="Encrypts and submits the data block to the first node.">ShuffleRound::SubmitData</a>();
+<a name="l00238"></a>00238           <span class="keywordflow">return</span>;
+<a name="l00239"></a>00239         }
+<a name="l00240"></a>00240 
+<a name="l00241"></a>00241         <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();
+<a name="l00242"></a>00242 
+<a name="l00243"></a>00243         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a> = DataSubmission;
+<a name="l00244"></a>00244 
+<a name="l00245"></a>00245         <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();
+<a name="l00246"></a>00246         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a309baf3604c321fe4bb74e2d95b0497f" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a73733cf2fd5d757903c77f04c12e6dcc" title="All the remote peers inner keys, in reverse order.">_public_inner_keys</a>, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a767c8d4032068dfafcdfe250dd1c6d28" title="Takes a data block and makes it proper encoding for the shuffle.">PrepareData</a>(), <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9a831916515219c5853b248a0f93fe38" title="Local nodes inner onion ciphertext.">_inner_ciphertext</a>, 0);
 <a name="l00247"></a>00247 
-<a name="l00248"></a>00248         <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();
-<a name="l00249"></a>00249         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a88e3b63465bd6d7316e0a4289f0a0fe6" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa229b391d2abe40f4771b8c2e74277f0" title="All the remote peers inner keys, in reverse order.">_public_inner_keys</a>, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a767c8d4032068dfafcdfe250dd1c6d28" title="Takes a data block and makes it proper encoding for the shuffle.">PrepareData</a>(), <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9a831916515219c5853b248a0f93fe38" title="Local nodes inner onion ciphertext.">_inner_ciphertext</a>, 0);
-<a name="l00250"></a>00250 
-<a name="l00251"></a>00251         <span class="keywordtype">int</span> count = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().Count());
-<a name="l00252"></a>00252         <span class="keywordtype">int</span> opposite = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1" title="Inner and outer public keys are kept in reversed order, this returns the public key index for a given...">CalculateKidx</a>(count);
-<a name="l00253"></a>00253         <span class="keywordflow">if</span>(count == opposite) {
-<a name="l00254"></a>00254           opposite = (opposite + 1) % <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#aff3695bac9a28c4f812ec36b92c0a843" title="Returns the size of the group.">Count</a>();
-<a name="l00255"></a>00255         }
-<a name="l00256"></a>00256 
-<a name="l00257"></a>00257         <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a> *tmp = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a64bd310af4a8cb18c1ef7f94438f4fe7" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[opposite];
-<a name="l00258"></a>00258         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a64bd310af4a8cb18c1ef7f94438f4fe7" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[opposite] = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a64bd310af4a8cb18c1ef7f94438f4fe7" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[count];
-<a name="l00259"></a>00259         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a88e3b63465bd6d7316e0a4289f0a0fe6" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a64bd310af4a8cb18c1ef7f94438f4fe7" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9a831916515219c5853b248a0f93fe38" title="Local nodes inner onion ciphertext.">_inner_ciphertext</a>, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a77682f0d01ae9b7fedb15bc3b892c96b" title="Local nodes outer onion ciphertext.">_outer_ciphertext</a>, 0);
-<a name="l00260"></a>00260         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a64bd310af4a8cb18c1ef7f94438f4fe7" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[opposite] = tmp;
-<a name="l00261"></a>00261 
-<a name="l00262"></a>00262         QByteArray msg;
-<a name="l00263"></a>00263         QDataStream stream(&amp;msg, QIODevice::WriteOnly);
-<a name="l00264"></a>00264         stream &lt;&lt; Data &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#a1a6136f1b65adbfffbd200160d91c3a5" title="Returns the byte array for the Id.">GetByteArray</a>() &lt;&lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a77682f0d01ae9b7fedb15bc3b892c96b" title="Local nodes outer onion ciphertext.">_outer_ciphertext</a>;
-<a name="l00265"></a>00265 
-<a name="l00266"></a>00266         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a> = WaitingForShuffle;
-<a name="l00267"></a>00267         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08" title="Signs and encrypts a message before sending it to a sepecific peer.">VerifiableSend</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().GetId(0), msg);
-<a name="l00268"></a>00268       }
-<a name="l00269"></a>00269   };
-<a name="l00270"></a>00270 }
-<a name="l00271"></a>00271 }
-<a name="l00272"></a>00272 
-<a name="l00273"></a>00273 <span class="preprocessor">#endif</span>
+<a name="l00248"></a>00248         <span class="keywordtype">int</span> count = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().Count());
+<a name="l00249"></a>00249         <span class="keywordtype">int</span> opposite = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1" title="Inner and outer public keys are kept in reversed order, this returns the public key index for a given...">CalculateKidx</a>(count);
+<a name="l00250"></a>00250         <span class="keywordflow">if</span>(count == opposite) {
+<a name="l00251"></a>00251           opposite = (opposite + 1) % <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#aff3695bac9a28c4f812ec36b92c0a843" title="Returns the size of the group.">Count</a>();
+<a name="l00252"></a>00252         }
+<a name="l00253"></a>00253 
+<a name="l00254"></a>00254         QSharedPointer&lt;AsymmetricKey&gt; tmp(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac4eeafa955b04911adfa2b1c2785e4bf" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[opposite]);
+<a name="l00255"></a>00255         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac4eeafa955b04911adfa2b1c2785e4bf" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[opposite] = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac4eeafa955b04911adfa2b1c2785e4bf" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[count];
+<a name="l00256"></a>00256         oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a309baf3604c321fe4bb74e2d95b0497f" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac4eeafa955b04911adfa2b1c2785e4bf" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9a831916515219c5853b248a0f93fe38" title="Local nodes inner onion ciphertext.">_inner_ciphertext</a>, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a77682f0d01ae9b7fedb15bc3b892c96b" title="Local nodes outer onion ciphertext.">_outer_ciphertext</a>, 0);
+<a name="l00257"></a>00257         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac4eeafa955b04911adfa2b1c2785e4bf" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>[opposite] = tmp;
+<a name="l00258"></a>00258 
+<a name="l00259"></a>00259         QByteArray msg;
+<a name="l00260"></a>00260         QDataStream stream(&amp;msg, QIODevice::WriteOnly);
+<a name="l00261"></a>00261         stream &lt;&lt; Data &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#a1a6136f1b65adbfffbd200160d91c3a5" title="Returns the byte array for the Id.">GetByteArray</a>() &lt;&lt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a77682f0d01ae9b7fedb15bc3b892c96b" title="Local nodes outer onion ciphertext.">_outer_ciphertext</a>;
+<a name="l00262"></a>00262 
+<a name="l00263"></a>00263         <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a> = WaitingForShuffle;
+<a name="l00264"></a>00264         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08" title="Signs and encrypts a message before sending it to a sepecific peer.">VerifiableSend</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().GetId(0), msg);
+<a name="l00265"></a>00265       }
+<a name="l00266"></a>00266   };
+<a name="l00267"></a>00267 }
+<a name="l00268"></a>00268 }
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 13 2012 13:10:31 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 13 2012 15:00:32 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

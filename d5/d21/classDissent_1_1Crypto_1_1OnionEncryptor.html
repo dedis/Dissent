@@ -124,16 +124,16 @@ Inheritance diagram for Dissent::Crypto::OnionEncryptor:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a88e3b63465bd6d7316e0a4289f0a0fe6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a88e3b63465bd6d7316e0a4289f0a0fe6">Encrypt</a> (const QVector&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> * &gt; &amp;keys, const QByteArray &amp;cleartext, QByteArray &amp;ciphertext, QVector&lt; QByteArray &gt; *intermediate=0) const </td></tr>
-<tr class="memdesc:a88e3b63465bd6d7316e0a4289f0a0fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key.  <a href="#a88e3b63465bd6d7316e0a4289f0a0fe6"></a><br/></td></tr>
-<tr class="memitem:a594cbe6c47f84f36e3fa154dc95b1ca8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a594cbe6c47f84f36e3fa154dc95b1ca8">Decrypt</a> (const <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> *key, const QVector&lt; QByteArray &gt; &amp;ciphertext, QVector&lt; QByteArray &gt; &amp;cleartext, QVector&lt; int &gt; *bad=0) const </td></tr>
-<tr class="memdesc:a594cbe6c47f84f36e3fa154dc95b1ca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Using the key it removes a layer of encryption from ciphertexts, returns true if everything parses fine.  <a href="#a594cbe6c47f84f36e3fa154dc95b1ca8"></a><br/></td></tr>
+<tr class="memitem:a309baf3604c321fe4bb74e2d95b0497f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a309baf3604c321fe4bb74e2d95b0497f">Encrypt</a> (const QVector&lt; QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &gt; &amp;keys, const QByteArray &amp;cleartext, QByteArray &amp;ciphertext, QVector&lt; QByteArray &gt; *intermediate=0) const </td></tr>
+<tr class="memdesc:a309baf3604c321fe4bb74e2d95b0497f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key.  <a href="#a309baf3604c321fe4bb74e2d95b0497f"></a><br/></td></tr>
+<tr class="memitem:a452a5f5e8ac3852bd5d41312565361ac"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a452a5f5e8ac3852bd5d41312565361ac">Decrypt</a> (const QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &amp;key, const QVector&lt; QByteArray &gt; &amp;ciphertext, QVector&lt; QByteArray &gt; &amp;cleartext, QVector&lt; int &gt; *bad=0) const </td></tr>
+<tr class="memdesc:a452a5f5e8ac3852bd5d41312565361ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Using the key it removes a layer of encryption from ciphertexts, returns true if everything parses fine.  <a href="#a452a5f5e8ac3852bd5d41312565361ac"></a><br/></td></tr>
 <tr class="memitem:a8c537c1034cb14f5c66602b561610250"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a8c537c1034cb14f5c66602b561610250">RandomizeBlocks</a> (QVector&lt; QByteArray &gt; &amp;text) const </td></tr>
 <tr class="memdesc:a8c537c1034cb14f5c66602b561610250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Randomizes the inpuptted message blocks.  <a href="#a8c537c1034cb14f5c66602b561610250"></a><br/></td></tr>
-<tr class="memitem:a0a60a4e235c83f1a60bdeb158746b535"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a0a60a4e235c83f1a60bdeb158746b535">VerifyOne</a> (const <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> *key, const QVector&lt; QByteArray &gt; &amp;cleartext, const QVector&lt; QByteArray &gt; &amp;ciphertext) const </td></tr>
-<tr class="memdesc:a0a60a4e235c83f1a60bdeb158746b535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies that the ciphertext and cleartext match, returning true if that is the case, false otherwise.  <a href="#a0a60a4e235c83f1a60bdeb158746b535"></a><br/></td></tr>
-<tr class="memitem:a60b3931d46aacbb6cdc22aebdb7e25d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a60b3931d46aacbb6cdc22aebdb7e25d4">VerifyAll</a> (const QVector&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> * &gt; &amp;keys, const QVector&lt; QVector&lt; QByteArray &gt; &gt; &amp;onion, QBitArray &amp;bad) const </td></tr>
-<tr class="memdesc:a60b3931d46aacbb6cdc22aebdb7e25d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like Verify one, but checcks against a set of keys and returns the indexes of the bad blocks in the bad array, though only if it returns false.  <a href="#a60b3931d46aacbb6cdc22aebdb7e25d4"></a><br/></td></tr>
+<tr class="memitem:a164ac3323b9a0a648679ff2346f31726"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a164ac3323b9a0a648679ff2346f31726">VerifyOne</a> (const QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &amp;key, const QVector&lt; QByteArray &gt; &amp;cleartext, const QVector&lt; QByteArray &gt; &amp;ciphertext) const </td></tr>
+<tr class="memdesc:a164ac3323b9a0a648679ff2346f31726"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies that the ciphertext and cleartext match, returning true if that is the case, false otherwise.  <a href="#a164ac3323b9a0a648679ff2346f31726"></a><br/></td></tr>
+<tr class="memitem:a74686d4eff80005bf38d1f521e0b2538"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a74686d4eff80005bf38d1f521e0b2538">VerifyAll</a> (const QVector&lt; QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &gt; &amp;keys, const QVector&lt; QVector&lt; QByteArray &gt; &gt; &amp;onion, QBitArray &amp;bad) const </td></tr>
+<tr class="memdesc:a74686d4eff80005bf38d1f521e0b2538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Like Verify one, but checcks against a set of keys and returns the indexes of the bad blocks in the bad array, though only if it returns false.  <a href="#a74686d4eff80005bf38d1f521e0b2538"></a><br/></td></tr>
 <tr class="memitem:aa5cabcf195cca2cba43204cdfbc0af68"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#aa5cabcf195cca2cba43204cdfbc0af68">ReorderRandomBits</a> (const QVector&lt; QVector&lt; QByteArray &gt; &gt; &amp;in_bits, QVector&lt; QVector&lt; QByteArray &gt; &gt; &amp;out_bits) const </td></tr>
 <tr class="memdesc:aa5cabcf195cca2cba43204cdfbc0af68"><td class="mdescLeft">&#160;</td><td class="mdescRight">After receiving the various peers intermediate cipher texts, this reorders them to be placed into VerifyAll / VerifyOne.  <a href="#aa5cabcf195cca2cba43204cdfbc0af68"></a><br/></td></tr>
 <tr class="memitem:af4f0a9a89e185bba41172cfbd1ff86b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4f0a9a89e185bba41172cfbd1ff86b0"></a>
@@ -143,14 +143,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Provides a tool around onion encrypting messages. </p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a594cbe6c47f84f36e3fa154dc95b1ca8"></a>
+<a class="anchor" id="a452a5f5e8ac3852bd5d41312565361ac"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a594cbe6c47f84f36e3fa154dc95b1ca8">Dissent::Crypto::OnionEncryptor::Decrypt</a> </td>
+          <td class="memname">bool <a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a452a5f5e8ac3852bd5d41312565361ac">Dissent::Crypto::OnionEncryptor::Decrypt</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> *&#160;</td>
+          <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
@@ -191,18 +191,18 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="../../da/d8c/classDissent_1_1Crypto_1_1ThreadedOnionEncryptor.html#aedda5624a2e7d34b5e19d1a98a3ba4ab">Dissent::Crypto::ThreadedOnionEncryptor</a>.</p>
+<p>Reimplemented in <a class="el" href="../../da/d8c/classDissent_1_1Crypto_1_1ThreadedOnionEncryptor.html#a8e5f3d64a7f544d4fa037d574c42a58b">Dissent::Crypto::ThreadedOnionEncryptor</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a88e3b63465bd6d7316e0a4289f0a0fe6"></a>
+<a class="anchor" id="a309baf3604c321fe4bb74e2d95b0497f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a88e3b63465bd6d7316e0a4289f0a0fe6">Dissent::Crypto::OnionEncryptor::Encrypt</a> </td>
+          <td class="memname">int <a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a309baf3604c321fe4bb74e2d95b0497f">Dissent::Crypto::OnionEncryptor::Encrypt</a> </td>
           <td>(</td>
-          <td class="paramtype">const QVector&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> * &gt; &amp;&#160;</td>
+          <td class="paramtype">const QVector&lt; QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>keys</em>, </td>
         </tr>
         <tr>
@@ -306,14 +306,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 
 </div>
 </div>
-<a class="anchor" id="a60b3931d46aacbb6cdc22aebdb7e25d4"></a>
+<a class="anchor" id="a74686d4eff80005bf38d1f521e0b2538"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a60b3931d46aacbb6cdc22aebdb7e25d4">Dissent::Crypto::OnionEncryptor::VerifyAll</a> </td>
+          <td class="memname">bool <a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a74686d4eff80005bf38d1f521e0b2538">Dissent::Crypto::OnionEncryptor::VerifyAll</a> </td>
           <td>(</td>
-          <td class="paramtype">const QVector&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> * &gt; &amp;&#160;</td>
+          <td class="paramtype">const QVector&lt; QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>keys</em>, </td>
         </tr>
         <tr>
@@ -349,14 +349,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 
 </div>
 </div>
-<a class="anchor" id="a0a60a4e235c83f1a60bdeb158746b535"></a>
+<a class="anchor" id="a164ac3323b9a0a648679ff2346f31726"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a0a60a4e235c83f1a60bdeb158746b535">Dissent::Crypto::OnionEncryptor::VerifyOne</a> </td>
+          <td class="memname">bool <a class="el" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a164ac3323b9a0a648679ff2346f31726">Dissent::Crypto::OnionEncryptor::VerifyOne</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> *&#160;</td>
+          <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>key</em>, </td>
         </tr>
         <tr>
@@ -400,7 +400,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 13 2012 13:10:32 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 13 2012 15:00:33 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
