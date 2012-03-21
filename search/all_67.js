@@ -82,6 +82,7 @@ var searchData=
   ['getkeyshuffleround',['GetKeyShuffleRound',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a870c65e6e60807c58cbbee0c238698cf',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound::GetKeyShuffleRound()'],['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a2f8f2092d99adb1db488c30813d2a822',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound::GetKeyShuffleRound()']]],
   ['getkeysize',['GetKeySize',['../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#ac4862a48942fee53ca08ff7d45fc01cb',1,'Dissent::Crypto::AsymmetricKey::GetKeySize()'],['../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a82580052aae78e5b6391eafeb98a497f',1,'Dissent::Crypto::CppPublicKey::GetKeySize()'],['../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a919eedf8a6c38b3190318753abe78355',1,'Dissent::Crypto::NullPublicKey::GetKeySize()']]],
   ['getlastincomingmessage',['GetLastIncomingMessage',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#aa527ee0f0509c3b08694d6dad1dbd65c',1,'Dissent::Transports::Edge']]],
+  ['getlastoutgoingmessage',['GetLastOutgoingMessage',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a5ac917a1326b6c8f2ea2697468fc990c',1,'Dissent::Transports::Edge']]],
   ['getleader',['GetLeader',['../d1/da7/classDissent_1_1Identity_1_1Group.html#a0f104f53515b29d6c3f9665b630ddc28',1,'Dissent::Identity::Group']]],
   ['getlibrary',['GetLibrary',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b',1,'Dissent::Crypto::CryptoFactory']]],
   ['getlibraryname',['GetLibraryName',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa',1,'Dissent::Crypto::CryptoFactory']]],
@@ -151,10 +152,10 @@ var searchData=
   ['getverificationkey',['GetVerificationKey',['../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a799b98322fe42f6fe309cbb3a1072470',1,'Dissent::Identity::PublicIdentity::GetVerificationKey()'],['../d2/db1/classDissent_1_1Tunnel_1_1Packets_1_1TcpStartPacket.html#a05551f0bba398b868c13445dba5f4c88',1,'Dissent::Tunnel::Packets::TcpStartPacket::GetVerificationKey()'],['../dd/dbd/classDissent_1_1Tunnel_1_1Packets_1_1UdpStartPacket.html#a9e400302464c578ff5c72e4d559b95cf',1,'Dissent::Tunnel::Packets::UdpStartPacket::GetVerificationKey()']]],
   ['group',['Group',['../d1/da7/classDissent_1_1Identity_1_1Group.html#a5d39b2915dd841af9112ba99b189eca1',1,'Dissent::Identity::Group::Group(const QVector&lt; PublicIdentity &gt; &amp;roster, const Id &amp;leader=Id::Zero(), SubgroupPolicy subgroup_policy=CompleteGroup, const QVector&lt; PublicIdentity &gt; &amp;subgroup=QVector&lt; PublicIdentity &gt;())'],['../d1/da7/classDissent_1_1Identity_1_1Group.html#a1cff2cb74f0b2475ac8d512c52858f42',1,'Dissent::Identity::Group::Group()']]],
   ['group',['Group',['../d1/da7/classDissent_1_1Identity_1_1Group.html',1,'Dissent::Identity']]],
-  ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html#aa7864623f4617ca2c774512c71ee3ef0',1,'Dissent::Identity::GroupData']]],
   ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html',1,'Dissent::Identity']]],
-  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#aa5daa197e37d78b4f9d80c54a05df3ce',1,'Dissent::Identity::GroupHolder']]],
+  ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html#aa7864623f4617ca2c774512c71ee3ef0',1,'Dissent::Identity::GroupData']]],
   ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html',1,'Dissent::Identity']]],
+  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#aa5daa197e37d78b4f9d80c54a05df3ce',1,'Dissent::Identity::GroupHolder']]],
   ['groupsize',['GroupSize',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#aa8632d09cf0234707629e2bf168ecb04',1,'Dissent::Applications::Settings']]],
   ['groupupdated',['GroupUpdated',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#a307d85a629d180253023e1eda6f9e6fc',1,'Dissent::Identity::GroupHolder']]]
 ];
