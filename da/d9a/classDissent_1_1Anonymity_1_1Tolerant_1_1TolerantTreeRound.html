@@ -136,9 +136,10 @@ Public Types</h2></td></tr>
 &#160;&#160;<b>State_Offline</b>, 
 <b>State_SigningKeyShuffling</b>, 
 <b>State_ServerUserDataReceiving</b>, 
-<b>State_ServerCommitSharing</b>, 
+<b>State_ServerClientListSharing</b>, 
 <br/>
-&#160;&#160;<b>State_ServerDataSharing</b>, 
+&#160;&#160;<b>State_ServerCommitSharing</b>, 
+<b>State_ServerDataSharing</b>, 
 <b>State_UserFinalDataReceiving</b>, 
 <b>State_Finished</b>
 <br/>
@@ -148,10 +149,14 @@ Public Types</h2></td></tr>
 <b>Header_Bulk</b>
  }</td></tr>
 <tr class="memdesc:ac3d7d43c47d7e7016595478a398f2291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Headers to use for different sub-rounds. <br/></td></tr>
-<tr class="memitem:a476eca5a9298d480beb0a7430315a4a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a476eca5a9298d480beb0a7430315a4a7">MessageType</a> { <b>MessageType_UserBulkData</b> =  0, 
+<tr class="memitem:a476eca5a9298d480beb0a7430315a4a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a476eca5a9298d480beb0a7430315a4a7">MessageType</a> { <br/>
+&#160;&#160;<b>MessageType_UserBulkData</b> =  0, 
 <b>MessageType_ServerCommitData</b> =  1, 
-<b>MessageType_ServerBulkData</b> =  2, 
-<b>MessageType_ServerFinalData</b> =  3
+<b>MessageType_ServerClientListData</b> =  2, 
+<b>MessageType_ServerBulkData</b> =  3, 
+<br/>
+&#160;&#160;<b>MessageType_ServerFinalData</b> =  4
+<br/>
  }</td></tr>
 <tr class="memdesc:a476eca5a9298d480beb0a7430315a4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various message types sent and received. <br/></td></tr>
 <tr class="memitem:a6af7471bf990cf31038b23e6a156531e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6af7471bf990cf31038b23e6a156531e"></a>
@@ -180,9 +185,9 @@ typedef <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">D
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2f047a7f43b6b791bce734c0037d0d9a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a2f047a7f43b6b791bce734c0037d0d9a">TolerantTreeRound</a> (const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;ident, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a> &gt;)</td></tr>
 <tr class="memdesc:a2f047a7f43b6b791bce734c0037d0d9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a2f047a7f43b6b791bce734c0037d0d9a"></a><br/></td></tr>
-<tr class="memitem:a65c9e72344e703dd6576bb66331e005d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a65c9e72344e703dd6576bb66331e005d"></a>
-virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a65c9e72344e703dd6576bb66331e005d">~TolerantTreeRound</a> ()</td></tr>
-<tr class="memdesc:a65c9e72344e703dd6576bb66331e005d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
+<tr class="memitem:ae4a661f6bf779889a35bffaa0f872ce1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae4a661f6bf779889a35bffaa0f872ce1"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ae4a661f6bf779889a35bffaa0f872ce1">~TolerantTreeRound</a> ()</td></tr>
+<tr class="memdesc:ae4a661f6bf779889a35bffaa0f872ce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
 <tr class="memitem:ac85a556aa05fd706b75edf7dc93aef7d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ac85a556aa05fd706b75edf7dc93aef7d">PeerJoined</a> ()</td></tr>
 <tr class="memdesc:ac85a556aa05fd706b75edf7dc93aef7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies the round that a new peer has joined the session.  <a href="#ac85a556aa05fd706b75edf7dc93aef7d"></a><br/></td></tr>
 <tr class="memitem:af3d4164aad4c5415cbdd1829a8bb28b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af3d4164aad4c5415cbdd1829a8bb28b1"></a>
@@ -229,11 +234,19 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a1211f7a804e65e265f179df40d8641a1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1211f7a804e65e265f179df40d8641a1"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a1211f7a804e65e265f179df40d8641a1">HasAllUserDataMessages</a> ()</td></tr>
 <tr class="memdesc:a1211f7a804e65e265f179df40d8641a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a server has all user bulk data messages for a phase. <br/></td></tr>
+<tr class="memitem:af9bafd1273fb28d9bf52c719465c5dd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9bafd1273fb28d9bf52c719465c5dd4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendServerClientList</b> (const int &amp;)</td></tr>
+<tr class="memitem:abc11f0029ce648f15bda2636cf68598a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc11f0029ce648f15bda2636cf68598a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#abc11f0029ce648f15bda2636cf68598a">HandleServerClientListData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr class="memdesc:abc11f0029ce648f15bda2636cf68598a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle commit data from servers. <br/></td></tr>
+<tr class="memitem:a056b17e3586df9ba551fafcd49e21eca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a056b17e3586df9ba551fafcd49e21eca"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a056b17e3586df9ba551fafcd49e21eca">HasAllServerClientLists</a> ()</td></tr>
+<tr class="memdesc:a056b17e3586df9ba551fafcd49e21eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a node has all client lists for a phase. <br/></td></tr>
 <tr class="memitem:adf11365a1a88dd2e40e03a845b74d276"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf11365a1a88dd2e40e03a845b74d276"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendServerCommit</b> ()</td></tr>
-<tr class="memitem:ab0f87eac35b04cd5da3bc83658b44764"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab0f87eac35b04cd5da3bc83658b44764"></a>
-virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ab0f87eac35b04cd5da3bc83658b44764">GenerateServerXorMessage</a> ()</td></tr>
-<tr class="memdesc:ab0f87eac35b04cd5da3bc83658b44764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the server's entire xor message. <br/></td></tr>
+<tr class="memitem:a9d655876b4ae22f54cf7fa278e2c413f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d655876b4ae22f54cf7fa278e2c413f"></a>
+virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a9d655876b4ae22f54cf7fa278e2c413f">GenerateServerXorMessage</a> (const QList&lt; uint &gt; &amp;active_clients)</td></tr>
+<tr class="memdesc:a9d655876b4ae22f54cf7fa278e2c413f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the server's entire xor message. <br/></td></tr>
 <tr class="memitem:a3a71262b88feea8fd33a15cdbfd95a5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a71262b88feea8fd33a15cdbfd95a5f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a3a71262b88feea8fd33a15cdbfd95a5f">HandleServerCommitData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
 <tr class="memdesc:a3a71262b88feea8fd33a15cdbfd95a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle commit data from servers. <br/></td></tr>
@@ -910,7 +923,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 22 2012 01:15:44 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 22 2012 12:57:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
