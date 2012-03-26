@@ -206,6 +206,8 @@ QSharedPointer&lt; <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_
 <tr class="memdesc:a2f8f2092d99adb1db488c30813d2a822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a> used to exchange anon signing keys. <br/></td></tr>
 <tr class="memitem:aa3bf1483101825a1331d22ef1e647a14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3bf1483101825a1331d22ef1e647a14"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>VerifiableSendToLeader</b> (const QByteArray &amp;msg)</td></tr>
+<tr class="memitem:af71f04bfb85cee368b45b57f01e1a0e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#af71f04bfb85cee368b45b57f01e1a0e7">HandleDisconnect</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
+<tr class="memdesc:af71f04bfb85cee368b45b57f01e1a0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the ConnectionTable has a disconnect, the round may need to react.  <a href="#af71f04bfb85cee368b45b57f01e1a0e7"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3413a2420c3b78d0de63bce501f428cb"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a3413a2420c3b78d0de63bce501f428cb">StateToString</a> (<a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a778f5d0e876164acc9e3cfceaeee9078">State</a> st)</td></tr>
@@ -562,6 +564,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
   </dd>
 </dl>
 <dl class="section return"><dt>Returns:</dt><dd>the descriptor and false </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af71f04bfb85cee368b45b57f01e1a0e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#af71f04bfb85cee368b45b57f01e1a0e7">Dissent::Anonymity::Tolerant::TolerantTreeRound::HandleDisconnect</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>If the ConnectionTable has a disconnect, the round may need to react. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the peer that was disconnected </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a984c284a706d0cc6b9bfd648f40b25b9">Dissent::Anonymity::Round</a>.</p>
 
 </div>
 </div>
@@ -923,7 +952,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 22 2012 12:57:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Mar 26 2012 13:44:11 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
