@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['validate',['Validate',['../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#adbdabe35c79fef19a5cde39c5473d2b9',1,'Dissent::Crypto::CppDsaPublicKey']]],
   ['verifiablebroadcast',['VerifiableBroadcast',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac',1,'Dissent::Anonymity::Round::VerifiableBroadcast()'],['../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ae4aca655f28ad79beb4f5bdeb752e765',1,'Dissent::Anonymity::ShuffleRoundBlame::VerifiableBroadcast()']]],
   ['verifiablesend',['VerifiableSend',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08',1,'Dissent::Anonymity::Round']]],
   ['verificationbytesforconnection',['VerificationBytesForConnection',['../d4/df5/classDissent_1_1Tunnel_1_1TunnelConnectionTable.html#a56cc9894a6d9ae926900b82bffccee25',1,'Dissent::Tunnel::TunnelConnectionTable']]],

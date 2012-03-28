@@ -111,7 +111,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Implementation of PublicKey using CryptoPP.  
+<p>Implementation of KeyBase::PublicKey using CryptoPP.  
  <a href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/d3d/CppDsaPublicKey_8hpp_source.html">CppDsaPublicKey.hpp</a>&gt;</code></p>
@@ -122,7 +122,7 @@ Inheritance diagram for Dissent::Crypto::CppDsaPublicKey:</div>
   <img src="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.png" usemap="#Dissent::Crypto::CppDsaPublicKey_map" alt=""/>
   <map id="Dissent::Crypto::CppDsaPublicKey_map" name="Dissent::Crypto::CppDsaPublicKey_map">
 <area href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions..." alt="Dissent::Crypto::AsymmetricKey" shape="rect" coords="0,0,210,24"/>
-<area href="../../dd/da6/classDissent_1_1Crypto_1_1CppDsaPrivateKey.html" title="Implementation of PrivateKey using CryptoPP." alt="Dissent::Crypto::CppDsaPrivateKey" shape="rect" coords="0,112,210,136"/>
+<area href="../../dd/da6/classDissent_1_1Crypto_1_1CppDsaPrivateKey.html" title="Implementation of KeyBase::PrivateKey using CryptoPP." alt="Dissent::Crypto::CppDsaPrivateKey" shape="rect" coords="0,112,210,136"/>
 </map>
  </div></div>
 
@@ -130,15 +130,23 @@ Inheritance diagram for Dissent::Crypto::CppDsaPublicKey:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a3220407e9fdfd1b75918f742ca127b1c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3220407e9fdfd1b75918f742ca127b1c"></a>
+<tr class="memitem:a298224b314e1042e7472da14c63d113f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a298224b314e1042e7472da14c63d113f"></a>
+typedef CryptoPP::GDSA<br class="typebreak"/>
+&lt; CryptoPP::SHA256 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>KeyBase</b></td></tr>
+<tr class="memitem:a5ea9f025de6e8d14348dfea1f9ebc2c8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ea9f025de6e8d14348dfea1f9ebc2c8"></a>
+typedef <br class="typebreak"/>
+CryptoPP::DL_GroupParameters_GFP&#160;</td><td class="memItemRight" valign="bottom"><b>Parameters</b></td></tr>
+<tr class="memitem:aaf9c23564188deb774eb0a8921e06f10"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf9c23564188deb774eb0a8921e06f10"></a>
 typedef CryptoPP::DL_Key<br class="typebreak"/>
-&lt; CryptoPP::DL_GroupParameters_DSA::Element &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Key</b></td></tr>
+&lt; Parameters::Element &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>Key</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f2d7c3155ae9ea96da73c3187fd1b3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a5f2d7c3155ae9ea96da73c3187fd1b3d">CppDsaPublicKey</a> (const QString &amp;filename)</td></tr>
 <tr class="memdesc:a5f2d7c3155ae9ea96da73c3187fd1b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a key from a file.  <a href="#a5f2d7c3155ae9ea96da73c3187fd1b3d"></a><br/></td></tr>
 <tr class="memitem:a1d3f77af90cc9c0ec0b72a6a60dbdae3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a1d3f77af90cc9c0ec0b72a6a60dbdae3">CppDsaPublicKey</a> (const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a1d3f77af90cc9c0ec0b72a6a60dbdae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a key from memory.  <a href="#a1d3f77af90cc9c0ec0b72a6a60dbdae3"></a><br/></td></tr>
+<tr class="memitem:a208dc8aefe2d324c53611e94c3c4ba6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a208dc8aefe2d324c53611e94c3c4ba6f">CppDsaPublicKey</a> (const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;modulus, const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;subgroup, const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;generator, const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;public_element)</td></tr>
+<tr class="memdesc:a208dc8aefe2d324c53611e94c3c4ba6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a public Dsa key given the public parameters.  <a href="#a208dc8aefe2d324c53611e94c3c4ba6f"></a><br/></td></tr>
 <tr class="memitem:a00150f8084325a16ec93d18bb5fe4123"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00150f8084325a16ec93d18bb5fe4123"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a00150f8084325a16ec93d18bb5fe4123">~CppDsaPublicKey</a> ()</td></tr>
 <tr class="memdesc:a00150f8084325a16ec93d18bb5fe4123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br/></td></tr>
@@ -171,15 +179,31 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a94e699342866354eb320ff17862dd943">GetKeySize</a> () const </td></tr>
 <tr class="memdesc:a94e699342866354eb320ff17862dd943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the keys size in bits. <br/></td></tr>
 <tr class="memitem:a5a64e8ad117717b00518d716107e823f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a64e8ad117717b00518d716107e823f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsEncryption</b> ()</td></tr>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a5a64e8ad117717b00518d716107e823f">SupportsEncryption</a> ()</td></tr>
+<tr class="memdesc:a5a64e8ad117717b00518d716107e823f"><td class="mdescLeft">&#160;</td><td class="mdescRight">DSA does not explicitly allow encryption. <br/></td></tr>
+<tr class="memitem:aef54a74726ea6090d2abc731ab5963a6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef54a74726ea6090d2abc731ab5963a6"></a>
+<a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#aef54a74726ea6090d2abc731ab5963a6">GetGenerator</a> () const </td></tr>
+<tr class="memdesc:aef54a74726ea6090d2abc731ab5963a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the g of the DSA public key. <br/></td></tr>
+<tr class="memitem:a81f8b490527e1021fc93bdecdafc9a71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81f8b490527e1021fc93bdecdafc9a71"></a>
+<a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a81f8b490527e1021fc93bdecdafc9a71">GetModulus</a> () const </td></tr>
+<tr class="memdesc:a81f8b490527e1021fc93bdecdafc9a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the p of the DSA public key. <br/></td></tr>
+<tr class="memitem:ad72b21e489d526d245a1dca080048bd9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad72b21e489d526d245a1dca080048bd9"></a>
+<a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#ad72b21e489d526d245a1dca080048bd9">GetSubgroup</a> () const </td></tr>
+<tr class="memdesc:ad72b21e489d526d245a1dca080048bd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the q of the DSA public key. <br/></td></tr>
+<tr class="memitem:ab14e838b8db74080f23bbccf92f90379"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab14e838b8db74080f23bbccf92f90379"></a>
+<a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#ab14e838b8db74080f23bbccf92f90379">GetPublicElement</a> () const </td></tr>
+<tr class="memdesc:ab14e838b8db74080f23bbccf92f90379"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y = g^x mod p of the DSA public key. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a72cf51e61da57e39425e4e072b1d37b0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html">CppDsaPublicKey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a72cf51e61da57e39425e4e072b1d37b0">GenerateKey</a> (const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a72cf51e61da57e39425e4e072b1d37b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a public key based upon the seed data, same seed data same key.  <a href="#a72cf51e61da57e39425e4e072b1d37b0"></a><br/></td></tr>
 <tr class="memitem:ad3a333ad339024a541dc8b853de572cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3a333ad339024a541dc8b853de572cd"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>GetMinimumKeySize</b> ()</td></tr>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#ad3a333ad339024a541dc8b853de572cd">GetMinimumKeySize</a> ()</td></tr>
+<tr class="memdesc:ad3a333ad339024a541dc8b853de572cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">DSA does not work with keys below 1024. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3e6913ef31775f2639f08d6746295855"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e6913ef31775f2639f08d6746295855"></a>
+virtual const Parameters &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetGroupParameters</b> () const </td></tr>
 <tr class="memitem:adf16eafdd86f14c1c799369744c0e74c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf16eafdd86f14c1c799369744c0e74c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#adf16eafdd86f14c1c799369744c0e74c">CppDsaPublicKey</a> ()</td></tr>
 <tr class="memdesc:adf16eafdd86f14c1c799369744c0e74c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does not make sense to create random public keys. <br/></td></tr>
@@ -190,12 +214,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:ac1b306cb9c5f1bff0e441a2280007024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a key from the provided byte array.  <a href="#ac1b306cb9c5f1bff0e441a2280007024"></a><br/></td></tr>
 <tr class="memitem:a8feb3d5268c940dd93dd9f5a323b73c3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a8feb3d5268c940dd93dd9f5a323b73c3">InitFromFile</a> (const QString &amp;filename)</td></tr>
 <tr class="memdesc:a8feb3d5268c940dd93dd9f5a323b73c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a key from the given filename.  <a href="#a8feb3d5268c940dd93dd9f5a323b73c3"></a><br/></td></tr>
-<tr class="memitem:a21ba66d75a17a875c2eb5b666a736c38"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21ba66d75a17a875c2eb5b666a736c38"></a>
-virtual const <br class="typebreak"/>
-CryptoPP::DSA::PublicKey *&#160;</td><td class="memItemRight" valign="bottom"><b>GetDsaPublicKey</b> () const </td></tr>
+<tr class="memitem:adbdabe35c79fef19a5cde39c5473d2b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbdabe35c79fef19a5cde39c5473d2b9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#adbdabe35c79fef19a5cde39c5473d2b9">Validate</a> ()</td></tr>
+<tr class="memdesc:adbdabe35c79fef19a5cde39c5473d2b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prevents a remote user from giving a malicious DSA key. <br/></td></tr>
+<tr class="memitem:a8ca70cd1c91087f8398370c001f4f2e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca70cd1c91087f8398370c001f4f2e0"></a>
+virtual const KeyBase::PublicKey *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a8ca70cd1c91087f8398370c001f4f2e0">GetDsaPublicKey</a> () const </td></tr>
+<tr class="memdesc:a8ca70cd1c91087f8398370c001f4f2e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal Dsa Public Key. <br/></td></tr>
 <tr class="memitem:a20369e724019b6f54a1a25ea47d51e97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a20369e724019b6f54a1a25ea47d51e97"></a>
 virtual const <br class="typebreak"/>
-CryptoPP::CryptoMaterial *&#160;</td><td class="memItemRight" valign="bottom"><b>GetCryptoMaterial</b> () const </td></tr>
+CryptoPP::CryptoMaterial *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a20369e724019b6f54a1a25ea47d51e97">GetCryptoMaterial</a> () const </td></tr>
+<tr class="memdesc:a20369e724019b6f54a1a25ea47d51e97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal cryptomaterial. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:a3229e4b4814ad99ea5f135a4c11ca71e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3229e4b4814ad99ea5f135a4c11ca71e"></a>
@@ -210,7 +238,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>_valid</b></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>_key_size</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Implementation of PublicKey using CryptoPP. </p>
+<div class="textblock"><p>Implementation of KeyBase::PublicKey using CryptoPP. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5f2d7c3155ae9ea96da73c3187fd1b3d"></a>
 <div class="memitem">
@@ -256,6 +284,56 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_key_size</b></td></tr
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>byte array holding the key </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a208dc8aefe2d324c53611e94c3c4ba6f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a5f2d7c3155ae9ea96da73c3187fd1b3d">Dissent::Crypto::CppDsaPublicKey::CppDsaPublicKey</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;&#160;</td>
+          <td class="paramname"><em>modulus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;&#160;</td>
+          <td class="paramname"><em>subgroup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;&#160;</td>
+          <td class="paramname"><em>generator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;&#160;</td>
+          <td class="paramname"><em>public_element</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [explicit]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Creates a public Dsa key given the public parameters. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modulus</td><td>the p of the public key </td></tr>
+    <tr><td class="paramname">subgroup</td><td>the q of the public key </td></tr>
+    <tr><td class="paramname">generator</td><td>the g of the public key </td></tr>
+    <tr><td class="paramname">public_element</td><td>the y of the public key (g^x) </td></tr>
   </table>
   </dd>
 </dl>
@@ -408,7 +486,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_key_size</b></td></tr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 27 2012 20:26:45 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 28 2012 16:50:50 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
