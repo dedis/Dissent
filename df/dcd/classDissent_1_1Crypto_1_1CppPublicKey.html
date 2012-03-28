@@ -103,7 +103,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Crypto::CppPublicKey Class Reference</div>  </div>
@@ -167,6 +166,10 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aec32a78ab5e9c9503eec2e73be318b67"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html">CppPublicKey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#aec32a78ab5e9c9503eec2e73be318b67">GenerateKey</a> (const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:aec32a78ab5e9c9503eec2e73be318b67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a public key based upon the seed data, same seed data same key.  <a href="#aec32a78ab5e9c9503eec2e73be318b67"></a><br/></td></tr>
+<tr class="memitem:aae4fb53bd5e164d4d31edd994843700b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae4fb53bd5e164d4d31edd994843700b"></a>
+static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>GetByteArray</b> (const CryptoPP::CryptoMaterial &amp;key)</td></tr>
+<tr class="memitem:a4c97bce69637685a3d03334d8a54aab8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c97bce69637685a3d03334d8a54aab8"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>GetMinimumKeySize</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7b9c36e13d46d398eed0823840338fb0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b9c36e13d46d398eed0823840338fb0"></a>
@@ -176,10 +179,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memdesc:aa4c0fafa3ea569aab56004d9ad908310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a key from the provided byte array.  <a href="#aa4c0fafa3ea569aab56004d9ad908310"></a><br/></td></tr>
 <tr class="memitem:a67e93b081275621ce28dce4849f379bc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a67e93b081275621ce28dce4849f379bc">InitFromFile</a> (const QString &amp;filename)</td></tr>
 <tr class="memdesc:a67e93b081275621ce28dce4849f379bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a key from the given filename.  <a href="#a67e93b081275621ce28dce4849f379bc"></a><br/></td></tr>
-<tr><td colspan="2"><h2><a name="pro-static-methods"></a>
-Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:aae4fb53bd5e164d4d31edd994843700b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae4fb53bd5e164d4d31edd994843700b"></a>
-static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>GetByteArray</b> (const CryptoPP::CryptoMaterial &amp;key)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aa1918af8b082710a90ad9ee77a1f3093"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1918af8b082710a90ad9ee77a1f3093"></a>
@@ -415,7 +414,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>_key_size</b></td></tr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 26 2012 13:44:11 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 27 2012 20:26:45 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

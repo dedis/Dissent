@@ -15,6 +15,8 @@ var searchData=
   ['_7econnectiontable',['~ConnectionTable',['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#aa62000a390819fd2fdf464f890bed271',1,'Dissent::Connections::ConnectionTable']]],
   ['_7econsolesink',['~ConsoleSink',['../d2/dd7/classDissent_1_1Applications_1_1ConsoleSink.html#a57b280bea1b979c4fd993ed0b9b74f96',1,'Dissent::Applications::ConsoleSink']]],
   ['_7ecppdiffiehellman',['~CppDiffieHellman',['../da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#ac210e1c1d5db3a618bd8d1431c97c742',1,'Dissent::Crypto::CppDiffieHellman']]],
+  ['_7ecppdsaprivatekey',['~CppDsaPrivateKey',['../dd/da6/classDissent_1_1Crypto_1_1CppDsaPrivateKey.html#a055eec83bae8fe37fc4b8a4e3f16d888',1,'Dissent::Crypto::CppDsaPrivateKey']]],
+  ['_7ecppdsapublickey',['~CppDsaPublicKey',['../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a00150f8084325a16ec93d18bb5fe4123',1,'Dissent::Crypto::CppDsaPublicKey']]],
   ['_7ecpphash',['~CppHash',['../d8/d4c/classDissent_1_1Crypto_1_1CppHash.html#a0d4f18482495c366742131b3408ca213',1,'Dissent::Crypto::CppHash']]],
   ['_7ecppintegerdata',['~CppIntegerData',['../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a4e2a932cfb8ee6cf7844b66d398743d3',1,'Dissent::Crypto::CppIntegerData']]],
   ['_7ecppprivatekey',['~CppPrivateKey',['../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html#a01eb5e3ef910f3cbd1e642f1887370a9',1,'Dissent::Crypto::CppPrivateKey']]],

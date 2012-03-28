@@ -111,43 +111,45 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00016"></a>00016 
 <a name="l00017"></a>00017       <span class="keyword">enum</span> LibraryName {
 <a name="l00018"></a>00018         CryptoPP,
-<a name="l00019"></a>00019         Null
-<a name="l00020"></a>00020       };
-<a name="l00021"></a>00021 
-<a name="l00025"></a>00025       <span class="keyword">static</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a> &amp;<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">GetInstance</a>();
-<a name="l00026"></a>00026 
-<a name="l00030"></a>00030       <span class="keywordtype">void</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a318598e3674246c72e7f4d3a2bd6852d" title="Sets the type of threading support.">SetThreading</a>(ThreadingType type);
-<a name="l00031"></a>00031 
-<a name="l00035"></a><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d">00035</a>       <span class="keyword">inline</span> ThreadingType <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d" title="Returns the current threading type.">GetThreadingType</a>() { <span class="keywordflow">return</span> _threading_type; }
-<a name="l00036"></a>00036 
-<a name="l00040"></a>00040       <span class="keywordtype">void</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a63163d40b0adcb68724d819b314752a8" title="Sets the library used.">SetLibrary</a>(LibraryName type);
-<a name="l00041"></a>00041 
-<a name="l00045"></a><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa">00045</a>       <span class="keyword">inline</span> LibraryName <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa" title="Returns the current library name.">GetLibraryName</a>() { <span class="keywordflow">return</span> _library_name; }
-<a name="l00046"></a>00046 
-<a name="l00050"></a><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801">00050</a>       <span class="keyword">inline</span> <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> *<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>() { <span class="keywordflow">return</span> _onion.data(); }
-<a name="l00051"></a>00051 
-<a name="l00055"></a><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b">00055</a>       <span class="keyword">inline</span> <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html">Library</a> *<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>() { <span class="keywordflow">return</span> _library.data(); }
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057     <span class="keyword">private</span>:
-<a name="l00061"></a>00061       QScopedPointer&lt;Library&gt; _library;
-<a name="l00062"></a>00062 
-<a name="l00066"></a>00066       QScopedPointer&lt;OnionEncryptor&gt; _onion;
-<a name="l00067"></a>00067 
-<a name="l00071"></a>00071       <span class="keyword">explicit</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a>(); 
-<a name="l00072"></a>00072 
-<a name="l00076"></a>00076       Q_DISABLE_COPY(<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a>)
-<a name="l00077"></a>00077       LibraryName _library_name;
-<a name="l00078"></a>00078       ThreadingType _threading_type;
-<a name="l00079"></a>00079   };
-<a name="l00080"></a>00080 }
-<a name="l00081"></a>00081 }
-<a name="l00082"></a>00082 
-<a name="l00083"></a>00083 <span class="preprocessor">#endif</span>
+<a name="l00019"></a>00019         CryptoPPDsa,
+<a name="l00020"></a>00020         Null
+<a name="l00021"></a>00021       };
+<a name="l00022"></a>00022 
+<a name="l00026"></a>00026       <span class="keyword">static</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a> &amp;<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">GetInstance</a>();
+<a name="l00027"></a>00027 
+<a name="l00031"></a>00031       <span class="keywordtype">void</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a318598e3674246c72e7f4d3a2bd6852d" title="Sets the type of threading support.">SetThreading</a>(ThreadingType type);
+<a name="l00032"></a>00032 
+<a name="l00036"></a><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d">00036</a>       <span class="keyword">inline</span> ThreadingType <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d" title="Returns the current threading type.">GetThreadingType</a>() { <span class="keywordflow">return</span> _threading_type; }
+<a name="l00037"></a>00037 
+<a name="l00041"></a>00041       <span class="keywordtype">void</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a63163d40b0adcb68724d819b314752a8" title="Sets the library used.">SetLibrary</a>(LibraryName type);
+<a name="l00042"></a>00042 
+<a name="l00046"></a><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa">00046</a>       <span class="keyword">inline</span> LibraryName <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa" title="Returns the current library name.">GetLibraryName</a>() { <span class="keywordflow">return</span> _library_name; }
+<a name="l00047"></a>00047 
+<a name="l00051"></a><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801">00051</a>       <span class="keyword">inline</span> <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> *<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>() { <span class="keywordflow">return</span> _onion.data(); }
+<a name="l00052"></a>00052 
+<a name="l00056"></a><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b">00056</a>       <span class="keyword">inline</span> <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html">Library</a> *<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>() { <span class="keywordflow">return</span> _library.data(); }
+<a name="l00057"></a>00057 
+<a name="l00058"></a>00058     <span class="keyword">private</span>:
+<a name="l00062"></a>00062       QScopedPointer&lt;Library&gt; _library;
+<a name="l00063"></a>00063 
+<a name="l00067"></a>00067       QScopedPointer&lt;OnionEncryptor&gt; _onion;
+<a name="l00068"></a>00068 
+<a name="l00072"></a>00072       <span class="keyword">explicit</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a>(); 
+<a name="l00073"></a>00073 
+<a name="l00077"></a>00077       Q_DISABLE_COPY(<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a>)
+<a name="l00078"></a>00078       LibraryName _library_name;
+<a name="l00079"></a>00079       ThreadingType _threading_type;
+<a name="l00080"></a>00080       <span class="keywordtype">int</span> _previous;
+<a name="l00081"></a>00081   };
+<a name="l00082"></a>00082 }
+<a name="l00083"></a>00083 }
+<a name="l00084"></a>00084 
+<a name="l00085"></a>00085 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Mar 26 2012 13:44:10 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Mar 27 2012 20:26:44 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
