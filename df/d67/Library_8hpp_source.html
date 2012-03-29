@@ -135,23 +135,26 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00079"></a>00079 
 <a name="l00083"></a>00083       <span class="keyword">virtual</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7d158ed5d71f99f7a22ee0d13b8f5077" title="Returns an integer data.">GetIntegerData</a>(<span class="keyword">const</span> QString &amp;value) = 0;
 <a name="l00084"></a>00084 
-<a name="l00088"></a>00088       <span class="keyword">virtual</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a> *<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7214189d3e84dfdadf67af3325012d29" title="Returns a DiffieHellman operator.">CreateDiffieHellman</a>() = 0;
-<a name="l00089"></a>00089 
-<a name="l00094"></a>00094       <span class="keyword">virtual</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a> *<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a38d2488980e1939a0db6a2e0ecb868bf" title="Generate a DiffieHellman operator using the given data as a seed to a RNG.">GenerateDiffieHellman</a>(<span class="keyword">const</span> QByteArray &amp;seed) = 0;
-<a name="l00095"></a>00095 
-<a name="l00100"></a>00100       <span class="keyword">virtual</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a> *<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#af264388da594ef867bde448db4d44f1e" title="Loads a DiffieHellman key from a byte array.">LoadDiffieHellman</a>(<span class="keyword">const</span> QByteArray &amp;private_component) = 0;
-<a name="l00101"></a>00101 
-<a name="l00105"></a><a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#aaec2d69f567ca5fe1997fc4fd49e8c67">00105</a>       <span class="keyword">virtual</span> <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#aaec2d69f567ca5fe1997fc4fd49e8c67" title="Destructor.">~Library</a>() {}
-<a name="l00106"></a>00106   };
-<a name="l00107"></a>00107 }
-<a name="l00108"></a>00108 }
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110 <span class="preprocessor">#endif</span>
+<a name="l00091"></a>00091       <span class="keyword">virtual</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a9bf7d6e0729e34383557f24a101d3e01" title="returns a random integer data">GetRandomInteger</a>(<span class="keywordtype">int</span> bit_count,
+<a name="l00092"></a>00092           <span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *mod, <span class="keywordtype">bool</span> prime) = 0;
+<a name="l00093"></a>00093 
+<a name="l00097"></a>00097       <span class="keyword">virtual</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a> *<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7214189d3e84dfdadf67af3325012d29" title="Returns a DiffieHellman operator.">CreateDiffieHellman</a>() = 0;
+<a name="l00098"></a>00098 
+<a name="l00103"></a>00103       <span class="keyword">virtual</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a> *<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a38d2488980e1939a0db6a2e0ecb868bf" title="Generate a DiffieHellman operator using the given data as a seed to a RNG.">GenerateDiffieHellman</a>(<span class="keyword">const</span> QByteArray &amp;seed) = 0;
+<a name="l00104"></a>00104 
+<a name="l00109"></a>00109       <span class="keyword">virtual</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a> *<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#af264388da594ef867bde448db4d44f1e" title="Loads a DiffieHellman key from a byte array.">LoadDiffieHellman</a>(<span class="keyword">const</span> QByteArray &amp;private_component) = 0;
+<a name="l00110"></a>00110 
+<a name="l00114"></a><a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#aaec2d69f567ca5fe1997fc4fd49e8c67">00114</a>       <span class="keyword">virtual</span> <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#aaec2d69f567ca5fe1997fc4fd49e8c67" title="Destructor.">~Library</a>() {}
+<a name="l00115"></a>00115   };
+<a name="l00116"></a>00116 }
+<a name="l00117"></a>00117 }
+<a name="l00118"></a>00118 
+<a name="l00119"></a>00119 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 28 2012 16:50:49 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 29 2012 00:41:50 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

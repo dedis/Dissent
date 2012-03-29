@@ -163,6 +163,8 @@ virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.h
 <tr class="memitem:ac12496295b8fc4ecc45710a10bc5da7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac12496295b8fc4ecc45710a10bc5da7e"></a>
 virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#ac12496295b8fc4ecc45710a10bc5da7e">GetIntegerData</a> (const QString &amp;value)=0</td></tr>
 <tr class="memdesc:ac12496295b8fc4ecc45710a10bc5da7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an integer data. <br/></td></tr>
+<tr class="memitem:a9bf7d6e0729e34383557f24a101d3e01"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a9bf7d6e0729e34383557f24a101d3e01">GetRandomInteger</a> (int bit_count, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod, bool prime)=0</td></tr>
+<tr class="memdesc:a9bf7d6e0729e34383557f24a101d3e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#a9bf7d6e0729e34383557f24a101d3e01"></a><br/></td></tr>
 <tr class="memitem:a7214189d3e84dfdadf67af3325012d29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7214189d3e84dfdadf67af3325012d29"></a>
 virtual <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">DiffieHellman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7214189d3e84dfdadf67af3325012d29">CreateDiffieHellman</a> ()=0</td></tr>
 <tr class="memdesc:a7214189d3e84dfdadf67af3325012d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a> operator. <br/></td></tr>
@@ -202,6 +204,51 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 
 </div>
 </div>
+<a class="anchor" id="a9bf7d6e0729e34383557f24a101d3e01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a>* <a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a9bf7d6e0729e34383557f24a101d3e01">Dissent::Crypto::Library::GetRandomInteger</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bit_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>prime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>returns a random integer data </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bit_count</td><td>the amount of bits in the integer </td></tr>
+    <tr><td class="paramname">mod</td><td>the modulus of the integer </td></tr>
+    <tr><td class="paramname">prime</td><td>if the integer should be prime </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="../../d2/d65/classDissent_1_1Crypto_1_1CppDsaLibrary.html#ae5e15e361767eb9150e9e214d384cdfb">Dissent::Crypto::CppDsaLibrary</a>, <a class="el" href="../../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#afddd7659cc405afb057f59cfb0580236">Dissent::Crypto::CppLibrary</a>, and <a class="el" href="../../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a62320d82cc71606e12242717d1db47b6">Dissent::Crypto::NullLibrary</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="af264388da594ef867bde448db4d44f1e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -236,7 +283,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 28 2012 16:50:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 29 2012 00:41:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -164,8 +164,16 @@ const CryptoPP::Integer&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memdesc:a32780d1dccf4d6829bead53a8f22ee0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less than.  <a href="#a32780d1dccf4d6829bead53a8f22ee0b"></a><br/></td></tr>
 <tr class="memitem:ad0f213c62b0f8d8814a120d51ebbc6eb"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#ad0f213c62b0f8d8814a120d51ebbc6eb">operator&lt;=</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *other) const </td></tr>
 <tr class="memdesc:ad0f213c62b0f8d8814a120d51ebbc6eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less than or equal.  <a href="#ad0f213c62b0f8d8814a120d51ebbc6eb"></a><br/></td></tr>
+<tr class="memitem:ae7d17e8cb4f4839699f3d3c71254aa68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7d17e8cb4f4839699f3d3c71254aa68"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#ae7d17e8cb4f4839699f3d3c71254aa68">GetBitCount</a> () const </td></tr>
+<tr class="memdesc:ae7d17e8cb4f4839699f3d3c71254aa68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the integer's count in bits. <br/></td></tr>
+<tr class="memitem:a4bf089eae323e12040a6d5169443ad21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bf089eae323e12040a6d5169443ad21"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a4bf089eae323e12040a6d5169443ad21">GetByteCount</a> () const </td></tr>
+<tr class="memdesc:a4bf089eae323e12040a6d5169443ad21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the integer's count in bytes. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a856ae755fcc5947f329d038f18b6f56f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html">CppIntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a856ae755fcc5947f329d038f18b6f56f">GetRandomInteger</a> (int bit_count, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod, bool prime)</td></tr>
+<tr class="memdesc:a856ae755fcc5947f329d038f18b6f56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#a856ae755fcc5947f329d038f18b6f56f"></a><br/></td></tr>
 <tr class="memitem:a2e058400661cd57ade5d02a7a9a520c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e058400661cd57ade5d02a7a9a520c9"></a>
 static CryptoPP::Integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a2e058400661cd57ade5d02a7a9a520c9">GetInteger</a> (const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Crypto::Integer</a> &amp;data)</td></tr>
 <tr class="memdesc:a2e058400661cd57ade5d02a7a9a520c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal CryptoPP::Integer. <br/></td></tr>
@@ -282,6 +290,49 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateCanon
 </dl>
 
 <p>Implements <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a9fb0cfa2ff02fab22984cded82cafc5c">Dissent::Crypto::IntegerData</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a856ae755fcc5947f329d038f18b6f56f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html">CppIntegerData</a>* <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a856ae755fcc5947f329d038f18b6f56f">Dissent::Crypto::CppIntegerData::GetRandomInteger</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bit_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>prime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [inline, static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>returns a random integer data </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bit_count</td><td>the amount of bits in the integer </td></tr>
+    <tr><td class="paramname">mod</td><td>the modulus of the integer </td></tr>
+    <tr><td class="paramname">prime</td><td>if the integer should be prime </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -599,7 +650,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateCanon
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 28 2012 16:50:50 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 29 2012 00:41:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
