@@ -3,7 +3,7 @@ var searchData=
   ['webrequest',['WebRequest',['../de/db2/classDissent_1_1Web_1_1WebRequest.html',1,'Dissent::Web']]],
   ['webrequest',['WebRequest',['../de/db2/classDissent_1_1Web_1_1WebRequest.html#a88f1fd252a4631a58de468e5f77634e6',1,'Dissent::Web::WebRequest']]],
   ['webserver',['WebServer',['../db/d98/classDissent_1_1Web_1_1WebServer.html',1,'Dissent::Web']]],
-  ['webserver',['WebServer',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a283015dd4885f351d9e8f02fddc34fcb',1,'Dissent::Applications::Settings::WebServer()'],['../db/d98/classDissent_1_1Web_1_1WebServer.html#a9b5ba2d5be7d24f964829ea28c667d38',1,'Dissent::Web::WebServer::WebServer()']]],
+  ['webserver',['WebServer',['../db/d98/classDissent_1_1Web_1_1WebServer.html#a9b5ba2d5be7d24f964829ea28c667d38',1,'Dissent::Web::WebServer']]],
   ['webserverurl',['WebServerUrl',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a24544d98aae4c732751adb17c8f02067',1,'Dissent::Applications::Settings']]],
   ['webservice',['WebService',['../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#ae2931371aa9c38bc192bae62b5b639f4',1,'Dissent::Web::Services::WebService']]],
   ['webservice',['WebService',['../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html',1,'Dissent::Web::Services']]],

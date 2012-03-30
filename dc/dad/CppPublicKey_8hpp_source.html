@@ -137,29 +137,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00070"></a>00070       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a5e9c05ee6401a8ba1048b0ca56abe5a2" title="Verify the two keys are related private / public key pairs.">VerifyKey</a>(<a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a> &amp;key) <span class="keyword">const</span>;
 <a name="l00071"></a><a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a197d22a10d032ae6694547a40aa366f8">00071</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a197d22a10d032ae6694547a40aa366f8" title="Returns true if the key loaded is a valid key.">IsValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _valid; }
 <a name="l00072"></a><a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a82580052aae78e5b6391eafeb98a497f">00072</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a82580052aae78e5b6391eafeb98a497f" title="Returns the keys size in bits.">GetKeySize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _key_size; }
-<a name="l00073"></a>00073       <span class="keyword">static</span> QByteArray <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#afb153e29f66e5ee01fef208a51fb66ef" title="Returns the key in a byte array format.">GetByteArray</a>(<span class="keyword">const</span> CryptoPP::CryptoMaterial &amp;key);
-<a name="l00074"></a>00074       <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> GetMinimumKeySize() { <span class="keywordflow">return</span> 512; }
-<a name="l00075"></a>00075 
-<a name="l00076"></a>00076     <span class="keyword">protected</span>:
-<a name="l00080"></a><a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0">00080</a>       <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0" title="Does not make sense to create random public keys.">CppPublicKey</a>() { }
-<a name="l00081"></a>00081 
-<a name="l00086"></a>00086       <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#aa4c0fafa3ea569aab56004d9ad908310" title="Loads a key from the provided byte array.">InitFromByteArray</a>(<span class="keyword">const</span> QByteArray &amp;data);
-<a name="l00087"></a>00087 
-<a name="l00092"></a>00092       <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a67e93b081275621ce28dce4849f379bc" title="Loads a key from the given filename.">InitFromFile</a>(<span class="keyword">const</span> QString &amp;filename);
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094       <span class="keyword">const</span> CryptoPP::RSA::PublicKey *_public_key;
-<a name="l00095"></a>00095       <span class="keywordtype">bool</span> _valid;
-<a name="l00096"></a>00096       <span class="keywordtype">int</span> _key_size;
-<a name="l00097"></a>00097   };
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074     <span class="keyword">protected</span>:
+<a name="l00078"></a><a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0">00078</a>       <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0" title="Does not make sense to create random public keys.">CppPublicKey</a>() { }
+<a name="l00079"></a>00079 
+<a name="l00084"></a>00084       <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#aa4c0fafa3ea569aab56004d9ad908310" title="Loads a key from the provided byte array.">InitFromByteArray</a>(<span class="keyword">const</span> QByteArray &amp;data);
+<a name="l00085"></a>00085 
+<a name="l00090"></a>00090       <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a67e93b081275621ce28dce4849f379bc" title="Loads a key from the given filename.">InitFromFile</a>(<span class="keyword">const</span> QString &amp;filename);
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092       <span class="keyword">const</span> CryptoPP::RSA::PublicKey *_public_key;
+<a name="l00093"></a>00093       <span class="keywordtype">bool</span> _valid;
+<a name="l00094"></a>00094       <span class="keywordtype">int</span> _key_size;
+<a name="l00095"></a>00095       <span class="keyword">static</span> QByteArray <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#afb153e29f66e5ee01fef208a51fb66ef" title="Returns the key in a byte array format.">GetByteArray</a>(<span class="keyword">const</span> CryptoPP::CryptoMaterial &amp;key);
+<a name="l00096"></a>00096   };
+<a name="l00097"></a>00097 }
 <a name="l00098"></a>00098 }
-<a name="l00099"></a>00099 }
-<a name="l00100"></a>00100 
-<a name="l00101"></a>00101 <span class="preprocessor">#endif</span>
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 29 2012 23:28:55 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 30 2012 11:49:56 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

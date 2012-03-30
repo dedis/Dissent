@@ -29,11 +29,12 @@ var searchData=
   ['addusermessage',['AddUserMessage',['../d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#afcaadd9b70f7aabed22f26d636bbf23a',1,'Dissent::Anonymity::Tolerant::MessageHistory']]],
   ['adduseroutputbit',['AddUserOutputBit',['../d9/dad/classDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix.html#a22c503daabfc07d4bd027de2e0f4491a',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],
   ['alibibitsfrombytes',['AlibiBitsFromBytes',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a4bf418f07e3eabe7b04b164f7eb394f5',1,'Dissent::Anonymity::Tolerant::AlibiData']]],
-  ['alibidata',['AlibiData',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html',1,'Dissent::Anonymity::Tolerant']]],
   ['alibidata',['AlibiData',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a775d2d122d46ea95ecf9234531aaafd4',1,'Dissent::Anonymity::Tolerant::AlibiData']]],
+  ['alibidata',['AlibiData',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html',1,'Dissent::Anonymity::Tolerant']]],
   ['api_5fmajorversionnumber',['API_MajorVersionNumber',['../db/d98/classDissent_1_1Web_1_1WebServer.html#af893165f98e110a93a097fdd7a08d04c',1,'Dissent::Web::WebServer']]],
   ['append',['Append',['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#a33106e6058bc715fc233cdeeb4da2410',1,'Dissent::Anonymity::Log']]],
   ['appendentry',['AppendEntry',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#a34393b6df8facd85d6ad9bb8254998a9',1,'Dissent::PeerReview::EntryLog']]],
+  ['applicationmode',['ApplicationMode',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a7924defc7a826bc3363c6e4afdf78508',1,'Dissent::Applications::Settings']]],
   ['asymmetrickey',['AsymmetricKey',['../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html',1,'Dissent::Crypto']]],
   ['at',['At',['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#a41f2dc867968cd4f76d3095b70156bd4',1,'Dissent::Anonymity::Log::At()'],['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a83dde09e66d8f2403e1fd8ea10996d5b',1,'Dissent::Messaging::BufferSink::At()']]]
 ];
