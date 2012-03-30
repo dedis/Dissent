@@ -19,6 +19,7 @@ var searchData=
   ['handleserverclientlistdata',['HandleServerClientListData',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#abc11f0029ce648f15bda2636cf68598a',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
   ['handleservercommitdata',['HandleServerCommitData',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a3a71262b88feea8fd33a15cdbfd95a5f',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
   ['handleserverfinaldata',['HandleServerFinalData',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ae2cbd862607cbfcfaaa8322bd0bb18bd',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
+  ['handleserverfinalsigdata',['HandleServerFinalSigData',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ab83eb858cf064239ef4b8ce17bcc2707',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
   ['handleserverproofdata',['HandleServerProofData',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a80ceea58935d3dcd5b3785bf15b5dfde',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['handleshuffle',['HandleShuffle',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa58d126f6d418a354535946c1d8ae761',1,'Dissent::Anonymity::ShuffleRound']]],
   ['handleuseralibidata',['HandleUserAlibiData',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4fb49e080e6f3fad03d714e634dc53ef',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
@@ -32,12 +33,13 @@ var searchData=
   ['hasallserverclientlists',['HasAllServerClientLists',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a056b17e3586df9ba551fafcd49e21eca',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
   ['hasallservercommits',['HasAllServerCommits',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a4af66d59920786487ecb164575dd142d',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
   ['hasallserverdatamessages',['HasAllServerDataMessages',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a9eddb26fe606a6e99bd388ecbca74e68',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
+  ['hasallserverfinalsigmessages',['HasAllServerFinalSigMessages',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ab4a341865c8a7b91b63bff1464f78d0e',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
   ['hasalluserdatamessages',['HasAllUserDataMessages',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a1211f7a804e65e265f179df40d8641a1',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound']]],
   ['hash',['Hash',['../df/df2/classDissent_1_1Crypto_1_1Hash.html',1,'Dissent::Crypto']]],
   ['hasheader',['HasHeader',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#a74785d917d06805535d43c7e3983905f',1,'Dissent::Web::HttpResponse']]],
   ['hashintegers',['HashIntegers',['../da/d8b/classDissent_1_1Crypto_1_1CppDiffieHellman.html#af7ffc1c184b8c1e61f6f2871247dcc54',1,'Dissent::Crypto::CppDiffieHellman']]],
-  ['httprequest',['HttpRequest',['../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html',1,'Dissent::Web']]],
   ['httprequest',['HttpRequest',['../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html#a5c568c7385661ad3976b40290c605b72',1,'Dissent::Web::HttpRequest']]],
-  ['httpresponse',['HttpResponse',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#aff6f4e926a7b09293015f49a21af53fd',1,'Dissent::Web::HttpResponse']]],
-  ['httpresponse',['HttpResponse',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html',1,'Dissent::Web']]]
+  ['httprequest',['HttpRequest',['../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html',1,'Dissent::Web']]],
+  ['httpresponse',['HttpResponse',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html',1,'Dissent::Web']]],
+  ['httpresponse',['HttpResponse',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#aff6f4e926a7b09293015f49a21af53fd',1,'Dissent::Web::HttpResponse']]]
 ];

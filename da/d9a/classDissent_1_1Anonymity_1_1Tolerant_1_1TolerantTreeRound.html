@@ -140,8 +140,10 @@ Public Types</h2></td></tr>
 <br/>
 &#160;&#160;<b>State_ServerCommitSharing</b>, 
 <b>State_ServerDataSharing</b>, 
+<b>State_ServerFinalSigSharing</b>, 
 <b>State_UserFinalDataReceiving</b>, 
-<b>State_Finished</b>
+<br/>
+&#160;&#160;<b>State_Finished</b>
 <br/>
  }</td></tr>
 <tr class="memdesc:a778f5d0e876164acc9e3cfceaeee9078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various stages of the bulk. <br/></td></tr>
@@ -155,7 +157,8 @@ Public Types</h2></td></tr>
 <b>MessageType_ServerClientListData</b> =  2, 
 <b>MessageType_ServerBulkData</b> =  3, 
 <br/>
-&#160;&#160;<b>MessageType_ServerFinalData</b> =  4
+&#160;&#160;<b>MessageType_ServerFinalSig</b> =  4, 
+<b>MessageType_ServerFinalData</b> =  5
 <br/>
  }</td></tr>
 <tr class="memdesc:a476eca5a9298d480beb0a7430315a4a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Various message types sent and received. <br/></td></tr>
@@ -246,9 +249,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memdesc:a056b17e3586df9ba551fafcd49e21eca"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a node has all client lists for a phase. <br/></td></tr>
 <tr class="memitem:adf11365a1a88dd2e40e03a845b74d276"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf11365a1a88dd2e40e03a845b74d276"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SendServerCommit</b> ()</td></tr>
-<tr class="memitem:a9d655876b4ae22f54cf7fa278e2c413f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d655876b4ae22f54cf7fa278e2c413f"></a>
-virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a9d655876b4ae22f54cf7fa278e2c413f">GenerateServerXorMessage</a> (const QList&lt; uint &gt; &amp;active_clients)</td></tr>
-<tr class="memdesc:a9d655876b4ae22f54cf7fa278e2c413f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the server's entire xor message. <br/></td></tr>
+<tr class="memitem:a965e02079952c0d372834f09c6f8386d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a965e02079952c0d372834f09c6f8386d"></a>
+virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a965e02079952c0d372834f09c6f8386d">GenerateServerXorMessage</a> (const QSet&lt; uint &gt; &amp;active_clients)</td></tr>
+<tr class="memdesc:a965e02079952c0d372834f09c6f8386d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the server's entire xor message. <br/></td></tr>
 <tr class="memitem:a3a71262b88feea8fd33a15cdbfd95a5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a71262b88feea8fd33a15cdbfd95a5f"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a3a71262b88feea8fd33a15cdbfd95a5f">HandleServerCommitData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
 <tr class="memdesc:a3a71262b88feea8fd33a15cdbfd95a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle commit data from servers. <br/></td></tr>
@@ -260,6 +263,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a9eddb26fe606a6e99bd388ecbca74e68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9eddb26fe606a6e99bd388ecbca74e68"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a9eddb26fe606a6e99bd388ecbca74e68">HasAllServerDataMessages</a> ()</td></tr>
 <tr class="memdesc:a9eddb26fe606a6e99bd388ecbca74e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a server has all user bulk data messages for a phase. <br/></td></tr>
+<tr class="memitem:a8853496e3fee7b5c41acab4fceb7a701"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8853496e3fee7b5c41acab4fceb7a701"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a8853496e3fee7b5c41acab4fceb7a701">SendServerFinalSig</a> ()</td></tr>
+<tr class="memdesc:a8853496e3fee7b5c41acab4fceb7a701"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the server's signature on the final data. <br/></td></tr>
+<tr class="memitem:ab83eb858cf064239ef4b8ce17bcc2707"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ab83eb858cf064239ef4b8ce17bcc2707">HandleServerFinalSigData</a> (QDataStream &amp;stream, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from)</td></tr>
+<tr class="memdesc:ab83eb858cf064239ef4b8ce17bcc2707"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses and handles the server signatures.  <a href="#ab83eb858cf064239ef4b8ce17bcc2707"></a><br/></td></tr>
+<tr class="memitem:ab4a341865c8a7b91b63bff1464f78d0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4a341865c8a7b91b63bff1464f78d0e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ab4a341865c8a7b91b63bff1464f78d0e">HasAllServerFinalSigMessages</a> ()</td></tr>
+<tr class="memdesc:ab4a341865c8a7b91b63bff1464f78d0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when a server has all final. <br/></td></tr>
 <tr class="memitem:a63fde586ed2c692896b9fa8f0d0dcd29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a63fde586ed2c692896b9fa8f0d0dcd29"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#a63fde586ed2c692896b9fa8f0d0dcd29">BroadcastFinalMessages</a> ()</td></tr>
 <tr class="memdesc:a63fde586ed2c692896b9fa8f0d0dcd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the cleartext output messages to this server's client users. <br/></td></tr>
@@ -673,6 +684,42 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 </div>
 </div>
+<a class="anchor" id="ab83eb858cf064239ef4b8ce17bcc2707"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ab83eb858cf064239ef4b8ce17bcc2707">Dissent::Anonymity::Tolerant::TolerantTreeRound::HandleServerFinalSigData</a> </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Parses and handles the server signatures. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stream</td><td>serialized message </td></tr>
+    <tr><td class="paramname">from</td><td>the sender </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a53fcfe63a77759581850d7f82248df67"></a>
 <div class="memitem">
 <div class="memproto">
@@ -952,7 +999,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 29 2012 00:41:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Mar 29 2012 23:28:56 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
