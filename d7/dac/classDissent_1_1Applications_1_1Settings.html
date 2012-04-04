@@ -102,8 +102,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a>  </div>
+<a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Applications::Settings Class Reference</div>  </div>
 </div><!--header-->
@@ -118,24 +117,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a7924defc7a826bc3363c6e4afdf78508"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a7924defc7a826bc3363c6e4afdf78508">ApplicationMode</a> { <br/>
-&#160;&#160;<b>Mode_Null</b>, 
-<b>Mode_Console</b>, 
-<b>Mode_WebServer</b>, 
-<b>Mode_EntryTunnel</b>, 
-<br/>
-&#160;&#160;<b>Mode_ExitTunnel</b>
-<br/>
- }</td></tr>
-<tr class="memdesc:a7924defc7a826bc3363c6e4afdf78508"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> operation mode. <br/></td></tr>
 <tr class="memitem:abc88171ea11f97fc65f7e5faa7e6ede9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abc88171ea11f97fc65f7e5faa7e6ede9"></a>
 typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Connections::Id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Id</b></td></tr>
 <tr class="memitem:a611a7236de680a0cbc1729f071461aa7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a611a7236de680a0cbc1729f071461aa7"></a>
 typedef <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Identity::Group</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Group</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac2bcf36f3c0f3ddf54dda37c44b3658e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#ac2bcf36f3c0f3ddf54dda37c44b3658e">Settings</a> (const QStringList &amp;arguments, bool actions=true)</td></tr>
-<tr class="memdesc:ac2bcf36f3c0f3ddf54dda37c44b3658e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load configuration from disk and command line args.  <a href="#ac2bcf36f3c0f3ddf54dda37c44b3658e"></a><br/></td></tr>
+<tr class="memitem:a1660eefa38a3c831bc7df9bbe3f8970f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a1660eefa38a3c831bc7df9bbe3f8970f">Settings</a> (const QString &amp;file, bool actions=true)</td></tr>
+<tr class="memdesc:a1660eefa38a3c831bc7df9bbe3f8970f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load configuration from disk.  <a href="#a1660eefa38a3c831bc7df9bbe3f8970f"></a><br/></td></tr>
 <tr class="memitem:a7613153090fc390fa80becbb905c0085"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7613153090fc390fa80becbb905c0085"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a7613153090fc390fa80becbb905c0085">Settings</a> ()</td></tr>
 <tr class="memdesc:a7613153090fc390fa80becbb905c0085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create configuration in memory. <br/></td></tr>
@@ -171,9 +160,12 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr class="memitem:a3810ac40b82b4245a2b882e1ea0da587"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3810ac40b82b4245a2b882e1ea0da587"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a3810ac40b82b4245a2b882e1ea0da587">Log</a></td></tr>
 <tr class="memdesc:a3810ac40b82b4245a2b882e1ea0da587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging type: stderr, stdout, file, or empty (disabled) <br/></td></tr>
-<tr class="memitem:aaa1407f3672cf8878b0df6f8ae920ec4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa1407f3672cf8878b0df6f8ae920ec4"></a>
-<a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a7924defc7a826bc3363c6e4afdf78508">ApplicationMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#aaa1407f3672cf8878b0df6f8ae920ec4">Mode</a></td></tr>
-<tr class="memdesc:aaa1407f3672cf8878b0df6f8ae920ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">What type of interface to run. <br/></td></tr>
+<tr class="memitem:ae9806604edc921a27600530862ae7ed7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9806604edc921a27600530862ae7ed7"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#ae9806604edc921a27600530862ae7ed7">Console</a></td></tr>
+<tr class="memdesc:ae9806604edc921a27600530862ae7ed7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a Console UI. <br/></td></tr>
+<tr class="memitem:a283015dd4885f351d9e8f02fddc34fcb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a283015dd4885f351d9e8f02fddc34fcb"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a283015dd4885f351d9e8f02fddc34fcb">WebServer</a></td></tr>
+<tr class="memdesc:a283015dd4885f351d9e8f02fddc34fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide a WebServer interface. <br/></td></tr>
 <tr class="memitem:a24544d98aae4c732751adb17c8f02067"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a24544d98aae4c732751adb17c8f02067"></a>
 QUrl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a24544d98aae4c732751adb17c8f02067">WebServerUrl</a></td></tr>
 <tr class="memdesc:a24544d98aae4c732751adb17c8f02067"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP:Port on which the HTTP server should listen. <br/></td></tr>
@@ -189,9 +181,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a61808c63e3405bfa2f02c70db712b480"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61808c63e3405bfa2f02c70db712b480"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a61808c63e3405bfa2f02c70db712b480">Multithreading</a></td></tr>
 <tr class="memdesc:a61808c63e3405bfa2f02c70db712b480"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable multhreaded operations. <br/></td></tr>
-<tr class="memitem:acc8659156f6c1d281bdc772162ac9188"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc8659156f6c1d281bdc772162ac9188"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#acc8659156f6c1d281bdc772162ac9188">SuperPeer</a></td></tr>
-<tr class="memdesc:acc8659156f6c1d281bdc772162ac9188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is a super peer. <br/></td></tr>
 <tr class="memitem:a31f95c476ec53caa60b81ae63f11a3f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31f95c476ec53caa60b81ae63f11a3f5"></a>
 <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a31f95c476ec53caa60b81ae63f11a3f5">LocalId</a></td></tr>
 <tr class="memdesc:a31f95c476ec53caa60b81ae63f11a3f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The id for the (first) local node, other nodes will be random. <br/></td></tr>
@@ -201,69 +190,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a2359c9f56c776d39de92d9e7f784a744"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2359c9f56c776d39de92d9e7f784a744"></a>
 Group::SubgroupPolicy&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a2359c9f56c776d39de92d9e7f784a744">SubgroupPolicy</a></td></tr>
 <tr class="memdesc:a2359c9f56c776d39de92d9e7f784a744"><td class="mdescLeft">&#160;</td><td class="mdescRight">The subgroup policy employed at this node. <br/></td></tr>
-<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a6ed0a7a71e5c6d8bc6f4e67a05ec4b1b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ed0a7a71e5c6d8bc6f4e67a05ec4b1b"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a6ed0a7a71e5c6d8bc6f4e67a05ec4b1b">ParamNameMode</a> = &quot;mode&quot;</td></tr>
-<tr class="memdesc:a6ed0a7a71e5c6d8bc6f4e67a05ec4b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setting parameter name strings. <br/></td></tr>
-<tr class="memitem:ad2a28d0d87b6b380a5af046f7187a21a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad2a28d0d87b6b380a5af046f7187a21a"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameRemotePeers</b> = &quot;remote_peers&quot;</td></tr>
-<tr class="memitem:a017fc4e38c9fbe27a8300fc75432dfec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a017fc4e38c9fbe27a8300fc75432dfec"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameEndpoints</b> = &quot;endpoints&quot;</td></tr>
-<tr class="memitem:aaca6eefb2654f4b35b49932a57e65bca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaca6eefb2654f4b35b49932a57e65bca"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameDemoMode</b> = &quot;demo_mode&quot;</td></tr>
-<tr class="memitem:a85daabdaf71f4855cc3f77b8d8c6c748"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85daabdaf71f4855cc3f77b8d8c6c748"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameLocalNodes</b> = &quot;local_nodes&quot;</td></tr>
-<tr class="memitem:ab5f2ccb6c61433ad844e62ce7a9dd8a3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5f2ccb6c61433ad844e62ce7a9dd8a3"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameSessionType</b> = &quot;session_type&quot;</td></tr>
-<tr class="memitem:a8bdf45f82329e3176d5f33f8ad56acd4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8bdf45f82329e3176d5f33f8ad56acd4"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameSubgroupPolicy</b> = &quot;subgroup_policy&quot;</td></tr>
-<tr class="memitem:accff6222bee377dc0f7ec2e004c622f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accff6222bee377dc0f7ec2e004c622f5"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameLog</b> = &quot;log&quot;</td></tr>
-<tr class="memitem:a3b7817af77b9585d29b5b68460c046fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3b7817af77b9585d29b5b68460c046fe"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameMultithreading</b> = &quot;multithreading&quot;</td></tr>
-<tr class="memitem:a81db5e1040c510ac8820b5e9da051750"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a81db5e1040c510ac8820b5e9da051750"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameLocalId</b> = &quot;local_id&quot;</td></tr>
-<tr class="memitem:a3609970e372132fa36e6f84cc50f237d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3609970e372132fa36e6f84cc50f237d"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameLeaderId</b> = &quot;leader_id&quot;</td></tr>
-<tr class="memitem:a4e07565f20a8674e011f9fd6dab099b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e07565f20a8674e011f9fd6dab099b2"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameWebServerUrl</b> = &quot;web_server_url&quot;</td></tr>
-<tr class="memitem:a9bb8570f9b50b2b47d2ad948ec25be6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bb8570f9b50b2b47d2ad948ec25be6e"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameEntryTunnelUrl</b> = &quot;entry_tunnel_url&quot;</td></tr>
-<tr class="memitem:a947529fa88bf2805a89bd8353c29be6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a947529fa88bf2805a89bd8353c29be6a"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameSuperPeer</b> = &quot;super_peer&quot;</td></tr>
-<tr class="memitem:ac0b82ec8ab41d77bf070ba3d77593a44"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0b82ec8ab41d77bf070ba3d77593a44"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>StringMode_Null</b> = &quot;null&quot;</td></tr>
-<tr class="memitem:ac79f7c39c0c6b77e3b25148b3fd8fa66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac79f7c39c0c6b77e3b25148b3fd8fa66"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>StringMode_Console</b> = &quot;console&quot;</td></tr>
-<tr class="memitem:a0c4fbc5d47dc418641129816987e7205"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c4fbc5d47dc418641129816987e7205"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>StringMode_WebServer</b> = &quot;web_server&quot;</td></tr>
-<tr class="memitem:a17ea824effb497c49b5e2e86541d8ceb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17ea824effb497c49b5e2e86541d8ceb"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>StringMode_EntryTunnel</b> = &quot;entry_tunnel&quot;</td></tr>
-<tr class="memitem:a200de5c0f970c9f3c326b2a5e31fa105"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a200de5c0f970c9f3c326b2a5e31fa105"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>StringMode_ExitTunnel</b> = &quot;exit_tunnel&quot;</td></tr>
-<tr class="memitem:af8b3493ed9c31a7392380a0fcc22fe18"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8b3493ed9c31a7392380a0fcc22fe18"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#af8b3493ed9c31a7392380a0fcc22fe18">ParamNameMode_Console</a></td></tr>
-<tr class="memdesc:af8b3493ed9c31a7392380a0fcc22fe18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode strings. <br/></td></tr>
-<tr class="memitem:aeb1f260b8eb3c907d9b3ea9e57ed17e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb1f260b8eb3c907d9b3ea9e57ed17e0"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameMode_WebServer</b></td></tr>
-<tr class="memitem:a845b2c8d42e2022f9de9ee33def70f14"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a845b2c8d42e2022f9de9ee33def70f14"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameMode_EntryTunnel</b></td></tr>
-<tr class="memitem:a1cad22a11223df20983d37ca941b1e86"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1cad22a11223df20983d37ca941b1e86"></a>
-static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamNameMode_ExitTunnel</b></td></tr>
+<tr class="memitem:acc8659156f6c1d281bdc772162ac9188"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc8659156f6c1d281bdc772162ac9188"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#acc8659156f6c1d281bdc772162ac9188">SuperPeer</a></td></tr>
+<tr class="memdesc:acc8659156f6c1d281bdc772162ac9188"><td class="mdescLeft">&#160;</td><td class="mdescRight">SuperPeer capable? <br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Abstracts interaction with a configuration file. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ac2bcf36f3c0f3ddf54dda37c44b3658e"></a>
+<a class="anchor" id="a1660eefa38a3c831bc7df9bbe3f8970f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#ac2bcf36f3c0f3ddf54dda37c44b3658e">Dissent::Applications::Settings::Settings</a> </td>
+          <td class="memname"><a class="el" href="../../d7/dac/classDissent_1_1Applications_1_1Settings.html#a1660eefa38a3c831bc7df9bbe3f8970f">Dissent::Applications::Settings::Settings</a> </td>
           <td>(</td>
-          <td class="paramtype">const QStringList &amp;&#160;</td>
-          <td class="paramname"><em>arguments</em>, </td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -280,12 +222,10 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamN
 </div>
 <div class="memdoc">
 
-<p>Load configuration from disk and command line args. </p>
-<p>The argument list should look like this: ./dissent-binary [flags] config_file Or for example: ./dissent --console=true --web_server=false conf/myconfig.conf</p>
-<p>Command line arguments override settings given in the config file to allow for easier scripting. Command line arguments can be repeated, with the last argument taking precedence. There must be a configuration file specified.</p>
+<p>Load configuration from disk. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">command</td><td>line arguments </td></tr>
+    <tr><td class="paramname">file</td><td>the file with the settings contained therein </td></tr>
     <tr><td class="paramname">actions</td><td>whether or not the settings file should change system configuration values or just be a container for configuration data, the default (true) is the latter. </td></tr>
   </table>
   </dd>
@@ -301,7 +241,7 @@ static const char *&#160;</td><td class="memItemRight" valign="bottom"><b>ParamN
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 30 2012 11:49:57 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 3 2012 21:25:16 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

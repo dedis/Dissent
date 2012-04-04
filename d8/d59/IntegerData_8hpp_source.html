@@ -139,62 +139,73 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00066"></a>00066 
 <a name="l00071"></a>00071       <span class="keyword">virtual</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *<a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#aa80822a37f75168bb08e6cae0e7b3ada" title="Subtraction operator, produces a new Integer.">Subtract</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
 <a name="l00072"></a>00072 
-<a name="l00077"></a>00077       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a1fcd70ee26e8794407c253628e9e2b1c" title="Assignment operator.">Set</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) = 0;
+<a name="l00077"></a>00077       <span class="keyword">virtual</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *<a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a1a839dde8677f2a7b0d11236a7404ba3" title="Subtraction operator, produces a new Integer.">Multiply</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *multiplicand) <span class="keyword">const</span> = 0;
 <a name="l00078"></a>00078 
-<a name="l00083"></a>00083       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a862dea38b8f4ceaf09b3cd21b5c138eb" title="Add operator, adds to current.">operator+=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) = 0;
+<a name="l00083"></a>00083       <span class="keyword">virtual</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *<a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8f7a6478b462ec9ad3f7ae7c87601334" title="Division operator, produces a new Integer.">Divide</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *divisor) <span class="keyword">const</span> = 0;
 <a name="l00084"></a>00084 
-<a name="l00089"></a>00089       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a84f90699b8700b80c5f28cb6a4d70e0f" title="Subtraction operator, subtracts from current.">operator-=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) = 0;
-<a name="l00090"></a>00090 
-<a name="l00095"></a>00095       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a833364ab3f50fbf4d3ded3b2a38b0d63" title="Equality operator.">operator==</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
-<a name="l00096"></a>00096 
-<a name="l00101"></a>00101       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#acd487a75241803824ad321a1455c652d" title="Not equal operator.">operator!=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
-<a name="l00102"></a>00102 
-<a name="l00107"></a>00107       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a3937cc86b7718314cf5a5d863182709f" title="Greater than.">operator&gt;</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
-<a name="l00108"></a>00108 
-<a name="l00113"></a>00113       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ad5354059809e1f6f9a9b51c461ea8898" title="Greater than or equal.">operator&gt;=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
-<a name="l00114"></a>00114 
-<a name="l00119"></a>00119       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a047ec6a8732399022146a1d6d18a9c97" title="Less than.">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
-<a name="l00120"></a>00120 
-<a name="l00125"></a>00125       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a488e37d9334fe774f55b49692e5c4c9a" title="Less than or equal.">operator&lt;=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
-<a name="l00126"></a>00126 
-<a name="l00131"></a><a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8e6a80b7a0b87232c23a0bd7f21e88a7">00131</a>       <span class="keyword">static</span> QByteArray <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8e6a80b7a0b87232c23a0bd7f21e88a7" title="Convert a base64 number into a clean byte array.">ToBase64</a>(<span class="keyword">const</span> QString &amp;<span class="keywordtype">string</span>)
-<a name="l00132"></a>00132       {
-<a name="l00133"></a>00133         <span class="keyword">const</span> QChar *chs = <span class="keywordtype">string</span>.constData();
-<a name="l00134"></a>00134         QByteArray tmp;
-<a name="l00135"></a>00135         <span class="keywordtype">int</span> idx = 0;
-<a name="l00136"></a>00136         <span class="keywordflow">for</span>(; chs[idx] != <span class="charliteral">&#39;\0&#39;</span>; idx++) {
-<a name="l00137"></a>00137           tmp.append(chs[idx].cell());
-<a name="l00138"></a>00138         }
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140         <span class="keywordflow">return</span> QByteArray::fromBase64(tmp);
-<a name="l00141"></a>00141       }
-<a name="l00142"></a>00142 
-<a name="l00143"></a>00143     <span class="keyword">protected</span>:
-<a name="l00144"></a>00144       <span class="keyword">virtual</span> <span class="keywordtype">void</span> GenerateByteArray() = 0;
-<a name="l00145"></a>00145       <span class="keyword">virtual</span> <span class="keywordtype">void</span> GenerateCanonicalRep() = 0;
-<a name="l00146"></a>00146       <span class="keywordtype">void</span> SetByteArray(<span class="keyword">const</span> QByteArray &amp;byte_array) { _byte_array = byte_array; }
-<a name="l00147"></a>00147       <span class="keywordtype">void</span> SetCanonicalRep(<span class="keyword">const</span> QByteArray &amp;canonical) { _canonical = canonical; }
-<a name="l00148"></a>00148       <span class="keywordtype">void</span> Reset()
-<a name="l00149"></a>00149       {
-<a name="l00150"></a>00150         _byte_array.clear();
-<a name="l00151"></a>00151         _canonical.clear();
-<a name="l00152"></a>00152         _string.clear();
-<a name="l00153"></a>00153       }
-<a name="l00154"></a>00154 
-<a name="l00155"></a>00155     <span class="keyword">private</span>:
-<a name="l00156"></a>00156       QByteArray _byte_array;
-<a name="l00157"></a>00157       QByteArray _canonical;
-<a name="l00158"></a>00158       QString _string;
-<a name="l00159"></a>00159   };
-<a name="l00160"></a>00160 }
-<a name="l00161"></a>00161 }
-<a name="l00162"></a>00162 
-<a name="l00163"></a>00163 <span class="preprocessor">#endif</span>
+<a name="l00090"></a>00090       <span class="keyword">virtual</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *<a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ae6c2558201d2330026c1785dddb5b903" title="Exponentiating operator.">Pow</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *pow,
+<a name="l00091"></a>00091           <span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *mod) <span class="keyword">const</span> = 0;
+<a name="l00092"></a>00092 
+<a name="l00097"></a>00097       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a1fcd70ee26e8794407c253628e9e2b1c" title="Assignment operator.">Set</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) = 0;
+<a name="l00098"></a>00098 
+<a name="l00103"></a>00103       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a862dea38b8f4ceaf09b3cd21b5c138eb" title="Add operator, adds to current.">operator+=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) = 0;
+<a name="l00104"></a>00104 
+<a name="l00109"></a>00109       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a84f90699b8700b80c5f28cb6a4d70e0f" title="Subtraction operator, subtracts from current.">operator-=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) = 0;
+<a name="l00110"></a>00110 
+<a name="l00115"></a>00115       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a833364ab3f50fbf4d3ded3b2a38b0d63" title="Equality operator.">operator==</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
+<a name="l00116"></a>00116 
+<a name="l00121"></a>00121       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#acd487a75241803824ad321a1455c652d" title="Not equal operator.">operator!=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
+<a name="l00122"></a>00122 
+<a name="l00127"></a>00127       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a3937cc86b7718314cf5a5d863182709f" title="Greater than.">operator&gt;</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
+<a name="l00128"></a>00128 
+<a name="l00133"></a>00133       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ad5354059809e1f6f9a9b51c461ea8898" title="Greater than or equal.">operator&gt;=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
+<a name="l00134"></a>00134 
+<a name="l00139"></a>00139       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a047ec6a8732399022146a1d6d18a9c97" title="Less than.">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
+<a name="l00140"></a>00140 
+<a name="l00145"></a>00145       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a488e37d9334fe774f55b49692e5c4c9a" title="Less than or equal.">operator&lt;=</a>(<span class="keyword">const</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a> *other) <span class="keyword">const</span> = 0;
+<a name="l00146"></a>00146 
+<a name="l00150"></a>00150       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a260751b1c7d767817c4d788463c2b7b5" title="Returns the integer&#39;s count in bits.">GetBitCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00151"></a>00151 
+<a name="l00155"></a>00155       <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ac674d921a89bb50441e6028695d19a94" title="Returns the integer&#39;s count in bytes.">GetByteCount</a>() <span class="keyword">const</span> = 0;
+<a name="l00156"></a>00156 
+<a name="l00161"></a><a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8e6a80b7a0b87232c23a0bd7f21e88a7">00161</a>       <span class="keyword">static</span> QByteArray <a class="code" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8e6a80b7a0b87232c23a0bd7f21e88a7" title="Convert a base64 number into a clean byte array.">ToBase64</a>(<span class="keyword">const</span> QString &amp;<span class="keywordtype">string</span>)
+<a name="l00162"></a>00162       {
+<a name="l00163"></a>00163         <span class="keyword">const</span> QChar *chs = <span class="keywordtype">string</span>.constData();
+<a name="l00164"></a>00164         QByteArray tmp;
+<a name="l00165"></a>00165         <span class="keywordtype">int</span> idx = 0;
+<a name="l00166"></a>00166         <span class="keywordflow">for</span>(; chs[idx] != <span class="charliteral">&#39;\0&#39;</span>; idx++) {
+<a name="l00167"></a>00167           tmp.append(chs[idx].cell());
+<a name="l00168"></a>00168         }
+<a name="l00169"></a>00169 
+<a name="l00170"></a>00170         <span class="keywordflow">return</span> QByteArray::fromBase64(tmp);
+<a name="l00171"></a>00171       }
+<a name="l00172"></a>00172 
+<a name="l00173"></a>00173     <span class="keyword">protected</span>:
+<a name="l00174"></a>00174       <span class="keyword">virtual</span> <span class="keywordtype">void</span> GenerateByteArray() = 0;
+<a name="l00175"></a>00175       <span class="keyword">virtual</span> <span class="keywordtype">void</span> GenerateCanonicalRep() = 0;
+<a name="l00176"></a>00176       <span class="keywordtype">void</span> SetByteArray(<span class="keyword">const</span> QByteArray &amp;byte_array) { _byte_array = byte_array; }
+<a name="l00177"></a>00177       <span class="keywordtype">void</span> SetCanonicalRep(<span class="keyword">const</span> QByteArray &amp;canonical) { _canonical = canonical; }
+<a name="l00178"></a>00178       <span class="keywordtype">void</span> Reset()
+<a name="l00179"></a>00179       {
+<a name="l00180"></a>00180         _byte_array.clear();
+<a name="l00181"></a>00181         _canonical.clear();
+<a name="l00182"></a>00182         _string.clear();
+<a name="l00183"></a>00183       }
+<a name="l00184"></a>00184 
+<a name="l00185"></a>00185     <span class="keyword">private</span>:
+<a name="l00186"></a>00186       QByteArray _byte_array;
+<a name="l00187"></a>00187       QByteArray _canonical;
+<a name="l00188"></a>00188       QString _string;
+<a name="l00189"></a>00189   };
+<a name="l00190"></a>00190 }
+<a name="l00191"></a>00191 }
+<a name="l00192"></a>00192 
+<a name="l00193"></a>00193 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 30 2012 11:49:56 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 3 2012 21:25:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

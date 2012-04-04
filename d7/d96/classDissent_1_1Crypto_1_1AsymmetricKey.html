@@ -118,10 +118,12 @@ Inheritance diagram for Dissent::Crypto::AsymmetricKey:</div>
  <div class="center">
   <img src="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.png" usemap="#Dissent::Crypto::AsymmetricKey_map" alt=""/>
   <map id="Dissent::Crypto::AsymmetricKey_map" name="Dissent::Crypto::AsymmetricKey_map">
-<area href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html" title="Implementation of PublicKey using CryptoPP." alt="Dissent::Crypto::CppPublicKey" shape="rect" coords="0,56,190,80"/>
-<area href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html" title="Implementation of PublicKey that provides unique encryptions without actually doing any encryption..." alt="Dissent::Crypto::NullPublicKey" shape="rect" coords="200,56,390,80"/>
-<area href="../../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html" title="Implementation of PrivateKey using CryptoPP." alt="Dissent::Crypto::CppPrivateKey" shape="rect" coords="0,112,190,136"/>
-<area href="../../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html" title="Implementation of PrivateKey that provides unique encryptions without actually doing any encryption /..." alt="Dissent::Crypto::NullPrivateKey" shape="rect" coords="200,112,390,136"/>
+<area href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html" title="Implementation of KeyBase::PublicKey using CryptoPP." alt="Dissent::Crypto::CppDsaPublicKey" shape="rect" coords="0,56,210,80"/>
+<area href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html" title="Implementation of PublicKey using CryptoPP." alt="Dissent::Crypto::CppPublicKey" shape="rect" coords="220,56,430,80"/>
+<area href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html" title="Implementation of PublicKey that provides unique encryptions without actually doing any encryption..." alt="Dissent::Crypto::NullPublicKey" shape="rect" coords="440,56,650,80"/>
+<area href="../../dd/da6/classDissent_1_1Crypto_1_1CppDsaPrivateKey.html" title="Implementation of KeyBase::PrivateKey using CryptoPP." alt="Dissent::Crypto::CppDsaPrivateKey" shape="rect" coords="0,112,210,136"/>
+<area href="../../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html" title="Implementation of PrivateKey using CryptoPP." alt="Dissent::Crypto::CppPrivateKey" shape="rect" coords="220,112,430,136"/>
+<area href="../../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html" title="Implementation of PrivateKey that provides unique encryptions without actually doing any encryption /..." alt="Dissent::Crypto::NullPrivateKey" shape="rect" coords="440,112,650,136"/>
 </map>
  </div></div>
 
@@ -163,6 +165,10 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ac4862a48942fee53ca08ff7d45fc01cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4862a48942fee53ca08ff7d45fc01cb"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#ac4862a48942fee53ca08ff7d45fc01cb">GetKeySize</a> () const =0</td></tr>
 <tr class="memdesc:ac4862a48942fee53ca08ff7d45fc01cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the keys size in bits. <br/></td></tr>
+<tr class="memitem:ad616e17080e4cea6fbdb6ba77d9de61a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad616e17080e4cea6fbdb6ba77d9de61a"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsEncryption</b> ()</td></tr>
+<tr class="memitem:ac06fd5a1a14471b6d5a281f6aff7540c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac06fd5a1a14471b6d5a281f6aff7540c"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsVerification</b> ()</td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a7d70371a373ce54f65b6426f37afa1d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d70371a373ce54f65b6426f37afa1d0"></a>
@@ -200,7 +206,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a259994bb51b5a06fe196f8fba14c4043">Dissent::Crypto::CppPublicKey</a>, <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#ac4efa159cc082284c8cdde28ad38f37b">Dissent::Crypto::NullPublicKey</a>, <a class="el" href="../../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html#a064dad6d65090592394aac5253f98d5e">Dissent::Crypto::CppPrivateKey</a>, and <a class="el" href="../../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html#a44e2fd0d8568a52a6b372d7cd4f29a7d">Dissent::Crypto::NullPrivateKey</a>.</p>
+<p>Implemented in <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#af2935730c4c3c00e933144714e01f45b">Dissent::Crypto::CppDsaPublicKey</a>, <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a259994bb51b5a06fe196f8fba14c4043">Dissent::Crypto::CppPublicKey</a>, <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#ac4efa159cc082284c8cdde28ad38f37b">Dissent::Crypto::NullPublicKey</a>, <a class="el" href="../../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html#a064dad6d65090592394aac5253f98d5e">Dissent::Crypto::CppPrivateKey</a>, and <a class="el" href="../../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html#a44e2fd0d8568a52a6b372d7cd4f29a7d">Dissent::Crypto::NullPrivateKey</a>.</p>
 
 </div>
 </div>
@@ -227,7 +233,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#abe5eba649e26735b4b269cc45fd3388b">Dissent::Crypto::CppPublicKey</a>, and <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#adb503da47191d17b4df3df71be26f56c">Dissent::Crypto::NullPublicKey</a>.</p>
+<p>Implemented in <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a905f9460e7b0cbf4c458ed041510825d">Dissent::Crypto::CppDsaPublicKey</a>, <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#abe5eba649e26735b4b269cc45fd3388b">Dissent::Crypto::CppPublicKey</a>, and <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#adb503da47191d17b4df3df71be26f56c">Dissent::Crypto::NullPublicKey</a>.</p>
 
 </div>
 </div>
@@ -365,7 +371,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a01daa52ff6e7446ecf35af3de436bdf2">Dissent::Crypto::CppPublicKey</a>, <a class="el" href="../../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html#a173007e72bb0e161338fee7177a67b07">Dissent::Crypto::CppPrivateKey</a>, <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a7947786be59a187121812bfbe4184dc6">Dissent::Crypto::NullPublicKey</a>, and <a class="el" href="../../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html#a476983b6bf4cfe2f046584b2dcd6a67a">Dissent::Crypto::NullPrivateKey</a>.</p>
+<p>Implemented in <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a6d62fa3a9a9e1a1a10e0b0caf0212e8e">Dissent::Crypto::CppDsaPublicKey</a>, <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a01daa52ff6e7446ecf35af3de436bdf2">Dissent::Crypto::CppPublicKey</a>, <a class="el" href="../../dd/da6/classDissent_1_1Crypto_1_1CppDsaPrivateKey.html#a0a67243203d0d4f0c9ab98dc50796123">Dissent::Crypto::CppDsaPrivateKey</a>, <a class="el" href="../../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html#a173007e72bb0e161338fee7177a67b07">Dissent::Crypto::CppPrivateKey</a>, <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a7947786be59a187121812bfbe4184dc6">Dissent::Crypto::NullPublicKey</a>, and <a class="el" href="../../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html#a476983b6bf4cfe2f046584b2dcd6a67a">Dissent::Crypto::NullPrivateKey</a>.</p>
 
 </div>
 </div>
@@ -403,7 +409,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a6249a2150dc7beda054c320f68da6f12">Dissent::Crypto::CppPublicKey</a>, and <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#acec03a4c69677f69e7fcc75c9f7e20cc">Dissent::Crypto::NullPublicKey</a>.</p>
+<p>Implemented in <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a03dbd85fc89dcb6b689ea98e47ac6a60">Dissent::Crypto::CppDsaPublicKey</a>, <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a6249a2150dc7beda054c320f68da6f12">Dissent::Crypto::CppPublicKey</a>, and <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#acec03a4c69677f69e7fcc75c9f7e20cc">Dissent::Crypto::NullPublicKey</a>.</p>
 
 </div>
 </div>
@@ -430,7 +436,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a5e9c05ee6401a8ba1048b0ca56abe5a2">Dissent::Crypto::CppPublicKey</a>, and <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a414371533cb8a86c9938d47a91e26288">Dissent::Crypto::NullPublicKey</a>.</p>
+<p>Implemented in <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#ab72b9d9b935f38be3b5163e685c2eddd">Dissent::Crypto::CppDsaPublicKey</a>, <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a5e9c05ee6401a8ba1048b0ca56abe5a2">Dissent::Crypto::CppPublicKey</a>, and <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a414371533cb8a86c9938d47a91e26288">Dissent::Crypto::NullPublicKey</a>.</p>
 
 </div>
 </div>
@@ -442,7 +448,7 @@ Protected Member Functions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 30 2012 11:49:57 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 3 2012 21:25:16 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

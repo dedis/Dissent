@@ -2,6 +2,7 @@ var searchData=
 [
   ['getdatacallback',['GetDataCallback',['../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html',1,'Dissent::Messaging']]],
   ['getdatamethod',['GetDataMethod',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
+  ['getdatamethod_3c_20basebulkround_20_3e',['GetDataMethod< BaseBulkRound >',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdatamethod_3c_20bulkround_20_3e',['GetDataMethod< BulkRound >',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdatamethod_3c_20repeatingbulkround_20_3e',['GetDataMethod< RepeatingBulkRound >',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdatamethod_3c_20session_20_3e',['GetDataMethod< Session >',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],

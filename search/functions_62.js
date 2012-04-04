@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['basebulkround',['BaseBulkRound',['../d9/df2/classDissent_1_1Anonymity_1_1BaseBulkRound.html#a65aa2ceca82b191f101d400c111f9225',1,'Dissent::Anonymity::BaseBulkRound']]],
   ['basehash',['BaseHash',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#a442a9d04eebd69846abb6662426ebcee',1,'Dissent::PeerReview::EntryLog']]],
   ['baseoverlay',['BaseOverlay',['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#a9b1c4539a20534f9fd1ace6be40d9a01',1,'Dissent::Overlay::BaseOverlay']]],
   ['basicgossip',['BasicGossip',['../de/dd4/classDissent_1_1Overlay_1_1BasicGossip.html#a251a3489337c0814d01698879710434c',1,'Dissent::Overlay::BasicGossip']]],

@@ -111,8 +111,9 @@ Inheritance diagram for Dissent::Crypto::Library:</div>
  <div class="center">
   <img src="../../d1/d2f/classDissent_1_1Crypto_1_1Library.png" usemap="#Dissent::Crypto::Library_map" alt=""/>
   <map id="Dissent::Crypto::Library_map" name="Dissent::Crypto::Library_map">
-<area href="../../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html" alt="Dissent::Crypto::CppLibrary" shape="rect" coords="0,56,167,80"/>
-<area href="../../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html" alt="Dissent::Crypto::NullLibrary" shape="rect" coords="177,56,344,80"/>
+<area href="../../d2/d65/classDissent_1_1Crypto_1_1CppDsaLibrary.html" alt="Dissent::Crypto::CppDsaLibrary" shape="rect" coords="0,56,189,80"/>
+<area href="../../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html" alt="Dissent::Crypto::CppLibrary" shape="rect" coords="199,56,388,80"/>
+<area href="../../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html" alt="Dissent::Crypto::NullLibrary" shape="rect" coords="398,56,587,80"/>
 </map>
  </div></div>
 
@@ -141,6 +142,9 @@ virtual <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey
 <tr class="memitem:a1fbec7c31c1e6ddfedd8ed99db863c5a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1fbec7c31c1e6ddfedd8ed99db863c5a"></a>
 virtual <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a1fbec7c31c1e6ddfedd8ed99db863c5a">CreatePrivateKey</a> ()=0</td></tr>
 <tr class="memdesc:a1fbec7c31c1e6ddfedd8ed99db863c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a unique (new) private key. <br/></td></tr>
+<tr class="memitem:af9211d0bd721799f1d00b8ca80c72466"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af9211d0bd721799f1d00b8ca80c72466"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#af9211d0bd721799f1d00b8ca80c72466">MinimumKeySize</a> () const =0</td></tr>
+<tr class="memdesc:af9211d0bd721799f1d00b8ca80c72466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum asymmetric key size. <br/></td></tr>
 <tr class="memitem:a9e1c0ad03d0fa2e72718549b50d3c16f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e1c0ad03d0fa2e72718549b50d3c16f"></a>
 virtual <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Utils::Random</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a9e1c0ad03d0fa2e72718549b50d3c16f">GetRandomNumberGenerator</a> (const QByteArray &amp;seed=QByteArray(), uint index=0)=0</td></tr>
 <tr class="memdesc:a9e1c0ad03d0fa2e72718549b50d3c16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a random number generator. <br/></td></tr>
@@ -159,6 +163,8 @@ virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.h
 <tr class="memitem:ac12496295b8fc4ecc45710a10bc5da7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac12496295b8fc4ecc45710a10bc5da7e"></a>
 virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#ac12496295b8fc4ecc45710a10bc5da7e">GetIntegerData</a> (const QString &amp;value)=0</td></tr>
 <tr class="memdesc:ac12496295b8fc4ecc45710a10bc5da7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an integer data. <br/></td></tr>
+<tr class="memitem:a9bf7d6e0729e34383557f24a101d3e01"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a9bf7d6e0729e34383557f24a101d3e01">GetRandomInteger</a> (int bit_count, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod, bool prime)=0</td></tr>
+<tr class="memdesc:a9bf7d6e0729e34383557f24a101d3e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#a9bf7d6e0729e34383557f24a101d3e01"></a><br/></td></tr>
 <tr class="memitem:a7214189d3e84dfdadf67af3325012d29"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7214189d3e84dfdadf67af3325012d29"></a>
 virtual <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">DiffieHellman</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7214189d3e84dfdadf67af3325012d29">CreateDiffieHellman</a> ()=0</td></tr>
 <tr class="memdesc:a7214189d3e84dfdadf67af3325012d29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a> operator. <br/></td></tr>
@@ -194,7 +200,52 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#ad52f9fd896158c04b2f72db97f8a794e">Dissent::Crypto::CppLibrary</a>, and <a class="el" href="../../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a7d6df6ee84e30c753fa17bf567de80d0">Dissent::Crypto::NullLibrary</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d65/classDissent_1_1Crypto_1_1CppDsaLibrary.html#a47741259f992269b505658ab06ac6d90">Dissent::Crypto::CppDsaLibrary</a>, <a class="el" href="../../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#ad52f9fd896158c04b2f72db97f8a794e">Dissent::Crypto::CppLibrary</a>, and <a class="el" href="../../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a7d6df6ee84e30c753fa17bf567de80d0">Dissent::Crypto::NullLibrary</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9bf7d6e0729e34383557f24a101d3e01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a>* <a class="el" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a9bf7d6e0729e34383557f24a101d3e01">Dissent::Crypto::Library::GetRandomInteger</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bit_count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>prime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>returns a random integer data </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bit_count</td><td>the amount of bits in the integer </td></tr>
+    <tr><td class="paramname">mod</td><td>the modulus of the integer </td></tr>
+    <tr><td class="paramname">prime</td><td>if the integer should be prime </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="../../d2/d65/classDissent_1_1Crypto_1_1CppDsaLibrary.html#ae5e15e361767eb9150e9e214d384cdfb">Dissent::Crypto::CppDsaLibrary</a>, <a class="el" href="../../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#afddd7659cc405afb057f59cfb0580236">Dissent::Crypto::CppLibrary</a>, and <a class="el" href="../../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a62320d82cc71606e12242717d1db47b6">Dissent::Crypto::NullLibrary</a>.</p>
 
 </div>
 </div>
@@ -221,7 +272,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#aff31dae5327366e7aec76345a0480b9c">Dissent::Crypto::CppLibrary</a>, and <a class="el" href="../../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a7d100d70f4709db9a7aa4debfa7757d1">Dissent::Crypto::NullLibrary</a>.</p>
+<p>Implemented in <a class="el" href="../../d2/d65/classDissent_1_1Crypto_1_1CppDsaLibrary.html#adda546019859afae7495aae243630dd7">Dissent::Crypto::CppDsaLibrary</a>, <a class="el" href="../../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#aff31dae5327366e7aec76345a0480b9c">Dissent::Crypto::CppLibrary</a>, and <a class="el" href="../../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a7d100d70f4709db9a7aa4debfa7757d1">Dissent::Crypto::NullLibrary</a>.</p>
 
 </div>
 </div>
@@ -232,7 +283,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 30 2012 11:49:57 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 3 2012 21:25:16 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -18,6 +18,8 @@ var searchData=
   ['addservermessage',['AddServerMessage',['../d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#aabcd96021a6faafac26a30617efa8df0',1,'Dissent::Anonymity::Tolerant::MessageHistory']]],
   ['addserveroutputbit',['AddServerOutputBit',['../d9/dad/classDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix.html#ab5adb43ff5a3ab39a6c1f9c20ac618c5',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],
   ['addsession',['AddSession',['../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html#a1e3661d5f2b7fa4ed2feafc4583e5867',1,'Dissent::Anonymity::SessionManager']]],
+  ['addstate',['AddState',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a4b62f96bd79c333b780b9dc33e4d1269',1,'Dissent::Anonymity::RoundStateMachine']]],
+  ['addtransition',['AddTransition',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a0b7fca3b47c30eac4a6842b1a682ff41',1,'Dissent::Anonymity::RoundStateMachine']]],
   ['adduseralibi',['AddUserAlibi',['../d9/dad/classDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix.html#a271d38492621bd8405a9ab35351f441a',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],
   ['addusermessage',['AddUserMessage',['../d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#afcaadd9b70f7aabed22f26d636bbf23a',1,'Dissent::Anonymity::Tolerant::MessageHistory']]],
   ['adduseroutputbit',['AddUserOutputBit',['../d9/dad/classDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix.html#a22c503daabfc07d4bd027de2e0f4491a',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],

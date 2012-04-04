@@ -127,26 +127,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00045"></a><a class="code" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a4498e44cb3d619ca9c34d1b771f23f04">00045</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a4498e44cb3d619ca9c34d1b771f23f04" title="Returns true if the key loaded is a valid key.">IsValid</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _valid; }
 <a name="l00046"></a><a class="code" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a919eedf8a6c38b3190318753abe78355">00046</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a919eedf8a6c38b3190318753abe78355" title="Returns the keys size in bits.">GetKeySize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> 64; }
 <a name="l00047"></a>00047 
-<a name="l00048"></a>00048     <span class="keyword">protected</span>:
-<a name="l00049"></a>00049       <a class="code" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html" title="Implementation of PublicKey that provides unique encryptions without actually doing any encryption...">NullPublicKey</a>() {}
-<a name="l00050"></a>00050       <span class="keywordtype">bool</span> InitFromFile(<span class="keyword">const</span> QString &amp;filename);
-<a name="l00051"></a>00051       <span class="keywordtype">bool</span> InitFromByteArray(<span class="keyword">const</span> QByteArray &amp;data);
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053       uint _key_id;
-<a name="l00054"></a>00054       <span class="keywordtype">bool</span> _private;
-<a name="l00055"></a>00055       <span class="keywordtype">bool</span> _valid;
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057       <span class="keyword">static</span> uint _unique;
-<a name="l00058"></a>00058   };
-<a name="l00059"></a>00059 }
-<a name="l00060"></a>00060 }
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062 <span class="preprocessor">#endif</span>
+<a name="l00048"></a>00048       <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> GetMinimumKeySize() { <span class="keywordflow">return</span> 64; }
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050     <span class="keyword">protected</span>:
+<a name="l00051"></a>00051       NullPublicKey() {}
+<a name="l00052"></a>00052       <span class="keywordtype">bool</span> InitFromFile(<span class="keyword">const</span> QString &amp;filename);
+<a name="l00053"></a>00053       <span class="keywordtype">bool</span> InitFromByteArray(<span class="keyword">const</span> QByteArray &amp;data);
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055       uint _key_id;
+<a name="l00056"></a>00056       <span class="keywordtype">bool</span> _private;
+<a name="l00057"></a>00057       <span class="keywordtype">bool</span> _valid;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059       <span class="keyword">static</span> uint _unique;
+<a name="l00060"></a>00060   };
+<a name="l00061"></a>00061 }
+<a name="l00062"></a>00062 }
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 30 2012 11:49:56 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 3 2012 21:25:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

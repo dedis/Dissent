@@ -102,6 +102,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Transports::Edge Class Reference</div>  </div>
@@ -166,11 +168,24 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSharedPointer</b> 
 <tr class="memitem:aa527ee0f0509c3b08694d6dad1dbd65c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa527ee0f0509c3b08694d6dad1dbd65c"></a>
 virtual qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#aa527ee0f0509c3b08694d6dad1dbd65c">GetLastIncomingMessage</a> () const </td></tr>
 <tr class="memdesc:aa527ee0f0509c3b08694d6dad1dbd65c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the time for the last incoming packet. <br/></td></tr>
+<tr class="memitem:a5ac917a1326b6c8f2ea2697468fc990c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ac917a1326b6c8f2ea2697468fc990c"></a>
+virtual qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a5ac917a1326b6c8f2ea2697468fc990c">GetLastOutgoingMessage</a> () const </td></tr>
+<tr class="memdesc:a5ac917a1326b6c8f2ea2697468fc990c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the time for the last outgoing packet. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ae8b8af01c56fcccd06ed89bee598b1da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8b8af01c56fcccd06ed89bee598b1da"></a>
+static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><b>PingPacket</b> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a88b91e5c9a12341b8edaef93780f44cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88b91e5c9a12341b8edaef93780f44cd"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>MaximumInterpacketDelay</b> = 15000</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a978da72814edf10d0db1c503655a560d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a978da72814edf10d0db1c503655a560d"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a978da72814edf10d0db1c503655a560d">PushData</a> (const QSharedPointer&lt; ISender &gt; &amp;from, const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a978da72814edf10d0db1c503655a560d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded to set the time the last message came in. <br/></td></tr>
+<tr class="memitem:af7f7585022b08453bd5bfa6de245ecac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af7f7585022b08453bd5bfa6de245ecac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Sent</b> ()</td></tr>
 <tr class="memitem:a7949fdbae127c9e185fa5d53e5d162f1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7949fdbae127c9e185fa5d53e5d162f1"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a7949fdbae127c9e185fa5d53e5d162f1">RequiresCleanup</a> ()</td></tr>
 <tr class="memdesc:a7949fdbae127c9e185fa5d53e5d162f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the object isn't fully closed. <br/></td></tr>
@@ -261,7 +276,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 30 2012 11:49:58 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 3 2012 21:25:18 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

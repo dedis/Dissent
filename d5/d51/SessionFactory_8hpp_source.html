@@ -126,33 +126,32 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00060"></a>00060       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#af89f049479f6555ff1b7e8a52d3f451b" title="Create a Bulk &quot;V2&quot;.">CreateRepeatingBulkRoundSession</a>(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node,
 <a name="l00061"></a>00061           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id);
 <a name="l00062"></a>00062 
-<a name="l00066"></a>00066       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a94941a3edfe7c41e24b80e8cb88c8d36" title="Create a Bulk &quot;V3&quot;.">CreateTrustedBulkRoundSession</a>(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node,
-<a name="l00067"></a>00067           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id);
-<a name="l00068"></a>00068 
-<a name="l00072"></a>00072       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#ad265e3f21647a9596f8a014dd1bf2952" title="Create a Bulk &quot;V3&quot; with blame.">CreateTolerantBulkRoundSession</a>(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node,
-<a name="l00073"></a>00073           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id);
-<a name="l00074"></a>00074 
-<a name="l00078"></a>00078       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a03c971c6fcf338915469f1371091e324" title="Create a Bulk &quot;V3&quot; with XORing tree.">CreateTolerantTreeRoundSession</a>(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node,
-<a name="l00079"></a>00079           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id);
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081     <span class="keyword">private</span>:
-<a name="l00082"></a>00082       <span class="keyword">static</span> <span class="keywordtype">void</span> Common(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id, CreateRound cr);
-<a name="l00083"></a>00083 
-<a name="l00087"></a>00087       <span class="keyword">explicit</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html" title="Generates an appropriate session given the input.">SessionFactory</a>(); 
-<a name="l00088"></a>00088 
-<a name="l00092"></a>00092       Q_DISABLE_COPY(<a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html" title="Generates an appropriate session given the input.">SessionFactory</a>)
-<a name="l00093"></a>00093 
-<a name="l00094"></a>00094       QHash&lt;QString, Callback&gt; _type_to_create;
-<a name="l00095"></a>00095   };
+<a name="l00066"></a>00066       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a1e74f871d6f14d1a16e31e15a802f628" title="Create a Bulk &quot;V3&quot;.">CreateCSBulkRoundSession</a>(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id);
+<a name="l00067"></a>00067 
+<a name="l00071"></a>00071       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#ad265e3f21647a9596f8a014dd1bf2952" title="Create a Bulk &quot;V3&quot; with blame.">CreateTolerantBulkRoundSession</a>(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node,
+<a name="l00072"></a>00072           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id);
+<a name="l00073"></a>00073 
+<a name="l00077"></a>00077       <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#a03c971c6fcf338915469f1371091e324" title="Create a Bulk &quot;V3&quot; with XORing tree.">CreateTolerantTreeRoundSession</a>(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node,
+<a name="l00078"></a>00078           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id);
+<a name="l00079"></a>00079 
+<a name="l00080"></a>00080     <span class="keyword">private</span>:
+<a name="l00081"></a>00081       <span class="keyword">static</span> <span class="keywordtype">void</span> Common(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id, CreateRound cr);
+<a name="l00082"></a>00082 
+<a name="l00086"></a>00086       <span class="keyword">explicit</span> <a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html" title="Generates an appropriate session given the input.">SessionFactory</a>(); 
+<a name="l00087"></a>00087 
+<a name="l00091"></a>00091       Q_DISABLE_COPY(<a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html" title="Generates an appropriate session given the input.">SessionFactory</a>)
+<a name="l00092"></a>00092 
+<a name="l00093"></a>00093       QHash&lt;QString, Callback&gt; _type_to_create;
+<a name="l00094"></a>00094   };
+<a name="l00095"></a>00095 }
 <a name="l00096"></a>00096 }
-<a name="l00097"></a>00097 }
-<a name="l00098"></a>00098 
-<a name="l00099"></a>00099 <span class="preprocessor">#endif</span>
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 30 2012 11:49:55 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 3 2012 21:25:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
