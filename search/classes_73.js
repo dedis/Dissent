@@ -3,6 +3,7 @@ var searchData=
   ['sendentry',['SendEntry',['../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html',1,'Dissent::PeerReview']]],
   ['sendmessageservice',['SendMessageService',['../df/d41/classDissent_1_1Web_1_1Services_1_1SendMessageService.html',1,'Dissent::Web::Services']]],
   ['serialization',['Serialization',['../de/d19/classDissent_1_1Utils_1_1Serialization.html',1,'Dissent::Utils']]],
+  ['serverstate',['ServerState',['../d3/d68/classDissent_1_1Anonymity_1_1ShuffleRound_1_1ServerState.html',1,'Dissent::Anonymity::ShuffleRound']]],
   ['session',['Session',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html',1,'Dissent::Anonymity']]],
   ['sessionfactory',['SessionFactory',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html',1,'Dissent::Applications']]],
   ['sessionidservice',['SessionIdService',['../d4/df9/classDissent_1_1Web_1_1Services_1_1SessionIdService.html',1,'Dissent::Web::Services']]],
@@ -13,7 +14,6 @@ var searchData=
   ['shuffleround',['ShuffleRound',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html',1,'Dissent::Anonymity']]],
   ['shuffleroundbadinnerprivatekey',['ShuffleRoundBadInnerPrivateKey',['../df/db2/classDissent_1_1Tests_1_1ShuffleRoundBadInnerPrivateKey.html',1,'Dissent::Tests']]],
   ['shuffleroundblame',['ShuffleRoundBlame',['../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html',1,'Dissent::Anonymity']]],
-  ['shuffleroundfalseblame',['ShuffleRoundFalseBlame',['../d3/d39/classDissent_1_1Tests_1_1ShuffleRoundFalseBlame.html',1,'Dissent::Tests']]],
   ['shuffleroundfalsenogo',['ShuffleRoundFalseNoGo',['../d8/d50/classDissent_1_1Tests_1_1ShuffleRoundFalseNoGo.html',1,'Dissent::Tests']]],
   ['shuffleroundinvalidouterencryption',['ShuffleRoundInvalidOuterEncryption',['../d1/dcd/classDissent_1_1Tests_1_1ShuffleRoundInvalidOuterEncryption.html',1,'Dissent::Tests']]],
   ['shuffleroundmessageduplicator',['ShuffleRoundMessageDuplicator',['../d6/dc3/classDissent_1_1Tests_1_1ShuffleRoundMessageDuplicator.html',1,'Dissent::Tests']]],
@@ -27,5 +27,6 @@ var searchData=
   ['source',['Source',['../d7/d32/classDissent_1_1Messaging_1_1Source.html',1,'Dissent::Messaging']]],
   ['sourceobject',['SourceObject',['../df/d34/classDissent_1_1Messaging_1_1SourceObject.html',1,'Dissent::Messaging']]],
   ['startstop',['StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html',1,'Dissent::Utils']]],
-  ['startstopslots',['StartStopSlots',['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html',1,'Dissent::Utils']]]
+  ['startstopslots',['StartStopSlots',['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html',1,'Dissent::Utils']]],
+  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]]
 ];

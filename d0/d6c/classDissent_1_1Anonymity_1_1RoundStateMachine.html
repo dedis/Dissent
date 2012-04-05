@@ -149,9 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1ad0cdeb5e48c193efa030de583c6fc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1ad0cdeb5e48c193efa030de583c6fc2"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a1ad0cdeb5e48c193efa030de583c6fc2">SetState</a> (int state)</td></tr>
 <tr class="memdesc:a1ad0cdeb5e48c193efa030de583c6fc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current state, necessary for "unexpected" state transitions, such as the intial state, final states for cyclic rounds, etc. <br/></td></tr>
-<tr class="memitem:a765ffd493b71f7665f2008b1c8ff8f24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a765ffd493b71f7665f2008b1c8ff8f24"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a765ffd493b71f7665f2008b1c8ff8f24">StateComplete</a> ()</td></tr>
-<tr class="memdesc:a765ffd493b71f7665f2008b1c8ff8f24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the current state has finished and is ready to transition into the next state. <br/></td></tr>
+<tr class="memitem:abf10f1a452b22a364aebab07364ef4cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abf10f1a452b22a364aebab07364ef4cc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#abf10f1a452b22a364aebab07364ef4cc">StateComplete</a> (int state=-1)</td></tr>
+<tr class="memdesc:abf10f1a452b22a364aebab07364ef4cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the current state has finished and is ready to transition into the next state. <br/></td></tr>
 <tr class="memitem:a8693d399eee7aa3834b23459c6b0e548"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a8693d399eee7aa3834b23459c6b0e548">ProcessData</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from, const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a8693d399eee7aa3834b23459c6b0e548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the real work for processing data, the round should funnel its ProcessData to here.  <a href="#a8693d399eee7aa3834b23459c6b0e548"></a><br/></td></tr>
 <tr class="memitem:a0069988fee96c73ca81748bd1fc36707"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0069988fee96c73ca81748bd1fc36707"></a>
@@ -160,6 +160,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../..
 <tr class="memitem:a54f6cdcc99fff40b763d72321485f3c6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54f6cdcc99fff40b763d72321485f3c6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a54f6cdcc99fff40b763d72321485f3c6">IncrementPhase</a> ()</td></tr>
 <tr class="memdesc:a54f6cdcc99fff40b763d72321485f3c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the phase. <br/></td></tr>
+<tr class="memitem:a6331528ffaeca7b20f6c9a92f3db8770"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6331528ffaeca7b20f6c9a92f3db8770"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a6331528ffaeca7b20f6c9a92f3db8770">GetState</a> () const </td></tr>
+<tr class="memdesc:a6331528ffaeca7b20f6c9a92f3db8770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current phase. <br/></td></tr>
+<tr class="memitem:a8d2ba5838d7b1bfa2b5126631d4ad869"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d2ba5838d7b1bfa2b5126631d4ad869"></a>
+<a class="el" href="../../dd/d76/classDissent_1_1Anonymity_1_1Log.html">Log</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a8d2ba5838d7b1bfa2b5126631d4ad869">GetLog</a> () const </td></tr>
+<tr class="memdesc:a8d2ba5838d7b1bfa2b5126631d4ad869"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the current log. <br/></td></tr>
+<tr class="memitem:a29c984f5cf31e79ba2ddab58952a8378"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29c984f5cf31e79ba2ddab58952a8378"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ToggleLog</b> ()</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br/>
@@ -413,7 +421,7 @@ template&lt;typename T&gt; </div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 3 2012 21:25:15 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 4 2012 20:13:59 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

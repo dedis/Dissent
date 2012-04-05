@@ -93,7 +93,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">src/Anonymity/ShuffleRound.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef  DISSENT_ANONYMITY_SHUFFLE_ROUND_H_GUARD</span>
+<div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DISSENT_ANONYMITY_SHUFFLE_ROUND_H_GUARD</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DISSENT_ANONYMITY_SHUFFLE_ROUND_H_GUARD</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QBitArray&gt;</span>
@@ -105,246 +105,262 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00010"></a>00010 
 <a name="l00011"></a>00011 <span class="preprocessor">#include &quot;Log.hpp&quot;</span>
 <a name="l00012"></a>00012 <span class="preprocessor">#include &quot;Round.hpp&quot;</span>
-<a name="l00013"></a>00013 
-<a name="l00014"></a>00014 <span class="keyword">namespace </span>Dissent {
-<a name="l00015"></a>00015 <span class="keyword">namespace </span>Anonymity {
-<a name="l00016"></a>00016 
-<a name="l00048"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">00048</a>   <span class="keyword">class </span><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a> : <span class="keyword">public</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group.">Round</a> {
-<a name="l00049"></a>00049     Q_OBJECT
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051     Q_ENUMS(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae6b4eb9423092737306040c17be3b8cc" title="Various states that the system can be in during the shuffle.">State</a>);
-<a name="l00052"></a>00052     Q_ENUMS(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a>);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054     <span class="keyword">public</span>:
-<a name="l00058"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae6b4eb9423092737306040c17be3b8cc">00058</a>       <span class="keyword">enum</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae6b4eb9423092737306040c17be3b8cc" title="Various states that the system can be in during the shuffle.">State</a> {
-<a name="l00059"></a>00059         Offline,
-<a name="l00060"></a>00060         KeySharing,
-<a name="l00061"></a>00061         DataSubmission,
-<a name="l00062"></a>00062         WaitingForShuffle,
-<a name="l00063"></a>00063         Shuffling,
-<a name="l00064"></a>00064         WaitingForEncryptedInnerData,
-<a name="l00065"></a>00065         Verification,
-<a name="l00066"></a>00066         PrivateKeySharing,
-<a name="l00067"></a>00067         Decryption,
-<a name="l00068"></a>00068         BlameInit,
-<a name="l00069"></a>00069         BlameShare,
-<a name="l00070"></a>00070         BlameReviewing,
-<a name="l00071"></a>00071         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8e666a9754d354eb3f15a19857fd23bb" title="Emitted when the Round is closed for good or bad.">Finished</a>
-<a name="l00072"></a>00072       };
-<a name="l00073"></a>00073 
-<a name="l00078"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9ad467c995d48438063e931e730f08fa">00078</a>       <span class="keyword">static</span> QString <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9ad467c995d48438063e931e730f08fa" title="Converts an State into a QString.">StateToString</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae6b4eb9423092737306040c17be3b8cc" title="Various states that the system can be in during the shuffle.">State</a> state)
-<a name="l00079"></a>00079       {
-<a name="l00080"></a>00080         <span class="keywordtype">int</span> index = staticMetaObject.indexOfEnumerator(<span class="stringliteral">&quot;State&quot;</span>);
-<a name="l00081"></a>00081         <span class="keywordflow">return</span> staticMetaObject.enumerator(index).valueToKey(state);
-<a name="l00082"></a>00082       }
-<a name="l00083"></a>00083 
-<a name="l00087"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54">00087</a>       <span class="keyword">enum</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a> {
-<a name="l00088"></a>00088         PublicKeys,
-<a name="l00089"></a>00089         Data,
-<a name="l00090"></a>00090         ShuffleData,
-<a name="l00091"></a>00091         EncryptedData,
-<a name="l00092"></a>00092         GoMessage,
-<a name="l00093"></a>00093         NoGoMessage,
-<a name="l00094"></a>00094         PrivateKey,
-<a name="l00095"></a>00095         BlameData,
-<a name="l00096"></a>00096         BlameVerification
-<a name="l00097"></a>00097       };
-<a name="l00098"></a>00098 
-<a name="l00103"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa61b7eeb617fd357f88e061fa983dc39">00103</a>       <span class="keyword">static</span> QString <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa61b7eeb617fd357f88e061fa983dc39" title="Converts a MessageType into a QString.">MessageTypeToString</a>(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a> mt)
-<a name="l00104"></a>00104       {
-<a name="l00105"></a>00105         <span class="keywordtype">int</span> index = staticMetaObject.indexOfEnumerator(<span class="stringliteral">&quot;MessageType&quot;</span>);
-<a name="l00106"></a>00106         <span class="keywordflow">return</span> staticMetaObject.enumerator(index).valueToKey(mt);
-<a name="l00107"></a>00107       }
-<a name="l00108"></a>00108 
-<a name="l00112"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a2c5834202ab09800af34f2655ba44c7c">00112</a>       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a2c5834202ab09800af34f2655ba44c7c" title="Block size for the cleartext shuffle data.">BlockSize</a> = 1024;
-<a name="l00113"></a>00113 
-<a name="l00117"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa7e28b51297ec369dd5c83e04ea0cdd0">00117</a>       <span class="keyword">static</span> <span class="keyword">const</span> QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa7e28b51297ec369dd5c83e04ea0cdd0" title="Empty block used for nodes who do not send any data.">DefaultData</a>;
-<a name="l00118"></a>00118 
-<a name="l00127"></a>00127       <span class="keyword">explicit</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group, 
-<a name="l00128"></a>00128           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
-<a name="l00129"></a>00129           QSharedPointer&lt;Network&gt; network, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data);
-<a name="l00130"></a>00130 
-<a name="l00134"></a>00134       <span class="keyword">virtual</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a5781f53cb4911a8b89e6f66d026e4032" title="Deconstructor.">~ShuffleRound</a>();
-<a name="l00135"></a>00135 
-<a name="l00139"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a292bc6e4685218326437ff2b1a7589af">00139</a>       <span class="keyword">inline</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae6b4eb9423092737306040c17be3b8cc" title="Various states that the system can be in during the shuffle.">State</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a292bc6e4685218326437ff2b1a7589af" title="Returns the systems current state.">GetState</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a>; }
-<a name="l00140"></a>00140 
-<a name="l00144"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a2a37ad611165d4235c297ebeb044647c">00144</a>       <span class="keyword">inline</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae6b4eb9423092737306040c17be3b8cc" title="Various states that the system can be in during the shuffle.">State</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a2a37ad611165d4235c297ebeb044647c" title="Returns the state at which the system began blame.">GetBlameState</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad50fc19395e1695df0b4f4ccc18108b4" title="Local nodes last state before blame.">_blame_state</a>; }
-<a name="l00145"></a>00145 
-<a name="l00151"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1">00151</a>       <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1" title="Inner and outer public keys are kept in reversed order, this returns the public key index for a given...">CalculateKidx</a>(<span class="keywordtype">int</span> idx) { <span class="keywordflow">return</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0196e5539c3f03a9d5a0582e603ece4c" title="Group of members responsible for providing anonymity.">_shufflers</a>.<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#aff3695bac9a28c4f812ec36b92c0a843" title="Returns the size of the group.">Count</a>() - 1 - idx; }
-<a name="l00152"></a>00152 
-<a name="l00156"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a494923f855c197a872a6433b2c95b27e">00156</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keyword">const</span> QVector&lt;int&gt; &amp;<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a494923f855c197a872a6433b2c95b27e" title="Returns a list of members who have been blamed in the round.">GetBadMembers</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a3fb918d15208b3b0756a2ea1d3c0bbe7" title="List of the index of all bad peers.">_bad_members</a>; }
-<a name="l00157"></a>00157 
-<a name="l00161"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81">00161</a>       <span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>() { <span class="keywordflow">return</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0196e5539c3f03a9d5a0582e603ece4c" title="Group of members responsible for providing anonymity.">_shufflers</a>; }
-<a name="l00162"></a>00162 
-<a name="l00163"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad9a031dea07e4d71a40bfbd641241ea8">00163</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QString <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad9a031dea07e4d71a40bfbd641241ea8" title="Presents the ISender in a string format.">ToString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;ShuffleRound: &quot;</span> + <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>(); }
-<a name="l00164"></a>00164 
-<a name="l00165"></a>00165     <span class="keyword">protected</span>:
-<a name="l00169"></a>00169       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a18025d7d70788fb35df297e484415d58" title="Called when the ShuffleRound is started.">OnStart</a>();
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;RoundStateMachine.hpp&quot;</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="keyword">namespace </span>Dissent {
+<a name="l00016"></a>00016 <span class="keyword">namespace </span>Anonymity {
+<a name="l00017"></a>00017 
+<a name="l00049"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">00049</a>   <span class="keyword">class </span><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html" title="Dissent&#39;s shuffling algorithm.">ShuffleRound</a> : <span class="keyword">public</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group.">Round</a> {
+<a name="l00050"></a>00050     Q_OBJECT
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052     Q_ENUMS(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1b12ad9e6832318268253b33d09c3f06" title="Various states that the system can be in during the shuffle.">States</a>);
+<a name="l00053"></a>00053     Q_ENUMS(<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a>);
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055     <span class="keyword">public</span>:
+<a name="l00056"></a>00056       <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html" title="Used as an internal mechanism to handle state logic within a Round.">RoundStateMachine</a>&lt;ShuffleRound&gt;;
+<a name="l00057"></a>00057 
+<a name="l00061"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1b12ad9e6832318268253b33d09c3f06">00061</a>       <span class="keyword">enum</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1b12ad9e6832318268253b33d09c3f06" title="Various states that the system can be in during the shuffle.">States</a> {
+<a name="l00062"></a>00062         OFFLINE = 0,
+<a name="l00063"></a>00063         KEY_SHARING,
+<a name="l00064"></a>00064         WAITING_FOR_PUBLIC_KEYS,
+<a name="l00065"></a>00065         CIPHERTEXT_GENERATION,
+<a name="l00066"></a>00066         SUBMIT_CIPHERTEXT,
+<a name="l00067"></a>00067         WAITING_FOR_INITIAL_DATA,
+<a name="l00068"></a>00068         WAITING_FOR_SHUFFLE,
+<a name="l00069"></a>00069         SHUFFLING,
+<a name="l00070"></a>00070         WAITING_FOR_ENCRYPTED_INNER_DATA,
+<a name="l00071"></a>00071         VERIFICATION,
+<a name="l00072"></a>00072         WAITING_FOR_VERIFICATION_MESSAGES,
+<a name="l00073"></a>00073         PRIVATE_KEY_SHARING,
+<a name="l00074"></a>00074         WAITING_FOR_PRIVATE_KEYS,
+<a name="l00075"></a>00075         DECRYPTION,
+<a name="l00076"></a>00076         BLAME_SHARE,
+<a name="l00077"></a>00077         BLAME_VERIFY,
+<a name="l00078"></a>00078         BLAME_REVIEWING,
+<a name="l00079"></a>00079         FINISHED
+<a name="l00080"></a>00080       };
+<a name="l00081"></a>00081 
+<a name="l00086"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac1645ceb09d35a33f90c6ad3f493d4f7">00086</a>       <span class="keyword">static</span> QString <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac1645ceb09d35a33f90c6ad3f493d4f7" title="Converts an State into a QString.">StateToString</a>(<span class="keywordtype">int</span> state)
+<a name="l00087"></a>00087       {
+<a name="l00088"></a>00088         <span class="keywordtype">int</span> index = staticMetaObject.indexOfEnumerator(<span class="stringliteral">&quot;States&quot;</span>);
+<a name="l00089"></a>00089         <span class="keywordflow">return</span> staticMetaObject.enumerator(index).valueToKey(state);
+<a name="l00090"></a>00090       }
+<a name="l00091"></a>00091 
+<a name="l00095"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54">00095</a>       <span class="keyword">enum</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae158a8f9b32b0c4b10d7130b2399ef54" title="Various message types sent and received.">MessageType</a> {
+<a name="l00096"></a>00096         PUBLIC_KEYS = 0,
+<a name="l00097"></a>00097         DATA,
+<a name="l00098"></a>00098         SHUFFLE_DATA,
+<a name="l00099"></a>00099         ENCRYPTED_DATA,
+<a name="l00100"></a>00100         GO_MESSAGE,
+<a name="l00101"></a>00101         NO_GO_MESSAGE,
+<a name="l00102"></a>00102         PRIVATE_KEY,
+<a name="l00103"></a>00103         BLAME_DATA,
+<a name="l00104"></a>00104         BLAME_VERIFICATION
+<a name="l00105"></a>00105       };
+<a name="l00106"></a>00106 
+<a name="l00111"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aaafcb427a3ac67b7e6ccd1c9db6f8378">00111</a>       <span class="keyword">static</span> QString <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aaafcb427a3ac67b7e6ccd1c9db6f8378" title="Converts a MessageType into a QString.">MessageTypeToString</a>(<span class="keywordtype">int</span> mt)
+<a name="l00112"></a>00112       {
+<a name="l00113"></a>00113         <span class="keywordtype">int</span> index = staticMetaObject.indexOfEnumerator(<span class="stringliteral">&quot;MessageType&quot;</span>);
+<a name="l00114"></a>00114         <span class="keywordflow">return</span> staticMetaObject.enumerator(index).valueToKey(mt);
+<a name="l00115"></a>00115       }
+<a name="l00116"></a>00116 
+<a name="l00120"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a2c5834202ab09800af34f2655ba44c7c">00120</a>       <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a2c5834202ab09800af34f2655ba44c7c" title="Block size for the cleartext shuffle data.">BlockSize</a> = 1024;
+<a name="l00121"></a>00121 
+<a name="l00125"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa7e28b51297ec369dd5c83e04ea0cdd0">00125</a>       <span class="keyword">static</span> <span class="keyword">const</span> QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa7e28b51297ec369dd5c83e04ea0cdd0" title="Empty block used for nodes who do not send any data.">DefaultData</a>;
+<a name="l00126"></a>00126 
+<a name="l00135"></a>00135       <span class="keyword">explicit</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a95234126f31ac2cede2254eea251579e" title="Constructor.">ShuffleRound</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group, 
+<a name="l00136"></a>00136           <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id,
+<a name="l00137"></a>00137           QSharedPointer&lt;Network&gt; network, <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data);
+<a name="l00138"></a>00138 
+<a name="l00142"></a>00142       <span class="keyword">virtual</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a5781f53cb4911a8b89e6f66d026e4032" title="Deconstructor.">~ShuffleRound</a>();
+<a name="l00143"></a>00143 
+<a name="l00147"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aae3c9f6ecc5f118d2acf1525b4299356">00147</a>       <span class="keyword">inline</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1b12ad9e6832318268253b33d09c3f06" title="Various states that the system can be in during the shuffle.">States</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aae3c9f6ecc5f118d2acf1525b4299356" title="Returns the systems current state.">GetState</a>()<span class="keyword"> const</span>
+<a name="l00148"></a>00148 <span class="keyword">      </span>{
+<a name="l00149"></a>00149         <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1b12ad9e6832318268253b33d09c3f06" title="Various states that the system can be in during the shuffle.">States</a><span class="keyword">&gt;</span>(_state_machine.<a class="code" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a6331528ffaeca7b20f6c9a92f3db8770" title="Returns the current phase.">GetState</a>());
+<a name="l00150"></a>00150       }
+<a name="l00151"></a>00151 
+<a name="l00157"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1">00157</a>       <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1" title="Inner and outer public keys are kept in reversed order, this returns the public key index for a given...">CalculateKidx</a>(<span class="keywordtype">int</span> idx) { <span class="keywordflow">return</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0196e5539c3f03a9d5a0582e603ece4c" title="Group of members responsible for providing anonymity.">_shufflers</a>.<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#aff3695bac9a28c4f812ec36b92c0a843" title="Returns the size of the group.">Count</a>() - 1 - idx; }
+<a name="l00158"></a>00158 
+<a name="l00162"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a494923f855c197a872a6433b2c95b27e">00162</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keyword">const</span> QVector&lt;int&gt; &amp;<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a494923f855c197a872a6433b2c95b27e" title="Returns a list of members who have been blamed in the round.">GetBadMembers</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _state-&gt;bad_members; }
+<a name="l00163"></a>00163 
+<a name="l00167"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81">00167</a>       <span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;<a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>() { <span class="keywordflow">return</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0196e5539c3f03a9d5a0582e603ece4c" title="Group of members responsible for providing anonymity.">_shufflers</a>; }
+<a name="l00168"></a>00168 
+<a name="l00169"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad9a031dea07e4d71a40bfbd641241ea8">00169</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QString <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad9a031dea07e4d71a40bfbd641241ea8" title="Presents the ISender in a string format.">ToString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;ShuffleRound: &quot;</span> + <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>().<a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html#ac72f1ffb358d3dd5baea549edc1841ef" title="Returns a printable Id string.">ToString</a>(); }
 <a name="l00170"></a>00170 
-<a name="l00171"></a>00171       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a7960e7905cf96fdf12561512c07d9b2a" title="If data is from a legitimate group member, it is processed.">ProcessData</a>(<span class="keyword">const</span> Id &amp;from, <span class="keyword">const</span> QByteArray &amp;data);
-<a name="l00172"></a>00172 
-<a name="l00179"></a>00179       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a2df08ee1bd0f6e0a1b1559461136a70d" title="Allows direct access to the message parsing without a try / catch surrounding it.">ProcessDataBase</a>(<span class="keyword">const</span> Id &amp;from, <span class="keyword">const</span> QByteArray &amp;data);
-<a name="l00180"></a>00180 
-<a name="l00186"></a>00186       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae07760afcd950c4d3d0e8ccdf265e894" title="Parses incoming public key messages.">HandlePublicKeys</a>(QDataStream &amp;stream, <span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
-<a name="l00187"></a>00187 
-<a name="l00193"></a>00193       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab10112315459018eb3b38c70c01d5e97" title="First node receives data from all peers.">HandleData</a>(QDataStream &amp;stream, <span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
-<a name="l00194"></a>00194 
-<a name="l00200"></a>00200       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa58d126f6d418a354535946c1d8ae761" title="Each node besides the first receives shuffled data.">HandleShuffle</a>(QDataStream &amp;stream, <span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
-<a name="l00201"></a>00201 
-<a name="l00207"></a>00207       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1c2823d6dd3d97f0c7c86f9fd1c0e2a0" title="The inner encrypted only messages sent by the last peer.">HandleDataBroadcast</a>(QDataStream &amp;stream, <span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
-<a name="l00208"></a>00208 
-<a name="l00214"></a>00214       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a78f2608c91da467ae22b8d82521c1b28" title="Each peer sends a go / no go message.">HandleVerification</a>(QDataStream &amp;stream, <span class="keywordtype">bool</span> go, <span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
-<a name="l00215"></a>00215 
-<a name="l00221"></a>00221       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a65023ab12f91b55ce157ef32ebb40780" title="Each peer shares with each other their inner private keys.">HandlePrivateKey</a>(QDataStream &amp;stream, <span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
-<a name="l00222"></a>00222 
-<a name="l00229"></a>00229       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aba8d28ae6e469a03c5079877af0fc08a" title="Each peer shares their incoming messages logs with each other in order to reconstruct where something...">HandleBlame</a>(QDataStream &amp;stream, <span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
+<a name="l00171"></a>00171     <span class="keyword">protected</span>:
+<a name="l00172"></a>00172       <span class="keyword">typedef</span> QPair&lt;QVector&lt;QByteArray&gt;, QVector&lt;QByteArray&gt; &gt; HashSig;
+<a name="l00173"></a>00173 
+<a name="l00177"></a>00177       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a18025d7d70788fb35df297e484415d58" title="Called when the ShuffleRound is started.">OnStart</a>();
+<a name="l00178"></a>00178 
+<a name="l00182"></a>00182       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0342e0d466016bae514e2bf0ce87d43e" title="Called when the ShuffleRound is finished.">OnStop</a>();
+<a name="l00183"></a>00183 
+<a name="l00184"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad3ff7852c3e0fd8ad391bfc77da4c479">00184</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad3ff7852c3e0fd8ad391bfc77da4c479" title="If data is from a legitimate group member, it is processed.">ProcessData</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;from, <span class="keyword">const</span> QByteArray &amp;data)
+<a name="l00185"></a>00185       {
+<a name="l00186"></a>00186         _state_machine.<a class="code" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a8693d399eee7aa3834b23459c6b0e548" title="Does the real work for processing data, the round should funnel its ProcessData to here...">ProcessData</a>(from, data);
+<a name="l00187"></a>00187       }
+<a name="l00188"></a>00188 
+<a name="l00194"></a>00194       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a519c1335bb701aa279e8d0fc38edd5fe" title="Parses incoming public key messages.">HandlePublicKeys</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, QDataStream &amp;stream);
+<a name="l00195"></a>00195 
+<a name="l00201"></a>00201       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a913a28f58d89bd4e17a24a3202826bf3" title="First node receives data from all peers.">HandleData</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, QDataStream &amp;stream);
+<a name="l00202"></a>00202 
+<a name="l00208"></a>00208       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a13a2db45856eca5ddf67cea10894bc1f" title="Each node besides the first receives shuffled data.">HandleShuffle</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, QDataStream &amp;stream);
+<a name="l00209"></a>00209 
+<a name="l00215"></a>00215       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a8120cac64350cb9186d258e09683f292" title="The inner encrypted only messages sent by the last peer.">HandleDataBroadcast</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, QDataStream &amp;stream);
+<a name="l00216"></a>00216 
+<a name="l00222"></a>00222       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a278abd2d16c44283fa90da4b6a321968" title="Each peer sends a go / no go message.">HandleVerification</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, QDataStream &amp;stream);
+<a name="l00223"></a>00223 
+<a name="l00229"></a>00229       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a5dbac05283cb1ddb946ba6cf4c916f1d" title="Each peer shares with each other their inner private keys.">HandlePrivateKey</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, QDataStream &amp;stream);
 <a name="l00230"></a>00230 
-<a name="l00237"></a>00237       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad59b391a7451c690be9be1b434ba2ff8" title="Prior to reviewing the blame data, shares the signatures of the blames that they received.">HandleBlameVerification</a>(QDataStream &amp;stream, <span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
+<a name="l00237"></a>00237       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0ee240475fabe981f0858f1e72d18da5" title="Each peer shares their incoming messages logs with each other in order to reconstruct where something...">HandleBlame</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, QDataStream &amp;stream);
 <a name="l00238"></a>00238 
-<a name="l00242"></a>00242       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad60e0af9ecfbbdd2ebe20fe9616b723f" title="Broadcasts the nodes inner and outer public keys to all other nodes.">BroadcastPublicKeys</a>();
-<a name="l00243"></a>00243 
-<a name="l00247"></a>00247       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a21f604a511506a51b7c90305bf6b7200" title="Encrypts and submits the data block to the first node.">SubmitData</a>();
-<a name="l00248"></a>00248 
-<a name="l00254"></a>00254       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a3cf78401fc693edc8fa8df3026c2ccb1" title="Takes input shuffle data, verifies no duplicate messages, decrypts a layer and forwards onward or bro...">Shuffle</a>();
-<a name="l00255"></a>00255 
-<a name="l00260"></a>00260       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a423d1e532a58dd0b6419f447baff8f73" title="After receiving the inner encrypted data, each node will send a go or no go message.">VerifyInnerCiphertext</a>();
-<a name="l00261"></a>00261       
-<a name="l00265"></a>00265       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aaa168f28d112bd6f864d702e973a722b" title="Shares the inner private key with all nodes.">BroadcastPrivateKey</a>();
-<a name="l00266"></a>00266 
-<a name="l00271"></a>00271       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a86bd256c943c398a5e9ecc6054879876" title="After receiving all inner keys, the node will decrypt the data blocks and push &quot;real&quot; data into the l...">Decrypt</a>();
-<a name="l00272"></a>00272 
-<a name="l00277"></a>00277       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aef3d00f9bbb7705c0607744f22f709d3" title="Shares blame data (message log, outer private key, and a signature of the hash of this message) with ...">StartBlame</a>();
-<a name="l00278"></a>00278 
-<a name="l00284"></a>00284       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab9bd8919b07c43da98eb16643272f3f5" title="Broadcasts the hash and signature of all blame data received to other nodes, so all nodes can be cert...">BroadcastBlameVerification</a>();
-<a name="l00285"></a>00285 
-<a name="l00289"></a>00289       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ace6f8b416dc6baf1cb017d0c6f37c09e" title="After receiving all blame verifications, begin blame round.">BlameRound</a>();
-<a name="l00290"></a>00290 
-<a name="l00295"></a>00295       QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a767c8d4032068dfafcdfe250dd1c6d28" title="Takes a data block and makes it proper encoding for the shuffle.">PrepareData</a>();
-<a name="l00296"></a>00296 
-<a name="l00301"></a>00301       QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a6361a99025b2f112731e2e2c011e05e0" title="Retrieves from a data block from shuffle data.">ParseData</a>(QByteArray data);
-<a name="l00302"></a>00302 
-<a name="l00306"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0196e5539c3f03a9d5a0582e603ece4c">00306</a>       <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0196e5539c3f03a9d5a0582e603ece4c" title="Group of members responsible for providing anonymity.">_shufflers</a>;
-<a name="l00307"></a>00307 
-<a name="l00311"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a959f5c08afc1c07f12a7bb4f87dab44f">00311</a>       <span class="keywordtype">bool</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a959f5c08afc1c07f12a7bb4f87dab44f" title="Is the node a shuffler?">_shuffler</a>;
-<a name="l00312"></a>00312 
-<a name="l00316"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b">00316</a>       <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae6b4eb9423092737306040c17be3b8cc" title="Various states that the system can be in during the shuffle.">State</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab27d5066b6cec17e45967b94c4537d9b" title="Local nodes current state.">_state</a>;
-<a name="l00317"></a>00317 
-<a name="l00321"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad50fc19395e1695df0b4f4ccc18108b4">00321</a>       <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae6b4eb9423092737306040c17be3b8cc" title="Various states that the system can be in during the shuffle.">State</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad50fc19395e1695df0b4f4ccc18108b4" title="Local nodes last state before blame.">_blame_state</a>;
-<a name="l00322"></a>00322 
-<a name="l00326"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a73733cf2fd5d757903c77f04c12e6dcc">00326</a>       QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a73733cf2fd5d757903c77f04c12e6dcc" title="All the remote peers inner keys, in reverse order.">_public_inner_keys</a>;
-<a name="l00327"></a>00327 
-<a name="l00331"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac4eeafa955b04911adfa2b1c2785e4bf">00331</a>       QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ac4eeafa955b04911adfa2b1c2785e4bf" title="All the remote peers outer keys, in reverse order.">_public_outer_keys</a>;
-<a name="l00332"></a>00332 
-<a name="l00336"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a7860e8718979fe4d7bda71bc20c04cde">00336</a>       <span class="keywordtype">int</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a7860e8718979fe4d7bda71bc20c04cde" title="Counter for keeping track of keys received.">_keys_received</a>;
-<a name="l00337"></a>00337 
-<a name="l00341"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad27d50091d2cf7e3fe4ea60ee76407d9">00341</a>       QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad27d50091d2cf7e3fe4ea60ee76407d9" title="The private inner encrypting key.">_inner_key</a>;
-<a name="l00342"></a>00342 
-<a name="l00346"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ade599cc87ab0570e753fb89008585d1f">00346</a>       QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ade599cc87ab0570e753fb89008585d1f" title="The private outer encrypting key.">_outer_key</a>;
-<a name="l00347"></a>00347 
-<a name="l00351"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a21314443ea8d3f038d41e5d8caf3339e">00351</a>       QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a21314443ea8d3f038d41e5d8caf3339e" title="All the remote peers inner private keys.">_private_inner_keys</a>;
-<a name="l00352"></a>00352 
-<a name="l00356"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9086ecfc80eb85baccbe79dd2cb764e5">00356</a>       QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9086ecfc80eb85baccbe79dd2cb764e5" title="All the remote peers outer private keys, used during a blame.">_private_outer_keys</a>;
-<a name="l00357"></a>00357 
+<a name="l00245"></a>00245       <span class="keywordtype">void</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aae99567c9edfd2f7cca6a08e17a4ebc7" title="Prior to reviewing the blame data, shares the signatures of the blames that they received.">HandleBlameVerification</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, QDataStream &amp;stream);
+<a name="l00246"></a>00246 
+<a name="l00250"></a>00250       QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a767c8d4032068dfafcdfe250dd1c6d28" title="Takes a data block and makes it proper encoding for the shuffle.">PrepareData</a>();
+<a name="l00251"></a>00251 
+<a name="l00256"></a>00256       QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a6361a99025b2f112731e2e2c011e05e0" title="Retrieves from a data block from shuffle data.">ParseData</a>(QByteArray data);
+<a name="l00257"></a>00257 
+<a name="l00261"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0196e5539c3f03a9d5a0582e603ece4c">00261</a>       <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0196e5539c3f03a9d5a0582e603ece4c" title="Group of members responsible for providing anonymity.">_shufflers</a>;
+<a name="l00262"></a>00262 
+<a name="l00266"></a><a class="code" href="../../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html">00266</a>       <span class="keyword">class </span><a class="code" href="../../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html" title="Stores the internal state for the client aspects of the shuffle round.">State</a> {
+<a name="l00267"></a>00267         <span class="keyword">public</span>:
+<a name="l00268"></a>00268           <a class="code" href="../../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html" title="Stores the internal state for the client aspects of the shuffle round.">State</a>() :
+<a name="l00269"></a>00269             blame(<span class="keyword">false</span>),
+<a name="l00270"></a>00270             keys_received(0),
+<a name="l00271"></a>00271             data_received(0),
+<a name="l00272"></a>00272             blame_verifications(0)
+<a name="l00273"></a>00273           { }
+<a name="l00274"></a>00274 
+<a name="l00275"></a>00275           <span class="comment">// Allows inheritance</span>
+<a name="l00276"></a>00276           <span class="keyword">virtual</span> ~<a class="code" href="../../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html" title="Stores the internal state for the client aspects of the shuffle round.">State</a>() {}
+<a name="l00277"></a>00277 
+<a name="l00278"></a>00278           <span class="keywordtype">bool</span> blame;
+<a name="l00279"></a>00279           <span class="keywordtype">int</span> keys_received;
+<a name="l00280"></a>00280 
+<a name="l00281"></a>00281           <span class="comment">// Note these are stored in reverse order</span>
+<a name="l00282"></a>00282           QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; public_inner_keys;
+<a name="l00283"></a>00283           <span class="comment">// Note these are stored in reverse order</span>
+<a name="l00284"></a>00284           QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; public_outer_keys;
+<a name="l00285"></a>00285           QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; private_inner_keys;
+<a name="l00286"></a>00286 
+<a name="l00287"></a>00287           QByteArray inner_ciphertext;
+<a name="l00288"></a>00288           QByteArray outer_ciphertext;
+<a name="l00289"></a>00289           QVector&lt;QByteArray&gt; encrypted_data;
+<a name="l00290"></a>00290           QByteArray state_hash;
+<a name="l00291"></a>00291 
+<a name="l00292"></a>00292           QVector&lt;int&gt; bad_members;
+<a name="l00293"></a>00293 
+<a name="l00294"></a>00294           <span class="comment">// These should be server only ... but for now it isn&#39;t</span>
+<a name="l00295"></a>00295           <span class="keywordtype">int</span> data_received;
+<a name="l00296"></a>00296           QHash&lt;int, bool&gt; go;
+<a name="l00297"></a>00297           QVector&lt;QByteArray&gt; state_hashes;
+<a name="l00298"></a>00298           QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; private_outer_keys;
+<a name="l00299"></a>00299           <span class="keywordtype">int</span> blame_verifications;
+<a name="l00300"></a>00300           QVector&lt;Log&gt; logs;
+<a name="l00301"></a>00301           QVector&lt;QByteArray&gt; blame_hash;
+<a name="l00302"></a>00302           QVector&lt;QByteArray&gt; blame_signatures;
+<a name="l00303"></a>00303           QVector&lt;HashSig&gt; blame_verification_msgs;
+<a name="l00304"></a>00304       };
+<a name="l00305"></a>00305 
+<a name="l00309"></a><a class="code" href="../../d3/d68/classDissent_1_1Anonymity_1_1ShuffleRound_1_1ServerState.html">00309</a>       <span class="keyword">class </span><a class="code" href="../../d3/d68/classDissent_1_1Anonymity_1_1ShuffleRound_1_1ServerState.html" title="Stores the internal state for servers.">ServerState</a> : <span class="keyword">public</span> <a class="code" href="../../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html" title="Stores the internal state for the client aspects of the shuffle round.">State</a> {
+<a name="l00310"></a>00310         <span class="keyword">public</span>:
+<a name="l00311"></a>00311           <a class="code" href="../../d3/d68/classDissent_1_1Anonymity_1_1ShuffleRound_1_1ServerState.html" title="Stores the internal state for servers.">ServerState</a>()
+<a name="l00312"></a>00312           { }
+<a name="l00313"></a>00313 
+<a name="l00314"></a>00314           <span class="keyword">virtual</span> ~<a class="code" href="../../d3/d68/classDissent_1_1Anonymity_1_1ShuffleRound_1_1ServerState.html" title="Stores the internal state for servers.">ServerState</a>() {}
+<a name="l00315"></a>00315 
+<a name="l00316"></a>00316           QSharedPointer&lt;AsymmetricKey&gt; inner_key;
+<a name="l00317"></a>00317           QSharedPointer&lt;AsymmetricKey&gt; outer_key;
+<a name="l00318"></a>00318           QVector&lt;QByteArray&gt; shuffle_input;
+<a name="l00319"></a>00319           QVector&lt;QByteArray&gt; shuffle_output;
+<a name="l00320"></a>00320       };
+<a name="l00321"></a>00321 
+<a name="l00322"></a>00322       QSharedPointer&lt;ServerState&gt; _server_state;
+<a name="l00323"></a>00323       QSharedPointer&lt;State&gt; _state;
+<a name="l00324"></a>00324 
+<a name="l00325"></a>00325       <a class="code" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html">RoundStateMachine&lt;ShuffleRound&gt;</a> _state_machine;
+<a name="l00326"></a>00326 
+<a name="l00327"></a>00327       <span class="comment">/* Below are the state transitions */</span>
+<a name="l00328"></a>00328       <span class="keyword">virtual</span> <span class="keywordtype">void</span> BroadcastPublicKeys();
+<a name="l00329"></a>00329       <span class="keyword">virtual</span> <span class="keywordtype">void</span> GenerateCiphertext();
+<a name="l00330"></a>00330       <span class="keyword">virtual</span> <span class="keywordtype">void</span> SubmitCiphertext();
+<a name="l00331"></a>00331       <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareForInitialData();
+<a name="l00332"></a>00332       <span class="keyword">virtual</span> <span class="keywordtype">void</span> Shuffle();
+<a name="l00333"></a>00333       <span class="keyword">virtual</span> <span class="keywordtype">void</span> VerifyInnerCiphertext();
+<a name="l00334"></a>00334       <span class="keyword">virtual</span> <span class="keywordtype">void</span> BroadcastPrivateKey();
+<a name="l00335"></a>00335       <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareForPrivateKeys();
+<a name="l00336"></a>00336       <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrepareForVerification();
+<a name="l00337"></a>00337       <span class="keyword">virtual</span> <span class="keywordtype">void</span> Decrypt();
+<a name="l00338"></a>00338       <span class="keyword">virtual</span> <span class="keywordtype">void</span> StartBlame();
+<a name="l00339"></a>00339       <span class="keyword">virtual</span> <span class="keywordtype">void</span> BroadcastBlameVerification();
+<a name="l00340"></a>00340       <span class="keyword">virtual</span> <span class="keywordtype">void</span> BlameRound();
+<a name="l00341"></a>00341 
+<a name="l00342"></a>00342     <span class="keyword">private</span> slots:
+<a name="l00343"></a>00343       <span class="keywordtype">void</span> DecryptDone(<span class="keyword">const</span> QVector&lt;QByteArray&gt; &amp;cleartexts,
+<a name="l00344"></a>00344           <span class="keyword">const</span> QVector&lt;int&gt; &amp;bad);
+<a name="l00345"></a>00345 
+<a name="l00346"></a>00346     <span class="keyword">private</span>:
+<a name="l00347"></a>00347       <span class="keywordtype">void</span> InitClient();
+<a name="l00348"></a>00348       <span class="keywordtype">void</span> InitServer();
+<a name="l00349"></a>00349       <span class="keywordtype">bool</span> CycleComplete() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }
+<a name="l00350"></a>00350       <span class="keywordtype">void</span> BeforeStateTransition() {}
+<a name="l00351"></a>00351 
+<a name="l00352"></a>00352       <span class="keywordtype">void</span> EmptyHandleMessage(<span class="keyword">const</span> Id &amp;, QDataStream &amp;)
+<a name="l00353"></a>00353       {
+<a name="l00354"></a>00354         qFatal(<span class="stringliteral">&quot;Should not arrive here&quot;</span>);
+<a name="l00355"></a>00355       }
+<a name="l00356"></a>00356 
+<a name="l00357"></a>00357       <span class="keywordtype">void</span> EmptyTransitionCallback() {}
 <a name="l00358"></a>00358 
-<a name="l00362"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a08571a920fb03532548f06883c57914f">00362</a>       <span class="keywordtype">int</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a08571a920fb03532548f06883c57914f" title="Number of peers to have submitted data to first node or blame phase.">_data_received</a>;
-<a name="l00363"></a>00363 
-<a name="l00367"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a3a60a980835e025176c5c88ccbf60104">00367</a>       <span class="keywordtype">int</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a3a60a980835e025176c5c88ccbf60104" title="Number of peers to send a go message.">_go_count</a>;
-<a name="l00368"></a>00368 
-<a name="l00372"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a45a7c5d024a74347f3dab63b75b6ee26">00372</a>       <span class="keywordtype">int</span> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a45a7c5d024a74347f3dab63b75b6ee26" title="Blame verifications received.">_blame_verifications</a>;
-<a name="l00373"></a>00373 
-<a name="l00377"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#afda0b959760677dc011ac95ad46c02df">00377</a>       QBitArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#afda0b959760677dc011ac95ad46c02df" title="Stores the positively received goes by group index.">_go_received</a>;
-<a name="l00378"></a>00378 
-<a name="l00382"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa2a5ddc4d116d209c752fb7edd668bbc">00382</a>       QBitArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa2a5ddc4d116d209c752fb7edd668bbc" title="Stores the positively received goes by group index.">_go</a>;
+<a name="l00359"></a>00359       <span class="keyword">static</span> <span class="keywordtype">void</span> RegisterMetaTypes()
+<a name="l00360"></a>00360       {
+<a name="l00361"></a>00361         <span class="keyword">static</span> <span class="keywordtype">bool</span> registered = <span class="keyword">false</span>;
+<a name="l00362"></a>00362         <span class="keywordflow">if</span>(registered) {
+<a name="l00363"></a>00363           <span class="keywordflow">return</span>;
+<a name="l00364"></a>00364         }
+<a name="l00365"></a>00365         registered = <span class="keyword">true</span>;
+<a name="l00366"></a>00366         qRegisterMetaType&lt;QVector&lt;int&gt; &gt;(<span class="stringliteral">&quot;QVector&lt;int&gt;&quot;</span>);
+<a name="l00367"></a>00367         qRegisterMetaType&lt;QVector&lt;QByteArray&gt; &gt;(<span class="stringliteral">&quot;QVector&lt;QByteArray&gt;&quot;</span>);
+<a name="l00368"></a>00368       }
+<a name="l00369"></a>00369   };
+<a name="l00370"></a>00370 
+<a name="l00371"></a>00371 <span class="keyword">namespace </span>ShuffleRoundPrivate {
+<a name="l00378"></a><a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html">00378</a>   <span class="keyword">class </span><a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html" title="A class for handling decryption in another thread.">Decryptor</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> QRunnable {
+<a name="l00379"></a>00379     Q_OBJECT
+<a name="l00380"></a>00380 
+<a name="l00381"></a>00381     <span class="keyword">public</span>:
+<a name="l00382"></a>00382       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
 <a name="l00383"></a>00383 
-<a name="l00387"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816">00387</a>       QVector&lt;QByteArray&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a923a240dcc1ee1298c2bd8ab6875f816" title="Data pushed into the shuffle.">_shuffle_cleartext</a>;
-<a name="l00388"></a>00388 
-<a name="l00392"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027">00392</a>       QVector&lt;QByteArray&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#acdf1a97a3387f7f5cb0067c5c619f027" title="Data pulled from the shuffle.">_shuffle_ciphertext</a>;
-<a name="l00393"></a>00393 
-<a name="l00397"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a02c6ffb3a8535b1391bf4d8fa045aca2">00397</a>       QVector&lt;QByteArray&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a02c6ffb3a8535b1391bf4d8fa045aca2" title="Inner encrypted only data.">_encrypted_data</a>;
-<a name="l00398"></a>00398       
-<a name="l00402"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9a831916515219c5853b248a0f93fe38">00402</a>       QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a9a831916515219c5853b248a0f93fe38" title="Local nodes inner onion ciphertext.">_inner_ciphertext</a>;
-<a name="l00403"></a>00403 
-<a name="l00407"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a77682f0d01ae9b7fedb15bc3b892c96b">00407</a>       QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a77682f0d01ae9b7fedb15bc3b892c96b" title="Local nodes outer onion ciphertext.">_outer_ciphertext</a>;
+<a name="l00384"></a>00384       <a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html" title="A class for handling decryption in another thread.">Decryptor</a>(<span class="keyword">const</span> QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; &amp;keys,
+<a name="l00385"></a>00385           <span class="keyword">const</span> QVector&lt;QByteArray&gt; encrypted_data) :
+<a name="l00386"></a>00386         _keys(keys),
+<a name="l00387"></a>00387         _encrypted_data(encrypted_data)
+<a name="l00388"></a>00388       {
+<a name="l00389"></a>00389       }
+<a name="l00390"></a>00390 
+<a name="l00391"></a>00391       <span class="keyword">virtual</span> ~<a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html" title="A class for handling decryption in another thread.">Decryptor</a>()
+<a name="l00392"></a>00392       {
+<a name="l00393"></a>00393       }
+<a name="l00394"></a>00394 
+<a name="l00395"></a>00395       <span class="keyword">virtual</span> <span class="keywordtype">void</span> run();
+<a name="l00396"></a>00396 
+<a name="l00397"></a>00397     signals:
+<a name="l00398"></a>00398       <span class="keywordtype">void</span> Finished(<span class="keyword">const</span> QVector&lt;QByteArray&gt; &amp;cleartexts,
+<a name="l00399"></a>00399           <span class="keyword">const</span> QVector&lt;int&gt; &amp;bad);
+<a name="l00400"></a>00400 
+<a name="l00401"></a>00401     <span class="keyword">private</span>:
+<a name="l00402"></a>00402       QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; _keys;
+<a name="l00403"></a>00403       QVector&lt;QByteArray&gt; _encrypted_data;
+<a name="l00404"></a>00404   };
+<a name="l00405"></a>00405 }
+<a name="l00406"></a>00406 }
+<a name="l00407"></a>00407 }
 <a name="l00408"></a>00408 
-<a name="l00412"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab277a28e62c28baa59b08775e3bb081d">00412</a>       <a class="code" href="../../dd/d76/classDissent_1_1Anonymity_1_1Log.html" title="Maintains a historical mapping of a packet to an Id.">Log</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab277a28e62c28baa59b08775e3bb081d" title="Stores all validated messages that arrived before start was called.">_offline_log</a>;
-<a name="l00413"></a>00413 
-<a name="l00417"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a6bb5152179b43739cef116da16bf31ad">00417</a>       <a class="code" href="../../dd/d76/classDissent_1_1Anonymity_1_1Log.html" title="Maintains a historical mapping of a packet to an Id.">Log</a> <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a6bb5152179b43739cef116da16bf31ad" title="Stores all validated incoming messages.">_log</a>;
-<a name="l00418"></a>00418 
-<a name="l00422"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae9f244b80a84b7fa63b01038f550affc">00422</a>       QByteArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae9f244b80a84b7fa63b01038f550affc" title="Locally generated broadcast hash.">_broadcast_hash</a>;
-<a name="l00423"></a>00423 
-<a name="l00427"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#add2abadc483a79449b178e1f1599de78">00427</a>       QVector&lt;QByteArray&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#add2abadc483a79449b178e1f1599de78" title="Stores peers incoming / outgoing broadcasted components.">_broadcast_hashes</a>;
-<a name="l00428"></a>00428 
-<a name="l00432"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1151a2295c73d32a3a190beab4270545">00432</a>       QBitArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1151a2295c73d32a3a190beab4270545" title="Maintains who has and has not sent a blame message yet.">_blame_received</a>;
-<a name="l00433"></a>00433 
-<a name="l00437"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a420ee119f93270c99ab258428fd0a9ab">00437</a>       QVector&lt;Log&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a420ee119f93270c99ab258428fd0a9ab" title="Stores all the in blame logs.">_logs</a>;
-<a name="l00438"></a>00438 
-<a name="l00442"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae72ddd85a8ddd288ef0986ba70a17bdb">00442</a>       QVector&lt;QByteArray&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae72ddd85a8ddd288ef0986ba70a17bdb" title="Stores all the shortened blame messages.">_blame_hash</a>;
-<a name="l00443"></a>00443 
-<a name="l00447"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1cb42e39ddf89117d8ebdd3eb1bd62f0">00447</a>       QVector&lt;QByteArray&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a1cb42e39ddf89117d8ebdd3eb1bd62f0" title="Stores all the blame verifications.">_blame_signatures</a>;
-<a name="l00448"></a>00448 
-<a name="l00449"></a>00449       <span class="keyword">typedef</span> QPair&lt;QVector&lt;QByteArray&gt;, QVector&lt;QByteArray&gt; &gt; HashSig;
-<a name="l00450"></a>00450 
-<a name="l00454"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a65b5d102f1d5a95b025c6c54f5a7f252">00454</a>       QVector&lt;HashSig&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a65b5d102f1d5a95b025c6c54f5a7f252" title="Store remote blame hash / signatures until we have received all blame data.">_blame_verification_msgs</a>;
-<a name="l00455"></a>00455 
-<a name="l00459"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae72dae6ffa8bb4c637e17b30a6a7bb63">00459</a>       QBitArray <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ae72dae6ffa8bb4c637e17b30a6a7bb63" title="Received a blame verification from the remote peer.">_received_blame_verification</a>;
-<a name="l00460"></a>00460 
-<a name="l00464"></a><a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a3fb918d15208b3b0756a2ea1d3c0bbe7">00464</a>       QVector&lt;int&gt; <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a3fb918d15208b3b0756a2ea1d3c0bbe7" title="List of the index of all bad peers.">_bad_members</a>;
-<a name="l00465"></a>00465 
-<a name="l00466"></a>00466     <span class="keyword">private</span> slots:
-<a name="l00467"></a>00467       <span class="keywordtype">void</span> DecryptDone(<span class="keyword">const</span> QVector&lt;QByteArray&gt; &amp;cleartexts,
-<a name="l00468"></a>00468           <span class="keyword">const</span> QVector&lt;int&gt; &amp;bad);
-<a name="l00469"></a>00469 
-<a name="l00470"></a>00470     <span class="keyword">private</span>:
-<a name="l00471"></a>00471       <span class="keyword">static</span> <span class="keywordtype">void</span> RegisterMetaTypes()
-<a name="l00472"></a>00472       {
-<a name="l00473"></a>00473         <span class="keyword">static</span> <span class="keywordtype">bool</span> registered = <span class="keyword">false</span>;
-<a name="l00474"></a>00474         <span class="keywordflow">if</span>(registered) {
-<a name="l00475"></a>00475           <span class="keywordflow">return</span>;
-<a name="l00476"></a>00476         }
-<a name="l00477"></a>00477         registered = <span class="keyword">true</span>;
-<a name="l00478"></a>00478         qRegisterMetaType&lt;QVector&lt;int&gt; &gt;(<span class="stringliteral">&quot;QVector&lt;int&gt;&quot;</span>);
-<a name="l00479"></a>00479         qRegisterMetaType&lt;QVector&lt;QByteArray&gt; &gt;(<span class="stringliteral">&quot;QVector&lt;QByteArray&gt;&quot;</span>);
-<a name="l00480"></a>00480       }
-<a name="l00481"></a>00481   };
-<a name="l00482"></a>00482 
-<a name="l00483"></a>00483 <span class="keyword">namespace </span>ShuffleRoundPrivate {
-<a name="l00490"></a><a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html">00490</a>   <span class="keyword">class </span><a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html" title="A class for handling decryption in another thread.">Decryptor</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> QRunnable {
-<a name="l00491"></a>00491     Q_OBJECT
-<a name="l00492"></a>00492 
-<a name="l00493"></a>00493     <span class="keyword">public</span>:
-<a name="l00494"></a>00494       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
-<a name="l00495"></a>00495 
-<a name="l00496"></a>00496       <a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html" title="A class for handling decryption in another thread.">Decryptor</a>(<span class="keyword">const</span> QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; &amp;keys,
-<a name="l00497"></a>00497           <span class="keyword">const</span> QVector&lt;QByteArray&gt; encrypted_data) :
-<a name="l00498"></a>00498         _keys(keys),
-<a name="l00499"></a>00499         _encrypted_data(encrypted_data)
-<a name="l00500"></a>00500       {
-<a name="l00501"></a>00501       }
-<a name="l00502"></a>00502 
-<a name="l00503"></a>00503       <span class="keyword">virtual</span> ~<a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html" title="A class for handling decryption in another thread.">Decryptor</a>()
-<a name="l00504"></a>00504       {
-<a name="l00505"></a>00505       }
-<a name="l00506"></a>00506 
-<a name="l00507"></a>00507       <span class="keyword">virtual</span> <span class="keywordtype">void</span> run();
-<a name="l00508"></a>00508 
-<a name="l00509"></a>00509     signals:
-<a name="l00510"></a>00510       <span class="keywordtype">void</span> Finished(<span class="keyword">const</span> QVector&lt;QByteArray&gt; &amp;cleartexts,
-<a name="l00511"></a>00511           <span class="keyword">const</span> QVector&lt;int&gt; &amp;bad);
-<a name="l00512"></a>00512 
-<a name="l00513"></a>00513     <span class="keyword">private</span>:
-<a name="l00514"></a>00514       QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; _keys;
-<a name="l00515"></a>00515       QVector&lt;QByteArray&gt; _encrypted_data;
-<a name="l00516"></a>00516   };
-<a name="l00517"></a>00517 }
-<a name="l00518"></a>00518 }
-<a name="l00519"></a>00519 }
-<a name="l00520"></a>00520 
-<a name="l00521"></a>00521 <span class="preprocessor">#endif</span>
+<a name="l00409"></a>00409 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 3 2012 21:25:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 4 2012 20:13:59 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
