@@ -182,6 +182,8 @@ virtual QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el"
 <tr class="memdesc:a12b849fe6db83b343f413fc93f0f9257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation of the round. <br/></td></tr>
 <tr class="memitem:ae0cfdd65d55ebd13a93c1f85e8d621d6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#ae0cfdd65d55ebd13a93c1f85e8d621d6">PeerJoined</a> ()</td></tr>
 <tr class="memdesc:ae0cfdd65d55ebd13a93c1f85e8d621d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifies this round that a peer has joined the session.  <a href="#ae0cfdd65d55ebd13a93c1f85e8d621d6"></a><br/></td></tr>
+<tr class="memitem:a2af5a7d1e455f8b6e367f10672eb2bf2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a2af5a7d1e455f8b6e367f10672eb2bf2">HandleDisconnect</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id)</td></tr>
+<tr class="memdesc:a2af5a7d1e455f8b6e367f10672eb2bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the ConnectionTable has a disconnect, the round may need to react.  <a href="#a2af5a7d1e455f8b6e367f10672eb2bf2"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a56e857ff340e6ce7000bf56956e3f0da"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a56e857ff340e6ce7000bf56956e3f0da">StateToString</a> (int state)</td></tr>
@@ -312,6 +314,33 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RoundStateMachine&lt
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a2af5a7d1e455f8b6e367f10672eb2bf2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a2af5a7d1e455f8b6e367f10672eb2bf2">Dissent::Anonymity::CSBulkRound::HandleDisconnect</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>If the ConnectionTable has a disconnect, the round may need to react. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>the peer that was disconnected </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a984c284a706d0cc6b9bfd648f40b25b9">Dissent::Anonymity::Round</a>.</p>
 
 </div>
 </div>
@@ -507,7 +536,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RoundStateMachine&lt
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 4 2012 20:13:59 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 4 2012 22:21:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
