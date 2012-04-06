@@ -184,7 +184,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00162"></a>00162         }
 <a name="l00163"></a>00163         
 <a name="l00164"></a>00164         CryptoPP::AutoSeededX917RNG&lt;CryptoPP::DES_EDE3&gt; rng;
-<a name="l00165"></a>00165         <span class="keywordflow">if</span>(<a class="code" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a20369e724019b6f54a1a25ea47d51e97" title="Returns the internal cryptomaterial.">GetCryptoMaterial</a>()-&gt;<a class="code" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#adbdabe35c79fef19a5cde39c5473d2b9" title="Prevents a remote user from giving a malicious DSA key.">Validate</a>(rng, 3)) {
+<a name="l00165"></a>00165         <span class="keywordflow">if</span>(<a class="code" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a20369e724019b6f54a1a25ea47d51e97" title="Returns the internal cryptomaterial.">GetCryptoMaterial</a>()-&gt;<a class="code" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#adbdabe35c79fef19a5cde39c5473d2b9" title="Prevents a remote user from giving a malicious DSA key.">Validate</a>(rng, 1)) {
 <a name="l00166"></a>00166           _key_size = GetGroupParameters().GetModulus().BitCount();
 <a name="l00167"></a>00167           _valid = <span class="keyword">true</span>;
 <a name="l00168"></a>00168           <span class="keywordflow">return</span> <span class="keyword">true</span>;
@@ -215,7 +215,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 4 2012 22:21:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 6 2012 14:06:23 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

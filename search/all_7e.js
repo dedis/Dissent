@@ -48,6 +48,7 @@ var searchData=
   ['_7eisink',['~ISink',['../d8/ddd/classDissent_1_1Messaging_1_1ISink.html#a6072848c84f42ece16d851a3babef03e',1,'Dissent::Messaging::ISink']]],
   ['_7eisinkobject',['~ISinkObject',['../dc/de6/classDissent_1_1Messaging_1_1ISinkObject.html#aec72bc1d4ae000146874708f3803a3e1',1,'Dissent::Messaging::ISinkObject']]],
   ['_7elibrary',['~Library',['../d1/d2f/classDissent_1_1Crypto_1_1Library.html#aaec2d69f567ca5fe1997fc4fd49e8c67',1,'Dissent::Crypto::Library']]],
+  ['_7eneffkeyshuffle',['~NeffKeyShuffle',['../d7/ddf/classDissent_1_1Anonymity_1_1NeffKeyShuffle.html#a0bfd56de8721d3357e83ee51fc186026',1,'Dissent::Anonymity::NeffKeyShuffle']]],
   ['_7enetwork',['~Network',['../db/d5e/classDissent_1_1Connections_1_1Network.html#a64d0366ca60cf52eb204bf9b13515887',1,'Dissent::Connections::Network']]],
   ['_7enode',['~Node',['../d2/d2c/classDissent_1_1Applications_1_1Node.html#a9b35a65c9d6f300859d69015286268f8',1,'Dissent::Applications::Node']]],
   ['_7enullconnection',['~NullConnection',['../da/d87/classDissent_1_1Connections_1_1NullConnection.html#a0c485ba92aec9f7e6ba598f1f88cb8ed',1,'Dissent::Connections::NullConnection']]],

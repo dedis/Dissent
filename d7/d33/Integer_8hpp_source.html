@@ -261,15 +261,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00270"></a>00270   {
 <a name="l00271"></a>00271     <span class="keywordflow">return</span> Integer(lhs.Divide(rhs));
 <a name="l00272"></a>00272   }
-<a name="l00273"></a>00273 }
-<a name="l00274"></a>00274 }
-<a name="l00275"></a>00275 
-<a name="l00276"></a>00276 <span class="preprocessor">#endif</span>
+<a name="l00273"></a>00273 
+<a name="l00279"></a>00279   <span class="keyword">inline</span> QDataStream &amp;operator&lt;&lt;(QDataStream &amp;stream, <span class="keyword">const</span> Integer &amp;value)
+<a name="l00280"></a>00280   {
+<a name="l00281"></a>00281     <span class="keywordflow">return</span> stream &lt;&lt; value.GetByteArray();
+<a name="l00282"></a>00282   }
+<a name="l00283"></a>00283 
+<a name="l00289"></a>00289   <span class="keyword">inline</span> QDataStream &amp;operator&gt;&gt;(QDataStream &amp;stream, Integer &amp;value)
+<a name="l00290"></a>00290   {
+<a name="l00291"></a>00291     QByteArray tvalue;
+<a name="l00292"></a>00292     stream &gt;&gt; tvalue;
+<a name="l00293"></a>00293     value = Integer(tvalue);
+<a name="l00294"></a>00294     <span class="keywordflow">return</span> stream;
+<a name="l00295"></a>00295   }
+<a name="l00296"></a>00296 }
+<a name="l00297"></a>00297 }
+<a name="l00298"></a>00298 
+<a name="l00299"></a>00299 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 4 2012 22:21:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 6 2012 14:06:23 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

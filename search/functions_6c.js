@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['last',['Last',['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#ae8417a030af22368911010c1f1e66438',1,'Dissent::Messaging::BufferSink']]],
+  ['last',['Last',['../d1/da7/classDissent_1_1Identity_1_1Group.html#a75eb6f493f55f0ef9d825cf1d195cbc8',1,'Dissent::Identity::Group::Last()'],['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#ae8417a030af22368911010c1f1e66438',1,'Dissent::Messaging::BufferSink::Last()']]],
   ['length',['Length',['../da/d70/classDissent_1_1Anonymity_1_1BulkRound_1_1Descriptor.html#acd71e3df798158d62808a4ddf67229fb',1,'Dissent::Anonymity::BulkRound::Descriptor']]],
   ['linkdisconnect',['LinkDisconnect',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa0cbf82c2dec62acce913e9806bc49c2',1,'Dissent::Anonymity::Session']]],
   ['loaddiffiehellman',['LoadDiffieHellman',['../d2/d65/classDissent_1_1Crypto_1_1CppDsaLibrary.html#adda546019859afae7495aae243630dd7',1,'Dissent::Crypto::CppDsaLibrary::LoadDiffieHellman()'],['../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#aff31dae5327366e7aec76345a0480b9c',1,'Dissent::Crypto::CppLibrary::LoadDiffieHellman()'],['../d1/d2f/classDissent_1_1Crypto_1_1Library.html#af264388da594ef867bde448db4d44f1e',1,'Dissent::Crypto::Library::LoadDiffieHellman()'],['../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a7d100d70f4709db9a7aa4debfa7757d1',1,'Dissent::Crypto::NullLibrary::LoadDiffieHellman()']]],

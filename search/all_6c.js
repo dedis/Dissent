@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['last',['Last',['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#ae8417a030af22368911010c1f1e66438',1,'Dissent::Messaging::BufferSink']]],
+  ['last',['Last',['../d1/da7/classDissent_1_1Identity_1_1Group.html#a75eb6f493f55f0ef9d825cf1d195cbc8',1,'Dissent::Identity::Group::Last()'],['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#ae8417a030af22368911010c1f1e66438',1,'Dissent::Messaging::BufferSink::Last()']]],
   ['leaderid',['LeaderId',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a4e7dc4cb503b765c2bf2ee31413555d7',1,'Dissent::Applications::Settings']]],
   ['length',['Length',['../da/d70/classDissent_1_1Anonymity_1_1BulkRound_1_1Descriptor.html#acd71e3df798158d62808a4ddf67229fb',1,'Dissent::Anonymity::BulkRound::Descriptor']]],
   ['library',['Library',['../d1/d2f/classDissent_1_1Crypto_1_1Library.html',1,'Dissent::Crypto']]],
