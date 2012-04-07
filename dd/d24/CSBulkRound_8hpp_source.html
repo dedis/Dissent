@@ -207,40 +207,40 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00199"></a>00199           QList&lt;QByteArray&gt; base_seeds;
 <a name="l00200"></a>00200           QVector&lt;QSharedPointer&lt;Random&gt; &gt; anonymous_rngs;
 <a name="l00201"></a>00201           QMap&lt;int, int&gt; next_messages;
-<a name="l00202"></a>00202           QByteArray cleartext;
-<a name="l00203"></a>00203 
-<a name="l00204"></a>00204           QSharedPointer&lt;AsymmetricKey&gt; anonymous_key;
-<a name="l00205"></a>00205           QByteArray shuffle_data;
-<a name="l00206"></a>00206           <span class="keywordtype">bool</span> read;
-<a name="l00207"></a>00207           <span class="keywordtype">bool</span> slot_open;
-<a name="l00208"></a>00208           <span class="keywordtype">bool</span> accuse;
-<a name="l00209"></a>00209           QByteArray next_msg;
-<a name="l00210"></a>00210           <span class="keywordtype">int</span> msg_length;
-<a name="l00211"></a>00211           <span class="keywordtype">int</span> base_msg_length;
-<a name="l00212"></a>00212           <span class="keywordtype">int</span> my_idx;
-<a name="l00213"></a>00213           Id my_server;
-<a name="l00214"></a>00214       };
-<a name="l00215"></a>00215 
-<a name="l00219"></a>00219       <span class="keyword">class </span>ServerState : <span class="keyword">public</span> State {
-<a name="l00220"></a>00220         <span class="keyword">public</span>:
-<a name="l00221"></a>00221           <span class="keyword">virtual</span> ~ServerState() {}
-<a name="l00222"></a>00222 
-<a name="l00223"></a>00223           Utils::TimerEvent client_ciphertext_period;
-<a name="l00224"></a>00224 
-<a name="l00225"></a>00225           <span class="keywordtype">int</span> phase;
-<a name="l00226"></a>00226           <span class="keywordtype">int</span> expected_messages;
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228           QByteArray my_commit;
-<a name="l00229"></a>00229           QByteArray my_ciphertext;
-<a name="l00230"></a>00230 
-<a name="l00231"></a>00231           QSet&lt;Id&gt; allowed_clients;
-<a name="l00232"></a>00232           QSet&lt;Id&gt; handled_clients;
-<a name="l00233"></a>00233           QList&lt;QByteArray&gt; client_ciphertexts;
-<a name="l00234"></a>00234 
-<a name="l00235"></a>00235           QSet&lt;Id&gt; handled_servers;
-<a name="l00236"></a>00236           QHash&lt;int, QByteArray&gt; server_commits;
-<a name="l00237"></a>00237           QHash&lt;int, QByteArray&gt; server_ciphertexts;
-<a name="l00238"></a>00238           QList&lt;QByteArray&gt; confirmations;
+<a name="l00202"></a>00202           QHash&lt;int, QByteArray&gt; signatures;
+<a name="l00203"></a>00203           QByteArray cleartext;
+<a name="l00204"></a>00204 
+<a name="l00205"></a>00205           QSharedPointer&lt;AsymmetricKey&gt; anonymous_key;
+<a name="l00206"></a>00206           QByteArray shuffle_data;
+<a name="l00207"></a>00207           <span class="keywordtype">bool</span> read;
+<a name="l00208"></a>00208           <span class="keywordtype">bool</span> slot_open;
+<a name="l00209"></a>00209           <span class="keywordtype">bool</span> accuse;
+<a name="l00210"></a>00210           QByteArray next_msg;
+<a name="l00211"></a>00211           <span class="keywordtype">int</span> msg_length;
+<a name="l00212"></a>00212           <span class="keywordtype">int</span> base_msg_length;
+<a name="l00213"></a>00213           <span class="keywordtype">int</span> my_idx;
+<a name="l00214"></a>00214           Id my_server;
+<a name="l00215"></a>00215       };
+<a name="l00216"></a>00216 
+<a name="l00220"></a>00220       <span class="keyword">class </span>ServerState : <span class="keyword">public</span> State {
+<a name="l00221"></a>00221         <span class="keyword">public</span>:
+<a name="l00222"></a>00222           <span class="keyword">virtual</span> ~ServerState() {}
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224           Utils::TimerEvent client_ciphertext_period;
+<a name="l00225"></a>00225 
+<a name="l00226"></a>00226           <span class="keywordtype">int</span> phase;
+<a name="l00227"></a>00227           <span class="keywordtype">int</span> expected_messages;
+<a name="l00228"></a>00228 
+<a name="l00229"></a>00229           QByteArray my_commit;
+<a name="l00230"></a>00230           QByteArray my_ciphertext;
+<a name="l00231"></a>00231 
+<a name="l00232"></a>00232           QSet&lt;Id&gt; allowed_clients;
+<a name="l00233"></a>00233           QSet&lt;Id&gt; handled_clients;
+<a name="l00234"></a>00234           QList&lt;QByteArray&gt; client_ciphertexts;
+<a name="l00235"></a>00235 
+<a name="l00236"></a>00236           QSet&lt;Id&gt; handled_servers;
+<a name="l00237"></a>00237           QHash&lt;int, QByteArray&gt; server_commits;
+<a name="l00238"></a>00238           QHash&lt;int, QByteArray&gt; server_ciphertexts;
 <a name="l00239"></a>00239       };
 <a name="l00240"></a>00240 
 <a name="l00244"></a>00244       <span class="keywordtype">void</span> InitServer();
@@ -288,38 +288,39 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00345"></a>00345       <span class="keywordtype">void</span> SubmitClientList();
 <a name="l00346"></a>00346       <span class="keywordtype">void</span> SubmitCommit();
 <a name="l00347"></a>00347       <span class="keywordtype">void</span> SubmitServerCiphertext();
-<a name="l00348"></a>00348       <span class="keywordtype">void</span> PushCleartext();
-<a name="l00349"></a>00349 
-<a name="l00350"></a>00350       <span class="comment">/* Below are the ciphertext generation helpers */</span>
-<a name="l00351"></a>00351       <span class="keywordtype">void</span> GenerateServerCiphertext();
-<a name="l00352"></a>00352       QByteArray GenerateCiphertext();
-<a name="l00353"></a>00353       QByteArray GenerateSlotMessage();
-<a name="l00354"></a>00354       <span class="keywordtype">bool</span> CheckData();
-<a name="l00355"></a>00355 
-<a name="l00356"></a>00356       <span class="keywordtype">void</span> ProcessCleartext();
-<a name="l00357"></a>00357       <span class="keywordtype">void</span> ConcludeClientCiphertextSubmission(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);
-<a name="l00358"></a>00358 
-<a name="l00359"></a>00359       <span class="keyword">inline</span> <span class="keywordtype">int</span> SlotHeaderLength(<span class="keywordtype">int</span> slot_idx)<span class="keyword"> const</span>
-<a name="l00360"></a>00360 <span class="keyword">      </span>{
-<a name="l00361"></a>00361         Crypto::Library *lib = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Crypto::CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>();
-<a name="l00362"></a>00362         <span class="keywordflow">return</span> 9 + lib-&gt;<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a623d4bcaf1d9aa044426bd2c701096b5" title="Returns the optimal seed size for the RNG.">RngOptimalSeedSize</a>() +
-<a name="l00363"></a>00363           (_state-&gt;anonymous_keys[slot_idx]-&gt;GetKeySize() / 8);
-<a name="l00364"></a>00364       }
-<a name="l00365"></a>00365 
-<a name="l00366"></a>00366       QSharedPointer&lt;ServerState&gt; _server_state;
-<a name="l00367"></a>00367       QSharedPointer&lt;State&gt; _state;
-<a name="l00368"></a>00368       RoundStateMachine&lt;CSBulkRound&gt; _state_machine;
-<a name="l00369"></a>00369       <span class="keywordtype">bool</span> _stop_next;
-<a name="l00370"></a>00370   };
-<a name="l00371"></a>00371 }
+<a name="l00348"></a>00348       <span class="keywordtype">void</span> SubmitValidation();
+<a name="l00349"></a>00349       <span class="keywordtype">void</span> PushCleartext();
+<a name="l00350"></a>00350 
+<a name="l00351"></a>00351       <span class="comment">/* Below are the ciphertext generation helpers */</span>
+<a name="l00352"></a>00352       <span class="keywordtype">void</span> GenerateServerCiphertext();
+<a name="l00353"></a>00353       QByteArray GenerateCiphertext();
+<a name="l00354"></a>00354       QByteArray GenerateSlotMessage();
+<a name="l00355"></a>00355       <span class="keywordtype">bool</span> CheckData();
+<a name="l00356"></a>00356 
+<a name="l00357"></a>00357       <span class="keywordtype">void</span> ProcessCleartext();
+<a name="l00358"></a>00358       <span class="keywordtype">void</span> ConcludeClientCiphertextSubmission(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);
+<a name="l00359"></a>00359 
+<a name="l00360"></a>00360       <span class="keyword">inline</span> <span class="keywordtype">int</span> SlotHeaderLength(<span class="keywordtype">int</span> slot_idx)<span class="keyword"> const</span>
+<a name="l00361"></a>00361 <span class="keyword">      </span>{
+<a name="l00362"></a>00362         Crypto::Library *lib = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Crypto::CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>();
+<a name="l00363"></a>00363         <span class="keywordflow">return</span> 9 + lib-&gt;<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a623d4bcaf1d9aa044426bd2c701096b5" title="Returns the optimal seed size for the RNG.">RngOptimalSeedSize</a>() +
+<a name="l00364"></a>00364           (_state-&gt;anonymous_keys[slot_idx]-&gt;GetKeySize() / 8);
+<a name="l00365"></a>00365       }
+<a name="l00366"></a>00366 
+<a name="l00367"></a>00367       QSharedPointer&lt;ServerState&gt; _server_state;
+<a name="l00368"></a>00368       QSharedPointer&lt;State&gt; _state;
+<a name="l00369"></a>00369       RoundStateMachine&lt;CSBulkRound&gt; _state_machine;
+<a name="l00370"></a>00370       <span class="keywordtype">bool</span> _stop_next;
+<a name="l00371"></a>00371   };
 <a name="l00372"></a>00372 }
-<a name="l00373"></a>00373 
-<a name="l00374"></a>00374 <span class="preprocessor">#endif</span>
+<a name="l00373"></a>00373 }
+<a name="l00374"></a>00374 
+<a name="l00375"></a>00375 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2012 23:15:06 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Apr 7 2012 01:31:43 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
