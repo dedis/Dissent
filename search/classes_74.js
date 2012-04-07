@@ -28,8 +28,6 @@ var searchData=
   ['tolerantbulkroundbadusercommit',['TolerantBulkRoundBadUserCommit',['../db/d56/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserCommit.html',1,'Dissent::Tests']]],
   ['tolerantbulkroundbadusermessagegenerator',['TolerantBulkRoundBadUserMessageGenerator',['../dd/db6/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserMessageGenerator.html',1,'Dissent::Tests']]],
   ['tolerantbulkroundbaduserpad',['TolerantBulkRoundBadUserPad',['../dc/ddf/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserPad.html',1,'Dissent::Tests']]],
-  ['toleranttreeround',['TolerantTreeRound',['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html',1,'Dissent::Anonymity::Tolerant']]],
-  ['toleranttreeroundbadkeyshuffler',['TolerantTreeRoundBadKeyShuffler',['../dc/dee/classDissent_1_1Tests_1_1TolerantTreeRoundBadKeyShuffler.html',1,'Dissent::Tests']]],
   ['triggerable',['Triggerable',['../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html',1,'Dissent::Utils']]],
   ['triple',['Triple',['../d8/d17/structDissent_1_1Utils_1_1Triple.html',1,'Dissent::Utils']]],
   ['tunnelconnectiontable',['TunnelConnectionTable',['../d4/df5/classDissent_1_1Tunnel_1_1TunnelConnectionTable.html',1,'Dissent::Tunnel']]]

@@ -155,16 +155,20 @@ Public Types</h2></td></tr>
 <tr class="memitem:ac12e4af519d6bb4f00577dc95327ec32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>States</b> { <br/>
 &#160;&#160;<b>OFFLINE</b> =  0, 
 <b>SHUFFLING</b>, 
+<b>PROCESS_DATA_SHUFFLE</b>, 
+<b>PROCESS_KEY_SHUFFLE</b>, 
+<br/>
+&#160;&#160;<b>PREPARE_FOR_BULK</b>, 
 <b>CLIENT_WAIT_FOR_CLEARTEXT</b>, 
 <b>SERVER_WAIT_FOR_CLIENT_CIPHERTEXT</b>, 
+<b>SERVER_WAIT_FOR_CLIENT_LISTS</b>, 
 <br/>
-&#160;&#160;<b>SERVER_WAIT_FOR_CLIENT_LISTS</b>, 
-<b>SERVER_WAIT_FOR_SERVER_COMMITS</b>, 
+&#160;&#160;<b>SERVER_WAIT_FOR_SERVER_COMMITS</b>, 
 <b>SERVER_WAIT_FOR_SERVER_CIPHERTEXT</b>, 
 <b>SERVER_WAIT_FOR_SERVER_VALIDATION</b>, 
+<b>SERVER_PUSH_CLEARTEXT</b>, 
 <br/>
-&#160;&#160;<b>SERVER_PUSH_CLEARTEXT</b>, 
-<b>FINISHED</b>
+&#160;&#160;<b>FINISHED</b>
 <br/>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
@@ -536,7 +540,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RoundStateMachine&lt
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 6 2012 14:06:23 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Apr 6 2012 23:15:06 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

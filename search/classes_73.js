@@ -5,6 +5,7 @@ var searchData=
   ['serialization',['Serialization',['../de/d19/classDissent_1_1Utils_1_1Serialization.html',1,'Dissent::Utils']]],
   ['serverstate',['ServerState',['../d3/d68/classDissent_1_1Anonymity_1_1ShuffleRound_1_1ServerState.html',1,'Dissent::Anonymity::ShuffleRound']]],
   ['session',['Session',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html',1,'Dissent::Anonymity']]],
+  ['sessioncreator',['SessionCreator',['../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html',1,'Dissent::Tests']]],
   ['sessionfactory',['SessionFactory',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html',1,'Dissent::Applications']]],
   ['sessionidservice',['SessionIdService',['../d4/df9/classDissent_1_1Web_1_1Services_1_1SessionIdService.html',1,'Dissent::Web::Services']]],
   ['sessionmanager',['SessionManager',['../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html',1,'Dissent::Anonymity']]],

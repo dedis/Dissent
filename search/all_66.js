@@ -13,7 +13,7 @@ var searchData=
   ['finishphase',['FinishPhase',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ab4d7dd08f0cfc7527a2e025f1970f677',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['forwardingsender',['ForwardingSender',['../d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html',1,'Dissent::Connections']]],
   ['forwardingsender',['ForwardingSender',['../d1/d46/classDissent_1_1Connections_1_1ForwardingSender.html#aaabaaca974a04102b96288b3161fb2a6',1,'Dissent::Connections::ForwardingSender']]],
-  ['foundbadmembers',['FoundBadMembers',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4cf62dadfa54c92699a78acf770b8a03',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound::FoundBadMembers()'],['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#af3d4164aad4c5415cbdd1829a8bb28b1',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound::FoundBadMembers()']]],
+  ['foundbadmembers',['FoundBadMembers',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4cf62dadfa54c92699a78acf770b8a03',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['foundbadslot',['FoundBadSlot',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aa6eba2f4a2b83555143a9fb46bb3eca8',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['frombytearray',['FromByteArray',['../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html#a324d41a3192798d73e4c1a33d0a8b1d2',1,'Dissent::Anonymity::Tolerant::Accusation']]],
   ['fullyconnected',['FullyConnected',['../dd/d8e/classDissent_1_1Connections_1_1FullyConnected.html#a056b650107cbfaffbfc9bc1c53496629',1,'Dissent::Connections::FullyConnected']]],

@@ -61,7 +61,7 @@ var searchData=
   ['roundstatemachine_3c_20csbulkround_20_3e',['RoundStateMachine< CSBulkRound >',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20neffkeyshuffle_20_3e',['RoundStateMachine< NeffKeyShuffle >',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20shuffleround_20_3e',['RoundStateMachine< ShuffleRound >',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
-  ['roundtypeheader',['RoundTypeHeader',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#af4564e125905bc89cdf1350ba2f8812d',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound::RoundTypeHeader()'],['../da/d9a/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantTreeRound.html#ac3d7d43c47d7e7016595478a398f2291',1,'Dissent::Anonymity::Tolerant::TolerantTreeRound::RoundTypeHeader()']]],
+  ['roundtypeheader',['RoundTypeHeader',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#af4564e125905bc89cdf1350ba2f8812d',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['rpchandler',['RpcHandler',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html',1,'Dissent::Messaging']]],
   ['rpchandler',['RpcHandler',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a748d19dff389cbaf0d1bc359cbca86b7',1,'Dissent::Messaging::RpcHandler']]],
   ['run',['Run',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a0a080a6acdff464102530c52e9904c15',1,'Dissent::Utils::Timer']]],
