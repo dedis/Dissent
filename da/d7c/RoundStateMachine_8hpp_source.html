@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00113"></a>00113         <a class="code" href="../../dd/d76/classDissent_1_1Anonymity_1_1Log.html" title="Maintains a historical mapping of a packet to an Id.">Log</a> tmp = _next_state_log;
 <a name="l00114"></a>00114         _next_state_log = <a class="code" href="../../dd/d76/classDissent_1_1Anonymity_1_1Log.html" title="Maintains a historical mapping of a packet to an Id.">Log</a>();
 <a name="l00115"></a>00115 
-<a name="l00116"></a>00116         <span class="keywordflow">if</span>(_cycle_state == GetCurrentState()-&gt;<a class="code" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a6331528ffaeca7b20f6c9a92f3db8770" title="Returns the current phase.">GetState</a>()) {
+<a name="l00116"></a>00116         <span class="keywordflow">if</span>((_cycle_state == GetCurrentState()-&gt;<a class="code" href="../../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#a6331528ffaeca7b20f6c9a92f3db8770" title="Returns the current phase.">GetState</a>()) &amp;&amp; (state == -1)) {
 <a name="l00117"></a>00117           qDebug() &lt;&lt; <span class="stringliteral">&quot;In&quot;</span> &lt;&lt; _round-&gt;ToString() &lt;&lt; <span class="stringliteral">&quot;ending phase&quot;</span>;
 <a name="l00118"></a>00118           <span class="keywordflow">if</span>(!_round-&gt;CycleComplete()) {
 <a name="l00119"></a>00119             <span class="keywordflow">return</span>;
@@ -363,7 +363,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Apr 7 2012 01:31:43 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 10 2012 05:48:24 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
