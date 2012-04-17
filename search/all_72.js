@@ -52,6 +52,7 @@ var searchData=
   ['roundcollector',['RoundCollector',['../d3/d51/classDissent_1_1Tests_1_1RoundCollector.html',1,'Dissent::Tests']]],
   ['roundfinished',['RoundFinished',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#ad2d6d06d35011e1b8ebb409fde8d138c',1,'Dissent::Anonymity::Session']]],
   ['roundidservice',['RoundIdService',['../d2/d7d/classDissent_1_1Web_1_1Services_1_1RoundIdService.html',1,'Dissent::Web::Services']]],
+  ['roundrunningpeerjoindelay',['RoundRunningPeerJoinDelay',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#ac996c56c891441f477cbd81094753fb8',1,'Dissent::Anonymity::Session']]],
   ['roundstarting',['RoundStarting',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#ab79357b1349be1c63888b6839815069f',1,'Dissent::Anonymity::Session']]],
   ['roundstatemachine',['RoundStateMachine',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine',['RoundStateMachine',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#aeb53d602176900dc60c14b592122b0ee',1,'Dissent::Anonymity::RoundStateMachine']]],
