@@ -2,6 +2,7 @@ var searchData=
 [
   ['handleacknowledgement',['HandleAcknowledgement',['../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#ae847ec5c6441e03e2eab9805cb4a954d',1,'Dissent::PeerReview::PRManager']]],
   ['handleaggregatedbulkdata',['HandleAggregatedBulkData',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a32354b11e669b9478a198f4c2a8d16e6',1,'Dissent::Anonymity::BulkRound']]],
+  ['handlebegin',['HandleBegin',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#abb75f105495abaf5a6fcdc676e8926e8',1,'Dissent::Anonymity::Session']]],
   ['handleblame',['HandleBlame',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a0ee240475fabe981f0858f1e72d18da5',1,'Dissent::Anonymity::ShuffleRound::HandleBlame()'],['../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ad2cfc19d1f2f96d9d6c35dc4d8437059',1,'Dissent::Anonymity::ShuffleRoundBlame::HandleBlame()']]],
   ['handleblameverification',['HandleBlameVerification',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aae99567c9edfd2f7cca6a08e17a4ebc7',1,'Dissent::Anonymity::ShuffleRound']]],
   ['handlebulkdata',['HandleBulkData',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a85a86a240d40295bea8daa948e956d74',1,'Dissent::Anonymity::BulkRound::HandleBulkData()'],['../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a5a7c13ec419ce879f5e2d6914f512d7c',1,'Dissent::Anonymity::RepeatingBulkRound::HandleBulkData()']]],
@@ -12,8 +13,10 @@ var searchData=
   ['handlefinishedwebrequest',['HandleFinishedWebRequest',['../db/d98/classDissent_1_1Web_1_1WebServer.html#a9357e3bbc2cc8dcdbe112a698af357f7',1,'Dissent::Web::WebServer']]],
   ['handleincomingmessage',['HandleIncomingMessage',['../de/d5b/classDissent_1_1Web_1_1Services_1_1MessageWebService.html#af5304287874cb756017a1913669e6f68',1,'Dissent::Web::Services::MessageWebService']]],
   ['handleloggedbulkdata',['HandleLoggedBulkData',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#aa5dec029308cf54355e44b444d76197a',1,'Dissent::Anonymity::BulkRound']]],
+  ['handleprepare',['HandlePrepare',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#aa782ea56aa3428cc8216dfa1d42ea1d5',1,'Dissent::Anonymity::Session']]],
   ['handleprivatekey',['HandlePrivateKey',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a5dbac05283cb1ddb946ba6cf4c916f1d',1,'Dissent::Anonymity::ShuffleRound']]],
   ['handlepublickeys',['HandlePublicKeys',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a519c1335bb701aa279e8d0fc38edd5fe',1,'Dissent::Anonymity::ShuffleRound']]],
+  ['handleregister',['HandleRegister',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#adc0f7ae19b62672256a3dd9ff1f5a242',1,'Dissent::Anonymity::Session']]],
   ['handleserveralibidata',['HandleServerAlibiData',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a4c57ddd50054723be5f4044df16a6299',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['handleserverbulkdata',['HandleServerBulkData',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#ae3a22fa09b5630394f0668f008c26bda',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['handleserverproofdata',['HandleServerProofData',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a80ceea58935d3dcd5b3785bf15b5dfde',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],

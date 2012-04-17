@@ -252,30 +252,36 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00260"></a>00260       QWeakPointer&lt;Round&gt; _shared;
 <a name="l00261"></a>00261   };
 <a name="l00262"></a>00262 
-<a name="l00263"></a>00263   <span class="keyword">typedef</span> QSharedPointer&lt;Round&gt; (*CreateRound)(<span class="keyword">const</span> Round::Group &amp;,
-<a name="l00264"></a>00264       <span class="keyword">const</span> Round::PrivateIdentity &amp;, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> &amp;,
-<a name="l00265"></a>00265       QSharedPointer&lt;Connections::Network&gt;,
-<a name="l00266"></a>00266       <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Messaging::GetDataCallback</a> &amp;get_data_cb);
-<a name="l00267"></a>00267 
-<a name="l00268"></a>00268   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; QSharedPointer&lt;Round&gt; TCreateRound(
-<a name="l00269"></a>00269       <span class="keyword">const</span> Round::Group &amp;group, <span class="keyword">const</span> Round::PrivateIdentity &amp;ident,
-<a name="l00270"></a>00270       <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> &amp;round_id,
-<a name="l00271"></a>00271       QSharedPointer&lt;Connections::Network&gt; network,
-<a name="l00272"></a>00272       <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Messaging::GetDataCallback</a> &amp;get_data)
-<a name="l00273"></a>00273   {
-<a name="l00274"></a>00274     QSharedPointer&lt;T&gt; round(<span class="keyword">new</span> T(group, ident, round_id, network, get_data));
-<a name="l00275"></a>00275     round-&gt;SetSharedPointer(round);
-<a name="l00276"></a>00276     <span class="keywordflow">return</span> round;
-<a name="l00277"></a>00277   }
-<a name="l00278"></a>00278 }
-<a name="l00279"></a>00279 }
-<a name="l00280"></a>00280 
-<a name="l00281"></a>00281 <span class="preprocessor">#endif</span>
+<a name="l00263"></a>00263   <span class="keyword">inline</span> QDebug operator&lt;&lt;(QDebug dbg, const QSharedPointer&lt;Round&gt; &amp;round)
+<a name="l00264"></a>00264   {
+<a name="l00265"></a>00265     dbg.nospace() &lt;&lt; round-&gt;ToString();
+<a name="l00266"></a>00266     <span class="keywordflow">return</span> dbg.space();
+<a name="l00267"></a>00267   }
+<a name="l00268"></a>00268 
+<a name="l00269"></a>00269   <span class="keyword">typedef</span> QSharedPointer&lt;Round&gt; (*CreateRound)(<span class="keyword">const</span> Round::Group &amp;,
+<a name="l00270"></a>00270       <span class="keyword">const</span> Round::PrivateIdentity &amp;, <span class="keyword">const</span> Connections::Id &amp;,
+<a name="l00271"></a>00271       QSharedPointer&lt;Connections::Network&gt;,
+<a name="l00272"></a>00272       Messaging::GetDataCallback &amp;get_data_cb);
+<a name="l00273"></a>00273 
+<a name="l00274"></a>00274   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; QSharedPointer&lt;Round&gt; TCreateRound(
+<a name="l00275"></a>00275       <span class="keyword">const</span> Round::Group &amp;group, <span class="keyword">const</span> Round::PrivateIdentity &amp;ident,
+<a name="l00276"></a>00276       <span class="keyword">const</span> Connections::Id &amp;round_id,
+<a name="l00277"></a>00277       QSharedPointer&lt;Connections::Network&gt; network,
+<a name="l00278"></a>00278       Messaging::GetDataCallback &amp;get_data)
+<a name="l00279"></a>00279   {
+<a name="l00280"></a>00280     QSharedPointer&lt;T&gt; round(<span class="keyword">new</span> T(group, ident, round_id, network, get_data));
+<a name="l00281"></a>00281     round-&gt;SetSharedPointer(round);
+<a name="l00282"></a>00282     <span class="keywordflow">return</span> round;
+<a name="l00283"></a>00283   }
+<a name="l00284"></a>00284 }
+<a name="l00285"></a>00285 }
+<a name="l00286"></a>00286 
+<a name="l00287"></a>00287 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 10 2012 05:48:24 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 16 2012 20:30:10 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
