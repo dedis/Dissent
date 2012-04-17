@@ -96,192 +96,196 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DISSENT_ANONYMITY_ROUND_H_GUARD</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DISSENT_ANONYMITY_ROUND_H_GUARD</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
-<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;stdexcept&gt;</span>
-<a name="l00005"></a>00005 
-<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QObject&gt;</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;QSharedPointer&gt;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;Connections/Id.hpp&quot;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;Connections/Network.hpp&quot;</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;Identity/Group.hpp&quot;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;Identity/PrivateIdentity.hpp&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;Messaging/GetDataCallback.hpp&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;Messaging/ISender.hpp&quot;</span>
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Messaging/SourceObject.hpp&quot;</span>
-<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;Utils/StartStop.hpp&quot;</span>
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018 <span class="keyword">namespace </span>Dissent {
-<a name="l00019"></a>00019 <span class="keyword">namespace </span>Connections {
-<a name="l00020"></a>00020   <span class="keyword">class </span>Connection;
-<a name="l00021"></a>00021 }
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023 <span class="keyword">namespace </span>Crypto {
-<a name="l00024"></a>00024   <span class="keyword">class </span>AsymmetricKey;
-<a name="l00025"></a>00025   <span class="keyword">class </span>DiffieHellman;
-<a name="l00026"></a>00026 }
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028 <span class="keyword">namespace </span>Messaging {
-<a name="l00029"></a>00029   <span class="keyword">class </span>Request;
-<a name="l00030"></a>00030 }
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032 <span class="keyword">namespace </span>Anonymity {
-<a name="l00036"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html">00036</a>   <span class="keyword">class </span><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group.">Round</a> : <span class="keyword">public</span> <a class="code" href="../../df/d34/classDissent_1_1Messaging_1_1SourceObject.html" title="Produces data to be received by a sink.">Messaging::SourceObject</a>,
-<a name="l00037"></a>00037       <span class="keyword">public</span> <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern.">Utils::StartStop</a>,
-<a name="l00038"></a>00038       <span class="keyword">public</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">Messaging::ISender</a>
-<a name="l00039"></a>00039   {
-<a name="l00040"></a>00040     Q_OBJECT
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042     <span class="keyword">public</span>:
-<a name="l00043"></a>00043       <span class="keyword">typedef</span> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier, takes ownership of an ...">Connections::Connection</a> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier, takes ownership of an ...">Connection</a>;
-<a name="l00044"></a>00044       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
-<a name="l00045"></a>00045       <span class="keyword">typedef</span> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Connections::Network</a> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Network</a>;
-<a name="l00046"></a>00046       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
-<a name="l00047"></a>00047       <span class="keyword">typedef</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">Crypto::DiffieHellman</a> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a>;
-<a name="l00048"></a>00048       <span class="keyword">typedef</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Identity::Group</a> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a>;
-<a name="l00049"></a>00049       <span class="keyword">typedef</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">Identity::PrivateIdentity</a> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a>;
-<a name="l00050"></a>00050       <span class="keyword">typedef</span> <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Messaging::GetDataCallback</a> <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a>;
-<a name="l00051"></a>00051       <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;
-<a name="l00052"></a>00052 
-<a name="l00061"></a>00061       <span class="keyword">explicit</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a53be917d14b58a85d6682121b0378930" title="Constructor.">Round</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group, <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident,
-<a name="l00062"></a>00062           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id, QSharedPointer&lt;Network&gt; network,
-<a name="l00063"></a>00063           <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data);
-<a name="l00064"></a>00064 
-<a name="l00068"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a6c347b6ffedc243e430a74b25b5b6ebc">00068</a>       <span class="keyword">virtual</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a6c347b6ffedc243e430a74b25b5b6ebc" title="Destructor.">~Round</a>() {}
-<a name="l00069"></a>00069 
-<a name="l00074"></a>00074       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af97a8c4f5cf9cfa2731893206c21ddbf" title="Handle a data message from a remote peer.">IncomingData</a>(<span class="keyword">const</span> Request &amp;notification);
-<a name="l00075"></a>00075 
-<a name="l00079"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a73be064860a25d98aeef2becaae13acf">00079</a>       <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a73be064860a25d98aeef2becaae13acf" title="Returns whether or not there were any problems in the round.">Successful</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _successful; }
-<a name="l00080"></a>00080 
-<a name="l00084"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6">00084</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d" title="Returns the local node&#39;s Id.">GetLocalId</a>(); }
-<a name="l00085"></a>00085 
-<a name="l00089"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4">00089</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _round_id; }
-<a name="l00090"></a>00090 
-<a name="l00094"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1">00094</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1" title="Returns the group used in the round.">GetGroup</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _group; }
-<a name="l00095"></a>00095 
-<a name="l00099"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aa90263aa8c815725746664f79ae57078">00099</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keyword">const</span> QVector&lt;int&gt; &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aa90263aa8c815725746664f79ae57078" title="Returns the list of bad nodes discovered in the round.">GetBadMembers</a>()<span class="keyword"> const</span>
-<a name="l00100"></a>00100 <span class="keyword">      </span>{
-<a name="l00101"></a>00101         <span class="keywordflow">return</span> _empty_list;
-<a name="l00102"></a>00102       }
-<a name="l00103"></a>00103 
-<a name="l00108"></a>00108       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a925b6a4edb4356ad4c9d5483499f34e1" title="Send is not implemented, it is here simply so we can reuse the Source paradigm and have the session r...">Send</a>(<span class="keyword">const</span> QByteArray &amp;data);
-<a name="l00109"></a>00109 
-<a name="l00114"></a>00114       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a984c284a706d0cc6b9bfd648f40b25b9" title="If the ConnectionTable has a disconnect, the round may need to react.">HandleDisconnect</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
-<a name="l00115"></a>00115 
-<a name="l00116"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a5d38fed9697492e00798e93d206d6ae8">00116</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QString <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a5d38fed9697492e00798e93d206d6ae8" title="Presents the ISender in a string format.">ToString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Round&quot;</span>; }
-<a name="l00117"></a>00117 
-<a name="l00122"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a41b5c54d6f3105be8ce1967d7af92951">00122</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a41b5c54d6f3105be8ce1967d7af92951" title="Notifies the round of a new peer wanting to join.">PeerJoined</a>() {}
-<a name="l00123"></a>00123 
-<a name="l00128"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a666e0e573f22a7c03fc18173b9a0337b">00128</a>       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a666e0e573f22a7c03fc18173b9a0337b" title="Returns true if the protocol supports nodes that have left the round to rejoin.">SupportsRejoins</a>() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }
-<a name="l00129"></a>00129 
-<a name="l00133"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a460ce632529c9909063fb5a435df5455">00133</a>       <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a460ce632529c9909063fb5a435df5455" title="Was the round interrupted? Should the leader interrupt others.">Interrupted</a>() { <span class="keywordflow">return</span> _interrupted; }
-<a name="l00134"></a>00134 
-<a name="l00138"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a15ea574e0c1a5761591fe13206fc7168">00138</a>       <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a15ea574e0c1a5761591fe13206fc7168" title="Round interrupted, leader should interrupt others.">SetInterrupted</a>() { _interrupted = <span class="keyword">true</span>; }
-<a name="l00139"></a>00139 
-<a name="l00140"></a>00140       <span class="keyword">inline</span> QSharedPointer&lt;Round&gt; GetSharedPointer()
-<a name="l00141"></a>00141       {
-<a name="l00142"></a>00142         <span class="keywordflow">return</span> _shared.toStrongRef();
-<a name="l00143"></a>00143       }
-<a name="l00144"></a>00144 
-<a name="l00145"></a>00145       <span class="keywordtype">void</span> SetSharedPointer(<span class="keyword">const</span> QSharedPointer&lt;Round&gt; &amp;shared)
-<a name="l00146"></a>00146       {
-<a name="l00147"></a>00147         _shared = shared.toWeakRef();
-<a name="l00148"></a>00148       }
-<a name="l00149"></a>00149 
-<a name="l00150"></a>00150     signals:
-<a name="l00154"></a>00154       <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8e666a9754d354eb3f15a19857fd23bb" title="Emitted when the Round is closed for good or bad.">Finished</a>();
-<a name="l00155"></a>00155 
-<a name="l00156"></a>00156     <span class="keyword">protected</span>:
-<a name="l00160"></a>00160       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad849ae877b7df165b857fecf3faca00b" title="Called on Round Stop.">OnStop</a>();
-<a name="l00161"></a>00161 
-<a name="l00167"></a>00167       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a9d41a75b0ee0dd73462433a0a82cb270" title="If data is from a legitimate group member, it is processed.">ProcessData</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> QByteArray &amp;data) = 0;
-<a name="l00168"></a>00168 
-<a name="l00176"></a>00176       <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a7d38c906dd83799df0a90fc413f86829" title="Verifies that the provided data has a signature block and is properly signed, returning the data bloc...">Verify</a>(<span class="keyword">const</span> Id &amp;from, <span class="keyword">const</span> QByteArray &amp;data, QByteArray &amp;msg);
-<a name="l00177"></a>00177 
-<a name="l00182"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac">00182</a>       <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(<span class="keyword">const</span> QByteArray &amp;data)
-<a name="l00183"></a>00183       {
-<a name="l00184"></a>00184         QByteArray msg = data + <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9" title="Returns the nodes signing key.">GetSigningKey</a>()-&gt;Sign(data);
-<a name="l00185"></a>00185         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4" title="Returns the underlyign network.">GetNetwork</a>()-&gt;Broadcast(msg);
-<a name="l00186"></a>00186       }
-<a name="l00187"></a>00187 
-<a name="l00193"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08">00193</a>       <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08" title="Signs and encrypts a message before sending it to a sepecific peer.">VerifiableSend</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data)
-<a name="l00194"></a>00194       {
-<a name="l00195"></a>00195         QByteArray msg = data + <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9" title="Returns the nodes signing key.">GetSigningKey</a>()-&gt;Sign(data);
-<a name="l00196"></a>00196         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4" title="Returns the underlyign network.">GetNetwork</a>()-&gt;Send(to, msg);
-<a name="l00197"></a>00197       }
-<a name="l00198"></a>00198 
-<a name="l00202"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a723a7002d50279f8dd87d2bf97dc9506">00202</a>       <span class="keyword">inline</span> <span class="keyword">const</span> QPair&lt;QByteArray, bool&gt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a723a7002d50279f8dd87d2bf97dc9506" title="Returns the data to be sent during this round.">GetData</a>(<span class="keywordtype">int</span> max)
-<a name="l00203"></a>00203       {
-<a name="l00204"></a>00204         <span class="keywordflow">return</span> _get_data_cb(max);
-<a name="l00205"></a>00205       }
-<a name="l00206"></a>00206 
-<a name="l00210"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9">00210</a>       <span class="keyword">inline</span> QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9" title="Returns the nodes signing key.">GetSigningKey</a>()<span class="keyword"> const</span>
-<a name="l00211"></a>00211 <span class="keyword">      </span>{
-<a name="l00212"></a>00212         <span class="keywordflow">return</span> _ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#af817993c826bde5d060ebc8a8c668119" title="Returns the local node&#39;s signing key.">GetSigningKey</a>();
-<a name="l00213"></a>00213       }
-<a name="l00214"></a>00214 
-<a name="l00218"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ae690ed273da72c46fbc64b65de2912a1">00218</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ae690ed273da72c46fbc64b65de2912a1" title="Returns the local credentials.">GetPrivateIdentity</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _ident; }
-<a name="l00219"></a>00219 
-<a name="l00223"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8c157e18b003a58e99f778f28e4b62a2">00223</a>       <span class="keyword">inline</span> QSharedPointer&lt;DiffieHellman&gt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8c157e18b003a58e99f778f28e4b62a2" title="Returns the DiffieHellman key.">GetDhKey</a>()<span class="keyword"> const</span>
-<a name="l00224"></a>00224 <span class="keyword">      </span>{
-<a name="l00225"></a>00225         <span class="keywordflow">return</span> _ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a41e24785922f582a3407a44864076aca" title="Returns the local node&#39;s DiffieHellman key.">GetDhKey</a>();
-<a name="l00226"></a>00226       }
-<a name="l00227"></a>00227 
-<a name="l00228"></a>00228       <span class="keywordtype">void</span> SetSuccessful(<span class="keywordtype">bool</span> successful) { _successful = successful; }
-<a name="l00229"></a>00229 
-<a name="l00233"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4">00233</a>       QSharedPointer&lt;Network&gt; &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4" title="Returns the underlyign network.">GetNetwork</a>() { <span class="keywordflow">return</span> _network; }
-<a name="l00234"></a>00234 
-<a name="l00241"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af64753d00c04b2b8867582530cfb708b">00241</a>       <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af64753d00c04b2b8867582530cfb708b" title="Used to process background events in CPU / I/O heavy portions of the code.">ProcessEvents</a>()
-<a name="l00242"></a>00242       {
-<a name="l00243"></a>00243         <span class="comment">// Safe way to ensure the round doesn&#39;t close on us unexpectedly</span>
-<a name="l00244"></a>00244         QSharedPointer&lt;Round&gt; round = GetSharedPointer();
-<a name="l00245"></a>00245         QCoreApplication::processEvents();
-<a name="l00246"></a>00246         QCoreApplication::sendPostedEvents();
-<a name="l00247"></a>00247         <span class="keywordtype">bool</span> stopped = round-&gt;Stopped();
-<a name="l00248"></a>00248         <span class="keywordflow">return</span> !stopped;
-<a name="l00249"></a>00249       }
-<a name="l00250"></a>00250 
-<a name="l00251"></a>00251     <span class="keyword">private</span>:
-<a name="l00252"></a>00252       <span class="keyword">const</span> Group _group;
-<a name="l00253"></a>00253       <span class="keyword">const</span> PrivateIdentity _ident;
-<a name="l00254"></a>00254       <span class="keyword">const</span> Id _round_id;
-<a name="l00255"></a>00255       QSharedPointer&lt;Network&gt; _network;
-<a name="l00256"></a>00256       GetDataCallback &amp;_get_data_cb;
-<a name="l00257"></a>00257       <span class="keywordtype">bool</span> _successful;
-<a name="l00258"></a>00258       QVector&lt;int&gt; _empty_list;
-<a name="l00259"></a>00259       <span class="keywordtype">bool</span> _interrupted;
-<a name="l00260"></a>00260       QWeakPointer&lt;Round&gt; _shared;
-<a name="l00261"></a>00261   };
-<a name="l00262"></a>00262 
-<a name="l00263"></a>00263   <span class="keyword">inline</span> QDebug operator&lt;&lt;(QDebug dbg, const QSharedPointer&lt;Round&gt; &amp;round)
-<a name="l00264"></a>00264   {
-<a name="l00265"></a>00265     dbg.nospace() &lt;&lt; round-&gt;ToString();
-<a name="l00266"></a>00266     <span class="keywordflow">return</span> dbg.space();
-<a name="l00267"></a>00267   }
-<a name="l00268"></a>00268 
-<a name="l00269"></a>00269   <span class="keyword">typedef</span> QSharedPointer&lt;Round&gt; (*CreateRound)(<span class="keyword">const</span> Round::Group &amp;,
-<a name="l00270"></a>00270       <span class="keyword">const</span> Round::PrivateIdentity &amp;, <span class="keyword">const</span> Connections::Id &amp;,
-<a name="l00271"></a>00271       QSharedPointer&lt;Connections::Network&gt;,
-<a name="l00272"></a>00272       Messaging::GetDataCallback &amp;get_data_cb);
-<a name="l00273"></a>00273 
-<a name="l00274"></a>00274   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; QSharedPointer&lt;Round&gt; TCreateRound(
-<a name="l00275"></a>00275       <span class="keyword">const</span> Round::Group &amp;group, <span class="keyword">const</span> Round::PrivateIdentity &amp;ident,
-<a name="l00276"></a>00276       <span class="keyword">const</span> Connections::Id &amp;round_id,
-<a name="l00277"></a>00277       QSharedPointer&lt;Connections::Network&gt; network,
-<a name="l00278"></a>00278       Messaging::GetDataCallback &amp;get_data)
-<a name="l00279"></a>00279   {
-<a name="l00280"></a>00280     QSharedPointer&lt;T&gt; round(<span class="keyword">new</span> T(group, ident, round_id, network, get_data));
-<a name="l00281"></a>00281     round-&gt;SetSharedPointer(round);
-<a name="l00282"></a>00282     <span class="keywordflow">return</span> round;
-<a name="l00283"></a>00283   }
-<a name="l00284"></a>00284 }
-<a name="l00285"></a>00285 }
-<a name="l00286"></a>00286 
-<a name="l00287"></a>00287 <span class="preprocessor">#endif</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;QDateTime&gt;</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include &lt;QObject&gt;</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include &lt;QSharedPointer&gt;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="preprocessor">#include &quot;Connections/Id.hpp&quot;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &quot;Connections/Network.hpp&quot;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &quot;Identity/Group.hpp&quot;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;Identity/PrivateIdentity.hpp&quot;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;Messaging/GetDataCallback.hpp&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;Messaging/ISender.hpp&quot;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;Messaging/SourceObject.hpp&quot;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;Utils/StartStop.hpp&quot;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="keyword">namespace </span>Dissent {
+<a name="l00018"></a>00018 <span class="keyword">namespace </span>Connections {
+<a name="l00019"></a>00019   <span class="keyword">class </span>Connection;
+<a name="l00020"></a>00020 }
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022 <span class="keyword">namespace </span>Crypto {
+<a name="l00023"></a>00023   <span class="keyword">class </span>AsymmetricKey;
+<a name="l00024"></a>00024   <span class="keyword">class </span>DiffieHellman;
+<a name="l00025"></a>00025 }
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="keyword">namespace </span>Messaging {
+<a name="l00028"></a>00028   <span class="keyword">class </span>Request;
+<a name="l00029"></a>00029 }
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031 <span class="keyword">namespace </span>Anonymity {
+<a name="l00035"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html">00035</a>   <span class="keyword">class </span><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group.">Round</a> : <span class="keyword">public</span> <a class="code" href="../../df/d34/classDissent_1_1Messaging_1_1SourceObject.html" title="Produces data to be received by a sink.">Messaging::SourceObject</a>,
+<a name="l00036"></a>00036       <span class="keyword">public</span> <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern.">Utils::StartStop</a>,
+<a name="l00037"></a>00037       <span class="keyword">public</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">Messaging::ISender</a>
+<a name="l00038"></a>00038   {
+<a name="l00039"></a>00039     Q_OBJECT
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041     <span class="keyword">public</span>:
+<a name="l00042"></a>00042       <span class="keyword">typedef</span> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier, takes ownership of an ...">Connections::Connection</a> <a class="code" href="../../da/d0e/classDissent_1_1Connections_1_1Connection.html" title="A container class linking a global identifier to a transport layer identifier, takes ownership of an ...">Connection</a>;
+<a name="l00043"></a>00043       <span class="keyword">typedef</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Connections::Id</a> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a>;
+<a name="l00044"></a>00044       <span class="keyword">typedef</span> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Connections::Network</a> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Network</a>;
+<a name="l00045"></a>00045       <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;
+<a name="l00046"></a>00046       <span class="keyword">typedef</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">Crypto::DiffieHellman</a> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange -- shared secret exchanged in plaintext.">DiffieHellman</a>;
+<a name="l00047"></a>00047       <span class="keyword">typedef</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Identity::Group</a> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a>;
+<a name="l00048"></a>00048       <span class="keyword">typedef</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">Identity::PrivateIdentity</a> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a>;
+<a name="l00049"></a>00049       <span class="keyword">typedef</span> <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">Messaging::GetDataCallback</a> <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a>;
+<a name="l00050"></a>00050       <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;
+<a name="l00051"></a>00051 
+<a name="l00060"></a>00060       <span class="keyword">explicit</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a53be917d14b58a85d6682121b0378930" title="Constructor.">Round</a>(<span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group, <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;ident,
+<a name="l00061"></a>00061           <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;round_id, QSharedPointer&lt;Network&gt; network,
+<a name="l00062"></a>00062           <a class="code" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html" title="A fancy callback holder so Round doesn&#39;t need to know about Session.">GetDataCallback</a> &amp;get_data);
+<a name="l00063"></a>00063 
+<a name="l00067"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a6c347b6ffedc243e430a74b25b5b6ebc">00067</a>       <span class="keyword">virtual</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a6c347b6ffedc243e430a74b25b5b6ebc" title="Destructor.">~Round</a>() {}
+<a name="l00068"></a>00068 
+<a name="l00073"></a>00073       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af97a8c4f5cf9cfa2731893206c21ddbf" title="Handle a data message from a remote peer.">IncomingData</a>(<span class="keyword">const</span> Request &amp;notification);
+<a name="l00074"></a>00074 
+<a name="l00078"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a73be064860a25d98aeef2becaae13acf">00078</a>       <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a73be064860a25d98aeef2becaae13acf" title="Returns whether or not there were any problems in the round.">Successful</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _successful; }
+<a name="l00079"></a>00079 
+<a name="l00083"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6">00083</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d" title="Returns the local node&#39;s Id.">GetLocalId</a>(); }
+<a name="l00084"></a>00084 
+<a name="l00088"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4">00088</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a43c973bb6b4bdb39e70547d141657ea4" title="Returns the round id.">GetRoundId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _round_id; }
+<a name="l00089"></a>00089 
+<a name="l00093"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1">00093</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1" title="Returns the group used in the round.">GetGroup</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _group; }
+<a name="l00094"></a>00094 
+<a name="l00098"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aa90263aa8c815725746664f79ae57078">00098</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keyword">const</span> QVector&lt;int&gt; &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aa90263aa8c815725746664f79ae57078" title="Returns the list of bad nodes discovered in the round.">GetBadMembers</a>()<span class="keyword"> const</span>
+<a name="l00099"></a>00099 <span class="keyword">      </span>{
+<a name="l00100"></a>00100         <span class="keywordflow">return</span> _empty_list;
+<a name="l00101"></a>00101       }
+<a name="l00102"></a>00102 
+<a name="l00107"></a>00107       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a925b6a4edb4356ad4c9d5483499f34e1" title="Send is not implemented, it is here simply so we can reuse the Source paradigm and have the session r...">Send</a>(<span class="keyword">const</span> QByteArray &amp;data);
+<a name="l00108"></a>00108 
+<a name="l00113"></a>00113       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a984c284a706d0cc6b9bfd648f40b25b9" title="If the ConnectionTable has a disconnect, the round may need to react.">HandleDisconnect</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>);
+<a name="l00114"></a>00114 
+<a name="l00115"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a5d38fed9697492e00798e93d206d6ae8">00115</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> QString <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a5d38fed9697492e00798e93d206d6ae8" title="Presents the ISender in a string format.">ToString</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="stringliteral">&quot;Round&quot;</span>; }
+<a name="l00116"></a>00116 
+<a name="l00121"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a41b5c54d6f3105be8ce1967d7af92951">00121</a>       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a41b5c54d6f3105be8ce1967d7af92951" title="Notifies the round of a new peer wanting to join.">PeerJoined</a>() {}
+<a name="l00122"></a>00122 
+<a name="l00127"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a666e0e573f22a7c03fc18173b9a0337b">00127</a>       <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a666e0e573f22a7c03fc18173b9a0337b" title="Returns true if the protocol supports nodes that have left the round to rejoin.">SupportsRejoins</a>() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }
+<a name="l00128"></a>00128 
+<a name="l00132"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a460ce632529c9909063fb5a435df5455">00132</a>       <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a460ce632529c9909063fb5a435df5455" title="Was the round interrupted? Should the leader interrupt others.">Interrupted</a>() { <span class="keywordflow">return</span> _interrupted; }
+<a name="l00133"></a>00133 
+<a name="l00137"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a15ea574e0c1a5761591fe13206fc7168">00137</a>       <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a15ea574e0c1a5761591fe13206fc7168" title="Round interrupted, leader should interrupt others.">SetInterrupted</a>() { _interrupted = <span class="keyword">true</span>; }
+<a name="l00138"></a>00138 
+<a name="l00139"></a>00139       <span class="keyword">inline</span> QSharedPointer&lt;Round&gt; GetSharedPointer()
+<a name="l00140"></a>00140       {
+<a name="l00141"></a>00141         <span class="keywordflow">return</span> _shared.toStrongRef();
+<a name="l00142"></a>00142       }
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144       <span class="keywordtype">void</span> SetSharedPointer(<span class="keyword">const</span> QSharedPointer&lt;Round&gt; &amp;shared)
+<a name="l00145"></a>00145       {
+<a name="l00146"></a>00146         _shared = shared.toWeakRef();
+<a name="l00147"></a>00147       }
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149       QDateTime GetStartTime()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _start_time; }
+<a name="l00150"></a>00150 
+<a name="l00151"></a>00151     signals:
+<a name="l00155"></a>00155       <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8e666a9754d354eb3f15a19857fd23bb" title="Emitted when the Round is closed for good or bad.">Finished</a>();
+<a name="l00156"></a>00156 
+<a name="l00157"></a>00157     <span class="keyword">protected</span>:
+<a name="l00161"></a>00161       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a16684a41ae570c20da21917845e38eb0" title="Called on Round Start.">OnStart</a>();
+<a name="l00162"></a>00162 
+<a name="l00166"></a>00166       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad849ae877b7df165b857fecf3faca00b" title="Called on Round Stop.">OnStop</a>();
+<a name="l00167"></a>00167 
+<a name="l00173"></a>00173       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a9d41a75b0ee0dd73462433a0a82cb270" title="If data is from a legitimate group member, it is processed.">ProcessData</a>(<span class="keyword">const</span> Id &amp;<span class="keywordtype">id</span>, <span class="keyword">const</span> QByteArray &amp;data) = 0;
+<a name="l00174"></a>00174 
+<a name="l00182"></a>00182       <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a7d38c906dd83799df0a90fc413f86829" title="Verifies that the provided data has a signature block and is properly signed, returning the data bloc...">Verify</a>(<span class="keyword">const</span> Id &amp;from, <span class="keyword">const</span> QByteArray &amp;data, QByteArray &amp;msg);
+<a name="l00183"></a>00183 
+<a name="l00188"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac">00188</a>       <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aaec396412bb774814126ff40014733ac" title="Signs and encrypts a message before broadcasting.">VerifiableBroadcast</a>(<span class="keyword">const</span> QByteArray &amp;data)
+<a name="l00189"></a>00189       {
+<a name="l00190"></a>00190         QByteArray msg = data + <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9" title="Returns the nodes signing key.">GetSigningKey</a>()-&gt;Sign(data);
+<a name="l00191"></a>00191         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4" title="Returns the underlyign network.">GetNetwork</a>()-&gt;Broadcast(msg);
+<a name="l00192"></a>00192       }
+<a name="l00193"></a>00193 
+<a name="l00199"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08">00199</a>       <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a319f1e5e6d5ade66b15e51e3f085ca08" title="Signs and encrypts a message before sending it to a sepecific peer.">VerifiableSend</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data)
+<a name="l00200"></a>00200       {
+<a name="l00201"></a>00201         QByteArray msg = data + <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9" title="Returns the nodes signing key.">GetSigningKey</a>()-&gt;Sign(data);
+<a name="l00202"></a>00202         <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4" title="Returns the underlyign network.">GetNetwork</a>()-&gt;Send(to, msg);
+<a name="l00203"></a>00203       }
+<a name="l00204"></a>00204 
+<a name="l00208"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a723a7002d50279f8dd87d2bf97dc9506">00208</a>       <span class="keyword">inline</span> <span class="keyword">const</span> QPair&lt;QByteArray, bool&gt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a723a7002d50279f8dd87d2bf97dc9506" title="Returns the data to be sent during this round.">GetData</a>(<span class="keywordtype">int</span> max)
+<a name="l00209"></a>00209       {
+<a name="l00210"></a>00210         <span class="keywordflow">return</span> _get_data_cb(max);
+<a name="l00211"></a>00211       }
+<a name="l00212"></a>00212 
+<a name="l00216"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9">00216</a>       <span class="keyword">inline</span> QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a3542939f9a8ceeac409017a9d4459cc9" title="Returns the nodes signing key.">GetSigningKey</a>()<span class="keyword"> const</span>
+<a name="l00217"></a>00217 <span class="keyword">      </span>{
+<a name="l00218"></a>00218         <span class="keywordflow">return</span> _ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#af817993c826bde5d060ebc8a8c668119" title="Returns the local node&#39;s signing key.">GetSigningKey</a>();
+<a name="l00219"></a>00219       }
+<a name="l00220"></a>00220 
+<a name="l00224"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ae690ed273da72c46fbc64b65de2912a1">00224</a>       <span class="keyword">inline</span> <span class="keyword">const</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html" title="A container class for holding a user&#39;s data.">PrivateIdentity</a> &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ae690ed273da72c46fbc64b65de2912a1" title="Returns the local credentials.">GetPrivateIdentity</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _ident; }
+<a name="l00225"></a>00225 
+<a name="l00229"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8c157e18b003a58e99f778f28e4b62a2">00229</a>       <span class="keyword">inline</span> QSharedPointer&lt;DiffieHellman&gt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a8c157e18b003a58e99f778f28e4b62a2" title="Returns the DiffieHellman key.">GetDhKey</a>()<span class="keyword"> const</span>
+<a name="l00230"></a>00230 <span class="keyword">      </span>{
+<a name="l00231"></a>00231         <span class="keywordflow">return</span> _ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a41e24785922f582a3407a44864076aca" title="Returns the local node&#39;s DiffieHellman key.">GetDhKey</a>();
+<a name="l00232"></a>00232       }
+<a name="l00233"></a>00233 
+<a name="l00234"></a>00234       <span class="keywordtype">void</span> SetSuccessful(<span class="keywordtype">bool</span> successful) { _successful = successful; }
+<a name="l00235"></a>00235 
+<a name="l00239"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4">00239</a>       QSharedPointer&lt;Network&gt; &amp;<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#ad683e5e2d6861d80eb100eac22e470c4" title="Returns the underlyign network.">GetNetwork</a>() { <span class="keywordflow">return</span> _network; }
+<a name="l00240"></a>00240 
+<a name="l00247"></a><a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af64753d00c04b2b8867582530cfb708b">00247</a>       <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af64753d00c04b2b8867582530cfb708b" title="Used to process background events in CPU / I/O heavy portions of the code.">ProcessEvents</a>()
+<a name="l00248"></a>00248       {
+<a name="l00249"></a>00249         <span class="comment">// Safe way to ensure the round doesn&#39;t close on us unexpectedly</span>
+<a name="l00250"></a>00250         QSharedPointer&lt;Round&gt; round = GetSharedPointer();
+<a name="l00251"></a>00251         QCoreApplication::processEvents();
+<a name="l00252"></a>00252         QCoreApplication::sendPostedEvents();
+<a name="l00253"></a>00253         <span class="keywordtype">bool</span> stopped = round-&gt;Stopped();
+<a name="l00254"></a>00254         <span class="keywordflow">return</span> !stopped;
+<a name="l00255"></a>00255       }
+<a name="l00256"></a>00256 
+<a name="l00257"></a>00257     <span class="keyword">private</span>:
+<a name="l00258"></a>00258       QDateTime _start_time;
+<a name="l00259"></a>00259       <span class="keyword">const</span> Group _group;
+<a name="l00260"></a>00260       <span class="keyword">const</span> PrivateIdentity _ident;
+<a name="l00261"></a>00261       <span class="keyword">const</span> Id _round_id;
+<a name="l00262"></a>00262       QSharedPointer&lt;Network&gt; _network;
+<a name="l00263"></a>00263       GetDataCallback &amp;_get_data_cb;
+<a name="l00264"></a>00264       <span class="keywordtype">bool</span> _successful;
+<a name="l00265"></a>00265       QVector&lt;int&gt; _empty_list;
+<a name="l00266"></a>00266       <span class="keywordtype">bool</span> _interrupted;
+<a name="l00267"></a>00267       QWeakPointer&lt;Round&gt; _shared;
+<a name="l00268"></a>00268   };
+<a name="l00269"></a>00269 
+<a name="l00270"></a>00270   <span class="keyword">inline</span> QDebug operator&lt;&lt;(QDebug dbg, const QSharedPointer&lt;Round&gt; &amp;round)
+<a name="l00271"></a>00271   {
+<a name="l00272"></a>00272     dbg.nospace() &lt;&lt; round-&gt;ToString();
+<a name="l00273"></a>00273     <span class="keywordflow">return</span> dbg.space();
+<a name="l00274"></a>00274   }
+<a name="l00275"></a>00275 
+<a name="l00276"></a>00276   <span class="keyword">typedef</span> QSharedPointer&lt;Round&gt; (*CreateRound)(<span class="keyword">const</span> Round::Group &amp;,
+<a name="l00277"></a>00277       <span class="keyword">const</span> Round::PrivateIdentity &amp;, <span class="keyword">const</span> Connections::Id &amp;,
+<a name="l00278"></a>00278       QSharedPointer&lt;Connections::Network&gt;,
+<a name="l00279"></a>00279       Messaging::GetDataCallback &amp;get_data_cb);
+<a name="l00280"></a>00280 
+<a name="l00281"></a>00281   <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt; QSharedPointer&lt;Round&gt; TCreateRound(
+<a name="l00282"></a>00282       <span class="keyword">const</span> Round::Group &amp;group, <span class="keyword">const</span> Round::PrivateIdentity &amp;ident,
+<a name="l00283"></a>00283       <span class="keyword">const</span> Connections::Id &amp;round_id,
+<a name="l00284"></a>00284       QSharedPointer&lt;Connections::Network&gt; network,
+<a name="l00285"></a>00285       Messaging::GetDataCallback &amp;get_data)
+<a name="l00286"></a>00286   {
+<a name="l00287"></a>00287     QSharedPointer&lt;T&gt; round(<span class="keyword">new</span> T(group, ident, round_id, network, get_data));
+<a name="l00288"></a>00288     round-&gt;SetSharedPointer(round);
+<a name="l00289"></a>00289     <span class="keywordflow">return</span> round;
+<a name="l00290"></a>00290   }
+<a name="l00291"></a>00291 }
+<a name="l00292"></a>00292 }
+<a name="l00293"></a>00293 
+<a name="l00294"></a>00294 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 16 2012 21:03:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 16 2012 22:46:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
