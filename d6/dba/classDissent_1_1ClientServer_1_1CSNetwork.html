@@ -144,8 +144,8 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr class="memdesc:af7a3ee7583afd7e152c5f305800ee50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor. <br/></td></tr>
 <tr class="memitem:a9446eb740dd356793d3ae9289c6700f0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a9446eb740dd356793d3ae9289c6700f0">SendNotification</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QString &amp;method, const QVariant &amp;data)</td></tr>
 <tr class="memdesc:a9446eb740dd356793d3ae9289c6700f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a notification.  <a href="#a9446eb740dd356793d3ae9289c6700f0"></a><br/></td></tr>
-<tr class="memitem:a15a60017fe4ec9cd4ea8db894ee0a02e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e">SendRequest</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QString &amp;method, const QVariant &amp;data, QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;callback)</td></tr>
-<tr class="memdesc:a15a60017fe4ec9cd4ea8db894ee0a02e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a request.  <a href="#a15a60017fe4ec9cd4ea8db894ee0a02e"></a><br/></td></tr>
+<tr class="memitem:a274b9058f7a33ba86ee975db1edcbb13"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a274b9058f7a33ba86ee975db1edcbb13">SendRequest</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QString &amp;method, const QVariant &amp;data, QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;callback, bool timeout)</td></tr>
+<tr class="memdesc:a274b9058f7a33ba86ee975db1edcbb13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a request.  <a href="#a274b9058f7a33ba86ee975db1edcbb13"></a><br/></td></tr>
 <tr class="memitem:ae3adad16d1c98f120bb790b87c781b9e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e">Send</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:ae3adad16d1c98f120bb790b87c781b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a notification -- a request without expecting a response.  <a href="#ae3adad16d1c98f120bb790b87c781b9e"></a><br/></td></tr>
 <tr class="memitem:a775a300a73be12e416b0023535e7c5ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a775a300a73be12e416b0023535e7c5ba">Broadcast</a> (const QByteArray &amp;data)</td></tr>
@@ -313,12 +313,12 @@ QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_
 
 </div>
 </div>
-<a class="anchor" id="a15a60017fe4ec9cd4ea8db894ee0a02e"></a>
+<a class="anchor" id="a274b9058f7a33ba86ee975db1edcbb13"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e">Dissent::ClientServer::CSNetwork::SendRequest</a> </td>
+          <td class="memname">virtual void <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a274b9058f7a33ba86ee975db1edcbb13">Dissent::ClientServer::CSNetwork::SendRequest</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
           <td class="paramname"><em>to</em>, </td>
@@ -339,7 +339,13 @@ QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>callback</em>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -357,11 +363,12 @@ QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_
     <tr><td class="paramname">method</td><td>the remote method </td></tr>
     <tr><td class="paramname">data</td><td>the input data for that method </td></tr>
     <tr><td class="paramname">callback</td><td>called when the request is complete </td></tr>
+    <tr><td class="paramname">timeout</td><td>specifies whether or not to let the request timeout. It is a temporary parameter that will be phased out in the future, all future Rpc Methods should be implemented with potential timeouts in mind. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented from <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#ae2e6af6b96d0d811512c64000f975e15">Dissent::Connections::DefaultNetwork</a>.</p>
+<p>Reimplemented from <a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#af65f5146b0e5043a38b046a0a2a85747">Dissent::Connections::DefaultNetwork</a>.</p>
 
 </div>
 </div>
@@ -373,7 +380,7 @@ QSharedPointer&lt; <a class="el" href="../../d9/d03/classDissent_1_1Messaging_1_
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 17 2012 23:34:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 18 2012 16:52:42 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

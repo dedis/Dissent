@@ -136,49 +136,51 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a name="l00056"></a>00056         GetRpcHandler()-&gt;SendNotification(GetSender(to), method, data);
 <a name="l00057"></a>00057       }
 <a name="l00058"></a>00058 
-<a name="l00066"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e">00066</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a15a60017fe4ec9cd4ea8db894ee0a02e" title="Send a request.">SendRequest</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QString &amp;method,
-<a name="l00067"></a>00067           <span class="keyword">const</span> QVariant &amp;data, QSharedPointer&lt;ResponseHandler&gt; &amp;callback)
-<a name="l00068"></a>00068       {
-<a name="l00069"></a>00069         GetRpcHandler()-&gt;SendRequest(GetSender(to), method, data, callback);
-<a name="l00070"></a>00070       }
-<a name="l00071"></a>00071 
-<a name="l00077"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e">00077</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">Send</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data)
-<a name="l00078"></a>00078       {
-<a name="l00079"></a>00079         <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">DefaultNetwork::Send</a>(GetSender(to), data);
-<a name="l00080"></a>00080       }
-<a name="l00081"></a>00081 
-<a name="l00086"></a>00086       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a775a300a73be12e416b0023535e7c5ba" title="Send a message to all group members.">Broadcast</a>(<span class="keyword">const</span> QByteArray &amp;data);
+<a name="l00070"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a274b9058f7a33ba86ee975db1edcbb13">00070</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a274b9058f7a33ba86ee975db1edcbb13" title="Send a request.">SendRequest</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QString &amp;method,
+<a name="l00071"></a>00071           <span class="keyword">const</span> QVariant &amp;data, QSharedPointer&lt;ResponseHandler&gt; &amp;callback,
+<a name="l00072"></a>00072           <span class="keywordtype">bool</span> timeout)
+<a name="l00073"></a>00073       {
+<a name="l00074"></a>00074         GetRpcHandler()-&gt;SendRequest(GetSender(to), method, data,
+<a name="l00075"></a>00075             callback, timeout);
+<a name="l00076"></a>00076       }
+<a name="l00077"></a>00077 
+<a name="l00083"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e">00083</a>       <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">Send</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to, <span class="keyword">const</span> QByteArray &amp;data)
+<a name="l00084"></a>00084       {
+<a name="l00085"></a>00085         <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#ae3adad16d1c98f120bb790b87c781b9e" title="Send a notification -- a request without expecting a response.">DefaultNetwork::Send</a>(GetSender(to), data);
+<a name="l00086"></a>00086       }
 <a name="l00087"></a>00087 
-<a name="l00091"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a8d66aa42a47e757d5a8be2cf82e4574b">00091</a>       <span class="keyword">virtual</span> Network *<a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a8d66aa42a47e757d5a8be2cf82e4574b" title="Returns a copy.">Clone</a>()<span class="keyword"> const</span>
-<a name="l00092"></a>00092 <span class="keyword">      </span>{
-<a name="l00093"></a>00093         <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927" title="Constructor.">CSNetwork</a>(*<span class="keyword">this</span>);
-<a name="l00094"></a>00094       }
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096     <span class="keyword">protected</span>:
-<a name="l00097"></a>00097       <span class="keyword">inline</span> QSharedPointer&lt;ISender&gt; GetSender(<span class="keyword">const</span> Id &amp;to)
-<a name="l00098"></a>00098       {
-<a name="l00099"></a>00099         QSharedPointer&lt;ISender&gt; sender = <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a957d3004185257791bf47410029f92a4" title="Returns the connection matching to the Id or 0 if none exists.">GetConnection</a>(to);
-<a name="l00100"></a>00100         <span class="keywordflow">if</span>(!sender) {
-<a name="l00101"></a>00101           sender = _forwarder-&gt;GetSender(to);
-<a name="l00102"></a>00102         }
-<a name="l00103"></a>00103         <span class="keywordflow">return</span> sender;
-<a name="l00104"></a>00104       }
-<a name="l00105"></a>00105 
-<a name="l00106"></a>00106     <span class="keyword">private</span>:
-<a name="l00107"></a>00107       QSharedPointer&lt;GroupHolder&gt; _group_holder;
-<a name="l00108"></a>00108       QSharedPointer&lt;CSForwarder&gt; _forwarder;
-<a name="l00109"></a>00109       QSharedPointer&lt;CSBroadcast&gt; _broadcaster;
-<a name="l00110"></a>00110 
-<a name="l00111"></a>00111   };
-<a name="l00112"></a>00112 }
-<a name="l00113"></a>00113 }
-<a name="l00114"></a>00114 
-<a name="l00115"></a>00115 <span class="preprocessor">#endif</span>
+<a name="l00092"></a>00092       <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a775a300a73be12e416b0023535e7c5ba" title="Send a message to all group members.">Broadcast</a>(<span class="keyword">const</span> QByteArray &amp;data);
+<a name="l00093"></a>00093 
+<a name="l00097"></a><a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a8d66aa42a47e757d5a8be2cf82e4574b">00097</a>       <span class="keyword">virtual</span> Network *<a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a8d66aa42a47e757d5a8be2cf82e4574b" title="Returns a copy.">Clone</a>()<span class="keyword"> const</span>
+<a name="l00098"></a>00098 <span class="keyword">      </span>{
+<a name="l00099"></a>00099         <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927" title="Constructor.">CSNetwork</a>(*<span class="keyword">this</span>);
+<a name="l00100"></a>00100       }
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102     <span class="keyword">protected</span>:
+<a name="l00103"></a>00103       <span class="keyword">inline</span> QSharedPointer&lt;ISender&gt; GetSender(<span class="keyword">const</span> Id &amp;to)
+<a name="l00104"></a>00104       {
+<a name="l00105"></a>00105         QSharedPointer&lt;ISender&gt; sender = <a class="code" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a957d3004185257791bf47410029f92a4" title="Returns the connection matching to the Id or 0 if none exists.">GetConnection</a>(to);
+<a name="l00106"></a>00106         <span class="keywordflow">if</span>(!sender) {
+<a name="l00107"></a>00107           sender = _forwarder-&gt;GetSender(to);
+<a name="l00108"></a>00108         }
+<a name="l00109"></a>00109         <span class="keywordflow">return</span> sender;
+<a name="l00110"></a>00110       }
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112     <span class="keyword">private</span>:
+<a name="l00113"></a>00113       QSharedPointer&lt;GroupHolder&gt; _group_holder;
+<a name="l00114"></a>00114       QSharedPointer&lt;CSForwarder&gt; _forwarder;
+<a name="l00115"></a>00115       QSharedPointer&lt;CSBroadcast&gt; _broadcaster;
+<a name="l00116"></a>00116 
+<a name="l00117"></a>00117   };
+<a name="l00118"></a>00118 }
+<a name="l00119"></a>00119 }
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121 <span class="preprocessor">#endif</span>
 </pre></div></div><!-- contents -->
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 17 2012 23:34:35 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 18 2012 16:52:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
