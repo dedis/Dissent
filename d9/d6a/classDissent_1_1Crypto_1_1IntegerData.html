@@ -149,6 +149,8 @@ const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="memdesc:a1a839dde8677f2a7b0d11236a7404ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtraction operator, produces a new <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a>.  <a href="#a1a839dde8677f2a7b0d11236a7404ba3"></a><br/></td></tr>
 <tr class="memitem:a8f7a6478b462ec9ad3f7ae7c87601334"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8f7a6478b462ec9ad3f7ae7c87601334">Divide</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *divisor) const =0</td></tr>
 <tr class="memdesc:a8f7a6478b462ec9ad3f7ae7c87601334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division operator, produces a new <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a>.  <a href="#a8f7a6478b462ec9ad3f7ae7c87601334"></a><br/></td></tr>
+<tr class="memitem:a0fdfcb0264169e9beb7cb10560f57bbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fdfcb0264169e9beb7cb10560f57bbf"></a>
+virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Modulus</b> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *modulus) const =0</td></tr>
 <tr class="memitem:ae6c2558201d2330026c1785dddb5b903"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ae6c2558201d2330026c1785dddb5b903">Pow</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *pow, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod) const =0</td></tr>
 <tr class="memdesc:ae6c2558201d2330026c1785dddb5b903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exponentiating operator.  <a href="#ae6c2558201d2330026c1785dddb5b903"></a><br/></td></tr>
 <tr class="memitem:a1fcd70ee26e8794407c253628e9e2b1c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a1fcd70ee26e8794407c253628e9e2b1c">Set</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *other)=0</td></tr>
@@ -175,6 +177,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:ac674d921a89bb50441e6028695d19a94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac674d921a89bb50441e6028695d19a94"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ac674d921a89bb50441e6028695d19a94">GetByteCount</a> () const =0</td></tr>
 <tr class="memdesc:ac674d921a89bb50441e6028695d19a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the integer's count in bytes. <br/></td></tr>
+<tr class="memitem:ac5ce98d581742ac2eb8af5f5b6b24a21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5ce98d581742ac2eb8af5f5b6b24a21"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ac5ce98d581742ac2eb8af5f5b6b24a21">GetInt32</a> () const =0</td></tr>
+<tr class="memdesc:ac5ce98d581742ac2eb8af5f5b6b24a21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns int32. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8e6a80b7a0b87232c23a0bd7f21e88a7"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8e6a80b7a0b87232c23a0bd7f21e88a7">ToBase64</a> (const QString &amp;string)</td></tr>
@@ -616,7 +621,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 18 2012 16:52:43 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 18 2012 23:42:08 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

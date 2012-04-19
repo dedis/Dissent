@@ -150,6 +150,8 @@ const CryptoPP::Integer&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memdesc:a4dcb83bb7a1c11f996852ce4c9374412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division operator, produces a new <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a>.  <a href="#a4dcb83bb7a1c11f996852ce4c9374412"></a><br/></td></tr>
 <tr class="memitem:ab8b69e8017f7cff340c456f986601574"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#ab8b69e8017f7cff340c456f986601574">Pow</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *pow, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod) const </td></tr>
 <tr class="memdesc:ab8b69e8017f7cff340c456f986601574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exponentiating operator.  <a href="#ab8b69e8017f7cff340c456f986601574"></a><br/></td></tr>
+<tr class="memitem:abb5090089e56c7f95834eca9ec0afbe6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb5090089e56c7f95834eca9ec0afbe6"></a>
+virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Modulus</b> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *modulus) const </td></tr>
 <tr class="memitem:a768af504fed58717436d16ece796d4e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a768af504fed58717436d16ece796d4e3">Set</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *other)</td></tr>
 <tr class="memdesc:a768af504fed58717436d16ece796d4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="#a768af504fed58717436d16ece796d4e3"></a><br/></td></tr>
 <tr class="memitem:aaae1f35da4799a4618a2b36ee72be868"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#aaae1f35da4799a4618a2b36ee72be868">operator+=</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *other)</td></tr>
@@ -174,6 +176,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a4bf089eae323e12040a6d5169443ad21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4bf089eae323e12040a6d5169443ad21"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a4bf089eae323e12040a6d5169443ad21">GetByteCount</a> () const </td></tr>
 <tr class="memdesc:a4bf089eae323e12040a6d5169443ad21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the integer's count in bytes. <br/></td></tr>
+<tr class="memitem:a04f0b2e57ebe8600b5faf9662b213724"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a04f0b2e57ebe8600b5faf9662b213724"></a>
+virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a04f0b2e57ebe8600b5faf9662b213724">GetInt32</a> () const </td></tr>
+<tr class="memdesc:a04f0b2e57ebe8600b5faf9662b213724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns int32. <br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a856ae755fcc5947f329d038f18b6f56f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html">CppIntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a856ae755fcc5947f329d038f18b6f56f">GetRandomInteger</a> (int bit_count, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod, bool prime)</td></tr>
@@ -708,7 +713,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>GenerateCanon
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 18 2012 16:52:43 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 18 2012 23:42:08 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
