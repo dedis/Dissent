@@ -156,8 +156,8 @@ const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.htm
 <tr class="memitem:af99ec002301b4b963e160da449bea948"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af99ec002301b4b963e160da449bea948"></a>
 const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#af99ec002301b4b963e160da449bea948">GetRemotePersistentAddress</a> () const </td></tr>
 <tr class="memdesc:af99ec002301b4b963e160da449bea948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns what is suspected to be the persistent remote address. <br/></td></tr>
-<tr class="memitem:a72aa6fd5cebe783e5308febcda6e1eeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a72aa6fd5cebe783e5308febcda6e1eeb">SetRemotePersistentAddress</a> (const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;addr)</td></tr>
-<tr class="memdesc:a72aa6fd5cebe783e5308febcda6e1eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The remote address is the one the edge is actually using, the persistent address is the one the remote side will use for new connections.  <a href="#a72aa6fd5cebe783e5308febcda6e1eeb"></a><br/></td></tr>
+<tr class="memitem:a731871ce6163d5d0c144107c7e734357"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a731871ce6163d5d0c144107c7e734357">SetRemotePersistentAddress</a> (const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;addr)</td></tr>
+<tr class="memdesc:a731871ce6163d5d0c144107c7e734357"><td class="mdescLeft">&#160;</td><td class="mdescRight">The remote address is the one the edge is actually using, the persistent address is the one the remote side will use for new connections.  <a href="#a731871ce6163d5d0c144107c7e734357"></a><br/></td></tr>
 <tr class="memitem:a43b3a3763a38d4acdd55b39a029d0b97"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a43b3a3763a38d4acdd55b39a029d0b97"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a43b3a3763a38d4acdd55b39a029d0b97">Outbound</a> () const </td></tr>
 <tr class="memdesc:a43b3a3763a38d4acdd55b39a029d0b97"><td class="mdescLeft">&#160;</td><td class="mdescRight">True if the local side requested creation of this edge. <br/></td></tr>
@@ -243,16 +243,16 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a72aa6fd5cebe783e5308febcda6e1eeb"></a>
+<a class="anchor" id="a731871ce6163d5d0c144107c7e734357"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a72aa6fd5cebe783e5308febcda6e1eeb">Dissent::Transports::Edge::SetRemotePersistentAddress</a> </td>
+          <td class="memname">virtual void <a class="el" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a731871ce6163d5d0c144107c7e734357">Dissent::Transports::Edge::SetRemotePersistentAddress</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d6/dd3/classDissent_1_1Transports_1_1Address.html">Address</a> &amp;&#160;</td>
           <td class="paramname"><em>addr</em></td><td>)</td>
-          <td><code> [inline]</code></td>
+          <td><code> [inline, virtual]</code></td>
         </tr>
       </table>
 </div>
@@ -266,6 +266,8 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="../../de/dff/classDissent_1_1Transports_1_1TcpEdge.html#a8080ead11708e2ada8edfe1ddea0e94d">Dissent::Transports::TcpEdge</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -276,7 +278,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 26 2012 12:59:11 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Apr 29 2012 17:32:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>
