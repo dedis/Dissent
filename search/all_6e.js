@@ -20,5 +20,6 @@ var searchData=
   ['nullprivatekey',['NullPrivateKey',['../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html',1,'Dissent::Crypto']]],
   ['nullpublickey',['NullPublicKey',['../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html',1,'Dissent::Crypto']]],
   ['nullround',['NullRound',['../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a8cec21fd1b0cc074c3831b22c1b05b1c',1,'Dissent::Anonymity::NullRound']]],
-  ['nullround',['NullRound',['../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html',1,'Dissent::Anonymity']]]
+  ['nullround',['NullRound',['../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html',1,'Dissent::Anonymity']]],
+  ['nullseed',['NullSeed',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a9eec79015c0ca4f6dc95da9edac40248',1,'Dissent::Anonymity::CSBulkRound']]]
 ];

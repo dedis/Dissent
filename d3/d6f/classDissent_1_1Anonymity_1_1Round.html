@@ -103,7 +103,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a>  </div>
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Anonymity::Round Class Reference</div>  </div>
 </div><!--header-->
@@ -266,6 +267,15 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
 <tr class="memdesc:ad683e5e2d6861d80eb100eac22e470c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the underlyign network. <br/></td></tr>
 <tr class="memitem:af64753d00c04b2b8867582530cfb708b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#af64753d00c04b2b8867582530cfb708b">ProcessEvents</a> ()</td></tr>
 <tr class="memdesc:af64753d00c04b2b8867582530cfb708b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to process background events in CPU / I/O heavy portions of the code.  <a href="#af64753d00c04b2b8867582530cfb708b"></a><br/></td></tr>
+<tr class="memitem:aa1e0e7059b23cbd9d45965e2c8118d32"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa1e0e7059b23cbd9d45965e2c8118d32"></a>
+QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#aa1e0e7059b23cbd9d45965e2c8118d32">GenerateData</a> (int size=DEFAULT_GENERATE_DATA_SIZE)</td></tr>
+<tr class="memdesc:aa1e0e7059b23cbd9d45965e2c8118d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random data array. <br/></td></tr>
+<tr><td colspan="2"><h2><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a100253ddbace4896214580be27628ea7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a100253ddbace4896214580be27628ea7"></a>
+static const float&#160;</td><td class="memItemRight" valign="bottom"><b>PERCENT_ACTIVE</b> = -1</td></tr>
+<tr class="memitem:a2077262bd79b325595a2d289dcefef9e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2077262bd79b325595a2d289dcefef9e"></a>
+static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GENERATE_DATA_SIZE</b> = 256</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>An anonymous exchange amongst peers of a static group. </p>
@@ -399,7 +409,7 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
 <p>Notifies the round of a new peer wanting to join. </p>
 <p>Default behavior is to do nothing and wait for the next round. </p>
 
-<p>Reimplemented in <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aac4ffe37a332fd2baf28bd33ae8c8c2e">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>, <a class="el" href="../../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#ae0cfdd65d55ebd13a93c1f85e8d621d6">Dissent::Anonymity::CSBulkRound</a>, and <a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a5fb2736bbe588993bcc17e4dca8bfbe2">Dissent::Anonymity::RepeatingBulkRound</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#ae0cfdd65d55ebd13a93c1f85e8d621d6">Dissent::Anonymity::CSBulkRound</a>, <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#aac4ffe37a332fd2baf28bd33ae8c8c2e">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>, and <a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a5fb2736bbe588993bcc17e4dca8bfbe2">Dissent::Anonymity::RepeatingBulkRound</a>.</p>
 
 </div>
 </div>
@@ -437,7 +447,7 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#ad73ceb56716507c85ff072c1a0310ed8">Dissent::Anonymity::BulkRound</a>, <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a58890f5e35c04b9db7ee3cfb0fb22ae0">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>, <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad3ff7852c3e0fd8ad391bfc77da4c479">Dissent::Anonymity::ShuffleRound</a>, <a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a279352b24be522319bbc1671157b1899">Dissent::Anonymity::RepeatingBulkRound</a>, <a class="el" href="../../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a3c9e6d70306e220b8915f36da175c6da">Dissent::Anonymity::CSBulkRound</a>, <a class="el" href="../../d7/ddf/classDissent_1_1Anonymity_1_1NeffKeyShuffle.html#a99dfc6ad8be21fb0ddf7242900d82888">Dissent::Anonymity::NeffKeyShuffle</a>, <a class="el" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb">Dissent::Anonymity::ShuffleRoundBlame</a>, and <a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#adb6b75906163f8f85cd368f94eca2939">Dissent::Anonymity::NullRound</a>.</p>
+<p>Implemented in <a class="el" href="../../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#ad73ceb56716507c85ff072c1a0310ed8">Dissent::Anonymity::BulkRound</a>, <a class="el" href="../../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a58890f5e35c04b9db7ee3cfb0fb22ae0">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>, <a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ad3ff7852c3e0fd8ad391bfc77da4c479">Dissent::Anonymity::ShuffleRound</a>, <a class="el" href="../../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a3c9e6d70306e220b8915f36da175c6da">Dissent::Anonymity::CSBulkRound</a>, <a class="el" href="../../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a279352b24be522319bbc1671157b1899">Dissent::Anonymity::RepeatingBulkRound</a>, <a class="el" href="../../d7/ddf/classDissent_1_1Anonymity_1_1NeffKeyShuffle.html#a99dfc6ad8be21fb0ddf7242900d82888">Dissent::Anonymity::NeffKeyShuffle</a>, <a class="el" href="../../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#a50ada3dc001354b0bed7b11b2c4a18cb">Dissent::Anonymity::ShuffleRoundBlame</a>, and <a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#adb6b75906163f8f85cd368f94eca2939">Dissent::Anonymity::NullRound</a>.</p>
 
 </div>
 </div>
@@ -574,7 +584,7 @@ QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 30 2012 13:54:10 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 6 2012 18:00:10 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.0
 </small></address>

@@ -9,5 +9,6 @@ var searchData=
   ['nullconnection',['NullConnection',['../da/d87/classDissent_1_1Connections_1_1NullConnection.html#a40d2986007a651535b09060ecc4aa1a9',1,'Dissent::Connections::NullConnection']]],
   ['nulldiffiehellman',['NullDiffieHellman',['../d3/da5/classDissent_1_1Crypto_1_1NullDiffieHellman.html#a8c3acd55c5bdf785b7893d5398d35481',1,'Dissent::Crypto::NullDiffieHellman']]],
   ['nulledge',['NullEdge',['../d8/d1c/classDissent_1_1Transports_1_1NullEdge.html#ad6149bedc41266ab4938d6fd51d8a69b',1,'Dissent::Transports::NullEdge']]],
-  ['nullround',['NullRound',['../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a8cec21fd1b0cc074c3831b22c1b05b1c',1,'Dissent::Anonymity::NullRound']]]
+  ['nullround',['NullRound',['../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a8cec21fd1b0cc074c3831b22c1b05b1c',1,'Dissent::Anonymity::NullRound']]],
+  ['nullseed',['NullSeed',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a9eec79015c0ca4f6dc95da9edac40248',1,'Dissent::Anonymity::CSBulkRound']]]
 ];
