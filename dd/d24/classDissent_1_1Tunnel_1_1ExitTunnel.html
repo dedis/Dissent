@@ -161,8 +161,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Stopped</b> ()</td></
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab2c2a5c9ab42e72ad519e3217e833107"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#ab2c2a5c9ab42e72ad519e3217e833107">ExitTunnel</a> (<a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html">SessionManager</a> &amp;sm, const QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; &amp;net)</td></tr>
-<tr class="memdesc:ab2c2a5c9ab42e72ad519e3217e833107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ab2c2a5c9ab42e72ad519e3217e833107"></a><br/></td></tr>
+<tr class="memitem:a3f0d24c75935e15636cd325d64aac74b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#a3f0d24c75935e15636cd325d64aac74b">ExitTunnel</a> (<a class="el" href="../../d9/da0/classDissent_1_1Anonymity_1_1SessionManager.html">SessionManager</a> &amp;sm, const QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; &amp;net, const QUrl &amp;exit_proxy=QUrl())</td></tr>
+<tr class="memdesc:a3f0d24c75935e15636cd325d64aac74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a3f0d24c75935e15636cd325d64aac74b"></a><br/></td></tr>
 <tr class="memitem:a36ec26178b1ee77ba913aa4a533407ba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36ec26178b1ee77ba913aa4a533407ba"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#a36ec26178b1ee77ba913aa4a533407ba">Start</a> ()</td></tr>
 <tr class="memdesc:a36ec26178b1ee77ba913aa4a533407ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start listening for tunnel packets from Dissent session. <br/></td></tr>
@@ -183,7 +183,7 @@ QSharedPointer&lt; <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_
 <p>It broadcasts replies from the network connection <em>non-anonymously</em> to all members of the group.</p>
 <p>!!!IMPORTANT!!! By serving as an exit node, the user running the exit node/remote tunnel gives up their anonymity. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab2c2a5c9ab42e72ad519e3217e833107"></a>
+<a class="anchor" id="a3f0d24c75935e15636cd325d64aac74b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -200,7 +200,13 @@ QSharedPointer&lt; <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>net</em>&#160;</td>
+          <td class="paramname"><em>net</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QUrl &amp;&#160;</td>
+          <td class="paramname"><em>exit_proxy</em> = <code>QUrl()</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -220,6 +226,7 @@ QSharedPointer&lt; <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_
   <table class="params">
     <tr><td class="paramname">session</td><td>manager from which to read Dissent packets </td></tr>
     <tr><td class="paramname">network</td><td>for broadcasting responses non-anonymously </td></tr>
+    <tr><td class="paramname">SOCKS5</td><td>proxy URL through which to tunnel outgoing streams </td></tr>
   </table>
   </dd>
 </dl>
@@ -266,7 +273,7 @@ QSharedPointer&lt; <a class="el" href="../../d6/d68/classDissent_1_1Anonymity_1_
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 6 2012 01:47:25 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 6 2012 17:07:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>

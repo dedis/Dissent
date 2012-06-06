@@ -20,6 +20,6 @@ var searchData=
   ['entrytunnelurl',['EntryTunnelUrl',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#afa3bc2e3076ba461c5264ae58a0d4453',1,'Dissent::Applications::Settings']]],
   ['evidencestate',['EvidenceState',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a230559c0d4914a01a35dd2cbe3cffe73',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['exittunnel',['ExitTunnel',['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html',1,'Dissent::Tunnel']]],
-  ['exittunnel',['ExitTunnel',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#aaa74c4f9611d2a2a54bb85d7e4b2f9d9',1,'Dissent::Applications::Settings::ExitTunnel()'],['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#ab2c2a5c9ab42e72ad519e3217e833107',1,'Dissent::Tunnel::ExitTunnel::ExitTunnel()']]],
+  ['exittunnel',['ExitTunnel',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#aaa74c4f9611d2a2a54bb85d7e4b2f9d9',1,'Dissent::Applications::Settings::ExitTunnel()'],['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#a3f0d24c75935e15636cd325d64aac74b',1,'Dissent::Tunnel::ExitTunnel::ExitTunnel()']]],
   ['expectedalibilength',['ExpectedAlibiLength',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a3729ba5e10fdc9623a0e2d608ce41dee',1,'Dissent::Anonymity::Tolerant::AlibiData']]]
 ];

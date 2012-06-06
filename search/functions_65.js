@@ -8,6 +8,6 @@ var searchData=
   ['entry',['Entry',['../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html#ad53df4bb0dde3628f76982d62f06745d',1,'Dissent::PeerReview::Entry']]],
   ['entrylog',['EntryLog',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#ab197cc70e169a1e78d26cb91441c54ab',1,'Dissent::PeerReview::EntryLog']]],
   ['entrytunnel',['EntryTunnel',['../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a81b13445a86d6ee969e5df3ce9a23a8d',1,'Dissent::Tunnel::EntryTunnel']]],
-  ['exittunnel',['ExitTunnel',['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#ab2c2a5c9ab42e72ad519e3217e833107',1,'Dissent::Tunnel::ExitTunnel']]],
+  ['exittunnel',['ExitTunnel',['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#a3f0d24c75935e15636cd325d64aac74b',1,'Dissent::Tunnel::ExitTunnel']]],
   ['expectedalibilength',['ExpectedAlibiLength',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a3729ba5e10fdc9623a0e2d608ce41dee',1,'Dissent::Anonymity::Tolerant::AlibiData']]]
 ];
