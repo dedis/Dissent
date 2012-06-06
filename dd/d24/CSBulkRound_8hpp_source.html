@@ -216,111 +216,112 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;          <span class="keywordtype">bool</span> slot_open;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;          <span class="keywordtype">bool</span> accuse;</div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;          QByteArray next_msg;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;          <span class="keywordtype">int</span> msg_length;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;          <span class="keywordtype">int</span> base_msg_length;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;          <span class="keywordtype">int</span> my_idx;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;          Id my_server;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      };</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;      <span class="keyword">class </span>ServerState : <span class="keyword">public</span> State {</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;          <span class="keyword">virtual</span> ~ServerState() {}</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;          Utils::TimerEvent client_ciphertext_period;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          qint64 start_of_phase;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          <span class="keywordtype">int</span> expected_clients;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;          <span class="keywordtype">int</span> phase;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;          QByteArray my_commit;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;          QByteArray my_ciphertext;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;          QSet&lt;Id&gt; allowed_clients;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;          QSet&lt;Id&gt; handled_clients;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;          QList&lt;QByteArray&gt; client_ciphertexts;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;          QSet&lt;Id&gt; handled_servers;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;          QHash&lt;int, QByteArray&gt; server_commits;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;          QHash&lt;int, QByteArray&gt; server_ciphertexts;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      };</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      <span class="keywordtype">void</span> InitServer();</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      <span class="keywordtype">void</span> InitClient();</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;      <span class="keywordtype">void</span> BeforeStateTransition();</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <span class="keywordtype">bool</span> CycleComplete();</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <span class="keywordtype">void</span> EmptyHandleMessage(<span class="keyword">const</span> Id &amp;, QDataStream &amp;)</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;Received a message into the empty handle message...&quot;</span>;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      }</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <span class="keywordtype">void</span> EmptyTransitionCallback() {}</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <span class="keyword">virtual</span> QPair&lt;QByteArray, bool&gt; GetShuffleData(<span class="keywordtype">int</span> max);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> ShuffleFinished();</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;      <span class="keywordtype">void</span> HandleClientCiphertext(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      <span class="keywordtype">void</span> HandleServerClientList(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;      <span class="keywordtype">void</span> HandleServerCommit(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      <span class="keywordtype">void</span> HandleServerCiphertext(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      <span class="keywordtype">void</span> HandleServerValidation(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      <span class="keywordtype">void</span> HandleServerCleartext(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      <span class="keywordtype">void</span> SetupRngSeeds();</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      <span class="keywordtype">void</span> SetupRngs();</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      <span class="comment">/* Below are the state transitions */</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <span class="keywordtype">void</span> StartShuffle();</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <span class="keywordtype">void</span> ProcessDataShuffle();</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;      <span class="keywordtype">void</span> ProcessKeyShuffle();</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordtype">void</span> PrepareForBulk();</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <span class="keywordtype">void</span> SubmitClientCiphertext();</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <span class="keywordtype">void</span> SetOnlineClients();</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      <span class="keywordtype">void</span> SubmitClientList();</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      <span class="keywordtype">void</span> SubmitCommit();</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      <span class="keywordtype">void</span> SubmitServerCiphertext();</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      <span class="keywordtype">void</span> SubmitValidation();</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      <span class="keywordtype">void</span> PushCleartext();</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;      <span class="comment">/* Below are the ciphertext generation helpers */</span></div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      <span class="keywordtype">void</span> GenerateServerCiphertext();</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      QByteArray GenerateCiphertext();</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      QByteArray GenerateSlotMessage();</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      <span class="keywordtype">bool</span> CheckData();</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      <span class="keywordtype">void</span> ProcessCleartext();</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="keywordtype">void</span> ConcludeClientCiphertextSubmission(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> SlotHeaderLength(<span class="keywordtype">int</span> slot_idx)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        Crypto::Library *lib = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Crypto::CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>();</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        <span class="keywordflow">return</span> 9 + lib-&gt;<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a623d4bcaf1d9aa044426bd2c701096b5" title="Returns the optimal seed size for the RNG.">RngOptimalSeedSize</a>() +</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;          (_state-&gt;anonymous_keys[slot_idx]-&gt;GetKeySize() / 8);</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      }</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;      QSharedPointer&lt;ServerState&gt; _server_state;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      QSharedPointer&lt;State&gt; _state;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      RoundStateMachine&lt;CSBulkRound&gt; _state_machine;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      <span class="keywordtype">bool</span> _stop_next;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  };</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;}</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;          QByteArray last_msg;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;          <span class="keywordtype">int</span> msg_length;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;          <span class="keywordtype">int</span> base_msg_length;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;          <span class="keywordtype">int</span> my_idx;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;          Id my_server;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      };</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;      <span class="keyword">class </span>ServerState : <span class="keyword">public</span> State {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;          <span class="keyword">virtual</span> ~ServerState() {}</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          Utils::TimerEvent client_ciphertext_period;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;          qint64 start_of_phase;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;          <span class="keywordtype">int</span> expected_clients;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;          <span class="keywordtype">int</span> phase;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;          QByteArray my_commit;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;          QByteArray my_ciphertext;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;          QSet&lt;Id&gt; allowed_clients;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;          QSet&lt;Id&gt; handled_clients;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;          QList&lt;QByteArray&gt; client_ciphertexts;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;          QSet&lt;Id&gt; handled_servers;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;          QHash&lt;int, QByteArray&gt; server_commits;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;          QHash&lt;int, QByteArray&gt; server_ciphertexts;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      };</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <span class="keywordtype">void</span> InitServer();</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordtype">void</span> InitClient();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      <span class="keywordtype">void</span> BeforeStateTransition();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <span class="keywordtype">bool</span> CycleComplete();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <span class="keywordtype">void</span> EmptyHandleMessage(<span class="keyword">const</span> Id &amp;, QDataStream &amp;)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        qDebug() &lt;&lt; <span class="stringliteral">&quot;Received a message into the empty handle message...&quot;</span>;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      }</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <span class="keywordtype">void</span> EmptyTransitionCallback() {}</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <span class="keyword">virtual</span> QPair&lt;QByteArray, bool&gt; GetShuffleData(<span class="keywordtype">int</span> max);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> ShuffleFinished();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      <span class="keywordtype">void</span> HandleClientCiphertext(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      <span class="keywordtype">void</span> HandleServerClientList(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      <span class="keywordtype">void</span> HandleServerCommit(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="keywordtype">void</span> HandleServerCiphertext(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="keywordtype">void</span> HandleServerValidation(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      <span class="keywordtype">void</span> HandleServerCleartext(<span class="keyword">const</span> Id &amp;from, QDataStream &amp;stream);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      <span class="keywordtype">void</span> SetupRngSeeds();</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      <span class="keywordtype">void</span> SetupRngs();</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <span class="comment">/* Below are the state transitions */</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      <span class="keywordtype">void</span> StartShuffle();</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;      <span class="keywordtype">void</span> ProcessDataShuffle();</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordtype">void</span> ProcessKeyShuffle();</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      <span class="keywordtype">void</span> PrepareForBulk();</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <span class="keywordtype">void</span> SubmitClientCiphertext();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;      <span class="keywordtype">void</span> SetOnlineClients();</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;      <span class="keywordtype">void</span> SubmitClientList();</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;      <span class="keywordtype">void</span> SubmitCommit();</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;      <span class="keywordtype">void</span> SubmitServerCiphertext();</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;      <span class="keywordtype">void</span> SubmitValidation();</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;      <span class="keywordtype">void</span> PushCleartext();</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      <span class="comment">/* Below are the ciphertext generation helpers */</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      <span class="keywordtype">void</span> GenerateServerCiphertext();</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;      QByteArray GenerateCiphertext();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;      QByteArray GenerateSlotMessage();</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;      <span class="keywordtype">bool</span> CheckData();</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;      <span class="keywordtype">void</span> ProcessCleartext();</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;      <span class="keywordtype">void</span> ConcludeClientCiphertextSubmission(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> SlotHeaderLength(<span class="keywordtype">int</span> slot_idx)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        Crypto::Library *lib = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Crypto::CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>();</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordflow">return</span> 9 + lib-&gt;<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a623d4bcaf1d9aa044426bd2c701096b5" title="Returns the optimal seed size for the RNG.">RngOptimalSeedSize</a>() +</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;          (_state-&gt;anonymous_keys[slot_idx]-&gt;GetKeySize() / 8);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;      }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      QSharedPointer&lt;ServerState&gt; _server_state;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      QSharedPointer&lt;State&gt; _state;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      RoundStateMachine&lt;CSBulkRound&gt; _state_machine;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      <span class="keywordtype">bool</span> _stop_next;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  };</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;}</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;}</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 6 2012 17:07:27 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 6 2012 19:22:08 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1
 </small></address>
