@@ -5,6 +5,6 @@ var searchData=
   ['localid',['LocalId',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a31f95c476ec53caa60b81ae63f11a3f5',1,'Dissent::Applications::Settings']]],
   ['localnodecount',['LocalNodeCount',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a991ba20bd6e87071a98d14afb66ab2de',1,'Dissent::Applications::Settings']]],
   ['log',['Log',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a3810ac40b82b4245a2b882e1ea0da587',1,'Dissent::Applications::Settings']]],
-  ['logoffcheckperiod',['LogOffCheckPeriod',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a72e6565a3d5b534bc41e8011f5508303',1,'Dissent::Anonymity::Session']]],
-  ['logoffperiod',['LogOffPeriod',['../d6/d68/classDissent_1_1Anonymity_1_1Session.html#a46d5617b6f2a5f932321ff337defb957',1,'Dissent::Anonymity::Session']]]
+  ['logoffcheckperiod',['LogOffCheckPeriod',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#aa2941f2baee4e8c7a66d09a57a6bbcb1',1,'Dissent::Anonymity::Sessions::SessionLeader']]],
+  ['logoffperiod',['LogOffPeriod',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#a7b9def96df3ba497ec22113097ab4902',1,'Dissent::Anonymity::Sessions::SessionLeader']]]
 ];
