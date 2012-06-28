@@ -161,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> MinimumRoundSize = 3;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keyword">const</span> GroupHolder &amp;GetGroupHolder();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keyword">const</span> QSharedPointer&lt;GroupHolder&gt; &amp;GetGroupHolder() { <span class="keywordflow">return</span> _group_holder; }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a68e25927d2b8311d2819f2d6df34fb1c" title="Older version.">CheckGroup</a>(<span class="keyword">const</span> Group &amp;group);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
@@ -185,7 +185,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#aecd3fe3c6c4a43c8cadefc18e58e9005" title="Returns true if the first time stopped.">Stop</a>();</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;      }</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a61c5bcfabce983d0b22ba9aa5ce86a53" title="From the SessionManager, pass in a ReceiveReady.">HandlePrepare</a>(<span class="keyword">const</span> Request &amp;request);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#adf0f577667b33a62dcb22f0d3c69e805" title="From the SessionManager, pass in a ReceiveReady.">HandlePrepare</a>(<span class="keyword">const</span> Request &amp;notification);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a70bdc96246db7c736456302382b7cfff" title="From the SessionManager, pass in a Begin message from the Session leader to call start on the round...">HandleBegin</a>(<span class="keyword">const</span> Request &amp;notification);</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
@@ -227,7 +227,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      QSharedPointer&lt;Round&gt; _current_round;</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      QSharedPointer&lt;ResponseHandler&gt; _registered;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      GetDataCallback _get_data_cb;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      Request _prepare_request;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      Request _prepare_notification;</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      <span class="keywordtype">bool</span> _prepare_waiting;</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <span class="keywordtype">int</span> _trim_send_queue;</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;      <span class="keywordtype">bool</span> _registering;</div>
@@ -249,7 +249,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 27 2012 15:09:40 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 28 2012 16:24:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

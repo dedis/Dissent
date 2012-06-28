@@ -140,6 +140,9 @@ virtual QVariantHash&#160;</td><td class="memItemRight" valign="bottom"><a class
 virtual QSharedPointer<br class="typebreak"/>
 &lt; <a class="el" href="../../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html">ConnectionManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#adfec973abe9adc4ea8120147abd44330">GetConnectionManager</a> () const </td></tr>
 <tr class="memdesc:adfec973abe9adc4ea8120147abd44330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a connection manager object capable of making connections. <br/></td></tr>
+<tr class="memitem:aabcf023ae22dd0f11e93dd188821890e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabcf023ae22dd0f11e93dd188821890e"></a>
+virtual <a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html">ConnectionTable</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#aabcf023ae22dd0f11e93dd188821890e">GetConnectionTable</a> () const </td></tr>
+<tr class="memdesc:aabcf023ae22dd0f11e93dd188821890e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the <a class="el" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> related to the internal connection manager. <br/></td></tr>
 <tr class="memitem:abce458ee0c4dd01d51a8e09d07427334"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#abce458ee0c4dd01d51a8e09d07427334">SendNotification</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QString &amp;method, const QVariant &amp;data)</td></tr>
 <tr class="memdesc:abce458ee0c4dd01d51a8e09d07427334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a notification.  <a href="#abce458ee0c4dd01d51a8e09d07427334"></a><br/></td></tr>
 <tr class="memitem:af65f5146b0e5043a38b046a0a2a85747"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#af65f5146b0e5043a38b046a0a2a85747">SendRequest</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;to, const QString &amp;method, const QVariant &amp;data, QSharedPointer&lt; <a class="el" href="../../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html">ResponseHandler</a> &gt; &amp;callback, bool timeout)</td></tr>
@@ -148,6 +151,8 @@ virtual QSharedPointer<br class="typebreak"/>
 <tr class="memdesc:aa81aaf966e15eabee72ea40572c3647b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a notification &ndash; a request without expecting a response.  <a href="#aa81aaf966e15eabee72ea40572c3647b"></a><br/></td></tr>
 <tr class="memitem:a3eb9e8de70bf1f529afd2c329b98e22d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a3eb9e8de70bf1f529afd2c329b98e22d">Broadcast</a> (const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a3eb9e8de70bf1f529afd2c329b98e22d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to all group members.  <a href="#a3eb9e8de70bf1f529afd2c329b98e22d"></a><br/></td></tr>
+<tr class="memitem:a08ed3ca4e5ad4ae4e917cde960271af3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a08ed3ca4e5ad4ae4e917cde960271af3">Broadcast</a> (const QString &amp;method, const QVariant &amp;data)</td></tr>
+<tr class="memdesc:a08ed3ca4e5ad4ae4e917cde960271af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a notification to all group members.  <a href="#a08ed3ca4e5ad4ae4e917cde960271af3"></a><br/></td></tr>
 <tr class="memitem:a087c1b85ab4e77c6d62f7d114bc53612"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d45/classDissent_1_1Connections_1_1DefaultNetwork.html#a087c1b85ab4e77c6d62f7d114bc53612">Register</a> (const QString &amp;name, const QObject *obj, const char *method)</td></tr>
 <tr class="memdesc:a087c1b85ab4e77c6d62f7d114bc53612"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a callback into the specified object.  <a href="#a087c1b85ab4e77c6d62f7d114bc53612"></a><br/></td></tr>
 <tr class="memitem:a49a29c8a6df983c0183a41327856a86c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a49a29c8a6df983c0183a41327856a86c"></a>
@@ -243,6 +248,53 @@ QSharedPointer&lt; <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_
 <p>Implements <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a2bf529b0a23d51d1b0f815165df4c6a6">Dissent::Connections::Network</a>.</p>
 
 <p>Reimplemented in <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a775a300a73be12e416b0023535e7c5ba">Dissent::ClientServer::CSNetwork</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a08ed3ca4e5ad4ae4e917cde960271af3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Dissent::Connections::DefaultNetwork::Broadcast </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVariant &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send a notification to all group members. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>The Rpc to call </td></tr>
+    <tr><td class="paramname">data</td><td>Data to be sent to all members </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html#a5ae991b0ed90a68f130c440ebb868191">Dissent::Connections::Network</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#aeed3f6106ee896233e11b90b6640410c">Dissent::ClientServer::CSNetwork</a>.</p>
 
 </div>
 </div>
@@ -575,7 +627,7 @@ QSharedPointer&lt; <a class="el" href="../../dc/d59/classDissent_1_1Messaging_1_
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 27 2012 15:09:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 28 2012 16:24:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

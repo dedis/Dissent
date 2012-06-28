@@ -124,17 +124,55 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a819716d36007448e212150e3b4ef282f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a819716d36007448e212150e3b4ef282f"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d95/classDissent_1_1ClientServer_1_1CSBroadcast.html#a819716d36007448e212150e3b4ef282f">~CSBroadcast</a> ()</td></tr>
 <tr class="memdesc:a819716d36007448e212150e3b4ef282f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
+<tr class="memitem:a3aa30616f49f3551be3a72d409d6dcd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d95/classDissent_1_1ClientServer_1_1CSBroadcast.html#a3aa30616f49f3551be3a72d409d6dcd6">Broadcast</a> (const QString &amp;method, const QVariant &amp;data)</td></tr>
+<tr class="memdesc:a3aa30616f49f3551be3a72d409d6dcd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a notification to all group members.  <a href="#a3aa30616f49f3551be3a72d409d6dcd6"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Creates a broadcast tree using the <a class="el" href="../../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html" title="A single member in a Gossip overlay, which attempts to connect all nodes in the overlay to every othe...">CSOverlay</a> used internally by <a class="el" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html">CSNetwork</a>. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a3aa30616f49f3551be3a72d409d6dcd6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dissent::ClientServer::CSBroadcast::Broadcast </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QVariant &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a notification to all group members. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>The Rpc to call </td></tr>
+    <tr><td class="paramname">data</td><td>Data to be sent to all members </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/ClientServer/<a class="el" href="../../d3/dfe/CSBroadcast_8hpp_source.html">CSBroadcast.hpp</a></li>
 <li>src/ClientServer/CSBroadcast.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 27 2012 15:09:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 28 2012 16:24:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

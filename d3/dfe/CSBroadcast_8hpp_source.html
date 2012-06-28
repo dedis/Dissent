@@ -120,33 +120,35 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../d0/d95/classDissent_1_1ClientServer_1_1CSBroadcast.html#a819716d36007448e212150e3b4ef282f" title="Destructor.">~CSBroadcast</a>();</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">inline</span> QSharedPointer&lt;ISender&gt; GetSender(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        QSharedPointer&lt;ISender&gt; sender =</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          _cm-&gt;GetConnectionTable().GetConnection(to);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span>(!sender) {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          sender = _forwarder-&gt;GetSender(to);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> sender;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      QSharedPointer&lt;ConnectionManager&gt; _cm;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      QSharedPointer&lt;RpcHandler&gt; _rpc;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      QSharedPointer&lt;GroupHolder&gt; _group_holder;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      QSharedPointer&lt;CSForwarder&gt; _forwarder;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordtype">void</span> BroadcastHelper(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  };</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d0/d95/classDissent_1_1ClientServer_1_1CSBroadcast.html#a3aa30616f49f3551be3a72d409d6dcd6" title="Send a notification to all group members.">Broadcast</a>(<span class="keyword">const</span> QString &amp;method, <span class="keyword">const</span> QVariant &amp;data);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">inline</span> QSharedPointer&lt;ISender&gt; GetSender(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;to)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        QSharedPointer&lt;ISender&gt; sender =</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          _cm-&gt;GetConnectionTable().GetConnection(to);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span>(!sender) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          sender = _forwarder-&gt;GetSender(to);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> sender;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      QSharedPointer&lt;ConnectionManager&gt; _cm;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      QSharedPointer&lt;RpcHandler&gt; _rpc;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      QSharedPointer&lt;GroupHolder&gt; _group_holder;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      QSharedPointer&lt;CSForwarder&gt; _forwarder;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordtype">void</span> BroadcastHelper(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  };</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 27 2012 15:09:40 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 28 2012 16:24:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

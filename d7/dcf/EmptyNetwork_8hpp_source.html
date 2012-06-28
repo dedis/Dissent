@@ -150,32 +150,42 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      {</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a5c998d6301088f7f31171c06bd326f48">   98</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a5c998d6301088f7f31171c06bd326f48" title="Does nothing.">Send</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;, <span class="keyword">const</span> QByteArray &amp;)</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#ad8c6240f47401f1e80528f38ca73e194">   98</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#aa9dc8351cec1c207c23c3c37f9a27e10" title="Does nothing.">Broadcast</a>(<span class="keyword">const</span> QString &amp;, <span class="keyword">const</span> QVariant &amp;)</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      {</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      }</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#ab40ede6000509f99433a709a39940854">  105</a></span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Network</a> *<a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#ab40ede6000509f99433a709a39940854" title="Returns a copy of this object.">Clone</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html">EmptyNetwork</a>(*<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a4afd88d937d0f874b70839fc133e9780">  116</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a4afd88d937d0f874b70839fc133e9780" title="Register a callback into the specified object.">Register</a>(<span class="keyword">const</span> QString &amp;, <span class="keyword">const</span> QObject *, <span class="keyword">const</span> <span class="keywordtype">char</span> *)</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html">EmptyNetwork</a>() {}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      EmptyNetwork(<span class="keyword">const</span> EmptyNetwork &amp;) : Network() {}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  };</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a5c998d6301088f7f31171c06bd326f48">  105</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a5c998d6301088f7f31171c06bd326f48" title="Does nothing.">Send</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;, <span class="keyword">const</span> QByteArray &amp;)</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#ab40ede6000509f99433a709a39940854">  112</a></span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html" title="Used to transmit data across the overlay while abstracting interaction directly w/ the overlay and ot...">Network</a> *<a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#ab40ede6000509f99433a709a39940854" title="Returns a copy of this object.">Clone</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html">EmptyNetwork</a>(*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a4afd88d937d0f874b70839fc133e9780">  120</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#a4afd88d937d0f874b70839fc133e9780" title="Does nothing.">Register</a>(<span class="keyword">const</span> QString &amp;, <span class="keyword">const</span> QObject *, <span class="keyword">const</span> <span class="keywordtype">char</span> *)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#aeb9a429269b348d0334db80e4c3c2d54">  125</a></span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> &amp;<a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html#aeb9a429269b348d0334db80e4c3c2d54" title="Returns the ConnectionTable related to the internal connection manager.">GetConnectionTable</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html" title="Contains mappings for remote peers.">ConnectionTable</a> ct;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> ct;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../d2/d79/classDissent_1_1Connections_1_1EmptyNetwork.html">EmptyNetwork</a>() {}</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      EmptyNetwork(<span class="keyword">const</span> EmptyNetwork &amp;) : Network() {}</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  };</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 27 2012 15:09:40 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jun 28 2012 16:24:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>
