@@ -164,41 +164,43 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;          node-&gt;net = QSharedPointer&lt;Network&gt;(<span class="keyword">new</span> <a class="code" href="../../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html">CSNetwork</a>(node-&gt;cm, node-&gt;rpc, gh));</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        QSharedPointer&lt;Session&gt; session(<span class="keyword">new</span> <a class="code" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a>(gh, node-&gt;ident,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;              session_id, node-&gt;net, _create_round));</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        session-&gt;SetSharedPointer(session);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        node-&gt;session = session;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        session-&gt;SetSink(&amp;node-&gt;sink);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        node-&gt;sm.<a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#ac0b6bccdd0d4ba705c6f41a8a8eb1774" title="Adds a Session for the SessionManager to handle.">AddSession</a>(node-&gt;session);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        QObject::connect(session.data(), SIGNAL(RoundFinished(QSharedPointer&lt;Round&gt;)),</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            node, SLOT(HandleRoundFinished(QSharedPointer&lt;Round&gt;)));</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span>(node-&gt;ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d" title="Returns the local node&#39;s Id.">GetLocalId</a>() == group.<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a0f104f53515b29d6c3f9665b630ddc28" title="Returns the leader of the group.">GetLeader</a>()) {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          QSharedPointer&lt;SessionLeader&gt; sl(<span class="keyword">new</span> <a class="code" href="../../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">SessionLeader</a>(</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                group, node-&gt;ident, node-&gt;net, session));</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          node-&gt;sm.<a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#aaa0a327c3f068f3808f734f83fe236a3" title="Adds a SessionLeader for the SessionManager to handle.">AddSessionLeader</a>(sl);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          sl-&gt;Start();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> session;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      CreateRound _create_round;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  };</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">void</span> CreateSessions(<span class="keyword">const</span> QVector&lt;TestNode *&gt; &amp;nodes, <span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id, <a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordtype">void</span> CleanUp(<span class="keyword">const</span> QVector&lt;TestNode *&gt; &amp;nodes);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        QSharedPointer&lt;IAuthenticate&gt; authe(<span class="keyword">new</span> <a class="code" href="../../d1/dc7/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticate.html" title="Implements a authenticating member who expects to always return true.">NullAuthenticate</a>(node-&gt;ident));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        QSharedPointer&lt;Session&gt; session(<span class="keyword">new</span> <a class="code" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a>(gh, authe,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;              session_id, node-&gt;net, _create_round));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        session-&gt;SetSharedPointer(session);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        node-&gt;session = session;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        session-&gt;SetSink(&amp;node-&gt;sink);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        node-&gt;sm.<a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#ac0b6bccdd0d4ba705c6f41a8a8eb1774" title="Adds a Session for the SessionManager to handle.">AddSession</a>(node-&gt;session);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        QObject::connect(session.data(), SIGNAL(RoundFinished(QSharedPointer&lt;Round&gt;)),</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            node, SLOT(HandleRoundFinished(QSharedPointer&lt;Round&gt;)));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span>(node-&gt;ident.<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d" title="Returns the local node&#39;s Id.">GetLocalId</a>() == group.<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#a0f104f53515b29d6c3f9665b630ddc28" title="Returns the leader of the group.">GetLeader</a>()) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          QSharedPointer&lt;IAuthenticator&gt; autho(<span class="keyword">new</span> <a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html" title="Implements an authenticating agent that always authenticates everyone.">NullAuthenticator</a>());</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          QSharedPointer&lt;SessionLeader&gt; sl(<span class="keyword">new</span> <a class="code" href="../../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">SessionLeader</a>(</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                group, node-&gt;ident, node-&gt;net, session, autho));</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          node-&gt;sm.<a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#aaa0a327c3f068f3808f734f83fe236a3" title="Adds a SessionLeader for the SessionManager to handle.">AddSessionLeader</a>(sl);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          sl-&gt;Start();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> session;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      CreateRound _create_round;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  };</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> CreateSessions(<span class="keyword">const</span> QVector&lt;TestNode *&gt; &amp;nodes, <span class="keyword">const</span> <a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html" title="Members of an anonymity session sorted in ascending order.">Group</a> &amp;group,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id, <a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">void</span> CleanUp(<span class="keyword">const</span> QVector&lt;TestNode *&gt; &amp;nodes);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 28 2012 16:24:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 29 2012 16:15:32 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

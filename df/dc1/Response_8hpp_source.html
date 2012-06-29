@@ -101,101 +101,102 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keyword">enum</span> ErrorTypes {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        CorruptResponse,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        InvalidInput,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        InvalidMessage,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        InvalidMethod,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        InvalidPermissions,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        NoError,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        Other,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        Timeout,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        WrongDestination,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      };</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1a4d69185826883f5503dfa7d81c4fa">   34</a></span>&#160;      <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1a4d69185826883f5503dfa7d81c4fa" title="Constructor.">Response</a>(<span class="keyword">const</span> QSharedPointer&lt;ISender&gt; &amp;from,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          <span class="keyword">const</span> QVariantList &amp;container) :</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        _from(from),</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        _container(container)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">while</span>(_container.size() &lt; 4) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          _container.append(QVariant());</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1bcc40285644891338a9c3e78676fdd">   49</a></span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> QVariantList <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1bcc40285644891338a9c3e78676fdd" title="Helper function for building a data structure for a response.">Build</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> QVariant &amp;data)</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        QVariantList container;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        container.append(ResponseType);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        container.append(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        container.append(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        container.append(data);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> container;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a9c67dca5b95f14d056e6fb47766527b5">   64</a></span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> QVariantList <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a9c67dca5b95f14d056e6fb47766527b5" title="Helper function for building a data structure for a failed request.">Failed</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, ErrorTypes error,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">const</span> QString &amp;reason, <span class="keyword">const</span> QVariant &amp;data = QVariant())</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        QVariantList container;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        container.append(ResponseType);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        container.append(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        container.append(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        container.append(error);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        container.append(reason);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        container.append(data);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> container;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#ac8b185639f819182a565183ab1bbd4b5">   80</a></span>&#160;      <span class="keyword">inline</span> QSharedPointer&lt;ISender&gt; <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#ac8b185639f819182a565183ab1bbd4b5" title="Pathway back to the remote peer.">GetFrom</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _from; }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a3a5fdc43c636e6934de7729f2f3791d0">   85</a></span>&#160;      <span class="keyword">inline</span> QString <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a3a5fdc43c636e6934de7729f2f3791d0" title="Notification / Response.">GetType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _container.at(0).toString(); }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a86f8cb6291c598828b8c200bd48b6cd4">   90</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a86f8cb6291c598828b8c200bd48b6cd4" title="Unique Id from sender.">GetId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _container.at(1).toInt(); }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91">   95</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _container.at(2).toBool(); }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a9e2374ca4571e2bc855f828adbe7ce5e">  100</a></span>&#160;      <span class="keyword">inline</span> QVariant <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a9e2374ca4571e2bc855f828adbe7ce5e" title="Return data.">GetData</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>() ? _container.at(3) : QVariant();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      ErrorTypes GetErrorType()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>()) {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;          <span class="keywordflow">return</span> NoError;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(_container.size() &lt; 6) {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;          <span class="keywordflow">return</span> CorruptResponse;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>ErrorTypes<span class="keyword">&gt;</span>(_container.at(3).toInt());</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a257efe41bd82a2c4cf12bc5a9bdd33b8">  118</a></span>&#160;      QString <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a257efe41bd82a2c4cf12bc5a9bdd33b8" title="Returns the error string, if unsuccessful is true.">GetError</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>() || _container.size() &lt; 6) {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;          <span class="keywordflow">return</span> QString();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        } </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> _container.at(4).toString();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      }</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00129"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a3b4c0be7b16dc734a5743dbd63cbb7e3">  129</a></span>&#160;      QVariant <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a3b4c0be7b16dc734a5743dbd63cbb7e3" title="Returns any additional error data.">GetErrorData</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>() &amp;&amp; _container.size() &lt; 6) {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;          <span class="keywordflow">return</span> QVariant();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">return</span> _container.at(5);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keyword">static</span> <span class="keyword">const</span> QString ResponseType;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      QSharedPointer&lt;ISender&gt; _from;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      QVariantList _container;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  };</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        InvalidSender,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        InvalidInput,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        InvalidMessage,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        InvalidMethod,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        InvalidPermissions,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        NoError,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        Other,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        Timeout,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        WrongDestination,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1a4d69185826883f5503dfa7d81c4fa">   35</a></span>&#160;      <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1a4d69185826883f5503dfa7d81c4fa" title="Constructor.">Response</a>(<span class="keyword">const</span> QSharedPointer&lt;ISender&gt; &amp;from,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          <span class="keyword">const</span> QVariantList &amp;container) :</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        _from(from),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        _container(container)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">while</span>(_container.size() &lt; 4) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          _container.append(QVariant());</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1bcc40285644891338a9c3e78676fdd">   50</a></span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> QVariantList <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1bcc40285644891338a9c3e78676fdd" title="Helper function for building a data structure for a response.">Build</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> QVariant &amp;data)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        QVariantList container;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        container.append(ResponseType);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        container.append(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        container.append(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        container.append(data);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> container;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a9c67dca5b95f14d056e6fb47766527b5">   65</a></span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> QVariantList <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a9c67dca5b95f14d056e6fb47766527b5" title="Helper function for building a data structure for a failed request.">Failed</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, ErrorTypes error,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          <span class="keyword">const</span> QString &amp;reason, <span class="keyword">const</span> QVariant &amp;data = QVariant())</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        QVariantList container;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        container.append(ResponseType);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        container.append(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        container.append(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        container.append(error);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        container.append(reason);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        container.append(data);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> container;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#ac8b185639f819182a565183ab1bbd4b5">   81</a></span>&#160;      <span class="keyword">inline</span> QSharedPointer&lt;ISender&gt; <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#ac8b185639f819182a565183ab1bbd4b5" title="Pathway back to the remote peer.">GetFrom</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _from; }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a3a5fdc43c636e6934de7729f2f3791d0">   86</a></span>&#160;      <span class="keyword">inline</span> QString <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a3a5fdc43c636e6934de7729f2f3791d0" title="Notification / Response.">GetType</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _container.at(0).toString(); }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a86f8cb6291c598828b8c200bd48b6cd4">   91</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a86f8cb6291c598828b8c200bd48b6cd4" title="Unique Id from sender.">GetId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _container.at(1).toInt(); }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91">   96</a></span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _container.at(2).toBool(); }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a9e2374ca4571e2bc855f828adbe7ce5e">  101</a></span>&#160;      <span class="keyword">inline</span> QVariant <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a9e2374ca4571e2bc855f828adbe7ce5e" title="Return data.">GetData</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>() ? _container.at(3) : QVariant();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      ErrorTypes GetErrorType()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>()) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;          <span class="keywordflow">return</span> NoError;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(_container.size() &lt; 6) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;          <span class="keywordflow">return</span> CorruptResponse;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>ErrorTypes<span class="keyword">&gt;</span>(_container.at(3).toInt());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a257efe41bd82a2c4cf12bc5a9bdd33b8">  119</a></span>&#160;      QString <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a257efe41bd82a2c4cf12bc5a9bdd33b8" title="Returns the error string, if unsuccessful is true.">GetError</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>() || _container.size() &lt; 6) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;          <span class="keywordflow">return</span> QString();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        } </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> _container.at(4).toString();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a3b4c0be7b16dc734a5743dbd63cbb7e3">  130</a></span>&#160;      QVariant <a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#a3b4c0be7b16dc734a5743dbd63cbb7e3" title="Returns any additional error data.">GetErrorData</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../df/d79/classDissent_1_1Messaging_1_1Response.html#aa4cbaa2f5f1efda73b5814cc1e2f1e91" title="Successful?">Successful</a>() &amp;&amp; _container.size() &lt; 6) {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;          <span class="keywordflow">return</span> QVariant();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordflow">return</span> _container.at(5);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <span class="keyword">static</span> <span class="keyword">const</span> QString ResponseType;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      QSharedPointer&lt;ISender&gt; _from;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      QVariantList _container;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  };</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 28 2012 16:24:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 29 2012 16:15:31 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

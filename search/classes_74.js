@@ -30,5 +30,6 @@ var searchData=
   ['tolerantbulkroundbaduserpad',['TolerantBulkRoundBadUserPad',['../dc/ddf/classDissent_1_1Tests_1_1TolerantBulkRoundBadUserPad.html',1,'Dissent::Tests']]],
   ['triggerable',['Triggerable',['../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html',1,'Dissent::Utils']]],
   ['triple',['Triple',['../d8/d17/structDissent_1_1Utils_1_1Triple.html',1,'Dissent::Utils']]],
-  ['tunnelconnectiontable',['TunnelConnectionTable',['../d4/df5/classDissent_1_1Tunnel_1_1TunnelConnectionTable.html',1,'Dissent::Tunnel']]]
+  ['tunnelconnectiontable',['TunnelConnectionTable',['../d4/df5/classDissent_1_1Tunnel_1_1TunnelConnectionTable.html',1,'Dissent::Tunnel']]],
+  ['twophasenullauthenticate',['TwoPhaseNullAuthenticate',['../d7/dff/classDissent_1_1Identity_1_1Authentication_1_1TwoPhaseNullAuthenticate.html',1,'Dissent::Identity::Authentication']]]
 ];

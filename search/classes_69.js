@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['iauthenticate',['IAuthenticate',['../df/dd7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticate.html',1,'Dissent::Identity::Authentication']]],
+  ['iauthenticator',['IAuthenticator',['../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html',1,'Dissent::Identity::Authentication']]],
   ['id',['Id',['../df/d5b/classDissent_1_1Connections_1_1Id.html',1,'Dissent::Connections']]],
   ['integer',['Integer',['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html',1,'Dissent::Crypto']]],
   ['integerdata',['IntegerData',['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html',1,'Dissent::Crypto']]],

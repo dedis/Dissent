@@ -132,21 +132,30 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">inline</span> PublicIdentity GetPublicIdentity(<span class="keyword">const</span> PrivateIdentity &amp;ident)</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    QSharedPointer&lt;PrivateIdentity::AsymmetricKey&gt; key(</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      ident.GetSigningKey()-&gt;GetPublicKey());</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    PrivateIdentity::AsymmetricKey *key = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QByteArray dh_pub = QByteArray();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">return</span> PublicIdentity(ident.GetLocalId(), key,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        ident.GetDhKey()-&gt;GetPublicComponent(),</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        ident.GetSuperPeer());</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span>(ident.GetSigningKey()) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      key = ident.GetSigningKey()-&gt;GetPublicKey();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span>(ident.GetDhKey()) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      dh_pub = ident.GetDhKey()-&gt;GetPublicComponent();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QSharedPointer&lt;PrivateIdentity::AsymmetricKey&gt; skey(key);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> PublicIdentity(ident.GetLocalId(), skey, dh_pub,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        ident.GetSuperPeer());</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 28 2012 16:24:41 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jun 29 2012 16:15:31 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>
