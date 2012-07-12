@@ -105,20 +105,21 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html" title="An abstract base class for an authenticator, one to whom others authenticate.">IAuthenticator</a>() {}</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keyword">virtual</span> QVariant <a class="code" href="../../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html#a379e1e9d716187c6bcb44a1b2f617138" title="Generates a challenge for the member.">RequestChallenge</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;member, <span class="keyword">const</span> QVariant &amp;data) = 0;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keyword">virtual</span> QPair&lt;bool, PublicIdentity&gt; <a class="code" href="../../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html#a6f8d26349f12b8070b36bfc4f25374b2" title="Given a response to a challenge returns true if a valid response.">VerifyResponse</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;member,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          <span class="keyword">const</span> QVariant &amp;data) = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keyword">virtual</span> QPair&lt;bool, QVariant&gt; <a class="code" href="../../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html#a80f2b9e6ac2e5ca089072390f14cb971" title="Generates a challenge for the member.">RequestChallenge</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;member,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          <span class="keyword">const</span> QVariant &amp;data) = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">virtual</span> QPair&lt;bool, PublicIdentity&gt; <a class="code" href="../../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html#a6f8d26349f12b8070b36bfc4f25374b2" title="Given a response to a challenge returns true if a valid response.">VerifyResponse</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;member,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          <span class="keyword">const</span> QVariant &amp;data) = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  };</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 6 2012 13:04:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 11 2012 23:50:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

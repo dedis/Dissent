@@ -104,40 +104,41 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html" title="Implements an authenticating agent that always authenticates everyone.">NullAuthenticator</a>() {}</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#a264701ea4e3d7f520f9bee1fd11de277">   28</a></span>&#160;      <span class="keyword">virtual</span> QVariant <a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#a264701ea4e3d7f520f9bee1fd11de277" title="There is no challenge data, but we probably shouldn&#39;t call this method either...">RequestChallenge</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;, <span class="keyword">const</span> QVariant &amp;)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> QVariant();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#a53d327059e87b4773a806bd4cf348799">   40</a></span>&#160;      <span class="keyword">virtual</span> QPair&lt;bool, PublicIdentity&gt; <a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#a53d327059e87b4773a806bd4cf348799" title="Always returns true if the identity is valid.">VerifyResponse</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;member,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          <span class="keyword">const</span> QVariant &amp;data)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        QDataStream stream(data.toByteArray());</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a> ident;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        stream &gt;&gt; ident;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>(ident.GetId() != member) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          qDebug() &lt;&lt; <span class="stringliteral">&quot;PublicIdentity does not match member Id.&quot;</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <span class="keywordflow">return</span> QPair&lt;bool, PublicIdentity&gt;(<span class="keyword">false</span>, ident);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!ident.GetVerificationKey() ||</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            !ident.GetVerificationKey()-&gt;IsValid())</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          qDebug() &lt;&lt; <span class="stringliteral">&quot;Invalid identity or key&quot;</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          <span class="keywordflow">return</span> QPair&lt;bool, PublicIdentity&gt;(<span class="keyword">false</span>, ident);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> QPair&lt;bool, PublicIdentity&gt;(<span class="keyword">true</span>, ident);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  };</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#adc3e290984e427e5cfbcc9b99e1a37b7">   28</a></span>&#160;      <span class="keyword">virtual</span> QPair&lt;bool, QVariant&gt; <a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#adc3e290984e427e5cfbcc9b99e1a37b7" title="There is no challenge data, but we probably shouldn&#39;t call this method either...">RequestChallenge</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          <span class="keyword">const</span> QVariant &amp;)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> QPair&lt;bool, QVariant&gt;(<span class="keyword">true</span>, QVariant());</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#a53d327059e87b4773a806bd4cf348799">   41</a></span>&#160;      <span class="keyword">virtual</span> QPair&lt;bool, PublicIdentity&gt; <a class="code" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#a53d327059e87b4773a806bd4cf348799" title="Always returns true if the identity is valid.">VerifyResponse</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;member,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;          <span class="keyword">const</span> QVariant &amp;data)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        QDataStream stream(data.toByteArray());</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html" title="A identity class for holding a user&#39;s public data.">PublicIdentity</a> ident;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        stream &gt;&gt; ident;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span>(ident.GetId() != member) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          qDebug() &lt;&lt; <span class="stringliteral">&quot;PublicIdentity does not match member Id.&quot;</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <span class="keywordflow">return</span> QPair&lt;bool, PublicIdentity&gt;(<span class="keyword">false</span>, ident);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!ident.GetVerificationKey() ||</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            !ident.GetVerificationKey()-&gt;IsValid())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          qDebug() &lt;&lt; <span class="stringliteral">&quot;Invalid identity or key&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          <span class="keywordflow">return</span> QPair&lt;bool, PublicIdentity&gt;(<span class="keyword">false</span>, ident);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> QPair&lt;bool, PublicIdentity&gt;(<span class="keyword">true</span>, ident);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  };</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 6 2012 13:04:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 11 2012 23:50:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

@@ -14,7 +14,6 @@ var searchData=
   ['timerevent',['timerEvent',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a66803f79e3aef1d6ac4c88f4ceae377c',1,'Dissent::Utils::Timer']]],
   ['timermethod',['TimerMethod',['../df/dfd/classDissent_1_1Utils_1_1TimerMethod.html#ad53d607d1e9bc3f973481724fb93a974',1,'Dissent::Utils::TimerMethod']]],
   ['timermethodshared',['TimerMethodShared',['../dd/dda/classDissent_1_1Utils_1_1TimerMethodShared.html#a3e5e4a9cb3e1c502edf41d13d74276e6',1,'Dissent::Utils::TimerMethodShared']]],
-  ['tobase64',['ToBase64',['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8e6a80b7a0b87232c23a0bd7f21e88a7',1,'Dissent::Crypto::IntegerData']]],
   ['tobytearray',['ToByteArray',['../da/d19/classDissent_1_1Anonymity_1_1Tolerant_1_1Accusation.html#a12287fc98078def13e2a73b8ace8aae9',1,'Dissent::Anonymity::Tolerant::Accusation::ToByteArray()'],['../d4/d63/classDissent_1_1Tunnel_1_1Packets_1_1Packet.html#ab22fcf118a144732dad0fb144d558b48',1,'Dissent::Tunnel::Packets::Packet::ToByteArray()']]],
   ['toggleenabled',['ToggleEnabled',['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#a0b549d37f1c95a8de41566d2b515ae28',1,'Dissent::Anonymity::Log']]],
   ['tolerantbulkround',['TolerantBulkRound',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#abc6284e77851205b1b91b6ff6b1515c5',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],

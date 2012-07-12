@@ -105,12 +105,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a89e9dd64da125feace3216a18d847e9a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89e9dd64da125feace3216a18d847e9a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a89e9dd64da125feace3216a18d847e9a">Integer</a> (<a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *data)</td></tr>
 <tr class="memdesc:a89e9dd64da125feace3216a18d847e9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct from <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html" title="&quot;Big&quot; IntegerData wrapper">IntegerData</a>. <br/></td></tr>
-<tr class="memitem:a45a60ff7b407c37a191f763fe8352bdf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a45a60ff7b407c37a191f763fe8352bdf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Integer</b> (int value=0)</td></tr>
-<tr class="memitem:ac23bfd4e6d0bcdcd133a9b0735e867a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac23bfd4e6d0bcdcd133a9b0735e867a8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Integer</b> (const QByteArray &amp;value)</td></tr>
-<tr class="memitem:acea3a53cf8fa71ee200e46f1e393d337"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acea3a53cf8fa71ee200e46f1e393d337"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Integer</b> (const QString &amp;value)</td></tr>
+<tr class="memitem:a45a60ff7b407c37a191f763fe8352bdf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a45a60ff7b407c37a191f763fe8352bdf">Integer</a> (int value=0)</td></tr>
+<tr class="memdesc:a45a60ff7b407c37a191f763fe8352bdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct using an int.  <a href="#a45a60ff7b407c37a191f763fe8352bdf"></a><br/></td></tr>
+<tr class="memitem:ac23bfd4e6d0bcdcd133a9b0735e867a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#ac23bfd4e6d0bcdcd133a9b0735e867a8">Integer</a> (const QByteArray &amp;value)</td></tr>
+<tr class="memdesc:ac23bfd4e6d0bcdcd133a9b0735e867a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct using an byte array.  <a href="#ac23bfd4e6d0bcdcd133a9b0735e867a8"></a><br/></td></tr>
+<tr class="memitem:acea3a53cf8fa71ee200e46f1e393d337"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#acea3a53cf8fa71ee200e46f1e393d337">Integer</a> (const QString &amp;value)</td></tr>
+<tr class="memdesc:acea3a53cf8fa71ee200e46f1e393d337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct using a base64 string.  <a href="#acea3a53cf8fa71ee200e46f1e393d337"></a><br/></td></tr>
 <tr class="memitem:aeba262c3705cebc4dae5d16234ae9a66"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeba262c3705cebc4dae5d16234ae9a66"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Integer</b> (const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;other)</td></tr>
 <tr class="memitem:aa72a7d808aad4b848d3d06f0e9bf1ef9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa72a7d808aad4b848d3d06f0e9bf1ef9"></a>
@@ -169,7 +169,104 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>"Big" <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> wrapper </p>
-</div><hr/><h2>Member Function Documentation</h2>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a45a60ff7b407c37a191f763fe8352bdf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dissent::Crypto::Integer::Integer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct using an int. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the int value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ac23bfd4e6d0bcdcd133a9b0735e867a8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dissent::Crypto::Integer::Integer </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct using an byte array. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the byte array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="acea3a53cf8fa71ee200e46f1e393d337"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dissent::Crypto::Integer::Integer </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct using a base64 string. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>the string </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ac989b396cbaec7d442afcb92fc0e097c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -685,7 +782,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 6 2012 13:04:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 11 2012 23:50:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

@@ -119,7 +119,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6bd483fdb8d30b5e22a4aa14df1a0d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#af6bd483fdb8d30b5e22a4aa14df1a0d4">CppIntegerData</a> (const QByteArray &amp;byte_array)</td></tr>
 <tr class="memdesc:af6bd483fdb8d30b5e22a4aa14df1a0d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct using an byte array.  <a href="#af6bd483fdb8d30b5e22a4aa14df1a0d4"></a><br/></td></tr>
 <tr class="memitem:a41adb8484b1eef6e0486f946de1190b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a41adb8484b1eef6e0486f946de1190b9">CppIntegerData</a> (const QString &amp;string)</td></tr>
-<tr class="memdesc:a41adb8484b1eef6e0486f946de1190b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct using a string.  <a href="#a41adb8484b1eef6e0486f946de1190b9"></a><br/></td></tr>
+<tr class="memdesc:a41adb8484b1eef6e0486f946de1190b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct using a base64 string.  <a href="#a41adb8484b1eef6e0486f946de1190b9"></a><br/></td></tr>
 <tr class="memitem:a4e2a932cfb8ee6cf7844b66d398743d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4e2a932cfb8ee6cf7844b66d398743d3"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a4e2a932cfb8ee6cf7844b66d398743d3">~CppIntegerData</a> ()</td></tr>
 <tr class="memdesc:a4e2a932cfb8ee6cf7844b66d398743d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
@@ -193,8 +193,8 @@ static CryptoPP::Integer&#160;</td><td class="memItemRight" valign="bottom"><a c
 static CryptoPP::Integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#aa393e21c857bed956b92f21eb1cd13b8">GetInteger</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *data)</td></tr>
 <tr class="memdesc:aa393e21c857bed956b92f21eb1cd13b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal CryptoPP::Integer. <br/></td></tr>
 <tr class="inherit_header pub_static_methods_classDissent_1_1Crypto_1_1IntegerData"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classDissent_1_1Crypto_1_1IntegerData')"><img src="../../closed.png" alt="-"/>&nbsp;Static Public Member Functions inherited from <a class="el" href="d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">Dissent::Crypto::IntegerData</a></td></tr>
-<tr class="memitem:a8e6a80b7a0b87232c23a0bd7f21e88a7 inherit pub_static_methods_classDissent_1_1Crypto_1_1IntegerData"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8e6a80b7a0b87232c23a0bd7f21e88a7">ToBase64</a> (const QString &amp;string)</td></tr>
-<tr class="memdesc:a8e6a80b7a0b87232c23a0bd7f21e88a7 inherit pub_static_methods_classDissent_1_1Crypto_1_1IntegerData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a base64 number into a clean byte array.  <a href="#a8e6a80b7a0b87232c23a0bd7f21e88a7"></a><br/></td></tr>
+<tr class="memitem:a6b89b49d25aca298179f6835fa0be3c1 inherit pub_static_methods_classDissent_1_1Crypto_1_1IntegerData"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a6b89b49d25aca298179f6835fa0be3c1">FromBase64</a> (const QString &amp;string)</td></tr>
+<tr class="memdesc:a6b89b49d25aca298179f6835fa0be3c1 inherit pub_static_methods_classDissent_1_1Crypto_1_1IntegerData"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a base64 number into a clean byte array.  <a href="#a6b89b49d25aca298179f6835fa0be3c1"></a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -299,7 +299,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 </table>
 </div><div class="memdoc">
 
-<p>Construct using a string. </p>
+<p>Construct using a base64 string. </p>
 <dl class="params"><dt>Parameters:</dt><dd>
   <table class="params">
     <tr><td class="paramname">value</td><td>the string </td></tr>
@@ -852,7 +852,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 6 2012 13:04:03 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 11 2012 23:50:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

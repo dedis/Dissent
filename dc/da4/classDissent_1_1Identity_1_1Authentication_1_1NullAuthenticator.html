@@ -110,8 +110,8 @@ Inheritance diagram for Dissent::Identity::Authentication::NullAuthenticator:</d
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a264701ea4e3d7f520f9bee1fd11de277"><td class="memItemLeft" align="right" valign="top">virtual QVariant&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#a264701ea4e3d7f520f9bee1fd11de277">RequestChallenge</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;, const QVariant &amp;)</td></tr>
-<tr class="memdesc:a264701ea4e3d7f520f9bee1fd11de277"><td class="mdescLeft">&#160;</td><td class="mdescRight">There is no challenge data, but we probably shouldn't call this method either...  <a href="#a264701ea4e3d7f520f9bee1fd11de277"></a><br/></td></tr>
+<tr class="memitem:adc3e290984e427e5cfbcc9b99e1a37b7"><td class="memItemLeft" align="right" valign="top">virtual QPair&lt; bool, QVariant &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#adc3e290984e427e5cfbcc9b99e1a37b7">RequestChallenge</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;, const QVariant &amp;)</td></tr>
+<tr class="memdesc:adc3e290984e427e5cfbcc9b99e1a37b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">There is no challenge data, but we probably shouldn't call this method either...  <a href="#adc3e290984e427e5cfbcc9b99e1a37b7"></a><br/></td></tr>
 <tr class="memitem:a53d327059e87b4773a806bd4cf348799"><td class="memItemLeft" align="right" valign="top">virtual QPair&lt; bool, <br class="typebreak"/>
 <a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html">PublicIdentity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da4/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticator.html#a53d327059e87b4773a806bd4cf348799">VerifyResponse</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;member, const QVariant &amp;data)</td></tr>
 <tr class="memdesc:a53d327059e87b4773a806bd4cf348799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Always returns true if the identity is valid.  <a href="#a53d327059e87b4773a806bd4cf348799"></a><br/></td></tr>
@@ -125,7 +125,7 @@ typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html"
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Implements an authenticating agent that always authenticates everyone. </p>
 </div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a264701ea4e3d7f520f9bee1fd11de277"></a>
+<a class="anchor" id="adc3e290984e427e5cfbcc9b99e1a37b7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -133,7 +133,7 @@ typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html"
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual QVariant Dissent::Identity::Authentication::NullAuthenticator::RequestChallenge </td>
+          <td class="memname">virtual QPair&lt;bool, QVariant&gt; Dissent::Identity::Authentication::NullAuthenticator::RequestChallenge </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
           <td class="paramname">, </td>
@@ -166,7 +166,7 @@ typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html"
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="../../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html#a379e1e9d716187c6bcb44a1b2f617138">Dissent::Identity::Authentication::IAuthenticator</a>.</p>
+<p>Implements <a class="el" href="../../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html#a80f2b9e6ac2e5ca089072390f14cb971">Dissent::Identity::Authentication::IAuthenticator</a>.</p>
 
 </div>
 </div>
@@ -222,7 +222,7 @@ typedef <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html"
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jul 6 2012 13:04:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 11 2012 23:50:02 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

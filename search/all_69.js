@@ -16,7 +16,7 @@ var searchData=
   ['initialpeerjoindelay',['InitialPeerJoinDelay',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#a22ffcbf307679f56e81e775e42afc0a6',1,'Dissent::Anonymity::Sessions::SessionLeader']]],
   ['insert',['Insert',['../d5/d02/classDissent_1_1PeerReview_1_1AcknowledgementLog.html#ad12b470894081241ed546918563c505e',1,'Dissent::PeerReview::AcknowledgementLog']]],
   ['integer',['Integer',['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html',1,'Dissent::Crypto']]],
-  ['integer',['Integer',['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a89e9dd64da125feace3216a18d847e9a',1,'Dissent::Crypto::Integer']]],
+  ['integer',['Integer',['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a89e9dd64da125feace3216a18d847e9a',1,'Dissent::Crypto::Integer::Integer(IntegerData *data)'],['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a45a60ff7b407c37a191f763fe8352bdf',1,'Dissent::Crypto::Integer::Integer(int value=0)'],['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#ac23bfd4e6d0bcdcd133a9b0735e867a8',1,'Dissent::Crypto::Integer::Integer(const QByteArray &amp;value)'],['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#acea3a53cf8fa71ee200e46f1e393d337',1,'Dissent::Crypto::Integer::Integer(const QString &amp;value)']]],
   ['integerdata',['IntegerData',['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ae337998d01c8e09b2bfe8957521a1120',1,'Dissent::Crypto::IntegerData']]],
   ['integerdata',['IntegerData',['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html',1,'Dissent::Crypto']]],
   ['interrupted',['Interrupted',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a460ce632529c9909063fb5a435df5455',1,'Dissent::Anonymity::Round']]],
