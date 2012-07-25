@@ -18,6 +18,11 @@ var searchData=
   ['logging',['Logging',['../d0/dab/classDissent_1_1Utils_1_1Logging.html',1,'Dissent::Utils']]],
   ['logoffcheckperiod',['LogOffCheckPeriod',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#aa2941f2baee4e8c7a66d09a57a6bbcb1',1,'Dissent::Anonymity::Sessions::SessionLeader']]],
   ['logoffperiod',['LogOffPeriod',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#a7b9def96df3ba497ec22113097ab4902',1,'Dissent::Anonymity::Sessions::SessionLeader']]],
+  ['lrsauthenticate',['LRSAuthenticate',['../db/d70/classDissent_1_1Identity_1_1Authentication_1_1LRSAuthenticate.html',1,'Dissent::Identity::Authentication']]],
+  ['lrsauthenticate',['LRSAuthenticate',['../db/d70/classDissent_1_1Identity_1_1Authentication_1_1LRSAuthenticate.html#a2341be402394c1efc56a78d45972370f',1,'Dissent::Identity::Authentication::LRSAuthenticate']]],
+  ['lrsauthenticator',['LRSAuthenticator',['../d7/d6b/classDissent_1_1Identity_1_1Authentication_1_1LRSAuthenticator.html#a4eafc6c99502361f04f6061b482d87f9',1,'Dissent::Identity::Authentication::LRSAuthenticator']]],
+  ['lrsauthenticator',['LRSAuthenticator',['../d7/d6b/classDissent_1_1Identity_1_1Authentication_1_1LRSAuthenticator.html',1,'Dissent::Identity::Authentication']]],
   ['lrsprivatekey',['LRSPrivateKey',['../d9/dba/classDissent_1_1Crypto_1_1LRSPrivateKey.html',1,'Dissent::Crypto']]],
-  ['lrspublickey',['LRSPublicKey',['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html',1,'Dissent::Crypto']]]
+  ['lrspublickey',['LRSPublicKey',['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html',1,'Dissent::Crypto']]],
+  ['lrssignature',['LRSSignature',['../dc/d24/classDissent_1_1Crypto_1_1LRSSignature.html',1,'Dissent::Crypto']]]
 ];

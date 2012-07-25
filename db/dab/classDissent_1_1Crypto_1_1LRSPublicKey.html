@@ -131,6 +131,8 @@ virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="memdesc:a12e7b64778a5c33b81a5afa5cfd6cfc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signs the data, returning the signature.  <a href="#a12e7b64778a5c33b81a5afa5cfd6cfc5"></a><br/></td></tr>
 <tr class="memitem:ab394db612accaca0434700b2ed56a6e3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#ab394db612accaca0434700b2ed56a6e3">Verify</a> (const QByteArray &amp;data, const QByteArray &amp;sig) const </td></tr>
 <tr class="memdesc:ab394db612accaca0434700b2ed56a6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify a signature, returns true if signature matches the data.  <a href="#ab394db612accaca0434700b2ed56a6e3"></a><br/></td></tr>
+<tr class="memitem:acedb73cc62ba0dadb425a5857c13cae4"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#acedb73cc62ba0dadb425a5857c13cae4">Verify</a> (const QByteArray &amp;data, const <a class="el" href="../../dc/d24/classDissent_1_1Crypto_1_1LRSSignature.html">LRSSignature</a> &amp;sig) const </td></tr>
+<tr class="memdesc:acedb73cc62ba0dadb425a5857c13cae4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify a signature, returns true if signature matches the data.  <a href="#acedb73cc62ba0dadb425a5857c13cae4"></a><br/></td></tr>
 <tr class="memitem:a80e56b03a8d5406dfa6f416d0d337464"><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a80e56b03a8d5406dfa6f416d0d337464">Encrypt</a> (const QByteArray &amp;) const </td></tr>
 <tr class="memdesc:a80e56b03a8d5406dfa6f416d0d337464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an encrypted data block of the form: Pr[AES Key], IV, AES[data].  <a href="#a80e56b03a8d5406dfa6f416d0d337464"></a><br/></td></tr>
 <tr class="memitem:a64b3ea98845324eb9b02c0127a888a4e"><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a64b3ea98845324eb9b02c0127a888a4e">Decrypt</a> (const QByteArray &amp;) const </td></tr>
@@ -491,6 +493,49 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 </div>
 </div>
+<a class="anchor" id="acedb73cc62ba0dadb425a5857c13cae4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Dissent::Crypto::LRSPublicKey::Verify </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/d24/classDissent_1_1Crypto_1_1LRSSignature.html">LRSSignature</a> &amp;&#160;</td>
+          <td class="paramname"><em>sig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verify a signature, returns true if signature matches the data. </p>
+<dl class="params"><dt>Parameters:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>the data to verify </td></tr>
+    <tr><td class="paramname">sig</td><td>the signature used to verify the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aee040b53ab83bcfec90736c1b83ef565"></a>
 <div class="memitem">
 <div class="memproto">
@@ -532,7 +577,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 25 2012 00:09:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jul 25 2012 15:53:05 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>
