@@ -13,6 +13,7 @@ var searchData=
   ['addedge',['AddEdge',['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a4eeea9df62328c6a58b25af9bef8ad60',1,'Dissent::Connections::ConnectionTable']]],
   ['addedgelistener',['AddEdgeListener',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a620396ba3a6dd053fed64f3bb4ed47b7',1,'Dissent::Connections::ConnectionManager::AddEdgeListener()'],['../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html#a328bf0b6cbb83748e7f2a47c888e9d0e',1,'Dissent::Transports::EdgeFactory::AddEdgeListener()']]],
   ['addheader',['AddHeader',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#a609774afc1bbe5aa7f1d182f0d05decf',1,'Dissent::Web::HttpResponse']]],
+  ['addkey',['AddKey',['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a2a57ae004b610583b575ac56db35cc92',1,'Dissent::Crypto::LRSPublicKey']]],
   ['addroute',['AddRoute',['../db/d98/classDissent_1_1Web_1_1WebServer.html#a4eceb61e66de14260aac85b02b989da9',1,'Dissent::Web::WebServer']]],
   ['addserveralibi',['AddServerAlibi',['../d9/dad/classDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix.html#a14e61e1f4f82839b95889e49e15d60da',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],
   ['addservermessage',['AddServerMessage',['../d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#aabcd96021a6faafac26a30617efa8df0',1,'Dissent::Anonymity::Tolerant::MessageHistory']]],

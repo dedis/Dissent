@@ -17,5 +17,7 @@ var searchData=
   ['log',['Log',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a3810ac40b82b4245a2b882e1ea0da587',1,'Dissent::Applications::Settings::Log()'],['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#ade1a99b0c86aad77d8568bec12957a37',1,'Dissent::Anonymity::Log::Log()'],['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#a6249d64331d4c83294c01bc2ca101584',1,'Dissent::Anonymity::Log::Log(const QByteArray &amp;logdata)']]],
   ['logging',['Logging',['../d0/dab/classDissent_1_1Utils_1_1Logging.html',1,'Dissent::Utils']]],
   ['logoffcheckperiod',['LogOffCheckPeriod',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#aa2941f2baee4e8c7a66d09a57a6bbcb1',1,'Dissent::Anonymity::Sessions::SessionLeader']]],
-  ['logoffperiod',['LogOffPeriod',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#a7b9def96df3ba497ec22113097ab4902',1,'Dissent::Anonymity::Sessions::SessionLeader']]]
+  ['logoffperiod',['LogOffPeriod',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#a7b9def96df3ba497ec22113097ab4902',1,'Dissent::Anonymity::Sessions::SessionLeader']]],
+  ['lrsprivatekey',['LRSPrivateKey',['../d9/dba/classDissent_1_1Crypto_1_1LRSPrivateKey.html',1,'Dissent::Crypto']]],
+  ['lrspublickey',['LRSPublicKey',['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html',1,'Dissent::Crypto']]]
 ];
