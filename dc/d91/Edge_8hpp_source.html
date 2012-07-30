@@ -151,7 +151,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a978da72814edf10d0db1c503655a560d">  105</a></span>&#160;      <span class="keyword">inline</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a978da72814edf10d0db1c503655a560d" title="Overloaded to set the time the last message came in.">PushData</a>(<span class="keyword">const</span> QSharedPointer&lt;ISender&gt; &amp;from,</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;          <span class="keyword">const</span> QByteArray &amp;data)</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        _last_incoming = <a class="code" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a0917b033066a815ef254daf8a31a70c7" title="Access the Time singleton.">Utils::Time::GetInstance</a>().<a class="code" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a7747f88ae52d0eb678b59f5509922c0e" title="Returns the number of milliseconds since the epoch.">MSecsSinceEpoch</a>();</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        _last_incoming = <a class="code" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a0917b033066a815ef254daf8a31a70c7" title="Access the Time singleton.">Utils::Time::GetInstance</a>().<a class="code" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a0c724f3e3138170c5a95266119b78303" title="Returns the specified time using the epoch as the offset.">MSecsSinceEpoch</a>();</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span>(data == PingPacket()) {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;          <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(_last_incoming - _last_outgoing &gt; MaximumInterpacketDelay) {</div>
@@ -162,7 +162,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span> Sent()</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        _last_outgoing = <a class="code" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a0917b033066a815ef254daf8a31a70c7" title="Access the Time singleton.">Utils::Time::GetInstance</a>().<a class="code" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a7747f88ae52d0eb678b59f5509922c0e" title="Returns the number of milliseconds since the epoch.">MSecsSinceEpoch</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        _last_outgoing = <a class="code" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a0917b033066a815ef254daf8a31a70c7" title="Access the Time singleton.">Utils::Time::GetInstance</a>().<a class="code" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a0c724f3e3138170c5a95266119b78303" title="Returns the specified time using the epoch as the offset.">MSecsSinceEpoch</a>();</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      }</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a7949fdbae127c9e185fa5d53e5d162f1">  125</a></span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a7949fdbae127c9e185fa5d53e5d162f1" title="Returns true if the object isn&#39;t fully closed.">RequiresCleanup</a>() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
@@ -186,7 +186,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 25 2012 15:53:04 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 30 2012 12:07:25 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

@@ -17,6 +17,8 @@ var searchData=
   ['cppprivatekey',['CppPrivateKey',['../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html',1,'Dissent::Crypto']]],
   ['cpppublickey',['CppPublicKey',['../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html',1,'Dissent::Crypto']]],
   ['cpprandom',['CppRandom',['../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html',1,'Dissent::Crypto']]],
+  ['createkey',['CreateKey',['../d7/dec/classCreateKey.html',1,'']]],
+  ['createseededdsakey',['CreateSeededDsaKey',['../d2/d9f/classCreateSeededDsaKey.html',1,'']]],
   ['cryptofactory',['CryptoFactory',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html',1,'Dissent::Crypto']]],
   ['csbroadcast',['CSBroadcast',['../d0/d95/classDissent_1_1ClientServer_1_1CSBroadcast.html',1,'Dissent::ClientServer']]],
   ['csbulkround',['CSBulkRound',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html',1,'Dissent::Anonymity']]],

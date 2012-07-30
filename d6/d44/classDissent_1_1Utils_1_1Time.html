@@ -108,9 +108,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9092361866690fc9aab4f804559f35f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae9092361866690fc9aab4f804559f35f"></a>
 QDateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#ae9092361866690fc9aab4f804559f35f">CurrentTime</a> ()</td></tr>
 <tr class="memdesc:ae9092361866690fc9aab4f804559f35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a QDateTime of the current time. <br/></td></tr>
-<tr class="memitem:a7747f88ae52d0eb678b59f5509922c0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7747f88ae52d0eb678b59f5509922c0e"></a>
-qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a7747f88ae52d0eb678b59f5509922c0e">MSecsSinceEpoch</a> ()</td></tr>
-<tr class="memdesc:a7747f88ae52d0eb678b59f5509922c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of milliseconds since the epoch. <br/></td></tr>
 <tr class="memitem:a67af89a5016d2a9cb03040c3894097cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a67af89a5016d2a9cb03040c3894097cf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a67af89a5016d2a9cb03040c3894097cf">UseRealTime</a> ()</td></tr>
 <tr class="memdesc:a67af89a5016d2a9cb03040c3894097cf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html" title="Presents a wrapper around Qt DateTime to support real and virtual time.">Time</a> returns time based upon the system clock. <br/></td></tr>
@@ -122,6 +119,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memdesc:ad602ce1fb009b809b2d51e9da712e7af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns whether or not real time is being used. <br/></td></tr>
 <tr class="memitem:a4af2dd2106c2ba03cdd9af80f5bae097"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a4af2dd2106c2ba03cdd9af80f5bae097">IncrementVirtualClock</a> (qint64 time)</td></tr>
 <tr class="memdesc:a4af2dd2106c2ba03cdd9af80f5bae097"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment the user controlled (Virtual) clock.  <a href="#a4af2dd2106c2ba03cdd9af80f5bae097"></a><br/></td></tr>
+<tr class="memitem:a0c724f3e3138170c5a95266119b78303"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c724f3e3138170c5a95266119b78303"></a>
+qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a0c724f3e3138170c5a95266119b78303">MSecsSinceEpoch</a> (const QDateTime &amp;time)</td></tr>
+<tr class="memdesc:a0c724f3e3138170c5a95266119b78303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the specified time using the epoch as the offset. <br/></td></tr>
+<tr class="memitem:a01d040e432deed4c01d61fff6bbf5da9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a01d040e432deed4c01d61fff6bbf5da9"></a>
+qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a01d040e432deed4c01d61fff6bbf5da9">MSecsTo</a> (const QDateTime &amp;time)</td></tr>
+<tr class="memdesc:a01d040e432deed4c01d61fff6bbf5da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of milliseconds from now until this event. <br/></td></tr>
+<tr class="memitem:a7747f88ae52d0eb678b59f5509922c0e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7747f88ae52d0eb678b59f5509922c0e"></a>
+qint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d44/classDissent_1_1Utils_1_1Time.html#a7747f88ae52d0eb678b59f5509922c0e">MSecsSinceEpoch</a> ()</td></tr>
+<tr class="memdesc:a7747f88ae52d0eb678b59f5509922c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of milliseconds since the epoch. <br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -191,7 +197,7 @@ static const qint64&#160;</td><td class="memItemRight" valign="bottom"><b>MSecsP
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 25 2012 15:53:05 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 30 2012 12:07:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>
