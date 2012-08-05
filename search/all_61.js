@@ -13,11 +13,10 @@ var searchData=
   ['addbadmember',['AddBadMember',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a52deba96584e7d463a7504c19f5a9804',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['addbadmembers',['AddBadMembers',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a175dc760249508594e470cf20cf382ef',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['addconnection',['AddConnection',['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a4f4a6fa39c99673e7efad35831557035',1,'Dissent::Connections::ConnectionTable']]],
-  ['addcreatecallback',['AddCreateCallback',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html#afe64215ec2a3ba7d38aea4a902e20097',1,'Dissent::Applications::SessionFactory']]],
   ['addedge',['AddEdge',['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a4eeea9df62328c6a58b25af9bef8ad60',1,'Dissent::Connections::ConnectionTable']]],
   ['addedgelistener',['AddEdgeListener',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a620396ba3a6dd053fed64f3bb4ed47b7',1,'Dissent::Connections::ConnectionManager::AddEdgeListener()'],['../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html#a328bf0b6cbb83748e7f2a47c888e9d0e',1,'Dissent::Transports::EdgeFactory::AddEdgeListener()']]],
   ['addheader',['AddHeader',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#a609774afc1bbe5aa7f1d182f0d05decf',1,'Dissent::Web::HttpResponse']]],
-  ['addkey',['AddKey',['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a2a57ae004b610583b575ac56db35cc92',1,'Dissent::Crypto::LRSPublicKey']]],
+  ['addkey',['AddKey',['../d8/d5e/classDissent_1_1Crypto_1_1KeyShare.html#a0fbcb29231c41a01be895e8f77ac6ca0',1,'Dissent::Crypto::KeyShare::AddKey()'],['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a2a57ae004b610583b575ac56db35cc92',1,'Dissent::Crypto::LRSPublicKey::AddKey()']]],
   ['address',['Address',['../d6/dd3/classDissent_1_1Transports_1_1Address.html',1,'Dissent::Transports']]],
   ['addressdata',['AddressData',['../de/d41/classDissent_1_1Transports_1_1AddressData.html',1,'Dissent::Transports']]],
   ['addressfactory',['AddressFactory',['../dc/dd6/classDissent_1_1Transports_1_1AddressFactory.html',1,'Dissent::Transports']]],
@@ -33,11 +32,13 @@ var searchData=
   ['addusermessage',['AddUserMessage',['../d8/db7/classDissent_1_1Anonymity_1_1Tolerant_1_1MessageHistory.html#afcaadd9b70f7aabed22f26d636bbf23a',1,'Dissent::Anonymity::Tolerant::MessageHistory']]],
   ['adduseroutputbit',['AddUserOutputBit',['../d9/dad/classDissent_1_1Anonymity_1_1Tolerant_1_1BlameMatrix.html#a22c503daabfc07d4bd027de2e0f4491a',1,'Dissent::Anonymity::Tolerant::BlameMatrix']]],
   ['alibibitsfrombytes',['AlibiBitsFromBytes',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a4bf418f07e3eabe7b04b164f7eb394f5',1,'Dissent::Anonymity::Tolerant::AlibiData']]],
-  ['alibidata',['AlibiData',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a775d2d122d46ea95ecf9234531aaafd4',1,'Dissent::Anonymity::Tolerant::AlibiData']]],
   ['alibidata',['AlibiData',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html',1,'Dissent::Anonymity::Tolerant']]],
+  ['alibidata',['AlibiData',['../d8/dca/classDissent_1_1Anonymity_1_1Tolerant_1_1AlibiData.html#a775d2d122d46ea95ecf9234531aaafd4',1,'Dissent::Anonymity::Tolerant::AlibiData']]],
   ['api_5fmajorversionnumber',['API_MajorVersionNumber',['../db/d98/classDissent_1_1Web_1_1WebServer.html#af893165f98e110a93a097fdd7a08d04c',1,'Dissent::Web::WebServer']]],
   ['append',['Append',['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#a33106e6058bc715fc233cdeeb4da2410',1,'Dissent::Anonymity::Log']]],
   ['appendentry',['AppendEntry',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#a34393b6df8facd85d6ad9bb8254998a9',1,'Dissent::PeerReview::EntryLog']]],
   ['asymmetrickey',['AsymmetricKey',['../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html',1,'Dissent::Crypto']]],
-  ['at',['At',['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#a41f2dc867968cd4f76d3095b70156bd4',1,'Dissent::Anonymity::Log::At()'],['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a83dde09e66d8f2403e1fd8ea10996d5b',1,'Dissent::Messaging::BufferSink::At()']]]
+  ['at',['At',['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#a41f2dc867968cd4f76d3095b70156bd4',1,'Dissent::Anonymity::Log::At()'],['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a83dde09e66d8f2403e1fd8ea10996d5b',1,'Dissent::Messaging::BufferSink::At()']]],
+  ['authfactory',['AuthFactory',['../db/d57/classDissent_1_1Applications_1_1AuthFactory.html',1,'Dissent::Applications']]],
+  ['authmode',['AuthMode',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a9725cbf3c637818721911d710994a42f',1,'Dissent::Applications::Settings']]]
 ];
