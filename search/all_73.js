@@ -30,7 +30,7 @@ var searchData=
   ['sessionleader',['SessionLeader',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#a10deaeb3176f3379e52d1946c7ac0339',1,'Dissent::Anonymity::Sessions::SessionLeader']]],
   ['sessionmanager',['SessionManager',['../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html',1,'Dissent::Anonymity::Sessions']]],
   ['sessionmanager',['SessionManager',['../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#a0d8293e1eb76cc21aed4027c74362140',1,'Dissent::Anonymity::Sessions::SessionManager']]],
-  ['sessiontype',['SessionType',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#af076545f5e09a8b8224c8c4ad41d70e8',1,'Dissent::Applications::Settings']]],
+  ['sessiontype',['SessionType',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a201b0e33ae1f8ecf7eef3f3863b59acc',1,'Dissent::Applications::Settings']]],
   ['sessionwebservice',['SessionWebService',['../d3/d84/classDissent_1_1Web_1_1Services_1_1SessionWebService.html',1,'Dissent::Web::Services']]],
   ['set',['Set',['../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a768af504fed58717436d16ece796d4e3',1,'Dissent::Crypto::CppIntegerData::Set()'],['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a1fcd70ee26e8794407c253628e9e2b1c',1,'Dissent::Crypto::IntegerData::Set()']]],
   ['setaddress',['SetAddress',['../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html#adb5b02a1d16b379c709a779dcbdfab8b',1,'Dissent::Transports::EdgeListener::SetAddress()'],['../db/d27/classDissent_1_1Tunnel_1_1SocksHostAddress.html#aa64987b6e8c426722c7105126a551511',1,'Dissent::Tunnel::SocksHostAddress::SetAddress()']]],
