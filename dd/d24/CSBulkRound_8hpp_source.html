@@ -304,26 +304,34 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;      <span class="keywordtype">void</span> ProcessCleartext();</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;      <span class="keywordtype">void</span> ConcludeClientCiphertextSubmission(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);</div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> SlotHeaderLength(<span class="keywordtype">int</span> slot_idx)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        Crypto::Library *lib = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Crypto::CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>();</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">return</span> 9 + lib-&gt;<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a623d4bcaf1d9aa044426bd2c701096b5" title="Returns the optimal seed size for the RNG.">RngOptimalSeedSize</a>() +</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;          (_state-&gt;anonymous_keys[slot_idx]-&gt;GetKeySize() / 8);</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      }</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      QSharedPointer&lt;ServerState&gt; _server_state;</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      QSharedPointer&lt;State&gt; _state;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;      RoundStateMachine&lt;CSBulkRound&gt; _state_machine;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="keywordtype">bool</span> _stop_next;</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  };</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;}</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor">#ifdef CSBR_SIGN_SLOTS</span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor"></span>      <span class="keyword">inline</span> <span class="keywordtype">int</span> SlotHeaderLength(<span class="keywordtype">int</span> slot_idx) <span class="keyword">const</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor"></span>      <span class="keyword">inline</span> <span class="keywordtype">int</span> SlotHeaderLength(<span class="keywordtype">int</span>) const</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor"></span>      {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        Crypto::Library *lib = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Crypto::CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>();</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">#ifdef CSBR_SIGN_SLOTS</span></div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">int</span> sig_length = _state-&gt;anonymous_keys[slot_idx]-&gt;GetKeySize() / 8;</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor"></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> sig_length = QSharedPointer&lt;Crypto::Hash&gt;(lib-&gt;GetHashAlgorithm())-&gt;GetDigestSize();</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="preprocessor"></span>        <span class="keywordflow">return</span> 9 + lib-&gt;RngOptimalSeedSize() + sig_length;</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      }</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      QSharedPointer&lt;ServerState&gt; _server_state;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      QSharedPointer&lt;State&gt; _state;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      RoundStateMachine&lt;CSBulkRound&gt; _state_machine;</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      <span class="keywordtype">bool</span> _stop_next;</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  };</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;}</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;}</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 6 2012 12:16:53 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 6 2012 14:39:15 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
