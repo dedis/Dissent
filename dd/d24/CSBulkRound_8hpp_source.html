@@ -312,7 +312,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;<span class="preprocessor"></span>      {</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        Crypto::Library *lib = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Crypto::CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>();</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;<span class="preprocessor">#ifdef CSBR_SIGN_SLOTS</span></div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">int</span> sig_length = _state-&gt;anonymous_keys[slot_idx]-&gt;GetKeySize() / 8;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor"></span>        <span class="keywordtype">int</span> sig_length = _state-&gt;anonymous_keys[slot_idx]-&gt;GetSignatureLength();</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor"></span>        <span class="keyword">static</span> <span class="keywordtype">int</span> sig_length = QSharedPointer&lt;Crypto::Hash&gt;(lib-&gt;GetHashAlgorithm())-&gt;GetDigestSize();</div>
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="preprocessor">#endif</span></div>
@@ -331,7 +331,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 6 2012 14:39:15 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 6 2012 22:17:35 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

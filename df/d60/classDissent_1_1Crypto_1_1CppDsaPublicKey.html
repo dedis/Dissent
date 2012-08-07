@@ -164,6 +164,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a94e699342866354eb320ff17862dd943"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a94e699342866354eb320ff17862dd943"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a94e699342866354eb320ff17862dd943">GetKeySize</a> () const </td></tr>
 <tr class="memdesc:a94e699342866354eb320ff17862dd943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the keys size in bits. <br/></td></tr>
+<tr class="memitem:a3098db2f60b75ca8117c9747b2281940"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a3098db2f60b75ca8117c9747b2281940">GetSignatureLength</a> () const </td></tr>
+<tr class="memdesc:a3098db2f60b75ca8117c9747b2281940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signature size in bytes.  <a href="#a3098db2f60b75ca8117c9747b2281940"></a><br/></td></tr>
 <tr class="memitem:a5a64e8ad117717b00518d716107e823f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a64e8ad117717b00518d716107e823f"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a5a64e8ad117717b00518d716107e823f">SupportsEncryption</a> ()</td></tr>
 <tr class="memdesc:a5a64e8ad117717b00518d716107e823f"><td class="mdescLeft">&#160;</td><td class="mdescRight">DSA does not explicitly allow encryption. <br/></td></tr>
@@ -241,6 +243,8 @@ const Key *&#160;</td><td class="memItemRight" valign="bottom"><b>_key</b></td><
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>_valid</b></td></tr>
 <tr class="memitem:a1992a55b89812bf7a339995224310055"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1992a55b89812bf7a339995224310055"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>_key_size</b></td></tr>
+<tr class="memitem:a2367707b92b61621fb671f00037ffcd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2367707b92b61621fb671f00037ffcd2"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>_sig_size</b></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -403,6 +407,34 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 </div>
 </div>
+<a class="anchor" id="a3098db2f60b75ca8117c9747b2281940"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Dissent::Crypto::CppDsaPublicKey::GetSignatureLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the signature size in bytes. </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>this is a temporary hack as each implementation should be fixed </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#ae8657083266feff60cc02bedfd031e36">Dissent::Crypto::AsymmetricKey</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="ac1b306cb9c5f1bff0e441a2280007024"></a>
 <div class="memitem">
 <div class="memproto">
@@ -553,7 +585,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 6 2012 14:39:16 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 6 2012 22:17:36 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

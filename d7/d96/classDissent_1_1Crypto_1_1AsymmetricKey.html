@@ -152,6 +152,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:ac4862a48942fee53ca08ff7d45fc01cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4862a48942fee53ca08ff7d45fc01cb"></a>
 virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#ac4862a48942fee53ca08ff7d45fc01cb">GetKeySize</a> () const =0</td></tr>
 <tr class="memdesc:ac4862a48942fee53ca08ff7d45fc01cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the keys size in bits. <br/></td></tr>
+<tr class="memitem:ae8657083266feff60cc02bedfd031e36"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#ae8657083266feff60cc02bedfd031e36">GetSignatureLength</a> () const </td></tr>
+<tr class="memdesc:ae8657083266feff60cc02bedfd031e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signature size in bytes.  <a href="#ae8657083266feff60cc02bedfd031e36"></a><br/></td></tr>
 <tr class="memitem:ad616e17080e4cea6fbdb6ba77d9de61a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad616e17080e4cea6fbdb6ba77d9de61a"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsEncryption</b> ()</td></tr>
 <tr class="memitem:ac06fd5a1a14471b6d5a281f6aff7540c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac06fd5a1a14471b6d5a281f6aff7540c"></a>
@@ -237,6 +239,34 @@ Protected Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="../../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a80e56b03a8d5406dfa6f416d0d337464">Dissent::Crypto::LRSPublicKey</a>, <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a905f9460e7b0cbf4c458ed041510825d">Dissent::Crypto::CppDsaPublicKey</a>, <a class="el" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#abe5eba649e26735b4b269cc45fd3388b">Dissent::Crypto::CppPublicKey</a>, <a class="el" href="../../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#adb503da47191d17b4df3df71be26f56c">Dissent::Crypto::NullPublicKey</a>, and <a class="el" href="../../d9/dba/classDissent_1_1Crypto_1_1LRSPrivateKey.html#aae811c6120dd7e98af73f0425b08947f">Dissent::Crypto::LRSPrivateKey</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8657083266feff60cc02bedfd031e36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int Dissent::Crypto::AsymmetricKey::GetSignatureLength </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the signature size in bytes. </p>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>this is a temporary hack as each implementation should be fixed </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a3098db2f60b75ca8117c9747b2281940">Dissent::Crypto::CppDsaPublicKey</a>.</p>
 
 </div>
 </div>
@@ -505,7 +535,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 6 2012 14:39:16 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 6 2012 22:17:36 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
