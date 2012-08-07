@@ -47,6 +47,7 @@ var searchData=
   ['csbulkround',['CSBulkRound',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a7b1d428224d6deffd224e71f0595a303',1,'Dissent::Anonymity::CSBulkRound']]],
   ['csconnectionacquirer',['CSConnectionAcquirer',['../d6/d42/classDissent_1_1ClientServer_1_1CSConnectionAcquirer.html#a8a0587d0ed21ef07c022c5abeded9228',1,'Dissent::ClientServer::CSConnectionAcquirer']]],
   ['csforwarder',['CSForwarder',['../d9/d51/classDissent_1_1ClientServer_1_1CSForwarder.html#a12fbdedfdb1160f894901e41f3c71bb2',1,'Dissent::ClientServer::CSForwarder']]],
+  ['csgroupcapable',['CSGroupCapable',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a194fdbf1ca64028eb132bd1792a070be',1,'Dissent::Anonymity::CSBulkRound::CSGroupCapable()'],['../d7/ddf/classDissent_1_1Anonymity_1_1NeffKeyShuffle.html#a73e8bf3c3496d35be306384b6246047a',1,'Dissent::Anonymity::NeffKeyShuffle::CSGroupCapable()'],['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a4d34bbc3e8d1500fc56bdbe3b1f81e39',1,'Dissent::Anonymity::Round::CSGroupCapable()']]],
   ['csnetwork',['CSNetwork',['../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html#a1839641c542be65d36a7981aab374927',1,'Dissent::ClientServer::CSNetwork']]],
   ['csoverlay',['CSOverlay',['../db/d6a/classDissent_1_1ClientServer_1_1CSOverlay.html#a34c4b6fd3a33484763fc6cf5d660364c',1,'Dissent::ClientServer::CSOverlay']]],
   ['currenttime',['CurrentTime',['../d6/d44/classDissent_1_1Utils_1_1Time.html#ae9092361866690fc9aab4f804559f35f',1,'Dissent::Utils::Time']]]
