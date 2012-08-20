@@ -147,12 +147,8 @@ virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="
 <tr class="memdesc:a6d62fa3a9a9e1a1a10e0b0caf0212e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns nothing, not supported for public keys. <br/></td></tr>
 <tr class="memitem:a03dbd85fc89dcb6b689ea98e47ac6a60"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a03dbd85fc89dcb6b689ea98e47ac6a60">Verify</a> (const QByteArray &amp;data, const QByteArray &amp;sig) const </td></tr>
 <tr class="memdesc:a03dbd85fc89dcb6b689ea98e47ac6a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify a signature, returns true if signature matches the data.  <a href="#a03dbd85fc89dcb6b689ea98e47ac6a60"></a><br/></td></tr>
-<tr class="memitem:a905f9460e7b0cbf4c458ed041510825d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a905f9460e7b0cbf4c458ed041510825d"></a>
-virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a905f9460e7b0cbf4c458ed041510825d">Encrypt</a> (const QByteArray &amp;data) const </td></tr>
-<tr class="memdesc:a905f9460e7b0cbf4c458ed041510825d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns nothing, not supported for DSA. <br/></td></tr>
-<tr class="memitem:af2935730c4c3c00e933144714e01f45b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2935730c4c3c00e933144714e01f45b"></a>
-virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#af2935730c4c3c00e933144714e01f45b">Decrypt</a> (const QByteArray &amp;data) const </td></tr>
-<tr class="memdesc:af2935730c4c3c00e933144714e01f45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns nothing, not supported for DSA. <br/></td></tr>
+<tr class="memitem:a905f9460e7b0cbf4c458ed041510825d"><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a905f9460e7b0cbf4c458ed041510825d">Encrypt</a> (const QByteArray &amp;data) const </td></tr>
+<tr class="memitem:af2935730c4c3c00e933144714e01f45b"><td class="memItemLeft" align="right" valign="top">virtual QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#af2935730c4c3c00e933144714e01f45b">Decrypt</a> (const QByteArray &amp;data) const </td></tr>
 <tr class="memitem:af765c0a940cefa0983e7e86dbb79b582"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af765c0a940cefa0983e7e86dbb79b582"></a>
 virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#af765c0a940cefa0983e7e86dbb79b582">IsPrivateKey</a> () const </td></tr>
 <tr class="memdesc:af765c0a940cefa0983e7e86dbb79b582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if private key or private / public key pair. <br/></td></tr>
@@ -198,6 +194,8 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsVerif
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a72cf51e61da57e39425e4e072b1d37b0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html">CppDsaPublicKey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a72cf51e61da57e39425e4e072b1d37b0">GenerateKey</a> (const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a72cf51e61da57e39425e4e072b1d37b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a public key based upon the seed data, same seed data same key.  <a href="#a72cf51e61da57e39425e4e072b1d37b0"></a><br/></td></tr>
+<tr class="memitem:ad1227d09fc87f5cd7d26f2994e7c7ec4"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#ad1227d09fc87f5cd7d26f2994e7c7ec4">SeriesEncrypt</a> (const QVector&lt; QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &gt; &amp;keys, const QByteArray &amp;data)</td></tr>
+<tr class="memdesc:ad1227d09fc87f5cd7d26f2994e7c7ec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">DSA allows multiple encryptions of the same data to require only two elements.  <a href="#ad1227d09fc87f5cd7d26f2994e7c7ec4"></a><br/></td></tr>
 <tr class="memitem:ad3a333ad339024a541dc8b853de572cd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3a333ad339024a541dc8b853de572cd"></a>
 static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#ad3a333ad339024a541dc8b853de572cd">GetMinimumKeySize</a> ()</td></tr>
 <tr class="memdesc:ad3a333ad339024a541dc8b853de572cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">DSA does not work with keys below 1024. <br/></td></tr>
@@ -378,6 +376,72 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div>
 </div>
 <h2>Member Function Documentation</h2>
+<a class="anchor" id="af2935730c4c3c00e933144714e01f45b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray Dissent::Crypto::CppDsaPublicKey::Decrypt </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>to decrypt Decrypts a encrypted pair, returning the decrypted element </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#a8df795daa8c90d0fecdc5d8e357a6733">Dissent::Crypto::AsymmetricKey</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../dd/da6/classDissent_1_1Crypto_1_1CppDsaPrivateKey.html#ac8b6e4c6d742307987e128f8251c2930">Dissent::Crypto::CppDsaPrivateKey</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a905f9460e7b0cbf4c458ed041510825d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray Dissent::Crypto::CppDsaPublicKey::Encrypt </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>to encrypt Returns an encrypted pair </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#a6ecae307d1f3b4143b5fccfdf1a1cee4">Dissent::Crypto::AsymmetricKey</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a72cf51e61da57e39425e4e072b1d37b0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -499,6 +563,50 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 </div>
 </div>
+<a class="anchor" id="ad1227d09fc87f5cd7d26f2994e7c7ec4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray Dissent::Crypto::CppDsaPublicKey::SeriesEncrypt </td>
+          <td>(</td>
+          <td class="paramtype">const QVector&lt; QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>keys</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>DSA allows multiple encryptions of the same data to require only two elements. </p>
+<p>This does no checks on the keys to ensure they are compatible </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keys</td><td>the keys to encrypt serially with </td></tr>
+    <tr><td class="paramname">data</td><td>to encrypt </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a03dbd85fc89dcb6b689ea98e47ac6a60"></a>
 <div class="memitem">
 <div class="memproto">
@@ -585,7 +693,7 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 14 2012 15:59:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 20 2012 17:58:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

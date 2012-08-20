@@ -135,6 +135,8 @@ const CryptoPP::Integer&#160;</td><td class="memItemRight" valign="bottom"><a cl
 <tr class="memdesc:a4dcb83bb7a1c11f996852ce4c9374412"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division operator, produces a new <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a>.  <a href="#a4dcb83bb7a1c11f996852ce4c9374412"></a><br/></td></tr>
 <tr class="memitem:ab8b69e8017f7cff340c456f986601574"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#ab8b69e8017f7cff340c456f986601574">Pow</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *pow, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod) const </td></tr>
 <tr class="memdesc:ab8b69e8017f7cff340c456f986601574"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exponentiating operator.  <a href="#ab8b69e8017f7cff340c456f986601574"></a><br/></td></tr>
+<tr class="memitem:a1b94cb3d0a85fd20e250fc1060dac2e6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a1b94cb3d0a85fd20e250fc1060dac2e6">MultiplicativeInverse</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod) const </td></tr>
+<tr class="memdesc:a1b94cb3d0a85fd20e250fc1060dac2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the multiplicative inverse for the internal integer with respect for the specified modulus.  <a href="#a1b94cb3d0a85fd20e250fc1060dac2e6"></a><br/></td></tr>
 <tr class="memitem:abb5090089e56c7f95834eca9ec0afbe6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb5090089e56c7f95834eca9ec0afbe6"></a>
 virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Modulus</b> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *modulus) const </td></tr>
 <tr class="memitem:a768af504fed58717436d16ece796d4e3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a768af504fed58717436d16ece796d4e3">Set</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *other)</td></tr>
@@ -424,6 +426,40 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a1b94cb3d0a85fd20e250fc1060dac2e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a>* Dissent::Crypto::CppIntegerData::MultiplicativeInverse </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>mod</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the multiplicative inverse for the internal integer with respect for the specified modulus. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mod</td><td>the specified modulus </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ab0c4deee4c77e5ea9b52fe9dfaab3c29">Dissent::Crypto::IntegerData</a>.</p>
 
 </div>
 </div>
@@ -851,7 +887,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 14 2012 15:59:12 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 20 2012 17:58:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
