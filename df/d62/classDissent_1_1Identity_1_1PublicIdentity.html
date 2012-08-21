@@ -108,14 +108,17 @@ typedef <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af92079dc31344b3a12ae3caab69d390e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#af92079dc31344b3a12ae3caab69d390e">PublicIdentity</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id, QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; verification_key, QByteArray dh_key, bool super_peer=true)</td></tr>
-<tr class="memdesc:af92079dc31344b3a12ae3caab69d390e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#af92079dc31344b3a12ae3caab69d390e"></a><br/></td></tr>
+<tr class="memitem:adf14bed4857603043abe24399e973e49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#adf14bed4857603043abe24399e973e49">PublicIdentity</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;id=Id::Zero(), QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; verification_key=QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;(), QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt; encryption_key=QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;(), QByteArray dh_key=QByteArray(), bool super_peer=true)</td></tr>
+<tr class="memdesc:adf14bed4857603043abe24399e973e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#adf14bed4857603043abe24399e973e49"></a><br/></td></tr>
 <tr class="memitem:a672efa4bd83855b7e89fc38ab878ac6d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a672efa4bd83855b7e89fc38ab878ac6d"></a>
 const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a672efa4bd83855b7e89fc38ab878ac6d">GetId</a> () const </td></tr>
 <tr class="memdesc:a672efa4bd83855b7e89fc38ab878ac6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the node's Id. <br/></td></tr>
 <tr class="memitem:a799b98322fe42f6fe309cbb3a1072470"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a799b98322fe42f6fe309cbb3a1072470"></a>
 QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a799b98322fe42f6fe309cbb3a1072470">GetVerificationKey</a> () const </td></tr>
 <tr class="memdesc:a799b98322fe42f6fe309cbb3a1072470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the node's verification key. <br/></td></tr>
+<tr class="memitem:a3ec8c2baf77b8ecee416ac4b4109dae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ec8c2baf77b8ecee416ac4b4109dae6"></a>
+QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a3ec8c2baf77b8ecee416ac4b4109dae6">GetEncryptionKey</a> () const </td></tr>
+<tr class="memdesc:a3ec8c2baf77b8ecee416ac4b4109dae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the node's encryption key. <br/></td></tr>
 <tr class="memitem:a85e1bdb0ec8a1dc7f6b80d2dfe40f51d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85e1bdb0ec8a1dc7f6b80d2dfe40f51d"></a>
 QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a85e1bdb0ec8a1dc7f6b80d2dfe40f51d">GetDhKey</a> () const </td></tr>
 <tr class="memdesc:a85e1bdb0ec8a1dc7f6b80d2dfe40f51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the node's DiffieHellman key. <br/></td></tr>
@@ -129,7 +132,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> () co
 <div class="textblock"><p>A identity class for holding a user's public data. </p>
 <p>Allows for making changes * to the user component in the session and round code easier. </p>
 </div><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="af92079dc31344b3a12ae3caab69d390e"></a>
+<a class="anchor" id="adf14bed4857603043abe24399e973e49"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -140,19 +143,25 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> () co
           <td class="memname">Dissent::Identity::PublicIdentity::PublicIdentity </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
+          <td class="paramname"><em>id</em> = <code>Id::Zero()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;&#160;</td>
-          <td class="paramname"><em>verification_key</em>, </td>
+          <td class="paramname"><em>verification_key</em> = <code>QSharedPointer&lt;<a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a>&gt;()</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QSharedPointer&lt; <a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a> &gt;&#160;</td>
+          <td class="paramname"><em>encryption_key</em> = <code>QSharedPointer&lt;<a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html">AsymmetricKey</a>&gt;()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>dh_key</em>, </td>
+          <td class="paramname"><em>dh_key</em> = <code>QByteArray()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -178,6 +187,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> () co
   <table class="params">
     <tr><td class="paramname">local_id</td><td>local node's id </td></tr>
     <tr><td class="paramname">signing_key</td><td>local node's signing key </td></tr>
+    <tr><td class="paramname">encryption_key</td><td>local node's encrypting key </td></tr>
     <tr><td class="paramname">dh_key</td><td>local node's DiffieHellman key </td></tr>
     <tr><td class="paramname">super_peer</td><td>is the peer capable of being a super peer </td></tr>
   </table>
@@ -192,7 +202,7 @@ QString&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> () co
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 20 2012 17:58:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 21 2012 11:00:32 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

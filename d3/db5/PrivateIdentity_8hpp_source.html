@@ -104,58 +104,67 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">Crypto::AsymmetricKey</a> <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange – shared secret exchanged in plaintext.">Crypto::DiffieHellman</a> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange – shared secret exchanged in plaintext.">DiffieHellman</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#aa5ca6c887df3fc159945bf53b32e743c">   30</a></span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#aa5ca6c887df3fc159945bf53b32e743c" title="Constructor.">PrivateIdentity</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;local_id = Id::Zero(),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          QSharedPointer&lt;AsymmetricKey&gt; signing_key = QSharedPointer&lt;AsymmetricKey&gt;(),</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          QSharedPointer&lt;DiffieHellman&gt; dh_key = QSharedPointer&lt;DiffieHellman&gt;(),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          <span class="keywordtype">bool</span> super_peer = <span class="keyword">true</span>) :</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        _local_id(local_id),</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        _signing_key(signing_key),</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        _dh_key(dh_key),</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        _super_peer(super_peer)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d">   44</a></span>&#160;      <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d" title="Returns the local node&#39;s Id.">GetLocalId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _local_id; }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#af817993c826bde5d060ebc8a8c668119">   49</a></span>&#160;      QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#af817993c826bde5d060ebc8a8c668119" title="Returns the local node&#39;s signing key.">GetSigningKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _signing_key; }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a41e24785922f582a3407a44864076aca">   54</a></span>&#160;      QSharedPointer&lt;DiffieHellman&gt; <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a41e24785922f582a3407a44864076aca" title="Returns the local node&#39;s DiffieHellman key.">GetDhKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _dh_key; }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a7ee723e2d568804e92d7b179fb58dc43">   59</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a7ee723e2d568804e92d7b179fb58dc43" title="Returns if the member can be a super peer.">GetSuperPeer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _super_peer; }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      Id _local_id;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      QSharedPointer&lt;AsymmetricKey&gt; _signing_key;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      QSharedPointer&lt;DiffieHellman&gt; _dh_key;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordtype">bool</span> _super_peer;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  };</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">inline</span> PublicIdentity GetPublicIdentity(<span class="keyword">const</span> PrivateIdentity &amp;ident)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    PrivateIdentity::AsymmetricKey *key = 0;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    QByteArray dh_pub = QByteArray();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span>(ident.GetSigningKey()) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      key = ident.GetSigningKey()-&gt;GetPublicKey();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a57e0c1e7fbea6ea77d56956a4c167ee1">   31</a></span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a57e0c1e7fbea6ea77d56956a4c167ee1" title="Constructor.">PrivateIdentity</a>(<span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;local_id = Id::Zero(),</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          QSharedPointer&lt;AsymmetricKey&gt; signing_key = QSharedPointer&lt;AsymmetricKey&gt;(),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          QSharedPointer&lt;AsymmetricKey&gt; decryption_key = QSharedPointer&lt;AsymmetricKey&gt;(),</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          QSharedPointer&lt;DiffieHellman&gt; dh_key = QSharedPointer&lt;DiffieHellman&gt;(),</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          <span class="keywordtype">bool</span> super_peer = <span class="keyword">true</span>) :</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        _local_id(local_id),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        _signing_key(signing_key),</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        _decryption_key(decryption_key),</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        _dh_key(dh_key),</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        _super_peer(super_peer)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d">   47</a></span>&#160;      <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;<a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a38210becc5d5e4142ebb3ac148a1324d" title="Returns the local node&#39;s Id.">GetLocalId</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _local_id; }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#af817993c826bde5d060ebc8a8c668119">   52</a></span>&#160;      QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#af817993c826bde5d060ebc8a8c668119" title="Returns the local node&#39;s signing key.">GetSigningKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _signing_key; }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a110767fc30a42d2be4d5dfe69435f285">   57</a></span>&#160;      QSharedPointer&lt;AsymmetricKey&gt; <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a110767fc30a42d2be4d5dfe69435f285" title="Returns the decrypting key.">GetDecryptionKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _decryption_key; }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a41e24785922f582a3407a44864076aca">   62</a></span>&#160;      QSharedPointer&lt;DiffieHellman&gt; <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a41e24785922f582a3407a44864076aca" title="Returns the local node&#39;s DiffieHellman key.">GetDhKey</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _dh_key; }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a7ee723e2d568804e92d7b179fb58dc43">   67</a></span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a7ee723e2d568804e92d7b179fb58dc43" title="Returns if the member can be a super peer.">GetSuperPeer</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _super_peer; }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      Id _local_id;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      QSharedPointer&lt;AsymmetricKey&gt; _signing_key;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      QSharedPointer&lt;AsymmetricKey&gt; _decryption_key;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      QSharedPointer&lt;DiffieHellman&gt; _dh_key;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordtype">bool</span> _super_peer;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  };</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">if</span>(ident.GetDhKey()) {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      dh_pub = ident.GetDhKey()-&gt;GetPublicComponent();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    QSharedPointer&lt;PrivateIdentity::AsymmetricKey&gt; skey(key);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> PublicIdentity(ident.GetLocalId(), skey, dh_pub,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        ident.GetSuperPeer());</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keyword">inline</span> PublicIdentity GetPublicIdentity(<span class="keyword">const</span> PrivateIdentity &amp;ident)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    PrivateIdentity::AsymmetricKey *v_key = 0, *d_key = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    QByteArray dh_pub = QByteArray();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(ident.GetSigningKey()) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      v_key = ident.GetSigningKey()-&gt;GetPublicKey();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span>(ident.GetDecryptionKey()) {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      d_key = ident.GetDecryptionKey()-&gt;GetPublicKey();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span>(ident.GetDhKey()) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      dh_pub = ident.GetDhKey()-&gt;GetPublicComponent();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">return</span> PublicIdentity(ident.GetLocalId(), </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        QSharedPointer&lt;PrivateIdentity::AsymmetricKey&gt;(v_key),</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        QSharedPointer&lt;PrivateIdentity::AsymmetricKey&gt;(d_key),</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        dh_pub, ident.GetSuperPeer());</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 20 2012 17:58:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Aug 21 2012 11:00:31 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -54,6 +54,7 @@ var searchData=
   ['getdatamethod_3c_20repeatingbulkround_20_3e',['GetDataMethod&lt; RepeatingBulkRound &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdatamethod_3c_20session_20_3e',['GetDataMethod&lt; Session &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdatamethod_3c_20tolerantbulkround_20_3e',['GetDataMethod&lt; TolerantBulkRound &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
+  ['getdecryptionkey',['GetDecryptionKey',['../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a110767fc30a42d2be4d5dfe69435f285',1,'Dissent::Identity::PrivateIdentity']]],
   ['getdefaultsession',['GetDefaultSession',['../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#a741967afb69c9d9a167556cb99cda018',1,'Dissent::Anonymity::Sessions::SessionManager']]],
   ['getdescriptors',['GetDescriptors',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a49d4035d10f27b374dcaf39917244a8a',1,'Dissent::Anonymity::BulkRound::GetDescriptors()'],['../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#acb6b687923e20e403c4a8242a281e3e8',1,'Dissent::Anonymity::RepeatingBulkRound::GetDescriptors()']]],
   ['getdestination',['GetDestination',['../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html#acdaacf73ce7c418e813277951be9e627',1,'Dissent::PeerReview::Entry']]],
@@ -64,6 +65,7 @@ var searchData=
   ['getedge',['GetEdge',['../da/d0e/classDissent_1_1Connections_1_1Connection.html#ad03a87689c4cb67a38bc5c5ea724f66a',1,'Dissent::Connections::Connection']]],
   ['getedgelistener',['GetEdgeListener',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a55e591fdf454c33d1650209c47d1f03c',1,'Dissent::Connections::ConnectionManager::GetEdgeListener()'],['../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html#a97f6b373f26cfd918b2f78a009239df8',1,'Dissent::Transports::EdgeFactory::GetEdgeListener()']]],
   ['getencrypteddata',['GetEncryptedData',['../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html#ae4814a6f2154451322b797cf3dc41316',1,'Dissent::Anonymity::ShuffleRoundBlame']]],
+  ['getencryptionkey',['GetEncryptionKey',['../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a3ec8c2baf77b8ecee416ac4b4109dae6',1,'Dissent::Identity::PublicIdentity']]],
   ['getentryhash',['GetEntryHash',['../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html#a5733ec92229b7b93ec3fabae10c54d2e',1,'Dissent::PeerReview::Entry']]],
   ['geterror',['GetError',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a587b3eb5de8655c9f97b3b1974d0e2b6',1,'Dissent::Applications::Settings::GetError()'],['../df/d79/classDissent_1_1Messaging_1_1Response.html#a257efe41bd82a2c4cf12bc5a9bdd33b8',1,'Dissent::Messaging::Response::GetError()']]],
   ['geterrordata',['GetErrorData',['../df/d79/classDissent_1_1Messaging_1_1Response.html#a3b4c0be7b16dc734a5743dbd63cbb7e3',1,'Dissent::Messaging::Response']]],
@@ -176,9 +178,9 @@ var searchData=
   ['getverificationkey',['GetVerificationKey',['../df/d62/classDissent_1_1Identity_1_1PublicIdentity.html#a799b98322fe42f6fe309cbb3a1072470',1,'Dissent::Identity::PublicIdentity::GetVerificationKey()'],['../d2/db1/classDissent_1_1Tunnel_1_1Packets_1_1TcpStartPacket.html#a05551f0bba398b868c13445dba5f4c88',1,'Dissent::Tunnel::Packets::TcpStartPacket::GetVerificationKey()'],['../dd/dbd/classDissent_1_1Tunnel_1_1Packets_1_1UdpStartPacket.html#a9e400302464c578ff5c72e4d559b95cf',1,'Dissent::Tunnel::Packets::UdpStartPacket::GetVerificationKey()']]],
   ['group',['Group',['../d1/da7/classDissent_1_1Identity_1_1Group.html',1,'Dissent::Identity']]],
   ['group',['Group',['../d1/da7/classDissent_1_1Identity_1_1Group.html#aaa4ce79d872062c749e4675951beaf2c',1,'Dissent::Identity::Group::Group(const QVector&lt; PublicIdentity &gt; &amp;roster, const Id &amp;leader=Id::Zero(), SubgroupPolicy subgroup_policy=CompleteGroup, const QVector&lt; PublicIdentity &gt; &amp;subgroup=QVector&lt; PublicIdentity &gt;(), int size=-1)'],['../d1/da7/classDissent_1_1Identity_1_1Group.html#a1cff2cb74f0b2475ac8d512c52858f42',1,'Dissent::Identity::Group::Group()']]],
-  ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html#aa7864623f4617ca2c774512c71ee3ef0',1,'Dissent::Identity::GroupData']]],
   ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html',1,'Dissent::Identity']]],
-  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#aa5daa197e37d78b4f9d80c54a05df3ce',1,'Dissent::Identity::GroupHolder']]],
+  ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html#aa7864623f4617ca2c774512c71ee3ef0',1,'Dissent::Identity::GroupData']]],
   ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html',1,'Dissent::Identity']]],
+  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#aa5daa197e37d78b4f9d80c54a05df3ce',1,'Dissent::Identity::GroupHolder']]],
   ['groupupdated',['GroupUpdated',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#a307d85a629d180253023e1eda6f9e6fc',1,'Dissent::Identity::GroupHolder']]]
 ];
