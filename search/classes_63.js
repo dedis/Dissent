@@ -15,6 +15,7 @@ var searchData=
   ['cpphash',['CppHash',['../d8/d4c/classDissent_1_1Crypto_1_1CppHash.html',1,'Dissent::Crypto']]],
   ['cppintegerdata',['CppIntegerData',['../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html',1,'Dissent::Crypto']]],
   ['cpplibrary',['CppLibrary',['../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html',1,'Dissent::Crypto']]],
+  ['cppneffshuffle',['CppNeffShuffle',['../d6/d0a/classDissent_1_1Crypto_1_1CppNeffShuffle.html',1,'Dissent::Crypto']]],
   ['cppprivatekey',['CppPrivateKey',['../de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html',1,'Dissent::Crypto']]],
   ['cpppublickey',['CppPublicKey',['../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html',1,'Dissent::Crypto']]],
   ['cpprandom',['CppRandom',['../d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html',1,'Dissent::Crypto']]],

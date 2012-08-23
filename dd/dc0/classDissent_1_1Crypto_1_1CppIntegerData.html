@@ -185,8 +185,10 @@ const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class=
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a856ae755fcc5947f329d038f18b6f56f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html">CppIntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a856ae755fcc5947f329d038f18b6f56f">GetRandomInteger</a> (int bit_count, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod, bool prime)</td></tr>
-<tr class="memdesc:a856ae755fcc5947f329d038f18b6f56f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#a856ae755fcc5947f329d038f18b6f56f"></a><br/></td></tr>
+<tr class="memitem:a1c1e7bd236963092dac9b0991fc65be1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html">CppIntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a1c1e7bd236963092dac9b0991fc65be1">GetRandomInteger</a> (int bit_count, bool prime)</td></tr>
+<tr class="memdesc:a1c1e7bd236963092dac9b0991fc65be1"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#a1c1e7bd236963092dac9b0991fc65be1"></a><br/></td></tr>
+<tr class="memitem:a3b091fd471236368f48bc8b31faa3b0f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html">CppIntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a3b091fd471236368f48bc8b31faa3b0f">GetRandomInteger</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *min, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *max, bool prime)</td></tr>
+<tr class="memdesc:a3b091fd471236368f48bc8b31faa3b0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#a3b091fd471236368f48bc8b31faa3b0f"></a><br/></td></tr>
 <tr class="memitem:a2e058400661cd57ade5d02a7a9a520c9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e058400661cd57ade5d02a7a9a520c9"></a>
 static CryptoPP::Integer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a2e058400661cd57ade5d02a7a9a520c9">GetInteger</a> (const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Crypto::Integer</a> &amp;data)</td></tr>
 <tr class="memdesc:a2e058400661cd57ade5d02a7a9a520c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal CryptoPP::Integer. <br/></td></tr>
@@ -379,7 +381,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 
 </div>
 </div>
-<a class="anchor" id="a856ae755fcc5947f329d038f18b6f56f"></a>
+<a class="anchor" id="a1c1e7bd236963092dac9b0991fc65be1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -391,12 +393,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>bit_count</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
-          <td class="paramname"><em>mod</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -421,7 +417,56 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bit_count</td><td>the amount of bits in the integer </td></tr>
-    <tr><td class="paramname">mod</td><td>the modulus of the integer </td></tr>
+    <tr><td class="paramname">prime</td><td>if the integer should be prime </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b091fd471236368f48bc8b31faa3b0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html">CppIntegerData</a>* Dissent::Crypto::CppIntegerData::GetRandomInteger </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>prime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns a random integer data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>smallest number </td></tr>
+    <tr><td class="paramname">max</td><td>largest number </td></tr>
     <tr><td class="paramname">prime</td><td>if the integer should be prime </td></tr>
   </table>
   </dd>
@@ -887,7 +932,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 21 2012 11:00:32 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2012 21:43:40 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

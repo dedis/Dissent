@@ -165,8 +165,10 @@ const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.htm
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a186e2a5dfa70cca96783bc7851b9a3e4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a186e2a5dfa70cca96783bc7851b9a3e4">GetRandomInteger</a> (int bit_count, const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;mod=<a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>(), bool prime=false)</td></tr>
-<tr class="memdesc:a186e2a5dfa70cca96783bc7851b9a3e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#a186e2a5dfa70cca96783bc7851b9a3e4"></a><br/></td></tr>
+<tr class="memitem:ac9c3369703cf71ef618a512f56d3a8a4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#ac9c3369703cf71ef618a512f56d3a8a4">GetRandomInteger</a> (int bit_count, bool prime=false)</td></tr>
+<tr class="memdesc:ac9c3369703cf71ef618a512f56d3a8a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#ac9c3369703cf71ef618a512f56d3a8a4"></a><br/></td></tr>
+<tr class="memitem:a1b063d0c723bfb3ffd9f523189d583ea"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a1b063d0c723bfb3ffd9f523189d583ea">GetRandomInteger</a> (const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;min, const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;max, bool prime=false)</td></tr>
+<tr class="memdesc:a1b063d0c723bfb3ffd9f523189d583ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns a random integer data  <a href="#a1b063d0c723bfb3ffd9f523189d583ea"></a><br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>"Big" <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> wrapper </p>
@@ -332,7 +334,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a186e2a5dfa70cca96783bc7851b9a3e4"></a>
+<a class="anchor" id="ac9c3369703cf71ef618a512f56d3a8a4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -344,12 +346,6 @@ Static Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>bit_count</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;&#160;</td>
-          <td class="paramname"><em>mod</em> = <code><a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>()</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -374,7 +370,56 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bit_count</td><td>the amount of bits in the integer </td></tr>
-    <tr><td class="paramname">mod</td><td>the modulus of the integer </td></tr>
+    <tr><td class="paramname">prime</td><td>if the integer should be prime </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a1b063d0c723bfb3ffd9f523189d583ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> Dissent::Crypto::Integer::GetRandomInteger </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a> &amp;&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>prime</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returns a random integer data </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>smallest number </td></tr>
+    <tr><td class="paramname">max</td><td>largest number </td></tr>
     <tr><td class="paramname">prime</td><td>if the integer should be prime </td></tr>
   </table>
   </dd>
@@ -783,7 +828,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 21 2012 11:00:32 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 22 2012 21:43:40 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
