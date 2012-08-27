@@ -59,7 +59,7 @@ var searchData=
   ['roundstatemachine',['RoundStateMachine',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine',['RoundStateMachine',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#aeb53d602176900dc60c14b592122b0ee',1,'Dissent::Anonymity::RoundStateMachine']]],
   ['roundstatemachine_3c_20csbulkround_20_3e',['RoundStateMachine&lt; CSBulkRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
-  ['roundstatemachine_3c_20neffkeyshuffle_20_3e',['RoundStateMachine&lt; NeffKeyShuffle &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
+  ['roundstatemachine_3c_20neffshuffle_20_3e',['RoundStateMachine&lt; NeffShuffle &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20shuffleround_20_3e',['RoundStateMachine&lt; ShuffleRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundtypeheader',['RoundTypeHeader',['../d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#af4564e125905bc89cdf1350ba2f8812d',1,'Dissent::Anonymity::Tolerant::TolerantBulkRound']]],
   ['rpchandler',['RpcHandler',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html',1,'Dissent::Messaging']]],

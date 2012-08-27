@@ -13,6 +13,7 @@ var searchData=
   ['sessionwebservice',['SessionWebService',['../d3/d84/classDissent_1_1Web_1_1Services_1_1SessionWebService.html',1,'Dissent::Web::Services']]],
   ['settings',['Settings',['../d7/dac/classDissent_1_1Applications_1_1Settings.html',1,'Dissent::Applications']]],
   ['shuffleblamer',['ShuffleBlamer',['../de/da2/classDissent_1_1Anonymity_1_1ShuffleBlamer.html',1,'Dissent::Anonymity']]],
+  ['shufflemessages',['ShuffleMessages',['../de/d0c/classDissent_1_1Anonymity_1_1NeffShufflePrivate_1_1ShuffleMessages.html',1,'Dissent::Anonymity::NeffShufflePrivate']]],
   ['shuffleround',['ShuffleRound',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html',1,'Dissent::Anonymity']]],
   ['shuffleroundbadinnerprivatekey',['ShuffleRoundBadInnerPrivateKey',['../df/db2/classDissent_1_1Tests_1_1ShuffleRoundBadInnerPrivateKey.html',1,'Dissent::Tests']]],
   ['shuffleroundblame',['ShuffleRoundBlame',['../db/da3/classDissent_1_1Anonymity_1_1ShuffleRoundBlame.html',1,'Dissent::Anonymity']]],
@@ -30,5 +31,6 @@ var searchData=
   ['sourceobject',['SourceObject',['../df/d34/classDissent_1_1Messaging_1_1SourceObject.html',1,'Dissent::Messaging']]],
   ['startstop',['StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html',1,'Dissent::Utils']]],
   ['startstopslots',['StartStopSlots',['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html',1,'Dissent::Utils']]],
-  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]]
+  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]],
+  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]]
 ];

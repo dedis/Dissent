@@ -133,25 +133,27 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keyword">static</span> QByteArray <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#afb153e29f66e5ee01fef208a51fb66ef" title="Returns the key in a byte array format.">GetByteArray</a>(<span class="keyword">const</span> CryptoPP::CryptoMaterial &amp;key);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> GetMinimumKeySize() { <span class="keywordflow">return</span> 512; }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0">   80</a></span>&#160;      <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0" title="Does not make sense to create random public keys.">CppPublicKey</a>() { }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#aa4c0fafa3ea569aab56004d9ad908310" title="Loads a key from the provided byte array.">InitFromByteArray</a>(<span class="keyword">const</span> QByteArray &amp;data);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a67e93b081275621ce28dce4849f379bc" title="Loads a key from the given filename.">InitFromFile</a>(<span class="keyword">const</span> QString &amp;filename);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keyword">const</span> CryptoPP::RSA::PublicKey *_public_key;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordtype">bool</span> _valid;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keywordtype">int</span> _key_size;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  };</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keyword">virtual</span> KeyTypes GetKeyType()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> RSA; }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0">   82</a></span>&#160;      <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0" title="Does not make sense to create random public keys.">CppPublicKey</a>() { }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#aa4c0fafa3ea569aab56004d9ad908310" title="Loads a key from the provided byte array.">InitFromByteArray</a>(<span class="keyword">const</span> QByteArray &amp;data);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a67e93b081275621ce28dce4849f379bc" title="Loads a key from the given filename.">InitFromFile</a>(<span class="keyword">const</span> QString &amp;filename);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      <span class="keyword">const</span> CryptoPP::RSA::PublicKey *_public_key;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordtype">bool</span> _valid;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordtype">int</span> _key_size;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  };</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 23 2012 12:30:30 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 27 2012 16:07:28 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

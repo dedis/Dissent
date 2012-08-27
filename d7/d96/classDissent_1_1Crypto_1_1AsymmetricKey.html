@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -116,6 +117,14 @@ Inheritance diagram for Dissent::Crypto::AsymmetricKey:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a992364ebbe74967150ad482ee9fe7831"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>KeyTypes</b> { <b>RSA</b> =  0, 
+<b>DSA</b>, 
+<b>NULL_KEY</b>, 
+<b>OTHER</b>
+ }</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2cf3af2a405666fbf0f72675a2024b20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2cf3af2a405666fbf0f72675a2024b20"></a>
@@ -154,10 +163,15 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memdesc:ac4862a48942fee53ca08ff7d45fc01cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the keys size in bits. <br/></td></tr>
 <tr class="memitem:ae8657083266feff60cc02bedfd031e36"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#ae8657083266feff60cc02bedfd031e36">GetSignatureLength</a> () const </td></tr>
 <tr class="memdesc:ae8657083266feff60cc02bedfd031e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the signature size in bytes.  <a href="#ae8657083266feff60cc02bedfd031e36"></a><br/></td></tr>
-<tr class="memitem:ad616e17080e4cea6fbdb6ba77d9de61a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad616e17080e4cea6fbdb6ba77d9de61a"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsEncryption</b> ()</td></tr>
-<tr class="memitem:ac06fd5a1a14471b6d5a281f6aff7540c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac06fd5a1a14471b6d5a281f6aff7540c"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsVerification</b> ()</td></tr>
+<tr class="memitem:aa588e52e98b962a6591c0703480b60ea"><td class="memTemplParams" colspan="2"><a class="anchor" id="aa588e52e98b962a6591c0703480b60ea"></a>
+template&lt;typename T &gt; </td></tr>
+<tr class="memitem:aa588e52e98b962a6591c0703480b60ea"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Equals</b> (const QSharedPointer&lt; T &gt; &amp;key)</td></tr>
+<tr class="memitem:a250628e72bce8c2883ed9af5e19f6e40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a250628e72bce8c2883ed9af5e19f6e40"></a>
+virtual KeyTypes&#160;</td><td class="memItemRight" valign="bottom"><b>GetKeyType</b> () const =0</td></tr>
+<tr class="memitem:ae25665bf808cef59b1380b71915ce15e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae25665bf808cef59b1380b71915ce15e"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsEncryption</b> () const </td></tr>
+<tr class="memitem:a8870827998d3311b4ea51b7e2a2b2dbb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8870827998d3311b4ea51b7e2a2b2dbb"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>SupportsVerification</b> () const </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -264,7 +278,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the signature size in bytes. </p>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000005">Todo:</a></b></dt><dd>this is a temporary hack as each implementation should be fixed </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000006">Todo:</a></b></dt><dd>this is a temporary hack as each implementation should be fixed </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a3098db2f60b75ca8117c9747b2281940">Dissent::Crypto::CppDsaPublicKey</a>.</p>
 
@@ -535,7 +549,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 23 2012 12:30:30 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 27 2012 16:07:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

@@ -328,31 +328,32 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;        _keys(keys),</div>
 <div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        _encrypted_data(encrypted_data)</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;      {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;      }</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html" title="A class for handling decryption in another thread.">Decryptor</a>()</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      {</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      }</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> run();</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    signals:</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;      <span class="keywordtype">void</span> Finished(<span class="keyword">const</span> QVector&lt;QByteArray&gt; &amp;cleartexts,</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;          <span class="keyword">const</span> QVector&lt;int&gt; &amp;bad);</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;      QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; _keys;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      QVector&lt;QByteArray&gt; _encrypted_data;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  };</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;}</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        setAutoDelete(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;      }</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html" title="A class for handling decryption in another thread.">Decryptor</a>()</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;      {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> run();</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    signals:</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      <span class="keywordtype">void</span> Finished(<span class="keyword">const</span> QVector&lt;QByteArray&gt; &amp;cleartexts,</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;          <span class="keyword">const</span> QVector&lt;int&gt; &amp;bad);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;      QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; _keys;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;      QVector&lt;QByteArray&gt; _encrypted_data;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  };</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;}</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;}</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 23 2012 12:30:30 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Aug 27 2012 16:07:28 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
