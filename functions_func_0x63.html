@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -108,7 +109,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -143,12 +144,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>CancelRequest()
 : <a class="el" href="dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#acb191bfaa2164213517550d9264acfe8">Dissent::Messaging::RpcHandler</a>
 </li>
-<li>ChangeState()
-: <a class="el" href="d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a1d0b3211e8fe812c13fde7c37d3cc91c">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>
-</li>
-<li>CheckCommits()
-: <a class="el" href="d7/d22/classDissent_1_1Anonymity_1_1Tolerant_1_1TolerantBulkRound.html#a6df635eb81967ad7bc16f471659ab232">Dissent::Anonymity::Tolerant::TolerantBulkRound</a>
-</li>
 <li>CheckGroup()
 : <a class="el" href="d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#ad48dea2f7442d6ecd6c79e2ac46a2ffa">Dissent::Anonymity::Sessions::Session</a>
 </li>
@@ -156,10 +151,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a8537d024cff87e427f526fd2e794e428">Dissent::Anonymity::RepeatingBulkRound</a>
 </li>
 <li>Clear()
-: <a class="el" href="dd/d76/classDissent_1_1Anonymity_1_1Log.html#ac396b578eac5802382740d7e4dd66c11">Dissent::Anonymity::Log</a>
-, <a class="el" href="dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a41aa39cd559fc9d68cffc6ec75bdad8b">Dissent::Messaging::BufferSink</a>
-, <a class="el" href="d4/df5/classDissent_1_1Tunnel_1_1TunnelConnectionTable.html#ad609b11b491fe37ea693e48f9d6a89d7">Dissent::Tunnel::TunnelConnectionTable</a>
+: <a class="el" href="d4/df5/classDissent_1_1Tunnel_1_1TunnelConnectionTable.html#ad609b11b491fe37ea693e48f9d6a89d7">Dissent::Tunnel::TunnelConnectionTable</a>
 , <a class="el" href="d4/d63/classDissent_1_1Utils_1_1Timer.html#a7a108b5a396aa0808515ffa49cc61a2d">Dissent::Utils::Timer</a>
+, <a class="el" href="dd/d76/classDissent_1_1Anonymity_1_1Log.html#ac396b578eac5802382740d7e4dd66c11">Dissent::Anonymity::Log</a>
+, <a class="el" href="dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#a41aa39cd559fc9d68cffc6ec75bdad8b">Dissent::Messaging::BufferSink</a>
 </li>
 <li>CleartextHash()
 : <a class="el" href="da/d70/classDissent_1_1Anonymity_1_1BulkRound_1_1Descriptor.html#ac4c36e82e97b4bb57fdd9d4e54ebf6fd">Dissent::Anonymity::BulkRound::Descriptor</a>
@@ -234,16 +229,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="dd/da6/classDissent_1_1Crypto_1_1CppDsaPrivateKey.html#a481ce2abbdabf997e08965109f24ca99">Dissent::Crypto::CppDsaPrivateKey</a>
 </li>
 <li>CppDsaPublicKey()
-: <a class="el" href="df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#a1d3f77af90cc9c0ec0b72a6a60dbdae3">Dissent::Crypto::CppDsaPublicKey</a>
+: <a class="el" href="df/d60/classDissent_1_1Crypto_1_1CppDsaPublicKey.html#adf16eafdd86f14c1c799369744c0e74c">Dissent::Crypto::CppDsaPublicKey</a>
 </li>
 <li>CppIntegerData()
-: <a class="el" href="dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a63134e8f8d790754bdde393c93cb857d">Dissent::Crypto::CppIntegerData</a>
+: <a class="el" href="dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a41adb8484b1eef6e0486f946de1190b9">Dissent::Crypto::CppIntegerData</a>
 </li>
 <li>CppPrivateKey()
 : <a class="el" href="de/d67/classDissent_1_1Crypto_1_1CppPrivateKey.html#acdb48694a1593e877f4b6a3a20ed032e">Dissent::Crypto::CppPrivateKey</a>
 </li>
 <li>CppPublicKey()
-: <a class="el" href="df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a9518954a4fdacbcfc866574a3cef3b92">Dissent::Crypto::CppPublicKey</a>
+: <a class="el" href="df/dcd/classDissent_1_1Crypto_1_1CppPublicKey.html#a7b9c36e13d46d398eed0823840338fb0">Dissent::Crypto::CppPublicKey</a>
 </li>
 <li>CppRandom()
 : <a class="el" href="d2/d5a/classDissent_1_1Crypto_1_1CppRandom.html#a021e021ee8de68d86e18c6b4f42f76fb">Dissent::Crypto::CppRandom</a>
@@ -255,22 +250,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a32cfa9d81da400671c26cfd6f06b4051">Dissent::Anonymity::BulkRound</a>
 </li>
 <li>CreateDiffieHellman()
-: <a class="el" href="d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a9b563050e3afde669dbf1a31aedaa790">Dissent::Crypto::NullLibrary</a>
+: <a class="el" href="d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7214189d3e84dfdadf67af3325012d29">Dissent::Crypto::Library</a>
 , <a class="el" href="d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#a5a3a6f6cc3181fe523ac3ef0395657bf">Dissent::Crypto::CppLibrary</a>
-, <a class="el" href="d1/d2f/classDissent_1_1Crypto_1_1Library.html#a7214189d3e84dfdadf67af3325012d29">Dissent::Crypto::Library</a>
+, <a class="el" href="d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a9b563050e3afde669dbf1a31aedaa790">Dissent::Crypto::NullLibrary</a>
 </li>
 <li>CreateEdgeTo()
-: <a class="el" href="da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html#a13647adcd1cecc293efdbcf32a7f22a8">Dissent::Connections::RelayEdgeListener</a>
-, <a class="el" href="d7/de7/classDissent_1_1Transports_1_1EdgeListener.html#acc264c8302e0f5c3054c8e0a7bfedfcf">Dissent::Transports::EdgeListener</a>
-, <a class="el" href="df/d45/classDissent_1_1Transports_1_1TcpEdgeListener.html#a47900a98781be8d4f020abbeb6516a9b">Dissent::Transports::TcpEdgeListener</a>
+: <a class="el" href="df/d45/classDissent_1_1Transports_1_1TcpEdgeListener.html#a47900a98781be8d4f020abbeb6516a9b">Dissent::Transports::TcpEdgeListener</a>
 , <a class="el" href="d1/da5/classDissent_1_1Transports_1_1BufferEdgeListener.html#afb627336329aedb8a517cc21dd91b9d5">Dissent::Transports::BufferEdgeListener</a>
+, <a class="el" href="da/d26/classDissent_1_1Connections_1_1RelayEdgeListener.html#a13647adcd1cecc293efdbcf32a7f22a8">Dissent::Connections::RelayEdgeListener</a>
+, <a class="el" href="d7/de7/classDissent_1_1Transports_1_1EdgeListener.html#acc264c8302e0f5c3054c8e0a7bfedfcf">Dissent::Transports::EdgeListener</a>
 , <a class="el" href="d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html#a14909ab3a067694936d6df3645d69cad">Dissent::Transports::EdgeFactory</a>
 </li>
 <li>CreatePrivateKey()
-: <a class="el" href="d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#aa683de94479d1f253a16fff474a1b7d3">Dissent::Crypto::CppLibrary</a>
-, <a class="el" href="d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#ac0a191ea593ea378522e3aa33254470a">Dissent::Crypto::NullLibrary</a>
-, <a class="el" href="d1/d2f/classDissent_1_1Crypto_1_1Library.html#a1fbec7c31c1e6ddfedd8ed99db863c5a">Dissent::Crypto::Library</a>
+: <a class="el" href="d1/d2f/classDissent_1_1Crypto_1_1Library.html#a1fbec7c31c1e6ddfedd8ed99db863c5a">Dissent::Crypto::Library</a>
 , <a class="el" href="d2/d65/classDissent_1_1Crypto_1_1CppDsaLibrary.html#aa32e3a4e1032c0ebb0e888b932af7719">Dissent::Crypto::CppDsaLibrary</a>
+, <a class="el" href="d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#aa683de94479d1f253a16fff474a1b7d3">Dissent::Crypto::CppLibrary</a>
+, <a class="el" href="d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#ac0a191ea593ea378522e3aa33254470a">Dissent::Crypto::NullLibrary</a>
 </li>
 <li>CSBroadcast()
 : <a class="el" href="d0/d95/classDissent_1_1ClientServer_1_1CSBroadcast.html#a501ac75b18a876e1929dfbec26579f85">Dissent::ClientServer::CSBroadcast</a>
@@ -285,8 +280,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="d9/d51/classDissent_1_1ClientServer_1_1CSForwarder.html#a12fbdedfdb1160f894901e41f3c71bb2">Dissent::ClientServer::CSForwarder</a>
 </li>
 <li>CSGroupCapable()
-: <a class="el" href="d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a194fdbf1ca64028eb132bd1792a070be">Dissent::Anonymity::CSBulkRound</a>
-, <a class="el" href="d7/dd0/classDissent_1_1Anonymity_1_1NeffShuffle.html#ad5f4ae9e220b211e83d6601d347cc518">Dissent::Anonymity::NeffShuffle</a>
+: <a class="el" href="d7/dd0/classDissent_1_1Anonymity_1_1NeffShuffle.html#ad5f4ae9e220b211e83d6601d347cc518">Dissent::Anonymity::NeffShuffle</a>
+, <a class="el" href="d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#a194fdbf1ca64028eb132bd1792a070be">Dissent::Anonymity::CSBulkRound</a>
 , <a class="el" href="d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a4d34bbc3e8d1500fc56bdbe3b1f81e39">Dissent::Anonymity::Round</a>
 </li>
 <li>CSNetwork()
@@ -302,7 +297,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 27 2012 16:07:30 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 29 2012 21:15:15 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

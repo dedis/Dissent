@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -70,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,7 +82,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>Dissent</b></li><li class="navelem"><b>Anonymity</b></li><li class="navelem"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../d6/dd2/namespaceDissent.html">Dissent</a></li><li class="navelem"><b>Anonymity</b></li><li class="navelem"><a class="el" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html">ShuffleRound</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,7 +102,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Dissent's shuffling algorithm.  
+<p><a class="el" href="../../d6/dd2/namespaceDissent.html" title="Handle false accusations Implement misbehaving servers Implement colluding server Eventually handle &quot;...">Dissent</a>'s shuffling algorithm.  
  <a href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../da/d61/ShuffleRound_8hpp_source.html">ShuffleRound.hpp</a>&gt;</code></p>
@@ -443,7 +444,7 @@ static const float&#160;</td><td class="memItemRight" valign="bottom"><b>PERCENT
 static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_GENERATE_DATA_SIZE</b> = 256</td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Dissent's shuffling algorithm. </p>
+<div class="textblock"><p><a class="el" href="../../d6/dd2/namespaceDissent.html" title="Handle false accusations Implement misbehaving servers Implement colluding server Eventually handle &quot;...">Dissent</a>'s shuffling algorithm. </p>
 <p>A subset of members, shufflers, provide a pair of public encryption keys called inner and outer keys. In the protocol these key pairs are distributed first. Some other subset of peers has a message they want to share anonymously and those that do not have a null packet. Each member encrypts their message first with each inner key and then with each outer key. Keys are ordered by the peer Id of the owner from largest to smallest largest in Integer format. The resulting message is sent to the first member in the shufflers group. Each shuffler removes their outer encryption, shuffles (permutes) the message order, and transmits the resulting message to the next member. When the last shuffler completes their decryption and permutation, the message is broadcasted to all members in the group.</p>
 <p>Each member broadcasts to a go along with the hash of all broadcast messages received thus far if their inner encrypted message is present or a no go if not. If all members submit a go and have the same broadcast message hash, each shuffler reveals their private keys. Otherwise peers begin a blame phase and broadcast their logs to each other. Afterward, each peer distributes the hash of the messages and the signature, so that each other member can verify they are viewing the same state. Each peer will replay the round and determine the faulty peer.</p>
 <p>The blame phase is still being evolved.</p>
@@ -1042,7 +1043,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_G
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 27 2012 16:07:29 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 29 2012 21:15:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

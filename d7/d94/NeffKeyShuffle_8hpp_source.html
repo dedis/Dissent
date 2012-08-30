@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
+      <li><a href="../../namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="../../files.html"><span>Files</span></a></li>
       <li>
@@ -67,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -147,33 +148,32 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        Integer generator = my_key-&gt;GetGenerator();</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> idx = 0; idx &lt; GetState()-&gt;cleartext.size(); idx++) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          qDebug() &lt;&lt; idx;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          <span class="keyword">const</span> QByteArray  &amp;ct = GetState()-&gt;cleartext[idx];</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          Integer public_element(ct);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          QSharedPointer&lt;AsymmetricKey&gt; key(<span class="keyword">new</span> PublicKeyType(modulus,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                subgroup, generator, public_element));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          _keys.append(key);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keywordflow">if</span>(key == my_key) {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            _key_index = idx;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        _parsed = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keywordtype">bool</span> _parsed;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; _keys;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordtype">int</span> _key_index;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  };</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          <span class="keyword">const</span> QByteArray  &amp;ct = GetState()-&gt;cleartext[idx];</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          Integer public_element(ct);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          QSharedPointer&lt;AsymmetricKey&gt; key(<span class="keyword">new</span> PublicKeyType(modulus,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                subgroup, generator, public_element));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          _keys.append(key);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          <span class="keywordflow">if</span>(key == my_key) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            _key_index = idx;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        _parsed = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordtype">bool</span> _parsed;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      QVector&lt;QSharedPointer&lt;AsymmetricKey&gt; &gt; _keys;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordtype">int</span> _key_index;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  };</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 27 2012 16:07:28 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Aug 29 2012 21:15:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

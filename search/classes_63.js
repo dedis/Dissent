@@ -1,7 +1,6 @@
 var searchData=
 [
   ['commandline',['CommandLine',['../da/d0d/classDissent_1_1Applications_1_1CommandLine.html',1,'Dissent::Applications']]],
-  ['conflict',['Conflict',['../d1/d06/classDissent_1_1Anonymity_1_1Tolerant_1_1Conflict.html',1,'Dissent::Anonymity::Tolerant']]],
   ['connection',['Connection',['../da/d0e/classDissent_1_1Connections_1_1Connection.html',1,'Dissent::Connections']]],
   ['connectionacquirer',['ConnectionAcquirer',['../d5/dad/classDissent_1_1Connections_1_1ConnectionAcquirer.html',1,'Dissent::Connections']]],
   ['connectionmanager',['ConnectionManager',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html',1,'Dissent::Connections']]],
@@ -24,6 +23,7 @@ var searchData=
   ['cryptofactory',['CryptoFactory',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html',1,'Dissent::Crypto']]],
   ['csbroadcast',['CSBroadcast',['../d0/d95/classDissent_1_1ClientServer_1_1CSBroadcast.html',1,'Dissent::ClientServer']]],
   ['csbulkround',['CSBulkRound',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html',1,'Dissent::Anonymity']]],
+  ['csbulkroundbadclient',['CSBulkRoundBadClient',['../dc/dd0/classDissent_1_1Tests_1_1CSBulkRoundBadClient.html',1,'Dissent::Tests']]],
   ['csconnectionacquirer',['CSConnectionAcquirer',['../d6/d42/classDissent_1_1ClientServer_1_1CSConnectionAcquirer.html',1,'Dissent::ClientServer']]],
   ['csforwarder',['CSForwarder',['../d9/d51/classDissent_1_1ClientServer_1_1CSForwarder.html',1,'Dissent::ClientServer']]],
   ['csnetwork',['CSNetwork',['../d6/dba/classDissent_1_1ClientServer_1_1CSNetwork.html',1,'Dissent::ClientServer']]],
