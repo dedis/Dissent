@@ -108,8 +108,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> BroadcastPrivateKey()</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator – base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        Random &amp;rand = Random::GetInstance();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span>((rand.GetInt(0, 1024) / 1024.0) &gt; N) {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;          ShuffleRound::BroadcastPrivateKey();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;          <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#afd30b9293f13f1e6d237eb16ba67b2d1" title="Returns the group used in the round.">GetGroup</a>().<a class="code" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html#ac368b5dd55363908b038d0335a16d93d" title="Returns the position of the specified Id.">GetIndex</a>(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>()) &lt;&lt; <a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#abc8871de47e11ef7e1edf7de2477f3d6" title="Returns the local id.">GetLocalId</a>() &lt;&lt;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          <span class="stringliteral">&quot;: received sufficient go messages, broadcasting evil private key.&quot;</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Library *lib = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b" title="Return the library constructor.">GetLibrary</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Library *lib = CryptoFactory::GetInstance().GetLibrary();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="../../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html" title="Stores an asymmetric (public or private key), derived classes should implement these functions...">AsymmetricKey</a> *tmp = lib-&gt;CreatePrivateKey();</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        QByteArray msg;</div>
@@ -146,8 +146,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> Shuffle()</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator – base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        Random &amp;rand = Random::GetInstance();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">if</span>((rand.GetInt(0, 1024) / 1024.0) &gt; N) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          ShuffleRound::Shuffle();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
@@ -176,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        _server_state-&gt;shuffle_input[x] = _server_state-&gt;shuffle_input[y];</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        QVector&lt;int&gt; bad;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        OnionEncryptor *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        OnionEncryptor *oe = CryptoFactory::GetInstance().GetOnionEncryptor();</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">if</span>(!oe-&gt;Decrypt(_server_state-&gt;outer_key, _server_state-&gt;shuffle_input,</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;              _server_state-&gt;shuffle_output, &amp;bad))</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
@@ -218,8 +218,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> Shuffle()</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator – base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        Random &amp;rand = Random::GetInstance();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <span class="keywordflow">if</span>((rand.GetInt(0, 1024) / 1024.0) &gt; N) {</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;          ShuffleRound::Shuffle();</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;          <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        }</div>
@@ -236,8 +236,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        QByteArray get_data = <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#aa7e28b51297ec369dd5c83e04ea0cdd0" title="Empty block used for nodes who do not send any data.">DefaultData</a>;</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        QByteArray inner_ct, outer_ct;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        OnionEncryptor *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a309baf3604c321fe4bb74e2d95b0497f" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(_state-&gt;public_inner_keys, get_data, inner_ct, 0);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        OnionEncryptor *oe = CryptoFactory::GetInstance().GetOnionEncryptor();</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        oe-&gt;Encrypt(_state-&gt;public_inner_keys, get_data, inner_ct, 0);</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        oe-&gt;Encrypt(outer_keys, inner_ct, outer_ct, 0);</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">int</span> x = Random::GetInstance().GetInt(0,</div>
@@ -262,8 +262,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> VerifyInnerCiphertext()</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator – base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        Random &amp;rand = Random::GetInstance();</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span>((rand.GetInt(0, 1024) / 1024.0) &gt; N) {</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;          ShuffleRound::VerifyInnerCiphertext();</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;          <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
@@ -292,16 +292,16 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> SubmitCiphertext()</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator – base class is a singleton.">Random</a> &amp;rand = Random::GetInstance();</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span>((rand.<a class="code" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a3392f856465925a2f657f7d07dd604ba" title="Returns a random intger from min to max.">GetInt</a>(0, 1024) / 1024.0) &gt; N) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        Random &amp;rand = Random::GetInstance();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span>((rand.GetInt(0, 1024) / 1024.0) &gt; N) {</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;          ShuffleRound::SubmitCiphertext();</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;          <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        }</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="../../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#a35b8a1ca1eb6a7daf4d49457564c4470" title="Sets the trigger.">SetTriggered</a>();</div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        OnionEncryptor *oe = <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a389025e225cef15238a81cd15dbe7801" title="Return the Onion Encryptor.">GetOnionEncryptor</a>();</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        oe-&gt;<a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a309baf3604c321fe4bb74e2d95b0497f" title="Encrypts a cleartext with each key in order, returns -1 if successful or the index of the faulty key...">Encrypt</a>(_state-&gt;public_inner_keys, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a767c8d4032068dfafcdfe250dd1c6d28" title="Takes a data block and makes it proper encoding for the shuffle.">PrepareData</a>(),</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        OnionEncryptor *oe = CryptoFactory::GetInstance().GetOnionEncryptor();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        oe-&gt;Encrypt(_state-&gt;public_inner_keys, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a767c8d4032068dfafcdfe250dd1c6d28" title="Takes a data block and makes it proper encoding for the shuffle.">PrepareData</a>(),</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            _state-&gt;inner_ciphertext, 0);</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="keywordtype">int</span> count = Random::GetInstance().GetInt(0, <a class="code" href="../../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#ab34e0fbd8f377c2bd53cafb8725dbb81" title="Returns the shufflers group.">GetShufflers</a>().Count());</div>
@@ -332,7 +332,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 29 2012 21:15:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 2 2012 03:45:07 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

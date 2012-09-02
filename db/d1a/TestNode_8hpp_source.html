@@ -105,14 +105,14 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">static</span> QSharedPointer&lt;AsymmetricKey&gt; GetKey()</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().GetLibraryName() == CryptoFactory::CryptoPPDsa) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">if</span>(CryptoFactory::GetInstance().GetLibraryName() == CryptoFactory::CryptoPPDsa) {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keywordflow">return</span> QSharedPointer&lt;AsymmetricKey&gt;(</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;          <span class="keyword">new</span> <a class="code" href="../../dd/da6/classDissent_1_1Crypto_1_1CppDsaPrivateKey.html" title="Implementation of KeyBase::PrivateKey using CryptoPP.">CppDsaPrivateKey</a>(</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            GetBaseKey()-&gt;GetModulus(),</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            GetBaseKey()-&gt;GetSubgroup(),</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            GetBaseKey()-&gt;GetGenerator()));</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordflow">return</span> QSharedPointer&lt;AsymmetricKey&gt;(<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordflow">return</span> QSharedPointer&lt;AsymmetricKey&gt;(CryptoFactory::GetInstance().</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        GetLibrary()-&gt;CreatePrivateKey());</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
@@ -129,7 +129,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        ident(cm-&gt;GetId(),</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            GetKey(),</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            GetKey(),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            QSharedPointer&lt;DiffieHellman&gt;(<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            QSharedPointer&lt;DiffieHellman&gt;(CryptoFactory::GetInstance().</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;              GetLibrary()-&gt;CreateDiffieHellman()), server)</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      {</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="../../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html" title="Creates and handles transport layer links.">EdgeListener</a> *be = EdgeListenerFactory::GetInstance().CreateEdgeListener(<a class="code" href="../../d5/d7f/classDissent_1_1Transports_1_1BufferAddress.html" title="A wrapper container for (Buffer)AddressData for Buffer end points.">BufferAddress</a>(idx));</div>
@@ -232,7 +232,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 29 2012 21:15:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 2 2012 03:45:07 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

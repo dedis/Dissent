@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">typedef</span> bool (*BadGuyCB)(<a class="code" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html" title="An anonymous exchange amongst peers of a static group.">Round</a> *);</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> FlipByte(QByteArray &amp;msg) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    QScopedPointer&lt;Random&gt; rand(<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">CryptoFactory::GetInstance</a>().GetLibrary()-&gt;GetRandomNumberGenerator());</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    QScopedPointer&lt;Random&gt; rand(CryptoFactory::GetInstance().GetLibrary()-&gt;GetRandomNumberGenerator());</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Invert one byte</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> idx = rand-&gt;GetInt(0, msg.count());</div>
@@ -183,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 29 2012 21:15:14 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Sep 2 2012 03:45:07 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>
