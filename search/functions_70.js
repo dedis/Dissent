@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['package',['Package',['../dc/d6e/classDissent_1_1Web_1_1Packagers_1_1Packager.html#a73018e6b50f7672118c2e1dd9d4d2ecd',1,'Dissent::Web::Packagers::Packager']]],
+  ['package',['Package',['../dd/d79/classDissent_1_1Web_1_1Packagers_1_1JsonPackager.html#af1d0189fe4142b627f6da3fe87771620',1,'Dissent::Web::Packagers::JsonPackager::Package()'],['../dc/d6e/classDissent_1_1Web_1_1Packagers_1_1Packager.html#a73018e6b50f7672118c2e1dd9d4d2ecd',1,'Dissent::Web::Packagers::Packager::Package()']]],
   ['packet',['Packet',['../d4/d63/classDissent_1_1Tunnel_1_1Packets_1_1Packet.html#a5f6fac9cd98d84251a1a637f0f5d16a5',1,'Dissent::Tunnel::Packets::Packet']]],
   ['parsedata',['ParseData',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a6361a99025b2f112731e2e2c011e05e0',1,'Dissent::Anonymity::ShuffleRound']]],
   ['parsedescriptor',['ParseDescriptor',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a3604712ccfbd0bf50c1db3e908cbbad7',1,'Dissent::Anonymity::BulkRound']]],

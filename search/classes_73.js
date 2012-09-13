@@ -23,6 +23,7 @@ var searchData=
   ['shuffleroundmessageswitcher',['ShuffleRoundMessageSwitcher',['../d8/d49/classDissent_1_1Tests_1_1ShuffleRoundMessageSwitcher.html',1,'Dissent::Tests']]],
   ['signalcounter',['SignalCounter',['../d5/d28/classDissent_1_1Utils_1_1SignalCounter.html',1,'Dissent::Utils']]],
   ['signalsink',['SignalSink',['../d8/dad/classDissent_1_1Messaging_1_1SignalSink.html',1,'Dissent::Messaging']]],
+  ['sinkmultiplexer',['SinkMultiplexer',['../dd/d2e/classDissent_1_1Messaging_1_1SinkMultiplexer.html',1,'Dissent::Messaging']]],
   ['sleeper',['Sleeper',['../da/d6d/classDissent_1_1Utils_1_1Sleeper.html',1,'Dissent::Utils']]],
   ['socksconnection',['SocksConnection',['../d2/da7/classDissent_1_1Tunnel_1_1SocksConnection.html',1,'Dissent::Tunnel']]],
   ['sockshostaddress',['SocksHostAddress',['../db/d27/classDissent_1_1Tunnel_1_1SocksHostAddress.html',1,'Dissent::Tunnel']]],
@@ -30,7 +31,7 @@ var searchData=
   ['sourceobject',['SourceObject',['../df/d34/classDissent_1_1Messaging_1_1SourceObject.html',1,'Dissent::Messaging']]],
   ['startstop',['StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html',1,'Dissent::Utils']]],
   ['startstopslots',['StartStopSlots',['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html',1,'Dissent::Utils']]],
+  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]],
   ['state',['State',['../d9/d04/classDissent_1_1Anonymity_1_1CSBulkRound_1_1State.html',1,'Dissent::Anonymity::CSBulkRound']]],
-  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]],
-  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]]
+  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]]
 ];

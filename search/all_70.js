@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['package',['Package',['../dc/d6e/classDissent_1_1Web_1_1Packagers_1_1Packager.html#a73018e6b50f7672118c2e1dd9d4d2ecd',1,'Dissent::Web::Packagers::Packager']]],
+  ['package',['Package',['../dd/d79/classDissent_1_1Web_1_1Packagers_1_1JsonPackager.html#af1d0189fe4142b627f6da3fe87771620',1,'Dissent::Web::Packagers::JsonPackager::Package()'],['../dc/d6e/classDissent_1_1Web_1_1Packagers_1_1Packager.html#a73018e6b50f7672118c2e1dd9d4d2ecd',1,'Dissent::Web::Packagers::Packager::Package()']]],
   ['packager',['Packager',['../dc/d6e/classDissent_1_1Web_1_1Packagers_1_1Packager.html',1,'Dissent::Web::Packagers']]],
   ['packet',['Packet',['../d4/d63/classDissent_1_1Tunnel_1_1Packets_1_1Packet.html',1,'Dissent::Tunnel::Packets']]],
   ['packet',['Packet',['../d4/d63/classDissent_1_1Tunnel_1_1Packets_1_1Packet.html#a5f6fac9cd98d84251a1a637f0f5d16a5',1,'Dissent::Tunnel::Packets::Packet']]],
