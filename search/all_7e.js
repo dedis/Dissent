@@ -50,7 +50,7 @@ var searchData=
   ['_7elibrary',['~Library',['../d1/d2f/classDissent_1_1Crypto_1_1Library.html#aaec2d69f567ca5fe1997fc4fd49e8c67',1,'Dissent::Crypto::Library']]],
   ['_7elrsprivatekey',['~LRSPrivateKey',['../d9/dba/classDissent_1_1Crypto_1_1LRSPrivateKey.html#a2027d5ad8fecff48ca6f91876b9654bb',1,'Dissent::Crypto::LRSPrivateKey']]],
   ['_7elrspublickey',['~LRSPublicKey',['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a4a24c2521d4b06e2ab8440ebc401c9cd',1,'Dissent::Crypto::LRSPublicKey']]],
-  ['_7eneffkeyshuffle',['~NeffKeyShuffle',['../d7/ddf/classDissent_1_1Anonymity_1_1NeffKeyShuffle.html#a0bfd56de8721d3357e83ee51fc186026',1,'Dissent::Anonymity::NeffKeyShuffle']]],
+  ['_7eneffkeyshuffle',['~NeffKeyShuffle',['../d7/ddf/classDissent_1_1Anonymity_1_1NeffKeyShuffle.html#a9d771c71bad1526763a50788baf89dab',1,'Dissent::Anonymity::NeffKeyShuffle']]],
   ['_7eneffshuffle',['~NeffShuffle',['../d7/dd0/classDissent_1_1Anonymity_1_1NeffShuffle.html#a4e4909935c4170d280ddf0a4af5253dd',1,'Dissent::Anonymity::NeffShuffle']]],
   ['_7enetwork',['~Network',['../db/d5e/classDissent_1_1Connections_1_1Network.html#a64d0366ca60cf52eb204bf9b13515887',1,'Dissent::Connections::Network']]],
   ['_7enode',['~Node',['../d2/d2c/classDissent_1_1Applications_1_1Node.html#a9b35a65c9d6f300859d69015286268f8',1,'Dissent::Applications::Node']]],
