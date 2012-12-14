@@ -137,45 +137,48 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#a5d5b2d8f653e027a62a8e1ae138e09cd" title="Stops all internal Sessions and SessionLeaders and removes them from the tables.">Stop</a>();</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      QSharedPointer&lt;Session&gt; <a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#a456f29129b519baf89a0d145bbc95bb0" title="Returns the session matched to the specified id.">GetSession</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;msg);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      QSharedPointer&lt;SessionLeader&gt; GetSessionLeader(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;msg);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      QHash&lt;Id, QSharedPointer&lt;Session&gt; &gt; _id_to_session;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      QHash&lt;Id, QSharedPointer&lt;SessionLeader&gt; &gt; _id_to_session_leader;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _default_session;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordtype">bool</span> _default_set;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      QSharedPointer&lt;RpcHandler&gt; _rpc;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordtype">void</span> HandleSessionStop();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      <span class="keywordtype">void</span> HandleSessionLeaderStop();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordtype">void</span> LinkDisconnect(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="keywordtype">void</span> HandleChallengeRequest(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keywordtype">void</span> HandleChallengeResponse(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <span class="keywordtype">void</span> HandlePrepare(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      <span class="keywordtype">void</span> HandlePrepared(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      <span class="keywordtype">void</span> HandleBegin(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      <span class="keywordtype">void</span> IncomingData(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  };</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;}</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;}</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    signals:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordtype">void</span> SessionAdded(<span class="keyword">const</span> QSharedPointer&lt;Session&gt; &amp;session);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      QSharedPointer&lt;Session&gt; <a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#a456f29129b519baf89a0d145bbc95bb0" title="Returns the session matched to the specified id.">GetSession</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;msg);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      QSharedPointer&lt;SessionLeader&gt; GetSessionLeader(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;msg);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      QHash&lt;Id, QSharedPointer&lt;Session&gt; &gt; _id_to_session;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      QHash&lt;Id, QSharedPointer&lt;SessionLeader&gt; &gt; _id_to_session_leader;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> _default_session;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordtype">bool</span> _default_set;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      QSharedPointer&lt;RpcHandler&gt; _rpc;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordtype">void</span> HandleSessionStop();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordtype">void</span> HandleSessionLeaderStop();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordtype">void</span> LinkDisconnect(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      <span class="keywordtype">void</span> HandleChallengeRequest(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordtype">void</span> HandleChallengeResponse(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      <span class="keywordtype">void</span> HandlePrepare(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <span class="keywordtype">void</span> HandlePrepared(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="keywordtype">void</span> HandleBegin(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="keywordtype">void</span> IncomingData(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;notification);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  };</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 7 2012 10:34:31 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 14 2012 00:59:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

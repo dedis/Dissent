@@ -9,6 +9,13 @@ var searchData=
   ['bufferaddress',['BufferAddress',['../d5/d7f/classDissent_1_1Transports_1_1BufferAddress.html#ae4bc53c5fec855f75d1841b46d6fce2d',1,'Dissent::Transports::BufferAddress']]],
   ['bufferedge',['BufferEdge',['../d3/de8/classDissent_1_1Transports_1_1BufferEdge.html#a612b6682aebc467fca3f8f440848e110',1,'Dissent::Transports::BufferEdge']]],
   ['build',['Build',['../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1bcc40285644891338a9c3e78676fdd',1,'Dissent::Messaging::Response']]],
+  ['buildfinished',['BuildFinished',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#a0c6a121175298de38248a51bfbc4527a',1,'Dissent::Tunnel::TunnelPacket']]],
+  ['buildtcprequest',['BuildTcpRequest',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#a60d8f8ad4566df2396de37c3c1f0840a',1,'Dissent::Tunnel::TunnelPacket']]],
+  ['buildtcpresponse',['BuildTcpResponse',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#a70e6d5d46c05e75ce57d8c4c60f49073',1,'Dissent::Tunnel::TunnelPacket']]],
+  ['buildtcpstart',['BuildTcpStart',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#a156b57c7e09691c123b3c22891271f15',1,'Dissent::Tunnel::TunnelPacket']]],
+  ['buildudprequest',['BuildUdpRequest',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#a377309c331f3503a9880b020d6818c91',1,'Dissent::Tunnel::TunnelPacket']]],
+  ['buildudpresponse',['BuildUdpResponse',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#ae1ac13be126219afbd32f4c25ff37a50',1,'Dissent::Tunnel::TunnelPacket']]],
+  ['buildudpstart',['BuildUdpStart',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#ab4ee3c088f3550d9825e67679e2a7555',1,'Dissent::Tunnel::TunnelPacket']]],
   ['bulkround',['BulkRound',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a0dff99966968ffa6e030bd2ddb395d2b',1,'Dissent::Anonymity::BulkRound']]],
   ['bytesgenerated',['BytesGenerated',['../de/dad/classDissent_1_1Utils_1_1Random.html#a93f92968a4390ff984b0807d4096b0ad',1,'Dissent::Utils::Random']]],
   ['bytesrequired',['BytesRequired',['../de/d19/classDissent_1_1Utils_1_1Serialization.html#a9f43f0c456772912672edec3551ffa41',1,'Dissent::Utils::Serialization']]]

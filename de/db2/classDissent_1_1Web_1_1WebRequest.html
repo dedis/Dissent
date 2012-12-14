@@ -87,6 +87,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="../../dd/de6/classDissent_1_1Web_1_1WebRequest-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -107,6 +108,15 @@ Inheritance diagram for Dissent::Web::WebRequest:</div>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:afa6e43ca7d7e8004d7e25239930e7530"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa6e43ca7d7e8004d7e25239930e7530"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Finished</b> (bool success)</td></tr>
+<tr class="separator:afa6e43ca7d7e8004d7e25239930e7530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e10c0241bb59edcd5d0a6f9160beee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23e10c0241bb59edcd5d0a6f9160beee"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ResponseFinished</b> ()</td></tr>
+<tr class="separator:a23e10c0241bb59edcd5d0a6f9160beee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a88f1fd252a4631a58de468e5f77634e6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a88f1fd252a4631a58de468e5f77634e6"></a>
@@ -116,18 +126,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6d1e6f7af052ef0f905a22b1add3ec9f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d1e6f7af052ef0f905a22b1add3ec9f"></a>
 QTcpSocket *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSocket</b> ()</td></tr>
 <tr class="separator:a6d1e6f7af052ef0f905a22b1add3ec9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71cbbc5e3455ba9d01f6b23082e7c117"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a71cbbc5e3455ba9d01f6b23082e7c117"></a>
-<a class="el" href="../../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html">HttpRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetRequest</b> ()</td></tr>
-<tr class="separator:a71cbbc5e3455ba9d01f6b23082e7c117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef358d1cf64401552da7a6fec11697e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aef358d1cf64401552da7a6fec11697e4"></a>
+const <a class="el" href="../../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html">HttpRequest</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetRequest</b> () const </td></tr>
+<tr class="separator:aef358d1cf64401552da7a6fec11697e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa03eb33269bb6522577f4aebaba0d415"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa03eb33269bb6522577f4aebaba0d415"></a>
 QVariant &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetOutputData</b> ()</td></tr>
 <tr class="separator:aa03eb33269bb6522577f4aebaba0d415"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eaede044e446b147252af4408f5e98b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5eaede044e446b147252af4408f5e98b"></a>
-HttpResponse::StatusCode&#160;</td><td class="memItemRight" valign="bottom"><b>GetStatus</b> ()</td></tr>
-<tr class="separator:a5eaede044e446b147252af4408f5e98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6fb2a1ed1c3cbf2accc9d699ae90c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a6fb2a1ed1c3cbf2accc9d699ae90c3"></a>
+HttpResponse::StatusCode&#160;</td><td class="memItemRight" valign="bottom"><b>GetStatus</b> () const </td></tr>
+<tr class="separator:a5a6fb2a1ed1c3cbf2accc9d699ae90c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c7861cd9eacd3792eeb7d6d6fa380e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c7861cd9eacd3792eeb7d6d6fa380e7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetStatus</b> (HttpResponse::StatusCode status)</td></tr>
 <tr class="separator:a5c7861cd9eacd3792eeb7d6d6fa380e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accba7ed367837f87958667efd7b18a70"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accba7ed367837f87958667efd7b18a70"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>WriteFinished</b> () const </td></tr>
+<tr class="separator:accba7ed367837f87958667efd7b18a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html" title="WebRequest holds all of the data that a web service needs to process a request and return a response ...">WebRequest</a> holds all of the data that a web service needs to process a request and return a response data object. </p>
@@ -138,7 +151,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetStatus</b> (HttpRe
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 7 2012 10:34:32 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 14 2012 00:59:27 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

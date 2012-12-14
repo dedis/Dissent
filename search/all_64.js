@@ -19,7 +19,7 @@ var searchData=
   ['disconnecting',['Disconnecting',['../d8/d0a/classDissent_1_1Overlay_1_1BaseOverlay.html#a81b2e0eca0b6ef9a7a328d4204d20594',1,'Dissent::Overlay::BaseOverlay']]],
   ['dissent',['Dissent',['../d6/dd2/namespaceDissent.html',1,'']]],
   ['divide',['Divide',['../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a4dcb83bb7a1c11f996852ce4c9374412',1,'Dissent::Crypto::CppIntegerData::Divide()'],['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#aad211b7260be26980cc08514b6444a60',1,'Dissent::Crypto::Integer::Divide()'],['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8f7a6478b462ec9ad3f7ae7c87601334',1,'Dissent::Crypto::IntegerData::Divide()']]],
-  ['downstreamdata',['DownstreamData',['../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a88915682415bad993482d57a81644ef2',1,'Dissent::Tunnel::EntryTunnel']]],
+  ['dnslookupfinished',['DnsLookupFinished',['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#a3d461f6524184231ed667187beba596a',1,'Dissent::Tunnel::ExitTunnel']]],
   ['dummysink',['DummySink',['../d8/d1a/classDissent_1_1Messaging_1_1DummySink.html',1,'Dissent::Messaging']]],
   ['dissent_20_2d_20dining_2dcryptographers_2c_20shuffled_2dsend_20network',['Dissent - Dining-Cryptographers, Shuffled-Send Network',['../index.html',1,'']]]
 ];

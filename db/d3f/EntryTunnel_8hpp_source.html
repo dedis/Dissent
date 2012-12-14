@@ -95,88 +95,57 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QTcpServer&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QUrl&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Anonymity/Sessions/Session.hpp&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;Anonymity/Sessions/SessionManager.hpp&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Messaging/RpcHandler.hpp&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Messaging/RequestHandler.hpp&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;SocksConnection.hpp&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;TunnelConnectionTable.hpp&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span>Messaging {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">class </span>RpcHandler;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="keyword">class </span>RequestHandler;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">class </span>Request;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>Tunnel {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">namespace </span>Packets {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">class </span>Packet;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html">   36</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html" title="This is the &quot;entry node&quot; side of a TCP tunnel through dissent.">EntryTunnel</a> : <span class="keyword">public</span> QObject {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;SocksConnection.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>Tunnel {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html">   19</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html" title="This is the &quot;entry node&quot; side of a TCP tunnel through dissent.">EntryTunnel</a> : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#aa6aed3cb6e3852b23782c0c16a57362e" title="Constructor.">EntryTunnel</a>(<span class="keyword">const</span> QUrl &amp;url);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html" title="This is the &quot;entry node&quot; side of a TCP tunnel through dissent.">EntryTunnel</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#ac1179958b70bba2439bc73b49a0c8305" title="Start the tunnel listening on the specified TCP port.">Start</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    signals:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keywordtype">void</span> Stopped();</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Dissent::Anonymity::Sessions::Session</a> <a class="code" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html" title="Maintains a (variable) set of peers (group) which is actively participating in anonymous exchanges (r...">Session</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">Dissent::Anonymity::Sessions::SessionManager</a> <a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">Dissent::Messaging::RpcHandler</a> <a class="code" href="../../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html" title="Rpc mechanism assumes a reliable sending mechanism.">RpcHandler</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Dissent::Messaging::Request</a> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../db/d99/classDissent_1_1Messaging_1_1RequestHandler.html" title="Used to create a request callback, note this does NOT keep a pointer, it internally uses slots and si...">Dissent::Messaging::RequestHandler</a> <a class="code" href="../../db/d99/classDissent_1_1Messaging_1_1RequestHandler.html" title="Used to create a request callback, note this does NOT keep a pointer, it internally uses slots and si...">RequestHandler</a>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../d4/d63/classDissent_1_1Tunnel_1_1Packets_1_1Packet.html" title="Abstract base class for a TCP tunnel packet.">Dissent::Tunnel::Packets::Packet</a> <a class="code" href="../../d4/d63/classDissent_1_1Tunnel_1_1Packets_1_1Packet.html" title="Abstract base class for a TCP tunnel packet.">Packet</a>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a81b13445a86d6ee969e5df3ce9a23a8d" title="Constructor.">EntryTunnel</a>(QUrl url, <a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a> &amp;sm, QSharedPointer&lt;RpcHandler&gt; rpc);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a338d7d016eff13fb8786bda34684488e" title="Data to be sent to the exit tunnel.">OutgoingDataSignal</a>(<span class="keyword">const</span> QByteArray &amp;data);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#ac1f965c6b181d14c8ade19a5c2558276" title="Data from the exit tunnel.">IncomingData</a>(<span class="keyword">const</span> QByteArray &amp;data);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a352d2872b092f0fa81f1cf393089dab8" title="Stops listening on the TCP port.">Stop</a>();</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html" title="This is the &quot;entry node&quot; side of a TCP tunnel through dissent.">EntryTunnel</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#ac1179958b70bba2439bc73b49a0c8305" title="Start the tunnel listening on the specified TCP port.">Start</a>();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a8c478c818ad4b4d707a182d71949aed6" title="Callback for RPC handler when a node sends data to this entry node non-anonymously.">TunnelData</a>(<span class="keyword">const</span> <a class="code" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html" title="Represents the state of an Request.">Request</a> &amp;request);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    signals:</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordtype">void</span> Stopped();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a65d6a4dc0b7f72c5c64a398fd793e2f2" title="Called when a SOCKS client connects to the TCP port.">NewConnection</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a352d2872b092f0fa81f1cf393089dab8" title="Stops listening on the TCP port.">Stop</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a88915682415bad993482d57a81644ef2" title="Callback for when tunnel data is received from the Dissent session.">DownstreamData</a>(<span class="keyword">const</span> QByteArray &amp;);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      QTcpServer _tcp_server;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">const</span> QHostAddress _host;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">const</span> quint16 _port;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordtype">bool</span> _running;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      QSet&lt;SocksConnection*&gt; _pending_conns;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      QHash&lt;QByteArray, QSharedPointer&lt;SocksConnection&gt; &gt; _conn_map;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordtype">void</span> NewConnection();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordtype">void</span> SocksConnected();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordtype">void</span> SocksClosed();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordtype">void</span> OutgoingData(<span class="keyword">const</span> QByteArray &amp;data);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  };</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a74b417741af52d8c299cf2329e8ac41c" title="Called when the SOCKS proxy negotation has completed.">SocksConnected</a>();</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#aa16b6b5414479bb7aaafc8b470d1220c" title="Called when a SOCKS proxy connection has closed.">SocksClosed</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d2/d1b/classDissent_1_1Tunnel_1_1EntryTunnel.html#a2df0a9dee2d821bd63aaf5e0d8f5f488" title="Called when a SOCKS proxy connection has a new packet to send through the Dissent session...">SocksHasUpstreamPacket</a>(<span class="keyword">const</span> QByteArray &amp;packet);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      QSharedPointer&lt;Session&gt; GetSession() { <span class="keywordflow">return</span> _sm.<a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#a741967afb69c9d9a167556cb99cda018" title="Returns the default session.">GetDefaultSession</a>(); }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keywordtype">void</span> HandleDownstreamPacket(QSharedPointer&lt;Packet&gt; pp);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      <span class="keywordtype">bool</span> SessionIsOpen();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      QTcpServer _tcp_server;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      QHostAddress _host;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      quint16 _port;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keywordtype">bool</span> _running;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      QSet&lt;SocksConnection*&gt; _pending_conns;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      QHash&lt;QByteArray, QSharedPointer&lt;SocksConnection&gt; &gt; _conn_map;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <a class="code" href="../../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html" title="Used to filter incoming messages across many sessions.">SessionManager</a> &amp;_sm;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      QSharedPointer&lt;RpcHandler&gt; _rpc;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      QSharedPointer&lt;RequestHandler&gt; _tunnel_data_handler;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  };</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 7 2012 10:34:31 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Dec 14 2012 00:59:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

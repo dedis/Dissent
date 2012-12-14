@@ -13,6 +13,7 @@ var searchData=
   ['mocksender',['MockSender',['../d0/d3a/classDissent_1_1Tests_1_1MockSender.html',1,'Dissent::Tests']]],
   ['mocksource',['MockSource',['../d7/d1d/classMockSource.html',1,'']]],
   ['mocktimercallback',['MockTimerCallback',['../df/d5a/classDissent_1_1Tests_1_1MockTimerCallback.html',1,'Dissent::Tests']]],
+  ['mocktunnel',['MockTunnel',['../d3/d4a/classDissent_1_1Tests_1_1MockTunnel.html',1,'Dissent::Tests']]],
   ['moverngposition',['MoveRngPosition',['../de/dad/classDissent_1_1Utils_1_1Random.html#abe06b27857fdde27039733d22dddde01',1,'Dissent::Utils::Random']]],
   ['msecssinceepoch',['MSecsSinceEpoch',['../d6/d44/classDissent_1_1Utils_1_1Time.html#a0c724f3e3138170c5a95266119b78303',1,'Dissent::Utils::Time::MSecsSinceEpoch(const QDateTime &amp;time)'],['../d6/d44/classDissent_1_1Utils_1_1Time.html#a7747f88ae52d0eb678b59f5509922c0e',1,'Dissent::Utils::Time::MSecsSinceEpoch()']]],
   ['msecsto',['MSecsTo',['../d6/d44/classDissent_1_1Utils_1_1Time.html#a01d040e432deed4c01d61fff6bbf5da9',1,'Dissent::Utils::Time']]],

@@ -1,7 +1,6 @@
 var searchData=
 [
   ['packager',['Packager',['../dc/d6e/classDissent_1_1Web_1_1Packagers_1_1Packager.html',1,'Dissent::Web::Packagers']]],
-  ['packet',['Packet',['../d4/d63/classDissent_1_1Tunnel_1_1Packets_1_1Packet.html',1,'Dissent::Tunnel::Packets']]],
   ['params',['Params',['../d3/ddd/classDissent_1_1Applications_1_1Settings_1_1Params.html',1,'Dissent::Applications::Settings']]],
   ['preexchangedkeyauthenticate',['PreExchangedKeyAuthenticate',['../d0/db5/classDissent_1_1Identity_1_1Authentication_1_1PreExchangedKeyAuthenticate.html',1,'Dissent::Identity::Authentication']]],
   ['preexchangedkeyauthenticator',['PreExchangedKeyAuthenticator',['../d6/d93/classDissent_1_1Identity_1_1Authentication_1_1PreExchangedKeyAuthenticator.html',1,'Dissent::Identity::Authentication']]],
