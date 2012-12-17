@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Dissent: src/Web/Services/GetDirectoryService.hpp Source File</title>
+<title>Dissent: src/Web/GetDirectoryService.hpp Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_2f7b293845ef2dc4967d47cb94f137d6.html">Web</a></li><li class="navelem"><a class="el" href="../../dir_765eeb063fe13a8e6cf978ca49644256.html">Services</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_2f7b293845ef2dc4967d47cb94f137d6.html">Web</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,8 +87,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">GetDirectoryService.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DISSENT_WEB_SERVICES_GET_DIRECTORY_SERVICE_GUARD</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DISSENT_WEB_SERVICES_GET_DIRECTORY_SERVICE_GUARD</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DISSENT_WEB_GET_DIRECTORY_SERVICE_GUARD</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DISSENT_WEB_GET_DIRECTORY_SERVICE_GUARD</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
@@ -98,28 +98,27 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>Web {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span>Services {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="../../dd/d8a/classDissent_1_1Web_1_1Services_1_1GetDirectoryService.html">   14</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../dd/d8a/classDissent_1_1Web_1_1Services_1_1GetDirectoryService.html">GetDirectoryService</a>: <span class="keyword">public</span> <a class="code" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html" title="WebService is the abstract base class representing the logic for processing a WebRequest.">WebService</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../dd/d8a/classDissent_1_1Web_1_1Services_1_1GetDirectoryService.html">GetDirectoryService</a>(<span class="keyword">const</span> QString &amp;path);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../dd/d8a/classDissent_1_1Web_1_1Services_1_1GetDirectoryService.html">GetDirectoryService</a>() {}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> Handle(QSharedPointer&lt;WebRequest&gt; wrp);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="../../da/db8/classDissent_1_1Web_1_1GetDirectoryService.html">   13</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../da/db8/classDissent_1_1Web_1_1GetDirectoryService.html">GetDirectoryService</a>: <span class="keyword">public</span> <a class="code" href="../../dc/dd1/classDissent_1_1Web_1_1WebService.html" title="WebService is the abstract base class representing the logic for processing a WebRequest.">WebService</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../da/db8/classDissent_1_1Web_1_1GetDirectoryService.html">GetDirectoryService</a>(<span class="keyword">const</span> QString &amp;path);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../da/db8/classDissent_1_1Web_1_1GetDirectoryService.html">GetDirectoryService</a>();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../da/db8/classDissent_1_1Web_1_1GetDirectoryService.html#a4ecdf8a7c09c8aef52f49ee3b507e7e0" title="Called to handle the incoming request.">HandleRequest</a>(QHttpRequest *request, QHttpResponse *response);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      QString _webpath; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="keyword">static</span> <span class="keyword">const</span> QString _file_name;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  };</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 14 2012 00:59:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 17 2012 18:01:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

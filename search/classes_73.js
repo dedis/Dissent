@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sendentry',['SendEntry',['../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html',1,'Dissent::PeerReview']]],
-  ['sendmessageservice',['SendMessageService',['../df/d41/classDissent_1_1Web_1_1Services_1_1SendMessageService.html',1,'Dissent::Web::Services']]],
+  ['sendmessageservice',['SendMessageService',['../d7/d41/classDissent_1_1Web_1_1SendMessageService.html',1,'Dissent::Web']]],
   ['serialization',['Serialization',['../de/d19/classDissent_1_1Utils_1_1Serialization.html',1,'Dissent::Utils']]],
   ['serverstate',['ServerState',['../d3/d68/classDissent_1_1Anonymity_1_1ShuffleRound_1_1ServerState.html',1,'Dissent::Anonymity::ShuffleRound']]],
   ['session',['Session',['../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html',1,'Dissent::Anonymity::Sessions']]],
@@ -9,10 +9,9 @@ var searchData=
   ['sessionentrytunnel',['SessionEntryTunnel',['../d9/d8d/classDissent_1_1Tunnel_1_1SessionEntryTunnel.html',1,'Dissent::Tunnel']]],
   ['sessionexittunnel',['SessionExitTunnel',['../dc/dd9/classDissent_1_1Tunnel_1_1SessionExitTunnel.html',1,'Dissent::Tunnel']]],
   ['sessionfactory',['SessionFactory',['../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html',1,'Dissent::Applications']]],
-  ['sessionidservice',['SessionIdService',['../d4/df9/classDissent_1_1Web_1_1Services_1_1SessionIdService.html',1,'Dissent::Web::Services']]],
   ['sessionleader',['SessionLeader',['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html',1,'Dissent::Anonymity::Sessions']]],
   ['sessionmanager',['SessionManager',['../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html',1,'Dissent::Anonymity::Sessions']]],
-  ['sessionwebservice',['SessionWebService',['../d3/d84/classDissent_1_1Web_1_1Services_1_1SessionWebService.html',1,'Dissent::Web::Services']]],
+  ['sessionservice',['SessionService',['../d5/dc0/classDissent_1_1Web_1_1SessionService.html',1,'Dissent::Web']]],
   ['settings',['Settings',['../d7/dac/classDissent_1_1Applications_1_1Settings.html',1,'Dissent::Applications']]],
   ['shuffleblamer',['ShuffleBlamer',['../de/da2/classDissent_1_1Anonymity_1_1ShuffleBlamer.html',1,'Dissent::Anonymity']]],
   ['shufflemessages',['ShuffleMessages',['../de/d0c/classDissent_1_1Anonymity_1_1NeffShufflePrivate_1_1ShuffleMessages.html',1,'Dissent::Anonymity::NeffShufflePrivate']]],
@@ -34,7 +33,7 @@ var searchData=
   ['sourceobject',['SourceObject',['../df/d34/classDissent_1_1Messaging_1_1SourceObject.html',1,'Dissent::Messaging']]],
   ['startstop',['StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html',1,'Dissent::Utils']]],
   ['startstopslots',['StartStopSlots',['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html',1,'Dissent::Utils']]],
-  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]],
   ['state',['State',['../d9/d04/classDissent_1_1Anonymity_1_1CSBulkRound_1_1State.html',1,'Dissent::Anonymity::CSBulkRound']]],
+  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]],
   ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]]
 ];

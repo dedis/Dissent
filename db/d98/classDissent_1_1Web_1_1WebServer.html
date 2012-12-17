@@ -87,149 +87,112 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-slots">Public Slots</a> &#124;
-<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="../../dc/dbf/classDissent_1_1Web_1_1WebServer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Web::WebServer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>An HTTP server that enables interaction with a <a class="el" href="../../d6/dd2/namespaceDissent.html" title="Handle false accusations Implement misbehaving servers Implement colluding server Eventually handle &quot;...">Dissent</a> node over HTTP.  
- <a href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../de/d4d/WebServer_8hpp_source.html">WebServer.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Dissent::Web::WebServer:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="../../db/d98/classDissent_1_1Web_1_1WebServer.png" usemap="#Dissent::Web::WebServer_map" alt=""/>
   <map id="Dissent::Web::WebServer_map" name="Dissent::Web::WebServer_map">
+<area href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStopSlots" shape="rect" coords="88,56,254,80"/>
+<area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="176,0,342,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:a7e3af965b32400c12d0eb425696cd6e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e3af965b32400c12d0eb425696cd6e4"></a>
-typedef <br class="typebreak"/>
-<a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html">Dissent::Web::Services::WebService</a>&#160;</td><td class="memItemRight" valign="bottom"><b>WebService</b></td></tr>
-<tr class="separator:a7e3af965b32400c12d0eb425696cd6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
-Public Slots</h2></td></tr>
-<tr class="memitem:a9357e3bbc2cc8dcdbe112a698af357f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a9357e3bbc2cc8dcdbe112a698af357f7">HandleFinishedWebRequest</a> (QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt; wrp, bool format)</td></tr>
-<tr class="memdesc:a9357e3bbc2cc8dcdbe112a698af357f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when a WebService finishes processing a <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html" title="WebRequest holds all of the data that a web service needs to process a request and return a response ...">WebRequest</a>.  <a href="#a9357e3bbc2cc8dcdbe112a698af357f7"></a><br/></td></tr>
-<tr class="separator:a9357e3bbc2cc8dcdbe112a698af357f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a919264722e85dfdd785dd448913f3106"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a919264722e85dfdd785dd448913f3106"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a919264722e85dfdd785dd448913f3106">Stop</a> ()</td></tr>
-<tr class="memdesc:a919264722e85dfdd785dd448913f3106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the web server. <br/></td></tr>
-<tr class="separator:a919264722e85dfdd785dd448913f3106"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
-Signals</h2></td></tr>
-<tr class="memitem:a26cead71d64607f066465ca406fe8f11"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26cead71d64607f066465ca406fe8f11"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a26cead71d64607f066465ca406fe8f11">Stopped</a> ()</td></tr>
-<tr class="memdesc:a26cead71d64607f066465ca406fe8f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that the user has stopped the web server. <br/></td></tr>
-<tr class="separator:a26cead71d64607f066465ca406fe8f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9b5ba2d5be7d24f964829ea28c667d38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a9b5ba2d5be7d24f964829ea28c667d38">WebServer</a> (QUrl url)</td></tr>
-<tr class="memdesc:a9b5ba2d5be7d24f964829ea28c667d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a9b5ba2d5be7d24f964829ea28c667d38"></a><br/></td></tr>
-<tr class="separator:a9b5ba2d5be7d24f964829ea28c667d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c2c055615d72632ce33d26bf1c56da8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c2c055615d72632ce33d26bf1c56da8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a9c2c055615d72632ce33d26bf1c56da8">Start</a> ()</td></tr>
-<tr class="memdesc:a9c2c055615d72632ce33d26bf1c56da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the server. <br/></td></tr>
-<tr class="separator:a9c2c055615d72632ce33d26bf1c56da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a1db481c392cc469ad25442370161e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a92a1db481c392cc469ad25442370161e">incomingConnection</a> (int socket)</td></tr>
-<tr class="memdesc:a92a1db481c392cc469ad25442370161e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called by QTcpServer when there is an incoming connection.  <a href="#a92a1db481c392cc469ad25442370161e"></a><br/></td></tr>
-<tr class="separator:a92a1db481c392cc469ad25442370161e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebf8f979c102f1a31734b1f1a0af9832"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#aebf8f979c102f1a31734b1f1a0af9832">ReturnError</a> (QTcpSocket *socket, HttpResponse::StatusCode status)</td></tr>
-<tr class="memdesc:aebf8f979c102f1a31734b1f1a0af9832"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write HTML error message to socket and close.  <a href="#aebf8f979c102f1a31734b1f1a0af9832"></a><br/></td></tr>
-<tr class="separator:aebf8f979c102f1a31734b1f1a0af9832"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eceb61e66de14260aac85b02b989da9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a4eceb61e66de14260aac85b02b989da9">AddRoute</a> (HttpRequest::RequestMethod method, QString path, QSharedPointer&lt; <a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html">WebService</a> &gt; service)</td></tr>
-<tr class="memdesc:a4eceb61e66de14260aac85b02b989da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a route to the routing table.  <a href="#a4eceb61e66de14260aac85b02b989da9"></a><br/></td></tr>
-<tr class="separator:a4eceb61e66de14260aac85b02b989da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a179cdbe956c210532b0282421298d4ec"><td class="memItemLeft" align="right" valign="top">QSharedPointer&lt; <a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html">WebService</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a179cdbe956c210532b0282421298d4ec">GetRoute</a> (const <a class="el" href="../../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html">HttpRequest</a> &amp;request)</td></tr>
-<tr class="memdesc:a179cdbe956c210532b0282421298d4ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a route from the routing table WARNING: returns NULL if no route is found!  <a href="#a179cdbe956c210532b0282421298d4ec"></a><br/></td></tr>
-<tr class="separator:a179cdbe956c210532b0282421298d4ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09a1a4eeadab7920c4c421f336c17b74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a09a1a4eeadab7920c4c421f336c17b74"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>WebServer</b> (const QUrl &amp;host)</td></tr>
+<tr class="separator:a09a1a4eeadab7920c4c421f336c17b74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87627384c1d16890ed98a4da7e3f201f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87627384c1d16890ed98a4da7e3f201f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a87627384c1d16890ed98a4da7e3f201f">Start</a> ()</td></tr>
+<tr class="memdesc:a87627384c1d16890ed98a4da7e3f201f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to start. <br/></td></tr>
+<tr class="separator:a87627384c1d16890ed98a4da7e3f201f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31cc2f785bfe0484dab3a9000dc36a77"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31cc2f785bfe0484dab3a9000dc36a77"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a31cc2f785bfe0484dab3a9000dc36a77">Stop</a> ()</td></tr>
+<tr class="memdesc:a31cc2f785bfe0484dab3a9000dc36a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called to stop. <br/></td></tr>
+<tr class="separator:a31cc2f785bfe0484dab3a9000dc36a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a1a7d57f2d99d7edf3a71dec3290a5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a8a1a7d57f2d99d7edf3a71dec3290a5a">AddRoute</a> (QHttpRequest::HttpMethod method, const QString &amp;path, const QSharedPointer&lt; <a class="el" href="../../dc/dd1/classDissent_1_1Web_1_1WebService.html">WebService</a> &gt; &amp;service)</td></tr>
+<tr class="memdesc:a8a1a7d57f2d99d7edf3a71dec3290a5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a route to the routing table.  <a href="#a8a1a7d57f2d99d7edf3a71dec3290a5a"></a><br/></td></tr>
+<tr class="separator:a8a1a7d57f2d99d7edf3a71dec3290a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classDissent_1_1Utils_1_1StartStopSlots"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classDissent_1_1Utils_1_1StartStopSlots')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html">Dissent::Utils::StartStopSlots</a></td></tr>
+<tr class="memitem:ae8b9a6e1895ba07e1c292814a462470e inherit pub_methods_classDissent_1_1Utils_1_1StartStopSlots"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8b9a6e1895ba07e1c292814a462470e"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html#ae8b9a6e1895ba07e1c292814a462470e">~StartStopSlots</a> ()</td></tr>
+<tr class="memdesc:ae8b9a6e1895ba07e1c292814a462470e inherit pub_methods_classDissent_1_1Utils_1_1StartStopSlots"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor - Please call destructor check in your code! <br/></td></tr>
+<tr class="separator:ae8b9a6e1895ba07e1c292814a462470e inherit pub_methods_classDissent_1_1Utils_1_1StartStopSlots"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classDissent_1_1Utils_1_1StartStop"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classDissent_1_1Utils_1_1StartStop')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html">Dissent::Utils::StartStop</a></td></tr>
+<tr class="memitem:a676560c5479636931424227e9adbc98a inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a676560c5479636931424227e9adbc98a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#a676560c5479636931424227e9adbc98a">StartStop</a> ()</td></tr>
+<tr class="memdesc:a676560c5479636931424227e9adbc98a inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor. <br/></td></tr>
+<tr class="separator:a676560c5479636931424227e9adbc98a inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c38a0ddcf5a4135a684f412caa8d1d5 inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8c38a0ddcf5a4135a684f412caa8d1d5"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#a8c38a0ddcf5a4135a684f412caa8d1d5">~StartStop</a> ()</td></tr>
+<tr class="memdesc:a8c38a0ddcf5a4135a684f412caa8d1d5 inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor - Please call destructor check in your code! <br/></td></tr>
+<tr class="separator:a8c38a0ddcf5a4135a684f412caa8d1d5 inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad451cf7a92211515685b709a5edd787f inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#ad451cf7a92211515685b709a5edd787f">Stop</a> (const QString &amp;reason)</td></tr>
+<tr class="memdesc:ad451cf7a92211515685b709a5edd787f inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the first time stopped.  <a href="#ad451cf7a92211515685b709a5edd787f"></a><br/></td></tr>
+<tr class="separator:ad451cf7a92211515685b709a5edd787f inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac21e112d91698e44035cdd1bcf248124 inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac21e112d91698e44035cdd1bcf248124"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#ac21e112d91698e44035cdd1bcf248124">Started</a> () const </td></tr>
+<tr class="memdesc:ac21e112d91698e44035cdd1bcf248124 inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if started. <br/></td></tr>
+<tr class="separator:ac21e112d91698e44035cdd1bcf248124 inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f5e81640e5cb0369e9000d9d894f9d inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a03f5e81640e5cb0369e9000d9d894f9d"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#a03f5e81640e5cb0369e9000d9d894f9d">Stopped</a> () const </td></tr>
+<tr class="memdesc:a03f5e81640e5cb0369e9000d9d894f9d inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if stopped. <br/></td></tr>
+<tr class="separator:a03f5e81640e5cb0369e9000d9d894f9d inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a101a035cda11dd2aa203e4d68d2506a6 inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a101a035cda11dd2aa203e4d68d2506a6"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>GetStoppedReason</b> () const </td></tr>
+<tr class="separator:a101a035cda11dd2aa203e4d68d2506a6 inherit pub_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:af893165f98e110a93a097fdd7a08d04c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af893165f98e110a93a097fdd7a08d04c"></a>
-static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#af893165f98e110a93a097fdd7a08d04c">API_MajorVersionNumber</a> = 0</td></tr>
-<tr class="memdesc:af893165f98e110a93a097fdd7a08d04c"><td class="mdescLeft">&#160;</td><td class="mdescRight">API Version Numbers. <br/></td></tr>
-<tr class="separator:af893165f98e110a93a097fdd7a08d04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23926747accfee81ec3ef6d389019ba9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23926747accfee81ec3ef6d389019ba9"></a>
-static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>API_MinorVersionNumber</b> = 0</td></tr>
-<tr class="separator:a23926747accfee81ec3ef6d389019ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527f70a451139413855343257cf5c548"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a527f70a451139413855343257cf5c548"></a>
-static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>API_BuildVersionNumber</b> = 0</td></tr>
-<tr class="separator:a527f70a451139413855343257cf5c548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c826c7f10e9b7a596dcb6ca21c1ee85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c826c7f10e9b7a596dcb6ca21c1ee85"></a>
-static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html#a4c826c7f10e9b7a596dcb6ca21c1ee85">MaxMessages</a> = 20</td></tr>
-<tr class="memdesc:a4c826c7f10e9b7a596dcb6ca21c1ee85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of messages to store in buffer. <br/></td></tr>
-<tr class="separator:a4c826c7f10e9b7a596dcb6ca21c1ee85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_slots_classDissent_1_1Utils_1_1StartStopSlots"><td colspan="2" onclick="javascript:toggleInherit('pub_slots_classDissent_1_1Utils_1_1StartStopSlots')"><img src="../../closed.png" alt="-"/>&#160;Public Slots inherited from <a class="el" href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html">Dissent::Utils::StartStopSlots</a></td></tr>
+<tr class="memitem:a9f903653e6d28f6a1eeb9fc652de5861 inherit pub_slots_classDissent_1_1Utils_1_1StartStopSlots"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9f903653e6d28f6a1eeb9fc652de5861"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html#a9f903653e6d28f6a1eeb9fc652de5861">CallStart</a> ()</td></tr>
+<tr class="memdesc:a9f903653e6d28f6a1eeb9fc652de5861 inherit pub_slots_classDissent_1_1Utils_1_1StartStopSlots"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls start. <br/></td></tr>
+<tr class="separator:a9f903653e6d28f6a1eeb9fc652de5861 inherit pub_slots_classDissent_1_1Utils_1_1StartStopSlots"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a648c0633809060a3df73f195c51b5925 inherit pub_slots_classDissent_1_1Utils_1_1StartStopSlots"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a648c0633809060a3df73f195c51b5925"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html#a648c0633809060a3df73f195c51b5925">CallStop</a> ()</td></tr>
+<tr class="memdesc:a648c0633809060a3df73f195c51b5925 inherit pub_slots_classDissent_1_1Utils_1_1StartStopSlots"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls stop. <br/></td></tr>
+<tr class="separator:a648c0633809060a3df73f195c51b5925 inherit pub_slots_classDissent_1_1Utils_1_1StartStopSlots"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classDissent_1_1Utils_1_1StartStop"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classDissent_1_1Utils_1_1StartStop')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html">Dissent::Utils::StartStop</a></td></tr>
+<tr class="memitem:aa498a0da34ae54aecbd21d81e16e0d5d inherit pro_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa498a0da34ae54aecbd21d81e16e0d5d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html#aa498a0da34ae54aecbd21d81e16e0d5d">DestructorCheck</a> ()</td></tr>
+<tr class="memdesc:aa498a0da34ae54aecbd21d81e16e0d5d inherit pro_methods_classDissent_1_1Utils_1_1StartStop"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensures the <a class="el" href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern.">StartStop</a> object has been Stopped, must be explicitly called in inherited classes. <br/></td></tr>
+<tr class="separator:aa498a0da34ae54aecbd21d81e16e0d5d inherit pro_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea16e713f8609b31f33311ae12765e27 inherit pro_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea16e713f8609b31f33311ae12765e27"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStart</b> ()</td></tr>
+<tr class="separator:aea16e713f8609b31f33311ae12765e27 inherit pro_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1db0e877138e16fa0dd226164295244 inherit pro_methods_classDissent_1_1Utils_1_1StartStop"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1db0e877138e16fa0dd226164295244"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()</td></tr>
+<tr class="separator:ab1db0e877138e16fa0dd226164295244 inherit pro_methods_classDissent_1_1Utils_1_1StartStop"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>An HTTP server that enables interaction with a <a class="el" href="../../d6/dd2/namespaceDissent.html" title="Handle false accusations Implement misbehaving servers Implement colluding server Eventually handle &quot;...">Dissent</a> node over HTTP. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9b5ba2d5be7d24f964829ea28c667d38"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Dissent::Web::WebServer::WebServer </td>
-          <td>(</td>
-          <td class="paramtype">QUrl&#160;</td>
-          <td class="paramname"><em>url</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructor. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">url</td><td>where to listen </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4eceb61e66de14260aac85b02b989da9"></a>
+<a class="anchor" id="a8a1a7d57f2d99d7edf3a71dec3290a5a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Dissent::Web::WebServer::AddRoute </td>
+          <td class="memname">bool Dissent::Web::WebServer::AddRoute </td>
           <td>(</td>
-          <td class="paramtype">HttpRequest::RequestMethod&#160;</td>
+          <td class="paramtype">QHttpRequest::HttpMethod&#160;</td>
           <td class="paramname"><em>method</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QString&#160;</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
           <td class="paramname"><em>path</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QSharedPointer&lt; <a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html">WebService</a> &gt;&#160;</td>
+          <td class="paramtype">const QSharedPointer&lt; <a class="el" href="../../dc/dd1/classDissent_1_1Web_1_1WebService.html">WebService</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>service</em>&#160;</td>
         </tr>
         <tr>
@@ -241,142 +204,15 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </div><div class="memdoc">
 
 <p>Add a route to the routing table. </p>
-<p>WARNING: <a class="el" href="../../db/d98/classDissent_1_1Web_1_1WebServer.html" title="An HTTP server that enables interaction with a Dissent node over HTTP.">WebServer</a> deletes all web services in the table when its destructor is called!</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">the</td><td>method to route (GET, POST, etc) </td></tr>
-    <tr><td class="paramname">the</td><td>base path to route (without query string) </td></tr>
-    <tr><td class="paramname">the</td><td>routing destination service </td></tr>
+    <tr><td class="paramname">method</td><td>the method to route (GET, POST, etc) </td></tr>
+    <tr><td class="paramname">path</td><td>the base path to route (without query string) </td></tr>
+    <tr><td class="paramname">service</td><td>the routing destination service </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a179cdbe956c210532b0282421298d4ec"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QSharedPointer&lt; <a class="el" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html">WebServer::WebService</a> &gt; Dissent::Web::WebServer::GetRoute </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html">HttpRequest</a> &amp;&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get a route from the routing table WARNING: returns NULL if no route is found! </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">the</td><td>request to route </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a9357e3bbc2cc8dcdbe112a698af357f7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Dissent::Web::WebServer::HandleFinishedWebRequest </td>
-          <td>(</td>
-          <td class="paramtype">QSharedPointer&lt; <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html">WebRequest</a> &gt;&#160;</td>
-          <td class="paramname"><em>wrp</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>format</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Called when a WebService finishes processing a <a class="el" href="../../de/db2/classDissent_1_1Web_1_1WebRequest.html" title="WebRequest holds all of the data that a web service needs to process a request and return a response ...">WebRequest</a>. </p>
-<p>This slot serializes the request, writes it out to the socket, and cleans up the memory. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">wrp</td><td>the web request finished being handled </td></tr>
-    <tr><td class="paramname">format</td><td>whether to package using default packager (true) or leave as raw </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a92a1db481c392cc469ad25442370161e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Dissent::Web::WebServer::incomingConnection </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>socket</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Called by QTcpServer when there is an incoming connection. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">the</td><td>socket number of the incoming connection </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="aebf8f979c102f1a31734b1f1a0af9832"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Dissent::Web::WebServer::ReturnError </td>
-          <td>(</td>
-          <td class="paramtype">QTcpSocket *&#160;</td>
-          <td class="paramname"><em>socket</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">HttpResponse::StatusCode&#160;</td>
-          <td class="paramname"><em>status</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Write HTML error message to socket and close. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">the</td><td>socket to write </td></tr>
-    <tr><td class="paramname">the</td><td>HTTP status code to return </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns true if successfully added </dd></dl>
 
 </div>
 </div>
@@ -387,7 +223,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 14 2012 00:59:27 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 17 2012 18:01:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Dissent: src/Web/Services/MessageWebService.hpp Source File</title>
+<title>Dissent: src/Web/MessageWebService.hpp Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -79,7 +79,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_2f7b293845ef2dc4967d47cb94f137d6.html">Web</a></li><li class="navelem"><a class="el" href="../../dir_765eeb063fe13a8e6cf978ca49644256.html">Services</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_2f7b293845ef2dc4967d47cb94f137d6.html">Web</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -87,8 +87,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">MessageWebService.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DISSENT_WEB_SERVICES_MESSAGE_WEB_SERVICE_GUARD</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DISSENT_WEB_SERVICES_MESSAGE_WEB_SERVICE_GUARD</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DISSENT_WEB_MESSAGE_WEB_SERVICE_GUARD</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DISSENT_WEB_MESSAGE_WEB_SERVICE_GUARD</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QSharedPointer&gt;</span></div>
@@ -97,31 +97,29 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>Web {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>Services {</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="../../de/d5b/classDissent_1_1Web_1_1Services_1_1MessageWebService.html">   16</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../de/d5b/classDissent_1_1Web_1_1Services_1_1MessageWebService.html" title="A WebService that can handle messages incoming from an anonymity Session object.">MessageWebService</a> : <span class="keyword">public</span> <a class="code" href="../../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html" title="WebService is the abstract base class representing the logic for processing a WebRequest.">WebService</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../de/d5b/classDissent_1_1Web_1_1Services_1_1MessageWebService.html" title="A WebService that can handle messages incoming from an anonymity Session object.">MessageWebService</a>() {}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="../../de/d5b/classDissent_1_1Web_1_1Services_1_1MessageWebService.html#af5304287874cb756017a1913669e6f68">   26</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../de/d5b/classDissent_1_1Web_1_1Services_1_1MessageWebService.html#af5304287874cb756017a1913669e6f68" title="Slot called when new data is arriving from a session.">HandleIncomingMessage</a>(<span class="keyword">const</span> QByteArray &amp;data)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        HandleMessage(data);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleMessage(<span class="keyword">const</span> QByteArray &amp;data) = 0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  };</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="../../d0/dc4/classDissent_1_1Web_1_1MessageWebService.html">   15</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d0/dc4/classDissent_1_1Web_1_1MessageWebService.html" title="A WebService that can handle messages incoming from an anonymity Session object.">MessageWebService</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> <a class="code" href="../../dc/dd1/classDissent_1_1Web_1_1WebService.html" title="WebService is the abstract base class representing the logic for processing a WebRequest.">WebService</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../d0/dc4/classDissent_1_1Web_1_1MessageWebService.html" title="A WebService that can handle messages incoming from an anonymity Session object.">MessageWebService</a>() {}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="../../d0/dc4/classDissent_1_1Web_1_1MessageWebService.html#a465ef3f9a0994a0d406c3c45dac31a83">   25</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d0/dc4/classDissent_1_1Web_1_1MessageWebService.html#a465ef3f9a0994a0d406c3c45dac31a83" title="Slot called when new data is arriving from a session.">HandleIncomingMessage</a>(<span class="keyword">const</span> QByteArray &amp;data)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        HandleMessage(data);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleMessage(<span class="keyword">const</span> QByteArray &amp;data) = 0;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 14 2012 00:59:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 17 2012 18:01:38 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

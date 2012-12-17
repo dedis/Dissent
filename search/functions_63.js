@@ -1,7 +1,6 @@
 var searchData=
 [
   ['calculatekidx',['CalculateKidx',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a946c268d89f39eee27d626ec75a4f1a1',1,'Dissent::Anonymity::ShuffleRound']]],
-  ['call',['Call',['../d3/dbe/classDissent_1_1Web_1_1Services_1_1WebService.html#af8a129ad7db7e43ed4c2df5547d75e30',1,'Dissent::Web::Services::WebService']]],
   ['calleddisconnect',['CalledDisconnect',['../da/d0e/classDissent_1_1Connections_1_1Connection.html#a0082afec2c30a3b3ddc2db0b11682a93',1,'Dissent::Connections::Connection']]],
   ['callstart',['CallStart',['../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a6720b39cbca6a129cf5e76e38a2086c7',1,'Dissent::Anonymity::Sessions::Session::CallStart()'],['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#ab00a6d5bd4cbc08c364a56138112a7c7',1,'Dissent::Anonymity::Sessions::SessionLeader::CallStart()'],['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html#a9f903653e6d28f6a1eeb9fc652de5861',1,'Dissent::Utils::StartStopSlots::CallStart()']]],
   ['callstop',['CallStop',['../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#adbccd0179728257e33cfbfa8cef0fe56',1,'Dissent::Anonymity::Sessions::Session::CallStop()'],['../d0/d98/classDissent_1_1Anonymity_1_1Sessions_1_1SessionLeader.html#a2b4412ac82d8193b618ef56d38438da8',1,'Dissent::Anonymity::Sessions::SessionLeader::CallStop()'],['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html#a648c0633809060a3df73f195c51b5925',1,'Dissent::Utils::StartStopSlots::CallStop()']]],

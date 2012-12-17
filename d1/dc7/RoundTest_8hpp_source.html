@@ -155,35 +155,33 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      Group::SubgroupPolicy sg_policy);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> RoundTest_Basic(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      Group::SubgroupPolicy sg_policy);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> RoundTest_Basic_SessionTest(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback, </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      Group::SubgroupPolicy sg_policy, SessionTestCallback session_cb);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> RoundTest_MultiRound(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">void</span> RoundTest_MultiRound(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      Group::SubgroupPolicy sg_policy);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordtype">void</span> RoundTest_AddOne(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      Group::SubgroupPolicy sg_policy);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> RoundTest_AddOne(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> RoundTest_PeerDisconnectEnd(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      Group::SubgroupPolicy sg_policy);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> RoundTest_PeerDisconnectEnd(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      Group::SubgroupPolicy sg_policy);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> RoundTest_PeerDisconnectMiddle(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      Group::SubgroupPolicy sg_policy, <span class="keywordtype">bool</span> <span class="keyword">transient</span> = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> RoundTest_BadGuy(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> good_callback,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> bad_callback,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      Group::SubgroupPolicy sg_policy,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keyword">const</span> BadGuyCB &amp;cb);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> RoundTest_BadGuyBulk(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> good_callback,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> bad_callback,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      Group::SubgroupPolicy sg_policy,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keyword">const</span> BadGuyCB &amp;cb);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">void</span> RoundTest_BadGuyNoAction(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> good_callback,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> bad_callback, Group::SubgroupPolicy sg_policy,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keyword">const</span> BadGuyCB &amp;cb);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">void</span> RoundTest_PeerDisconnectMiddle(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> callback,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      Group::SubgroupPolicy sg_policy, <span class="keywordtype">bool</span> <span class="keyword">transient</span> = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> RoundTest_BadGuy(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> good_callback,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> bad_callback,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      Group::SubgroupPolicy sg_policy,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keyword">const</span> BadGuyCB &amp;cb);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordtype">void</span> RoundTest_BadGuyBulk(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> good_callback,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> bad_callback,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      Group::SubgroupPolicy sg_policy,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keyword">const</span> BadGuyCB &amp;cb);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">void</span> RoundTest_BadGuyNoAction(<a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> good_callback,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <a class="code" href="../../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html">SessionCreator</a> bad_callback, Group::SubgroupPolicy sg_policy,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keyword">const</span> BadGuyCB &amp;cb);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 14 2012 00:59:26 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 17 2012 18:01:37 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['package',['Package',['../dd/d79/classDissent_1_1Web_1_1Packagers_1_1JsonPackager.html#af1d0189fe4142b627f6da3fe87771620',1,'Dissent::Web::Packagers::JsonPackager::Package()'],['../dc/d6e/classDissent_1_1Web_1_1Packagers_1_1Packager.html#a73018e6b50f7672118c2e1dd9d4d2ecd',1,'Dissent::Web::Packagers::Packager::Package()']]],
-  ['packager',['Packager',['../dc/d6e/classDissent_1_1Web_1_1Packagers_1_1Packager.html',1,'Dissent::Web::Packagers']]],
   ['params',['Params',['../d3/ddd/classDissent_1_1Applications_1_1Settings_1_1Params.html',1,'Dissent::Applications::Settings']]],
   ['parsedata',['ParseData',['../df/d28/classDissent_1_1Anonymity_1_1ShuffleRound.html#a6361a99025b2f112731e2e2c011e05e0',1,'Dissent::Anonymity::ShuffleRound']]],
   ['parsedescriptor',['ParseDescriptor',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a3604712ccfbd0bf50c1db3e908cbbad7',1,'Dissent::Anonymity::BulkRound']]],
   ['parselog',['ParseLog',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#a8a8e2ebbd5e73607df4ba5ddd25ee6ce',1,'Dissent::PeerReview::EntryLog']]],
-  ['parserequest',['ParseRequest',['../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html#a90dfafd872e64b7be0dcc2defd044900',1,'Dissent::Web::HttpRequest']]],
   ['peerjoined',['PeerJoined',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#ae0cfdd65d55ebd13a93c1f85e8d621d6',1,'Dissent::Anonymity::CSBulkRound::PeerJoined()'],['../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#a5fb2736bbe588993bcc17e4dca8bfbe2',1,'Dissent::Anonymity::RepeatingBulkRound::PeerJoined()'],['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a41b5c54d6f3105be8ce1967d7af92951',1,'Dissent::Anonymity::Round::PeerJoined()']]],
   ['pop',['Pop',['../dd/d76/classDissent_1_1Anonymity_1_1Log.html#a77a21c2af672b26828b05b255585a64d',1,'Dissent::Anonymity::Log']]],
   ['pow',['Pow',['../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#ab8b69e8017f7cff340c456f986601574',1,'Dissent::Crypto::CppIntegerData::Pow()'],['../d7/d7c/classDissent_1_1Crypto_1_1Integer.html#a08c0769452310378b34778d436735932',1,'Dissent::Crypto::Integer::Pow()'],['../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ae6c2558201d2330026c1785dddb5b903',1,'Dissent::Crypto::IntegerData::Pow()']]],
@@ -19,7 +16,6 @@ var searchData=
   ['previoushash',['PreviousHash',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#a8f92ac89a9b5336d30f4d9a06f3dbf4b',1,'Dissent::PeerReview::EntryLog']]],
   ['previoussequenceid',['PreviousSequenceId',['../d0/d59/classDissent_1_1PeerReview_1_1EntryLog.html#aa42634722834c09abf61538c16e26d55',1,'Dissent::PeerReview::EntryLog']]],
   ['printconnectiontable',['PrintConnectionTable',['../d7/d01/classDissent_1_1Connections_1_1ConnectionTable.html#a5f354b39f31429b5f34464475d9062b6',1,'Dissent::Connections::ConnectionTable']]],
-  ['printdebug',['PrintDebug',['../d3/dbc/classDissent_1_1Web_1_1HttpRequest.html#aa8689ddd234e67ebd293876ae5e89fa3',1,'Dissent::Web::HttpRequest']]],
   ['privateidentity',['PrivateIdentity',['../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html',1,'Dissent::Identity']]],
   ['privateidentity',['PrivateIdentity',['../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a57e0c1e7fbea6ea77d56956a4c167ee1',1,'Dissent::Identity::PrivateIdentity']]],
   ['privatekey',['PrivateKey',['../d7/dac/classDissent_1_1Applications_1_1Settings.html#a0878f3b4f523f45fb8cc5bf6a6d0fb91',1,'Dissent::Applications::Settings']]],

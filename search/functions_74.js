@@ -3,7 +3,6 @@ var searchData=
   ['tcpaddress',['TcpAddress',['../d8/d7e/classDissent_1_1Transports_1_1TcpAddress.html#ad51838e6ef83fb88849ff16b765164f2',1,'Dissent::Transports::TcpAddress']]],
   ['tcpedge',['TcpEdge',['../de/dff/classDissent_1_1Transports_1_1TcpEdge.html#afce256aaf6a8982fa715a561239ca917',1,'Dissent::Transports::TcpEdge']]],
   ['tcpreadfromproxy',['TcpReadFromProxy',['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#aa49e9e9bf5bc4a36474242ffdc22914c',1,'Dissent::Tunnel::ExitTunnel']]],
-  ['textforstatus',['TextForStatus',['../d1/d14/classDissent_1_1Web_1_1HttpResponse.html#a680699815fa58812dbeeb5f37d0b667a',1,'Dissent::Web::HttpResponse']]],
   ['time',['Time',['../d6/d44/classDissent_1_1Utils_1_1Time.html#ac23d45873f63de52bc6c584216a0bce6',1,'Dissent::Utils::Time::Time()'],['../d6/d44/classDissent_1_1Utils_1_1Time.html#a86fef826f3b2b2b09276d071162e936e',1,'Dissent::Utils::Time::Time(Time const &amp;)']]],
   ['timer',['Timer',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#aff66e99a3d7792d28c0cf35e0a0d72e8',1,'Dissent::Utils::Timer::Timer()'],['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a365bb4160be957d2a7b53cf9bd646936',1,'Dissent::Utils::Timer::Timer(Timer const &amp;)']]],
   ['timerevent',['timerEvent',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a66803f79e3aef1d6ac4c88f4ceae377c',1,'Dissent::Utils::Timer']]],

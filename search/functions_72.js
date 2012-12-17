@@ -33,7 +33,6 @@ var searchData=
   ['response',['Response',['../df/d79/classDissent_1_1Messaging_1_1Response.html#aa1a4d69185826883f5503dfa7d81c4fa',1,'Dissent::Messaging::Response']]],
   ['responsehandler',['ResponseHandler',['../db/d7d/classDissent_1_1Messaging_1_1ResponseHandler.html#a135e15234b1207c0d315b18ea59570c5',1,'Dissent::Messaging::ResponseHandler']]],
   ['restart',['Restart',['../d8/d4c/classDissent_1_1Crypto_1_1CppHash.html#a62551fb0a3d7a809fa37d7583c803290',1,'Dissent::Crypto::CppHash::Restart()'],['../df/df2/classDissent_1_1Crypto_1_1Hash.html#a24f610415b6f08381756a0238ba0091a',1,'Dissent::Crypto::Hash::Restart()']]],
-  ['returnerror',['ReturnError',['../db/d98/classDissent_1_1Web_1_1WebServer.html#aebf8f979c102f1a31734b1f1a0af9832',1,'Dissent::Web::WebServer']]],
   ['rngoptimalseedsize',['RngOptimalSeedSize',['../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#a8e7a85a7849fb40e007c44ae6850fa90',1,'Dissent::Crypto::CppLibrary::RngOptimalSeedSize()'],['../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a623d4bcaf1d9aa044426bd2c701096b5',1,'Dissent::Crypto::Library::RngOptimalSeedSize()'],['../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a986eda746d9044a9ef8431a634cb5291',1,'Dissent::Crypto::NullLibrary::RngOptimalSeedSize()']]],
   ['round',['Round',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a53be917d14b58a85d6682121b0378930',1,'Dissent::Anonymity::Round']]],
   ['roundfinished',['RoundFinished',['../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a1154fdc34e271217a982b6ca688eaf08',1,'Dissent::Anonymity::Sessions::Session']]],

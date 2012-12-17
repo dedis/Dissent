@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['echoservice',['EchoService',['../d9/dd5/classDissent_1_1Web_1_1EchoService.html',1,'Dissent::Web']]],
   ['edge',['Edge',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html',1,'Dissent::Transports']]],
   ['edgefactory',['EdgeFactory',['../d4/da2/classDissent_1_1Transports_1_1EdgeFactory.html',1,'Dissent::Transports']]],
   ['edgelistener',['EdgeListener',['../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html',1,'Dissent::Transports']]],
