@@ -29,11 +29,13 @@ var searchData=
   ['socksconnection',['SocksConnection',['../d2/da7/classDissent_1_1Tunnel_1_1SocksConnection.html',1,'Dissent::Tunnel']]],
   ['socksentry',['SocksEntry',['../d3/dd8/classDissent_1_1Tunnel_1_1SocksEntry.html',1,'Dissent::Tunnel']]],
   ['sockstable',['SocksTable',['../d5/d26/classDissent_1_1Tunnel_1_1SocksTable.html',1,'Dissent::Tunnel']]],
+  ['soloentrytunnel',['SoloEntryTunnel',['../db/d0f/classSoloEntryTunnel.html',1,'']]],
+  ['soloexittunnel',['SoloExitTunnel',['../d7/db3/classSoloExitTunnel.html',1,'']]],
   ['source',['Source',['../d7/d32/classDissent_1_1Messaging_1_1Source.html',1,'Dissent::Messaging']]],
   ['sourceobject',['SourceObject',['../df/d34/classDissent_1_1Messaging_1_1SourceObject.html',1,'Dissent::Messaging']]],
   ['startstop',['StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html',1,'Dissent::Utils']]],
   ['startstopslots',['StartStopSlots',['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html',1,'Dissent::Utils']]],
-  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]],
   ['state',['State',['../d9/d04/classDissent_1_1Anonymity_1_1CSBulkRound_1_1State.html',1,'Dissent::Anonymity::CSBulkRound']]],
-  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]]
+  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]],
+  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]]
 ];
