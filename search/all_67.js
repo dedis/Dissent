@@ -38,8 +38,8 @@ var searchData=
   ['getdatamethod_3c_20basebulkround_20_3e',['GetDataMethod&lt; BaseBulkRound &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdatamethod_3c_20bulkround_20_3e',['GetDataMethod&lt; BulkRound &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdatamethod_3c_20csbulkround_20_3e',['GetDataMethod&lt; CSBulkRound &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
+  ['getdatamethod_3c_20dataqueue_20_3e',['GetDataMethod&lt; DataQueue &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdatamethod_3c_20repeatingbulkround_20_3e',['GetDataMethod&lt; RepeatingBulkRound &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
-  ['getdatamethod_3c_20session_20_3e',['GetDataMethod&lt; Session &gt;',['../d0/da8/classDissent_1_1Messaging_1_1GetDataMethod.html',1,'Dissent::Messaging']]],
   ['getdecryptionkey',['GetDecryptionKey',['../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html#a110767fc30a42d2be4d5dfe69435f285',1,'Dissent::Identity::PrivateIdentity']]],
   ['getdefaultsession',['GetDefaultSession',['../d0/d32/classDissent_1_1Anonymity_1_1Sessions_1_1SessionManager.html#a741967afb69c9d9a167556cb99cda018',1,'Dissent::Anonymity::Sessions::SessionManager']]],
   ['getdescriptors',['GetDescriptors',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a49d4035d10f27b374dcaf39917244a8a',1,'Dissent::Anonymity::BulkRound::GetDescriptors()'],['../d7/dca/classDissent_1_1Anonymity_1_1RepeatingBulkRound.html#acb6b687923e20e403c4a8242a281e3e8',1,'Dissent::Anonymity::RepeatingBulkRound::GetDescriptors()']]],
@@ -83,6 +83,7 @@ var searchData=
   ['getlastincomingmessage',['GetLastIncomingMessage',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#aa527ee0f0509c3b08694d6dad1dbd65c',1,'Dissent::Transports::Edge']]],
   ['getlastoutgoingmessage',['GetLastOutgoingMessage',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a5ac917a1326b6c8f2ea2697468fc990c',1,'Dissent::Transports::Edge']]],
   ['getleader',['GetLeader',['../d1/da7/classDissent_1_1Identity_1_1Group.html#a0f104f53515b29d6c3f9665b630ddc28',1,'Dissent::Identity::Group']]],
+  ['getlength',['GetLength',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#a3eb6ac0154a4eef6fefc7f7e2730cc56',1,'Dissent::Tunnel::TunnelPacket']]],
   ['getlibrary',['GetLibrary',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b',1,'Dissent::Crypto::CryptoFactory']]],
   ['getlibraryname',['GetLibraryName',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa',1,'Dissent::Crypto::CryptoFactory']]],
   ['getlinkagecontext',['GetLinkageContext',['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a0a4ddc602451033af9b84722cac5dab3',1,'Dissent::Crypto::LRSPublicKey']]],
@@ -160,7 +161,7 @@ var searchData=
   ['group',['Group',['../d1/da7/classDissent_1_1Identity_1_1Group.html',1,'Dissent::Identity']]],
   ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html#aa7864623f4617ca2c774512c71ee3ef0',1,'Dissent::Identity::GroupData']]],
   ['groupdata',['GroupData',['../df/dce/classDissent_1_1Identity_1_1GroupData.html',1,'Dissent::Identity']]],
-  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#aa5daa197e37d78b4f9d80c54a05df3ce',1,'Dissent::Identity::GroupHolder']]],
   ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html',1,'Dissent::Identity']]],
+  ['groupholder',['GroupHolder',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#aa5daa197e37d78b4f9d80c54a05df3ce',1,'Dissent::Identity::GroupHolder']]],
   ['groupupdated',['GroupUpdated',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#a307d85a629d180253023e1eda6f9e6fc',1,'Dissent::Identity::GroupHolder']]]
 ];

@@ -74,6 +74,7 @@ var searchData=
   ['getlastincomingmessage',['GetLastIncomingMessage',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#aa527ee0f0509c3b08694d6dad1dbd65c',1,'Dissent::Transports::Edge']]],
   ['getlastoutgoingmessage',['GetLastOutgoingMessage',['../dd/d7a/classDissent_1_1Transports_1_1Edge.html#a5ac917a1326b6c8f2ea2697468fc990c',1,'Dissent::Transports::Edge']]],
   ['getleader',['GetLeader',['../d1/da7/classDissent_1_1Identity_1_1Group.html#a0f104f53515b29d6c3f9665b630ddc28',1,'Dissent::Identity::Group']]],
+  ['getlength',['GetLength',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#a3eb6ac0154a4eef6fefc7f7e2730cc56',1,'Dissent::Tunnel::TunnelPacket']]],
   ['getlibrary',['GetLibrary',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a0474d52d0bfa4b8b5b0cd36d249a173b',1,'Dissent::Crypto::CryptoFactory']]],
   ['getlibraryname',['GetLibraryName',['../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa',1,'Dissent::Crypto::CryptoFactory']]],
   ['getlinkagecontext',['GetLinkageContext',['../db/dab/classDissent_1_1Crypto_1_1LRSPublicKey.html#a0a4ddc602451033af9b84722cac5dab3',1,'Dissent::Crypto::LRSPublicKey']]],
