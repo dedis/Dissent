@@ -17,6 +17,7 @@ var searchData=
   ['round',['Round',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html',1,'Dissent::Anonymity']]],
   ['roundcollector',['RoundCollector',['../d3/d51/classDissent_1_1Tests_1_1RoundCollector.html',1,'Dissent::Tests']]],
   ['roundstatemachine',['RoundStateMachine',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
+  ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3ablogdropround_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::BlogDropRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3acsbulkround_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::CSBulkRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3aneffshuffle_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::NeffShuffle &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3ashuffleround_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::ShuffleRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],

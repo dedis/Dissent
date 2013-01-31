@@ -3,6 +3,7 @@ var searchData=
   ['sendentry',['SendEntry',['../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html',1,'Dissent::PeerReview']]],
   ['sendmessageservice',['SendMessageService',['../d7/d41/classDissent_1_1Web_1_1SendMessageService.html',1,'Dissent::Web']]],
   ['serialization',['Serialization',['../de/d19/classDissent_1_1Utils_1_1Serialization.html',1,'Dissent::Utils']]],
+  ['serverciphertext',['ServerCiphertext',['../d1/d84/classDissent_1_1Crypto_1_1BlogDrop_1_1ServerCiphertext.html',1,'Dissent::Crypto::BlogDrop']]],
   ['serverstate',['ServerState',['../d3/d68/classDissent_1_1Anonymity_1_1ShuffleRound_1_1ServerState.html',1,'Dissent::Anonymity::ShuffleRound']]],
   ['session',['Session',['../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html',1,'Dissent::Anonymity::Sessions']]],
   ['sessioncreator',['SessionCreator',['../d5/d9f/classDissent_1_1Tests_1_1SessionCreator.html',1,'Dissent::Tests']]],
@@ -36,6 +37,6 @@ var searchData=
   ['startstop',['StartStop',['../d4/d95/classDissent_1_1Utils_1_1StartStop.html',1,'Dissent::Utils']]],
   ['startstopslots',['StartStopSlots',['../d1/dcc/classDissent_1_1Utils_1_1StartStopSlots.html',1,'Dissent::Utils']]],
   ['state',['State',['../d9/d04/classDissent_1_1Anonymity_1_1CSBulkRound_1_1State.html',1,'Dissent::Anonymity::CSBulkRound']]],
-  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]],
-  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]]
+  ['state',['State',['../d9/d80/classDissent_1_1Anonymity_1_1NeffShuffle_1_1State.html',1,'Dissent::Anonymity::NeffShuffle']]],
+  ['state',['State',['../d6/df9/classDissent_1_1Anonymity_1_1ShuffleRound_1_1State.html',1,'Dissent::Anonymity::ShuffleRound']]]
 ];

@@ -133,6 +133,10 @@ const QByteArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a cla
 const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a1ef6f3d05c16487d0b4eebb4cb663016">ToString</a> () const </td></tr>
 <tr class="memdesc:a1ef6f3d05c16487d0b4eebb4cb663016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the string representation. <br/></td></tr>
 <tr class="separator:a1ef6f3d05c16487d0b4eebb4cb663016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee06dd6c0f3e3df875b9a39a11d752ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee06dd6c0f3e3df875b9a39a11d752ae"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#aee06dd6c0f3e3df875b9a39a11d752ae">IsPrime</a> () const =0</td></tr>
+<tr class="memdesc:aee06dd6c0f3e3df875b9a39a11d752ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if number is prime. <br/></td></tr>
+<tr class="separator:aee06dd6c0f3e3df875b9a39a11d752ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fb0cfa2ff02fab22984cded82cafc5c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a9fb0cfa2ff02fab22984cded82cafc5c">Add</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *other) const =0</td></tr>
 <tr class="memdesc:a9fb0cfa2ff02fab22984cded82cafc5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add operator, produces a new <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a>.  <a href="#a9fb0cfa2ff02fab22984cded82cafc5c"></a><br/></td></tr>
 <tr class="separator:a9fb0cfa2ff02fab22984cded82cafc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,15 +149,21 @@ const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="memitem:a8f7a6478b462ec9ad3f7ae7c87601334"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a8f7a6478b462ec9ad3f7ae7c87601334">Divide</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *divisor) const =0</td></tr>
 <tr class="memdesc:a8f7a6478b462ec9ad3f7ae7c87601334"><td class="mdescLeft">&#160;</td><td class="mdescRight">Division operator, produces a new <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a>.  <a href="#a8f7a6478b462ec9ad3f7ae7c87601334"></a><br/></td></tr>
 <tr class="separator:a8f7a6478b462ec9ad3f7ae7c87601334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fdfcb0264169e9beb7cb10560f57bbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fdfcb0264169e9beb7cb10560f57bbf"></a>
-virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>Modulus</b> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *modulus) const =0</td></tr>
-<tr class="separator:a0fdfcb0264169e9beb7cb10560f57bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31a2b97fb769af1a38e9dd46b840e13"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#af31a2b97fb769af1a38e9dd46b840e13">Modulo</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *modulus) const =0</td></tr>
+<tr class="memdesc:af31a2b97fb769af1a38e9dd46b840e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modulo operator, take a mod m.  <a href="#af31a2b97fb769af1a38e9dd46b840e13"></a><br/></td></tr>
+<tr class="separator:af31a2b97fb769af1a38e9dd46b840e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6c2558201d2330026c1785dddb5b903"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ae6c2558201d2330026c1785dddb5b903">Pow</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *pow, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod) const =0</td></tr>
 <tr class="memdesc:ae6c2558201d2330026c1785dddb5b903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exponentiating operator.  <a href="#ae6c2558201d2330026c1785dddb5b903"></a><br/></td></tr>
 <tr class="separator:ae6c2558201d2330026c1785dddb5b903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0c4deee4c77e5ea9b52fe9dfaab3c29"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ab0c4deee4c77e5ea9b52fe9dfaab3c29">MultiplicativeInverse</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod) const =0</td></tr>
-<tr class="memdesc:ab0c4deee4c77e5ea9b52fe9dfaab3c29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the multiplicative inverse for the internal integer with respect for the specified modulus.  <a href="#ab0c4deee4c77e5ea9b52fe9dfaab3c29"></a><br/></td></tr>
-<tr class="separator:ab0c4deee4c77e5ea9b52fe9dfaab3c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa722b3c0a2f0ffa96e797ec919d09cd7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#aa722b3c0a2f0ffa96e797ec919d09cd7">PowCascade</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *x1, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *e1, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *x2, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *e2) const =0</td></tr>
+<tr class="memdesc:aa722b3c0a2f0ffa96e797ec919d09cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cascade exponentiation modulo n For integer n, compute ((x1^e1 * x2^e2) mod n) This can be much faster than the naive way.  <a href="#aa722b3c0a2f0ffa96e797ec919d09cd7"></a><br/></td></tr>
+<tr class="separator:aa722b3c0a2f0ffa96e797ec919d09cd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0bf7196cb0ae6d5e63151320981aac2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#ab0bf7196cb0ae6d5e63151320981aac2">MultiplyMod</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *other, const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod) const =0</td></tr>
+<tr class="memdesc:ab0bf7196cb0ae6d5e63151320981aac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplication modulo.  <a href="#ab0bf7196cb0ae6d5e63151320981aac2"></a><br/></td></tr>
+<tr class="separator:ab0bf7196cb0ae6d5e63151320981aac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba5f706bdd8b52eb8912648cee08118"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#acba5f706bdd8b52eb8912648cee08118">ModInverse</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *mod) const =0</td></tr>
+<tr class="memdesc:acba5f706bdd8b52eb8912648cee08118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modular multiplicative inverse find x such that ax == 1 mod p.  <a href="#acba5f706bdd8b52eb8912648cee08118"></a><br/></td></tr>
+<tr class="separator:acba5f706bdd8b52eb8912648cee08118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fcd70ee26e8794407c253628e9e2b1c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html#a1fcd70ee26e8794407c253628e9e2b1c">Set</a> (const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *other)=0</td></tr>
 <tr class="memdesc:a1fcd70ee26e8794407c253628e9e2b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="#a1fcd70ee26e8794407c253628e9e2b1c"></a><br/></td></tr>
 <tr class="separator:a1fcd70ee26e8794407c253628e9e2b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -321,7 +331,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 
 </div>
 </div>
-<a class="anchor" id="ab0c4deee4c77e5ea9b52fe9dfaab3c29"></a>
+<a class="anchor" id="acba5f706bdd8b52eb8912648cee08118"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -329,7 +339,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a>* Dissent::Crypto::IntegerData::MultiplicativeInverse </td>
+          <td class="memname">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a>* Dissent::Crypto::IntegerData::ModInverse </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
           <td class="paramname"><em>mod</em></td><td>)</td>
@@ -343,15 +353,49 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 </table>
 </div><div class="memdoc">
 
-<p>Returns the multiplicative inverse for the internal integer with respect for the specified modulus. </p>
+<p>Modular multiplicative inverse find x such that ax == 1 mod p. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mod</td><td>the specified modulus </td></tr>
+    <tr><td class="paramname">mod</td><td>modulus for inverse </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a1b94cb3d0a85fd20e250fc1060dac2e6">Dissent::Crypto::CppIntegerData</a>.</p>
+<p>Implemented in <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a248a42de7490cd96d40f6d1c059e2bde">Dissent::Crypto::CppIntegerData</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af31a2b97fb769af1a38e9dd46b840e13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a>* Dissent::Crypto::IntegerData::Modulo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>modulus</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Modulo operator, take a mod m. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">modulus</td><td>the modulus </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#aa33ab13a5cc03a85fe74f3ae9b452eb5">Dissent::Crypto::CppIntegerData</a>.</p>
 
 </div>
 </div>
@@ -386,6 +430,51 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 </dl>
 
 <p>Implemented in <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a033ea3c59a4e0c1662b1d23c136aed72">Dissent::Crypto::CppIntegerData</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab0bf7196cb0ae6d5e63151320981aac2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a>* Dissent::Crypto::IntegerData::MultiplyMod </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>other</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Multiplication modulo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>multiplicand </td></tr>
+    <tr><td class="paramname">mod</td><td>modulus </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#a5cd2f4091dfca7d85d1ff9be0017516d">Dissent::Crypto::CppIntegerData</a>.</p>
 
 </div>
 </div>
@@ -706,6 +795,65 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 
 </div>
 </div>
+<a class="anchor" id="aa722b3c0a2f0ffa96e797ec919d09cd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a>* Dissent::Crypto::IntegerData::PowCascade </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d6a/classDissent_1_1Crypto_1_1IntegerData.html">IntegerData</a> *&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cascade exponentiation modulo n For integer n, compute ((x1^e1 * x2^e2) mod n) This can be much faster than the naive way. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>first base </td></tr>
+    <tr><td class="paramname">e1</td><td>first exponent </td></tr>
+    <tr><td class="paramname">x2</td><td>second base </td></tr>
+    <tr><td class="paramname">e2</td><td>second exponent </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="../../dd/dc0/classDissent_1_1Crypto_1_1CppIntegerData.html#aa183c39882f43bebeb1c7186472b30e2">Dissent::Crypto::CppIntegerData</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1fcd70ee26e8794407c253628e9e2b1c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -780,7 +928,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reset</b> ()</td></tr
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 25 2013 14:44:08 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 31 2013 16:22:25 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

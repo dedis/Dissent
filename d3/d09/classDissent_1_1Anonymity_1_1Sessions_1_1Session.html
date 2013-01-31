@@ -223,6 +223,9 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a8af24ee6f92b43f1257d0585c3ab14cd">~Session</a> ()</td></tr>
 <tr class="memdesc:a8af24ee6f92b43f1257d0585c3ab14cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor. <br/></td></tr>
 <tr class="separator:a8af24ee6f92b43f1257d0585c3ab14cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8cd40432b0bb950e4d909d02013596d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#ad8cd40432b0bb950e4d909d02013596d">OutOfBandSend</a> (const QByteArray &amp;data)</td></tr>
+<tr class="memdesc:ad8cd40432b0bb950e4d909d02013596d"><td class="mdescLeft">&#160;</td><td class="mdescRight">From a client software, broadcast to all without anonymity, i.e., this complete an anonymous request for external data.  <a href="#ad8cd40432b0bb950e4d909d02013596d"></a><br/></td></tr>
+<tr class="separator:ad8cd40432b0bb950e4d909d02013596d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18afd50c7af0b2343ee8293b50984d7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18afd50c7af0b2343ee8293b50984d7e"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a18afd50c7af0b2343ee8293b50984d7e">Send</a> (const QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a18afd50c7af0b2343ee8293b50984d7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">From a client software, send a message anonymously. <br/></td></tr>
@@ -522,6 +525,33 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()
 
 </div>
 </div>
+<a class="anchor" id="ad8cd40432b0bb950e4d909d02013596d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dissent::Anonymity::Sessions::Session::OutOfBandSend </td>
+          <td>(</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>From a client software, broadcast to all without anonymity, i.e., this complete an anonymous request for external data. </p>
+<p>This ensures that these messages are sent sychronously and using the same structure as the regular messages. </p>
+
+</div>
+</div>
 <a class="anchor" id="a1154fdc34e271217a982b6ca688eaf08"></a>
 <div class="memitem">
 <div class="memproto">
@@ -637,7 +667,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStop</b> ()
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 25 2013 14:44:07 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 31 2013 16:22:25 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>
