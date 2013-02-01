@@ -5,7 +5,6 @@ var searchData=
   ['ciphertextfactory',['CiphertextFactory',['../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html',1,'Dissent::Crypto::BlogDrop']]],
   ['clientciphertext',['ClientCiphertext',['../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html',1,'Dissent::Crypto::BlogDrop']]],
   ['commandline',['CommandLine',['../da/d0d/classDissent_1_1Applications_1_1CommandLine.html',1,'Dissent::Applications']]],
-  ['compositeintegergroup',['CompositeIntegerGroup',['../dc/d78/classDissent_1_1Crypto_1_1AbstractGroup_1_1CompositeIntegerGroup.html',1,'Dissent::Crypto::AbstractGroup']]],
   ['connection',['Connection',['../da/d0e/classDissent_1_1Connections_1_1Connection.html',1,'Dissent::Connections']]],
   ['connectionacquirer',['ConnectionAcquirer',['../d5/dad/classDissent_1_1Connections_1_1ConnectionAcquirer.html',1,'Dissent::Connections']]],
   ['connectionmanager',['ConnectionManager',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html',1,'Dissent::Connections']]],

@@ -169,9 +169,9 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        FINISHED,</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      };</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../d1/d9a/classDissent_1_1Anonymity_1_1BlogDropRound.html#a6f1e9470e1ed6ec0475fcf07e14a21a2" title="Constructor.">BlogDropRound</a>(QSharedPointer&lt;Parameters&gt; blogdrop_params, </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../d1/d9a/classDissent_1_1Anonymity_1_1BlogDropRound.html#ad3fca3d76a712c0f646c4a49b7b5cd25" title="Constructor.">BlogDropRound</a>(<span class="keyword">const</span> QSharedPointer&lt;Parameters&gt; &amp;blogdrop_params, </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;          <span class="keyword">const</span> Group &amp;group, <span class="keyword">const</span> PrivateIdentity &amp;ident,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          <span class="keyword">const</span> Id &amp;round_id, QSharedPointer&lt;Network&gt; network,</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;          <span class="keyword">const</span> Id &amp;round_id, <span class="keyword">const</span> QSharedPointer&lt;Network&gt; &amp;network,</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;          GetDataCallback &amp;get_data,</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;          CreateRound create_shuffle = &amp;TCreateRound&lt;NullRound&gt;);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
@@ -234,7 +234,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <span class="keyword">class </span>State {</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;          State(QSharedPointer&lt;const Parameters&gt; round_params) : </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;          State(<span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;round_params) : </div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            params(round_params),</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            client_sk(new PrivateKey(params)),</div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            client_pk(new PublicKey(client_sk)),</div>
@@ -304,7 +304,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <span class="keyword">class </span>ServerState : <span class="keyword">public</span> State {</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;          ServerState(QSharedPointer&lt;const Parameters&gt; round_params) :</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;          ServerState(<span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;round_params) :</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            State(round_params),</div>
 <div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            server_sk(new PrivateKey(params)),</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            server_pk(new PublicKey(server_sk)) {}</div>
@@ -401,7 +401,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;      <span class="keywordtype">void</span> ProcessCleartext();</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;      <span class="keywordtype">void</span> ConcludeClientCiphertextSubmission(<span class="keyword">const</span> <span class="keywordtype">int</span> &amp;);</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;      <span class="keywordtype">void</span> Abort(<span class="keyword">const</span> QString reason);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;      <span class="keywordtype">void</span> Abort(<span class="keyword">const</span> QString &amp;reason);</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">bool</span> SlotIsOpen(<span class="keywordtype">int</span> slot_idx);</div>
 <div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;</div>
@@ -412,10 +412,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;      <span class="keywordtype">bool</span> _stop_next;</div>
 <div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div>
 <div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      <span class="keywordtype">void</span> GenerateClientCiphertextDone(QByteArray mycipher);</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;      <span class="keywordtype">void</span> GenerateClientCiphertextDoneServer(QByteArray mycipher);</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;      <span class="keywordtype">void</span> GenerateClientCiphertextDone(<span class="keyword">const</span> QByteArray &amp;mycipher);</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;      <span class="keywordtype">void</span> GenerateClientCiphertextDoneServer(<span class="keyword">const</span> QByteArray &amp;mycipher);</div>
 <div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;      <span class="keywordtype">void</span> GenerateServerCiphertextDone();</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;      <span class="keywordtype">void</span> GenerateServerValidationDone(QByteArray signature);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;      <span class="keywordtype">void</span> GenerateServerValidationDone(<span class="keyword">const</span> QByteArray &amp;signature);</div>
 <div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;</div>
 <div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;  };</div>
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;</div>
@@ -425,7 +425,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;      QSharedPointer&lt;Connections::Network&gt; network,</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      Messaging::GetDataCallback &amp;get_data)</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;  {</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    QSharedPointer&lt;B&gt; round(<span class="keyword">new</span> B(<a class="code" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a7f346bac4bc654298aaa308e788e6b7c" title="Constructor that uses 256-bit fixed EC group (Supposedly 256-bit ECs are equivalent to 3072-bit RSA/D...">Crypto::BlogDrop::Parameters::CppECElGamalProduction</a>(), </div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    QSharedPointer&lt;B&gt; round(<span class="keyword">new</span> B(<a class="code" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#aa03692d95db22350c19f6447fe206447" title="Constructor that uses 256-bit fixed EC group (Supposedly 256-bit ECs are equivalent to 3072-bit RSA/D...">Crypto::BlogDrop::Parameters::CppECElGamalProduction</a>(), </div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;          group, ident, round_id, network, get_data));</div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    round-&gt;SetSharedPointer(round);</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;    <span class="keywordflow">return</span> round;</div>
@@ -437,7 +437,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;      QSharedPointer&lt;Connections::Network&gt; network,</div>
 <div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;      Messaging::GetDataCallback &amp;get_data)</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  {</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    QSharedPointer&lt;B&gt; round(<span class="keyword">new</span> B(<a class="code" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a23434ade90634f398dbad7cf62b86628" title="Constructor that uses 256-bit fixed EC group (Supposedly 256-bit ECs are equivalent to 3072-bit RSA/D...">Crypto::BlogDrop::Parameters::CppECHashingProduction</a>(), </div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;    QSharedPointer&lt;B&gt; round(<span class="keyword">new</span> B(<a class="code" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a5f035498b745f155373b3470a59e8413" title="Constructor that uses 256-bit fixed EC group (Supposedly 256-bit ECs are equivalent to 3072-bit RSA/D...">Crypto::BlogDrop::Parameters::CppECHashingProduction</a>(), </div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;          group, ident, round_id, network, get_data));</div>
 <div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    round-&gt;SetSharedPointer(round);</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    <span class="keywordflow">return</span> round;</div>
@@ -511,7 +511,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 31 2013 16:22:24 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 31 2013 23:00:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

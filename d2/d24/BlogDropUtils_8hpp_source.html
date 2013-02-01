@@ -122,19 +122,19 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          <span class="keyword">const</span> <a class="code" href="../../d1/df9/classDissent_1_1Crypto_1_1AbstractGroup_1_1Element.html" title="This is a wrapper class representing an element of an algebraic group.">Element</a> &amp;y, </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;          <span class="keyword">const</span> <a class="code" href="../../d1/df9/classDissent_1_1Crypto_1_1AbstractGroup_1_1Element.html" title="This is a wrapper class representing an element of an algebraic group.">Element</a> &amp;t);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d1/df9/classDissent_1_1Crypto_1_1AbstractGroup_1_1Element.html" title="This is a wrapper class representing an element of an algebraic group.">Element</a> <a class="code" href="../../d4/d0f/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropUtils.html#ae412b32d2494bd1e1bb475997d8deca3" title="Compute e(prod_pks, Hash(round_id, group))">GetPairedBase</a>(QSharedPointer&lt;const Parameters&gt; params,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; prod_pks, </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pk, </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <span class="keywordtype">int</span> phase, </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d1/df9/classDissent_1_1Crypto_1_1AbstractGroup_1_1Element.html" title="This is a wrapper class representing an element of an algebraic group.">Element</a> <a class="code" href="../../d4/d0f/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropUtils.html#adc89b669b8e9208b8b2a264bea170c86" title="Compute e(prod_pks, Hash(round_id, group))">GetPairedBase</a>(<span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; &amp;prod_pks, </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pk, </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <span class="keywordtype">int</span> phase,</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          <span class="keywordtype">int</span> element_idx);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> <a class="code" href="../../d4/d0f/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropUtils.html#a250c4d5151a8294d6ab6b11422b0a6ff" title="Get a nonce for this phase and round.">GetPhaseHash</a>(QSharedPointer&lt;const Parameters&gt; params,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pk, </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          <span class="keywordtype">int</span> phase, </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> <a class="code" href="../../d4/d0f/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropUtils.html#a953a915d0108af2f68089f5788b100d5" title="Get a nonce for this phase and round.">GetPhaseHash</a>(<span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pk,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          <span class="keywordtype">int</span> phase,</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          <span class="keywordtype">int</span> element_idx);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d1/df9/classDissent_1_1Crypto_1_1AbstractGroup_1_1Element.html" title="This is a wrapper class representing an element of an algebraic group.">Element</a> <a class="code" href="../../d4/d0f/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropUtils.html#a05062f2f5aa7f8b4fcb47f57f782f888" title="Compute a generator as a function of H(params, ...)">GetHashedGenerator</a>(QSharedPointer&lt;const Parameters&gt; params,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pk, </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d1/df9/classDissent_1_1Crypto_1_1AbstractGroup_1_1Element.html" title="This is a wrapper class representing an element of an algebraic group.">Element</a> <a class="code" href="../../d4/d0f/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropUtils.html#a6ddd664f21063290442e8efc8cae6855" title="Compute a generator as a function of H(params, ...)">GetHashedGenerator</a>(<span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pk, </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          <span class="keywordtype">int</span> phase, </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          <span class="keywordtype">int</span> element_idx);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
@@ -154,7 +154,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 31 2013 16:22:24 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 31 2013 23:00:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

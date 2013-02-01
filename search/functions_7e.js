@@ -15,12 +15,9 @@ var searchData=
   ['_7ebufferedgelistener',['~BufferEdgeListener',['../d1/da5/classDissent_1_1Transports_1_1BufferEdgeListener.html#a0580b2f31c5886d3716d00e0bfefa02a',1,'Dissent::Transports::BufferEdgeListener']]],
   ['_7ebuffersink',['~BufferSink',['../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.html#af3549a76258ac3f0cd0f8f4a8fc872a5',1,'Dissent::Messaging::BufferSink']]],
   ['_7ebulkround',['~BulkRound',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a2cfc9e8c37aabcda8fb7aa5db616578b',1,'Dissent::Anonymity::BulkRound']]],
-  ['_7ebyteelementdata',['~ByteElementData',['../d3/d9a/classDissent_1_1Crypto_1_1AbstractGroup_1_1ByteElementData.html#a71fd095d50de20e04a5b92be85bbc5f4',1,'Dissent::Crypto::AbstractGroup::ByteElementData']]],
-  ['_7ebytegroup',['~ByteGroup',['../d6/d0e/classDissent_1_1Crypto_1_1AbstractGroup_1_1ByteGroup.html#aae37a07cd3ebec11ec00d8f962ca5bc0',1,'Dissent::Crypto::AbstractGroup::ByteGroup']]],
   ['_7echanginggenclientciphertext',['~ChangingGenClientCiphertext',['../d3/dd6/classDissent_1_1Crypto_1_1BlogDrop_1_1ChangingGenClientCiphertext.html#a10f104221bcd36f6d17fbcd936cfb7e9',1,'Dissent::Crypto::BlogDrop::ChangingGenClientCiphertext']]],
   ['_7echanginggenserverciphertext',['~ChangingGenServerCiphertext',['../d5/d1b/classDissent_1_1Crypto_1_1BlogDrop_1_1ChangingGenServerCiphertext.html#a255213a150d75c611621a8afccc428ff',1,'Dissent::Crypto::BlogDrop::ChangingGenServerCiphertext']]],
   ['_7eclientciphertext',['~ClientCiphertext',['../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#a7d2b3e0b9e23ea19f2effe35cc9753e2',1,'Dissent::Crypto::BlogDrop::ClientCiphertext']]],
-  ['_7ecompositeintegergroup',['~CompositeIntegerGroup',['../dc/d78/classDissent_1_1Crypto_1_1AbstractGroup_1_1CompositeIntegerGroup.html#a0c24f4f19896d24d48ae7bbb3c974a10',1,'Dissent::Crypto::AbstractGroup::CompositeIntegerGroup']]],
   ['_7econnection',['~Connection',['../da/d0e/classDissent_1_1Connections_1_1Connection.html#addd182a0921b142945c7533bf7f804de',1,'Dissent::Connections::Connection']]],
   ['_7econnectionacquirer',['~ConnectionAcquirer',['../d5/dad/classDissent_1_1Connections_1_1ConnectionAcquirer.html#a4b496bddb4c076f6b8f176003dc70b6d',1,'Dissent::Connections::ConnectionAcquirer']]],
   ['_7econnectionmanager',['~ConnectionManager',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a2a45ac774876498ca76521295981141a',1,'Dissent::Connections::ConnectionManager']]],
@@ -83,8 +80,6 @@ var searchData=
   ['_7enullpublickey',['~NullPublicKey',['../de/db3/classDissent_1_1Crypto_1_1NullPublicKey.html#a13e3f2fb016222f82033c6fef51f08a5',1,'Dissent::Crypto::NullPublicKey']]],
   ['_7enullround',['~NullRound',['../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html#a787e44e29c8e932fc9855d3dd16e5632',1,'Dissent::Anonymity::NullRound']]],
   ['_7eonionencryptor',['~OnionEncryptor',['../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#af4f0a9a89e185bba41172cfbd1ff86b0',1,'Dissent::Crypto::OnionEncryptor']]],
-  ['_7epairingclientciphertext',['~PairingClientCiphertext',['../d0/db4/classDissent_1_1Crypto_1_1BlogDrop_1_1PairingClientCiphertext.html#a374c97bad919494ad1de2fb96c45fc18',1,'Dissent::Crypto::BlogDrop::PairingClientCiphertext']]],
-  ['_7epairingserverciphertext',['~PairingServerCiphertext',['../d3/d71/classDissent_1_1Crypto_1_1BlogDrop_1_1PairingServerCiphertext.html#a7248ec317e6ac7de8c954f1412884e5e',1,'Dissent::Crypto::BlogDrop::PairingServerCiphertext']]],
   ['_7eparameters',['~Parameters',['../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a0e1d81c1e92ce6ddcc84cb7633c272f4',1,'Dissent::Crypto::BlogDrop::Parameters']]],
   ['_7eplaintext',['~Plaintext',['../df/d24/classDissent_1_1Crypto_1_1BlogDrop_1_1Plaintext.html#a78c6e41f02baeceb81df4dda4d846c00',1,'Dissent::Crypto::BlogDrop::Plaintext']]],
   ['_7eprivatekey',['~PrivateKey',['../d3/d52/classDissent_1_1Crypto_1_1BlogDrop_1_1PrivateKey.html#a97e4b463d52a5719a6a036cbfb5599c4',1,'Dissent::Crypto::BlogDrop::PrivateKey']]],
@@ -123,7 +118,5 @@ var searchData=
   ['_7etimercallback',['~TimerCallback',['../d9/df8/classDissent_1_1Utils_1_1TimerCallback.html#a527a7370e252ae816e93a11d65d33f42',1,'Dissent::Utils::TimerCallback']]],
   ['_7etimermethod',['~TimerMethod',['../df/dfd/classDissent_1_1Utils_1_1TimerMethod.html#a40f3e7d26cbfaaa387dc57f45bc6493d',1,'Dissent::Utils::TimerMethod']]],
   ['_7etimermethodshared',['~TimerMethodShared',['../dd/dda/classDissent_1_1Utils_1_1TimerMethodShared.html#a5d6a1ee1ad8e7de27df50640262f4de1',1,'Dissent::Utils::TimerMethodShared']]],
-  ['_7etriggerable',['~Triggerable',['../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#acbf876a8e3f53c20138ca2764b0cc794',1,'Dissent::Utils::Triggerable']]],
-  ['_7exorclientciphertext',['~XorClientCiphertext',['../d2/d7b/classDissent_1_1Crypto_1_1BlogDrop_1_1XorClientCiphertext.html#adbca2ad9f266a7b8aaa8adb60fed7f16',1,'Dissent::Crypto::BlogDrop::XorClientCiphertext']]],
-  ['_7exorserverciphertext',['~XorServerCiphertext',['../d0/d43/classDissent_1_1Crypto_1_1BlogDrop_1_1XorServerCiphertext.html#a841237849a1585b5028aeb6e4995c572',1,'Dissent::Crypto::BlogDrop::XorServerCiphertext']]]
+  ['_7etriggerable',['~Triggerable',['../d6/dc6/classDissent_1_1Utils_1_1Triggerable.html#acbf876a8e3f53c20138ca2764b0cc794',1,'Dissent::Utils::Triggerable']]]
 ];

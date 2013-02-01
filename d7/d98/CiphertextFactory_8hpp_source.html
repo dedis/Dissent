@@ -109,28 +109,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html" title="Abstract base class representing BlogDrop client ciphertext.">Dissent::Crypto::BlogDrop::ClientCiphertext</a> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html" title="Abstract base class representing BlogDrop client ciphertext.">ClientCiphertext</a>;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="keyword">typedef</span> <a class="code" href="../../d1/d84/classDissent_1_1Crypto_1_1BlogDrop_1_1ServerCiphertext.html" title="Object holding BlogDrop server ciphertext.">Dissent::Crypto::BlogDrop::ServerCiphertext</a> <a class="code" href="../../d1/d84/classDissent_1_1Crypto_1_1BlogDrop_1_1ServerCiphertext.html" title="Object holding BlogDrop server ciphertext.">ServerCiphertext</a>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keyword">static</span> QSharedPointer&lt;ClientCiphertext&gt; <a class="code" href="../../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html#a662cf1c7ff7a0fafb5cb5fc0477b503c" title="Create a new client cover ciphertext.">CreateClientCiphertext</a>(</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; params, </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; server_pks,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pub);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keyword">static</span> QSharedPointer&lt;ClientCiphertext&gt; <a class="code" href="../../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html#ab650f2067cd56beefebff5ac5a5a20b6" title="Create a new client cover ciphertext.">CreateClientCiphertext</a>(</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params, </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; &amp;server_pks,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pub);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">static</span> QSharedPointer&lt;ClientCiphertext&gt; <a class="code" href="../../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html#a662cf1c7ff7a0fafb5cb5fc0477b503c" title="Create a new client cover ciphertext.">CreateClientCiphertext</a>(</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; params, </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; server_pks,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pub,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          <span class="keyword">const</span> QByteArray serialized);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">static</span> QSharedPointer&lt;ClientCiphertext&gt; <a class="code" href="../../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html#ab650f2067cd56beefebff5ac5a5a20b6" title="Create a new client cover ciphertext.">CreateClientCiphertext</a>(</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params, </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; &amp;server_pks,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pub,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          <span class="keyword">const</span> QByteArray &amp;serialized);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keyword">static</span> QSharedPointer&lt;ServerCiphertext&gt; <a class="code" href="../../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html#abe479f0d2e8376fa4775c4751a3d3b4f" title="Create a new server ciphertext that matches a set of client ciphertexts.">CreateServerCiphertext</a>(</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; params, </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; client_pks,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pub,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const ClientCiphertext&gt; &gt; client_ctexts);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keyword">static</span> QSharedPointer&lt;ServerCiphertext&gt; <a class="code" href="../../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html#aa589f9fd0896ce50c59bca0b56291c29" title="Create a new server ciphertext that matches a set of client ciphertexts.">CreateServerCiphertext</a>(</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params, </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; &amp;client_pks,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pub,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const ClientCiphertext&gt; &gt; &amp;client_ctexts);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keyword">static</span> QSharedPointer&lt;ServerCiphertext&gt; <a class="code" href="../../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html#abe479f0d2e8376fa4775c4751a3d3b4f" title="Create a new server ciphertext that matches a set of client ciphertexts.">CreateServerCiphertext</a>(</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; params, </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; client_pks,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pub,</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const ClientCiphertext&gt; &gt; client_ctexts,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keyword">static</span> QSharedPointer&lt;ServerCiphertext&gt; <a class="code" href="../../dd/d47/classDissent_1_1Crypto_1_1BlogDrop_1_1CiphertextFactory.html#aa589f9fd0896ce50c59bca0b56291c29" title="Create a new server ciphertext that matches a set of client ciphertexts.">CreateServerCiphertext</a>(</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params, </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; &amp;client_pks,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pub,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const ClientCiphertext&gt; &gt; &amp;client_ctexts,</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <span class="keyword">const</span> QByteArray serialized);</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  };</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
@@ -142,7 +142,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 31 2013 16:22:24 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 31 2013 23:00:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

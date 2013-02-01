@@ -106,7 +106,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 Public Types</h2></td></tr>
 <tr class="memitem:ad9fd4f3177a05a22f73a64558522034e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>ProofType</b> { <b>ProofType_ElGamal</b> = 0, 
 <b>ProofType_HashingGenerator</b>, 
-<b>ProofType_Xor</b>, 
 <b>ProofType_Invalid</b>
  }</td></tr>
 <tr class="separator:ad9fd4f3177a05a22f73a64558522034e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,9 +161,9 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>GetNElements</
 <tr class="memitem:ab6e7724fddd49f900120e61cc8c393ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6e7724fddd49f900120e61cc8c393ab"></a>
 <a class="el" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html">Integer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetGroupOrder</b> () const </td></tr>
 <tr class="separator:ab6e7724fddd49f900120e61cc8c393ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67ec1d127a67d8b284fc7d74586d7622"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a67ec1d127a67d8b284fc7d74586d7622">Parameters</a> (ProofType proof_type, QByteArray round_nonce, QSharedPointer&lt; const <a class="el" href="../../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html">AbstractGroup</a> &gt; key_group, QSharedPointer&lt; const <a class="el" href="../../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html">AbstractGroup</a> &gt; msg_group, int n_elements)</td></tr>
-<tr class="memdesc:a67ec1d127a67d8b284fc7d74586d7622"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: it's better to use one of the static constructors.  <a href="#a67ec1d127a67d8b284fc7d74586d7622"></a><br/></td></tr>
-<tr class="separator:a67ec1d127a67d8b284fc7d74586d7622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20d135f8fe980efda6703a7684a5fcbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a20d135f8fe980efda6703a7684a5fcbc">Parameters</a> (ProofType proof_type, const QByteArray &amp;round_nonce, const QSharedPointer&lt; const <a class="el" href="../../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html">AbstractGroup</a> &gt; &amp;key_group, const QSharedPointer&lt; const <a class="el" href="../../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html">AbstractGroup</a> &gt; &amp;msg_group, int n_elements)</td></tr>
+<tr class="memdesc:a20d135f8fe980efda6703a7684a5fcbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: it's better to use one of the static constructors.  <a href="#a20d135f8fe980efda6703a7684a5fcbc"></a><br/></td></tr>
+<tr class="separator:a20d135f8fe980efda6703a7684a5fcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc341418f1674db7cd454a7111c94a6c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc341418f1674db7cd454a7111c94a6c"></a>
 QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#afc341418f1674db7cd454a7111c94a6c">ToString</a> () const </td></tr>
 <tr class="memdesc:afc341418f1674db7cd454a7111c94a6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a printable description of the <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html" title="Object holding group definition.">Parameters</a>. <br/></td></tr>
@@ -176,29 +175,26 @@ Static Public Member Functions</h2></td></tr>
 static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#af08237d04d543c12e41c36e0ef648f85">IntegerElGamalTesting</a> ()</td></tr>
 <tr class="memdesc:af08237d04d543c12e41c36e0ef648f85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 512-bit integer group (for testing) <br/></td></tr>
 <tr class="separator:af08237d04d543c12e41c36e0ef648f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ac4925b0b984ba0eba03b969fd20114"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ac4925b0b984ba0eba03b969fd20114"></a>
-static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a6ac4925b0b984ba0eba03b969fd20114">IntegerElGamalProduction</a> (QByteArray round_nonce=QByteArray())</td></tr>
-<tr class="memdesc:a6ac4925b0b984ba0eba03b969fd20114"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 1024-bit fixed integer group. <br/></td></tr>
-<tr class="separator:a6ac4925b0b984ba0eba03b969fd20114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad791fcbb00b97cc9af0cf7a221d4b427"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad791fcbb00b97cc9af0cf7a221d4b427"></a>
+static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#ad791fcbb00b97cc9af0cf7a221d4b427">IntegerElGamalProduction</a> (const QByteArray &amp;round_nonce=QByteArray())</td></tr>
+<tr class="memdesc:ad791fcbb00b97cc9af0cf7a221d4b427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 1024-bit fixed integer group. <br/></td></tr>
+<tr class="separator:ad791fcbb00b97cc9af0cf7a221d4b427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a036a9a99c4e55f0fec72727a9706458f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a036a9a99c4e55f0fec72727a9706458f"></a>
 static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a036a9a99c4e55f0fec72727a9706458f">IntegerHashingTesting</a> ()</td></tr>
 <tr class="memdesc:a036a9a99c4e55f0fec72727a9706458f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 512-bit integer group (for testing) <br/></td></tr>
 <tr class="separator:a036a9a99c4e55f0fec72727a9706458f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25bc8199865ca0eb843a8c4c8fc69be5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25bc8199865ca0eb843a8c4c8fc69be5"></a>
-static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a25bc8199865ca0eb843a8c4c8fc69be5">IntegerHashingProduction</a> (QByteArray round_nonce=QByteArray())</td></tr>
-<tr class="memdesc:a25bc8199865ca0eb843a8c4c8fc69be5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 1024-bit fixed integer group. <br/></td></tr>
-<tr class="separator:a25bc8199865ca0eb843a8c4c8fc69be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f346bac4bc654298aaa308e788e6b7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f346bac4bc654298aaa308e788e6b7c"></a>
-static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a7f346bac4bc654298aaa308e788e6b7c">CppECElGamalProduction</a> (QByteArray round_nonce=QByteArray())</td></tr>
-<tr class="memdesc:a7f346bac4bc654298aaa308e788e6b7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 256-bit fixed EC group (Supposedly 256-bit ECs are equivalent to 3072-bit RSA/DH groups) implemented with Crypto++. <br/></td></tr>
-<tr class="separator:a7f346bac4bc654298aaa308e788e6b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23434ade90634f398dbad7cf62b86628"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23434ade90634f398dbad7cf62b86628"></a>
-static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a23434ade90634f398dbad7cf62b86628">CppECHashingProduction</a> (QByteArray round_nonce=QByteArray())</td></tr>
-<tr class="memdesc:a23434ade90634f398dbad7cf62b86628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 256-bit fixed EC group (Supposedly 256-bit ECs are equivalent to 3072-bit RSA/DH groups) implemented with Crypto++. <br/></td></tr>
-<tr class="separator:a23434ade90634f398dbad7cf62b86628"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63ad19b5878396b78545f902b23bad1e"><td class="memItemLeft" align="right" valign="top">static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a63ad19b5878396b78545f902b23bad1e">XorTesting</a> (QByteArray round_nonce=QByteArray())</td></tr>
-<tr class="memdesc:a63ad19b5878396b78545f902b23bad1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses a <em>COMPLETELY INSECURE</em> XOR-based scheme for evaluations.  <a href="#a63ad19b5878396b78545f902b23bad1e"></a><br/></td></tr>
-<tr class="separator:a63ad19b5878396b78545f902b23bad1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75f37034451703759d6a5b0c2ee3b91f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a75f37034451703759d6a5b0c2ee3b91f"></a>
+static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a75f37034451703759d6a5b0c2ee3b91f">IntegerHashingProduction</a> (const QByteArray &amp;round_nonce=QByteArray())</td></tr>
+<tr class="memdesc:a75f37034451703759d6a5b0c2ee3b91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 1024-bit fixed integer group. <br/></td></tr>
+<tr class="separator:a75f37034451703759d6a5b0c2ee3b91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa03692d95db22350c19f6447fe206447"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa03692d95db22350c19f6447fe206447"></a>
+static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#aa03692d95db22350c19f6447fe206447">CppECElGamalProduction</a> (const QByteArray &amp;round_nonce=QByteArray())</td></tr>
+<tr class="memdesc:aa03692d95db22350c19f6447fe206447"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 256-bit fixed EC group (Supposedly 256-bit ECs are equivalent to 3072-bit RSA/DH groups) implemented with Crypto++. <br/></td></tr>
+<tr class="separator:aa03692d95db22350c19f6447fe206447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f035498b745f155373b3470a59e8413"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f035498b745f155373b3470a59e8413"></a>
+static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#a5f035498b745f155373b3470a59e8413">CppECHashingProduction</a> (const QByteArray &amp;round_nonce=QByteArray())</td></tr>
+<tr class="memdesc:a5f035498b745f155373b3470a59e8413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that uses 256-bit fixed EC group (Supposedly 256-bit ECs are equivalent to 3072-bit RSA/DH groups) implemented with Crypto++. <br/></td></tr>
+<tr class="separator:a5f035498b745f155373b3470a59e8413"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1ffee9d3d4d2c1892468c5fb3af4aad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1ffee9d3d4d2c1892468c5fb3af4aad"></a>
 static QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html#ac1ffee9d3d4d2c1892468c5fb3af4aad">Empty</a> ()</td></tr>
 <tr class="memdesc:ac1ffee9d3d4d2c1892468c5fb3af4aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor that has empty/invalid parameters. <br/></td></tr>
@@ -211,7 +207,7 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Object holding group definition. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a67ec1d127a67d8b284fc7d74586d7622"></a>
+<a class="anchor" id="a20d135f8fe980efda6703a7684a5fcbc"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -224,19 +220,19 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramtype">const QByteArray &amp;&#160;</td>
           <td class="paramname"><em>round_nonce</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QSharedPointer&lt; const <a class="el" href="../../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html">AbstractGroup</a> &gt;&#160;</td>
+          <td class="paramtype">const QSharedPointer&lt; const <a class="el" href="../../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html">AbstractGroup</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>key_group</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QSharedPointer&lt; const <a class="el" href="../../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html">AbstractGroup</a> &gt;&#160;</td>
+          <td class="paramtype">const QSharedPointer&lt; const <a class="el" href="../../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html">AbstractGroup</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>msg_group</em>, </td>
         </tr>
         <tr>
@@ -267,34 +263,6 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a63ad19b5878396b78545f902b23bad1e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt; Dissent::Crypto::BlogDrop::Parameters::XorTesting </td>
-          <td>(</td>
-          <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>round_nonce</em> = <code>QByteArray()</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Constructor that uses a <em>COMPLETELY INSECURE</em> XOR-based scheme for evaluations. </p>
-<p>The XOR operation takes the same amount of time as the traditional DC-net but we don't use secure keys. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Crypto/BlogDrop/<a class="el" href="../../d5/d93/Parameters_8hpp_source.html">Parameters.hpp</a></li>
 <li>src/Crypto/BlogDrop/Parameters.cpp</li>
@@ -302,7 +270,7 @@ static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 31 2013 16:22:25 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 31 2013 23:00:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

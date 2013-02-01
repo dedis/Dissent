@@ -22,7 +22,5 @@ var searchData=
   ['bulkroundbadshuffler',['BulkRoundBadShuffler',['../d7/d16/classDissent_1_1Tests_1_1BulkRoundBadShuffler.html',1,'Dissent::Tests']]],
   ['bulkroundbadxormessage',['BulkRoundBadXorMessage',['../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html',1,'Dissent::Tests']]],
   ['bulkroundfalseaccusation',['BulkRoundFalseAccusation',['../d3/d88/classDissent_1_1Tests_1_1BulkRoundFalseAccusation.html',1,'Dissent::Tests']]],
-  ['bulkroundincorrectmessagelength',['BulkRoundIncorrectMessageLength',['../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html',1,'Dissent::Tests']]],
-  ['byteelementdata',['ByteElementData',['../d3/d9a/classDissent_1_1Crypto_1_1AbstractGroup_1_1ByteElementData.html',1,'Dissent::Crypto::AbstractGroup']]],
-  ['bytegroup',['ByteGroup',['../d6/d0e/classDissent_1_1Crypto_1_1AbstractGroup_1_1ByteGroup.html',1,'Dissent::Crypto::AbstractGroup']]]
+  ['bulkroundincorrectmessagelength',['BulkRoundIncorrectMessageLength',['../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html',1,'Dissent::Tests']]]
 ];

@@ -121,28 +121,28 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          <span class="keywordtype">int</span> phase;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      }; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#a08f400f4e06f02a0dbd8d069a0fe2fb1" title="Constructor: Initialize a ciphertext with a fresh one-time public key.">ClientCiphertext</a>(<span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; params, </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; server_pks,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pub,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#a5831ce131285bfa27ecf05c122c9cc7a" title="Constructor: Initialize a ciphertext with a fresh one-time public key.">ClientCiphertext</a>(<span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params, </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; &amp;server_pks,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pub,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          <span class="keywordtype">int</span> n_elms);</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#a7d2b3e0b9e23ea19f2effe35cc9753e2">   53</a></span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#a7d2b3e0b9e23ea19f2effe35cc9753e2" title="Destructor.">~ClientCiphertext</a>() {}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#af9edb3046f7379b55c176dfc1bb85bfa" title="Initialize elements proving correctness of ciphertext.">SetAuthorProof</a>(<span class="keywordtype">int</span> phase, </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PrivateKey&gt; client_priv, </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PrivateKey&gt; author_priv, </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#aca911b6d311fa21b2fa67cc36a3bb014" title="Initialize elements proving correctness of ciphertext.">SetAuthorProof</a>(<span class="keywordtype">int</span> phase, </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PrivateKey&gt; &amp;client_priv, </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PrivateKey&gt; &amp;author_priv, </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keyword">const</span> <a class="code" href="../../df/d24/classDissent_1_1Crypto_1_1BlogDrop_1_1Plaintext.html" title="Object holding BlogDrop encoded plaintext.">Plaintext</a> &amp;m) = 0;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#a96c2e3233292f265b706cf5fd5d5dc08" title="Initialize elements proving correctness of ciphertext.">SetProof</a>(<span class="keywordtype">int</span> phase, <span class="keyword">const</span> QSharedPointer&lt;const PrivateKey&gt; client_priv) = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#a7496f26c4bf4fa02cbd410b6a06e9ce5" title="Initialize elements proving correctness of ciphertext.">SetProof</a>(<span class="keywordtype">int</span> phase, <span class="keyword">const</span> QSharedPointer&lt;const PrivateKey&gt; &amp;client_priv) = 0;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#aa0557aae79581f284647b1fdd7a48e11" title="Check ciphertext proof.">VerifyProof</a>(<span class="keywordtype">int</span> phase, <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; client_pub) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#ad06766743e3d69eab4084f15ab6bbd3e" title="Check ciphertext proof.">VerifyProof</a>(<span class="keywordtype">int</span> phase, <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;client_pub) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#a0f6a26cdcb272a9f0d8da8cb3af3db7b" title="Get a byte array for this ciphertext.">GetByteArray</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#ad0175b139d2fdf0ba8c3fecc28de744e" title="Verify a set of proofs.">VerifyProofs</a>(</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; params,</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; pk_set,</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; author_pk,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d66/classDissent_1_1Crypto_1_1BlogDrop_1_1ClientCiphertext.html#abbae37e2eef9cce61509cb167919b805" title="Verify a set of proofs.">VerifyProofs</a>(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const Parameters&gt; &amp;params,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKeySet&gt; &amp;pk_set,</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;author_pk,</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          <span class="keywordtype">int</span> phase, </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const PublicKey&gt; &gt; &amp;pubs,</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          <span class="keyword">const</span> QList&lt;QByteArray&gt; &amp;c,</div>
@@ -185,7 +185,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">bool</span> VerifyOnce(QSharedPointer&lt;MapData&gt; m);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">bool</span> VerifyOnce(<span class="keyword">const</span> QSharedPointer&lt;MapData&gt; &amp;m);</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  };</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
@@ -198,7 +198,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 31 2013 16:22:24 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 31 2013 23:00:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>
