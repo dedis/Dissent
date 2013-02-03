@@ -106,44 +106,43 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keyword">enum</span> LibraryName {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        CryptoPP,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        CryptoPPDsa,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        Null</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      };</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a> &amp;<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">GetInstance</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a318598e3674246c72e7f4d3a2bd6852d" title="Sets the type of threading support.">SetThreading</a>(ThreadingType type);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d">   36</a></span>&#160;      <span class="keyword">inline</span> ThreadingType <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d" title="Returns the current threading type.">GetThreadingType</a>() { <span class="keywordflow">return</span> _threading_type; }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a63163d40b0adcb68724d819b314752a8" title="Sets the library used.">SetLibrary</a>(LibraryName type);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa">   46</a></span>&#160;      <span class="keyword">inline</span> LibraryName <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa" title="Returns the current library name.">GetLibraryName</a>() { <span class="keywordflow">return</span> _library_name; }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9464a3df8e29d58c97e0359c1c74f114">   51</a></span>&#160;      <span class="keyword">inline</span> <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> &amp;<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9464a3df8e29d58c97e0359c1c74f114" title="Return the Onion Encryptor.">GetOnionEncryptor</a>() { <span class="keywordflow">return</span> *_onion; }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#acbfd3c10abae7d38171eaf986a873f5b">   56</a></span>&#160;      <span class="keyword">inline</span> <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html">Library</a> &amp;<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#acbfd3c10abae7d38171eaf986a873f5b" title="Return the library constructor.">GetLibrary</a>() { <span class="keywordflow">return</span> *_library; }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      QScopedPointer&lt;Library&gt; _library;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      QScopedPointer&lt;OnionEncryptor&gt; _onion;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a>(); </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      Q_DISABLE_COPY(<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a>)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      LibraryName _library_name;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      ThreadingType _threading_type;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keywordtype">int</span> _previous;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  };</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        CryptoPPDsa</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      };</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a> &amp;<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">GetInstance</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a318598e3674246c72e7f4d3a2bd6852d" title="Sets the type of threading support.">SetThreading</a>(ThreadingType type);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d">   35</a></span>&#160;      <span class="keyword">inline</span> ThreadingType <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9b08b19b1b653067054cbe0c3f7a9c3d" title="Returns the current threading type.">GetThreadingType</a>() { <span class="keywordflow">return</span> _threading_type; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a63163d40b0adcb68724d819b314752a8" title="Sets the library used.">SetLibrary</a>(LibraryName type);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa">   45</a></span>&#160;      <span class="keyword">inline</span> LibraryName <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a6400482758f262141893727c2490ecfa" title="Returns the current library name.">GetLibraryName</a>() { <span class="keywordflow">return</span> _library_name; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9464a3df8e29d58c97e0359c1c74f114">   50</a></span>&#160;      <span class="keyword">inline</span> <a class="code" href="../../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html" title="Provides a tool around onion encrypting messages.">OnionEncryptor</a> &amp;<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#a9464a3df8e29d58c97e0359c1c74f114" title="Return the Onion Encryptor.">GetOnionEncryptor</a>() { <span class="keywordflow">return</span> *_onion; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#acbfd3c10abae7d38171eaf986a873f5b">   55</a></span>&#160;      <span class="keyword">inline</span> <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html">Library</a> &amp;<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#acbfd3c10abae7d38171eaf986a873f5b" title="Return the library constructor.">GetLibrary</a>() { <span class="keywordflow">return</span> *_library; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      QScopedPointer&lt;Library&gt; _library;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      QScopedPointer&lt;OnionEncryptor&gt; _onion;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keyword">explicit</span> <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a>(); </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      Q_DISABLE_COPY(<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html">CryptoFactory</a>)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      LibraryName _library_name;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      ThreadingType _threading_type;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordtype">int</span> _previous;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 31 2013 23:00:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 3 2013 18:02:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

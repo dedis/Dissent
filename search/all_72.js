@@ -1,7 +1,7 @@
 var searchData=
 [
   ['random',['Random',['../de/dad/classDissent_1_1Utils_1_1Random.html',1,'Dissent::Utils']]],
-  ['random',['Random',['../de/dad/classDissent_1_1Utils_1_1Random.html#a41ff0d2de954a4a077690d19a2b4b13d',1,'Dissent::Utils::Random']]],
+  ['random',['Random',['../de/dad/classDissent_1_1Utils_1_1Random.html#a1eb6e1dda3da125823a72f8c15edae44',1,'Dissent::Utils::Random']]],
   ['randomelement',['RandomElement',['../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html#addd0f06fb4f992d156711bc17fbfb062',1,'Dissent::Crypto::AbstractGroup::AbstractGroup::RandomElement()'],['../d4/da8/classDissent_1_1Crypto_1_1AbstractGroup_1_1CppECGroup.html#a6a93372b6f51eb958a433f36d060d1d5',1,'Dissent::Crypto::AbstractGroup::CppECGroup::RandomElement()'],['../df/d0e/classDissent_1_1Crypto_1_1AbstractGroup_1_1IntegerGroup.html#a14f1befd27e9d878892872c2b9cf89ad',1,'Dissent::Crypto::AbstractGroup::IntegerGroup::RandomElement()']]],
   ['randomexponent',['RandomExponent',['../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html#a29108f83718ae7ffe24ab1ca4b0a30c8',1,'Dissent::Crypto::AbstractGroup::AbstractGroup::RandomExponent()'],['../d4/da8/classDissent_1_1Crypto_1_1AbstractGroup_1_1CppECGroup.html#a506f8301466565584c7682a28f58efd0',1,'Dissent::Crypto::AbstractGroup::CppECGroup::RandomExponent()'],['../df/d0e/classDissent_1_1Crypto_1_1AbstractGroup_1_1IntegerGroup.html#abff537b88dd84d40d9be7382d1a5a3ad',1,'Dissent::Crypto::AbstractGroup::IntegerGroup::RandomExponent()']]],
   ['randomize',['Randomize',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#ad1f4fd6ed901923369b435bb9c13d846',1,'Dissent::Anonymity::CSBulkRound']]],
@@ -52,7 +52,7 @@ var searchData=
   ['restart',['Restart',['../d8/d4c/classDissent_1_1Crypto_1_1CppHash.html#a62551fb0a3d7a809fa37d7583c803290',1,'Dissent::Crypto::CppHash::Restart()'],['../df/df2/classDissent_1_1Crypto_1_1Hash.html#a24f610415b6f08381756a0238ba0091a',1,'Dissent::Crypto::Hash::Restart()']]],
   ['reveal',['Reveal',['../df/d24/classDissent_1_1Crypto_1_1BlogDrop_1_1Plaintext.html#af93d80d4971281516460e610de05aa35',1,'Dissent::Crypto::BlogDrop::Plaintext']]],
   ['revealplaintext',['RevealPlaintext',['../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a31bdd62e1793cba4ed62aa2ecbf14c8f',1,'Dissent::Crypto::BlogDrop::BlogDropServer']]],
-  ['rngoptimalseedsize',['RngOptimalSeedSize',['../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#a3d60048e2c04aef2941448dcd8b337bc',1,'Dissent::Crypto::CppLibrary::RngOptimalSeedSize()'],['../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a91f5dc6144099ee68bc035b62aadbf6a',1,'Dissent::Crypto::Library::RngOptimalSeedSize()'],['../d6/d86/classDissent_1_1Crypto_1_1NullLibrary.html#a6fd38f99679042ae5f16d572b69df235',1,'Dissent::Crypto::NullLibrary::RngOptimalSeedSize()']]],
+  ['rngoptimalseedsize',['RngOptimalSeedSize',['../d6/da3/classDissent_1_1Crypto_1_1CppLibrary.html#a3d60048e2c04aef2941448dcd8b337bc',1,'Dissent::Crypto::CppLibrary::RngOptimalSeedSize()'],['../d1/d2f/classDissent_1_1Crypto_1_1Library.html#a91f5dc6144099ee68bc035b62aadbf6a',1,'Dissent::Crypto::Library::RngOptimalSeedSize()']]],
   ['round',['Round',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a53be917d14b58a85d6682121b0378930',1,'Dissent::Anonymity::Round']]],
   ['round',['Round',['../d3/d6f/classDissent_1_1Anonymity_1_1Round.html',1,'Dissent::Anonymity']]],
   ['roundcollector',['RoundCollector',['../d3/d51/classDissent_1_1Tests_1_1RoundCollector.html',1,'Dissent::Tests']]],

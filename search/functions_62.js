@@ -21,7 +21,6 @@ var searchData=
   ['buildudpresponse',['BuildUdpResponse',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#ae1ac13be126219afbd32f4c25ff37a50',1,'Dissent::Tunnel::TunnelPacket']]],
   ['buildudpstart',['BuildUdpStart',['../dc/dbf/classDissent_1_1Tunnel_1_1TunnelPacket.html#ab4ee3c088f3550d9825e67679e2a7555',1,'Dissent::Tunnel::TunnelPacket']]],
   ['bulkround',['BulkRound',['../db/d86/classDissent_1_1Anonymity_1_1BulkRound.html#a0dff99966968ffa6e030bd2ddb395d2b',1,'Dissent::Anonymity::BulkRound']]],
-  ['bytesgenerated',['BytesGenerated',['../de/dad/classDissent_1_1Utils_1_1Random.html#a93f92968a4390ff984b0807d4096b0ad',1,'Dissent::Utils::Random']]],
   ['bytesperelement',['BytesPerElement',['../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html#ab0b9a4f4d3b9a15a2129a5807d11a92e',1,'Dissent::Crypto::AbstractGroup::AbstractGroup::BytesPerElement()'],['../d4/da8/classDissent_1_1Crypto_1_1AbstractGroup_1_1CppECGroup.html#a21297ce5ab5a75f4e2ab75ca417ed8a6',1,'Dissent::Crypto::AbstractGroup::CppECGroup::BytesPerElement()'],['../df/d0e/classDissent_1_1Crypto_1_1AbstractGroup_1_1IntegerGroup.html#abe6d395d379164d672725c3600815639',1,'Dissent::Crypto::AbstractGroup::IntegerGroup::BytesPerElement()']]],
   ['bytesrequired',['BytesRequired',['../de/d19/classDissent_1_1Utils_1_1Serialization.html#a9f43f0c456772912672edec3551ffa41',1,'Dissent::Utils::Serialization']]]
 ];

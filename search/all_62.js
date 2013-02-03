@@ -46,7 +46,6 @@ var searchData=
   ['bulkroundbadxormessage',['BulkRoundBadXorMessage',['../de/dce/classDissent_1_1Tests_1_1BulkRoundBadXorMessage.html',1,'Dissent::Tests']]],
   ['bulkroundfalseaccusation',['BulkRoundFalseAccusation',['../d3/d88/classDissent_1_1Tests_1_1BulkRoundFalseAccusation.html',1,'Dissent::Tests']]],
   ['bulkroundincorrectmessagelength',['BulkRoundIncorrectMessageLength',['../d6/d2c/classDissent_1_1Tests_1_1BulkRoundIncorrectMessageLength.html',1,'Dissent::Tests']]],
-  ['bytesgenerated',['BytesGenerated',['../de/dad/classDissent_1_1Utils_1_1Random.html#a93f92968a4390ff984b0807d4096b0ad',1,'Dissent::Utils::Random']]],
   ['bytesperelement',['BytesPerElement',['../d7/d1d/classDissent_1_1Crypto_1_1AbstractGroup_1_1AbstractGroup.html#ab0b9a4f4d3b9a15a2129a5807d11a92e',1,'Dissent::Crypto::AbstractGroup::AbstractGroup::BytesPerElement()'],['../d4/da8/classDissent_1_1Crypto_1_1AbstractGroup_1_1CppECGroup.html#a21297ce5ab5a75f4e2ab75ca417ed8a6',1,'Dissent::Crypto::AbstractGroup::CppECGroup::BytesPerElement()'],['../df/d0e/classDissent_1_1Crypto_1_1AbstractGroup_1_1IntegerGroup.html#abe6d395d379164d672725c3600815639',1,'Dissent::Crypto::AbstractGroup::IntegerGroup::BytesPerElement()']]],
   ['bytesrequired',['BytesRequired',['../de/d19/classDissent_1_1Utils_1_1Serialization.html#a9f43f0c456772912672edec3551ffa41',1,'Dissent::Utils::Serialization']]]
 ];

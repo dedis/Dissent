@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QVector&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Connections/Id.hpp&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;Crypto/NullPrivateKey.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;Crypto/CryptoFactory.hpp&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;PublicIdentity.hpp&quot;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
@@ -217,38 +217,39 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> QSharedPointer&lt;AsymmetricKey&gt; &amp;EmptyKey()</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      {</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keyword">static</span> QSharedPointer&lt;AsymmetricKey&gt; key(<span class="keyword">new</span> <a class="code" href="../../dc/dea/classDissent_1_1Crypto_1_1NullPrivateKey.html" title="Implementation of PrivateKey that provides unique encryptions without actually doing any encryption /...">Crypto::NullPrivateKey</a>());</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">return</span> key;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;      QSharedDataPointer&lt;GroupData&gt; _data;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      QSharedPointer&lt;const Group&gt; _subgroup;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  };</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> IsSubset(<span class="keyword">const</span> Group &amp;<span class="keyword">set</span>, <span class="keyword">const</span> Group &amp;subset)</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  {</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> std::includes(<span class="keyword">set</span>.begin(), <span class="keyword">set</span>.end(), subset.begin(), subset.end());</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  <span class="keywordtype">bool</span> Difference(<span class="keyword">const</span> Group &amp;old_group, <span class="keyword">const</span> Group &amp;new_group,</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      QVector&lt;PublicIdentity&gt; &amp;lost, QVector&lt;PublicIdentity&gt; &amp;gained);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  Group AddGroupMember(<span class="keyword">const</span> Group &amp;group, <span class="keyword">const</span> PublicIdentity &amp;gc,</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;      <span class="keywordtype">bool</span> subgroup = <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  Group RemoveGroupMember(<span class="keyword">const</span> Group &amp;group, <span class="keyword">const</span> Group::Id &amp;<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  QDataStream &amp;operator&lt;&lt;(QDataStream &amp;stream, <span class="keyword">const</span> Group &amp;group);</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  QDataStream &amp;operator&gt;&gt;(QDataStream &amp;stream, Group &amp;group);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keyword">static</span> QSharedPointer&lt;AsymmetricKey&gt; key(</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Crypto::CryptoFactory::GetInstance</a>().GetLibrary().GeneratePublicKey(QByteArray()));</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">return</span> key;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      QSharedDataPointer&lt;GroupData&gt; _data;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;      QSharedPointer&lt;const Group&gt; _subgroup;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  };</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">bool</span> IsSubset(<span class="keyword">const</span> Group &amp;<span class="keyword">set</span>, <span class="keyword">const</span> Group &amp;subset)</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  {</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordflow">return</span> std::includes(<span class="keyword">set</span>.begin(), <span class="keyword">set</span>.end(), subset.begin(), subset.end());</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  }</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">bool</span> Difference(<span class="keyword">const</span> Group &amp;old_group, <span class="keyword">const</span> Group &amp;new_group,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      QVector&lt;PublicIdentity&gt; &amp;lost, QVector&lt;PublicIdentity&gt; &amp;gained);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  Group AddGroupMember(<span class="keyword">const</span> Group &amp;group, <span class="keyword">const</span> PublicIdentity &amp;gc,</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      <span class="keywordtype">bool</span> subgroup = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  Group RemoveGroupMember(<span class="keyword">const</span> Group &amp;group, <span class="keyword">const</span> Group::Id &amp;<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  QDataStream &amp;operator&lt;&lt;(QDataStream &amp;stream, <span class="keyword">const</span> Group &amp;group);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  QDataStream &amp;operator&gt;&gt;(QDataStream &amp;stream, Group &amp;group);</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;}</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 31 2013 23:00:51 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 3 2013 18:02:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

@@ -90,7 +90,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../dd/d32/classDissent_1_1Utils_1_1Random-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Dissent::Utils::Random Class Reference</div>  </div>
@@ -113,9 +112,9 @@ Inheritance diagram for Dissent::Utils::Random:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a41ff0d2de954a4a077690d19a2b4b13d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a41ff0d2de954a4a077690d19a2b4b13d">Random</a> (const QByteArray &amp;seed=QByteArray(), uint index=0)</td></tr>
-<tr class="memdesc:a41ff0d2de954a4a077690d19a2b4b13d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a41ff0d2de954a4a077690d19a2b4b13d"></a><br/></td></tr>
-<tr class="separator:a41ff0d2de954a4a077690d19a2b4b13d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1eb6e1dda3da125823a72f8c15edae44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a1eb6e1dda3da125823a72f8c15edae44">Random</a> (const QByteArray &amp;seed=QByteArray())</td></tr>
+<tr class="memdesc:a1eb6e1dda3da125823a72f8c15edae44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a1eb6e1dda3da125823a72f8c15edae44"></a><br/></td></tr>
+<tr class="separator:a1eb6e1dda3da125823a72f8c15edae44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d8eaf852280adec5cde5474805592fc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d8eaf852280adec5cde5474805592fc"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7d8eaf852280adec5cde5474805592fc">~Random</a> ()</td></tr>
 <tr class="memdesc:a7d8eaf852280adec5cde5474805592fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
@@ -126,10 +125,6 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=".
 <tr class="memitem:a9aecb01ce7b3ef1adbbd7ca24030bc6e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a9aecb01ce7b3ef1adbbd7ca24030bc6e">GenerateBlock</a> (QByteArray &amp;data)</td></tr>
 <tr class="memdesc:a9aecb01ce7b3ef1adbbd7ca24030bc6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random data set overwriting an existing QByteArray.  <a href="#a9aecb01ce7b3ef1adbbd7ca24030bc6e"></a><br/></td></tr>
 <tr class="separator:a9aecb01ce7b3ef1adbbd7ca24030bc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93f92968a4390ff984b0807d4096b0ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a93f92968a4390ff984b0807d4096b0ad"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a93f92968a4390ff984b0807d4096b0ad">BytesGenerated</a> ()</td></tr>
-<tr class="memdesc:a93f92968a4390ff984b0807d4096b0ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of bytes generated thus far. <br/></td></tr>
-<tr class="separator:a93f92968a4390ff984b0807d4096b0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -140,24 +135,11 @@ static <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Ra
 static uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a03c44f8d717ab3cc161d6bbd6df91715">OptimalSeedSize</a> ()</td></tr>
 <tr class="memdesc:a03c44f8d717ab3cc161d6bbd6df91715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the optimal seed size, less than will provide suboptimal results and greater than will be compressed into the chosen seed. <br/></td></tr>
 <tr class="separator:a03c44f8d717ab3cc161d6bbd6df91715"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a146f32e86d0b41110a83099eb3d90b40"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a146f32e86d0b41110a83099eb3d90b40"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Random</b> (const <a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html">Random</a> &amp;)</td></tr>
-<tr class="separator:a146f32e86d0b41110a83099eb3d90b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b460fa92e135651f1c15858fe8c004e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b460fa92e135651f1c15858fe8c004e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#a7b460fa92e135651f1c15858fe8c004e">IncrementByteCount</a> (uint count)</td></tr>
-<tr class="memdesc:a7b460fa92e135651f1c15858fe8c004e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the amount of bytes generated thus far. <br/></td></tr>
-<tr class="separator:a7b460fa92e135651f1c15858fe8c004e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe06b27857fdde27039733d22dddde01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html#abe06b27857fdde27039733d22dddde01">MoveRngPosition</a> (uint index)</td></tr>
-<tr class="memdesc:abe06b27857fdde27039733d22dddde01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the rng to specified position.  <a href="#abe06b27857fdde27039733d22dddde01"></a><br/></td></tr>
-<tr class="separator:abe06b27857fdde27039733d22dddde01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../de/dad/classDissent_1_1Utils_1_1Random.html" title="Random number generator – base class is a singleton.">Random</a> number generator &ndash; base class is a singleton. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a41ff0d2de954a4a077690d19a2b4b13d"></a>
+<a class="anchor" id="a1eb6e1dda3da125823a72f8c15edae44"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -168,18 +150,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
           <td class="memname">Dissent::Utils::Random::Random </td>
           <td>(</td>
           <td class="paramtype">const QByteArray &amp;&#160;</td>
-          <td class="paramname"><em>seed</em> = <code>QByteArray()</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>seed</em> = <code>QByteArray()</code></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint&#160;</td>
-          <td class="paramname"><em>index</em> = <code>0</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -193,7 +165,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">seed</td><td>used to create a deterministic rng </td></tr>
-    <tr><td class="paramname">index</td><td>moves the rng to a specific index </td></tr>
   </table>
   </dd>
 </dl>
@@ -280,38 +251,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 
 </div>
 </div>
-<a class="anchor" id="abe06b27857fdde27039733d22dddde01"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Dissent::Utils::Random::MoveRngPosition </td>
-          <td>(</td>
-          <td class="paramtype">uint&#160;</td>
-          <td class="paramname"><em>index</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Moves the rng to specified position. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">index</td><td>the position </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Utils/<a class="el" href="../../dd/d6e/Random_8hpp_source.html">Random.hpp</a></li>
 <li>src/Utils/Random.cpp</li>
@@ -319,7 +258,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 31 2013 23:00:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 3 2013 18:02:22 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>
