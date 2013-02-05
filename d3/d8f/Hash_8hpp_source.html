@@ -92,31 +92,48 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DISSENT_CRYPTO_HASH_H_GUARD</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>Crypto {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html">   11</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html" title="Cryptographic hashing algorithm.">Hash</a> {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#ade2a07c2ce11559ec14207ec83b97ee1">   16</a></span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#ade2a07c2ce11559ec14207ec83b97ee1" title="Descructor.">~Hash</a>() {}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a101e1807d0b45c581d183750301747e8" title="Returns the blocksize of the underlying hash function.">GetDigestSize</a>() = 0;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a24f610415b6f08381756a0238ba0091a" title="Restarts the state of the hash object.">Restart</a>() = 0;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a148bb58b0889605b5e46b8f0166dd774" title="Appends the additional bytes to the data to be hashed.">Update</a>(<span class="keyword">const</span> QByteArray &amp;data) = 0;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a1e3537620ed8591928bff98d8c5aacc2" title="Returns the hash of the data currently being hashed (due to Update)">ComputeHash</a>() = 0;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a1e3537620ed8591928bff98d8c5aacc2" title="Returns the hash of the data currently being hashed (due to Update)">ComputeHash</a>(<span class="keyword">const</span> QByteArray &amp;data) = 0;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  };</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QSharedData&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>Crypto {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="../../d6/d86/classDissent_1_1Crypto_1_1IHashImpl.html">    9</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d6/d86/classDissent_1_1Crypto_1_1IHashImpl.html">IHashImpl</a> : <span class="keyword">public</span> QSharedData {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../d6/d86/classDissent_1_1Crypto_1_1IHashImpl.html">IHashImpl</a>() {}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">int</span> GetDigestSize() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> Restart() = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      <span class="keyword">virtual</span> <span class="keywordtype">void</span> Update(<span class="keyword">const</span> QByteArray &amp;data) = 0;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keyword">virtual</span> QByteArray ComputeHash() = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <span class="keyword">virtual</span> QByteArray ComputeHash(<span class="keyword">const</span> QByteArray &amp;data) = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  };</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html">   22</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html" title="Cryptographic hashing algorithm.">Hash</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html" title="Cryptographic hashing algorithm.">Hash</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#abc4c08a9d41f7d0a4fa6367c77635451">   29</a></span>&#160;      <span class="keywordtype">int</span> <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#abc4c08a9d41f7d0a4fa6367c77635451" title="Returns the blocksize of the underlying hash function.">GetDigestSize</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_data-&gt;GetDigestSize(); }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a0c5e27a252f93dcc2a5919471e3d08d7">   34</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a0c5e27a252f93dcc2a5919471e3d08d7" title="Restarts the state of the hash object.">Restart</a>() { m_data-&gt;Restart(); }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a4906364874e1208eab3318694a852e14">   40</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a4906364874e1208eab3318694a852e14" title="Appends the additional bytes to the data to be hashed.">Update</a>(<span class="keyword">const</span> QByteArray &amp;data) { m_data-&gt;Update(data); }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#ac5a63fbc2256c9e12d0e31310ee2e625">   45</a></span>&#160;      QByteArray <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#ac5a63fbc2256c9e12d0e31310ee2e625" title="Returns the hash of the data currently being hashed (due to Update)">ComputeHash</a>() { <span class="keywordflow">return</span> m_data-&gt;ComputeHash(); }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#a4c01a1ea9423a2a68b26149bc2b5b745">   51</a></span>&#160;      QByteArray <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#ac5a63fbc2256c9e12d0e31310ee2e625" title="Returns the hash of the data currently being hashed (due to Update)">ComputeHash</a>(<span class="keyword">const</span> QByteArray &amp;data)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> m_data-&gt;ComputeHash(data);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      QExplicitlySharedDataPointer&lt;IHashImpl&gt; m_data;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 3 2013 18:02:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 5 2013 00:06:22 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

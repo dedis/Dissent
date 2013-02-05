@@ -5,7 +5,7 @@ var searchData=
   ['udpsockettimeout',['UdpSocketTimeout',['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#a18475571d21e1811381a15715b43bc16',1,'Dissent::Tunnel::ExitTunnel']]],
   ['udptimeout',['UdpTimeout',['../dd/d24/classDissent_1_1Tunnel_1_1ExitTunnel.html#a658a6bc60cf7d7dc6e08f70491596e9e',1,'Dissent::Tunnel::ExitTunnel']]],
   ['unregister',['Unregister',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#ad429e143496a83d2750cfd7076d7910f',1,'Dissent::Messaging::RpcHandler']]],
-  ['update',['Update',['../d8/d4c/classDissent_1_1Crypto_1_1CppHash.html#aff2dd2d4524fe610563b01af9a52f718',1,'Dissent::Crypto::CppHash::Update()'],['../df/df2/classDissent_1_1Crypto_1_1Hash.html#a148bb58b0889605b5e46b8f0166dd774',1,'Dissent::Crypto::Hash::Update()']]],
+  ['update',['Update',['../df/df2/classDissent_1_1Crypto_1_1Hash.html#a4906364874e1208eab3318694a852e14',1,'Dissent::Crypto::Hash']]],
   ['updategroup',['UpdateGroup',['../dc/dc5/classDissent_1_1Identity_1_1GroupHolder.html#a5b7f8983200f7a2b92745b470f538bbc',1,'Dissent::Identity::GroupHolder']]],
   ['upstreampacketready',['UpstreamPacketReady',['../d2/da7/classDissent_1_1Tunnel_1_1SocksConnection.html#a89985b904185f19c1261f1adbe8a3d61',1,'Dissent::Tunnel::SocksConnection']]],
   ['usedefault',['UseDefault',['../d0/dab/classDissent_1_1Utils_1_1Logging.html#af72d31ca0fe6aad4db3eb11b3ce6629e',1,'Dissent::Utils::Logging']]],

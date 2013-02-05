@@ -91,63 +91,108 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DISSENT_CRYPTO_DIFFIE_HELLMAN_KEY_H_GUARD</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DISSENT_CRYPTO_DIFFIE_HELLMAN_KEY_H_GUARD</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QDebug&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;QSharedData&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>Crypto {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">   13</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange – shared secret exchanged in plaintext.">DiffieHellman</a> {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;Integer.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>Crypto {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="../../d2/dc5/classDissent_1_1Crypto_1_1IDiffieHellmanImpl.html">   12</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d2/dc5/classDissent_1_1Crypto_1_1IDiffieHellmanImpl.html">IDiffieHellmanImpl</a> : <span class="keyword">public</span> QSharedData</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keyword">static</span> QByteArray GetP()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">if</span>(_p.isEmpty()) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;          Init();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> _p;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keyword">static</span> QByteArray GetG()</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span>(_g.isEmpty()) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;          Init();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> _g;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keyword">static</span> QByteArray GetQ()</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span>(_q.isEmpty()) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          Init();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> _q;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a62b13caa0a3cc2706a868479473c632e">   42</a></span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a62b13caa0a3cc2706a868479473c632e" title="Destructor.">~DiffieHellman</a>() {}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keyword">virtual</span> ~<a class="code" href="../../d2/dc5/classDissent_1_1Crypto_1_1IDiffieHellmanImpl.html">IDiffieHellmanImpl</a>() {}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <span class="keyword">virtual</span> QByteArray GetPublicComponent() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keyword">virtual</span> QByteArray GetPrivateComponent() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <span class="keyword">virtual</span> QByteArray GetSharedSecret(<span class="keyword">const</span> QByteArray &amp;remote_pub) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  };</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html">   24</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html" title="Stores a Diffie-Hellman exchange – shared secret exchanged in plaintext.">DiffieHellman</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">static</span> QByteArray GetP()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">static</span> QByteArray p = QByteArray::fromHex(<span class="stringliteral">&quot;0x&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          <span class="stringliteral">&quot;B10B8F96 A080E01D DE92DE5E AE5D54EC 52C99FBC FB06A3C6&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          <span class="stringliteral">&quot;9A6A9DCA 52D23B61 6073E286 75A23D18 9838EF1E 2EE652C0&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          <span class="stringliteral">&quot;13ECB4AE A9061123 24975C3C D49B83BF ACCBDD7D 90C4BD70&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          <span class="stringliteral">&quot;98488E9C 219A7372 4EFFD6FA E5644738 FAA31A4F F55BCCC0&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          <span class="stringliteral">&quot;A151AF5F 0DC8B4BD 45BF37DF 365C1A65 E68CFDA7 6D4DA708&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          <span class="stringliteral">&quot;DF1FB2BC 2E4A4371&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> GetPInt()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> p(GetP());</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> p;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a54a523db93bdad0fb0968f70099f0345" title="Retrieves the public component of the Diffie-Hellman agreement.">GetPublicComponent</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#ae6f259377d9cc5c525a8ca7533d347af" title="Retrieves the private component of the Diffie-Hellman agreement.">GetPrivateComponent</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a3450402453ab07a73404751ee933b9f0" title="Return the shared secret given the other sides public component.">GetSharedSecret</a>(<span class="keyword">const</span> QByteArray &amp;remote_pub) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a4bbfe7836b5d9f0f01557d9fc8223e02" title="Return a non-interactive zero-knowledge proof of a shared Diffie-Hellman secret.">ProveSharedSecret</a>(<span class="keyword">const</span> QByteArray &amp;remote_pub) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#ae393047f8d62b36bcab8351fd9a72ea5" title="Verify a non-interactive zero-knowledge proof of a shared Diffie-Hellman secret.">VerifySharedSecret</a>(<span class="keyword">const</span> QByteArray &amp;prover_pub,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          <span class="keyword">const</span> QByteArray &amp;remote_pub, <span class="keyword">const</span> QByteArray &amp;proof) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">void</span> Init();</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keyword">static</span> QByteArray _p, _g, _q;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  };</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keyword">static</span> QByteArray GetG()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">static</span> QByteArray g = QByteArray::fromHex(<span class="stringliteral">&quot;0x&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          <span class="stringliteral">&quot;A4D1CBD5 C3FD3412 6765A442 EFB99905 F8104DD2 58AC507F&quot;</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          <span class="stringliteral">&quot;D6406CFF 14266D31 266FEA1E 5C41564B 777E690F 5504F213&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <span class="stringliteral">&quot;160217B4 B01B886A 5E91547F 9E2749F4 D7FBD7D3 B9A92EE1&quot;</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          <span class="stringliteral">&quot;909D0D22 63F80A76 A6A24C08 7A091F53 1DBF0A01 69B6A28A&quot;</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          <span class="stringliteral">&quot;D662A4D1 8E73AFA3 2D779D59 18D08BC8 858F4DCE F97C2A24&quot;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          <span class="stringliteral">&quot;855E6EEB 22B3B2E5&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> g;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> GetGInt()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> g(GetG());</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> g;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keyword">static</span> QByteArray GetQ()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">static</span> QByteArray q = QByteArray::fromHex(<span class="stringliteral">&quot;0x&quot;</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="stringliteral">&quot;F518AA87 81A8DF27 8ABA4E7D 64B7CB9D 49462353&quot;</span>); </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> q;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keyword">static</span> <a class="code" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> GetQInt()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d7c/classDissent_1_1Crypto_1_1Integer.html" title="&quot;Big&quot; Integer wrapper">Integer</a> q(GetQ());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> q;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#ada93eab187f15206ed30f6a006d1c357" title="Constructor.">DiffieHellman</a>(<span class="keyword">const</span> QByteArray &amp;data = QByteArray(),</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <span class="keywordtype">bool</span> seed = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a9cf1cfea0b401c2e9d397a58e206a874">   86</a></span>&#160;      QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#a9cf1cfea0b401c2e9d397a58e206a874" title="Retrieves the public component of the Diffie-Hellman agreement.">GetPublicComponent</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> m_data-&gt;GetPublicComponent();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      }</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#ae9f25ae474f6b7d03ae763d3f8537094">   94</a></span>&#160;      QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#ae9f25ae474f6b7d03ae763d3f8537094" title="Retrieves the private component of the Diffie-Hellman agreement.">GetPrivateComponent</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> m_data-&gt;GetPrivateComponent();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#aa9fd958393659d9cb1dcf081e081fa77">  103</a></span>&#160;      QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#aa9fd958393659d9cb1dcf081e081fa77" title="Return the shared secret given the other sides public component.">GetSharedSecret</a>(<span class="keyword">const</span> QByteArray &amp;remote_pub)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> m_data-&gt;GetSharedSecret(remote_pub);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#af06ac4388f5880631ff15f1a29c0971e" title="Return a non-interactive zero-knowledge proof of a shared Diffie-Hellman secret.">ProveSharedSecret</a>(<span class="keyword">const</span> QByteArray &amp;remote_pub) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keyword">static</span> QByteArray <a class="code" href="../../d7/d61/classDissent_1_1Crypto_1_1DiffieHellman.html#aa953367929d43b2eb495f4a69428a2e5" title="Verify a non-interactive zero-knowledge proof of a shared Diffie-Hellman secret.">VerifySharedSecret</a>(<span class="keyword">const</span> QByteArray &amp;prover_pub,</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;          <span class="keyword">const</span> QByteArray &amp;remote_pub, <span class="keyword">const</span> QByteArray &amp;proof);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      QSharedDataPointer&lt;IDiffieHellmanImpl&gt; m_data;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  };</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 3 2013 18:02:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 5 2013 00:06:22 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

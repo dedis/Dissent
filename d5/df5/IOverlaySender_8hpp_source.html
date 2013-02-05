@@ -91,41 +91,42 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DISSENT_CONNECTIONS_IOVERLAY_SENDER_H_GUARD</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DISSENT_CONNECTIONS_IOVERLAY_SENDER_H_GUARD</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Messaging/ISender.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Id.hpp&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>Connections {</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html">   14</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html" title="An interface which allows a sender or similar object share overlay source and destination information...">IOverlaySender</a> : <span class="keyword">public</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">Messaging::ISender</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#ac5eef96fd73f32a20fd6768f22facbb7" title="Returns the local id.">GetLocalId</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>(<span class="keyword">const</span> QSharedPointer&lt;ISender&gt; &amp;sender)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>(sender.data());</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>(<span class="keyword">const</span> ISender *sender)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html" title="An interface which allows a sender or similar object share overlay source and destination information...">IOverlaySender</a> *ov_sender = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html" title="An interface which allows a sender or similar object share overlay source and destination information...">IOverlaySender</a> *<span class="keyword">&gt;</span>(sender);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span>(ov_sender) {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          <span class="keywordflow">return</span> ov_sender-&gt;<a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          <span class="keywordflow">return</span> Id::Zero();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;QSharedPointer&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Messaging/ISender.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Id.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span>Connections {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html">   15</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html" title="An interface which allows a sender or similar object share overlay source and destination information...">IOverlaySender</a> : <span class="keyword">public</span> <a class="code" href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send.">Messaging::ISender</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#ac5eef96fd73f32a20fd6768f22facbb7" title="Returns the local id.">GetLocalId</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keyword">virtual</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>(<span class="keyword">const</span> QSharedPointer&lt;ISender&gt; &amp;sender)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>(sender.data());</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>(<span class="keyword">const</span> ISender *sender)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html" title="An interface which allows a sender or similar object share overlay source and destination information...">IOverlaySender</a> *ov_sender = <span class="keyword">dynamic_cast&lt;</span><span class="keyword">const </span><a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html" title="An interface which allows a sender or similar object share overlay source and destination information...">IOverlaySender</a> *<span class="keyword">&gt;</span>(sender);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span>(ov_sender) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          <span class="keywordflow">return</span> ov_sender-&gt;<a class="code" href="../../db/d06/classDissent_1_1Connections_1_1IOverlaySender.html#a5aa9ba1be6a391e7e72c45ba1202e8e9" title="Returns the remote id.">GetRemoteId</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <span class="keywordflow">return</span> Id::Zero();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  };</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 3 2013 18:02:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 5 2013 00:06:22 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>

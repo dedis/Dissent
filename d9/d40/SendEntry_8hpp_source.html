@@ -91,56 +91,54 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DISSENT_PEER_REVIEW_SEND_ENTRY_H_GUARD</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DISSENT_PEER_REVIEW_SEND_ENTRY_H_GUARD</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Entry.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>PeerReview {</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html">    8</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html">SendEntry</a> : <span class="keyword">public</span> <a class="code" href="../../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html" title="Base abstract class for different entry types (messages in PeerReview)">Entry</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#a509a9280f4d24a0a954adf9f717a2b5b">   19</a></span>&#160;      <a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#a509a9280f4d24a0a954adf9f717a2b5b" title="Constructs a new send entry.">SendEntry</a>(uint seq_id, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;remote,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;          <span class="keyword">const</span> QByteArray &amp;previous_hash, <span class="keyword">const</span> QByteArray &amp;msg,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;          <span class="keyword">const</span> QByteArray &amp;signature = QByteArray()) :</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="../../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html" title="Base abstract class for different entry types (messages in PeerReview)">Entry</a>(seq_id, SEND, remote, previous_hash, signature),</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        _msg(msg)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#aebe14e0a55d068006cb03cb49d34f0ff">   30</a></span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#aebe14e0a55d068006cb03cb49d34f0ff" title="Returns the message.">GetMessage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _msg; }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#aa868c31ea6013e67db099d8ecc541c57">   35</a></span>&#160;      QByteArray <a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#aa868c31ea6013e67db099d8ecc541c57" title="Serializes the Entry into a byte array.">Serialize</a>()<span class="keyword"> const </span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        QByteArray data;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        QDataStream stream(&amp;data, QIODevice::WriteOnly);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html#a89dffef074e2e534d3058aecda4e7538" title="Serializes the Entry into a byte array.">Entry::Serialize</a>(stream);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        stream &lt;&lt; _msg;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> data;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keyword">virtual</span> QByteArray GenerateMessageHash()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">      </span>{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html">Dissent::Crypto::Library</a> &amp;lib =</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          <a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#aa62c09f30a3af82e5d3954feee822168" title="Returns a reference to the singleton.">Dissent::Crypto::CryptoFactory::GetInstance</a>().<a class="code" href="../../de/d33/classDissent_1_1Crypto_1_1CryptoFactory.html#acbfd3c10abae7d38171eaf986a873f5b" title="Return the library constructor.">GetLibrary</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        QSharedPointer&lt;Dissent::Crypto::Hash&gt; hash(lib.<a class="code" href="../../d1/d2f/classDissent_1_1Crypto_1_1Library.html#ae183a61de137daf215e5596cd732556f" title="Returns a hash algorithm.">GetHashAlgorithm</a>());</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> hash-&gt;ComputeHash(_msg);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keyword">const</span> QByteArray _msg;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  };</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> ParseSendEntry(QDataStream &amp;stream, QByteArray &amp;msg)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    stream &gt;&gt; msg;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Crypto/Hash.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Entry.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>Dissent {</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>PeerReview {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html">    9</a></span>&#160;  <span class="keyword">class </span><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html">SendEntry</a> : <span class="keyword">public</span> <a class="code" href="../../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html" title="Base abstract class for different entry types (messages in PeerReview)">Entry</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#a509a9280f4d24a0a954adf9f717a2b5b">   20</a></span>&#160;      <a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#a509a9280f4d24a0a954adf9f717a2b5b" title="Constructs a new send entry.">SendEntry</a>(uint seq_id, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;remote,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;          <span class="keyword">const</span> QByteArray &amp;previous_hash, <span class="keyword">const</span> QByteArray &amp;msg,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          <span class="keyword">const</span> QByteArray &amp;signature = QByteArray()) :</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="../../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html" title="Base abstract class for different entry types (messages in PeerReview)">Entry</a>(seq_id, SEND, remote, previous_hash, signature),</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        _msg(msg)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#aebe14e0a55d068006cb03cb49d34f0ff">   31</a></span>&#160;      <span class="keyword">virtual</span> QByteArray <a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#aebe14e0a55d068006cb03cb49d34f0ff" title="Returns the message.">GetMessage</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _msg; }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#aa868c31ea6013e67db099d8ecc541c57">   36</a></span>&#160;      QByteArray <a class="code" href="../../df/dca/classDissent_1_1PeerReview_1_1SendEntry.html#aa868c31ea6013e67db099d8ecc541c57" title="Serializes the Entry into a byte array.">Serialize</a>()<span class="keyword"> const </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        QByteArray data;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        QDataStream stream(&amp;data, QIODevice::WriteOnly);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d0/d0f/classDissent_1_1PeerReview_1_1Entry.html#a89dffef074e2e534d3058aecda4e7538" title="Serializes the Entry into a byte array.">Entry::Serialize</a>(stream);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        stream &lt;&lt; _msg;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> data;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">virtual</span> QByteArray GenerateMessageHash()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">      </span>{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html" title="Cryptographic hashing algorithm.">Crypto::Hash</a>().<a class="code" href="../../df/df2/classDissent_1_1Crypto_1_1Hash.html#ac5a63fbc2256c9e12d0e31310ee2e625" title="Returns the hash of the data currently being hashed (due to Update)">ComputeHash</a>(_msg);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">const</span> QByteArray _msg;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keyword">inline</span> <span class="keywordtype">void</span> ParseSendEntry(QDataStream &amp;stream, QByteArray &amp;msg)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    stream &gt;&gt; msg;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 3 2013 18:02:21 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 5 2013 00:06:22 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>
