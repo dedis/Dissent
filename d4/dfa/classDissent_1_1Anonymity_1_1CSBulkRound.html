@@ -149,35 +149,33 @@ Public Types</h2></td></tr>
 <tr class="memitem:ac12e4af519d6bb4f00577dc95327ec32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>States</b> { <br/>
 &#160;&#160;<b>OFFLINE</b> = 0, 
 <b>SHUFFLING</b>, 
-<b>PROCESS_DATA_SHUFFLE</b>, 
-<b>PROCESS_KEY_SHUFFLE</b>, 
+<b>PROCESS_BOOTSTRAP</b>, 
+<b>PREPARE_FOR_BULK</b>, 
 <br/>
-&#160;&#160;<b>PREPARE_FOR_BULK</b>, 
-<b>CLIENT_WAIT_FOR_CLEARTEXT</b>, 
+&#160;&#160;<b>CLIENT_WAIT_FOR_CLEARTEXT</b>, 
 <b>SERVER_WAIT_FOR_CLIENT_CIPHERTEXT</b>, 
 <b>SERVER_WAIT_FOR_CLIENT_LISTS</b>, 
+<b>SERVER_WAIT_FOR_SERVER_COMMITS</b>, 
 <br/>
-&#160;&#160;<b>SERVER_WAIT_FOR_SERVER_COMMITS</b>, 
-<b>SERVER_WAIT_FOR_SERVER_CIPHERTEXT</b>, 
+&#160;&#160;<b>SERVER_WAIT_FOR_SERVER_CIPHERTEXT</b>, 
 <b>SERVER_WAIT_FOR_SERVER_VALIDATION</b>, 
 <b>SERVER_PUSH_CLEARTEXT</b>, 
+<b>STARTING_BLAME_SHUFFLE</b>, 
 <br/>
-&#160;&#160;<b>STARTING_BLAME_SHUFFLE</b>, 
-<b>WAITING_FOR_BLAME_SHUFFLE</b>, 
+&#160;&#160;<b>WAITING_FOR_BLAME_SHUFFLE</b>, 
 <b>WAITING_FOR_DATA_REQUEST_OR_VERDICT</b>, 
 <b>SERVER_TRANSMIT_BLAME_BITS</b>, 
+<b>SERVER_WAITING_FOR_BLAME_BITS</b>, 
 <br/>
-&#160;&#160;<b>SERVER_WAITING_FOR_BLAME_BITS</b>, 
-<b>SERVER_DETERMINE_MISMATCH</b>, 
+&#160;&#160;<b>SERVER_DETERMINE_MISMATCH</b>, 
 <b>SERVER_REQUEST_CLIENT_REBUTTAL</b>, 
 <b>SERVER_WAIT_FOR_CLIENT_REBUTTAL</b>, 
+<b>SERVER_MAKE_JUDGEMENT</b>, 
 <br/>
-&#160;&#160;<b>SERVER_MAKE_JUDGEMENT</b>, 
-<b>SERVER_EXCHANGE_VERDICT_SIGNATURE</b>, 
+&#160;&#160;<b>SERVER_EXCHANGE_VERDICT_SIGNATURE</b>, 
 <b>SERVER_WAIT_FOR_VERDICT_SIGNATURE</b>, 
 <b>SERVER_SHARE_VERDICT</b>, 
-<br/>
-&#160;&#160;<b>FINISHED</b>
+<b>FINISHED</b>
 <br/>
  }</td></tr>
 <tr class="separator:ac12e4af519d6bb4f00577dc95327ec32"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -442,6 +440,9 @@ const <a class="el" href="../../dc/d2c/classDissent_1_1Messaging_1_1BufferSink.h
 <tr class="memitem:a70d1150a49e274ffae0a6956958dada1 inherit pro_methods_classDissent_1_1Anonymity_1_1BaseBulkRound"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/df2/classDissent_1_1Anonymity_1_1BaseBulkRound.html#a70d1150a49e274ffae0a6956958dada1">SetBadMembers</a> (const QVector&lt; int &gt; &amp;bad_members)</td></tr>
 <tr class="memdesc:a70d1150a49e274ffae0a6956958dada1 inherit pro_methods_classDissent_1_1Anonymity_1_1BaseBulkRound"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the bad member vector.  <a href="#a70d1150a49e274ffae0a6956958dada1"></a><br/></td></tr>
 <tr class="separator:a70d1150a49e274ffae0a6956958dada1 inherit pro_methods_classDissent_1_1Anonymity_1_1BaseBulkRound"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a617ab4f5de5657283d0b26f78874282e inherit pro_methods_classDissent_1_1Anonymity_1_1BaseBulkRound"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a617ab4f5de5657283d0b26f78874282e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SetShuffleRound</b> (const QSharedPointer&lt; <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html">Round</a> &gt; &amp;round)</td></tr>
+<tr class="separator:a617ab4f5de5657283d0b26f78874282e inherit pro_methods_classDissent_1_1Anonymity_1_1BaseBulkRound"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classDissent_1_1Anonymity_1_1Round"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classDissent_1_1Anonymity_1_1Round')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html">Dissent::Anonymity::Round</a></td></tr>
 <tr class="memitem:a7d38c906dd83799df0a90fc413f86829 inherit pro_methods_classDissent_1_1Anonymity_1_1Round"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d6f/classDissent_1_1Anonymity_1_1Round.html#a7d38c906dd83799df0a90fc413f86829">Verify</a> (const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;from, const QByteArray &amp;data, QByteArray &amp;msg)</td></tr>
 <tr class="memdesc:a7d38c906dd83799df0a90fc413f86829 inherit pro_methods_classDissent_1_1Anonymity_1_1Round"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifies that the provided data has a signature block and is properly signed, returning the data block via msg.  <a href="#a7d38c906dd83799df0a90fc413f86829"></a><br/></td></tr>
@@ -896,7 +897,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_G
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 5 2013 00:06:22 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Feb 7 2013 12:47:36 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3
 </small></address>
