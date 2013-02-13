@@ -2,6 +2,7 @@ var searchData=
 [
   ['iauthenticate',['IAuthenticate',['../df/dd7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticate.html',1,'Dissent::Identity::Authentication']]],
   ['iauthenticator',['IAuthenticator',['../dd/db7/classDissent_1_1Identity_1_1Authentication_1_1IAuthenticator.html',1,'Dissent::Identity::Authentication']]],
+  ['icreatekey',['ICreateKey',['../d3/dc9/classICreateKey.html',1,'']]],
   ['icryptorandomimpl',['ICryptoRandomImpl',['../da/d37/classDissent_1_1Crypto_1_1ICryptoRandomImpl.html',1,'Dissent::Crypto']]],
   ['id',['Id',['../df/d5b/classDissent_1_1Connections_1_1Id.html',1,'Dissent::Connections']]],
   ['idiffiehellmanimpl',['IDiffieHellmanImpl',['../d2/dc5/classDissent_1_1Crypto_1_1IDiffieHellmanImpl.html',1,'Dissent::Crypto']]],

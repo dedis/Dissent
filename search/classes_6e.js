@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['neffkeyshuffle',['NeffKeyShuffle',['../d7/ddf/classDissent_1_1Anonymity_1_1NeffKeyShuffle.html',1,'Dissent::Anonymity']]],
-  ['neffshuffle',['NeffShuffle',['../d7/dd0/classDissent_1_1Anonymity_1_1NeffShuffle.html',1,'Dissent::Anonymity']]],
+  ['neffkeyshuffleround',['NeffKeyShuffleRound',['../d1/dc3/classDissent_1_1Anonymity_1_1NeffKeyShuffleRound.html',1,'Dissent::Anonymity']]],
+  ['neffshuffle',['NeffShuffle',['../d1/dde/classDissent_1_1Crypto_1_1NeffShuffle.html',1,'Dissent::Crypto']]],
+  ['neffshuffleround',['NeffShuffleRound',['../d9/d24/classDissent_1_1Anonymity_1_1NeffShuffleRound.html',1,'Dissent::Anonymity']]],
   ['network',['Network',['../db/d5e/classDissent_1_1Connections_1_1Network.html',1,'Dissent::Connections']]],
   ['node',['Node',['../d2/d2c/classDissent_1_1Applications_1_1Node.html',1,'Dissent::Applications']]],
   ['nullauthenticate',['NullAuthenticate',['../d1/dc7/classDissent_1_1Identity_1_1Authentication_1_1NullAuthenticate.html',1,'Dissent::Identity::Authentication']]],

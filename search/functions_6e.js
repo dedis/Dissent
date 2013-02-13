@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['neffkeyshuffle',['NeffKeyShuffle',['../d7/ddf/classDissent_1_1Anonymity_1_1NeffKeyShuffle.html#a6a07d23afde29212449ba1b805887b66',1,'Dissent::Anonymity::NeffKeyShuffle']]],
-  ['neffshuffle',['NeffShuffle',['../d7/dd0/classDissent_1_1Anonymity_1_1NeffShuffle.html#a4c7acb39c51f5ffcd7231f5574a40ac6',1,'Dissent::Anonymity::NeffShuffle']]],
+  ['neffkeyshuffleround',['NeffKeyShuffleRound',['../d1/dc3/classDissent_1_1Anonymity_1_1NeffKeyShuffleRound.html#af1868abac049902bffd0cb821eec04c2',1,'Dissent::Anonymity::NeffKeyShuffleRound']]],
+  ['neffshuffleround',['NeffShuffleRound',['../d9/d24/classDissent_1_1Anonymity_1_1NeffShuffleRound.html#a0ff40dfcdea3053650c36943e42ebe1a',1,'Dissent::Anonymity::NeffShuffleRound']]],
   ['newconnection',['NewConnection',['../d2/da1/classDissent_1_1Connections_1_1ConnectionManager.html#a9025bf77aff44273787523711ab68bc8',1,'Dissent::Connections::ConnectionManager']]],
   ['newedge',['NewEdge',['../d7/de7/classDissent_1_1Transports_1_1EdgeListener.html#ae2562c4e057fd1beec98b1dd0cca67b6',1,'Dissent::Transports::EdgeListener']]],
   ['next',['Next',['../d1/da7/classDissent_1_1Identity_1_1Group.html#afba97c2ee6fb7fb7c0224addeb9f162f',1,'Dissent::Identity::Group']]],

@@ -19,7 +19,9 @@ var searchData=
   ['roundstatemachine',['RoundStateMachine',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3ablogdropround_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::BlogDropRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3acsbulkround_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::CSBulkRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
-  ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3aneffshuffle_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::NeffShuffle &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
+  ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3aneffshuffleround_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::NeffShuffleRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
   ['roundstatemachine_3c_20dissent_3a_3aanonymity_3a_3ashuffleround_20_3e',['RoundStateMachine&lt; Dissent::Anonymity::ShuffleRound &gt;',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html',1,'Dissent::Anonymity']]],
-  ['rpchandler',['RpcHandler',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html',1,'Dissent::Messaging']]]
+  ['rpchandler',['RpcHandler',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html',1,'Dissent::Messaging']]],
+  ['rsaprivatekey',['RsaPrivateKey',['../d4/d82/classDissent_1_1Crypto_1_1RsaPrivateKey.html',1,'Dissent::Crypto']]],
+  ['rsapublickey',['RsaPublicKey',['../d2/d8e/classDissent_1_1Crypto_1_1RsaPublicKey.html',1,'Dissent::Crypto']]]
 ];

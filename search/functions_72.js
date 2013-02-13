@@ -6,7 +6,7 @@ var searchData=
   ['randomize',['Randomize',['../d4/dfa/classDissent_1_1Anonymity_1_1CSBulkRound.html#ad1f4fd6ed901923369b435bb9c13d846',1,'Dissent::Anonymity::CSBulkRound']]],
   ['randomizeblocks',['RandomizeBlocks',['../d5/d21/classDissent_1_1Crypto_1_1OnionEncryptor.html#a8c537c1034cb14f5c66602b561610250',1,'Dissent::Crypto::OnionEncryptor']]],
   ['readbitarray',['ReadBitArray',['../de/d19/classDissent_1_1Utils_1_1Serialization.html#a171169abfa92e0fbf55902b134c4cd80',1,'Dissent::Utils::Serialization']]],
-  ['readfile',['ReadFile',['../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#af04c1b2d9b543815581093c43d1d69eb',1,'Dissent::Crypto::AsymmetricKey']]],
+  ['readfile',['ReadFile',['../d7/d96/classDissent_1_1Crypto_1_1AsymmetricKey.html#a8fa2d852b5ca254fb545d67c76e69d21',1,'Dissent::Crypto::AsymmetricKey']]],
   ['readfromsocket',['ReadFromSocket',['../d2/da7/classDissent_1_1Tunnel_1_1SocksConnection.html#ac16757c3057e428c436716f75c271797',1,'Dissent::Tunnel::SocksConnection']]],
   ['readint',['ReadInt',['../de/d19/classDissent_1_1Utils_1_1Serialization.html#a79cae3b8084e5a21c95fd64aa7814261',1,'Dissent::Utils::Serialization']]],
   ['receive',['Receive',['../de/d8c/classDissent_1_1PeerReview_1_1PRManager.html#a868069101e8e803e88997b1f6c2573f2',1,'Dissent::PeerReview::PRManager']]],
@@ -42,5 +42,5 @@ var searchData=
   ['roundstarting',['RoundStarting',['../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a2647ceba82a9bf9129c108fa3837961a',1,'Dissent::Anonymity::Sessions::Session']]],
   ['roundstatemachine',['RoundStateMachine',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#aeb53d602176900dc60c14b592122b0ee',1,'Dissent::Anonymity::RoundStateMachine']]],
   ['rpchandler',['RpcHandler',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a748d19dff389cbaf0d1bc359cbca86b7',1,'Dissent::Messaging::RpcHandler']]],
-  ['run',['Run',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a0a080a6acdff464102530c52e9904c15',1,'Dissent::Utils::Timer']]]
+  ['run',['Run',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a0a080a6acdff464102530c52e9904c15',1,'Dissent::Utils::Timer::Run()'],['../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html#a58b539832e54d278ebc9e09b0b1b7ca6',1,'Dissent::Anonymity::ShuffleRoundPrivate::Decryptor::run()']]]
 ];
