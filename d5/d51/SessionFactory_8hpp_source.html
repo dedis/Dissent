@@ -133,39 +133,40 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        CSBULK,</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        NEFF_SHUFFLE,</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        BLOG_DROP_REACTIVE,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        BLOG_DROP_PROACTIVE</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      };</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">static</span> SessionType GetSessionType(<span class="keyword">const</span> QString &amp;stype)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">static</span> QHash&lt;QString, SessionType&gt; string_to_type = BuildStringToTypeHash();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> string_to_type.value(stype, INVALID);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">void</span> CreateSession(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          SessionType type, AuthFactory::AuthType auth_type,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;KeyShare&gt; &amp;public_keys);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keyword">static</span> QHash&lt;QString, SessionType&gt; BuildStringToTypeHash()</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        QHash&lt;QString, SessionType&gt; hash;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> idx = NULL_ROUND; idx &lt;= NEFF_SHUFFLE; idx++) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          hash[SessionNames(idx)] = <span class="keyword">static_cast&lt;</span>SessionType<span class="keyword">&gt;</span>(idx);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> hash;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      Q_DISABLE_COPY(<a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html" title="Generates an appropriate session given the input.">SessionFactory</a>)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        BLOG_DROP_PROACTIVE,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        NOT_A_SESSION</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keyword">static</span> SessionType GetSessionType(<span class="keyword">const</span> QString &amp;stype)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">static</span> QHash&lt;QString, SessionType&gt; string_to_type = BuildStringToTypeHash();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> string_to_type.value(stype, INVALID);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keyword">static</span> <span class="keywordtype">void</span> CreateSession(<a class="code" href="../../d2/d2c/classDissent_1_1Applications_1_1Node.html" title="A wrapper class combining an overlay, session manager, session, sink, key, and whatever else might be...">Node</a> *node, <span class="keyword">const</span> <a class="code" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html" title="A globally unique identifier.">Id</a> &amp;session_id,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;          SessionType type, AuthFactory::AuthType auth_type,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;KeyShare&gt; &amp;public_keys);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keyword">static</span> QHash&lt;QString, SessionType&gt; BuildStringToTypeHash()</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        QHash&lt;QString, SessionType&gt; hash;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> idx = NULL_ROUND; idx &lt; NOT_A_SESSION; idx++) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          hash[SessionNames(idx)] = <span class="keyword">static_cast&lt;</span>SessionType<span class="keyword">&gt;</span>(idx);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> hash;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      Q_DISABLE_COPY(<a class="code" href="../../d7/dbc/classDissent_1_1Applications_1_1SessionFactory.html" title="Generates an appropriate session given the input.">SessionFactory</a>)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  };</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 12 2013 20:45:53 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2013 14:24:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

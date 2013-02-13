@@ -42,5 +42,5 @@ var searchData=
   ['roundstarting',['RoundStarting',['../d3/d09/classDissent_1_1Anonymity_1_1Sessions_1_1Session.html#a2647ceba82a9bf9129c108fa3837961a',1,'Dissent::Anonymity::Sessions::Session']]],
   ['roundstatemachine',['RoundStateMachine',['../d0/d6c/classDissent_1_1Anonymity_1_1RoundStateMachine.html#aeb53d602176900dc60c14b592122b0ee',1,'Dissent::Anonymity::RoundStateMachine']]],
   ['rpchandler',['RpcHandler',['../dc/d59/classDissent_1_1Messaging_1_1RpcHandler.html#a748d19dff389cbaf0d1bc359cbca86b7',1,'Dissent::Messaging::RpcHandler']]],
-  ['run',['Run',['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a0a080a6acdff464102530c52e9904c15',1,'Dissent::Utils::Timer::Run()'],['../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html#a58b539832e54d278ebc9e09b0b1b7ca6',1,'Dissent::Anonymity::ShuffleRoundPrivate::Decryptor::run()']]]
+  ['run',['run',['../d7/d2f/classDissent_1_1Anonymity_1_1ShuffleRoundPrivate_1_1Decryptor.html#a58b539832e54d278ebc9e09b0b1b7ca6',1,'Dissent::Anonymity::ShuffleRoundPrivate::Decryptor::run()'],['../d4/d63/classDissent_1_1Utils_1_1Timer.html#a0a080a6acdff464102530c52e9904c15',1,'Dissent::Utils::Timer::Run()']]]
 ];
