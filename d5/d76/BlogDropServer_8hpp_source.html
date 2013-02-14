@@ -121,55 +121,56 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a2f1765a692d86e83fef1e781c55eb5d9" title="Add a client ciphertext.">AddClientCiphertext</a>(<span class="keyword">const</span> QByteArray &amp;in, <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;pub,</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          <span class="keywordtype">bool</span> verify_proofs);</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a19afb7e3ebaba243f33cae38fecc54ce" title="Add a list of client ciphertexts.">AddClientCiphertexts</a>(<span class="keyword">const</span> QList&lt;QByteArray&gt; &amp;in, </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const PublicKey&gt; &gt; &amp;pubs,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keywordtype">bool</span> verify_proofs);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      QByteArray <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aeb6ff635d70a89dd4348a2f875c0ff2f" title="Reveal server ciphertext corresponding to added client ciphertexts.">CloseBin</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a9ad645ea421146a40667c0a37b7577ba" title="Add a server ciphertext and return true if the added ciphertext is valid WARNING : You must call Clos...">AddServerCiphertext</a>(<span class="keyword">const</span> QByteArray &amp;in, </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;from);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aee4bcdd9a14a7477ef83e7095daa7559" title="Add a list of server ciphertexts and return true if all of the added ciphertext are valid...">AddServerCiphertexts</a>(<span class="keyword">const</span> QList&lt;QByteArray&gt; &amp;in, </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const PublicKey&gt; &gt; &amp;pubs);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a31bdd62e1793cba4ed62aa2ecbf14c8f" title="Reveal plaintext for a BlogDrop bin.">RevealPlaintext</a>(QByteArray &amp;out) <span class="keyword">const</span>; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aad93191846f14bfc27809fea30adfdfd">  105</a></span>&#160;      <span class="keyword">inline</span> QSharedPointer&lt;const PublicKey&gt; <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aad93191846f14bfc27809fea30adfdfd" title="Get public key for this server.">GetPublicKey</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> QSharedPointer&lt;const PublicKey&gt;(<span class="keyword">new</span> <a class="code" href="../../db/d81/classDissent_1_1Crypto_1_1BlogDrop_1_1PublicKey.html" title="Object holding BlogDrop public key (g^sk)">PublicKey</a>(_server_priv));</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      QSet&lt;int&gt; <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a21aa9bd0f39ed5df7b0ff2911b71571b" title="Look through bin for invalid ciphertexts.">FindBadClients</a>();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keyword">inline</span> QSharedPointer&lt;Parameters&gt; GetParameters()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _params; }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a6965a65e450bd8d3c05f964f632f8bb0" title="Add a list of client ciphertexts.">AddClientCiphertexts</a>(<span class="keyword">const</span> QList&lt;QByteArray&gt; &amp;in, </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const PublicKey&gt; &gt; &amp;pubs,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          <span class="keywordtype">bool</span> verify_proofs,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          QSet&lt;int&gt; &amp;bad_clients_out);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      QByteArray <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aeb6ff635d70a89dd4348a2f875c0ff2f" title="Reveal server ciphertext corresponding to added client ciphertexts.">CloseBin</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a9ad645ea421146a40667c0a37b7577ba" title="Add a server ciphertext and return true if the added ciphertext is valid WARNING : You must call Clos...">AddServerCiphertext</a>(<span class="keyword">const</span> QByteArray &amp;in, </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          <span class="keyword">const</span> QSharedPointer&lt;const PublicKey&gt; &amp;from);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aee4bcdd9a14a7477ef83e7095daa7559" title="Add a list of server ciphertexts and return true if all of the added ciphertext are valid...">AddServerCiphertexts</a>(<span class="keyword">const</span> QList&lt;QByteArray&gt; &amp;in, </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          <span class="keyword">const</span> QList&lt;QSharedPointer&lt;const PublicKey&gt; &gt; &amp;pubs);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a31bdd62e1793cba4ed62aa2ecbf14c8f" title="Reveal plaintext for a BlogDrop bin.">RevealPlaintext</a>(QByteArray &amp;out) <span class="keyword">const</span>; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aad93191846f14bfc27809fea30adfdfd">  107</a></span>&#160;      <span class="keyword">inline</span> QSharedPointer&lt;const PublicKey&gt; <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aad93191846f14bfc27809fea30adfdfd" title="Get public key for this server.">GetPublicKey</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> QSharedPointer&lt;const PublicKey&gt;(<span class="keyword">new</span> <a class="code" href="../../db/d81/classDissent_1_1Crypto_1_1BlogDrop_1_1PublicKey.html" title="Object holding BlogDrop public key (g^sk)">PublicKey</a>(_server_priv));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      QSet&lt;int&gt; <a class="code" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a21aa9bd0f39ed5df7b0ff2911b71571b" title="Look through bin for invalid ciphertexts.">FindBadClients</a>();</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span> NextPhase() { _phase++; }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> GetPhase()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _phase; }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordtype">int</span> _phase;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      QSharedPointer&lt;Parameters&gt; _params;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      QSharedPointer&lt;const PrivateKey&gt; _server_priv;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      QSharedPointer&lt;const PublicKeySet&gt; _server_pk_set;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      QSharedPointer&lt;const PublicKey&gt; _author_pub;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <span class="comment">/* list[client] = ciphertext */</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      QList&lt;QSharedPointer&lt;const ClientCiphertext&gt; &gt; _client_ciphertexts;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      QList&lt;QSharedPointer&lt;const PublicKey&gt; &gt; _client_pubs;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      QList&lt;QSharedPointer&lt;const ServerCiphertext&gt; &gt; _server_ciphertexts;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      QSharedPointer&lt;const PublicKeySet&gt; _client_pks;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  };</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      <span class="keyword">inline</span> QSharedPointer&lt;Parameters&gt; GetParameters()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _params; }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">void</span> NextPhase() { _phase++; }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keyword">inline</span> <span class="keywordtype">int</span> GetPhase()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _phase; }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordtype">int</span> _phase;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      QSharedPointer&lt;Parameters&gt; _params;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      QSharedPointer&lt;const PrivateKey&gt; _server_priv;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      QSharedPointer&lt;const PublicKeySet&gt; _server_pk_set;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      QSharedPointer&lt;const PublicKey&gt; _author_pub;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="comment">/* list[client] = ciphertext */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      QList&lt;QSharedPointer&lt;const ClientCiphertext&gt; &gt; _client_ciphertexts;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      QList&lt;QSharedPointer&lt;const PublicKey&gt; &gt; _client_pubs;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      QList&lt;QSharedPointer&lt;const ServerCiphertext&gt; &gt; _server_ciphertexts;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;      QSharedPointer&lt;const PublicKeySet&gt; _client_pks;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  };</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;}</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 13 2013 14:24:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2013 20:08:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

@@ -111,9 +111,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 <tr class="memitem:a2f1765a692d86e83fef1e781c55eb5d9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a2f1765a692d86e83fef1e781c55eb5d9">AddClientCiphertext</a> (const QByteArray &amp;in, const QSharedPointer&lt; const <a class="el" href="../../db/d81/classDissent_1_1Crypto_1_1BlogDrop_1_1PublicKey.html">PublicKey</a> &gt; &amp;pub, bool verify_proofs)</td></tr>
 <tr class="memdesc:a2f1765a692d86e83fef1e781c55eb5d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a client ciphertext.  <a href="#a2f1765a692d86e83fef1e781c55eb5d9">More...</a><br/></td></tr>
 <tr class="separator:a2f1765a692d86e83fef1e781c55eb5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19afb7e3ebaba243f33cae38fecc54ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a19afb7e3ebaba243f33cae38fecc54ce">AddClientCiphertexts</a> (const QList&lt; QByteArray &gt; &amp;in, const QList&lt; QSharedPointer&lt; const <a class="el" href="../../db/d81/classDissent_1_1Crypto_1_1BlogDrop_1_1PublicKey.html">PublicKey</a> &gt; &gt; &amp;pubs, bool verify_proofs)</td></tr>
-<tr class="memdesc:a19afb7e3ebaba243f33cae38fecc54ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a list of client ciphertexts.  <a href="#a19afb7e3ebaba243f33cae38fecc54ce">More...</a><br/></td></tr>
-<tr class="separator:a19afb7e3ebaba243f33cae38fecc54ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6965a65e450bd8d3c05f964f632f8bb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#a6965a65e450bd8d3c05f964f632f8bb0">AddClientCiphertexts</a> (const QList&lt; QByteArray &gt; &amp;in, const QList&lt; QSharedPointer&lt; const <a class="el" href="../../db/d81/classDissent_1_1Crypto_1_1BlogDrop_1_1PublicKey.html">PublicKey</a> &gt; &gt; &amp;pubs, bool verify_proofs, QSet&lt; int &gt; &amp;bad_clients_out)</td></tr>
+<tr class="memdesc:a6965a65e450bd8d3c05f964f632f8bb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a list of client ciphertexts.  <a href="#a6965a65e450bd8d3c05f964f632f8bb0">More...</a><br/></td></tr>
+<tr class="separator:a6965a65e450bd8d3c05f964f632f8bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb6ff635d70a89dd4348a2f875c0ff2f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb6ff635d70a89dd4348a2f875c0ff2f"></a>
 QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html#aeb6ff635d70a89dd4348a2f875c0ff2f">CloseBin</a> ()</td></tr>
 <tr class="memdesc:aeb6ff635d70a89dd4348a2f875c0ff2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reveal server ciphertext corresponding to added client ciphertexts. <br/></td></tr>
@@ -245,7 +245,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhase</b> () const 
 
 </div>
 </div>
-<a class="anchor" id="a19afb7e3ebaba243f33cae38fecc54ce"></a>
+<a class="anchor" id="a6965a65e450bd8d3c05f964f632f8bb0"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -265,7 +265,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhase</b> () const 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>verify_proofs</em>&#160;</td>
+          <td class="paramname"><em>verify_proofs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QSet&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>bad_clients_out</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -282,6 +288,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhase</b> () const 
     <tr><td class="paramname">in</td><td>the list of ciphertexts to add </td></tr>
     <tr><td class="paramname">pubs</td><td>in the list of client public keys </td></tr>
     <tr><td class="paramname">verify_proofs</td><td>if true, verify proofs as they're added </td></tr>
+    <tr><td class="paramname">bad_clients_out</td><td>return invalid clients (if verify_proofs is true) </td></tr>
   </table>
   </dd>
 </dl>
@@ -409,7 +416,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPhase</b> () const 
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 13 2013 14:24:53 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2013 20:08:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

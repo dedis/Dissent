@@ -90,10 +90,10 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-types">Protected Types</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
@@ -114,6 +114,7 @@ Inheritance diagram for Dissent::Anonymity::BlogDropRound:</div>
 <area href="../../d4/d95/classDissent_1_1Utils_1_1StartStop.html" title="A thin class to encapsulate the common start / stop pattern." alt="Dissent::Utils::StartStop" shape="rect" coords="334,56,547,80"/>
 <area href="../../d9/d03/classDissent_1_1Messaging_1_1ISender.html" title="Derivatives should implement a block-free Send." alt="Dissent::Messaging::ISender" shape="rect" coords="557,56,770,80"/>
 <area href="../../d7/d32/classDissent_1_1Messaging_1_1Source.html" title="Produces data to be received by a sink." alt="Dissent::Messaging::Source" shape="rect" coords="223,0,436,24"/>
+<area href="../../d5/d24/classDissent_1_1Tests_1_1BadBlogDropRound.html" alt="Dissent::Tests::BadBlogDropRound" shape="rect" coords="334,280,547,304"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -222,6 +223,11 @@ typedef <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCal
 typedef <a class="el" href="../../dd/d45/classDissent_1_1Messaging_1_1Request.html">Messaging::Request</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Request</b></td></tr>
 <tr class="separator:a7f4d36af9bef7dc56fd2368e83fcbc7f inherit pub_types_classDissent_1_1Anonymity_1_1Round"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a18ee3bd376851f4f328769a464fcbb26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9a/classDissent_1_1Anonymity_1_1BlogDropRound.html#a18ee3bd376851f4f328769a464fcbb26">Abort</a> (QString reason, int bad_client_idx)</td></tr>
+<tr class="separator:a18ee3bd376851f4f328769a464fcbb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a77531e4a302d9a8d605f870d74e7ed7c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a77531e4a302d9a8d605f870d74e7ed7c"></a>
@@ -230,9 +236,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ReadyForInteraction</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad3fca3d76a712c0f646c4a49b7b5cd25"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9a/classDissent_1_1Anonymity_1_1BlogDropRound.html#ad3fca3d76a712c0f646c4a49b7b5cd25">BlogDropRound</a> (const QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt; &amp;blogdrop_params, const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;ident, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, const QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; &amp;network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html">NullRound</a> &gt;)</td></tr>
-<tr class="memdesc:ad3fca3d76a712c0f646c4a49b7b5cd25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ad3fca3d76a712c0f646c4a49b7b5cd25">More...</a><br/></td></tr>
-<tr class="separator:ad3fca3d76a712c0f646c4a49b7b5cd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab968effbc9214efb7dc7fbfdfa2b1742"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9a/classDissent_1_1Anonymity_1_1BlogDropRound.html#ab968effbc9214efb7dc7fbfdfa2b1742">BlogDropRound</a> (const QSharedPointer&lt; <a class="el" href="../../d8/da9/classDissent_1_1Crypto_1_1BlogDrop_1_1Parameters.html">Parameters</a> &gt; &amp;blogdrop_params, const <a class="el" href="../../d1/da7/classDissent_1_1Identity_1_1Group.html">Group</a> &amp;group, const <a class="el" href="../../dc/d54/classDissent_1_1Identity_1_1PrivateIdentity.html">PrivateIdentity</a> &amp;ident, const <a class="el" href="../../df/d5b/classDissent_1_1Connections_1_1Id.html">Id</a> &amp;round_id, const QSharedPointer&lt; <a class="el" href="../../db/d5e/classDissent_1_1Connections_1_1Network.html">Network</a> &gt; &amp;network, <a class="el" href="../../d1/d0c/classDissent_1_1Messaging_1_1GetDataCallback.html">GetDataCallback</a> &amp;get_data, CreateRound create_shuffle=&amp;TCreateRound&lt; <a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html">NullRound</a> &gt;, bool verify_proofs=true)</td></tr>
+<tr class="memdesc:ab968effbc9214efb7dc7fbfdfa2b1742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#ab968effbc9214efb7dc7fbfdfa2b1742">More...</a><br/></td></tr>
+<tr class="separator:ab968effbc9214efb7dc7fbfdfa2b1742"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d4c1d82476fb0bd56142ddcbcd10f72"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4d4c1d82476fb0bd56142ddcbcd10f72"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9a/classDissent_1_1Anonymity_1_1BlogDropRound.html#a4d4c1d82476fb0bd56142ddcbcd10f72">~BlogDropRound</a> ()</td></tr>
 <tr class="memdesc:a4d4c1d82476fb0bd56142ddcbcd10f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br/></td></tr>
@@ -402,12 +408,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a14b8c3e53b496c67584f0b49fbbfda42 inherit pub_static_methods_classDissent_1_1Anonymity_1_1BaseBulkRound"><td class="mdescLeft">&#160;</td><td class="mdescRight">Xor operator for QByteArrays.  <a href="#a14b8c3e53b496c67584f0b49fbbfda42">More...</a><br/></td></tr>
 <tr class="separator:a14b8c3e53b496c67584f0b49fbbfda42 inherit pub_static_methods_classDissent_1_1Anonymity_1_1BaseBulkRound"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:ae92a2324edc7443fee26240ec2aaa52e"><td class="memItemLeft" align="right" valign="top">static const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d9a/classDissent_1_1Anonymity_1_1BlogDropRound.html#ae92a2324edc7443fee26240ec2aaa52e">VerifyAllProofs</a> = false</td></tr>
-<tr class="memdesc:ae92a2324edc7443fee26240ec2aaa52e"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, every server verifies all proofs before revealing the plaintext.  <a href="#ae92a2324edc7443fee26240ec2aaa52e">More...</a><br/></td></tr>
-<tr class="separator:ae92a2324edc7443fee26240ec2aaa52e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
 <tr class="memitem:a1b672e96040a235edf092020f1512365"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1b672e96040a235edf092020f1512365"></a>
@@ -520,7 +520,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_G
 <tr class="separator:a2077262bd79b325595a2d289dcefef9e inherit pro_static_attribs_classDissent_1_1Anonymity_1_1Round"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ad3fca3d76a712c0f646c4a49b7b5cd25"></a>
+<a class="anchor" id="ab968effbc9214efb7dc7fbfdfa2b1742"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -567,7 +567,13 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_G
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">CreateRound&#160;</td>
-          <td class="paramname"><em>create_shuffle</em> = <code>&amp;TCreateRound&lt;<a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html">NullRound</a>&gt;</code>&#160;</td>
+          <td class="paramname"><em>create_shuffle</em> = <code>&amp;TCreateRound&lt;<a class="el" href="../../d6/dad/classDissent_1_1Anonymity_1_1NullRound.html">NullRound</a>&gt;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>verify_proofs</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -591,6 +597,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_G
     <tr><td class="paramname">network</td><td>handles message sending </td></tr>
     <tr><td class="paramname">get_data</td><td>requests data to share during this session </td></tr>
     <tr><td class="paramname">create_shuffle</td><td>optional parameter specifying a shuffle round to create, currently used for testing </td></tr>
+    <tr><td class="paramname">verify_proofs</td><td>optionally verify proofs proactively </td></tr>
   </table>
   </dd>
 </dl>
@@ -598,6 +605,47 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_G
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a18ee3bd376851f4f328769a464fcbb26"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dissent::Anonymity::BlogDropRound::Abort </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>reason</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bad_client_idx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reason</td><td>reason for abort </td></tr>
+    <tr><td class="paramname">client</td><td>to blame (-1 if none) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a75d6abaea9e8dabfbf8cf3f6cab2e1f7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -833,31 +881,6 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_G
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ae92a2324edc7443fee26240ec2aaa52e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool Dissent::Anonymity::BlogDropRound::VerifyAllProofs = false</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>If true, every server verifies all proofs before revealing the plaintext. </p>
-<p>Otherwise, servers reveal the plaintext, and look at the proofs only if something went wrong.</p>
-<p>NOTE: This option is only valid for Hashing and Pairing variants (NOT ElGamal) </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/Anonymity/<a class="el" href="../../d3/da7/BlogDropRound_8hpp_source.html">BlogDropRound.hpp</a></li>
 <li>src/Anonymity/BlogDropRound.cpp</li>
@@ -865,7 +888,7 @@ static const int&#160;</td><td class="memItemRight" valign="bottom"><b>DEFAULT_G
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 13 2013 14:24:52 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2013 20:08:01 for Dissent by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

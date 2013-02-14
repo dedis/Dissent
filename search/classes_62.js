@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['badblogdropround',['BadBlogDropRound',['../d5/d24/classDissent_1_1Tests_1_1BadBlogDropRound.html',1,'Dissent::Tests']]],
   ['baseasymmetrickeyimpl',['BaseAsymmetricKeyImpl',['../d0/d56/classDissent_1_1Crypto_1_1BaseAsymmetricKeyImpl.html',1,'Dissent::Crypto']]],
   ['basebulkround',['BaseBulkRound',['../d9/df2/classDissent_1_1Anonymity_1_1BaseBulkRound.html',1,'Dissent::Anonymity']]],
   ['basedsaprivatekeyimpl',['BaseDsaPrivateKeyImpl',['../d6/de4/classDissent_1_1Crypto_1_1BaseDsaPrivateKeyImpl.html',1,'Dissent::Crypto']]],
@@ -11,7 +12,6 @@ var searchData=
   ['blogdropclient',['BlogDropClient',['../da/daf/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropClient.html',1,'Dissent::Crypto::BlogDrop']]],
   ['blogdropprooftest',['BlogDropProofTest',['../d5/db3/classDissent_1_1Tests_1_1BlogDropProofTest.html',1,'Dissent::Tests']]],
   ['blogdropround',['BlogDropRound',['../d1/d9a/classDissent_1_1Anonymity_1_1BlogDropRound.html',1,'Dissent::Anonymity']]],
-  ['blogdroproundtest',['BlogDropRoundTest',['../dc/d4d/classDissent_1_1Tests_1_1BlogDropRoundTest.html',1,'Dissent::Tests']]],
   ['blogdropserver',['BlogDropServer',['../d1/d17/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropServer.html',1,'Dissent::Crypto::BlogDrop']]],
   ['blogdroptest',['BlogDropTest',['../df/de0/classDissent_1_1Tests_1_1BlogDropTest.html',1,'Dissent::Tests']]],
   ['blogdroputils',['BlogDropUtils',['../d4/d0f/classDissent_1_1Crypto_1_1BlogDrop_1_1BlogDropUtils.html',1,'Dissent::Crypto::BlogDrop']]],
