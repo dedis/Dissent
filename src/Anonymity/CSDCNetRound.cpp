@@ -18,7 +18,7 @@
 #include "Utils/TimerCallback.hpp"
 #include "Utils/Utils.hpp"
 
-//#include "NeffKeyShuffleRound.hpp"
+#include "NeffKeyShuffleRound.hpp"
 #include "NeffShuffleRound.hpp"
 #include "NullRound.hpp"
 #include "CSDCNetRound.hpp"
@@ -61,17 +61,13 @@ namespace Anonymity {
     _state_machine.AddState(PROCESS_BOOTSTRAP, -1, 0,
         &CSDCNetRound::ProcessBlogDrop);
 #else
-    /*
     if(GetShuffleRound().dynamicCast<NeffKeyShuffleRound>()) {
       _state_machine.AddState(PROCESS_BOOTSTRAP, -1, 0,
           &CSDCNetRound::ProcessKeyShuffle);
     } else {
-    */
       _state_machine.AddState(PROCESS_BOOTSTRAP, -1, 0,
           &CSDCNetRound::ProcessDataShuffle);
-      /*
     }
-    */
 #endif
 
     _state_machine.AddTransition(OFFLINE, SHUFFLING);
@@ -843,20 +839,20 @@ namespace Anonymity {
 
   void CSDCNetRound::ProcessKeyShuffle()
   {
-    /*
     QSharedPointer<NeffKeyShuffleRound> nks =
       GetShuffleRound().dynamicCast<NeffKeyShuffleRound>();
     Q_ASSERT(nks);
 
-    _state->anonymous_key = nks->GetKey();
-    Q_ASSERT(_state->anonymous_key);
-
-    _state->my_idx = nks->GetKeyIndex();
-    Q_ASSERT(_state->my_idx > -1);
-
     _state->anonymous_keys = nks->GetKeys();
-    Q_ASSERT(_state->my_idx < _state->anonymous_keys.count());
-    */
+
+    if(!IsServer()) {
+      _state->anonymous_key = nks->GetKey();
+      Q_ASSERT(_state->anonymous_key);
+
+      _state->my_idx = nks->GetKeyIndex();
+      Q_ASSERT(_state->my_idx > -1);
+      Q_ASSERT(_state->my_idx < _state->anonymous_keys.count());
+    }
 
     _state_machine.StateComplete();
   }

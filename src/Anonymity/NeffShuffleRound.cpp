@@ -152,7 +152,7 @@ namespace Anonymity {
       throw QRunTimeError("Invalid key");
     }
 
-    if(!_server_state->my_key->InGroup(key.GetPublicElement())) {
+    if(!_server_state->private_key->InGroup(key.GetPublicElement())) {
       throw QRunTimeError("Invalid generator used.");
     }
 
@@ -224,7 +224,7 @@ namespace Anonymity {
 
     for(int idx = 0; idx < GetServers().Count(); idx++) {
       Connections::Id id = GetServers().GetId(idx);
-      QSharedPointer<AsymmetricKey> key(GetServers().GetKey(id));
+      QSharedPointer<Crypto::AsymmetricKey> key(GetServers().GetKey(id));
       if(!key->Verify(key_hash, server_signatures[idx])) {
         throw QRunTimeError("Invalid signature");
       }
@@ -249,7 +249,7 @@ namespace Anonymity {
     QByteArray msg;
     stream >> msg;
 
-    if(!_server_state->my_key->InGroup(msg)) {
+    if(!_server_state->private_key->InGroup(msg)) {
       throw QRunTimeError("Invalid element pair");
     }
     
@@ -357,7 +357,7 @@ namespace Anonymity {
 
     for(int idx = 0; idx < signatures.size(); idx++) {
       Connections::Id id = GetServers().GetId(idx);
-      QSharedPointer<AsymmetricKey> key(GetServers().GetKey(id));
+      QSharedPointer<Crypto::AsymmetricKey> key(GetServers().GetKey(id));
       if(!key->Verify(cleartext_hash, signatures[id])) {
         throw QRunTimeError("Invalid signature");
       }
@@ -390,7 +390,8 @@ namespace Anonymity {
   void NeffShuffleRound::SubmitKey()
   {
     _server_state->msgs_received = 0;
-    QSharedPointer<AsymmetricKey> key(_server_state->my_key->GetPublicKey());
+    QSharedPointer<Crypto::AsymmetricKey>
+      key(_server_state->private_key->GetPublicKey());
     DsaPublicKey &dkey = dynamic_cast<DsaPublicKey &>(*key);
 
     QByteArray out;
@@ -591,18 +592,19 @@ namespace NeffShufflePrivate {
   {
     QSharedPointer<DsaPrivateKey> base_key;
     if(_shuffle->_server_state->key_shuffle) {
+      qDebug() << "HERE" << _shuffle->_state->data_size;
       base_key = QSharedPointer<DsaPrivateKey>(
-          new DsaPrivateKey(_shuffle->GetNonce(), 1024));
+          new DsaPrivateKey(_shuffle->GetNonce(), _shuffle->_state->data_size));
     } else {
       int keysize = (_shuffle->_server_state->data_size + 4) * 8;
       base_key = QSharedPointer<DsaPrivateKey>(
           new DsaPrivateKey( _shuffle->GetNonce(), keysize, keysize - 1));
     }
 
-    _shuffle->_server_state->my_key = QSharedPointer<DsaPrivateKey>(
+    _shuffle->_server_state->private_key = QSharedPointer<DsaPrivateKey>(
         new DsaPrivateKey(base_key->GetModulus(), base_key->GetSubgroupOrder(),
           base_key->GetGenerator()));
-    Q_ASSERT(base_key->InGroup(_shuffle->_server_state->my_key->GetPublicElement()));
+    Q_ASSERT(base_key->InGroup(_shuffle->_server_state->private_key->GetPublicElement()));
 
     emit Finished();
   }
@@ -616,7 +618,7 @@ namespace NeffShufflePrivate {
     QByteArray transcript;
 
     NeffShuffle shuffle;
-    shuffle.Shuffle(input, *_shuffle->_server_state->my_key,
+    shuffle.Shuffle(input, *_shuffle->_server_state->private_key,
         remaining_keys, output, transcript);
 
 //    _shuffle->_server_state->next_verify_input = input;//output;
@@ -654,7 +656,7 @@ namespace NeffShufflePrivate {
       _shuffle->_state->cleartext.clear();
       foreach(const QByteArray &pair, output) {
         _shuffle->_server_state->cleartext.append(
-            _shuffle->_server_state->my_key->SeriesDecryptFinish(pair));
+            _shuffle->_server_state->private_key->SeriesDecryptFinish(pair));
       }
     }
 

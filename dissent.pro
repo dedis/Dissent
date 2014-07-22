@@ -61,6 +61,7 @@ HEADERS += src/Dissent.hpp \
            src/Anonymity/BaseDCNetRound.hpp \
            src/Anonymity/CSDCNetRound.hpp \
            src/Anonymity/Log.hpp \
+           src/Anonymity/NeffKeyShuffleRound.hpp \
            src/Anonymity/NeffShuffleRound.hpp \
            src/Anonymity/NullRound.hpp \
            src/Anonymity/Round.hpp \

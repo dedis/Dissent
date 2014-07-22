@@ -39,5 +39,10 @@ namespace Tests {
   {
     TestRoundBasic(TCreateDCNetRound<CSDCNetRound, NullRound>);
   }
+
+  TEST(CSDCNetRound, Neff)
+  {
+    TestRoundBasic(TCreateDCNetRound<CSDCNetRound, NeffKeyShuffleRound>);
+  }
 }
 }

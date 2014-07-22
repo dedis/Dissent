@@ -33,7 +33,6 @@ namespace NeffShufflePrivate {
 
     public:
       friend class RoundStateMachine<NeffShuffleRound>;
-      typedef Crypto::AsymmetricKey AsymmetricKey;
 
       enum MessageType {
         MSG_KEY_EXCH = 0,
@@ -97,7 +96,8 @@ namespace NeffShufflePrivate {
        * @param overlay handles message sending
        * @param get_data requests data to share during this session
        * @param key_shuffle determines the type of group to use in the shuffle
-       * @param data_size determines how large the keys should be for data shuffling
+       * @param data_size maximum storage in bytes in data shuffle or key size
+       * in bits for key shuffle
        */
       explicit NeffShuffleRound(const Identity::Roster &clients,
           const Identity::Roster &servers,
@@ -166,7 +166,7 @@ namespace NeffShufflePrivate {
           virtual ~State() {}
           bool key_shuffle;
           int data_size;
-          QSharedPointer<AsymmetricKey> private_key;
+          QSharedPointer<Crypto::DsaPrivateKey> private_key;
           QByteArray input;
           QVector<QByteArray> cleartext;
           QVector<Crypto::DsaPublicKey> server_keys;
@@ -227,7 +227,6 @@ namespace NeffShufflePrivate {
 
           int msgs_received;
 
-          QSharedPointer<Crypto::DsaPrivateKey> my_key;
           QByteArray key_hash;
           QVector<QByteArray> key_signatures;
 

@@ -4,6 +4,7 @@
 #include "Anonymity/BaseDCNetRound.hpp"
 #include "Anonymity/CSDCNetRound.hpp"
 #include "Anonymity/Log.hpp"
+#include "Anonymity/NeffKeyShuffleRound.hpp"
 #include "Anonymity/NeffShuffleRound.hpp"
 #include "Anonymity/NullRound.hpp"
 #include "Anonymity/Round.hpp"
