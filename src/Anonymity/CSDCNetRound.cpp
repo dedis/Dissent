@@ -105,15 +105,18 @@ namespace Anonymity {
     QObject::connect(bdr.data(), SIGNAL(ReadyForInteraction()),
         this, SLOT(OperationFinished()));
 #else
-#ifdef DISSENT_TEST
-    _state->blame_shuffle = QSharedPointer<Round>(new NullRound(GetClients(),
-          GetServers(), GetPrivateIdentity(), hashval, GetOverlay(),
-          _get_blame_data));
-#else
-    _state->blame_shuffle = QSharedPointer<Round>(new NeffShuffleRound(GetClients(),
-          GetServers(), GetPrivateIdentity(), hashval, GetOverlay(),
-          _get_blame_data));
-#endif
+    QSharedPointer<NeffKeyShuffleRound> nks =
+      GetShuffleRound().dynamicCast<NeffKeyShuffleRound>();
+    if(!nks) {
+      _state->blame_shuffle = QSharedPointer<Round>(new NullRound(GetClients(),
+            GetServers(), GetPrivateIdentity(), hashval, GetOverlay(),
+            _get_blame_data));
+    } else {
+      _state->blame_shuffle = QSharedPointer<Round>(new NeffShuffleRound(GetClients(),
+            GetServers(), GetPrivateIdentity(), hashval, GetOverlay(),
+            _get_blame_data));
+    }
+
     QObject::connect(_state->blame_shuffle.data(), SIGNAL(Finished()),
         this, SLOT(OperationFinished()));
     QByteArray header = GetHeaderBytes();
@@ -309,7 +312,7 @@ namespace Anonymity {
 
       int nphase = _state_machine.GetPhase() + 1;
       if(nphase > 5) {
-        _server_state->phase_logs.remove(nphase - 5);
+        _server_state->phase_logs.remove(nphase - 20);
       }
       _server_state->current_phase_log =
         QSharedPointer<PhaseLog>(
@@ -340,6 +343,9 @@ namespace Anonymity {
         break;
       case 1:
         GetShuffleRound()->ProcessPacket(from, data.mid(1));
+        break;
+      case 2:
+        _state->blame_shuffle->ProcessPacket(from, data.mid(1));
         break;
       default:
         qWarning() << "Unknown packet type:" << type;
@@ -634,7 +640,7 @@ namespace Anonymity {
 
     QPair<int, QByteArray> rebuttal;
     stream >> rebuttal;
-    if(rebuttal.first < GetServers().Count()) {
+    if(rebuttal.first >= GetServers().Count()) {
       _server_state->bad_dude = from;
       qDebug() << "Invalid server selected:" << from;
     } else {
@@ -659,10 +665,12 @@ namespace Anonymity {
 
         hashalgo.Update(GetNonce());
         QByteArray seed = hashalgo.ComputeHash();
-        int byte_idx = _server_state->current_blame.second / 8;
-        int bit_idx = _server_state->current_blame.second % 8;
+        int accuse_idx = _server_state->current_blame.second;
+        int byte_idx = accuse_idx / 8;
+        int bit_idx = accuse_idx % 8;
         QByteArray tmp(byte_idx + 1, 0);
         CryptoRandom(seed).GenerateBlock(tmp);
+
         if(((tmp[byte_idx] & bit_masks[bit_idx % 8]) != 0) == _server_state->server_bits[rebuttal.first]) {
           _server_state->bad_dude = from;
           qDebug() << "Client misbehaves:" << from;
@@ -787,6 +795,7 @@ namespace Anonymity {
       return QPair<QByteArray, bool>(QByteArray(), false);
     }
 
+    qDebug() << GetLocalId() << "writing blame data";
     QByteArray msg(12, 0);
     Serialization::WriteUInt(_state->my_idx, msg, 0);
     Serialization::WriteUInt(_state->accuse_idx, msg, 4);
@@ -821,7 +830,7 @@ namespace Anonymity {
     int count = GetShuffleSink().Count();
     for(int idx = 0; idx < count; idx++) {
       QPair<QSharedPointer<ISender>, QByteArray> pair(GetShuffleSink().At(idx));
-      QSharedPointer<Crypto::AsymmetricKey> key(new Crypto::DsaPublicKey());
+      QSharedPointer<Crypto::AsymmetricKey> key(new Crypto::DsaPublicKey(pair.second));
 
       if(!key->IsValid()) {
         qDebug() << "Invalid key in shuffle.";
@@ -829,9 +838,15 @@ namespace Anonymity {
       }
 
       if(_state->shuffle_data == pair.second) {
-        _state->my_idx = _state->anonymous_keys.count();
+        _state->my_idx = idx;
       }
       _state->anonymous_keys.append(key);
+    }
+
+    if(!IsServer()) {
+      Q_ASSERT(_state->anonymous_key);
+      Q_ASSERT(_state->my_idx > -1);
+      Q_ASSERT(_state->my_idx < _state->anonymous_keys.count());
     }
 
     _state_machine.StateComplete();
@@ -1037,11 +1052,16 @@ namespace Anonymity {
       _state->next_msg = pair.first;
     } else {
       msg = _state->last_msg;
-      _state->read = true;
+      _state->read = !_state->accuse;
     }
 
-    QByteArray msg_p(8, 0);
-    Serialization::WriteInt(_state_machine.GetPhase(), msg_p, 0);
+    QByteArray msg_p(9, 0);
+
+    if(_state->accuse) {
+      msg_p[0] = 0xFF;
+    }
+
+    Serialization::WriteInt(_state_machine.GetPhase(), msg_p, 1);
     int length = _state->next_msg.size() + SlotHeaderLength(_state->my_idx);
 #ifdef CSBR_CLOSE_SLOT
     if(_state->next_msg.size() == 0) {
@@ -1050,10 +1070,10 @@ namespace Anonymity {
     }
 #endif
     if(_state->accuse) {
-      Serialization::WriteInt(SlotHeaderLength(_state->my_idx), msg_p, 4);
+      Serialization::WriteInt(SlotHeaderLength(_state->my_idx), msg_p, 5);
       msg_p.append(QByteArray(msg.size(), 0));
     } else {
-      Serialization::WriteInt(length, msg_p, 4);
+      Serialization::WriteInt(length, msg_p, 5);
       msg_p.append(msg);
     }
 #ifdef CSBR_SIGN_SLOTS
@@ -1062,12 +1082,7 @@ namespace Anonymity {
     QByteArray sig = Hash().ComputeHash(msg_p);
 #endif
 
-    QByteArray accusation(1, 0);
-    if(_state->accuse) {
-      accusation = QByteArray(1, 0xFF);
-    }
-
-    QByteArray msg_pp = accusation + msg_p + sig;
+    QByteArray msg_pp = msg_p + sig;
     _state->last_ciphertext  = Randomize(msg_pp);
     return _state->last_ciphertext;
   }
@@ -1266,14 +1281,13 @@ namespace Anonymity {
         phase_log->message_length :
         phase_log->message_offsets[owner_idx + 1];
 
-      if((end - start + accuse_bidx) <= 0) {
-        qDebug() << "Invalid offset claimed";
+      if((end - start + accuse_bidx) < 0) {
+        qDebug() << "Invalid offset claimed:" << (end - start + accuse_idx);
         continue;
       }
       
-      qDebug() << _state->anonymous_keys[owner_idx]->IsValid();
       if(!_state->anonymous_keys[owner_idx]->Verify(msg, signature)) {
-        qDebug() << "Invalid accusation";
+        qDebug() << "Invalid accusation" <<  owner_idx << signature.size() << signature.toBase64();
         continue;
       }
 
@@ -1428,27 +1442,19 @@ namespace Anonymity {
         continue;
       }
 
-      if(msg_pp[0] != char(0)) {
-        _state->start_accuse = true;
-        _state->accuser = owner;
-        if(owner == _state->my_idx) {
-          _state->my_accuse = true;
-        }
-        qDebug() << "Accusation generated by" << owner;
-      }
-      
 #ifdef CSBR_SIGN_SLOTS
       QSharedPointer<Crypto::AsymmetricKey> vkey(_state->anonymous_keys[owner]);
       int sig_length = vkey->GetSignatureLength();
 #endif
 
       QByteArray msg_p = QByteArray::fromRawData(
-          msg_pp.constData() + 1, msg_pp.size() - 1 - sig_length);
+          msg_pp.constData(), msg_pp.size() - sig_length);
       QByteArray sig = QByteArray::fromRawData(
-          msg_pp.constData() + 1 + msg_p.size(), sig_length);
+          msg_p.constData() + msg_p.size(), sig_length);
 
+      bool bad_message = false;
 #ifdef CSBR_SIGN_SLOTS
-      if(!vkey->Verify(msg_p, sig)) {
+      if(!vkey->Verify(msg_pp, sig)) {
 #else
       if(hashalgo.ComputeHash(msg_p) != sig) {
 #endif
@@ -1459,7 +1465,6 @@ namespace Anonymity {
         if(owner == _state->my_idx && !_state->accuse) {
           _state->read = false;
           _state->slot_open = true;
-          _state->accuse = false;
           for(int pidx = 0; pidx < msg_ppp.size(); pidx++) {
             const char expected = _state->last_ciphertext[pidx];
             const char actual = msg_ppp[pidx];
@@ -1468,11 +1473,13 @@ namespace Anonymity {
             }
             for(int bidx = 0; bidx < 8; bidx++) {
               const char expected_bit = expected & bit_masks[bidx];
-              if(expected_bit != 0) {
-                continue;
-              }
               const char actual_bit = actual & bit_masks[bidx];
               if(actual_bit == expected_bit) {
+                continue;
+              }
+
+              if(expected_bit != 0) {
+                qDebug() << "Bit flipped, but expected bit isn't 0";
                 continue;
               }
               _state->accuse_idx = (offset - msg_length + pidx) * 8 + bidx;
@@ -1489,13 +1496,29 @@ namespace Anonymity {
             qDebug() << "My message got corrupted, blaming" <<
               _state->accuse_idx << _state->blame_phase;
           } else {
+            qDebug() << msg_ppp.toBase64() << msg_ppp.size() << msg_length;
+            qDebug() << _state->last_ciphertext.toBase64() << _state->last_ciphertext.size();
             qDebug() << "My message got corrupted cannot blame";
           }
         }
+        bad_message = true;
+      }
+
+      if(msg_p[0] != char(0)) {
+        _state->start_accuse = true;
+        _state->accuser = owner;
+        if(owner == _state->my_idx) {
+          // Only submit an accusation if we have one...
+          _state->my_accuse = _state->accuse;
+        }
+        qDebug() << "Accusation generated by" << owner;
+      }
+
+      if(bad_message) {
         continue;
       }
 
-      int phase = Serialization::ReadInt(msg_p, 0);
+      int phase = Serialization::ReadInt(msg_p, 1);
       if(phase != _state_machine.GetPhase()) {
         next_msg_length += msg_length;
         next_msgs[owner] = msg_length;
@@ -1503,7 +1526,7 @@ namespace Anonymity {
         continue;
       }
 
-      int next = Serialization::ReadInt(msg_p, 4);
+      int next = Serialization::ReadInt(msg_p, 5);
       if(next < 0) {
         next_msg_length += msg_length;
         next_msgs[owner] = msg_length;
@@ -1517,7 +1540,7 @@ namespace Anonymity {
         qDebug() << "Slot" << owner << "closing";
       }
 
-      QByteArray msg(msg_p.constData() + 8, msg_p.size() - 8);
+      QByteArray msg(msg_p.constData() + 9, msg_p.size() - 9);
       if(!msg.isEmpty()) {
         qDebug() << ToString() << "received a valid message.";
         PushData(owner, msg);
@@ -1622,16 +1645,20 @@ namespace Anonymity {
     QByteArray bphase(4, 0);
     Serialization::WriteInt(phase, bphase, 0);
 
-    int msg_size = accuse_idx / 8 + (accuse_idx % 8 > 0 ? 1 : 0);
+    int byte_idx = accuse_idx / 8;
+    int bit_idx = accuse_idx % 8;
+    int msg_size = byte_idx + 1;
+
     int bidx = -1;
     QByteArray tmp(msg_size, 0);
+
     for(int idx = 0; idx < _state->base_seeds.size(); idx++) {
       const QByteArray &base_seed = _state->base_seeds[idx];
       hashalgo.Update(base_seed);
       hashalgo.Update(bphase);
       hashalgo.Update(GetNonce());
       CryptoRandom(hashalgo.ComputeHash()).GenerateBlock(tmp);
-      if(((tmp[accuse_idx / 8] & bit_masks[accuse_idx % 8]) != 0) != server_bits[idx]) {
+      if(((tmp[byte_idx] & bit_masks[bit_idx]) != 0) != server_bits[idx]) {
         bidx = idx;
         break;
       }

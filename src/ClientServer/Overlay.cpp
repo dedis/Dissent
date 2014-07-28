@@ -197,22 +197,23 @@ namespace ClientServer {
     QSharedPointer<Connections::Connection> con =
       GetConnectionTable().GetConnection(to);
 
-    if(!con) {
-      foreach(const QSharedPointer<Connections::Connection> &lcon,
-          GetConnectionTable().GetConnections()) {
-        if(lcon->GetRemoteId() != GetId()) {
-          con = lcon;
-          break;
-        }
+    if(con) {
+      ForwardingSend(GetId().ToString(), con, to, data);
+      return;
+    }
+
+    foreach(const QSharedPointer<Connections::Connection> &lcon,
+        GetConnectionTable().GetConnections()) {
+      if(lcon->GetRemoteId() == GetId()) {
+        continue;
       }
+      con = lcon;
+      ForwardingSend(GetId().ToString(), con, to, data);
     }
 
     if(!con) {
       qWarning() << "Unable to forward message";
-      return;
     }
-
-    ForwardingSend(GetId().ToString(), con, to, data);
   }
 
   void Overlay::ForwardedData(const Messaging::Request &notification)

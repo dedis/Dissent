@@ -72,9 +72,7 @@ HEADERS += src/Dissent.hpp \
            src/Applications/FileSink.hpp \
            src/Applications/Node.hpp \
            src/Applications/Settings.hpp \
-           src/ClientServer/Broadcaster.hpp \
            src/ClientServer/ClientConnectionAcquirer.hpp \
-           src/ClientServer/Forwarder.hpp \
            src/ClientServer/Overlay.hpp \
            src/ClientServer/ServerConnectionAcquirer.hpp \
            src/Connections/Connection.hpp \
@@ -222,9 +220,7 @@ SOURCES += src/Anonymity/BaseDCNetRound.cpp \
            src/Applications/ConsoleSink.cpp \
            src/Applications/FileSink.cpp \
            src/Applications/Settings.cpp \
-           src/ClientServer/Broadcaster.cpp \
            src/ClientServer/ClientConnectionAcquirer.cpp \
-           src/ClientServer/Forwarder.cpp \
            src/ClientServer/Overlay.cpp \
            src/ClientServer/ServerConnectionAcquirer.cpp \
            src/Connections/Connection.cpp \
