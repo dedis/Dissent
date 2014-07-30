@@ -311,8 +311,8 @@ namespace Anonymity {
       _server_state->server_ciphertexts.clear();
 
       int nphase = _state_machine.GetPhase() + 1;
-      if(nphase > 5) {
-        _server_state->phase_logs.remove(nphase - 20);
+      if(nphase >= 5) {
+        Q_ASSERT(_server_state->phase_logs.remove(nphase - 5));
       }
       _server_state->current_phase_log =
         QSharedPointer<PhaseLog>(
@@ -553,6 +553,7 @@ namespace Anonymity {
 
     _server_state->handled_servers.insert(from);
     _server_state->server_ciphertexts[GetServers().GetIndex(from)] = ciphertext;
+    _server_state->current_phase_log->server_messages[from] = ciphertext;
 
     qDebug() << GetServers().GetIndex(GetLocalId()) << GetLocalId().ToString() <<
       ": received ciphertext from" << GetServers().GetIndex(from) <<
@@ -617,8 +618,21 @@ namespace Anonymity {
     QPair<QBitArray, QBitArray> blame_bits;
     stream >> blame_bits;
 
-    /// XXX make sure the blame bits match what was sent
-    /// XXX make sure servers transmit a bit for each client
+    char expected =
+      _server_state->phase_logs[_server_state->current_blame.third]->
+      GetBitAtIndex(from, _server_state->current_blame.second);
+
+    char actual = 0;
+    for(int idx = 0; idx < blame_bits.first.size(); idx++) {
+      actual ^= blame_bits.first[idx];
+    }
+    for(int idx = 0; idx < blame_bits.second.size(); idx++) {
+      actual ^= blame_bits.second[idx];
+    }
+
+    if(actual != expected) {
+      throw QRunTimeError("Blame bits do not match what was sent");
+    }
 
     _server_state->blame_bits[from] = blame_bits;
 
@@ -757,15 +771,10 @@ namespace Anonymity {
 
     qDebug() << "Client done, bad guy:" << bad_dude;
     SetSuccessful(false);
-    // @TODO
-    if(GetServers().Contains(bad_dude)) {
-      QVector<int> bad_members;
-      bad_members.append(GetServers().GetIndex(bad_dude));
-      SetBadMembers(bad_members);
-      Stop("Bad member found and reported");
-    } else {
-      Stop("Bad member found, but I am a lowly client without knowledge of the peer");
-    }
+    QVector<Connections::Id> bad_members;
+    bad_members.append(bad_dude);
+    SetBadMembers(bad_members);
+    Stop("Bad member found and reported");
   }
 
   void CSDCNetRound::StartShuffle()
@@ -1302,7 +1311,7 @@ namespace Anonymity {
     if(_server_state->accuse_found) {
       _state_machine.StateComplete();
     } else {
-      throw QRunTimeError("False accusation");
+      throw QRunTimeError("Missing accusation");
     }
   }
 
@@ -1328,6 +1337,10 @@ namespace Anonymity {
       qDebug() << "Did not find a mismatch";
       return;
     }
+
+    // XXX At this point, we should ask the server who received the ciphertext
+    // to transmit it to the group.
+    // If it doesn't match what the server sent, he equivocates.
 
     QBitArray server_bits = pair.second;
     Connections::Id id = GetClients().GetId(gidx);
@@ -1378,9 +1391,8 @@ namespace Anonymity {
     VerifiableBroadcastToClients(payload);
 
     SetSuccessful(false);
-    QVector<int> bad_members;
-    // @TODO
-    bad_members.append(GetServers().GetIndex(_server_state->bad_dude));
+    QVector<Connections::Id> bad_members;
+    bad_members.append(_server_state->bad_dude);
     SetBadMembers(bad_members);
     Stop("Bad member found and reported");
   }

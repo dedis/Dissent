@@ -95,7 +95,7 @@ namespace Anonymity {
       /**
        * Returns the list of bad nodes discovered in the round
        */
-      inline virtual const QVector<int> &GetBadMembers() const
+      inline virtual const QVector<Connections::Id> &GetBadMembers() const
       {
         return m_empty_list;
       }
@@ -291,7 +291,7 @@ namespace Anonymity {
       QSharedPointer<ClientServer::Overlay> m_overlay;
       Messaging::GetDataCallback &m_get_data_cb;
       bool m_successful;
-      QVector<int> m_empty_list;
+      QVector<Connections::Id> m_empty_list;
       bool m_interrupted;
       QWeakPointer<Round> m_shared;
       QByteArray m_header;

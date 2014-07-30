@@ -39,7 +39,6 @@ HEADERS += ext/googletest/include/gtest/gtest-death-test.h \
            src/Tests/MockSender.hpp \
            src/Tests/MockSource.hpp \
            src/Tests/OverlayTest.hpp \
-           src/Tests/RoundTest.hpp \
            src/Tests/RpcTest.hpp \
            src/Tests/SessionTest.hpp
 

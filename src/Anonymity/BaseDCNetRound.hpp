@@ -71,7 +71,7 @@ namespace Anonymity {
        */
       static void Xor(QByteArray &dst, const QByteArray &t1, const QByteArray &t2);
 
-      inline virtual const QVector<int> &GetBadMembers() const
+      inline virtual const QVector<Connections::Id> &GetBadMembers() const
       {
         return _bad_members;
       }
@@ -92,7 +92,7 @@ namespace Anonymity {
        * Sets the bad member vector
        * @param bad_members the set of bad members
        */
-      void SetBadMembers(const QVector<int> &bad_members)
+      void SetBadMembers(const QVector<Connections::Id> &bad_members)
       {
         _bad_members = bad_members;
       }
@@ -133,7 +133,7 @@ namespace Anonymity {
       /**
        * List of bad nodes by group index
        */
-      QVector<int> _bad_members;
+      QVector<Connections::Id> _bad_members;
 
     private slots:
       /**

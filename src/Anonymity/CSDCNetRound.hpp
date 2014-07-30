@@ -215,6 +215,7 @@ namespace Anonymity {
 
       //Needed in protected for testing
       virtual QByteArray GenerateCiphertext();
+      virtual void GenerateServerCiphertext();
 
       /**
        * Holds the internal state for this round
@@ -252,9 +253,6 @@ namespace Anonymity {
           QSharedPointer<Round> blame_shuffle;
       };
 
-      QSharedPointer<State> GetState() { return _state; }
-
-    private:
       /**
        * Holds the internal state for phases for the purpose of accusation
        */
@@ -264,21 +262,27 @@ namespace Anonymity {
 
           QPair<QBitArray, QBitArray> GetBitsAtIndex(int msg_idx)
           {
+            int byte_idx = msg_idx / 8;
+            int bit_idx = msg_idx % 8;
+
             QBitArray clients(_max, false);
             foreach(int idx, messages.keys()) {
-              int byte_idx = msg_idx / 8;
-              int bit_idx = msg_idx % 8;
               clients[idx] = (messages[idx][byte_idx] & bit_masks[bit_idx]) > 0;
             }
 
             QBitArray mine(_max, false);
             foreach(int idx, my_sub_ciphertexts.keys()) {
-              int byte_idx = msg_idx / 8;
-              int bit_idx = msg_idx % 8;
               mine[idx] = (my_sub_ciphertexts[idx][byte_idx] & bit_masks[bit_idx]) > 0;
             }
 
             return QPair<QBitArray, QBitArray>(clients, mine);
+          }
+
+          char GetBitAtIndex(const Connections::Id &id, int msg_idx)
+          {
+            int byte_idx = msg_idx / 8;
+            int bit_idx = msg_idx % 8;
+            return (server_messages[id][byte_idx] & bit_masks[bit_idx]) >> bit_idx;
           }
 
           QBitArray clients;
@@ -287,6 +291,7 @@ namespace Anonymity {
           QHash<int, int> client_to_server;
           QHash<int, QByteArray> messages;
           QHash<int, QByteArray> my_sub_ciphertexts;
+          QHash<Connections::Id, QByteArray> server_messages;
           int phase;
 
         private:
@@ -324,6 +329,7 @@ namespace Anonymity {
           QHash<int, QSharedPointer<PhaseLog> > phase_logs;
           QSharedPointer<PhaseLog> current_phase_log;
           bool accuse_found;
+          // owner, accuse, phase
           Utils::Triple<int, int, int> current_blame;
           QHash<Connections::Id, QPair<QBitArray, QBitArray> > blame_bits;
           QBitArray server_bits;
@@ -333,6 +339,9 @@ namespace Anonymity {
           QHash<Connections::Id, QByteArray> verdict_signatures;
       };
 
+      QSharedPointer<State> GetState() { return _state; }
+
+    private:
       /**
        * Called by the constructor to initialize the server state machine
        */
@@ -467,7 +476,6 @@ namespace Anonymity {
       void PushVerdict();
 
       /* Below are the ciphertext generation helpers */
-      void GenerateServerCiphertext();
       QByteArray GenerateSlotMessage();
       bool CheckData();
 
