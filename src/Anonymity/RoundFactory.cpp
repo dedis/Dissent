@@ -1,6 +1,7 @@
 #include "Anonymity/BaseDCNetRound.hpp"
 #include "Anonymity/CSDCNetRound.hpp"
 #include "Anonymity/NeffShuffleRound.hpp"
+#include "Anonymity/NeffKeyShuffleRound.hpp"
 #include "Anonymity/NullRound.hpp"
 
 #include "RoundFactory.hpp"
@@ -21,6 +22,8 @@ namespace Anonymity {
         cr = &TCreateDCNetRound<CSDCNetRound, NullRound>;
         break;
       case NEFF_CSDCNET:
+        cr = &TCreateDCNetRound<CSDCNetRound, NeffKeyShuffleRound>;
+        break;
       case VERDICT_CSDCNET:
       default:
         qFatal("Invalid round type");
