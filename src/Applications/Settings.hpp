@@ -148,6 +148,13 @@ namespace Applications {
        */
       QString PublicKeys;
 
+      /**
+       * An optional parameter that causes the server to wait
+       * until it has this many clients registered.
+       * Any value less than 1 causes it to be ignored.
+       */
+      int MinimumClients;
+
       bool Help;
 
       static const char* CParam(int id)
@@ -169,7 +176,8 @@ namespace Applications {
           "local_id",
           "server_ids",
           "path_to_private_keys",
-          "path_to_public_keys"
+          "path_to_public_keys",
+          "minimum_clients"
         };
         return params[id];
       }
@@ -193,7 +201,8 @@ namespace Applications {
             LocalId,
             ServerIds,
             PrivateKeys,
-            PublicKeys
+            PublicKeys,
+            MinimumClients
           };
       };
 
@@ -202,6 +211,8 @@ namespace Applications {
         static QString param(CParam(OptionId));
         return param;
       }
+
+      static Settings ApplicationSettings;
 
     private:
       static QSharedPointer<QxtCommandOptions> GetOptions();

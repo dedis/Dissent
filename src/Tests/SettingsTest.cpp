@@ -24,6 +24,7 @@ namespace Tests {
     settings0.Auth = false;
     EXPECT_EQ(settings0.LocalEndPoints.count(), 1);
     EXPECT_EQ(settings0.RemoteEndPoints.count(), 1);
+    EXPECT_EQ(settings0.MinimumClients, 0);
 
     EXPECT_EQ(settings0.LocalEndPoints[0],
         AddressFactory::GetInstance().CreateAddress("buffer://5"));
@@ -70,7 +71,8 @@ namespace Tests {
       "--entry_tunnel_url" << "tcp://127.0.0.1:8081" <<
       "--exit_tunnel" << "--multithreading" <<
       "--local_id" << "'HJf+qfK7oZVR3dOqeUQcM8TGeVA='" <<
-      "--server_ids" << "'HJf+qfK7oZVR3dOqeUQcM8TGeVA='";
+      "--server_ids" << "'HJf+qfK7oZVR3dOqeUQcM8TGeVA='" <<
+      "--minimum_clients" << "1";
 
     Settings settings2 = Settings::CommandLineParse(settings_list, false);
     settings2.Auth = false;
@@ -96,6 +98,7 @@ namespace Tests {
     EXPECT_TRUE(settings2.EntryTunnel);
     EXPECT_TRUE(settings2.ExitTunnel);
     EXPECT_TRUE(settings2.Multithreading);
+    EXPECT_EQ(settings2.MinimumClients, 1);
   }
 
   TEST(Settings, Invalid)
@@ -111,6 +114,13 @@ namespace Tests {
     settings.ServerIds = QList<Id>();
     settings.ServerIds.append(Id());
     EXPECT_TRUE(settings.IsValid());
+
+    EXPECT_FALSE(Settings::ApplicationSettings.IsValid());
+    Settings tmp = Settings::ApplicationSettings;
+    Settings::ApplicationSettings = settings;
+    EXPECT_TRUE(Settings::ApplicationSettings.IsValid());
+    Settings::ApplicationSettings = tmp;
+    EXPECT_FALSE(Settings::ApplicationSettings.IsValid());
   }
 
   TEST(Settings, WebServer)

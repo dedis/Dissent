@@ -19,6 +19,7 @@ int main(int argc, char **argv)
     }
     return -1;
   }
+  Settings::ApplicationSettings = settings;
 
   QList<QSharedPointer<Node> > nodes;
 

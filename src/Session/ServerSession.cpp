@@ -1,5 +1,6 @@
 #include <QDebug>
 
+#include "Applications/Settings.hpp"
 #include "Connections/IOverlaySender.hpp"
 #include "Crypto/AsymmetricKey.hpp"
 #include "Crypto/CryptoRandom.hpp"
@@ -721,6 +722,11 @@ namespace Server {
         state->CheckClientRegister(*clr);
         m_registered_msgs[remote_id] = clr;
         qDebug() << state->GetOverlay()->GetId() << this << remote_id << "registered";
+
+        if(m_register_timer.Stopped()) {
+          int nt;
+          FinishClientRegister(nt);
+        }
         return NoChange;
       }
 
@@ -756,6 +762,11 @@ namespace Server {
        */
       void FinishClientRegister(const int &)
       {
+        if(Applications::Settings::ApplicationSettings.MinimumClients >
+            m_registered_msgs.size()) {
+          return;
+        }
+
         QSharedPointer<ServerSessionSharedState> state =
           GetSharedState().dynamicCast<ServerSessionSharedState>();
         qDebug() << state->GetOverlay()->GetId() << this <<

@@ -7,6 +7,8 @@ using Dissent::Utils::Logging;
 
 namespace Dissent {
 namespace Applications {
+  Settings Settings::ApplicationSettings;
+
   Settings::Settings(const QString &file, bool actions) :
     _use_file(true),
     _settings(new QSettings(file, QSettings::IniFormat))
@@ -58,6 +60,8 @@ namespace Applications {
 
     ExitTunnelProxyUrl = TryParseUrl(_settings->value(Param<Params::ExitTunnelProxyUrl>()).toString(), "tcp");
     ExitTunnel = (ExitTunnelProxyUrl != QUrl()) || ExitTunnel;
+
+    MinimumClients = _settings->value(Param<Params::MinimumClients>()).toInt(0);
 
     if(_settings->contains(Param<Params::RoundType>())) {
       QString stype = _settings->value(Param<Params::RoundType>()).toString();
@@ -355,6 +359,10 @@ namespace Applications {
 
     options->add(Param<Params::PublicKeys>(),
         "a path to a directory containing public keys (public keys end in \".pub\"",
+        QxtCommandOptions::ValueRequired);
+
+    options->add(Param<Params::MinimumClients>(),
+        "Minimum number of clients to wait for during registration, 0 = disable",
         QxtCommandOptions::ValueRequired);
 
     return options;
