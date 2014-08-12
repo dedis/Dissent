@@ -1,0 +1,60 @@
+#
+# This topology has M servers and N user nodes
+# connected by a bandwidth-limited link.
+#
+
+set ns [new Simulator]
+source tb_compat.tcl
+
+set n_users 32
+set n_servers 8
+tb-make-soft-vtype hardware {pc2133 pc2133n pc2133x bpc2133}
+tb-make-soft-vtype bhardware {bpc2133 pc2133 pc2133n pc2133x} 
+
+set router [$ns node]
+tb-set-node-os $router Ubuntu-1204-Dissent
+
+set lanstr_users "$router "
+set lanstr_servers "$router "
+
+set server_bandwidth 100Mb
+set server_delay 10ms
+set client_delay 50ms
+
+for {set i 0} {$i < $n_users} {incr i} {
+   set user($i) [$ns node]
+   tb-set-node-os $user($i) Ubuntu-1204-Dissent
+   tb-set-hardware $user($i) hardware
+   append lanstr_users "$user($i) "
+   tb-set-node-failure-action $user($i) "nonfatal"
+}
+
+for {set i 0} {$i < $n_servers} {incr i} {
+   set server($i) [$ns node]
+   tb-set-node-os $server($i) Ubuntu-1204-Dissent
+   tb-set-hardware $server($i) bhardware
+   append lanstr_servers "$server($i) "
+   tb-set-node-failure-action $server($i) "nonfatal"
+}
+
+set lanusers [$ns make-lan "$lanstr_users" 100Mb 0ms]
+set lanservers [$ns make-lan "$lanstr_servers" 100Mb $server_delay]
+
+for {set i 0} {$i < $n_users} {incr i} {
+    set ip 10.0.0.[expr {$i + 1}]
+        tb-set-ip-lan $user($i) $lanusers $ip
+}
+
+for {set i 0} {$i < $n_servers} {incr i} {
+    set ip 10.0.1.[expr {$i + 1}]
+    tb-set-ip-lan $server($i) $lanservers $ip
+    tb-set-node-lan-bandwidth $server($i) $lanservers $server_bandwidth
+}
+
+tb-set-ip-lan $router $lanservers 10.0.1.254
+tb-set-ip-lan $router $lanusers 10.0.0.254
+
+tb-set-node-lan-delay $router $lanusers $client_delay
+
+$ns rtproto Static
+$ns run
