@@ -347,11 +347,11 @@ namespace Applications {
 
     options->add(Param<Params::ServerIds>(),
         "one or more 160-bit base64 server id",
-        QxtCommandOptions::ValueRequired);
+        QxtCommandOptions::ValueRequired | QxtCommandOptions::AllowMultiple);
 
     options->add(Param<Params::PrivateKeys>(),
         "a path to a directory containing private keys",
-        QxtCommandOptions::ValueRequired | QxtCommandOptions::AllowMultiple);
+        QxtCommandOptions::ValueRequired);
 
     options->add(Param<Params::PublicKeys>(),
         "a path to a directory containing public keys (public keys end in \".pub\"",

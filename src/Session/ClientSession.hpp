@@ -21,7 +21,7 @@ namespace Session {
   class ClientSession : public Session {
     Q_OBJECT
 
-    friend ClientCommState;
+    friend class ClientCommState;
     friend QSharedPointer<ClientSession> MakeSession<ClientSession>(
       const QSharedPointer<ClientServer::Overlay> &,
       const QSharedPointer<Crypto::AsymmetricKey> &,

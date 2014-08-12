@@ -32,8 +32,7 @@ namespace Session {
   class Session : public Messaging::FilterObject, public Utils::StartStop {
     Q_OBJECT
 
-    class SessionState;
-    friend SessionState;
+    friend class SessionState;
 
     public:
       /**

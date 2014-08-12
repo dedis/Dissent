@@ -765,7 +765,7 @@ namespace Server {
         StateChange(NextState);
       }
 
-      int ROUND_TIMER = 30 * 1000;
+      static const int ROUND_TIMER = 30 * 1000;
       Utils::TimerEvent m_register_timer;
       ServerSessionSharedState::RegisterMap m_registered_msgs;
   };
