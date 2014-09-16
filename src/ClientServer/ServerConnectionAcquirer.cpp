@@ -13,7 +13,7 @@ namespace ClientServer {
     m_remote_addrs(remote_endpoints),
     m_remote_ids(ids)
   {
-    Q_ASSERT(m_remote_addrs.size() >= m_remote_ids.size());
+    Q_ASSERT(m_remote_addrs.size() >= m_remote_ids.size() - 1);
     Q_ASSERT(m_remote_ids.size() > 0);
   }
 
