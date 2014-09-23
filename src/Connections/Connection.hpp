@@ -71,7 +71,9 @@ namespace Connections {
 
       inline QSharedPointer<Connection> GetSharedPointer()
       {
-        return _shared.toStrongRef();
+        QSharedPointer<Connection> con = _shared.toStrongRef();
+        Q_ASSERT(con);
+        return con;
       }
       
       /**

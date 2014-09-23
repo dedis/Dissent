@@ -374,6 +374,24 @@ namespace Connections {
     edge->Stop("Closed from remote peer");
   }
 
+  class ConnectionReleaseEvent : public QEvent {
+    public:
+      ConnectionReleaseEvent(const QSharedPointer<Connection> &con) :
+        QEvent(QEvent::None),
+        m_con(con)
+      {
+      }
+
+      static void QueueDeleteLater(const QSharedPointer<Connection> &con)
+      {
+        ConnectionReleaseEvent *ce = new ConnectionReleaseEvent(con);
+        QCoreApplication::postEvent(QCoreApplication::instance(), ce);
+      }
+
+    private:
+      QSharedPointer<Connection> m_con;
+  };
+
   void ConnectionManager::HandleDisconnect()
   {
     Connection *con = qobject_cast<Connection *>(sender());
@@ -382,6 +400,7 @@ namespace Connections {
     }
 
     qDebug() << "Handle disconnect on: " << con->ToString();
+    ConnectionReleaseEvent::QueueDeleteLater(con->GetSharedPointer());
     _con_tab.Disconnect(con);
 
     if(!con->GetEdge()->Stopped()) {
