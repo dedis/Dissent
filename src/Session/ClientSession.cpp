@@ -105,8 +105,8 @@ namespace Client {
           }
         }
 
-          QSharedPointer<ClientSessionSharedState> state =
-            GetSharedState().dynamicCast<ClientSessionSharedState>();
+        QSharedPointer<ClientSessionSharedState> state =
+          GetSharedState().dynamicCast<ClientSessionSharedState>();
         if(server) {
           state->SetServer(server->GetRemoteId());
         }
