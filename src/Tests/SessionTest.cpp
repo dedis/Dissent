@@ -269,7 +269,7 @@ namespace Tests {
   {
     Timer::GetInstance().UseVirtualTime();
     ConnectionManager::UseTimer = false;
-    OverlayNetwork net = ConstructOverlay(10, 100);
+    OverlayNetwork net = ConstructOverlay(10, 20);
     VerifyStoppedNetwork(net);
     StartNetwork(net);
     VerifyNetwork(net);
