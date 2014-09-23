@@ -516,6 +516,10 @@ namespace Server {
 
         state->SetEnlistMsgs(m_enlist_msgs);
 
+        if(!state->IsProposer()) {
+          return NoChange;
+        }
+
         ServerEnlisted enlisted(m_enlist_msgs.values());
         enlisted.SetSignature(state->GetPrivateKey()->Sign(enlisted.GetPayload()));
         foreach(const Connections::Id &remote_id, state->GetOverlay()->GetServerIds()) {
