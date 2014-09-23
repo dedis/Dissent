@@ -361,9 +361,12 @@ EphemeralPublicKey_A, sorts the resulting ciphertext by lexicongraphical order,
 produces a proof of correctness, and broadcasts this to all other servers.  The
 first server includes the initial input by clients. The message follows:
 
-A -> B ([MSG_SHUFFLE | RoundId | Transcript_A] | [Signature_A])
+A -> B ([MSG_SHUFFLE | RoundId | [Initial_Ciphertext] | Transcript_A] |
+        [Signature_A])
 - MSG_SHUFFLE - int - the message type
 - RoundId - QByteArray - The round identifier
+- Initial_Ciphertext - QByteArray - Server0 (the proposer) inserts the set of
+  initial ciphertexts as part of this message, other servers have no value here
 - Transcript_A - QByteArray - The shuffle output and proof of correctness
 - Signature_A - Signature using the round key of the sender for this message
 
