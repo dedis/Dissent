@@ -31,10 +31,13 @@ int main(int argc, char **argv)
   app_sink->AddSink(signal_sink.data());
 
   QSharedPointer<KeyShare> keys(new KeyShare(settings.PublicKeys));
+  Hash hashalgo;
   foreach(const Id &server, settings.ServerIds) {
-    if(!keys->Contains(server.ToString())) {
-      qFatal("Missing key for %s", server.ToString().toLatin1().data());
+    QString serv = server.ToString();
+    if(!keys->Contains(serv)) {
+      qFatal("Missing key for %s", serv.toLatin1().data());
     }
+    Q_ASSERT(Id(hashalgo.ComputeHash(keys->GetKey(serv)->GetByteArray())) == server);
   }
 
   QList<Address> local_end_points = settings.LocalEndPoints;
