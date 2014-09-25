@@ -88,11 +88,11 @@ logs()
 {
   mkdir logs
   for (( i = 0 ; i < $SERVERS ; i = i + 1 )); do
-    scp_exec "$SERVER-$i:$BASE_PATH/log.* logs/." &
+    scp_exec "$SERVER-$i.$SUFFIX:$BASE_PATH/log.* logs/." &
   done
 
   for (( i = 0 ; i < $CLIENTS ; i = i + 1 )); do
-    scp_exec "$CLIENT-$i:$BASE_PATH/log.* logs/." &
+    scp_exec "$CLIENT-$i.$SUFFIX:$BASE_PATH/log.* logs/." &
   done
   wait
 }
@@ -110,12 +110,12 @@ setup()
 
   for (( i = 0 ; i < $SERVERS ; i = i + 1 )); do
     echo "$SERVER-$i"
-    ssh_exec $SERVER-$i $cmd &
+    ssh_exec $SERVER-$i.$SUFFIX $cmd &
   done
 
   for (( i = 0 ; i < $CLIENTS ; i = i + 1 )); do
       echo "$CLIENT-$i"
-      ssh_exec $CLIENT-$i $cmd &
+      ssh_exec $CLIENT-$i.$SUFFIX $cmd &
   done
 
   wait
@@ -194,7 +194,7 @@ start()
     done
 
     echo "$CLIENT-$i"
-    ssh_exec $CLIENT-$i "$client_line" &
+    ssh_exec $CLIENT-$i.$SUFFIX "$client_line" &
   done
   wait
 }
@@ -203,12 +203,12 @@ stop()
 {
   for (( i = 0 ; i < $SERVERS ; i = i + 1 )); do
     echo "$SERVER-$i"
-    ssh_exec $SERVER-$i "sudo bash -c 'pkill -KILL dissent'" &
+    ssh_exec $SERVER-$i.$SUFFIX "sudo bash -c 'pkill -KILL dissent'" &
   done
 
   for (( i = 0 ; i < $CLIENTS ; i = i + 1 )); do
     echo "$CLIENT-$i"
-    ssh_exec $CLIENT-$i "sudo bash -c 'pkill -KILL dissent'" &
+    ssh_exec $CLIENT-$i.$SUFFIX "sudo bash -c 'pkill -KILL dissent'" &
   done
 
   wait
